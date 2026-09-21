@@ -29,8 +29,18 @@ def test_world_c_mask_rate_near_target():
     rng = np.random.default_rng(0)
     alphabet = "".join(list(CIPHER_POOL)[:36])
     sample = make_sample("the quick brown fox jumps over the lazy dog " * 4, rng, WORLD_C, PRIMARY_FILLER_RATE, alphabet)
+    assert len(sample["text"]) == len(sample["mask"]) == 128
     rate = 1 - (sum(sample["mask"]) / len(sample["mask"]))
     assert abs(rate - PRIMARY_FILLER_RATE) < 0.12
+
+
+def test_all_worlds_fixed_length():
+    rng = np.random.default_rng(9)
+    alphabet = "".join(list(CIPHER_POOL)[:36])
+    for world in (WORLD_A, WORLD_B, WORLD_C, WORLD_D):
+        sample = make_sample("gallia est omnis divisa in partes tres " * 3, rng, world, 0.3, alphabet)
+        assert len(sample["text"]) == 128
+        assert len(sample["mask"]) == 128
 
 
 def test_world_a_all_signal_latin():

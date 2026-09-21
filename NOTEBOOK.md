@@ -300,3 +300,16 @@ Resource use (if applicable):
 - **Commands (planned):** `.venv/bin/python -m voynich.latent_recovery --root . --device auto --voynich-if-pass`
 - **Next:** download corpora, unit tests, bounded train/eval, record numbers vs rule, commit/push checkpoints.
 
+
+## 2026-09-21 — EXP-0011 Finnish holdout executed; FAIL after one fix [NB-0023b]
+
+- **Question:** same as NB-0023 / EXP-0011. Preregistered pass rule unchanged after seeing numbers.
+- **Inputs:** PG#11 English, PG#218 Latin, PG#7000 Finnish Kalevala (licenses/digests in `data/manifests/exp0011_corpora.json`). Seeds data=4011, model=42, finnish=4012. Filler rate 0.30. MPS; 3,000 updates.
+- **Commands:** `.venv/bin/python -m voynich.latent_recovery --root . --device mps --n-train 4000 --n-val 400 --n-holdout 300 --updates 3000 --voynich-if-pass`
+- **Run 1 observations:** neural mask_f1=0.594 / acc=0.580 / recon=0.057; classical f1=0.755 / acc=0.654 / recon=0.189; majority f1=0.832 acc=0.713; matched_random f1=0.713 recon=0.199; vocab_filter f1=0.380. **FAIL.** Param count then 47,453. Train ~49.5s. Val mixed-world metrics looked better than Finnish world-C — easy worlds A/B/D inflated selection.
+- **Single registered fix (before rerun scores):** world-C oversampling + copy-aware side features + checkpoint on world-C-only val F1; classical uses the same token-level copy/mutate scores. Params after fix: **70,301**.
+- **Run 2 observations:** neural f1=0.823 acc=0.704 recon=0.076 bits_gain≈0; classical f1=0.733 acc=0.622 recon=0.189 bits_gain=0.084; baselines essentially unchanged. **Still FAIL** (neural misses acc/recon/bits margins; classical misses acc/f1-vs-random/recon). Exploratory null-rate check: neural predicts 3.3% nulls vs true 28.7% (near delete-nothing); classical ~29.7% nulls but poorly localized.
+- **Interpretation:** held-out Finnish benchmark does not beat preregistered baselines. No verified latent-message recovery. Vocab baseline remained weak (not a cheat surface). **Did not point the procedure at Voynich.**
+- **Artifacts:** `results/EXP-0011/results.json`, `results_v1_pre_fix.json`, `docs/experiments/EXP-0011-results.md`. Thresholds not moved.
+- **Next (highest EV):** first verify recoverability on world-C with **copy/mutate disabled** (random-char + periodic only). If that still fails the same rule, the objective/architecture is insufficient; if it passes, add copy/mutate back as the falsifier for a copy-aware detector. Do not treat synthetic wins as manuscript plaintext.
+

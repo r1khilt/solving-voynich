@@ -1,0 +1,37 @@
+{
+  "experiment": "EXP-0011",
+  "data_seed": 4011,
+  "finnish_seed": 4012,
+  "filler_rate_primary": 0.3,
+  "seq_len": 128,
+  "n_train": 4000,
+  "n_val": 400,
+  "n_holdout": 300,
+  "worlds": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "filler_families": [
+    "random_char",
+    "random_pseudoword",
+    "copy_mutate",
+    "periodic",
+    "shift_phase",
+    "stateful"
+  ],
+  "derived_sha256": {
+    "train": "e3b1c984977c0b24b7745d1016c430d22f78fa5685dae91b8c0aca2a96c880b0",
+    "validation": "3b12a01e68fea29180c500c688470ced379e68e2747e62ea0fd9de0acea2da4e",
+    "finnish_holdout": "099b5d6afdb71d2350d7c520cd8787b6e8aea3a3629a8c40cb97fda41b93c4dc"
+  },
+  "pass_rule": {
+    "mask_f1_min": 0.65,
+    "margin_vs_weak": 0.08,
+    "margin_vs_vocab": 0.05,
+    "vocab_f1_max": 0.55,
+    "recon_margin": 0.08,
+    "pred_bits_margin": 0.05
+  }
+}

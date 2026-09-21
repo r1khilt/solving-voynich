@@ -311,6 +311,19 @@ def structured_pseudotext(rng: np.random.Generator, length: int, alphabet: str) 
     return text, [0] * len(text)
 
 
+def _fit_len(text: str, mask: list[int], length: int = SEQ_LEN) -> tuple[str, list[int]]:
+    if len(text) >= length:
+        text = text[:length]
+        mask = list(mask[:length])
+    else:
+        pad = length - len(text)
+        text = text + (" " * pad)
+        mask = list(mask) + [1] * pad
+    if len(mask) != length:
+        mask = (list(mask) + [1] * length)[:length]
+    return text, mask
+
+
 def make_sample(
     plaintext: str,
     rng: np.random.Generator,
@@ -321,8 +334,8 @@ def make_sample(
     alphabet = alphabet or "".join(rng.choice(list(CIPHER_POOL), size=36, replace=False))
     if world == WORLD_A:
         text = plaintext.replace("\n", " ")
-        text = re.sub(r" {2,}", " ", text)[:SEQ_LEN].ljust(SEQ_LEN)[:SEQ_LEN]
-        mask = [1] * len(text)
+        text = re.sub(r" {2,}", " ", text)
+        text, mask = _fit_len(text, [1] * len(text))
         return {
             "world": world,
             "text": text,
@@ -335,6 +348,7 @@ def make_sample(
         }
     if world == WORLD_D:
         text, mask = structured_pseudotext(rng, SEQ_LEN, alphabet)
+        text, mask = _fit_len(text, mask)
         return {
             "world": world,
             "text": text,
@@ -352,22 +366,14 @@ def make_sample(
         ciphered = (ciphered + " ") * (SEQ_LEN // max(1, len(ciphered)))
     ciphered = ciphered[: SEQ_LEN * 2]
     if world == WORLD_B:
-        text = ciphered[:SEQ_LEN].ljust(SEQ_LEN)[:SEQ_LEN]
-        mask = [1] * len(text)
+        text, mask = _fit_len(ciphered, [1] * len(ciphered))
         family = ""
         rate = 0.0
         kept = text
     else:
         noisy, mask_full, fams = insert_nulls(ciphered, rng, filler_rate, alphabet)
-        # Truncate/pad to SEQ_LEN
-        if len(noisy) >= SEQ_LEN:
-            text = noisy[:SEQ_LEN]
-            mask = mask_full[:SEQ_LEN]
-            family = next((f for f in fams[:SEQ_LEN] if f), "mixed")
-        else:
-            text = noisy.ljust(SEQ_LEN)[:SEQ_LEN]
-            mask = mask_full + [1] * (SEQ_LEN - len(mask_full))
-            family = next((f for f in fams if f), "mixed")
+        text, mask = _fit_len(noisy, mask_full)
+        family = next((f for f in fams[: len(text)] if f), "mixed")
         rate = filler_rate
         kept = "".join(ch for ch, m in zip(text, mask) if m == 1)
     return {
@@ -489,42 +495,82 @@ def pred_bits_of_selected(text: str, mask: np.ndarray, model: dict) -> float:
 # ---------------------------------------------------------------------------
 
 
+def _token_spans(text: str) -> list[tuple[int, int, str]]:
+    return [(m.start(), m.end(), m.group()) for m in re.finditer(r"\S+", text)]
+
+
+def _edit_dist1(a: str, b: str) -> bool:
+    if a == b:
+        return True
+    if abs(len(a) - len(b)) > 1:
+        return False
+    if len(a) == len(b):
+        return sum(x != y for x, y in zip(a, b)) <= 1
+    if len(a) > len(b):
+        a, b = b, a
+    # a shorter by 1
+    i = j = diffs = 0
+    while i < len(a) and j < len(b):
+        if a[i] != b[j]:
+            diffs += 1
+            j += 1
+            if diffs > 1:
+                return False
+        else:
+            i += 1
+            j += 1
+    return True
+
+
+def copy_aware_features(text: str) -> np.ndarray:
+    """Per-position features: [is_space, copy_char, copy_token, periodic]."""
+    n = len(text)
+    feats = np.zeros((n, 4), dtype=np.float32)
+    recent_chars: list[str] = []
+    spans = _token_spans(text)
+    # Mark token-level copy/mutate against previous tokens
+    token_copy = np.zeros(n, dtype=np.float32)
+    seen: list[str] = []
+    for start, end, tok in spans:
+        score = 0.0
+        for prev in seen[-12:]:
+            if _edit_dist1(tok, prev):
+                score = 1.0
+                break
+        token_copy[start:end] = score
+        seen.append(tok)
+    for i, ch in enumerate(text):
+        feats[i, 0] = 1.0 if ch == " " else 0.0
+        window = recent_chars[-20:]
+        feats[i, 1] = 1.0 if ch != " " and ch in window else 0.0
+        feats[i, 2] = token_copy[i]
+        feats[i, 3] = 1.0 if (i % 5 == 0 or i % 7 == 0) else 0.0
+        recent_chars.append(ch)
+    return feats
+
+
 def classical_null_mask(text: str, filler_rate: float = PRIMARY_FILLER_RATE) -> np.ndarray:
-    """Interpretable signal/null decode. ~features, not neural."""
+    """Interpretable 2-state Viterbi with token-level copy/mutate features."""
     n = len(text)
     if n == 0:
         return np.zeros(0, dtype=int)
-    # Emission scores for SIGNAL vs NULL at each position
-    recent: list[str] = []
-    emit_s = np.zeros(n)
-    emit_n = np.zeros(n)
+    feats = copy_aware_features(text)
     from collections import Counter
 
-    counts = Counter(text)
+    counts = Counter(ch for ch in text if ch != " ")
     ranked = {ch: i for i, (ch, _) in enumerate(counts.most_common())}
+    emit_s = np.zeros(n)
+    emit_n = np.zeros(n)
     for i, ch in enumerate(text):
-        rank = ranked.get(ch, n)
-        # Language-like: mid-frequency ranks preferred over rare continuous noise
-        zipf_s = -abs(rank - 3) * 0.15
-        copy = 0.0
-        window = recent[-16:]
-        if ch in window:
-            copy += 1.2
-        # single-edit proximity to a recent char
-        for prev in window[-8:]:
-            if prev != ch and len(prev) == 1 and len(ch) == 1:
-                copy += 0.15
-        periodic = 0.4 if (i % 5 == 0 or i % 7 == 0) else 0.0
-        # Spaces more often signal in ciphered language
-        space_s = 0.3 if ch == " " else 0.0
-        emit_s[i] = zipf_s + space_s - 0.5 * copy
+        rank = ranked.get(ch, len(ranked))
+        zipf_s = -abs(min(rank, 8) - 2) * 0.1
+        space_s = 0.5 * feats[i, 0]
+        copy = 1.5 * feats[i, 1] + 2.2 * feats[i, 2]
+        periodic = 0.35 * feats[i, 3]
+        emit_s[i] = zipf_s + space_s - 0.8 * copy
         emit_n[i] = copy + periodic - space_s
-        recent.append(ch)
-    # Viterbi with prior favoring signal fraction (1 - filler_rate)
-    log_stay_s = math.log(0.85)
-    log_to_n = math.log(0.15)
-    log_stay_n = math.log(0.70)
-    log_to_s = math.log(0.30)
+    log_stay_s, log_to_n = math.log(0.88), math.log(0.12)
+    log_stay_n, log_to_s = math.log(0.72), math.log(0.28)
     neg = -1e9
     dp_s = np.full(n, neg)
     dp_n = np.full(n, neg)
@@ -533,54 +579,49 @@ def classical_null_mask(text: str, filler_rate: float = PRIMARY_FILLER_RATE) -> 
     dp_s[0] = math.log(1 - filler_rate) + emit_s[0]
     dp_n[0] = math.log(filler_rate) + emit_n[0]
     for i in range(1, n):
-        s_from_s = dp_s[i - 1] + log_stay_s
-        s_from_n = dp_n[i - 1] + log_to_s
+        s_from_s, s_from_n = dp_s[i - 1] + log_stay_s, dp_n[i - 1] + log_to_s
         if s_from_s >= s_from_n:
-            dp_s[i] = s_from_s + emit_s[i]
-            ptr_s[i] = 1
+            dp_s[i], ptr_s[i] = s_from_s + emit_s[i], 1
         else:
-            dp_s[i] = s_from_n + emit_s[i]
-            ptr_s[i] = 0
-        n_from_n = dp_n[i - 1] + log_stay_n
-        n_from_s = dp_s[i - 1] + log_to_n
+            dp_s[i], ptr_s[i] = s_from_n + emit_s[i], 0
+        n_from_n, n_from_s = dp_n[i - 1] + log_stay_n, dp_s[i - 1] + log_to_n
         if n_from_n >= n_from_s:
-            dp_n[i] = n_from_n + emit_n[i]
-            ptr_n[i] = 0
+            dp_n[i], ptr_n[i] = n_from_n + emit_n[i], 0
         else:
-            dp_n[i] = n_from_s + emit_n[i]
-            ptr_n[i] = 1
+            dp_n[i], ptr_n[i] = n_from_s + emit_n[i], 1
     mask = np.zeros(n, dtype=int)
     state = 1 if dp_s[-1] >= dp_n[-1] else 0
     for i in range(n - 1, -1, -1):
         mask[i] = state
         state = ptr_s[i] if state == 1 else ptr_n[i]
-    # Soft rate match: if predicted null rate far from target, threshold-adjust
-    pred_null = 1 - mask.mean()
-    if abs(pred_null - filler_rate) > 0.2:
-        scores = emit_n - emit_s
-        k = int(round(filler_rate * n))
-        idx = np.argsort(-scores)[:k]
-        mask = np.ones(n, dtype=int)
-        mask[idx] = 0
+        if i == 0:
+            break
+    # Calibrate null rate to target by score thresholding (keeps relative ranking)
+    scores = emit_n - emit_s
+    k = int(round(filler_rate * n))
+    idx = np.argsort(-scores)[:k]
+    mask = np.ones(n, dtype=int)
+    mask[idx] = 0
     return mask
 
 
 # ---------------------------------------------------------------------------
-# Tiny BiLSTM
+# Tiny BiLSTM with copy-aware side features
 # ---------------------------------------------------------------------------
 
 
 class TinySignalModel(nn.Module):
-    def __init__(self, vocab_size: int, emb: int = 32, hidden: int = 48):
+    def __init__(self, vocab_size: int, emb: int = 32, hidden: int = 64, n_feats: int = 4):
         super().__init__()
         self.emb = nn.Embedding(vocab_size, emb, padding_idx=0)
+        self.feat_proj = nn.Linear(n_feats, emb)
         self.lstm = nn.LSTM(emb, hidden, num_layers=1, batch_first=True, bidirectional=True)
         self.mask_head = nn.Linear(hidden * 2, 1)
         self.recon_head = nn.Linear(hidden * 2, vocab_size)
         self.world_head = nn.Linear(hidden * 2, 4)
 
-    def forward(self, x: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-        h, _ = self.lstm(self.emb(x))
+    def forward(self, x: torch.Tensor, feats: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        h, _ = self.lstm(self.emb(x) + self.feat_proj(feats))
         mask_logit = self.mask_head(h).squeeze(-1)
         recon_logit = self.recon_head(h)
         world_logit = self.world_head(h.mean(1))
@@ -607,10 +648,13 @@ def generate_dataset(
     if not langs:
         raise ValueError("Need english and/or latin corpora")
     samples_train, samples_val = [], []
+    # Fix 1 (post-fail): oversample world C so null-detection is not drowned by easy A/B/D.
+    # Mix still includes A/B/D for the Naibbe trap (cipher ≠ filler).
+    world_p = np.array([0.10, 0.15, 0.60, 0.15], dtype=float)
 
     def build(n, store):
         for _ in range(n):
-            world = int(rng.integers(0, 4))
+            world = int(rng.choice(4, p=world_p))
             lang = str(rng.choice(langs))
             piece = chunks_from_text(corpora[lang], rng, 1)[0]
             alphabet = "".join(rng.choice(list(CIPHER_POOL), size=36, replace=False))
@@ -649,12 +693,12 @@ def generate_finnish_holdout(
 def batchify(samples: list[dict], vocab: dict[str, int], idxs: np.ndarray) -> dict:
     texts = [samples[i]["text"] for i in idxs]
     x = torch.tensor([encode(t, vocab) for t in texts], dtype=torch.long)
+    feats = torch.tensor(np.stack([copy_aware_features(t) for t in texts]), dtype=torch.float32)
     mask = torch.tensor([samples[i]["mask"] for i in idxs], dtype=torch.float32)
     world = torch.tensor([samples[i]["world"] for i in idxs], dtype=torch.long)
-    # Reconstruction target: original char id if signal else pad
     recon = x.clone()
     recon[mask < 0.5] = 0
-    return {"x": x, "mask": mask, "world": world, "recon": recon}
+    return {"x": x, "feats": feats, "mask": mask, "world": world, "recon": recon}
 
 
 @torch.no_grad()
@@ -663,8 +707,10 @@ def predict_masks(model: TinySignalModel, samples: list[dict], vocab: dict[str, 
     out = []
     for start in range(0, len(samples), BATCH_SIZE):
         batch = samples[start : start + BATCH_SIZE]
-        x = torch.tensor([encode(s["text"], vocab) for s in batch], dtype=torch.long, device=device)
-        logits, _, _ = model(x)
+        texts = [s["text"] for s in batch]
+        x = torch.tensor([encode(t, vocab) for t in texts], dtype=torch.long, device=device)
+        feats = torch.tensor(np.stack([copy_aware_features(t) for t in texts]), dtype=torch.float32, device=device)
+        logits, _, _ = model(x, feats)
         pred = (logits.sigmoid() >= 0.5).long().cpu().numpy()
         out.extend(pred)
     return out
@@ -762,35 +808,50 @@ def train_model(
     best_f1 = -1.0
     best_state = None
     rng = np.random.default_rng(MODEL_SEED)
+    # Index pools for world-C-focused batching
+    by_world = {w: [i for i, s in enumerate(train) if s["world"] == w] for w in range(4)}
+    for w, idxs in by_world.items():
+        if not idxs:
+            by_world[w] = list(range(len(train)))
+    val_c = [s for s in val if s["world"] == WORLD_C] or val
     model.train()
     t0 = time.time()
     for step in range(1, updates + 1):
-        idxs = rng.integers(0, len(train), size=BATCH_SIZE)
+        # 70% world C, remainder mixed A/B/D (Naibbe trap retained)
+        n_c = int(0.70 * BATCH_SIZE)
+        idxs_c = rng.choice(by_world[WORLD_C], size=n_c, replace=True)
+        other_pool = by_world[WORLD_A] + by_world[WORLD_B] + by_world[WORLD_D]
+        idxs_o = rng.choice(other_pool, size=BATCH_SIZE - n_c, replace=True)
+        idxs = np.concatenate([idxs_c, idxs_o])
+        rng.shuffle(idxs)
         batch = batchify(train, vocab, idxs)
         x = batch["x"].to(device)
+        feats = batch["feats"].to(device)
         mask = batch["mask"].to(device)
         world = batch["world"].to(device)
         recon = batch["recon"].to(device)
-        mask_logit, recon_logit, world_logit = model(x)
+        mask_logit, recon_logit, world_logit = model(x, feats)
         loss_mask = F.binary_cross_entropy_with_logits(mask_logit, mask)
-        # Reconstruction only on signal positions
         flat_logits = recon_logit.reshape(-1, recon_logit.size(-1))
         flat_tgt = recon.reshape(-1)
         flat_w = mask.reshape(-1)
         loss_recon = F.cross_entropy(flat_logits, flat_tgt, reduction="none")
         loss_recon = (loss_recon * flat_w).sum() / flat_w.sum().clamp_min(1.0)
         loss_world = F.cross_entropy(world_logit, world)
-        loss = loss_mask + 0.5 * loss_recon + 0.2 * loss_world
+        loss = loss_mask + 0.5 * loss_recon + 0.15 * loss_world
         opt.zero_grad(set_to_none=True)
         loss.backward()
         nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         opt.step()
         if step % 100 == 0 or step == updates:
-            rank_model = fit_rank_bigram([s["text"] for s in train if s["world"] == WORLD_B][:200] or [s["text"] for s in train[:200]])
-            preds = predict_masks(model, val, vocab, device)
-            metrics = evaluate_masks(val, preds, rank_model)
+            rank_model = fit_rank_bigram(
+                [s["text"] for s in train if s["world"] == WORLD_B][:200] or [s["text"] for s in train[:200]]
+            )
+            preds = predict_masks(model, val_c, vocab, device)
+            metrics = evaluate_masks(val_c, preds, rank_model)
             metrics["step"] = step
             metrics["loss"] = float(loss.item())
+            metrics["val_slice"] = "world_C_only"
             history.append(metrics)
             if metrics["mask_f1"] > best_f1:
                 best_f1 = metrics["mask_f1"]
@@ -805,6 +866,7 @@ def train_model(
         "seconds": time.time() - t0,
         "history": history,
         "device": device,
+        "fix": "worldC_oversample_copy_features_checkpoint_on_worldC_val",
     }
     return model, summary
 
@@ -1154,12 +1216,17 @@ def run_experiment(args: argparse.Namespace) -> dict:
         "voynich_label_free": voynich_result,
         "data_digests": digests,
         "simplifications": [
-            "Character-level BiLSTM (~tens of k params), not a large transformer",
+            "Character-level BiLSTM with copy-aware side features (~tens of k params), not a large transformer",
             "Primary reconstruction target is C(L) via mask deletion, not full plaintext cryptanalysis",
-            "Classical model is a 2-state feature Viterbi (copy/rank), not a full 20-state HSMM",
+            "Classical model is a 2-state feature Viterbi with token-level copy/mutate scores, not a full 20-state HSMM",
             "Finnish diacritics folded to ASCII a-z by shared cleaner (syntax/vocab still Finnish)",
             "Single primary filler rate 0.30 in the scored holdout",
+            "One registered post-fail fix: world-C oversampling + copy features + checkpoint on world-C val",
         ],
+        "first_run_failure": {
+            "note": "Preserved in results_v1 if present; this report is the single registered rerun",
+            "diagnosis": "Mixed-world validation inflated neural metrics; Finnish world-C null detection failed to transfer",
+        },
     }
     write_json(res_root / "results.json", report)
     write_json(res_root / "decision.json", decision)

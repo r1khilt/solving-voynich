@@ -1,11 +1,11 @@
 # Project memory
 
-Last updated: 2026-09-21 (EXP-0011 latent recovery in progress).
+Last updated: 2026-09-21 (EXP-0011 Finnish holdout FAIL; Voynich not run).
 
 ## Current state
 
 - Phase: **active research and implementation**. The user explicitly authorized prior-work/methods research, corpus acquisition, architecture design, and code; the earlier preparation-only restriction is superseded.
-- **Active experiment EXP-0011 (NB-0023):** recover latent `C(L)` under fresh per-sample ciphers + structured nulls (worlds A–D); Finnish held-out killer benchmark gates any Voynich label-free run. Registration: `docs/experiments/EXP-0011.md`. Implementation: `src/voynich/latent_recovery.py` (~47k-param BiLSTM + classical 2-state Viterbi). Corpora: PG#11 English, PG#218 Latin, PG#7000 Finnish Kalevala (manifests tracked; raw ignored). Pass rule frozen before holdout scores. Not a decipherment claim.
+- **EXP-0011 completed (NB-0023/b):** Finnish held-out latent recovery under cipher+structured nulls **FAILED** the preregistered rule after one registered fix (world-C oversampling + copy features). Neural 70,301 params; near delete-nothing on holdout null rate. Classical ~30% nulls but recon≈matched random. **Voynich label-free not run.** Results: `docs/experiments/EXP-0011-results.md`. Not a decipherment.
 - Latest research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved.
 - Repository: `/Users/rikhil/coding/solving-voynich`.
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.
