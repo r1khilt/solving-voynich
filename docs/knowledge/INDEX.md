@@ -2,7 +2,7 @@
 
 ## Status and evidence labels
 
-This initial knowledge base organizes the charter. It is **not a completed literature review**. No external historical, paleographic, cryptanalytic, or machine-learning claim has yet been independently checked for this project.
+This initial knowledge base organizes the charter. It is **not a completed literature review**. A limited source check for the feasibility discussion established what the sources below report; no underlying historical or experimental finding has been independently replicated.
 
 Use these labels in future records:
 
@@ -19,6 +19,9 @@ Use these labels in future records:
 | --- | --- | --- | --- |
 | SRC-0001 | [Original research charter](../RESEARCH_CHARTER.md) | User attachment received 2026-09-20; preserved verbatim | Primary record of user intent and hypotheses; not empirical support |
 | SRC-0002 | Initial user instructions | Summarized in [project memory](../../MEMORY.md) and [NB-0001](../../NOTEBOOK.md) | Authority for scope, workflow preferences, Git checkpoints, and reported resources |
+| SRC-0003 | [The Beinecke Cipher (Voynich) Manuscript](https://beinecke.library.yale.edu/beinecke/collections/beinecke-cipher-voynich-manuscript) | Yale Library; undated page, accessed 2026-09-20; About and Access sections | Custodian describes the text as undeciphered and provides access to scans; no scans downloaded, and other page claims not audited |
+| SRC-0004 | [Deciphering a mysterious manuscript](https://news.yale.edu/2025/02/21/deciphering-mysterious-manuscript) | Oscar Sweeting, Yale News, 2025-02-21; accessed 2026-09-20; direct interview quote from Claire Bowern | Expert emphasizes the many unknowns and possibility of studying structure without knowing meanings; not a primary experimental paper |
+| SRC-0005 | [What We Know About The Voynich Manuscript](https://aclanthology.org/W11-1511/) | Sravana Reddy and Kevin Knight, LaTeCH 2011, pp. 78-86; accessed 2026-09-20 | Bibliographic record and introduction checked only; historical research context, not a current survey or a fully reviewed paper |
 
 When adding an external source, record title, authors/maintainer, date/version, exact URL or identifier, access date, relevant page/section, claims supported, limitations, rights/access constraints, and local path/checksum if downloaded. Prefer original manuscript images, transcription documentation, primary papers, and reproducible code over summaries.
 

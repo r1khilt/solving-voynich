@@ -39,3 +39,14 @@ Resource use (if applicable):
 - **Environment limitation:** the sandbox initially blocked `.git/index.lock`; an approved escalation allowed the commit. Network access and push also used the environment's approval flow. These requirements are separate from the user's standing authorization for routine Git work.
 - **Follow-up:** this entry records the successful initial publication and is included in a documentation-only follow-up checkpoint. No corpus downloads, dependency installations, training runs, or paid research API calls were performed.
 - **Next state:** wait for the user's instruction to begin research; maintain these records at future substantive checkpoints.
+
+## 2026-09-20 — Initial feasibility assessment [NB-0003]
+
+- **Question:** the user asked for the assistant's own assessment of whether decipherment is possible.
+- **Scope:** discussion and a limited factual source check; the research-execution phase remains inactive. Consulted Yale's manuscript overview, a Yale interview with Claire Bowern, and the bibliographic record/introduction of Reddy and Knight (2011). Source records: SRC-0003 through SRC-0005. No systematic literature review or experiments performed.
+- **Source observation:** Yale continues to describe the text as undeciphered. Bowern emphasizes how many assumptions theories require while distinguishing structural knowledge from semantic understanding. These are source reports, not independent replication.
+- **Assistant assessment, not an experimental finding:** full decipherment is possible but cannot responsibly be called likely from present evidence. A constrained, consistent encoding with surviving redundancy would offer a better prospect than arbitrary private conventions or text without recoverable semantic content. More capable models cannot uniquely recover information absent from the evidence.
+- **Method assessment:** synthetic ground truth combined with causal model analysis is the most compelling proposal to investigate, without claiming novelty or demonstrated transfer. A learned predictor can reveal useful structure without recovering the historical generator or meanings. Unrestricted context-dependent mappings and filler exceptions would make a proposed decoding unfalsifiable.
+- **Evidence that would increase confidence:** a compact frozen mechanism or decoder making independently checkable predictions on excluded manuscript material; progressively stronger evidence would be required for semantic claims. No numerical success probability assigned.
+- **Validation / checkpoint:** source links and attribution scope recorded; preparation-only status preserved; documentation link and whitespace checks accompany this checkpoint. Commit and push outcome is verified in the session's tool record.
+- **Next state:** continue discussion or await instruction to begin; no direction selected for execution and no resources spent on training or paid research API calls.

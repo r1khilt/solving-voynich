@@ -2,7 +2,7 @@
 
 A long-term research project aimed at deciphering the Voynich Manuscript by reverse-engineering the process that produced its text. Modern AI is a research tool; fluent generation, attractive translations, and statistical similarity are not themselves decipherment.
 
-**Current phase: preparation only.** The knowledge base and research records are initialized. No manuscript data has been acquired, literature reviewed, models trained, or research experiments run. Research execution awaits the user's instruction to begin.
+**Current phase: preparation only.** The knowledge base and research records are initialized. A limited source check supported a feasibility discussion; no systematic literature review, manuscript data acquisition, model training, or research experiment has begun. Research execution awaits the user's instruction to begin.
 
 ## Start here
 
