@@ -1,0 +1,213 @@
+{
+  "duplicate_leaf_links": [],
+  "duplicate_projection": "remove_spaces_and_uncertainty_events_v1",
+  "duplicate_span": 128,
+  "fractions_by_component": {
+    "test": 0.1,
+    "train": 0.8,
+    "validation": 0.1
+  },
+  "independent_groups": 101,
+  "leaf_assignments": {
+    "f1": "train",
+    "f10": "train",
+    "f100": "train",
+    "f101": "train",
+    "f102": "train",
+    "f103": "train",
+    "f104": "train",
+    "f105": "train",
+    "f106": "train",
+    "f107": "train",
+    "f108": "train",
+    "f11": "validation",
+    "f111": "validation",
+    "f112": "train",
+    "f113": "train",
+    "f114": "train",
+    "f115": "train",
+    "f116": "test",
+    "f13": "train",
+    "f14": "train",
+    "f15": "test",
+    "f16": "train",
+    "f17": "train",
+    "f18": "train",
+    "f19": "train",
+    "f2": "train",
+    "f20": "train",
+    "f21": "train",
+    "f22": "train",
+    "f23": "train",
+    "f24": "train",
+    "f25": "train",
+    "f26": "train",
+    "f27": "validation",
+    "f28": "train",
+    "f29": "train",
+    "f3": "train",
+    "f30": "train",
+    "f31": "train",
+    "f32": "train",
+    "f33": "train",
+    "f34": "train",
+    "f35": "test",
+    "f36": "validation",
+    "f37": "validation",
+    "f38": "train",
+    "f39": "train",
+    "f4": "train",
+    "f40": "train",
+    "f41": "train",
+    "f42": "train",
+    "f43": "train",
+    "f44": "test",
+    "f45": "train",
+    "f46": "train",
+    "f47": "train",
+    "f48": "train",
+    "f49": "validation",
+    "f5": "train",
+    "f50": "train",
+    "f51": "train",
+    "f52": "train",
+    "f53": "train",
+    "f54": "train",
+    "f55": "train",
+    "f56": "train",
+    "f57": "train",
+    "f58": "train",
+    "f6": "train",
+    "f65": "train",
+    "f66": "test",
+    "f67": "validation",
+    "f68": "train",
+    "f69": "train",
+    "f7": "train",
+    "f70": "test",
+    "f71": "train",
+    "f72": "train",
+    "f73": "validation",
+    "f75": "train",
+    "f76": "validation",
+    "f77": "train",
+    "f78": "train",
+    "f79": "test",
+    "f8": "train",
+    "f80": "train",
+    "f81": "train",
+    "f82": "train",
+    "f83": "train",
+    "f84": "train",
+    "f85-f86-Ros": "train",
+    "f87": "train",
+    "f88": "test",
+    "f89": "validation",
+    "f9": "train",
+    "f90": "test",
+    "f93": "train",
+    "f94": "train",
+    "f95": "test",
+    "f96": "train",
+    "f99": "train"
+  },
+  "pipeline_version": "zl-eva-codepoint-v1",
+  "schema_version": 2,
+  "seed": "voynich-section-leaf-split-20260921-v2",
+  "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "split_version": "section_leaf_v2",
+  "stratification": {
+    "coverage_search_nodes": 18,
+    "field": "page_variables.I (illustration type)",
+    "rare_section_policy": "Two independent groups: train+validation; one group: train. No group splitting.",
+    "rare_sections": {
+      "A": 2
+    },
+    "section_achieved_by_component": {
+      "A": {
+        "test": 0,
+        "train": 1,
+        "validation": 1
+      },
+      "B": {
+        "test": 1,
+        "train": 8,
+        "validation": 1
+      },
+      "C": {
+        "test": 1,
+        "train": 4,
+        "validation": 1
+      },
+      "H": {
+        "test": 6,
+        "train": 53,
+        "validation": 5
+      },
+      "P": {
+        "test": 1,
+        "train": 4,
+        "validation": 1
+      },
+      "S": {
+        "test": 1,
+        "train": 11,
+        "validation": 1
+      },
+      "T": {
+        "test": 1,
+        "train": 2,
+        "validation": 1
+      },
+      "Z": {
+        "test": 1,
+        "train": 2,
+        "validation": 1
+      }
+    },
+    "section_targets_by_component": {
+      "A": {
+        "test": 0,
+        "train": 1,
+        "validation": 1
+      },
+      "B": {
+        "test": 1,
+        "train": 8,
+        "validation": 1
+      },
+      "C": {
+        "test": 1,
+        "train": 4,
+        "validation": 1
+      },
+      "H": {
+        "test": 6,
+        "train": 52,
+        "validation": 6
+      },
+      "P": {
+        "test": 1,
+        "train": 4,
+        "validation": 1
+      },
+      "S": {
+        "test": 1,
+        "train": 11,
+        "validation": 1
+      },
+      "T": {
+        "test": 1,
+        "train": 2,
+        "validation": 1
+      },
+      "Z": {
+        "test": 1,
+        "train": 2,
+        "validation": 1
+      }
+    },
+    "strategy": "multi_label_coverage_then_squared_deficit_v2"
+  },
+  "unit": "leaf_with_f85_f86_rosettes_group"
+}

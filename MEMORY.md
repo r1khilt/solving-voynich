@@ -4,13 +4,15 @@ Last updated: 2026-09-20 (America/Los_Angeles).
 
 ## Current state
 
-- Phase: **preparation only**. The user explicitly said not to start research tasks yet.
+- Phase: **active research and implementation**. The user explicitly authorized prior-work/methods research, corpus acquisition, architecture design, and code; the earlier preparation-only restriction is superseded.
 - Repository: `/Users/rikhil/coding/solving-voynich`.
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.
 - The user describes the repository as private; remote visibility has not been independently verified.
-- Initial local checkout had no commits or project files. This checkpoint establishes documentation only.
+- Initial local checkout had no commits or project files. The project now has a documented corpus pipeline and interpretable-model implementation.
 - Setup checkpoint `e07c276` was successfully pushed to `origin/main`; see notebook entry NB-0002 for validation and environment limitations.
-- Limited source checks supported the feasibility discussions in NB-0003 and NB-0004; the source register includes those references. No systematic literature review, corpus, trained model, experiment result, or decipherment claim exists in the project yet.
+- Targeted prior-work and architecture reviews are complete, with primary-source links and limitations. This is not an exhaustive literature survey or a replication of prior results.
+- Official ZL3b transcription acquired and prepared: 226 modeling pages, frozen section-aware physical-group split with 177/24/25 pages, train-only 112-entry vocabulary. Raw/derived text stays Git-ignored; provenance/manifests tracked. See DATA.md.
+- Dense reference and controlled variants implemented with native causal hooks, training/resume, baselines and explicit test-evaluation gating. Pre-pilot validation: 222 tests passed plus 23 subtests, lint and documentation checks passed. EXP-0001 real-data pilot is registered and pending; no decipherment claim.
 
 ## Durable intent and preferences
 
@@ -33,6 +35,8 @@ Reported on 2026-09-20; not verified account balances:
 - User is willing to help with downloads and additional resources.
 - No API credentials, compute inventory, spending schedule, or per-experiment budget has been established.
 
+Local implementation inventory: arm64 Mac, 64 GiB memory, 18 logical CPUs; sandboxed PyTorch reports no available accelerator. Python 3.12.13 / PyTorch 2.14.0 / NumPy 2.5.3 installed in ignored `.venv`, dependency resolution tracked in `uv.lock`. No paid research API used. EXP-0001 bounds the initial local CPU pilots.
+
 The user's reference to an AI model solving Navier–Stokes is motivation, not verified evidence in this project. No conclusion about that claim has been drawn and no independent verification has been performed.
 
 ## Reading map
@@ -43,7 +47,9 @@ The user's reference to an AI model solving Navier–Stokes is motivation, not v
 - Hypothesis IDs and tests: `docs/research/HYPOTHESES.md`.
 - Research standards: `docs/research/PROTOCOL.md`.
 - Deferred candidates: `docs/research/BACKLOG.md`.
+- Literature and architecture: `docs/research/PRIOR_WORK.md`, `docs/research/ARCHITECTURE_REVIEW.md`, `docs/research/ARCHITECTURE.md`.
+- Reproduction commands: `docs/RUNBOOK.md`; active pilot: `docs/experiments/EXP-0001.md`.
 
 ## Next state
 
-Wait for the user's instruction to start research. The backlog is a menu of possibilities, not permission to execute it. NB-0005 records a proposed first modeling sequence: prepare transcription and held-out splits, train a small standard model from scratch on Voynich-only training text, evaluate, then interpret. No architecture is implemented or empirically ranked, and the discussion has not started research execution.
+Carry out the authorized research, data acquisition, architecture and pipeline implementation. Review both Voynich-specific precedents and the underlying methods before attempts. Favor measured prediction quality and causal inspectability over untested architectural complexity. See NB-0006 for the phase transition; resource-intensive training remains subject to explicit bounded estimates.

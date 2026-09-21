@@ -3,7 +3,7 @@
 ## Scope and continuity
 
 1. Read `MEMORY.md`, the latest entries in `NOTEBOOK.md`, and the relevant knowledge/research documents before substantive work.
-2. The initial user instruction is **preparation only; do not begin research tasks yet**. Setup is authorized. Do not acquire corpora, conduct a literature review, run experiments, train models, or call paid research APIs until the user asks to begin. Once that happens, update the phase in `MEMORY.md` and `README.md` and record the transition in `NOTEBOOK.md`.
+2. **Active research and implementation are authorized.** The user has explicitly requested prior-work research, related cipher/method research, manuscript acquisition, and design/implementation of an interpretable Voynich-only model. Local tests and bounded pilot runs needed to validate this work are within scope. Keep expensive training and paid API use bounded by concrete cost/resource estimates; no open-ended spending. The earlier preparation-only instruction is superseded.
 3. The long-term objective is actual decipherment, not merely Voynich-like generation or another descriptive statistical report. The charter is a source of hypotheses, not mandatory methodology or established truth.
 4. Use the user's latest instructions to resolve scope. Be ambitious about questions and strict about evidence.
 
@@ -15,6 +15,7 @@
 - Clearly separate sourced observations, user suggestions, working hypotheses, and model-generated speculation. Never invent citations, experiment results, data availability, or external accomplishments.
 - Preserve source versions, checksums, preprocessing, manuscript identifiers, seeds, splits, software versions, commands, and costs when available. Keep raw and derived data distinguishable.
 - Follow `docs/research/PROTOCOL.md` for experiment design and claims. Do not retrofit success criteria to observed results without labeling the work exploratory.
+- Before attempting a method, review both prior Voynich applications and relevant work on the method in cryptography/decipherment and machine learning. Record source-based reasons for architectural choices and distinguish evidence at frontier scale from extrapolation to this corpus.
 
 ## Git and resource use
 

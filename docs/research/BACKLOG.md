@@ -1,6 +1,6 @@
 # Deferred research candidates
 
-**Status: none started or scheduled.** The user asked for preparation only. These are options to revisit after an explicit instruction to begin, not commitments to follow the charter in sequence.
+**Status: active implementation.** The user authorized literature review, data acquisition and an interpretable model pipeline. The targeted reviews and initial data/model implementation are underway/completed as recorded in the notebook; later decipherment and synthetic calibration tasks remain separate work.
 
 | Candidate | Concrete output | Prerequisite |
 | --- | --- | --- |

@@ -2,7 +2,7 @@
 
 ## Status and evidence labels
 
-This initial knowledge base organizes the charter. It is **not a completed literature review**. A limited source check for the feasibility discussion established what the sources below report; no underlying historical or experimental finding has been independently replicated.
+This knowledge base organizes the charter and the project's research. Targeted prior-work and architecture reviews are now available below; they are not exhaustive surveys or independent replications. Source claims remain distinct from our implementation results.
 
 Use these labels in future records:
 
@@ -36,6 +36,16 @@ These are deferred discovery topics, not established findings or an active resea
 - Position effects, repetition, near-neighbor forms, entropy, dependence, and the effect of transcription/segmentation choices on each.
 - Prior cipher, language, abbreviation, null/filler, and copy/mutate proposals; which tests actually discriminate among them.
 - Earlier neural modeling and decipherment attempts, their datasets, leakage risks, available code, and claims that survived independent testing.
+
+## Active research records
+
+- [Prior Voynich models and neural decipherment](../research/PRIOR_WORK.md): original reports, supervision distinctions, evaluation limitations and source links.
+- [Modern architecture and interpretability review](../research/ARCHITECTURE_REVIEW.md): verified primary-source claims and adopt/ablate/defer decisions.
+- [Data provenance and representation](../research/DATA.md): official transcription, usage terms, parsing, uncertainty and split policy; machine-readable manifests live in `data/manifests/` at the repository root.
+- [Implemented architecture](../research/ARCHITECTURE.md): exact design and its tradeoffs.
+- [EXP-0001](../experiments/EXP-0001.md): bounded implementation-validation pilot, registered before training.
+
+The original source register above is preserved for early discussions. The targeted reviews contain their own source/version/access records; follow the exact citation for each claim rather than treating a review as proof of a manuscript hypothesis.
 
 ## Navigation and retrieval
 

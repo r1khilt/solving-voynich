@@ -2,7 +2,7 @@
 
 A long-term research project aimed at deciphering the Voynich Manuscript by reverse-engineering the process that produced its text. Modern AI is a research tool; fluent generation, attractive translations, and statistical similarity are not themselves decipherment.
 
-**Current phase: preparation only.** The knowledge base and research records are initialized. A limited source check supported a feasibility discussion; no systematic literature review, manuscript data acquisition, model training, or research experiment has begun. Research execution awaits the user's instruction to begin.
+**Current phase: active research and implementation.** The user has authorized a prior-work and methods review, manuscript acquisition, and an interpretable Voynich-only modeling pipeline. Design choices, validation, and completed runs are documented in the notebook; no decipherment claim is made.
 
 ## Start here
 
@@ -20,3 +20,22 @@ A long-term research project aimed at deciphering the Voynich Manuscript by reve
 Use versioned Markdown while the knowledge base is small. Add searchable source records and experiment manifests as material arrives; adopt retrieval infrastructure only when volume warrants it. Preserve raw evidence and keep interpretations traceable to it.
 
 Commit coherent checkpoints and push them to the configured GitHub remote. Never commit credentials, private keys, or uncontrolled bulk datasets/model artifacts. Every research checkpoint should include its notebook update and enough detail to reproduce or inspect the result.
+
+## Research and implementation
+
+- [Prior work](docs/research/PRIOR_WORK.md): existing Voynich GRU/GPT experiments and related cipher/decipherment research.
+- [Architecture review](docs/research/ARCHITECTURE_REVIEW.md): modern DeepSeek/Qwen/Moonshot ideas, evidence at small scale, and interpretability tradeoffs.
+- [Implemented model](docs/research/ARCHITECTURE.md): a roughly 1.8M-parameter reference transformer, smaller/attention-only controls, and isolated MTP, QK-normalization and gating variants.
+- [Corpus documentation](docs/research/DATA.md): the official ZL3b transcription, normalized EVA units, uncertainties, frozen physical-group splits and provenance.
+- [Runbook](docs/RUNBOOK.md): acquisition, training, evaluation, checkpoint resumption, ablation plans and causal interventions.
+- [Registered validation pilot](docs/experiments/EXP-0001.md): limits and acceptance criteria established before real-data training.
+
+```sh
+uv sync --extra dev --locked
+.venv/bin/python scripts/download_data.py
+.venv/bin/python -m voynich.data
+.venv/bin/python -m pytest -q
+.venv/bin/python -m voynich.train --config configs/smoke.json --run-dir outputs/my-smoke
+```
+
+The pipeline needs no paid APIs or pretrained weights. Training evaluates validation pages; final test scoring requires a separate explicit command. Raw text, derived corpora, and checkpoints stay local and are reproducible from tracked code/manifests. Architecture configs are candidates, not a completed ranking or evidence of decipherment.

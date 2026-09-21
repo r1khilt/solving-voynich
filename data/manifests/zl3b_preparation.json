@@ -1,0 +1,134 @@
+{
+  "annotation_counts": {
+    "alternative": 817,
+    "drawing_interruption": 764,
+    "editorial_comment": 862,
+    "ligature": 402,
+    "paragraph_end": 740,
+    "paragraph_start": 740,
+    "rare_eva": 168,
+    "text_tag": 2,
+    "uncertain_space": 2746,
+    "unknown_span": 25,
+    "unreadable": 70
+  },
+  "derived_sha256": {
+    "test.jsonl": "7972ce73d178674cda28a2dbe019aaf3dafa641936987e35c4072cbb3e4acee0",
+    "tokenizer.json": "ade614f664299920424c788f91ff3dea1ca5b7c0491d3952585a37f6b6a7d030",
+    "train.jsonl": "49618c7be69cef573fe9ad8ae3627ad9f7b495601af1897aafb6082837fceca4",
+    "validation.jsonl": "9bee4149f26fc49b49e4a826b73598dfb79a1e785731c15a1763489315a2efd3"
+  },
+  "leakage_audit": {
+    "cross_split_exact_locus_types": 49,
+    "cross_split_leaf_page_long_span_conflicts": 0,
+    "limitation": "Short recurring labels/words and approximate or topical overlap remain; no section-transfer claim.",
+    "long_span_units": 128,
+    "longest_cross_split_exact_locus_units": 8
+  },
+  "parse": {
+    "empty_pages_excluded": [
+      "f116v"
+    ],
+    "excluded_loci": [
+      {
+        "locus_id": "f17r.13",
+        "reason": "extraneous_writing",
+        "source_line": 714
+      },
+      {
+        "locus_id": "f66r.82",
+        "reason": "extraneous_writing",
+        "source_line": 2786
+      },
+      {
+        "locus_id": "f116v.1",
+        "reason": "extraneous_writing",
+        "source_line": 8508
+      }
+    ],
+    "source_loci": 5385,
+    "source_pages": 227
+  },
+  "pipeline_version": "zl-eva-codepoint-v1",
+  "schema_version": 1,
+  "source_sha256": "bf5b6d4ac1e3a51b1847a9c388318d609020441ccd56984c901c32b09beccafc",
+  "split_version": "section_leaf_v2",
+  "splits": {
+    "test": {
+      "leaves": 10,
+      "loci": 540,
+      "pages": 25,
+      "pages_by_currier_language": {
+        "A": 12,
+        "B": 9,
+        "unset": 4
+      },
+      "pages_by_illustration_type": {
+        "B": 2,
+        "C": 2,
+        "H": 15,
+        "P": 2,
+        "S": 1,
+        "T": 1,
+        "Z": 2
+      },
+      "text_codepoints": 22292,
+      "tokens_with_bos_eos": 22342,
+      "uncertainty_tokens": 360,
+      "unknown_vocab_tokens": 5
+    },
+    "train": {
+      "leaves": 81,
+      "loci": 4153,
+      "pages": 177,
+      "pages_by_currier_language": {
+        "A": 88,
+        "B": 70,
+        "unset": 19
+      },
+      "pages_by_illustration_type": {
+        "A": 5,
+        "B": 16,
+        "C": 8,
+        "H": 104,
+        "P": 10,
+        "S": 22,
+        "T": 4,
+        "Z": 8
+      },
+      "text_codepoints": 184576,
+      "tokens_with_bos_eos": 184930,
+      "uncertainty_tokens": 2885,
+      "unknown_vocab_tokens": 0
+    },
+    "validation": {
+      "leaves": 10,
+      "loci": 689,
+      "pages": 24,
+      "pages_by_currier_language": {
+        "A": 14,
+        "B": 4,
+        "unset": 6
+      },
+      "pages_by_illustration_type": {
+        "A": 3,
+        "B": 1,
+        "C": 1,
+        "H": 10,
+        "P": 4,
+        "S": 2,
+        "T": 1,
+        "Z": 2
+      },
+      "text_codepoints": 26323,
+      "tokens_with_bos_eos": 26371,
+      "uncertainty_tokens": 430,
+      "unknown_vocab_tokens": 6
+    }
+  },
+  "text_syntax_audit": {
+    "editorial_markup_characters_retained": 0,
+    "unexpected_codepoints": []
+  },
+  "vocab_size": 112
+}

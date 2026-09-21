@@ -1,6 +1,6 @@
 # Research protocol
 
-This protocol governs future work. It does not authorize research execution during the preparation phase.
+This protocol governs active research. The user has authorized literature/methods review, corpus acquisition, and model/pipeline implementation; bounded validation runs are recorded individually.
 
 ## Evidence and claims
 
@@ -9,6 +9,8 @@ Treat the manuscript's text, transcription, layout, and imagery as distinct evid
 A decipherment proposal should specify a constrained decoding procedure, explain its degrees of freedom, make predictions on material excluded from development, and withstand independent application. Plausible translations, low prediction loss, visual resemblance, and recovered patterns alone do not meet that standard. Do not force readings from guessed plant identifications or permit unexplained material to become unlimited filler.
 
 ## Before each experiment
+
+Review previous applications to Voynich and relevant work on the method in decipherment, cryptography, and machine learning. Record what supervision, data size, assumptions, and evaluation differ from our proposed use. New architecture features must have a stated rationale and a control configuration.
 
 Create a record with:
 

@@ -1,0 +1,4 @@
+{
+  "model": {"d_model": 128, "n_layers": 2, "n_heads": 4, "d_ff": 352, "context_length": 256, "dropout": 0.1, "attention_only": true},
+  "training": {"steps": 2000, "batch_size": 8, "learning_rate": 0.0006, "weight_decay": 0.1, "warmup_steps": 100, "eval_interval": 100, "seed": 42, "auxiliary_weight": 0.1, "patience": 8}
+}
