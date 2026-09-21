@@ -2,6 +2,8 @@
 
 Updated 2026-09-21. **The episodic campaign completed; neither primary causal claim passed.** No manuscript word, language, filler assignment or historical encoding rule was established. This work did not score the final manuscript holdout.
 
+The audit fixes and completed results are integrated on this branch. Final combined validation: **471 tests plus 23 subtests passed in 8.05s**, including MPS, and full source/test/script lint passed. Archive hashes, both notebook histories and local links were checked. Notebook NB-INTEGRATION-20260921 records publication attempts; verify the remote ref rather than treating a local commit as backup.
+
 ## Latest results
 
 The [prediction study](experiments/EPISODIC-0012-results.md) trained 21 models across seven conditions and three seeds. Many varied artificial processes improved the raw transformer over 32 fixed processes: −0.127945 bits on new tasks from familiar families and −0.038903 on excluded families. Both passed the frozen practical rule. Canonicalizing symbol names nearly eliminated the fixed/fresh difference; parameter diversity alone is not established as the cause.
@@ -28,7 +30,7 @@ The [deep review](research/deep-review-2026-09-21/README.md) contains 93 source 
 
 Earlier [CAMPAIGN-0001](experiments/CAMPAIGN-0001-results.md) completed blind recovery, broad causal calibration and longer-context tests. Transfer/context failures and synthetic-versus-manuscript distinctions remain relevant. Corpus: official ZL3b, frozen 177/24/25 physical-group split, 112-entry vocabulary; [data record](research/DATA.md).
 
-External-audit fixes are a separate pushed checkpoint on `codex/research-audit-fixes`, commit `aa502e9`: alignment-aware recovery diagnostics, optional normalized rank proxy with matched controls, and opt-in reproducible random-offset training. Legacy gates/defaults are unchanged. That branch carries latent-recovery history through `3e956c8`; integration must preserve both histories and the shared checkout.
+[External-audit fixes](research/EXTERNAL_AUDIT_2026-09-21.md) from pushed checkpoint `aa502e9` are integrated here: alignment-aware recovery diagnostics, optional normalized rank proxy with matched controls, and opt-in reproducible random-offset training. Legacy gates/defaults remain unchanged. Integration retains latent-recovery history through `3e956c8` (EXP-0011a/0012/0013 failures and EXP-0015 registration); main has later concurrent work outside this snapshot. Episodic IDs are namespaced; neither history overwrites the other.
 
 Next experiments should separate parameter diversity from permutation coverage and qualify parity prediction before stronger causal explanations. Alternative unitization/random-offset training need registered comparisons; implementation alone establishes no quality gain. All campaign final pools are exposed. New adaptive work requires fresh final keys/contexts and frozen rules. No successor is scheduled.
 

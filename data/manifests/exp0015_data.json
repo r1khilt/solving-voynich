@@ -1,0 +1,65 @@
+{
+  "experiment": "EXP-0015",
+  "data_seed": 4011,
+  "model_seed": 42,
+  "holdout_seed_base": 4012,
+  "filler_rate": 0.3,
+  "filler_families": [
+    "random_char",
+    "periodic"
+  ],
+  "train_languages": [
+    "arabic",
+    "english",
+    "german",
+    "greek",
+    "hindi",
+    "indonesian",
+    "irish",
+    "russian",
+    "spanish",
+    "swahili",
+    "turkish",
+    "vietnamese"
+  ],
+  "holdout_languages": [
+    "basque",
+    "finnish",
+    "hebrew",
+    "hungarian",
+    "latin",
+    "tagalog"
+  ],
+  "historical_languages": [
+    "italian_historical"
+  ],
+  "seq_len": 128,
+  "n_train": 6000,
+  "n_val": 600,
+  "n_holdout_per_lang": 200,
+  "derived_sha256": {
+    "train": "2f37f9c563f0c25554b69a7f0cc43fb5d9d761b2b314dac5a618f2fdb809bc97",
+    "validation": "012cdbc0914635daca0c9270ea67face828fc5359b494dda937c4943ccb4b2e8",
+    "holdout_basque": "30440d3bbc33e9b2a420eab51f61dc760851b5a8f1336ef3bab8c702dddff60c",
+    "holdout_finnish": "c58634561d1ab08384febc653c6347126fd7e79ad1a07eaa87370fd58a02b44e",
+    "holdout_hebrew": "4f16a61c92f1647073280d0a5285175890fcc84bd9451ac396b6366acfa386fd",
+    "holdout_hungarian": "35357d4875fe2ed6964ba49e4bd35d5803e3852b71c68641c7ca2e3324b8b355",
+    "holdout_latin": "94973b1d8658d3e250e40e2254700b73d16fd61ccd9a6d9554b9149450d7d68c",
+    "holdout_tagalog": "8db97d4ccb62cf152fecc9e27fc4b89761c5cfb82375d75e09f7ff82d75a3d7e",
+    "historical_italian_historical": "b6132e2ea7f15ffde2e31e8967e5923c55aa89313c5ccb2895015131a59b2004"
+  },
+  "decoder": "exact_count_keep_round((1-0.30)*L)",
+  "pass_rule": {
+    "null_recall_min": 0.5,
+    "null_precision_min": 0.5,
+    "pred_null_rate_band": [
+      0.15,
+      0.45
+    ],
+    "recon_vs_matched_random": "strictly_greater_per_language",
+    "vocab_cheat": "vocab_filter.recon_acc >= model.recon_acc ⇒ language FAIL",
+    "run_pass": "≥4 holdouts incl. ≥1 non-IE AND macro recon > macro matched_random"
+  },
+  "latin_in_training": false,
+  "note": "Latin reserved as IE holdout; EXP-0014 Finnish-only confirmation not scored"
+}

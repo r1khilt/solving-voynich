@@ -322,9 +322,12 @@ def test_training_checkpoint_roundtrip_and_provenance_without_reading_test(corpu
         training.train(config, root, run, device="cpu", threads=1)
 
 
-def test_cpu_resume_restores_optimizer_sampler_dropout_and_schedule_exactly(corpus, tmp_path, monkeypatch):
+@pytest.mark.parametrize("window_sampling", [None, "random_offsets"])
+def test_cpu_resume_restores_optimizer_sampler_dropout_and_schedule_exactly(corpus, tmp_path, monkeypatch,
+                                                                          window_sampling):
     root, _ = corpus
-    config = training_config(tmp_path / "config.json")
+    config = training_config(tmp_path / "config.json", **(
+        {"window_sampling": window_sampling} if window_sampling else {}))
     full = tmp_path / "full"
     training.train(config, root, full, device="cpu", threads=1)
     reference_evaluate = training.evaluate_model

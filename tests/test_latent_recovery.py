@@ -76,6 +76,24 @@ def test_insert_nulls_preserves_signal_order():
     assert recovered == ciphered
 
 
+def test_easy_filler_families_only():
+    from voynich.latent_recovery import EASY_FILLER_FAMILIES, parse_filler_families
+
+    assert parse_filler_families("random_char,periodic") == EASY_FILLER_FAMILIES
+    rng = np.random.default_rng(5)
+    alphabet = "".join(list(CIPHER_POOL)[:30])
+    for _ in range(20):
+        sample = make_sample(
+            "the quick brown fox jumps over the lazy dog " * 4,
+            rng,
+            WORLD_C,
+            0.3,
+            alphabet,
+            filler_families=EASY_FILLER_FAMILIES,
+        )
+        assert sample["filler_family"] in EASY_FILLER_FAMILIES
+
+
 def test_param_count_under_100k():
     vocab = build_vocab()
     model = TinySignalModel(len(vocab))
@@ -85,6 +103,44 @@ def test_param_count_under_100k():
 def test_classical_mask_length():
     mask = classical_null_mask("αβγ αβγ δεζ δεζ ηθηθ", 0.3)
     assert len(mask) == len("αβγ αβγ δεζ δεζ ηθηθ")
+
+
+def test_classical_hsmm_mask_length():
+    from voynich.latent_recovery import classical_hsmm_null_mask
+
+    text = "αβγ αβγ δεζ δεζ ηθηθ αααα"
+    mask = classical_hsmm_null_mask(text, 0.3)
+    assert len(mask) == len(text)
+    assert set(mask.tolist()) <= {0, 1}
+
+
+def test_pass_rule_v12_blocks_delete_nothing():
+    from voynich.latent_recovery import apply_pass_rule_v12
+
+    # High signal F1 / delete-nothing style neural
+    neural = {
+        "mask_f1": 0.83,
+        "mask_acc": 0.71,
+        "recon_acc": 0.07,
+        "pred_bits_gain": 0.0,
+        "null_recall": 0.04,
+        "null_precision": 0.5,
+        "pred_null_rate": 0.03,
+    }
+    classical = {
+        "mask_f1": 0.72,
+        "mask_acc": 0.60,
+        "recon_acc": 0.18,
+        "pred_bits_gain": 0.01,
+        "null_recall": 0.32,
+        "null_precision": 0.31,
+        "pred_null_rate": 0.30,
+    }
+    majority = {"mask_f1": 0.83, "mask_acc": 0.71, "recon_acc": 0.07, "pred_bits_gain": 0.0}
+    random_b = {"mask_f1": 0.71, "mask_acc": 0.6, "recon_acc": 0.20, "pred_bits_gain": -0.03}
+    vocab_b = {"mask_f1": 0.42, "mask_acc": 0.5, "recon_acc": 0.05, "pred_bits_gain": 1.0}
+    decision = apply_pass_rule_v12(neural, classical, majority, random_b, vocab_b)
+    assert decision["passed"] is False
 
 
 def test_pass_rule_vocab_cheat_fails():
@@ -100,6 +156,65 @@ def test_pass_rule_vocab_cheat_fails():
 def test_f1_perfect():
     y = np.array([1, 1, 0, 0, 1])
     assert f1_binary(y, y) == 1.0
+
+
+def test_recon_acc_definition_prefix_length_pen():
+    from voynich.latent_recovery import recon_accuracy
+
+    # Exact match
+    assert recon_accuracy("abc", "axbxc", np.array([1, 0, 1, 0, 1])) == 1.0
+    # Length mismatch penalizes
+    score = recon_accuracy("abcd", "axbxc", np.array([1, 0, 1, 0, 1]))
+    assert 0.0 < score < 1.0
+
+
+def test_ctc_deletion_loss_runs():
+    import torch
+    from voynich.latent_recovery import build_vocab, ctc_deletion_loss, encode
+
+    vocab = build_vocab()
+    text = "αβγδε"
+    x = torch.tensor([encode(text, vocab)], dtype=torch.long)
+    # Prefer keeping all positions
+    mask_logit = torch.full((1, len(text)), 3.0, requires_grad=True)
+    target = encode(text, vocab)
+    loss = ctc_deletion_loss(mask_logit, x, [target], len(vocab))
+    assert torch.isfinite(loss)
+    loss.backward()
+    assert mask_logit.grad is not None
+
+
+def test_pass_rule_v13_requires_recon_above_random():
+    from voynich.latent_recovery import apply_pass_rule_v13
+
+    neural = {
+        "mask_f1": 0.7,
+        "mask_acc": 0.75,
+        "recon_acc": 0.18,
+        "pred_bits_gain": 0.0,
+        "null_recall": 0.55,
+        "null_precision": 0.55,
+        "pred_null_rate": 0.30,
+    }
+    classical = {
+        "mask_f1": 0.6,
+        "mask_acc": 0.6,
+        "recon_acc": 0.10,
+        "pred_bits_gain": 0.0,
+        "null_recall": 0.4,
+        "null_precision": 0.4,
+        "pred_null_rate": 0.30,
+    }
+    majority = {"mask_f1": 0.83, "mask_acc": 0.71}
+    random_b = {"mask_f1": 0.71, "recon_acc": 0.20, "pred_bits_gain": -0.03}
+    vocab_b = {"mask_f1": 0.42}
+    decision = apply_pass_rule_v13(neural, classical, majority, random_b, vocab_b)
+    assert decision["passed"] is False
+    # Same null gates but recon above random → pass
+    neural2 = {**neural, "recon_acc": 0.25}
+    decision2 = apply_pass_rule_v13(neural2, classical, majority, random_b, vocab_b)
+    assert decision2["passed"] is True
+    assert decision2["winner"] == "neural"
 
 
 def test_homophone_cipher_runs():

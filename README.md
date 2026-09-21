@@ -6,6 +6,8 @@ A long-term research project aimed at deciphering the Voynich Manuscript by reve
 
 **Research basis:** [deep review and next design](docs/research/deep-review-2026-09-21/README.md), with 93 source records covering 92 works/resources, four topic reviews and a searchable catalog. Reading depth and unresolved source questions are recorded.
 
+**Audit fixes:** [review of the supplied audit](docs/research/EXTERNAL_AUDIT_2026-09-21.md) separates confirmed weaknesses from incorrect claims. Alignment-aware recovery diagnostics and optional random-offset training are implemented; historical scores and pass rules remain intact. Implementation alone establishes no new recovery result.
+
 **Current phase: active research and implementation.** The user has authorized continued bounded experiments, corpus research, model training and mechanistic interpretation. Design choices, validation, and completed runs are documented in the notebook; no decipherment claim is made.
 
 **Completed isolated implementation:** [episodic rule recovery](docs/research/EPISODIC_IMPLEMENTATION.md), [EPISODIC-0012](docs/experiments/EPISODIC-0012.md) and [EPISODIC-0013](docs/experiments/EPISODIC-0013.md), on `codex/episodic-rule-recovery`. All scientific phases used frozen source `c9c95a0`; all workers completed after a documented interruption/recovery. Results are namespaced to preserve the separate latent-recovery experiments in the shared checkout.

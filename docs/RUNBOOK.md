@@ -184,3 +184,8 @@ MPLCONFIGDIR=/private/tmp/voynich-mpl /private/tmp/voynich-report-env/bin/python
 ```
 
 The temporary environment path is local to this machine; elsewhere install the specified Matplotlib version in a separate environment. The script records input/source hashes in `figure_provenance.json`. Visually inspect PNG/SVG/PDF. The runtime panel sums completed run durations, excludes discarded partial attempts and is not whole-campaign elapsed time. The figure displays frozen results; it does not redefine scientific gates.
+## Random-offset training option
+
+The ordinary training entry point accepts `--window-sampling random_offsets`, or the training config can set `"window_sampling": "random_offsets"`. `configs/small_random_offsets.json` is the compact configuration with this option enabled. This file is a runnable implementation example, not a registered comparison or a completed experiment.
+
+Pages are sampled in proportion to raw next-symbol positions, then a full-window start is sampled uniformly with both endpoints included. Short pages stay padded; no window crosses a page. The saved sampler RNG makes interrupted training reproducible. Validation remains deterministic. Historical configs without this key retain fixed-window training, and an old checkpoint should be resumed without a redundant sampler override. Changing sampling policy requires a new run. See [the audit response](research/EXTERNAL_AUDIT_2026-09-21.md) for exposure limits and corrected claims about the earlier code.

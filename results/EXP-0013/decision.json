@@ -1,0 +1,62 @@
+{
+  "passed": false,
+  "winner": null,
+  "rule": "EXP-0013",
+  "neural_check": {
+    "model": "neural",
+    "pass": false,
+    "reasons": [
+      "recon_acc 0.1993 not > matched_random 0.2043"
+    ],
+    "metrics": {
+      "mask_f1": 0.8130402935366825,
+      "mask_acc": 0.7626822916666667,
+      "recon_acc": 0.1993428067558036,
+      "recon_edit_sim": 0.7127768786629587,
+      "pred_bits_gain": -0.18863102632362144,
+      "n": 300,
+      "null_precision": 0.5738667501761529,
+      "null_recall": 0.6663636363636364,
+      "pred_null_rate": 0.33263020833333334,
+      "true_null_rate": 0.2864583333333333,
+      "null_f1": 0.616665965591217,
+      "signal_threshold": 0.4507434666156769,
+      "teacher_forced_recon_acc": 1.0,
+      "teacher_forced_recon_edit_sim": 1.0
+    },
+    "null_f1": 0.616665965591217
+  },
+  "classical_check": {
+    "model": "classical",
+    "pass": false,
+    "reasons": [
+      "null_recall 0.3920 < 0.5",
+      "null_precision 0.3684 < 0.5",
+      "recon_acc 0.1017 not > matched_random 0.2043"
+    ],
+    "metrics": {
+      "mask_f1": 0.7268121232204129,
+      "mask_acc": 0.6333333333333333,
+      "recon_acc": 0.10166801752099446,
+      "recon_edit_sim": 0.5544666120856399,
+      "pred_bits_gain": 0.009670158110193526,
+      "n": 300,
+      "null_precision": 0.3684210526315789,
+      "null_recall": 0.392,
+      "pred_null_rate": 0.3047916666666667,
+      "true_null_rate": 0.2864583333333333,
+      "null_f1": 0.37984496124031014
+    },
+    "null_f1": 0.37984496124031014
+  },
+  "thresholds": {
+    "null_recall_min": 0.5,
+    "null_precision_min": 0.5,
+    "pred_null_rate_min": 0.15,
+    "pred_null_rate_max": 0.45,
+    "recon_vs_matched_random": "strictly_greater",
+    "vocab_f1_max": 0.55
+  },
+  "note": "majority/mask_acc and bits_gain reported but not pass criteria in EXP-0013",
+  "majority_acc_ref": 0.7135416666666666
+}

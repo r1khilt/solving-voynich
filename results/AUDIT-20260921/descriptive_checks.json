@@ -1,0 +1,67 @@
+{
+  "scope": "descriptive software/data checks; no fitting or manuscript test access",
+  "splits": {
+    "train": {
+      "pages": 177,
+      "normalized_text_codepoints": 184576,
+      "encoded_tokens_with_page_bos_eos": 184930,
+      "pages_below_2048_codepoints": 145,
+      "c_occurrences": 10571,
+      "ch_occurrences": 8774,
+      "fraction_c_followed_by_h": 0.8300066218900767,
+      "fixed_windows_256": 811,
+      "fixed_windows_2048": 209,
+      "padded_slot_fraction_2048": 0.5683663838217703,
+      "blocks_with_50_to_75_percent_padding": 85
+    },
+    "validation": {
+      "pages": 24,
+      "normalized_text_codepoints": 26323,
+      "encoded_tokens_with_page_bos_eos": 26371,
+      "pages_below_2048_codepoints": 20,
+      "c_occurrences": 1568,
+      "ch_occurrences": 1308,
+      "fraction_c_followed_by_h": 0.8341836734693877,
+      "fixed_windows_256": 115,
+      "fixed_windows_2048": 28,
+      "padded_slot_fraction_2048": 0.5405447823660714,
+      "blocks_with_50_to_75_percent_padding": 8
+    }
+  },
+  "input_sha256": {
+    "train.jsonl": "49618c7be69cef573fe9ad8ae3627ad9f7b495601af1897aafb6082837fceca4",
+    "validation.jsonl": "9bee4149f26fc49b49e4a826b73598dfb79a1e785731c15a1763489315a2efd3",
+    "tokenizer.json": "ade614f664299920424c788f91ff3dea1ca5b7c0491d3952585a37f6b6a7d030"
+  },
+  "source_sha256": {
+    "scripts/audit_external_review.py": "febd38730fb815354dae32f92730962859e2e58f43f429d1f9bd0e8fcd0aa704",
+    "src/voynich/runtime.py": "0be831246480b0220b3f7426a7d16d9768ed3f915faccccfc785ee233e509a67",
+    "src/voynich/tokenizer.py": "c8a0cea5dd14697c0abb8b2150d4b0f31853ce9162a8fc0441f7a5a706e81d1c",
+    "src/voynich/latent_recovery.py": "42b147099df5264f87585231286afe348d7e8ed45ecd3b5d9a0f0f4e6b16efd1"
+  },
+  "one_deletion_fixture": {
+    "target": "abcdefghij",
+    "selected": "abdefghij",
+    "positional_score": 0.19999999999999998,
+    "aligned_similarity": 0.9,
+    "exact_recovery": false
+  },
+  "rank_remapping_fixture": {
+    "original_text": "aaaabbbc",
+    "selected_text": "abbbc",
+    "original_encoding_then_deletion": [
+      0,
+      2,
+      2,
+      2,
+      5
+    ],
+    "legacy_rebuilt_encoding_after_deletion": [
+      2,
+      0,
+      0,
+      0,
+      5
+    ]
+  }
+}

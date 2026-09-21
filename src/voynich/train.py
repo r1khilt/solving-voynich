@@ -24,7 +24,7 @@ def load_checkpoint(path, device="cpu"):
 
 
 def train(config_path, data_dir, run_dir, *, device="auto", steps=None, seed=None, resume=None, threads=4,
-          preparation_manifest=None):
+          preparation_manifest=None, window_sampling=None):
     torch.set_num_threads(threads)
     config = json.loads(Path(config_path).read_text())
     cfg = copy.deepcopy(config["training"])
@@ -32,6 +32,11 @@ def train(config_path, data_dir, run_dir, *, device="auto", steps=None, seed=Non
         cfg["steps"] = steps
     if seed is not None:
         cfg["seed"] = seed
+    if window_sampling is not None:
+        cfg["window_sampling"] = window_sampling
+    sampling = cfg.get("window_sampling", "fixed_windows")
+    if sampling not in {"fixed_windows", "random_offsets"}:
+        raise ValueError("window_sampling must be fixed_windows or random_offsets")
     if min(cfg["steps"], cfg["batch_size"], cfg["eval_interval"]) < 1:
         raise ValueError("steps, batch size and evaluation interval must be positive")
     if cfg["learning_rate"] <= 0 or cfg["weight_decay"] < 0:
@@ -98,7 +103,11 @@ def train(config_path, data_dir, run_dir, *, device="auto", steps=None, seed=Non
         "training_data": config.get("training_data_description",
                                     "Voynich train split only; random initialization; no pretrained weights"),
         "selection_split": "validation", "test_evaluated": False,
-        "sampler": "uniform page-window sampling with replacement; final short windows right padded",
+        "sampler": ("uniform page-window sampling with replacement; final short windows right padded"
+                    if sampling == "fixed_windows" else
+                    "page probability proportional to next-symbol count; uniform inclusive full-window start; "
+                    "short pages right padded; target exposure not uniform"),
+        "window_sampling": sampling,
     }
     write_json(run_dir / "manifest.json", metadata)
     tokenizer.save(run_dir / "tokenizer.json")
@@ -134,8 +143,11 @@ def train(config_path, data_dir, run_dir, *, device="auto", steps=None, seed=Non
     tokens_seen = 0
     for step in range(start_step + 1, cfg["steps"] + 1):
         model.train()
-        indices = torch.randint(len(train_data.windows), (cfg["batch_size"],), generator=sampler).tolist()
-        x, targets, _ = train_data.batch(indices, device, horizons)
+        if sampling == "random_offsets":
+            x, targets, _ = train_data.random_offset_batch(cfg["batch_size"], device, sampler, horizons)
+        else:
+            indices = torch.randint(len(train_data.windows), (cfg["batch_size"],), generator=sampler).tolist()
+            x, targets, _ = train_data.batch(indices, device, horizons)
         output = model(x)
         total, count = loss_sum(output.logits, targets[1])
         if int(count) == 0:
@@ -209,10 +221,13 @@ def main():
     parser.add_argument("--threads", type=int, default=4)
     parser.add_argument("--resume")
     parser.add_argument("--preparation-manifest", help="Optional explicit registered corpus manifest")
+    parser.add_argument("--window-sampling", choices=["fixed_windows", "random_offsets"],
+                        help="Training sampler override; old configs retain fixed windows for reproduction")
     args = parser.parse_args()
     print(json.dumps(train(args.config, args.data, args.run_dir, device=args.device,
                            steps=args.steps, seed=args.seed, resume=args.resume, threads=args.threads,
-                           preparation_manifest=args.preparation_manifest), indent=2))
+                           preparation_manifest=args.preparation_manifest,
+                           window_sampling=args.window_sampling), indent=2))
 
 
 if __name__ == "__main__":

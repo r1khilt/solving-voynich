@@ -11,6 +11,12 @@ Updated 2026-09-21 after the episodic campaign completed. Detailed history belon
 - **Naming/isolation:** episodic studies were originally EXP-0012/0013 at c9. Publication aliases and result namespace prevent collision with the separate null-removal/CTC series. Historical JSON/config/output paths retain original IDs. Preserve concurrent main-branch work in `/Users/rikhil/coding/solving-voynich`.
 - Campaign workers completed; no successor is scheduled. Its final pools are exposed. This work did not score the manuscript final test. Adaptive successors require fresh final tasks and frozen rules.
 
+## Integrated external audit
+
+- Audit checkpoint `aa502e9` is integrated here: alignment-aware/exact recovery diagnostics, opt-in normalized rank proxy with count/histogram controls, and opt-in reproducible random-offset training. Historical gates/defaults remain unchanged; no old FAIL becomes PASS. `docs/research/EXTERNAL_AUDIT_2026-09-21.md`.
+- Integrated validation: **471 tests plus 23 subtests**, full source/test/script Ruff and artifact/link checks pass. Descriptive train/validation measurements reproduced exactly. Notebook NB-INTEGRATION-20260921 records merge and publication provenance.
+- This merge also retains latent-recovery records through `3e956c8`: EXP-0011a, null-aware EXP-0012 and CTC EXP-0013 failed; EXP-0015 was registered. Shared main has later concurrent work outside this integration snapshot.
+
 ## Durable decisions
 
 - Be ambitious about hypotheses and strict about evidence. The charter is a guide, not fact; keep `docs/RESEARCH_CHARTER.md` unchanged.
@@ -35,5 +41,5 @@ Updated 2026-09-21 after the episodic campaign completed. Detailed history belon
 - Episodic completed work: 25,200 updates /309,657,600 scored training targets, including repeated exposure and excluding discarded partial attempts. Sampled summed RSS peaked at 1.82 GiB; maximum reported Metal driver allocation 4.14 GiB. These overlap and are not total physical-memory peaks.
 - User reported about $1,000 in Astra credits and $20,000 in API credits expected around 2026-09-27. Unverified planning context, not balances or authorization to exhaust them. No paid research API credentials/spending schedule established. Estimate spend before paid runs; ask for concrete missing resources.
 - User's AI/Navier–Stokes claim remains unverified motivation.
-- Complete publication/integration of this campaign and external-audit fixes. Then register fresh tests separating parameter diversity from symbol renaming and obtain qualified parity teachers before stronger causal claims. Do not scale simply to fill RAM.
+- Next science: register fresh tests separating parameter diversity from symbol renaming and obtain qualified parity teachers before stronger causal claims. Do not scale simply to fill RAM. Verify remote publication at handoff; local commits are not remote backup.
 - Start with `AGENTS.md`, `docs/CURRENT_STATUS.md`, latest notebook and `docs/research/PROTOCOL.md`. Reproduction: `docs/RUNBOOK.md`. Implementation: `docs/research/EPISODIC_IMPLEMENTATION.md`. Hypotheses/backlog: `docs/research/HYPOTHESES.md` and `BACKLOG.md`.
