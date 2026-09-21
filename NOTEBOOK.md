@@ -362,3 +362,14 @@ Resource use (if applicable):
 - **Interpretation:** Alignment objective alone with global threshold does not pass. Localization/decode remains the bug. Not a decipherment. EXP-0013b and Voynich not run.
 - **Next (stop; no new architecture this session):** preregister decode-only exact-count / fixed-blank-count path on frozen EXP-0013 weights under the same rule; if that PASSES, failure was decode; else escalate joint keep-run DP under copy-CTC emissions.
 
+
+## 2026-09-21 — EXP-0015 multi-language preregistration (salvaged after timeout) [NB-0027]
+
+- **Continuity:** Prior agent timed out (PING) mid multi-language scale-up. Salvaged untracked EXP-0014/0014b/0015/0015b docs, `romanize.py`, `multilang_recovery.py`, tests, and local `data/raw/multilang_corpora/` downloads. **EXP-0014 Finnish-only confirmation abandoned as the session bar** (not scored); EXP-0015 is the gate. Did not redo completed EXP-0013 commit `5c1b36d`. Left unrelated untracked `scripts/structured_gibberish_comparison.py` untouched.
+- **Question:** Under `L → C(L) → N(C(L))` with fresh alphabet/cipher every sample and easy fillers (`random_char`+`periodic`, rate 0.30), does CTC-deletion BiLSTM + **preregistered exact-count** decoder pass multi-family holdouts (romanized Latin inventory)?
+- **Decoder (frozen before scores):** `n_keep = round((1-0.30)*L)`; keep top keep-probs; ties → lower index.
+- **Pass rule (frozen):** per holdout language: null_rec≥0.50, null_prec≥0.50, pred_null∈[0.15,0.45], recon_acc > matched-random, vocab-filter recon must not beat model. Run PASS iff ≥4 languages pass including ≥1 non-IE **and** macro recon > macro matched-random.
+- **Languages acquired:** train 12 (english, spanish, german, russian PG#16527, greek wiki-el, irish, arabic, turkish, indonesian, swahili, vietnamese, hindi); holdout 6 (finnish confirmatory-for-decode, hungarian, basque, hebrew, tagalog, **latin** as IE absent from train); historical Italian Dante PG#1000 (score-only). **Skipped:** Mandarin/Japanese/Korean (no romanized source quickly). Fixed bad Greek PG#329 (English) → Wikipedia el.
+- **Model plan:** BiLSTM emb128/hidden256/layers2; estimated **2,447,613** params; MPS; ≤3000 updates; seeds data 4011 / model 42 / holdout base 4012.
+- **Artifacts before scores:** `docs/experiments/EXP-0015.md`, `EXP-0015b.md`, `data/manifests/exp0015_corpora.json`, `exp0015_data.json` (derived digests written; bulk text gitignored).
+- **Status:** Preregistration complete; scored run not yet executed. Not a decipherment.

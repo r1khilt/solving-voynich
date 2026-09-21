@@ -1,0 +1,407 @@
+{
+  "romanization": {
+    "inventory": "abcdefghijklmnopqrstuvwxyz ",
+    "latin": "NFKD + strip combining marks + keep a-z/space",
+    "cyrillic": "ISO-9-like map then latin fold",
+    "greek": "classicizing map then latin fold",
+    "hebrew": "ISO-259-ish map then latin fold",
+    "arabic": "Buckwalter-inspired map then latin fold",
+    "devanagari": "IAST-inspired ASCII map then latin fold",
+    "cjk_policy": "Han/kana/hangul never used as cipher alphabet; require romanized source or skip"
+  },
+  "languages": {
+    "english": {
+      "family": "indo_european_germanic",
+      "role": "train",
+      "script": "latin",
+      "source": "project_gutenberg",
+      "pg_id": 11,
+      "title": "Alice's Adventures in Wonderland",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "c7172a25460df6168670a3ac6c778482feb23546fabf24d05ba9d19dbb9256c8",
+      "romanized_chars": 135508,
+      "download": {
+        "raw_bytes": 174311,
+        "raw_sha256": "01b38ea4c710a84bc18d0bd41271a5a1a92b94e97b2812f4dece97d4a694725e",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "spanish": {
+      "family": "indo_european_romance",
+      "role": "train",
+      "script": "latin",
+      "source": "project_gutenberg",
+      "pg_id": 2000,
+      "title": "Don Quijote",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "f130c61cd099dfd463c2e697319fecd04bfd1cf0d6a8365531f8e1c8a44d9155",
+      "romanized_chars": 2019862,
+      "download": {
+        "raw_bytes": 2225803,
+        "raw_sha256": "534f41d59f7142163fa0964076ac6351845c006ea6433778be637fac6d5b04d7",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "german": {
+      "family": "indo_european_germanic",
+      "role": "train",
+      "script": "latin",
+      "source": "project_gutenberg",
+      "pg_id": 2229,
+      "title": "Faust: Der Tragödie erster Teil",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "d6dd62a1fa31fdd435b3a29039b6c2df5ffd1e3f39398d24978713faebefb124",
+      "romanized_chars": 178320,
+      "download": {
+        "raw_bytes": 218440,
+        "raw_sha256": "fed2a58edd6910ee96d27ada614d34bcc41f03750d86541c41246bb74c564ff7",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "russian": {
+      "family": "indo_european_slavic",
+      "role": "train",
+      "script": "cyrillic",
+      "source": "project_gutenberg",
+      "pg_id": 16527,
+      "title": "1001 задач для умственного счета (Russian; romanized)",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "6bf432c12041070271d9a4067a2eef7630e0945518a91dbd1232bccbbd5a6c79",
+      "romanized_chars": 125530,
+      "download": {
+        "raw_bytes": 271449,
+        "raw_sha256": "a0a1492d7b206d628095a71e9fce2e90f8e384ce4c21f846654480550ab60b53",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "greek": {
+      "family": "indo_european_hellenic",
+      "role": "train",
+      "script": "greek",
+      "source": "wikipedia",
+      "wiki_lang": "el",
+      "wiki_titles": [
+        "Ελληνική_γλώσσα",
+        "Αθήνα",
+        "Ελλάδα",
+        "Αρχαία_Ελλάδα"
+      ],
+      "title": "Greek Wikipedia extracts (romanized classicizing map)",
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "73d5cdae0ed6a6c84e4e648d4f246f1e234eae4a8077bd6a4b736550adde631b",
+      "romanized_chars": 270090,
+      "download": {
+        "raw_bytes": 507892,
+        "raw_sha256": "71ad9a303050aaf29252455cfe638586859bde6e0c82fd73386972b93e05ecb0",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "irish": {
+      "family": "indo_european_celtic",
+      "role": "train",
+      "script": "latin",
+      "source": "wikipedia",
+      "wiki_lang": "ga",
+      "wiki_titles": [
+        "Éire",
+        "Gaeilge",
+        "Baile_Átha_Cliath",
+        "Stair_na_hÉireann"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "7da12af4b49d6c38fead0c9ca7ed276867aa8dfc2713bcccebd830c15aa42c25",
+      "romanized_chars": 58843,
+      "download": {
+        "raw_bytes": 64897,
+        "raw_sha256": "42f53dad46a7c01c50c289602d9a673e4b7dcefb146f91263ac683e6595ea7d5",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "arabic": {
+      "family": "semitic",
+      "role": "train",
+      "script": "arabic",
+      "source": "wikipedia",
+      "wiki_lang": "ar",
+      "wiki_titles": [
+        "العربية",
+        "مصر",
+        "القاهرة",
+        "الإسلام"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "e9f451f56a752f9f687bbac14e5296cdcc6d8928ed5004339b98d418c1a1e0b4",
+      "romanized_chars": 269167,
+      "download": {
+        "raw_bytes": 500609,
+        "raw_sha256": "867238b59e98283c4ea2a7fd450e501ffa612f8560b1868004e0423033c5d3b0",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "turkish": {
+      "family": "turkic",
+      "role": "train",
+      "script": "latin",
+      "source": "wikipedia",
+      "wiki_lang": "tr",
+      "wiki_titles": [
+        "Türkiye",
+        "Türkçe",
+        "İstanbul",
+        "Osmanlı_İmparatorluğu"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "c86bb673d4f78cdbae775ee182289d332dc2ed01e96ab994b0e3a2ee62a7c0b1",
+      "romanized_chars": 131832,
+      "download": {
+        "raw_bytes": 157784,
+        "raw_sha256": "f4be684235287d996d7585bb16a4f27c6f7a6f07580d98407c6d5cbe95722bf2",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "indonesian": {
+      "family": "austronesian",
+      "role": "train",
+      "script": "latin",
+      "source": "wikipedia",
+      "wiki_lang": "id",
+      "wiki_titles": [
+        "Indonesia",
+        "Bahasa_Indonesia",
+        "Jakarta",
+        "Sejarah_Indonesia"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "0dc6b003e8c5561ec365d0695905b0816d3ff6d50298d5774897a327dee0fd92",
+      "romanized_chars": 245301,
+      "download": {
+        "raw_bytes": 260870,
+        "raw_sha256": "485c6c36753d29bd2dc5bda914d8e0285948b4d2b6c86db9234d871b4e08eb8a",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "swahili": {
+      "family": "niger_congo",
+      "role": "train",
+      "script": "latin",
+      "source": "wikipedia",
+      "wiki_lang": "sw",
+      "wiki_titles": [
+        "Kiswahili",
+        "Tanzania",
+        "Kenya",
+        "Afrika"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "3c78a7913afca91b1a6a47c22e3ef4d0491deb044c1b07fbd7080ee8e6e87712",
+      "romanized_chars": 92860,
+      "download": {
+        "raw_bytes": 98631,
+        "raw_sha256": "bce92310115cb39aa998a3a4999faf9f141ab2528d8291fd8e0025ce6427b1f8",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "vietnamese": {
+      "family": "austroasiatic",
+      "role": "train",
+      "script": "latin",
+      "source": "wikipedia",
+      "wiki_lang": "vi",
+      "wiki_titles": [
+        "Việt_Nam",
+        "Tiếng_Việt",
+        "Hà_Nội",
+        "Lịch_sử_Việt_Nam"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "a4ef646c935ae4126c55bfd05ebf820c240eba911b164f0cf0c7f2e3389d55a5",
+      "romanized_chars": 241441,
+      "download": {
+        "raw_bytes": 346139,
+        "raw_sha256": "4a8b7f7d7b41ec221d52218e240b6b98fc1f606b1f5d34013714e5e8c19c8d21",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "hindi": {
+      "family": "indo_aryan",
+      "role": "train",
+      "script": "devanagari",
+      "source": "wikipedia",
+      "wiki_lang": "hi",
+      "wiki_titles": [
+        "भारत",
+        "हिन्दी",
+        "दिल्ली",
+        "भारतीय_इतिहास"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "939248e258319a32a9caefa1752d6f6bf0a0cefc6b8c5bcc9c65972b999ef8c8",
+      "romanized_chars": 121316,
+      "download": {
+        "raw_bytes": 327388,
+        "raw_sha256": "a2cc3271f2019f9b620f36d1a2e3c62b9cd56040b996bb482cb75336b772bd35",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "finnish": {
+      "family": "uralic",
+      "role": "holdout",
+      "script": "latin",
+      "source": "project_gutenberg",
+      "pg_id": 7000,
+      "title": "Kalevala",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "90309585bc3f5a83bc2bb10070dc31bd7409b6a17271c811f656d2157d63672f",
+      "romanized_chars": 512893,
+      "download": {
+        "raw_bytes": 658382,
+        "raw_sha256": "23e57fdc123b738f49e31a68ceef2b74b77a83baa0359ffd820f682905283631",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "hungarian": {
+      "family": "uralic",
+      "role": "holdout",
+      "script": "latin",
+      "source": "project_gutenberg",
+      "pg_id": 66560,
+      "title": "Megtörténtek és megtörténhetők",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "e8ce77b09a164b1e9868f1e5fe6b5bcb7c5855bff344b077e042f392ffa75216",
+      "romanized_chars": 214937,
+      "download": {
+        "raw_bytes": 271398,
+        "raw_sha256": "0a6aa744e9935924da4ee04298b25d172152d4a360290dab8a7f2d50ae87a3b5",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "basque": {
+      "family": "isolate",
+      "role": "holdout",
+      "script": "latin",
+      "source": "wikipedia",
+      "wiki_lang": "eu",
+      "wiki_titles": [
+        "Euskal_Herria",
+        "Euskara",
+        "Bilbo",
+        "Euskal_Herriko_historia"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "36981cebc2b2ba2f0c9265ca63f5913e4ea90305feb007f34f81ff4e25a593ae",
+      "romanized_chars": 293501,
+      "download": {
+        "raw_bytes": 312554,
+        "raw_sha256": "affa88f3ff21b1f90389656de5fa36eb5f5f1a252d7695d234321b0c9803b0cd",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "hebrew": {
+      "family": "semitic",
+      "role": "holdout",
+      "script": "hebrew",
+      "source": "wikipedia",
+      "wiki_lang": "he",
+      "wiki_titles": [
+        "עברית",
+        "ישראל",
+        "ירושלים",
+        "היסטוריה_של_עם_ישראל"
+      ],
+      "license": "CC BY-SA 4.0 (Wikipedia extracts); attribution in manifest",
+      "status": "cached",
+      "romanized_sha256": "52d35b0801bea179832cba95899a7c510c2af11766de9a58176a03d2ea4137b2",
+      "romanized_chars": 155273,
+      "download": {
+        "raw_bytes": 280455,
+        "raw_sha256": "bb8c5cd754da8f6549346b8c0ac6271ccd42331479b105c50de18cd14c776f3f",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "tagalog": {
+      "family": "austronesian",
+      "role": "holdout",
+      "script": "latin",
+      "source": "project_gutenberg",
+      "pg_id": 20228,
+      "title": "Noli Me Tangere (Tagalog)",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "19f6a4f913626ce3ad2c48bc1a1ed85e86537c318f0be28a90fa120d348fb16a",
+      "romanized_chars": 1098266,
+      "download": {
+        "raw_bytes": 1255062,
+        "raw_sha256": "43ef048e077f5a4080f6887b36ea26328ae1ce192891a20f28bf58909b06119a",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "latin": {
+      "family": "indo_european_italic",
+      "role": "holdout",
+      "script": "latin",
+      "source": "project_gutenberg",
+      "pg_id": 218,
+      "title": "De Bello Gallico (Latin holdout; not in train)",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "7271e9f568f58eed9f8061b29605b950ec7d0166bf6f98477b2075c0afe863f1",
+      "romanized_chars": 143900,
+      "download": {
+        "raw_bytes": 169899,
+        "raw_sha256": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c",
+        "note": "local raw digest; romanized from cache"
+      }
+    },
+    "italian_historical": {
+      "family": "indo_european_romance",
+      "role": "historical",
+      "script": "latin",
+      "source": "project_gutenberg",
+      "pg_id": 1000,
+      "title": "La Divina Commedia (early-modern Italian domain transfer)",
+      "license": "Project Gutenberg License; public domain in the USA",
+      "status": "cached",
+      "romanized_sha256": "911ca736098f1712da143b8247d0dd52004eed4a67c8a4e0252b7a32da91634a",
+      "romanized_chars": 500842,
+      "download": {
+        "raw_bytes": 597903,
+        "raw_sha256": "4669dcc00ee61ceffe92d871e61ea430cec87b35cbab24f19a4c0b1c7da521b2",
+        "note": "local raw digest; romanized from cache"
+      }
+    }
+  },
+  "skipped": {},
+  "note": "Bulk text stays local/gitignored; this is provenance only.",
+  "intentional_skips": {
+    "mandarin_pinyin": {
+      "reason": "No pre-romanized pinyin corpus obtained quickly; native Han not used as alphabetic cipher units",
+      "family": "sino_tibetan",
+      "role": "train_optional"
+    },
+    "japanese_romaji": {
+      "reason": "No romaji corpus obtained quickly; kana/kanji not used as Latin cipher alphabet",
+      "family": "japonic",
+      "role": "train_optional"
+    },
+    "korean_rr": {
+      "reason": "No Revised-Romanization corpus obtained quickly; hangul not used as Latin cipher alphabet",
+      "family": "koreanic",
+      "role": "train_optional"
+    }
+  }
+}
