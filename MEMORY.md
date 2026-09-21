@@ -1,11 +1,12 @@
 # Project memory
 
-Last updated: 2026-09-21.
+Last updated: 2026-09-21 (EXP-0011 latent recovery in progress).
 
 ## Current state
 
 - Phase: **active research and implementation**. The user explicitly authorized prior-work/methods research, corpus acquisition, architecture design, and code; the earlier preparation-only restriction is superseded.
-- Latest research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. This review implemented no successor model and launched no training. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved. Separate ongoing workspace work has its own notebook records.
+- **Active experiment EXP-0011 (NB-0023):** recover latent `C(L)` under fresh per-sample ciphers + structured nulls (worlds A–D); Finnish held-out killer benchmark gates any Voynich label-free run. Registration: `docs/experiments/EXP-0011.md`. Implementation: `src/voynich/latent_recovery.py` (~47k-param BiLSTM + classical 2-state Viterbi). Corpora: PG#11 English, PG#218 Latin, PG#7000 Finnish Kalevala (manifests tracked; raw ignored). Pass rule frozen before holdout scores. Not a decipherment claim.
+- Latest research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved.
 - Repository: `/Users/rikhil/coding/solving-voynich`.
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.
 - The user describes the repository as private; remote visibility has not been independently verified.
@@ -21,6 +22,7 @@ Last updated: 2026-09-21.
 - Pursue actual decipherment by identifying the underlying encoding/generative process.
 - Take ambitious explanations seriously, but demand falsification, independent checks, and out-of-sample performance.
 - The charter is flexible. Abandon or revise its proposals if evidence favors another account.
+- **PDF assessment (NB-0021, 2026-09-21):** Bowern & Lindemann (*Annu. Rev. Linguist.* 2021) is a useful linguistics survey; their “encoded natural language (not hoax)” conclusion is contested author theory, not a project constraint. Do not drop structured nonsemantic / copy-mutate controls. D’Imperio (1978) is a historical NSA survey; the user’s OCR scan is not a clean primary source. Neither PDF establishes a language ID or decipherment. Details: `NOTEBOOK.md` NB-0021; local extracts under ignored `outputs/pdf-assessment-2026-09-21/`.
 - Investigate structured null/filler material and non-one-to-one or state-dependent mappings without assuming either exists.
 - Consider synthetic ground-truth tasks, small interpretable models, and causal analysis. Keep frontier models in the researcher role where useful.
 - The user is particularly enthusiastic about mechanistic interpretability and argues that routine use would disfavor cumbersome codebook lookup. Treat reader learnability as a conditional modeling preference, not established evidence of a specific encoding; execution was authorized after that discussion (NB-0004).
