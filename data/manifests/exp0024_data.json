@@ -1,0 +1,26 @@
+{
+  "experiment": "EXP-0024",
+  "parent_experiment": "EXP-0023",
+  "data_seed": 4011,
+  "finnish_seed": 4012,
+  "filler_rate": 0.3,
+  "filler_families": [
+    "random_char",
+    "periodic",
+    "copy_mutate"
+  ],
+  "seq_len": 128,
+  "n_holdout": 300,
+  "derived_sha256": {
+    "finnish_holdout": "cd72bf0fca93f14eebb274c548072cb58a23bd04a7f629c8984d76a888ac59b4",
+    "train": "2c824915231d69f98f41120829140525b03839a19518d02973ac68f654f6e08e"
+  },
+  "source_paths": {
+    "finnish_holdout": "data/processed/exp0023/finnish_holdout.jsonl",
+    "train": "data/processed/exp0023/train.jsonl"
+  },
+  "oracle": "oracle_gold_mask_delete",
+  "frozen_matched_random_recon": 0.2043264147237504,
+  "pass_rule_source": "EXP-0014 gates; FAIL modes search_missed_inverse / gate_blind_to_copy_inverse / channel_not_invertible",
+  "used_generator_trace": true
+}

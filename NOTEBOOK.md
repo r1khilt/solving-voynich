@@ -607,6 +607,22 @@ Resource use (if applicable):
 - **Git:** this checkpoint only; unrelated dirty files left unstaged.
 
 
+## 2026-09-21 — EXP-0024 oracle copy_mutate inverse FAIL search_missed_inverse [NB-0041]
+
+- **Verified prior:** `results/EXP-0023/decision.json` confirms FAIL (winner recon 0.1759, null_prec 0.492; no-retrain 0.1848). Trust the file.
+- **Question:** On the same EXP-0023 copy_mutate split, does the known oracle inverse of `insert_nulls` clear the frozen EXP-0014 bar?
+- **Registration:** `docs/experiments/EXP-0024.md` frozen **before** scores. Decision modes: `search_missed_inverse` / `gate_blind_to_copy_inverse` / `channel_not_invertible`.
+- **Oracle:** `oracle_gold_mask_delete` — keep stored mask==1. Uses generator **trace** (stored binary mask in synthetic jsonl); ciphertext alone does not identify inserted nulls. Mutations only affect null glyphs, so no character-level unmutate step.
+- **Command:** `.venv/bin/python -m voynich.oracle_copy_mutate_inverse --root .`
+- **Observations:** Holdout digests matched EXP-0023. Oracle recon **1.0**, null_prec/rec **1.0**, pred_null 0.287; vocab-filter f1 0.379. Beside: EXP-0023 winner recon **0.1759**; bar **0.20433**.
+- **Decision:** **FAIL** mode **`search_missed_inverse`** (oracle passes gates; typed winner failed).
+- **Interpretation:** The frozen metric can certify the true null-deletion inverse; EXP-0023 search missed it. **Not a manuscript reading.** HYP-005 still open; no decipherment. No further experiment started here.
+- **Validation:** `.venv/bin/python -m pytest -q tests/test_oracle_copy_mutate_inverse.py` (4 passed).
+- **Artifacts:** `docs/experiments/EXP-0024.md`, `EXP-0024-results.md`; `results/EXP-0024/{results,decision}.json`; `data/manifests/exp0024_data.json`.
+- **Resources:** Local CPU; no paid API; ZL3b unscored.
+- **Git:** this checkpoint only; unrelated dirty files left unstaged.
+
+
 ## 2026-09-21 — Completed communication-system qualification [NB-WMD-RESULTS-01]
 
 - **Question / registration:** Execute and audit WMD-0001's integrated world/diffusion/linguistic inference system under the user's implementation instruction. Registration preceded scored training; no post-result thresholds or architecture changes were used to improve the scores. Results are development qualification, not a decipherment or a scientific PASS.

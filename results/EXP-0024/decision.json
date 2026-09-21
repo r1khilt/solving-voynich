@@ -1,0 +1,46 @@
+{
+  "passed": false,
+  "fail_mode": "search_missed_inverse",
+  "oracle_program": "oracle_gold_mask_delete",
+  "oracle_passed_exp0014_gates": true,
+  "used_generator_trace": true,
+  "generator_trace_kind": "stored_binary_mask_from_insert_nulls",
+  "trace_rationale": "Ciphertext alone does not uniquely identify inserted null positions (copy_mutate nulls may be exact or mutated copies of nearby signal). Oracle therefore applies the stored mask from EXP-0023 synthetic jsonl.",
+  "reasons": [
+    "oracle inverse clears frozen EXP-0014 gates while EXP-0023 typed winner failed",
+    "typed family/search cannot find a decoder the metric can see"
+  ],
+  "gate_reasons": [],
+  "rule": "EXP-0024",
+  "parent_pass_rule": "EXP-0014",
+  "parent_experiment": "EXP-0023",
+  "parent_winner_failed": true,
+  "holdout_metrics": {
+    "mask_f1": 1.0,
+    "mask_acc": 1.0,
+    "recon_acc": 1.0,
+    "recon_edit_sim": 1.0,
+    "pred_bits_gain": -0.08024839226204014,
+    "n": 300,
+    "null_precision": 1.0,
+    "null_recall": 1.0,
+    "pred_null_rate": 0.28692708333333333,
+    "true_null_rate": 0.28692708333333333,
+    "program": "oracle_gold_mask_delete",
+    "null_f1": 1.0
+  },
+  "exp0023_winner_recon": 0.17585403660739804,
+  "thresholds": {
+    "null_recall_min": 0.5,
+    "null_precision_min": 0.5,
+    "pred_null_rate_min": 0.15,
+    "pred_null_rate_max": 0.45,
+    "recon_vs_frozen_matched_random": 0.2043264147237504,
+    "vocab_f1_max": 0.55
+  },
+  "controls": {
+    "vocab_filter_recon": 0.048189135601220935,
+    "vocab_filter_mask_f1": 0.3785354196720935
+  },
+  "non_claim": "Synthetic oracle diagnosis only; not a manuscript reading or decipherment."
+}
