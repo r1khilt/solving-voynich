@@ -1,0 +1,207 @@
+{
+  "claim": "paired model-behavior intervention only; not identified historical semantics",
+  "seed": 41021,
+  "noise_level": [
+    1.0
+  ],
+  "active_positions": 73,
+  "selected_coordinates": 4096,
+  "base_to_donor": {
+    "distributions": 73,
+    "mean_kl_base_to_changed": 0.0032826099159152878,
+    "mean_kl_changed_to_base": 0.003424465445314743,
+    "mean_js_divergence": 0.0008364114152808135,
+    "mean_total_variation": 0.024549820022081024,
+    "argmax_agreement": 1.0,
+    "mean_entropy_base": 0.9325628964309284,
+    "mean_entropy_changed": 0.9481155313114114,
+    "max_absolute_change": 0.15129433913650775
+  },
+  "controls": {
+    "identity": {
+      "against_base": {
+        "distributions": 73,
+        "mean_kl_base_to_changed": 0.0,
+        "mean_kl_changed_to_base": 0.0,
+        "mean_js_divergence": 0.0,
+        "mean_total_variation": 0.0,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.9325628964309284,
+        "mean_entropy_changed": 0.9325628964309284,
+        "max_absolute_change": 0.0
+      },
+      "against_donor": {
+        "distributions": 73,
+        "mean_kl_base_to_changed": 0.003424465445314743,
+        "mean_kl_changed_to_base": 0.0032826099159152878,
+        "mean_js_divergence": 0.0008364114152808135,
+        "mean_total_variation": 0.024549820022081024,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.9481155313114114,
+        "mean_entropy_changed": 0.9325628964309284,
+        "max_absolute_change": 0.15129433913650775
+      },
+      "selected_positions": {
+        "distributions": 16,
+        "mean_kl_base_to_changed": 0.0,
+        "mean_kl_changed_to_base": 0.0,
+        "mean_js_divergence": 0.0,
+        "mean_total_variation": 0.0,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 2.2097017001268813,
+        "mean_entropy_changed": 2.2097017001268813,
+        "max_absolute_change": 0.0
+      },
+      "other_positions": {
+        "distributions": 57,
+        "mean_kl_base_to_changed": 0.0,
+        "mean_kl_changed_to_base": 0.0,
+        "mean_js_divergence": 0.0,
+        "mean_total_variation": 0.0,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.5740677936390818,
+        "mean_entropy_changed": 0.5740677936390818,
+        "max_absolute_change": 0.0
+      }
+    },
+    "targeted": {
+      "against_base": {
+        "distributions": 73,
+        "mean_kl_base_to_changed": 0.0012262783603164088,
+        "mean_kl_changed_to_base": 0.0013350733525565686,
+        "mean_js_divergence": 0.00031902988410258224,
+        "mean_total_variation": 0.007030462791452274,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.9325628964309284,
+        "mean_entropy_changed": 0.9373680751277623,
+        "max_absolute_change": 0.02012037399407713
+      },
+      "against_donor": {
+        "distributions": 73,
+        "mean_kl_base_to_changed": 0.0020893920927581747,
+        "mean_kl_changed_to_base": 0.002056331555598879,
+        "mean_js_divergence": 0.0005173815311782313,
+        "mean_total_variation": 0.017519357230628755,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.9481155313114114,
+        "mean_entropy_changed": 0.9373680751277623,
+        "max_absolute_change": 0.15129433913650775
+      },
+      "selected_positions": {
+        "distributions": 16,
+        "mean_kl_base_to_changed": 0.005594895018943615,
+        "mean_kl_changed_to_base": 0.006091272171039344,
+        "mean_js_divergence": 0.0014555738462180313,
+        "mean_total_variation": 0.032076486486001,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 2.2097017001268813,
+        "mean_entropy_changed": 2.231625327931187,
+        "max_absolute_change": 0.02012037399407713
+      },
+      "other_positions": {
+        "distributions": 57,
+        "mean_kl_base_to_changed": 0.0,
+        "mean_kl_changed_to_base": 0.0,
+        "mean_js_divergence": 0.0,
+        "mean_total_variation": 0.0,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.5740677936390818,
+        "mean_entropy_changed": 0.5740677936390818,
+        "max_absolute_change": 0.0
+      }
+    },
+    "full_donor": {
+      "against_base": {
+        "distributions": 73,
+        "mean_kl_base_to_changed": 0.0032826099159152878,
+        "mean_kl_changed_to_base": 0.003424465445314743,
+        "mean_js_divergence": 0.0008364114152808135,
+        "mean_total_variation": 0.024549820022081024,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.9325628964309284,
+        "mean_entropy_changed": 0.9481155313114114,
+        "max_absolute_change": 0.15129433913650775
+      },
+      "against_donor": {
+        "distributions": 73,
+        "mean_kl_base_to_changed": 0.0,
+        "mean_kl_changed_to_base": 0.0,
+        "mean_js_divergence": 0.0,
+        "mean_total_variation": 0.0,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.9481155313114114,
+        "mean_entropy_changed": 0.9481155313114114,
+        "max_absolute_change": 0.0
+      },
+      "selected_positions": {
+        "distributions": 16,
+        "mean_kl_base_to_changed": 0.005594895018943615,
+        "mean_kl_changed_to_base": 0.006091272171039344,
+        "mean_js_divergence": 0.0014555738462180313,
+        "mean_total_variation": 0.032076486486001,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 2.2097017001268813,
+        "mean_entropy_changed": 2.231625327931187,
+        "max_absolute_change": 0.02012037399407713
+      },
+      "other_positions": {
+        "distributions": 57,
+        "mean_kl_base_to_changed": 0.0026335474308547047,
+        "mean_kl_changed_to_base": 0.0026758881187955567,
+        "mean_js_divergence": 0.0006626114346668576,
+        "mean_total_variation": 0.022437071540980683,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.5740677936390818,
+        "mean_entropy_changed": 0.5878320796286675,
+        "max_absolute_change": 0.15129433913650775
+      }
+    },
+    "norm_matched_random": {
+      "against_base": {
+        "distributions": 73,
+        "mean_kl_base_to_changed": 8.369149326797214e-05,
+        "mean_kl_changed_to_base": 8.368629027839339e-05,
+        "mean_js_divergence": 2.0920190937236775e-05,
+        "mean_total_variation": 0.002377494058351771,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.9325628964309284,
+        "mean_entropy_changed": 0.9327228978902744,
+        "max_absolute_change": 0.009050533031586955
+      },
+      "against_donor": {
+        "distributions": 73,
+        "mean_kl_base_to_changed": 0.0034576000466371506,
+        "mean_kl_changed_to_base": 0.003319904908809298,
+        "mean_js_divergence": 0.0008452029540904442,
+        "mean_total_variation": 0.025003150781593805,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.9481155313114114,
+        "mean_entropy_changed": 0.9327228978902744,
+        "max_absolute_change": 0.15129433913650775
+      },
+      "selected_positions": {
+        "distributions": 16,
+        "mean_kl_base_to_changed": 0.0003818424380351229,
+        "mean_kl_changed_to_base": 0.00038181869939516984,
+        "mean_js_divergence": 9.544837115114279e-05,
+        "mean_total_variation": 0.010847316641229954,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 2.2097017001268813,
+        "mean_entropy_changed": 2.2104317067851476,
+        "max_absolute_change": 0.009050533031586955
+      },
+      "other_positions": {
+        "distributions": 57,
+        "mean_kl_base_to_changed": 0.0,
+        "mean_kl_changed_to_base": 0.0,
+        "mean_js_divergence": 0.0,
+        "mean_total_variation": 0.0,
+        "argmax_agreement": 1.0,
+        "mean_entropy_base": 0.5740677936390818,
+        "mean_entropy_changed": 0.5740677936390818,
+        "max_absolute_change": 0.0
+      }
+    }
+  },
+  "scope": "Changes in learned synthetic inference; no historical causal identification"
+}

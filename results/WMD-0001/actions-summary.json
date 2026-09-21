@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "steps": 1000,
+  "seed": 41022,
+  "training_examples": 64000,
+  "unique_training_state_actions": 1152,
+  "elapsed_seconds": 39.997733415919356,
+  "initial": {
+    "examples": 2048,
+    "valid_examples": 1024,
+    "invalid_examples": 1024,
+    "valid_node_accuracy": 0.2412109375,
+    "valid_exact_next_state_accuracy": 0.0,
+    "valid_changed_node_accuracy": 0.3040462427745665,
+    "validity_accuracy": 0.5380859375,
+    "validity_true_recall": 0.689453125,
+    "validity_false_recall": 0.38671875,
+    "validity_balanced_accuracy": 0.5380859375,
+    "full_transition_accuracy": 0.193359375,
+    "heldout_state_action_seen_fraction": 0.0,
+    "heldout_unseen_state_action_examples": 2048,
+    "heldout_unique_state_actions": 745,
+    "heldout_unseen_unique_state_actions": 745,
+    "unseen_valid_examples": 1024,
+    "unseen_valid_exact_next_state_accuracy": 0.0,
+    "unseen_full_transition_accuracy": 0.193359375,
+    "input_sha256": "c528c855d8808cf2aff272bce0c5c9215a1853b11a9238d430c03164d7ae8055",
+    "state_label_policy": "invalid next-state storage labels excluded from all state accuracy metrics"
+  },
+  "final": {
+    "examples": 2048,
+    "valid_examples": 1024,
+    "invalid_examples": 1024,
+    "valid_node_accuracy": 1.0,
+    "valid_exact_next_state_accuracy": 1.0,
+    "valid_changed_node_accuracy": 1.0,
+    "validity_accuracy": 1.0,
+    "validity_true_recall": 1.0,
+    "validity_false_recall": 1.0,
+    "validity_balanced_accuracy": 1.0,
+    "full_transition_accuracy": 1.0,
+    "heldout_state_action_seen_fraction": 1.0,
+    "heldout_unseen_state_action_examples": 0,
+    "heldout_unique_state_actions": 745,
+    "heldout_unseen_unique_state_actions": 0,
+    "unseen_valid_examples": 0,
+    "unseen_valid_exact_next_state_accuracy": null,
+    "unseen_full_transition_accuracy": null,
+    "input_sha256": "c528c855d8808cf2aff272bce0c5c9215a1853b11a9238d430c03164d7ae8055",
+    "state_label_policy": "invalid next-state storage labels excluded from all state accuracy metrics"
+  },
+  "history": [
+    {
+      "step": 1,
+      "loss": 1.9098906517028809,
+      "state_loss": 1.2263851165771484,
+      "validity_loss": 0.6835055351257324,
+      "gradient_norm": 5.452156066894531,
+      "elapsed_seconds": 2.385962957981974
+    },
+    {
+      "step": 100,
+      "loss": 0.0028938688337802887,
+      "state_loss": 0.0018966804491356015,
+      "validity_loss": 0.0009971882682293653,
+      "gradient_norm": 0.018006086349487305,
+      "elapsed_seconds": 5.0038413748843595
+    },
+    {
+      "step": 200,
+      "loss": 0.001128982286900282,
+      "state_loss": 0.0008074654033407569,
+      "validity_loss": 0.00032151691266335547,
+      "gradient_norm": 0.006857717409729958,
+      "elapsed_seconds": 7.735453707980923
+    },
+    {
+      "step": 300,
+      "loss": 0.0006429960485547781,
+      "state_loss": 0.0004769417573697865,
+      "validity_loss": 0.00016605432028882205,
+      "gradient_norm": 0.003971227910369635,
+      "elapsed_seconds": 10.34046670794487
+    },
+    {
+      "step": 400,
+      "loss": 0.00042169931111857295,
+      "state_loss": 0.0003186131361871958,
+      "validity_loss": 0.00010308617493137717,
+      "gradient_norm": 0.002639405196532607,
+      "elapsed_seconds": 13.638229582924396
+    },
+    {
+      "step": 500,
+      "loss": 0.000300642685033381,
+      "state_loss": 0.00023673362738918513,
+      "validity_loss": 6.390906492015347e-05,
+      "gradient_norm": 0.0019427252700552344,
+      "elapsed_seconds": 17.161476040957496
+    },
+    {
+      "step": 600,
+      "loss": 0.00022888413514010608,
+      "state_loss": 0.0001818757737055421,
+      "validity_loss": 4.7008361434563994e-05,
+      "gradient_norm": 0.001474688178859651,
+      "elapsed_seconds": 21.14191416592803
+    },
+    {
+      "step": 700,
+      "loss": 0.00018029363127425313,
+      "state_loss": 0.0001442901266273111,
+      "validity_loss": 3.6003511922899634e-05,
+      "gradient_norm": 0.001166974543593824,
+      "elapsed_seconds": 25.62717720796354
+    },
+    {
+      "step": 800,
+      "loss": 0.0001459057384636253,
+      "state_loss": 0.00011721922783181071,
+      "validity_loss": 2.868651608878281e-05,
+      "gradient_norm": 0.0009519834420643747,
+      "elapsed_seconds": 30.55254199996125
+    },
+    {
+      "step": 900,
+      "loss": 0.00011991368955932558,
+      "state_loss": 9.816000238060951e-05,
+      "validity_loss": 2.175369081669487e-05,
+      "gradient_norm": 0.0007904623635113239,
+      "elapsed_seconds": 35.166637790971436
+    },
+    {
+      "step": 1000,
+      "loss": 0.00010038613982032984,
+      "state_loss": 8.255141437985003e-05,
+      "validity_loss": 1.7834725440479815e-05,
+      "gradient_norm": 0.0006647065165452659,
+      "elapsed_seconds": 39.9111797909718
+    }
+  ],
+  "parameters": 105284,
+  "limitations": [
+    "No pass/fail threshold or historical interpretation is claimed",
+    "Seed-disjoint validation may repeat trained state/action pairs; overlap is reported",
+    "Initial/final fixed-size audits are overhead outside per-update time checks",
+    "One local model seed; label-supervised synthetic dynamics only"
+  ]
+}

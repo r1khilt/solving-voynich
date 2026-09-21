@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "model_config": {
+    "entities": 4,
+    "width": 64,
+    "layers": 2,
+    "heads": 4
+  },
+  "seed": 41022,
+  "steps": 1000,
+  "batch_size": 64,
+  "max_seconds": 180.0,
+  "learning_rate": 0.001,
+  "optimizer": "AdamW",
+  "device": "mps",
+  "validation_examples": 2048,
+  "validation_seed": 86030417920,
+  "training_seed_rule": "seed * 2**21 + zero_based_step",
+  "supervision": "independent typed simulator next-state and applicability labels",
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.14.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "git_commit": "eeba1468d01e438a5c9009283327abe156f86f22",
+    "source_sha256": {
+      "__init__.py": "c61c0ee581977ef26558a6716b4827148c9a23a6a166651640f825cbc4591b31",
+      "__main__.py": "ed2e7ac05f8d67cc29b67cf31a648cad472fbadd580a8312e22d11dadfd45ba9",
+      "action_training.py": "74058ab073a51c2767c358d43f928b997e03620a10fa4e7b7fee2d5e9e361641",
+      "adapters.py": "61833d5106edf83f61cc21283c6150f079f60bb67e9f889b33cbd282e49e6505",
+      "coupling.py": "4cd400da4eea0452adb2882671f0f979b6b731b78d804223eba91b5846963f30",
+      "denoiser.py": "addd7bbbbf49fd8f921ece90582f04508f7ddcf13aa422bc2698af4b84532652",
+      "dynamics.py": "079bd603b75dfeecb5b63a4773a949ecb15d44d6a4f0b7b0731adcdec95aa4f3",
+      "evaluation.py": "8c5e41bf5c0fc9c8827f8dca149fe250562bebd6f70f4de8e431d5e3ecfc600a",
+      "evidence.py": "647b07fd9fdf386819608aa93665ef6bec9187f4f72de62aa230ecab96216d0d",
+      "grounding.py": "e497fffcefd8f40fb721fbf3d04ac959c340330098a60c02d31c3ba241dcbd9d",
+      "interpretation.py": "512be768aa432993d7cac28ab70c3a92d0e90147ea0702da5d307aad0d2e1b21",
+      "pipeline.py": "25217d17a0bd029b4b22bd96cec63aca3c3f043303715ad4e3893653ee5dd41e",
+      "schema.py": "05f49c042446b397ae6ade6399845ba6ddcfccc363137b47da73341898224208",
+      "search.py": "fe952d9ff16110f11c08e3e03920759626c4c8eec9a58e1fcc17a530a4662806",
+      "training.py": "c4a97d08783a1101ce789745b5f3b8f7bded8e5794228de310160f8efe96f7bb",
+      "worlds.py": "97b4048ba008c0f46ea8d734aaf2690c72e45141a4a2d3be843f543f6b470ab3"
+    }
+  },
+  "parameters": 105284,
+  "scope": "synthetic action transitions only; no manuscript inputs or historical grounding"
+}

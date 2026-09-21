@@ -211,10 +211,16 @@ def infer(
     parse_semantics=True,
     compiler_budget=20000,
     compiler_beam=32,
+    allow_test=False,
 ):
+    """Propose explanations; final holdouts require an explicit frozen-evaluation override."""
     from .denoiser import sample
     from .search import compiler_search
 
+    if type(allow_test) is not bool:
+        raise ValueError("allow_test must be a boolean")
+    if observation.split == "test" and not allow_test:
+        raise ValueError("Final holdout inference requires allow_test=True and a separately frozen evaluation")
     if type(candidates) is not int or not 1 <= candidates <= 1024:
         raise ValueError("Candidate budget must be1..1024")
     if type(seed) is not int or seed < 0:

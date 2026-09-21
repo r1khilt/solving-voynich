@@ -128,6 +128,41 @@ def test_joint_sampler_integrates_and_abstains_without_semantic_support(layout):
     json.dumps(report, allow_nan=False)
 
 
+def test_backend_final_holdout_guard_requires_explicit_boolean_override(layout):
+    torch.manual_seed(3)
+    model = ConditionalDenoiser(
+        DenoiserConfig(
+            layout.vocab_size,
+            layout.condition_vocab_size,
+            layout.latent_length,
+            layout.condition_length,
+            width=16,
+            layers=1,
+            heads=2,
+        )
+    )
+    # Relabel a validation fixture only; do not generate or score a final holdout.
+    observation = make_episode(7, "validation", layout, anchor_count=2).observation
+    relabeled = replace(observation, split="test")
+    calls = []
+    hook = model.register_forward_pre_hook(lambda _model, _args: calls.append(True))
+    try:
+        with pytest.raises(ValueError, match="Final holdout inference requires"):
+            infer(model, relabeled, layout, candidates=1, steps=1, compiler_budget=0)
+        for invalid in (1, 0, "true", None):
+            with pytest.raises(ValueError, match="allow_test must be a boolean"):
+                infer(model, relabeled, layout, allow_test=invalid)
+        assert calls == []
+        ordinary = infer(model, observation, layout, candidates=1, steps=1, compiler_budget=0, seed=8)
+        explicit = infer(
+            model, relabeled, layout, candidates=1, steps=1, compiler_budget=0, seed=8, allow_test=True,
+        )
+        assert calls
+        assert explicit["candidates"] == ordinary["candidates"]
+    finally:
+        hook.remove()
+
+
 def test_bad_capacities_and_truncation_refused(layout):
     e = make_episode(0, "train", layout)
     with pytest.raises(ValueError):

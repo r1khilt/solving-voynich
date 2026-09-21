@@ -35,6 +35,7 @@ The package lives in `src/voynich/communication/`. It adds a distinct research p
 | `dynamics.py` | Learned entity-permutation-equivariant action model predicting state changes and action applicability; executor-labeled supervision |
 | `training.py`, `action_training.py` | Finite training, checkpointing, reproducibility manifests, isolated validation and resource limits |
 | `evaluation.py` | Candidate selection before consulting gold; trained/untrained and channel baselines; honest denominators and ambiguity limitations |
+| `coupling.py` | Learned action-prior diagnostics on compiled procedure candidates, with ranking and evidence independence preserved |
 | `interpretation.py` | Targeted, identity, donor and norm-matched random interventions; behavioral distribution comparisons; explicit supervised transition-program extraction |
 | `grounding.py` | Anonymous relational graph alignment with ties, provenance and bounded search; no guessed botanical names |
 | `evidence.py` | Stable finite Bayesian updates, duplicate/dependent evidence rejection, entropy and expected information gain per query cost |
@@ -77,7 +78,7 @@ Run from the repository root after installing the existing development environme
 .venv/bin/python -m voynich.communication intervene --checkpoint outputs/communication-local/best.pt --output outputs/communication-local/interventions.json
 ```
 
-The checked local configuration has 4,944,924 trainable parameters. Its maximum is 2,000 updates or 1,200 seconds; the action-model run defaults to 1,000 updates or 180 seconds. This is measured local qualification of the larger implementation, not a frontier foundation-model run. The frozen registration is [WMD-0001](experiments/WMD-0001.md). Actual results and limitations are recorded separately after execution.
+The checked local configuration has 4,944,924 trainable parameters. Its maximum is 2,000 updates or 1,200 seconds; the action-model run defaults to 1,000 updates or 180 seconds. This is measured local qualification of the larger implementation, not a frontier foundation-model run. The frozen registration is [WMD-0001](experiments/WMD-0001.md); [completed results](experiments/WMD-0001-results.md) include improved reconstruction, worse accepted-candidate coverage than the untrained control, and action learning with complete training/evaluation support overlap. All accepted candidates came from compiler search under the nonsemantic copy family; no executable world explanation was recovered.
 
 Resume the identical training configuration and device with `--resume outputs/communication-local/last.pt`. Source-byte/configuration mismatches fail explicitly. `--stop-after` makes an intermediate reproducibility checkpoint without changing the optimizer schedule. Interrupted runs can have only `last.pt` if they never reached a validation checkpoint.
 

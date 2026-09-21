@@ -162,4 +162,4 @@ The offline command requires the existing cached plotting environment; a fresh m
 
 ## Communication-system inference
 
-The [communication-system workbench](COMMUNICATION_SYSTEM.md) documents the new joint denoising, executable language/channel, action-world, grounding, causal and evidence modules. Run `.venv/bin/python -m voynich.communication --help` for all commands. The local training configuration and qualification rules are frozen in [WMD-0001](experiments/WMD-0001.md). This pipeline preserves the existing manuscript final holdout.
+The [communication-system workbench](COMMUNICATION_SYSTEM.md) documents the new joint denoising, executable language/channel, action-world, grounding, causal and evidence modules. Run `.venv/bin/python -m voynich.communication --help` for all commands. The local training configuration and qualification rules are frozen in [WMD-0001](experiments/WMD-0001.md); [completed results](experiments/WMD-0001-results.md) preserve positive and negative findings and exact reproduction commands. This pipeline preserves the existing manuscript final holdout.

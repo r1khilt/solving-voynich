@@ -8,7 +8,7 @@ A long-term research project aimed at deciphering the Voynich Manuscript by reve
 
 ## Start here
 
-- [Communication-system inference workbench](docs/COMMUNICATION_SYSTEM.md): joint masked inference, executable linguistic/world models, causal controls, relational grounding and active evidence selection; [bounded qualification](docs/experiments/WMD-0001.md).
+- [Communication-system inference workbench](docs/COMMUNICATION_SYSTEM.md): joint masked inference, executable linguistic/world models, causal controls, relational grounding and active evidence selection; [bounded qualification](docs/experiments/WMD-0001.md) and [measured results and failures](docs/experiments/WMD-0001-results.md).
 
 - [Current status and agent handoff](docs/CURRENT_STATUS.md): active work, live monitoring paths and continuation instructions.
 - [Completed three-track campaign](docs/experiments/CAMPAIGN-0001-results.md): 25 new models, 41,200 updates, 54.62 minutes of bounded local work; positive calibration and negative transfer/context results.

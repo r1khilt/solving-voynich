@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "training_source_commit": "eeba1468d01e438a5c9009283327abe156f86f22",
+  "local_checkpoints": {
+    "outputs/WMD-0001/joint/best.pt": {
+      "sha256": "f65cda998500f9bd2c750320b56f3867cf5153ea106d03c4788d71e600b3479a",
+      "bytes": 59436242
+    },
+    "outputs/WMD-0001/joint/last.pt": {
+      "sha256": "e87b51c29154cae24eef7929bf5e781cd3f305d35c4454ada8de43437af70103",
+      "bytes": 59436242
+    },
+    "outputs/WMD-0001/actions/model.pt": {
+      "sha256": "83a5f3a77fbdae262de1d45637d5ad731cc829d5c4d3d82a24dc628e388ef03e",
+      "bytes": 434915
+    }
+  },
+  "packaging_script_sha256": "160331ac1534397de949b89ebdb6483a043d09236597bab2a0cd7dbe3b401c80",
+  "files": {
+    "actions-manifest.json": {
+      "sha256": "9913873104dde623fe11509e4a6e0266cafc0c564623fa1a5bda5d372433ced4",
+      "bytes": 2235
+    },
+    "actions-summary.json": {
+      "sha256": "bde73ab793c723fc53bcfc86b05e140168d04ebeb1b97b1c97981277b7b9a98b",
+      "bytes": 5145
+    },
+    "comparison.json": {
+      "sha256": "f86eb7d3c86700524d525998b24cb7f01f634f3809818cfea40f7679a03351d8",
+      "bytes": 4151
+    },
+    "demo-inference.json": {
+      "sha256": "e970fdf76872f2ab251a11110552e10beede23c8694e7957ea03c7317f956100",
+      "bytes": 23229
+    },
+    "interventions.json": {
+      "sha256": "1b226a6bc53cafb4913418149661c4bcb7181cc84495e245b8e9a0a5d3bfe8a6",
+      "bytes": 7873
+    },
+    "joint-manifest.json": {
+      "sha256": "063e43397ba3df28551be123b55568302e6b91c94c30a9a6811396cf7609501c",
+      "bytes": 2670
+    },
+    "joint-summary.json": {
+      "sha256": "f1766e0a4d11afac3eb294ba1b80a294f703f5f8c64522eaec60feef307374cc",
+      "bytes": 604
+    },
+    "manuscript-format-manifest.json": {
+      "sha256": "cf6b946b592ce1a4ac4432bdb39546d59b63ceecf6b68c08e4d0fcf3687b8552",
+      "bytes": 2883
+    },
+    "qualification-manifest.json": {
+      "sha256": "0e5a83736fd93281117bee22c6438a15f18d1c47e87fe544b539a9b0fb54c1c0",
+      "bytes": 2560
+    },
+    "trained-a0-audit.json.gz": {
+      "sha256": "be50da09b5d311c12fe13f120597b2f9fcc96d6b214c5c96935673f499283a6e",
+      "bytes": 100648
+    },
+    "trained-a0.json": {
+      "sha256": "4717f84c3f8bf98c4a6e7b6a3e480488138af90bc22d77c4057db29e22ce0879",
+      "bytes": 200985
+    },
+    "trained-a2-audit.json.gz": {
+      "sha256": "dbb6cbad7d4cd7ec81a5f0d147120cdae51969a62bde88a64ac4cce115d521fe",
+      "bytes": 100039
+    },
+    "trained-a2.json": {
+      "sha256": "158ae32015f493f3099fe66aa003380035e9bf17f5689485ebcfde35a4c47370",
+      "bytes": 203322
+    },
+    "untrained-a0-audit.json.gz": {
+      "sha256": "31a6a72fc6b10b2f383f2a97443d084a5b1571344e7bf02dd7f98f0be1247636",
+      "bytes": 99531
+    },
+    "untrained-a0.json": {
+      "sha256": "1d700fe0cc1114c94e47d34d2f897016abc4860697c3d452be9fa03d0ee02b19",
+      "bytes": 200762
+    },
+    "untrained-a2-audit.json.gz": {
+      "sha256": "d1e2fbe4df887d0209af8963d32155d2da31f527cef72169d5812c0b53fe5c19",
+      "bytes": 101909
+    },
+    "untrained-a2.json": {
+      "sha256": "4f135d8e27b1a8af1bf7e8f89676133379825a4cc4f1e4b162750dba9ccc5bca",
+      "bytes": 202792
+    }
+  },
+  "retention": "Checkpoints and generated observations remain local and ignored. Audit gzip files decompress to bytes hashed in qualification-manifest.json."
+}

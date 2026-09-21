@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "decision": "software qualification completed; mixed development results, no recovery pass claim",
+  "interval_policy": "Post-run descriptive paired percentile bootstrap; not preregistered inference or across-seed uncertainty",
+  "bootstrap_seed": 41023,
+  "bootstrap_replicates": 10000,
+  "comparisons": {
+    "0": {
+      "decoded_similarity": {
+        "trained_minus_untrained": 0.07709436322875635,
+        "descriptive_paired_95_percent_interval": [
+          0.027729357901652516,
+          0.12143157137517059
+        ]
+      },
+      "selected_valid": {
+        "trained_minus_untrained": -0.09375,
+        "descriptive_paired_95_percent_interval": [
+          -0.171875,
+          -0.03125
+        ]
+      },
+      "grammar_accuracy": {
+        "trained_minus_untrained": -0.109375,
+        "descriptive_paired_95_percent_interval": [
+          -0.234375,
+          0.015625
+        ]
+      },
+      "family_accuracy": {
+        "trained_minus_untrained": 0.078125,
+        "descriptive_paired_95_percent_interval": [
+          -0.03125,
+          0.1875
+        ]
+      }
+    },
+    "2": {
+      "decoded_similarity": {
+        "trained_minus_untrained": 0.07081574870677684,
+        "descriptive_paired_95_percent_interval": [
+          0.031639747492644664,
+          0.10749081085453788
+        ]
+      },
+      "selected_valid": {
+        "trained_minus_untrained": -0.109375,
+        "descriptive_paired_95_percent_interval": [
+          -0.1875,
+          -0.046875
+        ]
+      },
+      "grammar_accuracy": {
+        "trained_minus_untrained": 0.0,
+        "descriptive_paired_95_percent_interval": [
+          -0.109375,
+          0.109375
+        ]
+      },
+      "family_accuracy": {
+        "trained_minus_untrained": 0.03125,
+        "descriptive_paired_95_percent_interval": [
+          -0.09375,
+          0.15625
+        ]
+      }
+    }
+  },
+  "candidate_audits": {
+    "trained-a0": {
+      "counts": {
+        "compiler_expansions": 541473,
+        "budget_exhausted_worlds": 0,
+        "worlds_with_pruning": 64,
+        "denoising_candidates": 256,
+        "denoising_valid": 0,
+        "candidates_with_projection_changes": 237,
+        "compiler_guided_candidates": 320,
+        "compiler_guided_valid": 202
+      },
+      "selected_sources": {
+        "denoising": 44,
+        "compiler_guided": 20
+      },
+      "valid_semantic_statuses": {
+        "nonsemantic_surface_only": 202
+      }
+    },
+    "untrained-a0": {
+      "counts": {
+        "compiler_expansions": 527361,
+        "budget_exhausted_worlds": 0,
+        "worlds_with_pruning": 64,
+        "denoising_candidates": 256,
+        "denoising_valid": 0,
+        "candidates_with_projection_changes": 256,
+        "compiler_guided_candidates": 380,
+        "compiler_guided_valid": 165
+      },
+      "selected_sources": {
+        "denoising": 39,
+        "compiler_guided": 25
+      },
+      "valid_semantic_statuses": {
+        "nonsemantic_surface_only": 165
+      }
+    },
+    "trained-a2": {
+      "counts": {
+        "compiler_expansions": 234053,
+        "budget_exhausted_worlds": 0,
+        "worlds_with_pruning": 64,
+        "denoising_candidates": 256,
+        "denoising_valid": 0,
+        "candidates_with_projection_changes": 227,
+        "compiler_guided_candidates": 336,
+        "compiler_guided_valid": 184
+      },
+      "selected_sources": {
+        "denoising": 43,
+        "compiler_guided": 21
+      },
+      "valid_semantic_statuses": {
+        "nonsemantic_surface_only": 184
+      }
+    },
+    "untrained-a2": {
+      "counts": {
+        "compiler_expansions": 255112,
+        "budget_exhausted_worlds": 0,
+        "worlds_with_pruning": 64,
+        "denoising_candidates": 256,
+        "denoising_valid": 0,
+        "candidates_with_projection_changes": 256,
+        "compiler_guided_candidates": 405,
+        "compiler_guided_valid": 176
+      },
+      "selected_sources": {
+        "denoising": 37,
+        "compiler_guided": 27
+      },
+      "valid_semantic_statuses": {
+        "nonsemantic_surface_only": 176
+      }
+    }
+  },
+  "untrained_replay_exact": {
+    "0": true,
+    "2": true
+  }
+}
