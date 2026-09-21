@@ -447,30 +447,42 @@ def merge_and_romanize(
 
 
 # Common ISO 639-1 → 639-3 for Tatoeba / Wikipedia codes.
-_iso1_to3 = {
-    "en": "eng", "es": "spa", "de": "deu", "fr": "fra", "it": "ita", "pt": "por",
-    "ru": "rus", "zh": "zho", "ja": "jpn", "ko": "kor", "ar": "ara", "hi": "hin",
-    "bn": "ben", "pa": "pan", "gu": "guj", "ta": "tam", "te": "tel", "ml": "mal",
-    "kn": "kan", "mr": "mar", "ur": "urd", "fa": "fas", "tr": "tur", "vi": "vie",
-    "th": "tha", "id": "ind", "ms": "msa", "nl": "nld", "pl": "pol", "uk": "ukr",
-    "cs": "ces", "sk": "slk", "ro": "ron", "hu": "hun", "fi": "fin", "sv": "swe",
-    "da": "dan", "no": "nor", "nb": "nob", "nn": "nno", "el": "ell", "he": "heb",
-    "yi": "yid", "ga": "gle", "cy": "cym", "gd": "gla", "eu": "eus", "ca": "cat",
-    "gl": "glg", "sw": "swh", "zu": "zul", "xh": "xho", "af": "afr",
-    "sq": "sqi", "sr": "srp", "hr": "hrv", "bs": "bos", "sl": "slv", "bg": "bul",
-    "mk": "mkd", "et": "est", "lv": "lav", "lt": "lit", "is": "isl", "fo": "fao",
-    "mt": "mlt", "hy": "hye", "ka": "kat", "az": "aze", "kk": "kaz", "uz": "uzb",
-    "ky": "kir", "tg": "tgk", "mn": "mon", "my": "mya", "km": "khm", "lo": "lao",
-    "ne": "nep", "si": "sin", "am": "amh", "ti": "tir", "so": "som", "ha": "hau",
-    "yo": "yor", "ig": "ibo", "rw": "kin", "rn": "run", "lg": "lug", "ny": "nya",
-    "sn": "sna", "st": "sot", "tn": "tsn", "ts": "tso", "ve": "ven", "ss": "ssw",
-    "la": "lat", "eo": "epo", "ia": "ina", "io": "ido", "vo": "vol", "jv": "jav",
-    "su": "sun", "tl": "tgl", "mg": "mlg", "sm": "smo",
-    "to": "ton", "ty": "tah", "mi": "mri", "qu": "que", "ay": "aym",
-    "gn": "grn", "bo": "bod", "dz": "dzo", "ug": "uig", "ps": "pus", "sd": "snd",
-    "ku": "kur", "be": "bel", "tt": "tat", "ba": "bak", "cv": "chv",
-    "ce": "che", "os": "oss", "ab": "abk", "kv": "kom",
-}
+def _load_iso1_to3() -> dict[str, str]:
+    builtin = {
+        "en": "eng", "es": "spa", "de": "deu", "fr": "fra", "it": "ita", "pt": "por",
+        "ru": "rus", "zh": "zho", "ja": "jpn", "ko": "kor", "ar": "ara", "hi": "hin",
+        "bn": "ben", "pa": "pan", "gu": "guj", "ta": "tam", "te": "tel", "ml": "mal",
+        "kn": "kan", "mr": "mar", "ur": "urd", "fa": "fas", "tr": "tur", "vi": "vie",
+        "th": "tha", "id": "ind", "ms": "msa", "nl": "nld", "pl": "pol", "uk": "ukr",
+        "cs": "ces", "sk": "slk", "ro": "ron", "hu": "hun", "fi": "fin", "sv": "swe",
+        "da": "dan", "no": "nor", "nb": "nob", "nn": "nno", "el": "ell", "he": "heb",
+        "yi": "yid", "ga": "gle", "cy": "cym", "gd": "gla", "eu": "eus", "ca": "cat",
+        "gl": "glg", "sw": "swh", "zu": "zul", "xh": "xho", "af": "afr",
+        "sq": "sqi", "sr": "srp", "hr": "hrv", "bs": "bos", "sl": "slv", "bg": "bul",
+        "mk": "mkd", "et": "est", "lv": "lav", "lt": "lit", "is": "isl", "fo": "fao",
+        "mt": "mlt", "hy": "hye", "ka": "kat", "az": "aze", "kk": "kaz", "uz": "uzb",
+        "ky": "kir", "tg": "tgk", "mn": "mon", "my": "mya", "km": "khm", "lo": "lao",
+        "ne": "nep", "si": "sin", "am": "amh", "ti": "tir", "so": "som", "ha": "hau",
+        "yo": "yor", "ig": "ibo", "rw": "kin", "rn": "run", "lg": "lug", "ny": "nya",
+        "sn": "sna", "st": "sot", "tn": "tsn", "ts": "tso", "ve": "ven", "ss": "ssw",
+        "la": "lat", "eo": "epo", "ia": "ina", "io": "ido", "vo": "vol", "jv": "jav",
+        "su": "sun", "tl": "tgl", "mg": "mlg", "sm": "smo",
+        "to": "ton", "ty": "tah", "mi": "mri", "qu": "que", "ay": "aym",
+        "gn": "grn", "bo": "bod", "dz": "dzo", "ug": "uig", "ps": "pus", "sd": "snd",
+        "ku": "kur", "be": "bel", "tt": "tat", "ba": "bak", "cv": "chv",
+        "ce": "che", "os": "oss", "ab": "abk", "kv": "kom",
+    }
+    path = Path(__file__).resolve().parents[2] / "data" / "manifests" / "iso639_1_to_3.json"
+    if path.exists():
+        try:
+            extra = json.loads(path.read_text(encoding="utf-8"))
+            builtin.update({k.lower(): v.lower() for k, v in extra.items()})
+        except Exception:  # noqa: BLE001
+            pass
+    return builtin
+
+
+_iso1_to3 = _load_iso1_to3()
 
 
 def assign_splits(by_iso: dict[str, dict]) -> dict:
@@ -858,17 +870,15 @@ def acquire_phase(root: Path, wiki_fill: bool = True) -> dict:
             if dest.exists() and dest.stat().st_size > 500:
                 text = dest.read_text(encoding="utf-8", errors="replace")
             else:
-            # Prefer language name / Main_Page style titles
-            titles = ["Wikipedia:About", "Main Page"]
-            if ed.get("name"):
-                titles = [ed["name"], "Wikipedia"] + titles
-            text = fetch_wikipedia_extract(code, titles[:3], dest)
+                titles = ["Wikipedia:About", "Main Page"]
+                if ed.get("name"):
+                    titles = [ed["name"], "Wikipedia"] + titles
+                text = fetch_wikipedia_extract(code, titles[:3], dest)
                 if not text:
                     wiki_failed += 1
                     continue
             rom, scheme, ok = romanize_auto(text, "Latn")
             if not ok or len(rom) < MIN_CHARS:
-                # retry with auto detect
                 rom, scheme, ok = romanize_auto(text, None)
             if not ok or len(rom) < MIN_CHARS:
                 wiki_failed += 1
