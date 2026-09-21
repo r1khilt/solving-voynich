@@ -1,0 +1,33 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets/
+
+# OS/editor and runtime caches
+.DS_Store
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+node_modules/
+
+# Bulk inputs and generated artifacts; track manifests and compact reports elsewhere
+data/raw/
+data/processed/
+checkpoints/
+models/
+outputs/
+runs/
+wandb/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
