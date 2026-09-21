@@ -548,3 +548,17 @@ Resource use (if applicable):
 - **Actions / finding:** Exported training observations only from the checksum-verified ZL3b preparation. The first manifest incorrectly labeled all private-use codepoints as uncertain. The existing tokenizer defines four uncertainty codepoints separately from rare-glyph escapes. Corrected adapter metadata to use those exact definitions and added an independent regression fixture; no symbols were removed or merged.
 - **Validation / exact result:** Adapter tests:4 passed. Corrected export:177 training pages,1,532 explicit128-unit windows,108 observed transcription units,4 uncertainty markers and75 rare-glyph escape units. Original data and frozen splits unchanged; no manuscript scoring or final-test parsing. The24-symbol synthetic model cannot silently accept this108-unit inventory. The first incorrect local manifest is retained only under ignored outputs for audit; corrected export is `outputs/WMD-0001/manuscript-format-export-v2/`.
 - **Git / state:** Implementation checkpoint `dd866a4` exists locally. Its push attempt exceeded30seconds; remote backup not verified. This metadata correction occurs before all scientific training. Commit the correction and freeze source for the registered local runs; no gate or architecture was changed after seeing scores.
+
+## 2026-09-21 — EXP-0021 preregistration (rate-free threshold decode) [NB-0038]
+
+- **Phase / question:** After EXP-0018 FAIL (fixed-rate exact-count transfer rejected at crowned r=0.70), does a **rate-free** keep/delete rule on the **same** frozen EXP-0016 checkpoint produce positive bits-gain vs full text on the same CONFIRM pages, without collapsing to the 0.70-rate family?
+- **Status at write:** **Preregistration only — no Voynich bits-gain scores inspected.** Next free id after EXP-0020.
+- **Checkpoint:** `outputs/EXP-0016/model.pt` sha256 `434d84f80f405f375dee5a2108da667b22e4f622dd3688e2111e89975856a359`; no retrain; no encoder refit on Voynich; no new decode head.
+- **Frozen decode rule (ONE):** keep position \(i\) iff \(P(\mathrm{signal})_i \ge 0.5\). Threshold prespecified from the binary decision boundary / synthetic training context (filler 0.30); **not** tuned on Voynich; **no** threshold grid on Voynich; **no** global exact-count rate crowned on these pages.
+- **Bits-gain (same as EXP-0018):** `full_bits − selected_bits`. Positive = kept more predictable than full text. Negative ≠ null-component evidence. Delete-nothing gain = 0. Less-negative than random = less damage only.
+- **Split:** Reuse EXP-0018 seed **4018** and page lists (`data/manifests/exp0018_split.json` / `exp0021_split.json`). Same CONFIRM pages. Select-half numbers are diagnostic only; do not pick the threshold from them.
+- **Pass (CONFIRM, ALL):** (1) mean_gain > 0; (2) mean_gain > mean matched-random at same per-window deletion counts; (3) fraction_beats_random > 0.50; (4) across-window implied-null-rate std > 0.05 **and** median not in [0.65, 0.75].
+- **Matched random:** 20 masks, seed base 9011, same count as model-implied \(n_{\mathrm{null}}\).
+- **Artifacts:** `docs/experiments/EXP-0021.md`; `data/manifests/exp0021_split.json`; scorer `src/voynich/rate_free_decode.py`; unit tests (no Voynich scores).
+- **Non-claims:** Not a decipherment. ZL3b test unscored. Full decipherment remains the objective.
+- **Next:** commit+push this prereg, then score once; if FAIL, stop (one notebook diagnosis + next change/falsifier only).
