@@ -1,0 +1,25 @@
+{
+  "experiment": "EXP-0026",
+  "parent": "EXP-0023",
+  "search_seed": 4026,
+  "select_train_n": 400,
+  "ops": [
+    "exact_count_neural",
+    "joint_keep_run_neural",
+    "exact_count_anti_copy",
+    "exact_count_anti_periodic",
+    "delete_copy_tokens",
+    "repetition_splice_detector",
+    "homophone_collapse",
+    "mono_sub_rank"
+  ],
+  "derived_sha256": {
+    "train": "2c824915231d69f98f41120829140525b03839a19518d02973ac68f654f6e08e",
+    "finnish_holdout": "cd72bf0fca93f14eebb274c548072cb58a23bd04a7f629c8984d76a888ac59b4"
+  },
+  "checkpoint": "outputs/EXP-0023/model.pt",
+  "frozen_matched_random_recon": 0.2043264147237504,
+  "passed": false,
+  "mode": "ciphertext_only_inverse_missed",
+  "winner_program": "exact_count_neural"
+}

@@ -637,3 +637,35 @@ Resource use (if applicable):
 - **Validation:** Final whole-checkout suite: **682 passed, 1 skipped, 23 subtests passed in 7.06s** (includes concurrent task tests). The skipped accelerator test had separately passed on local MPS(1 passed, 63 deselected). Targeted communication/harness lint and Git whitespace checks pass. Verified every archived hash, compressed audit, finite JSON, checkpoint digest, relevant document link, frozen source, and unchanged original charter(SHA256ba74631f91464449097cd230bc7045cd58876c90b56be1292f723c185d407604). Independent review also verified all 2, 465 archived candidate records and confirmed all 727 valid candidates were compiler-origin. An explicitly post-run always-keep calculation gives F1 0.9252 from 2, 085/2, 422 signal positions, above both trained conditions. Earlier independent compiler audit verified all 200 emitted complete candidates over 720 bounded searches.
 - **Artifacts / reproducibility:** `docs/experiments/WMD-0001-results.md` has full interpretation and exact commands; `results/WMD-0001/` retains approximately 1.3 MB of compact results/manifests and losslessly compressed candidate audits. Scripts `wmd0001_qualification.py` and `wmd0001_summarize.py` retain exact evaluation/packaging rules. Checkpoints remain ignored under `outputs/WMD-0001/`, with sizes/checksums tracked; no downloaded corpora or paid API used. Manuscript format export preserves 177 training pages/1, 532 windows/108 literal units; no text score. The 24-symbol model correctly refuses that inventory.
 - **Next state:** Computational core of all five research tracks implemented; WMD-0001 work finished and its jobs stopped. Broad natural-language/vision/world pretraining, genuine historical grounding, stateful channels and reliable joint recovery remain open. No historical encoding rule or translation established. A successor needs a new registration and must address reconstruction-versus-executable-recovery failure; this record does not launch one. Preserve unrelated concurrent experiments. Commit and push this coherent checkpoint, recording remote verification honestly.
+
+## 2026-09-21 — EXP-0025 harder-iid HYP-005 adversary FAIL surface_unmatchable [NB-0042]
+
+- **Question:** With a harder iid falsifier than EXP-0019’s train-unigram `iid_char`, can evolutionary selfcite search force ≥3/4 optimizable ZL3b surface matches and then separate on ≥2/3 held-out diagnostics?
+- **Registration:** `docs/experiments/EXP-0025.md` frozen **before** scores. iid control changed to `iid_uniform_fixedlen` (length-8 uniform a–z). Held-out rule and τ floors unchanged (≥2/3 separate; same floors as EXP-0019). Seed 4025.
+- **Prior:** EXP-0019 FAIL `iid_control_failed` (iid separated 2/4). Trust `results/EXP-0019/decision.json`.
+- **Command:** `.venv/bin/python -m voynich.generator_adversary_hard_iid --root .` (~28.3 s).
+- **Observations:**
+  - iid_uniform_fixedlen separated **4/4** optimizable (control passed).
+  - Winner matched only **1/4** optimizable (adjacent_repeat only); never ≥3/4 across generations.
+  - Held-out separate **1/3** (reported; deciding mode is surface failure).
+- **Decision:** **FAIL** mode **`surface_unmatchable`**. HYP-005 status **`open_not_killed`**.
+- **Interpretation:** Harder iid fixed the vacuous-control abort. Under a valid control, this simplified copy-mutate family still cannot force the selected surface set. Does not prove language; does not kill HYP-005. **Not a manuscript reading.**
+- **Validation:** `.venv/bin/python -m pytest -q tests/test_generator_adversary_hard_iid.py` (4 passed with prior adversary tests totaling 9).
+- **Artifacts:** `docs/experiments/EXP-0025.md`, `EXP-0025-results.md`; `results/EXP-0025/{results,decision}.json`; `data/manifests/exp0025_data.json`.
+- **Next:** Stretch B ciphertext-only inverse (EXP-0026) still required even though Stretch A failed surface match.
+- **Resources:** Local CPU/numpy; no paid API; ZL3b test unscored.
+
+## 2026-09-21 — EXP-0026 ciphertext-only inverse FAIL missed [NB-0043]
+
+- **Prerequisite:** EXP-0025 registered, scored, written (NB-0042).
+- **Question:** On the same EXP-0023 synthetic split and frozen EXP-0014 bar, can a typed human-readable program invert copy/splice from **ciphertext only** (no eval-time mask), after choosing among a small family using train masks?
+- **Registration:** `docs/experiments/EXP-0026.md` frozen **before** holdout scores. Gates unchanged (recon > 0.2043264147237504; null_rec/prec ≥ 0.50; pred_null ∈ [0.15, 0.45]; vocab f1 ≤ 0.55).
+- **Family:** EXP-0017 ops + `repetition_splice_detector`; ≤200 candidates; seed 4026; select on first 400 train WORLD_C; holdout decode uses text + EXP-0023 neural probs only.
+- **Command:** `.venv/bin/python -m voynich.ciphertext_only_inverse --root . --device auto` (~310 s).
+- **Chosen program text:** `ciphertext_only: exact_count_neural`.
+- **Observations:** Holdout digests matched EXP-0023. Test recon **0.1759**, null_prec **0.492**; beside EXP-0024 oracle recon **1.0** and EXP-0023 winner **0.1759**.
+- **Decision:** **FAIL** mode **`ciphertext_only_inverse_missed`**. No frozen decoder.
+- **Interpretation:** Ciphertext-only typed search did not recover an inverse the oracle (with stored mask) can certify. **Not a manuscript reading.** HYP-005 remains open/not killed per EXP-0025. No third experiment started.
+- **Validation:** `.venv/bin/python -m pytest -q tests/test_ciphertext_only_inverse.py` (4 passed).
+- **Artifacts:** `docs/experiments/EXP-0026.md`, `EXP-0026-results.md`; `results/EXP-0026/{results,decision}.json`; `data/manifests/exp0026_data.json`.
+- **Resources:** Local auto device; no paid API; ZL3b unscored.

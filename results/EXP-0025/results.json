@@ -1,0 +1,761 @@
+{
+  "experiment": "EXP-0025",
+  "question": "With harder iid_uniform_fixedlen control, can evolutionary copy-mutate search force \u22653/4 optimizable ZL3b surface match and then separate on \u22652/3 held-out diagnostics?",
+  "linked": [
+    "HYP-005",
+    "R3",
+    "EXP-0019",
+    "NB-0022"
+  ],
+  "parent_fail": {
+    "experiment": "EXP-0019",
+    "mode": "iid_control_failed",
+    "iid_was": "iid_char_train_unigram"
+  },
+  "seed": 4025,
+  "data_root": "/Users/rikhil/coding/solving-voynich/data/processed/zl3b",
+  "test_pages_present_unscored": 25,
+  "elapsed_seconds": 28.319843083969317,
+  "reference_metrics": {
+    "train": {
+      "n_pages": 177,
+      "n_tokens": 28685,
+      "n_types": 7735,
+      "zipf_slope_top500": -0.8880327359922592,
+      "adjacent_repeat_rate": 0.007774368986194394,
+      "char_h2_bits": 2.1646380461898445,
+      "ab_top50_jaccard": 0.2345679012345679,
+      "top1_word_share": 0.02088199407355761,
+      "line_initial_type_share": 0.1386949193354202,
+      "word_h2_bits": 3.816846255239436,
+      "top1_word": "daiin",
+      "hapax_frac_types_exploratory": 0.719715578539108,
+      "mean_word_length_exploratory": 5.33348439951194
+    },
+    "validation": {
+      "n_pages": 24,
+      "n_tokens": 4090,
+      "n_types": 1851,
+      "zipf_slope_top500": -0.8760135238209574,
+      "adjacent_repeat_rate": 0.005380288579114698,
+      "char_h2_bits": 2.175485878446618,
+      "ab_top50_jaccard": 0.13636363636363635,
+      "top1_word_share": 0.02982885085574572,
+      "line_initial_type_share": 0.16251830161054173,
+      "word_h2_bits": 2.1739922387014357,
+      "top1_word": "daiin",
+      "hapax_frac_types_exploratory": 0.7612101566720691,
+      "mean_word_length_exploratory": 5.331540342298289
+    }
+  },
+  "iid_control": {
+    "name": "iid_uniform_fixedlen",
+    "word_len": 8,
+    "role": "harder_negative_control",
+    "optimizable": {
+      "per_metric": {
+        "zipf_slope_top500": {
+          "validation": -0.8760135238209574,
+          "train": -0.8880327359922592,
+          "generator": 0.0,
+          "abs_delta_vs_validation": 0.8760135238209574,
+          "tolerance": 0.15,
+          "verdict": "separate"
+        },
+        "adjacent_repeat_rate": {
+          "validation": 0.005380288579114698,
+          "train": 0.007774368986194394,
+          "generator": 0.0,
+          "abs_delta_vs_validation": 0.005380288579114698,
+          "tolerance": 0.005,
+          "verdict": "separate"
+        },
+        "char_h2_bits": {
+          "validation": 2.175485878446618,
+          "train": 2.1646380461898445,
+          "generator": 4.6468821837174,
+          "abs_delta_vs_validation": 2.4713963052707824,
+          "tolerance": 0.25,
+          "verdict": "separate"
+        },
+        "top1_word_share": {
+          "validation": 0.02982885085574572,
+          "train": 0.02088199407355761,
+          "generator": 0.00024449877750611245,
+          "abs_delta_vs_validation": 0.02958435207823961,
+          "tolerance": 0.01,
+          "verdict": "separate"
+        }
+      },
+      "n_match": 0,
+      "n_metrics": 4,
+      "excess": 15.760168303536412
+    },
+    "heldout_audit_only": {
+      "per_metric": {
+        "line_initial_type_share": {
+          "validation": 0.16251830161054173,
+          "train": 0.1386949193354202,
+          "generator": 0.029282576866764276,
+          "abs_delta_vs_validation": 0.13323572474377746,
+          "tolerance": 0.05,
+          "verdict": "separate"
+        },
+        "ab_top50_jaccard": {
+          "validation": 0.13636363636363635,
+          "train": 0.2345679012345679,
+          "generator": 0.0,
+          "abs_delta_vs_validation": 0.13636363636363635,
+          "tolerance": 0.15,
+          "verdict": "match"
+        },
+        "word_h2_bits": {
+          "validation": 2.1739922387014357,
+          "train": 3.816846255239436,
+          "generator": 0.0,
+          "abs_delta_vs_validation": 2.1739922387014357,
+          "tolerance": 1.6428540165380006,
+          "verdict": "separate"
+        }
+      },
+      "n_match": 1,
+      "n_metrics": 3,
+      "excess": 1.9880166366463115
+    },
+    "metrics": {
+      "zipf_slope_top500": 0.0,
+      "adjacent_repeat_rate": 0.0,
+      "char_h2_bits": 4.6468821837174,
+      "top1_word_share": 0.00024449877750611245,
+      "line_initial_type_share": 0.029282576866764276,
+      "ab_top50_jaccard": 0.0,
+      "word_h2_bits": 0.0
+    }
+  },
+  "search": {
+    "population": 24,
+    "generations_max": 20,
+    "elite": 4,
+    "n_unique_genomes_scored": 239,
+    "history": [
+      {
+        "generation": 0,
+        "best_optimizable_n_match": 1,
+        "best_excess": 5.045264509312751,
+        "best_genome": {
+          "window": 22,
+          "p_cite": 0.4376935814253075,
+          "p_mutate_given_cite": 0.5080544781930492,
+          "p_splice_given_cite": 0.4419455218069508
+        },
+        "mean_optimizable_n_match": 0.5,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 1,
+        "best_optimizable_n_match": 1,
+        "best_excess": 4.437213529407009,
+        "best_genome": {
+          "window": 22,
+          "p_cite": 0.35598927686696824,
+          "p_mutate_given_cite": 0.5286914349431465,
+          "p_splice_given_cite": 0.42130856505685343
+        },
+        "mean_optimizable_n_match": 0.75,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 2,
+        "best_optimizable_n_match": 1,
+        "best_excess": 4.437213529407009,
+        "best_genome": {
+          "window": 22,
+          "p_cite": 0.35598927686696824,
+          "p_mutate_given_cite": 0.5286914349431465,
+          "p_splice_given_cite": 0.42130856505685343
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 3,
+        "best_optimizable_n_match": 1,
+        "best_excess": 4.093077790700345,
+        "best_genome": {
+          "window": 26,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 0.9583333333333334,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 4,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.8469648672917187,
+        "best_genome": {
+          "window": 19,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.47156009975170093,
+          "p_splice_given_cite": 0.47843990024829897
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 5,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 6,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 7,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 0.9583333333333334,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 8,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 0.9583333333333334,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 9,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 10,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 11,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 12,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 13,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 14,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 15,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 16,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 17,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 18,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      },
+      {
+        "generation": 19,
+        "best_optimizable_n_match": 1,
+        "best_excess": 3.467092122166129,
+        "best_genome": {
+          "window": 20,
+          "p_cite": 0.3,
+          "p_mutate_given_cite": 0.38932960474871636,
+          "p_splice_given_cite": 0.5606703952512835
+        },
+        "mean_optimizable_n_match": 1.0,
+        "early_stop_after_4of4": false
+      }
+    ],
+    "defaults_genome": {
+      "window": 20,
+      "p_cite": 0.72,
+      "p_mutate_given_cite": 0.55,
+      "p_splice_given_cite": 0.25
+    }
+  },
+  "defaults_reference": {
+    "genome": {
+      "window": 20,
+      "p_cite": 0.72,
+      "p_mutate_given_cite": 0.55,
+      "p_splice_given_cite": 0.25
+    },
+    "optimizable": {
+      "per_metric": {
+        "zipf_slope_top500": {
+          "validation": -0.8760135238209574,
+          "train": -0.8880327359922592,
+          "generator": -0.342975043557446,
+          "abs_delta_vs_validation": 0.5330384802635114,
+          "tolerance": 0.15,
+          "verdict": "separate"
+        },
+        "adjacent_repeat_rate": {
+          "validation": 0.005380288579114698,
+          "train": 0.007774368986194394,
+          "generator": 0.010026901442895574,
+          "abs_delta_vs_validation": 0.004646612863780876,
+          "tolerance": 0.005,
+          "verdict": "match"
+        },
+        "char_h2_bits": {
+          "validation": 2.175485878446618,
+          "train": 2.1646380461898445,
+          "generator": 3.331439041421704,
+          "abs_delta_vs_validation": 1.155953162975086,
+          "tolerance": 0.25,
+          "verdict": "separate"
+        },
+        "top1_word_share": {
+          "validation": 0.02982885085574572,
+          "train": 0.02088199407355761,
+          "generator": 0.0053789731051344745,
+          "abs_delta_vs_validation": 0.02444987775061125,
+          "tolerance": 0.01,
+          "verdict": "separate"
+        }
+      },
+      "n_match": 1,
+      "n_metrics": 4,
+      "excess": 7.622390295384879
+    },
+    "heldout": {
+      "per_metric": {
+        "line_initial_type_share": {
+          "validation": 0.16251830161054173,
+          "train": 0.1386949193354202,
+          "generator": 0.0629575402635432,
+          "abs_delta_vs_validation": 0.09956076134699854,
+          "tolerance": 0.05,
+          "verdict": "separate"
+        },
+        "ab_top50_jaccard": {
+          "validation": 0.13636363636363635,
+          "train": 0.2345679012345679,
+          "generator": 0.08695652173913043,
+          "abs_delta_vs_validation": 0.04940711462450592,
+          "tolerance": 0.15,
+          "verdict": "match"
+        },
+        "word_h2_bits": {
+          "validation": 2.1739922387014357,
+          "train": 3.816846255239436,
+          "generator": 0.5930003369630739,
+          "abs_delta_vs_validation": 1.5809919017383618,
+          "tolerance": 1.6428540165380006,
+          "verdict": "match"
+        }
+      },
+      "n_match": 2,
+      "n_metrics": 3,
+      "excess": 0.9912152269399708
+    },
+    "metrics": {
+      "zipf_slope_top500": -0.342975043557446,
+      "adjacent_repeat_rate": 0.010026901442895574,
+      "char_h2_bits": 3.331439041421704,
+      "top1_word_share": 0.0053789731051344745,
+      "line_initial_type_share": 0.0629575402635432,
+      "ab_top50_jaccard": 0.08695652173913043,
+      "word_h2_bits": 0.5930003369630739
+    }
+  },
+  "winner": {
+    "genome": {
+      "window": 20,
+      "p_cite": 0.3,
+      "p_mutate_given_cite": 0.38932960474871636,
+      "p_splice_given_cite": 0.5606703952512835
+    },
+    "optimizable": {
+      "per_metric": {
+        "zipf_slope_top500": {
+          "validation": -0.8760135238209574,
+          "train": -0.8880327359922592,
+          "generator": -0.5876337498732638,
+          "abs_delta_vs_validation": 0.28837977394769365,
+          "tolerance": 0.15,
+          "verdict": "separate"
+        },
+        "adjacent_repeat_rate": {
+          "validation": 0.005380288579114698,
+          "train": 0.007774368986194394,
+          "generator": 0.0019564685742235266,
+          "abs_delta_vs_validation": 0.003423820004891171,
+          "tolerance": 0.005,
+          "verdict": "match"
+        },
+        "char_h2_bits": {
+          "validation": 2.175485878446618,
+          "train": 2.1646380461898445,
+          "generator": 2.8226283973964357,
+          "abs_delta_vs_validation": 0.6471425189498179,
+          "tolerance": 0.25,
+          "verdict": "separate"
+        },
+        "top1_word_share": {
+          "validation": 0.02982885085574572,
+          "train": 0.02088199407355761,
+          "generator": 0.010268948655256724,
+          "abs_delta_vs_validation": 0.019559902200488997,
+          "tolerance": 0.01,
+          "verdict": "separate"
+        }
+      },
+      "n_match": 1,
+      "n_metrics": 4,
+      "excess": 3.467092122166129
+    },
+    "heldout": {
+      "per_metric": {
+        "line_initial_type_share": {
+          "validation": 0.16251830161054173,
+          "train": 0.1386949193354202,
+          "generator": 0.07174231332357248,
+          "abs_delta_vs_validation": 0.09077598828696926,
+          "tolerance": 0.05,
+          "verdict": "separate"
+        },
+        "ab_top50_jaccard": {
+          "validation": 0.13636363636363635,
+          "train": 0.2345679012345679,
+          "generator": 0.12359550561797752,
+          "abs_delta_vs_validation": 0.012768130745658829,
+          "tolerance": 0.15,
+          "verdict": "match"
+        },
+        "word_h2_bits": {
+          "validation": 2.1739922387014357,
+          "train": 3.816846255239436,
+          "generator": 0.6023579776702567,
+          "abs_delta_vs_validation": 1.5716342610311789,
+          "tolerance": 1.6428540165380006,
+          "verdict": "match"
+        }
+      },
+      "n_match": 2,
+      "n_metrics": 3,
+      "excess": 0.8155197657393851
+    },
+    "metrics": {
+      "zipf_slope_top500": -0.5876337498732638,
+      "adjacent_repeat_rate": 0.0019564685742235266,
+      "char_h2_bits": 2.8226283973964357,
+      "top1_word_share": 0.010268948655256724,
+      "line_initial_type_share": 0.07174231332357248,
+      "ab_top50_jaccard": 0.12359550561797752,
+      "word_h2_bits": 0.6023579776702567
+    },
+    "exploratory": {
+      "hapax_frac_types": 0.8850998463901689,
+      "mean_word_length": 5.521515892420538,
+      "top1_word": "ch",
+      "n_tokens": 4090,
+      "n_types": 3255
+    }
+  },
+  "decision": {
+    "passed": false,
+    "mode": "surface_unmatchable",
+    "hyp005_status": "open_not_killed",
+    "reasons": [
+      "winner matched only 1/4 optimizable metrics (need \u22653); generator family cannot force selected surface match"
+    ],
+    "rule": "EXP-0025",
+    "gates": {
+      "optimizable_match_min": 3,
+      "heldout_separate_min": 2,
+      "iid_optimizable_separate_min": 3,
+      "winner_optimizable_n_match": 1,
+      "winner_heldout_n_separate": 1,
+      "iid_optimizable_n_separate": 4
+    },
+    "winner_genome": {
+      "window": 20,
+      "p_cite": 0.3,
+      "p_mutate_given_cite": 0.38932960474871636,
+      "p_splice_given_cite": 0.5606703952512835
+    },
+    "optimizable": {
+      "per_metric": {
+        "zipf_slope_top500": {
+          "validation": -0.8760135238209574,
+          "train": -0.8880327359922592,
+          "generator": -0.5876337498732638,
+          "abs_delta_vs_validation": 0.28837977394769365,
+          "tolerance": 0.15,
+          "verdict": "separate"
+        },
+        "adjacent_repeat_rate": {
+          "validation": 0.005380288579114698,
+          "train": 0.007774368986194394,
+          "generator": 0.0019564685742235266,
+          "abs_delta_vs_validation": 0.003423820004891171,
+          "tolerance": 0.005,
+          "verdict": "match"
+        },
+        "char_h2_bits": {
+          "validation": 2.175485878446618,
+          "train": 2.1646380461898445,
+          "generator": 2.8226283973964357,
+          "abs_delta_vs_validation": 0.6471425189498179,
+          "tolerance": 0.25,
+          "verdict": "separate"
+        },
+        "top1_word_share": {
+          "validation": 0.02982885085574572,
+          "train": 0.02088199407355761,
+          "generator": 0.010268948655256724,
+          "abs_delta_vs_validation": 0.019559902200488997,
+          "tolerance": 0.01,
+          "verdict": "separate"
+        }
+      },
+      "n_match": 1,
+      "n_metrics": 4,
+      "excess": 3.467092122166129
+    },
+    "heldout": {
+      "per_metric": {
+        "line_initial_type_share": {
+          "validation": 0.16251830161054173,
+          "train": 0.1386949193354202,
+          "generator": 0.07174231332357248,
+          "abs_delta_vs_validation": 0.09077598828696926,
+          "tolerance": 0.05,
+          "verdict": "separate"
+        },
+        "ab_top50_jaccard": {
+          "validation": 0.13636363636363635,
+          "train": 0.2345679012345679,
+          "generator": 0.12359550561797752,
+          "abs_delta_vs_validation": 0.012768130745658829,
+          "tolerance": 0.15,
+          "verdict": "match"
+        },
+        "word_h2_bits": {
+          "validation": 2.1739922387014357,
+          "train": 3.816846255239436,
+          "generator": 0.6023579776702567,
+          "abs_delta_vs_validation": 1.5716342610311789,
+          "tolerance": 1.6428540165380006,
+          "verdict": "match"
+        }
+      },
+      "n_match": 2,
+      "n_metrics": 3,
+      "excess": 0.8155197657393851
+    },
+    "iid_optimizable": {
+      "per_metric": {
+        "zipf_slope_top500": {
+          "validation": -0.8760135238209574,
+          "train": -0.8880327359922592,
+          "generator": 0.0,
+          "abs_delta_vs_validation": 0.8760135238209574,
+          "tolerance": 0.15,
+          "verdict": "separate"
+        },
+        "adjacent_repeat_rate": {
+          "validation": 0.005380288579114698,
+          "train": 0.007774368986194394,
+          "generator": 0.0,
+          "abs_delta_vs_validation": 0.005380288579114698,
+          "tolerance": 0.005,
+          "verdict": "separate"
+        },
+        "char_h2_bits": {
+          "validation": 2.175485878446618,
+          "train": 2.1646380461898445,
+          "generator": 4.6468821837174,
+          "abs_delta_vs_validation": 2.4713963052707824,
+          "tolerance": 0.25,
+          "verdict": "separate"
+        },
+        "top1_word_share": {
+          "validation": 0.02982885085574572,
+          "train": 0.02088199407355761,
+          "generator": 0.00024449877750611245,
+          "abs_delta_vs_validation": 0.02958435207823961,
+          "tolerance": 0.01,
+          "verdict": "separate"
+        }
+      },
+      "n_match": 0,
+      "n_metrics": 4,
+      "excess": 15.760168303536412
+    },
+    "iid_control": {
+      "name": "iid_uniform_fixedlen",
+      "word_len": 8,
+      "alphabet": "uniform_a_z",
+      "vs_exp0019": "replaces train-unigram iid_char"
+    },
+    "thresholds": {
+      "floors": {
+        "zipf_slope_top500": 0.15,
+        "adjacent_repeat_rate": 0.005,
+        "char_h2_bits": 0.25,
+        "top1_word_share": 0.01,
+        "line_initial_type_share": 0.05,
+        "ab_top50_jaccard": 0.15,
+        "word_h2_bits": 0.25
+      },
+      "optimizable_metrics": [
+        "zipf_slope_top500",
+        "adjacent_repeat_rate",
+        "char_h2_bits",
+        "top1_word_share"
+      ],
+      "heldout_metrics": [
+        "line_initial_type_share",
+        "ab_top50_jaccard",
+        "word_h2_bits"
+      ],
+      "match_rule": "abs(G-R) <= max(|T-R|, floor)",
+      "population": 24,
+      "generations": 20,
+      "seed": 4025,
+      "iid_word_len": 8
+    },
+    "heldout_interpretation": "preregistered_rule_applied"
+  },
+  "non_claims": [
+    "Not a decipherment",
+    "Not a language ID",
+    "Surface-stat match alone is not a HYP-005 proof"
+  ]
+}

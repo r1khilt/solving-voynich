@@ -1,0 +1,33 @@
+{
+  "experiment": "EXP-0025",
+  "seed": 4025,
+  "data_root": "/Users/rikhil/coding/solving-voynich/data/processed/zl3b",
+  "train_pages": 177,
+  "validation_pages": 24,
+  "test_pages_unscored": 25,
+  "iid_control": "iid_uniform_fixedlen",
+  "iid_word_len": 8,
+  "optimizable_metrics": [
+    "zipf_slope_top500",
+    "adjacent_repeat_rate",
+    "char_h2_bits",
+    "top1_word_share"
+  ],
+  "heldout_metrics": [
+    "line_initial_type_share",
+    "ab_top50_jaccard",
+    "word_h2_bits"
+  ],
+  "floors": {
+    "zipf_slope_top500": 0.15,
+    "adjacent_repeat_rate": 0.005,
+    "char_h2_bits": 0.25,
+    "top1_word_share": 0.01,
+    "line_initial_type_share": 0.05,
+    "ab_top50_jaccard": 0.15,
+    "word_h2_bits": 0.25
+  },
+  "passed": false,
+  "mode": "surface_unmatchable",
+  "hyp005_status": "open_not_killed"
+}
