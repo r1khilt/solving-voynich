@@ -373,3 +373,14 @@ Resource use (if applicable):
 - **Model plan:** BiLSTM emb128/hidden256/layers2; estimated **2,447,613** params; MPS; ≤3000 updates; seeds data 4011 / model 42 / holdout base 4012.
 - **Artifacts before scores:** `docs/experiments/EXP-0015.md`, `EXP-0015b.md`, `data/manifests/exp0015_corpora.json`, `exp0015_data.json` (derived digests written; bulk text gitignored).
 - **Status:** Preregistration complete; scored run not yet executed. Not a decipherment.
+
+## 2026-09-21 — EXP-0015 interrupted; EXP-0016 thousand-language preregistration [NB-0028]
+
+- **User order:** Scale language count ~100× vs the ~15–20 plan. Minimum that counts: **≥1,000** distinct languages in pool, **≥150** fully held out and scored, **≥8** entire families held out. Do **not** finish a 15-language training run and call that the result. Full decipherment remains the objective; a synthetic win is not a decipherment.
+- **Salvage:** Keep EXP-0015 code (`romanize.py`, `multilang_recovery.py`), local `data/raw/multilang_corpora/`, and any EXP-0015/0015b side results under `results/`. **EXP-0015 is superseded as the session bar** (not deleted). Unrelated untracked `scripts/structured_gibberish_comparison.py` left alone. ZL3b final test untouched.
+- **New id:** EXP-0016 (`docs/experiments/EXP-0016.md`); contingent falsifier EXP-0016b.
+- **Pass rule (frozen before scores):** ≥100 holdouts beat own matched-random recon; those include ≥5 families and ≥50% non-IE; macro recon over **all** holdouts > macro matched-random; macro null_rec≥0.50, null_prec≥0.50, pred_null∈[0.15,0.45]; vocab-filter macro recon must not beat model.
+- **Decoder:** exact-count `n_keep=round((1-0.30)*L)` (same as EXP-0015 design).
+- **Sources planned:** UDHR (efele/Unicode), FLORES-200 dev (CC BY-SA), Tatoeba (CC BY 2.0 FR), Wikipedia extracts (CC BY-SA) for remaining editions; family tags via documented ISO→family map / Glottolog fallback. Romanize to `a–z`+space; skip unromanizable with counts.
+- **Train subset rule (frozen):** if needed, ≥400 stratified train languages from all non-held-out families (seed 4016); still score full holdout set.
+- **Status:** Preregistration authored; corpus acquisition and scored run not yet complete. Not a decipherment.
