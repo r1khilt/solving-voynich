@@ -46,4 +46,4 @@ The user's reference to an AI model solving Navier–Stokes is motivation, not v
 
 ## Next state
 
-Wait for the user's instruction to start research. The backlog is a menu of possibilities, not permission to execute it. No research direction has been selected or empirically ranked.
+Wait for the user's instruction to start research. The backlog is a menu of possibilities, not permission to execute it. NB-0005 records a proposed first modeling sequence: prepare transcription and held-out splits, train a small standard model from scratch on Voynich-only training text, evaluate, then interpret. No architecture is implemented or empirically ranked, and the discussion has not started research execution.
