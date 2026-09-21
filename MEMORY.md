@@ -53,4 +53,6 @@ The user's reference to an AI model solving Navier–Stokes is motivation, not v
 
 ## Next state
 
-The user now authorizes continued ambitious experiments and mechanistic analysis. EXP-0002 registers six configurations × three seeds, at most 2,000 updates each, with MPS, frozen validation and an unscored test split. Follow with separately specified causal context/head tests and synthetic known-generator calibration. Review both Voynich-specific precedents and underlying methods before attempts; record negative results and do not infer historical meanings from a trained predictor alone.
+Continued ambitious, bounded local research is authorized. EXP-0002 completed 18 runs/34,300 updates on MPS: compact 430,720-parameter model mean validation 1.839734 bits, MTP 1.837866; registered near-tie rule selects compact for interpretation. Full results: `docs/experiments/EXP-0002-results.md`. No manuscript test scoring or paid API calls.
+
+EXP-0003 and EXP-0004 are registered and implemented: paired context/head causal tests, and independent synthetic hidden-state/filler calibration with Bayesian and IID controls. Synthetic labels supervise diagnostic readouts after text-only training; this is not unsupervised decipherment. Execute bounded registrations, retain negative results and controls, then update this state with observed results. All synthetic weights/data are separate from Voynich-only training.

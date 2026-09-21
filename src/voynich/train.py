@@ -95,7 +95,8 @@ def train(config_path, data_dir, run_dir, *, device="auto", steps=None, seed=Non
         "model_config": model_cfg.to_dict(), "training_config": cfg, "corpus_identity": identity,
         "environment": environment(), "device": device, "parameter_count": model.parameter_count,
         "resume_from": str(resume) if resume else None,
-        "training_data": "Voynich train split only; random initialization; no pretrained weights",
+        "training_data": config.get("training_data_description",
+                                    "Voynich train split only; random initialization; no pretrained weights"),
         "selection_split": "validation", "test_evaluated": False,
         "sampler": "uniform page-window sampling with replacement; final short windows right padded",
     }

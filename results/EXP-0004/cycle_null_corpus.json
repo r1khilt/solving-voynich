@@ -1,0 +1,21 @@
+{
+  "experiment": "EXP-0004",
+  "generator": "cycle_null",
+  "generator_seed": 2201,
+  "signal_probability": 0.65,
+  "alphabet": "abcdefgh",
+  "page_counts": {
+    "train": 600,
+    "validation": 96,
+    "test": 192
+  },
+  "page_length": 255,
+  "training_data_description": "Synthetic cycle_null text only; hidden labels excluded from language model inputs/objective",
+  "independence": "Separate SeedSequence child streams; no duplicate full pages; one fixed alphabet/mechanism",
+  "derived_sha256": {
+    "train.jsonl": "8fbdeb26257e4eda66f97930951fa29d8bb71c9c3d7e65b2ed25b3d87561e9e9",
+    "validation.jsonl": "0c80f30c711cb188f26d24278370b1d3a50cca1be505a5320728d14c51bf7fe6",
+    "test.jsonl": "d36d0d521d8538f5765c6686358eec5afc670575aaa6b560fb2ef215d2505b85",
+    "tokenizer.json": "ce4c5b26589b876d1dafa78b4615a4c915edd74efea160f1a28055f13dcde73e"
+  }
+}

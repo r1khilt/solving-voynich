@@ -1,0 +1,21 @@
+{
+  "experiment": "EXP-0004",
+  "generator": "iid",
+  "generator_seed": 2201,
+  "signal_probability": 0.65,
+  "alphabet": "abcdefgh",
+  "page_counts": {
+    "train": 600,
+    "validation": 96,
+    "test": 192
+  },
+  "page_length": 255,
+  "training_data_description": "Synthetic iid text only; hidden labels excluded from language model inputs/objective",
+  "independence": "Separate SeedSequence child streams; no duplicate full pages; one fixed alphabet/mechanism",
+  "derived_sha256": {
+    "train.jsonl": "edf865790f6524fd1e925a183a5bd1cccf08430ce2d9f85e67e486d68c5c5172",
+    "validation.jsonl": "824c198739d43b6738d2aba8967619840409f0761e9ac6d7be1fb796ffedd34e",
+    "test.jsonl": "0b506fc8d4a47b2546987f232df84629439527bee74c51d4a8aab065c24438a0",
+    "tokenizer.json": "ce4c5b26589b876d1dafa78b4615a4c915edd74efea160f1a28055f13dcde73e"
+  }
+}
