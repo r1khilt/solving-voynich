@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "n_holdout_scored": 270,
+  "n_beat_matched_random": 270,
+  "passer_families": [
+    "Afro-Asiatic",
+    "Austronesian",
+    "Aymaran",
+    "Basque",
+    "Dravidian",
+    "Kartvelian",
+    "Mayan",
+    "Otomanguean",
+    "Quechuan",
+    "Tupian",
+    "Uralic",
+    "isolate"
+  ],
+  "n_passer_families": 12,
+  "non_ie_passer_fraction": 1.0,
+  "n_non_ie_passers": 270,
+  "macro_recon_acc": 0.31549961055309655,
+  "macro_matched_random_recon_acc": 0.1918111662718561,
+  "macro_null_recall": 0.7194561483323662,
+  "macro_null_precision": 0.7022100389863547,
+  "macro_pred_null_rate": 0.296875,
+  "macro_vocab_filter_recon_acc": 0.058508546991018505,
+  "reasons": [],
+  "thresholds": {
+    "min_langs_beat_random": 100,
+    "min_families_in_passers": 5,
+    "min_non_ie_passer_frac": 0.5,
+    "null_recall_min": 0.5,
+    "null_precision_min": 0.5,
+    "pred_null_rate_band": [
+      0.15,
+      0.45
+    ],
+    "vocab_cheat": "vocab_filter macro recon >= model macro recon ⇒ FAIL"
+  }
+}

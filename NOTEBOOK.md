@@ -402,6 +402,19 @@ Resource use (if applicable):
 - **Command (planned):** `.venv/bin/python -m voynich.mass_lang_recovery --root . --device mps --n-train 12000 --n-val 800 --n-holdout 40 --updates 4000 --filler-families random_char,periodic --no-wiki-fill`
 - **Not a decipherment.**
 
+## 2026-09-21 — EXP-0016 + 0016b scored; Voynich validation structure negative [NB-0033]
+
+- **Question:** Thousand-language family-holdout exact-count recovery under frozen EXP-0016 pass rule; contingent `copy_mutate` falsifier; Voynich label-free only if both PASS.
+- **Actions:** Trained SignalModelV16 (5,440,829 params; emb192/hid384/L2) on MPS, 4,000 updates, seeds 4016/42/4017; exact-count decoder frozen. Scored all 270 holdouts. Ran EXP-0016b with `copy_mutate` added. After both PASS, ran ZL3b **validation-only** label-free (padded windows; test unscored).
+- **Exact inputs:** pool 1,063 varieties (UDHR 492 / FLORES 196 / Tatoeba 356 / salvage 19); skipped 57 (CJK 33, unromanizable 19, too short 5); train subset 400; holdout 270 / 12 families; freeze SHA `d704e59`.
+- **Observations (EXP-0016):** **PASS.** 270/270 beat matched-random; macro recon 0.3155 > 0.1918; null_rec 0.7195 / prec 0.7022 / pred_null 0.2969; vocab-filter 0.0585 (no cheat). All 12 passer families non-IE. Historical Lat/It/De 13/13 beat random (score-only).
+- **Observations (EXP-0016b):** **PASS.** 264/270; macro recon 0.2552 > 0.1923; null gates clear.
+- **Voynich (val only):** neural mean bits-gain −0.073 vs matched-random −0.049; fraction_beats_random 0.25. Classical sticky slightly better but still weak. **Negative structure transfer.** 30% null is an assumption.
+- **Interpretation:** Multi-family synthetic cipher+filler recovery works at thousand-language scale with exact-count decode. Transfer to Voynich under fixed 0.30 null does **not**. Synthetic PASS ≠ decipherment.
+- **Validation:** Artifacts under `results/EXP-0016/`, `results/EXP-0016b/`; docs `EXP-0016-results.md`, `EXP-0016b-results.md`. ZL3b test untouched.
+- **Next:** Single change — null-rate grid on validation with matched-random at each rate; falsifier if best rate still ≤ random. No new architecture this step.
+- **Resources:** Local MPS only; ~14 min primary train; no paid API. Checkpoints in ignored `outputs/`.
+
 ## 2026-09-21 — AI on Navier–Stokes, Erdős/formal math, and Voynich analogues [NB-0031]
 
 - **Question:** How have AI/LLM systems actually made progress on Navier–Stokes, Erdős-type problems, and formal math, and which mechanisms (not headlines) are worth trying for decipherment here? Charter untouched. Complementary to deep-review and world-models memos; does not launch experiments.
