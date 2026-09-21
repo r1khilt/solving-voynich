@@ -322,3 +322,21 @@ Resource use (if applicable):
 - **Interpretation:** Easy fillers improve neural null recall vs full mix (~0.04→0.33) but do not pass reconstruction/structure margins. Missing piece is not “only hard fillers”; architecture/objective still insufficient for identifiable recovery. EXP-0011b not run. Voynich not run.
 - **Next:** preregister **EXP-0012** (new id): null-class recall/precision + recon above matched random; class-balanced / recall-seeking neural mask loss + classical Viterbi that keeps run structure (no top-k overwrite). Same easy fillers and Finnish holdout. Not a decipherment.
 
+
+## 2026-09-21 — EXP-0012 preregistered (null-aware escalation) [NB-0025]
+
+- **Status at write:** Preregistration **before** Finnish scores. Registration: `docs/experiments/EXP-0012.md`.
+- **Question:** Same easy-filler Finnish holdout as 0011a; can balanced-null-loss neural + sticky-null classical pass a rule that requires null recall/precision and recon above matched random (blocks delete-nothing F1 wins)?
+- **Pass rule (new id):** null_recall≥0.55; null_precision≥0.50; pred_null_rate∈[0.15,0.45]; recon≥matched_random+0.08; mask_acc≥majority+0.05; vocab_f1≤0.55; bits_gain≥matched_random+0.03. EXP-0011 thresholds untouched.
+- **Command (planned):** `.venv/bin/python -m voynich.latent_recovery --root . --device mps --experiment-id EXP-0012 --filler-families random_char,periodic --n-train 4000 --n-val 400 --n-holdout 300 --updates 3000 --no-voynich` (Voynich only if PASS).
+- **Next:** run once; record PASS/FAIL; no post-fail retune in this id.
+
+
+## 2026-09-21 — EXP-0012 executed; FAIL (rate ok, recon not) [NB-0025b]
+
+- **Question / rule:** as NB-0025 / `docs/experiments/EXP-0012.md`.
+- **Command:** `.venv/bin/python -m voynich.latent_recovery --root . --device mps --n-train 4000 --n-val 400 --n-holdout 300 --updates 3000 --experiment-id EXP-0012 --filler-families random_char,periodic --no-voynich`
+- **Observations:** neural null_recall=0.584 null_precision=0.542 pred_null_rate=0.309 recon=0.151 bits=−0.308 mask_acc=0.740 null_f1=0.562 (threshold≈0.302); classical null_rec=0.392 prec=0.368 recon=0.102; matched_random recon=0.204; majority_acc=0.714; vocab signal_f1=0.424. **FAIL.** Neural cleared null-rate gates but missed recon / mask_acc / bits margins.
+- **Interpretation:** Closing the delete-nothing metric trap works; localization of nulls still insufficient for `C(L)` reconstruction above matched random. Not a decipherment. Voynich not run.
+- **Next (highest EV):** train an explicit subsequence / alignment objective so kept tokens match `C(L)` (e.g. stronger recon head + CTC/alignment loss or CRF deletion), still under EXP-0012-style null gates. Falsifier: must beat matched-random recon on this easy Finnish holdout; if that passes, reintroduce `copy_mutate` alone—if recon collapses, escalate copy-aware detection rather than rate calibration.
+

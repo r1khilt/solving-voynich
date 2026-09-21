@@ -105,6 +105,44 @@ def test_classical_mask_length():
     assert len(mask) == len("αβγ αβγ δεζ δεζ ηθηθ")
 
 
+def test_classical_hsmm_mask_length():
+    from voynich.latent_recovery import classical_hsmm_null_mask
+
+    text = "αβγ αβγ δεζ δεζ ηθηθ αααα"
+    mask = classical_hsmm_null_mask(text, 0.3)
+    assert len(mask) == len(text)
+    assert set(mask.tolist()) <= {0, 1}
+
+
+def test_pass_rule_v12_blocks_delete_nothing():
+    from voynich.latent_recovery import apply_pass_rule_v12
+
+    # High signal F1 / delete-nothing style neural
+    neural = {
+        "mask_f1": 0.83,
+        "mask_acc": 0.71,
+        "recon_acc": 0.07,
+        "pred_bits_gain": 0.0,
+        "null_recall": 0.04,
+        "null_precision": 0.5,
+        "pred_null_rate": 0.03,
+    }
+    classical = {
+        "mask_f1": 0.72,
+        "mask_acc": 0.60,
+        "recon_acc": 0.18,
+        "pred_bits_gain": 0.01,
+        "null_recall": 0.32,
+        "null_precision": 0.31,
+        "pred_null_rate": 0.30,
+    }
+    majority = {"mask_f1": 0.83, "mask_acc": 0.71, "recon_acc": 0.07, "pred_bits_gain": 0.0}
+    random_b = {"mask_f1": 0.71, "mask_acc": 0.6, "recon_acc": 0.20, "pred_bits_gain": -0.03}
+    vocab_b = {"mask_f1": 0.42, "mask_acc": 0.5, "recon_acc": 0.05, "pred_bits_gain": 1.0}
+    decision = apply_pass_rule_v12(neural, classical, majority, random_b, vocab_b)
+    assert decision["passed"] is False
+
+
 def test_pass_rule_vocab_cheat_fails():
     neural = {"mask_f1": 0.9, "mask_acc": 0.9, "recon_acc": 0.9, "pred_bits_gain": 1.0}
     classical = {"mask_f1": 0.2, "mask_acc": 0.5, "recon_acc": 0.2, "pred_bits_gain": 0.0}

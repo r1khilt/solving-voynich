@@ -40,6 +40,17 @@ PASS_RECON_MARGIN = 0.08
 PASS_PRED_BITS_MARGIN = 0.05
 MATCHED_RANDOM_SEEDS = 20
 
+# EXP-0012 frozen thresholds (do not alter EXP-0011 constants above)
+PASS12_NULL_RECALL_MIN = 0.55
+PASS12_NULL_PRECISION_MIN = 0.50
+PASS12_PRED_NULL_RATE_MIN = 0.15
+PASS12_PRED_NULL_RATE_MAX = 0.45
+PASS12_RECON_MARGIN = 0.08
+PASS12_MASK_ACC_MARGIN = 0.05
+PASS12_PRED_BITS_MARGIN = 0.03
+PASS12_VOCAB_F1_MAX = 0.55
+NULL_LOSS_WEIGHT = 3.5  # recall-seeking vs signal class
+
 LATIN_PLAIN = "abcdefghijklmnopqrstuvwxyz "
 # Cipher pool deliberately excludes latin a-z so world B/C never looks like English spelling.
 CIPHER_POOL = (
@@ -626,6 +637,75 @@ def classical_null_mask(text: str, filler_rate: float = PRIMARY_FILLER_RATE) -> 
     return mask
 
 
+def classical_hsmm_null_mask(text: str, filler_rate: float = PRIMARY_FILLER_RATE) -> np.ndarray:
+    """Run-aware 2-state Viterbi: keep decoded path (no top-k overwrite).
+
+    Sticky null self-transitions encode geometric run lengths. Periodic and rarity
+    emissions target easy fillers; token-copy score is anti-null.
+    """
+    n = len(text)
+    if n == 0:
+        return np.zeros(0, dtype=int)
+    feats = copy_aware_features(text)
+    from collections import Counter
+
+    counts = Counter(ch for ch in text if ch != " ")
+    ranked = {ch: i for i, (ch, _) in enumerate(counts.most_common())}
+    period_hit = np.zeros(n, dtype=np.float32)
+    for p in (3, 4, 5, 6, 7, 8):
+        for i in range(p, n):
+            if text[i] != " " and text[i] == text[i - p]:
+                period_hit[i] += 1.0
+    emit_s = np.zeros(n)
+    emit_n = np.zeros(n)
+    for i, ch in enumerate(text):
+        rank = ranked.get(ch, len(ranked))
+        rarity = min(rank, 12) / 12.0
+        space_s = 0.6 * feats[i, 0]
+        copy = 1.2 * feats[i, 1] + 1.8 * feats[i, 2]
+        periodic = 0.55 * feats[i, 3] + 0.45 * min(period_hit[i], 3.0)
+        emit_s[i] = -0.15 * rarity + space_s + 0.4 * copy - 0.35 * periodic
+        emit_n[i] = 0.55 * rarity + periodic - space_s - 0.7 * copy
+    # Geometric null runs: high stay-null probability
+    p_to_n = min(0.35, max(0.08, filler_rate * 0.55))
+    p_to_s = min(0.40, max(0.10, 0.22))
+    log_stay_s, log_to_n = math.log(1 - p_to_n), math.log(p_to_n)
+    log_stay_n, log_to_s = math.log(1 - p_to_s), math.log(p_to_s)
+    neg = -1e9
+    dp_s = np.full(n, neg)
+    dp_n = np.full(n, neg)
+    ptr_s = np.zeros(n, dtype=int)
+    ptr_n = np.zeros(n, dtype=int)
+    dp_s[0] = math.log(max(1e-6, 1 - filler_rate)) + emit_s[0]
+    dp_n[0] = math.log(max(1e-6, filler_rate)) + emit_n[0]
+    for i in range(1, n):
+        s_from_s, s_from_n = dp_s[i - 1] + log_stay_s, dp_n[i - 1] + log_to_s
+        if s_from_s >= s_from_n:
+            dp_s[i], ptr_s[i] = s_from_s + emit_s[i], 1
+        else:
+            dp_s[i], ptr_s[i] = s_from_n + emit_s[i], 0
+        n_from_n, n_from_s = dp_n[i - 1] + log_stay_n, dp_s[i - 1] + log_to_n
+        if n_from_n >= n_from_s:
+            dp_n[i], ptr_n[i] = n_from_n + emit_n[i], 0
+        else:
+            dp_n[i], ptr_n[i] = n_from_s + emit_n[i], 1
+    mask = np.zeros(n, dtype=int)
+    state = 1 if dp_s[-1] >= dp_n[-1] else 0
+    for i in range(n - 1, -1, -1):
+        mask[i] = state
+        state = ptr_s[i] if state == 1 else ptr_n[i]
+        if i == 0:
+            break
+    return mask
+
+
+def null_f1_from_metrics(m: dict) -> float:
+    p, r = m.get("null_precision", 0.0), m.get("null_recall", 0.0)
+    if p + r <= 0:
+        return 0.0
+    return float(2 * p * r / (p + r))
+
+
 # ---------------------------------------------------------------------------
 # Tiny BiLSTM with copy-aware side features
 # ---------------------------------------------------------------------------
@@ -743,6 +823,39 @@ def predict_masks(model: TinySignalModel, samples: list[dict], vocab: dict[str, 
     return out
 
 
+@torch.no_grad()
+def predict_mask_probs(model: TinySignalModel, samples: list[dict], vocab: dict[str, int], device: str) -> list[np.ndarray]:
+    """Return P(signal) per position."""
+    model.eval()
+    out = []
+    for start in range(0, len(samples), BATCH_SIZE):
+        batch = samples[start : start + BATCH_SIZE]
+        texts = [s["text"] for s in batch]
+        x = torch.tensor([encode(t, vocab) for t in texts], dtype=torch.long, device=device)
+        feats = torch.tensor(np.stack([copy_aware_features(t) for t in texts]), dtype=torch.float32, device=device)
+        logits, _, _ = model(x, feats)
+        out.extend(logits.sigmoid().cpu().numpy())
+    return out
+
+
+def calibrate_signal_threshold(
+    probs: list[np.ndarray],
+    target_null_rate: float = PRIMARY_FILLER_RATE,
+) -> float:
+    """Frozen calibration: choose signal threshold so mean pred null rate ≈ target."""
+    flat = np.concatenate([np.asarray(p).reshape(-1) for p in probs])
+    if flat.size == 0:
+        return 0.5
+    # pred null when p_signal < thr ⇒ null_rate = mean(p < thr)
+    # Want thr such that mean(p < thr) ≈ target_null_rate
+    thr = float(np.quantile(flat, target_null_rate))
+    return float(np.clip(thr, 0.05, 0.95))
+
+
+def probs_to_masks(probs: list[np.ndarray], signal_threshold: float) -> list[np.ndarray]:
+    return [(np.asarray(p) >= signal_threshold).astype(int) for p in probs]
+
+
 def evaluate_masks(
     samples: list[dict],
     pred_masks: list[np.ndarray],
@@ -844,13 +957,15 @@ def train_model(
     vocab: dict[str, int],
     device: str,
     updates: int = MAX_UPDATES,
+    balanced_null_loss: bool = False,
 ) -> tuple[TinySignalModel, dict]:
     torch.manual_seed(MODEL_SEED)
     model = TinySignalModel(len(vocab)).to(device)
     opt = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
     history = []
-    best_f1 = -1.0
+    best_score = -1.0
     best_state = None
+    best_threshold = 0.5
     rng = np.random.default_rng(MODEL_SEED)
     # Index pools for world-C-focused batching
     by_world = {w: [i for i, s in enumerate(train) if s["world"] == w] for w in range(4)}
@@ -875,7 +990,12 @@ def train_model(
         world = batch["world"].to(device)
         recon = batch["recon"].to(device)
         mask_logit, recon_logit, world_logit = model(x, feats)
-        loss_mask = F.binary_cross_entropy_with_logits(mask_logit, mask)
+        if balanced_null_loss:
+            # Upweight null positions (mask==0) so delete-nothing cannot win the loss.
+            w = torch.where(mask > 0.5, torch.ones_like(mask), torch.full_like(mask, NULL_LOSS_WEIGHT))
+            loss_mask = F.binary_cross_entropy_with_logits(mask_logit, mask, weight=w)
+        else:
+            loss_mask = F.binary_cross_entropy_with_logits(mask_logit, mask)
         flat_logits = recon_logit.reshape(-1, recon_logit.size(-1))
         flat_tgt = recon.reshape(-1)
         flat_w = mask.reshape(-1)
@@ -891,26 +1011,48 @@ def train_model(
             rank_model = fit_rank_bigram(
                 [s["text"] for s in train if s["world"] == WORLD_B][:200] or [s["text"] for s in train[:200]]
             )
-            preds = predict_masks(model, val_c, vocab, device)
-            metrics = evaluate_masks(val_c, preds, rank_model)
+            if balanced_null_loss:
+                probs = predict_mask_probs(model, val_c, vocab, device)
+                thr = calibrate_signal_threshold(probs, PRIMARY_FILLER_RATE)
+                preds = probs_to_masks(probs, thr)
+                metrics = evaluate_masks(val_c, preds, rank_model)
+                score = null_f1_from_metrics(metrics)
+                metrics["signal_threshold"] = thr
+                metrics["null_f1"] = score
+                metrics["checkpoint_metric"] = "null_f1"
+            else:
+                preds = predict_masks(model, val_c, vocab, device)
+                metrics = evaluate_masks(val_c, preds, rank_model)
+                score = metrics["mask_f1"]
+                thr = 0.5
+                metrics["checkpoint_metric"] = "signal_mask_f1"
             metrics["step"] = step
             metrics["loss"] = float(loss.item())
             metrics["val_slice"] = "world_C_only"
             history.append(metrics)
-            if metrics["mask_f1"] > best_f1:
-                best_f1 = metrics["mask_f1"]
+            if score > best_score:
+                best_score = score
                 best_state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
+                best_threshold = thr
             model.train()
     if best_state is not None:
         model.load_state_dict(best_state)
     summary = {
         "param_count": model.param_count(),
-        "best_val_mask_f1": best_f1,
+        "best_val_score": best_score,
+        "best_val_mask_f1": history[-1]["mask_f1"] if history else -1.0,
+        "signal_threshold": best_threshold,
         "updates": updates,
         "seconds": time.time() - t0,
         "history": history,
         "device": device,
-        "fix": "worldC_oversample_copy_features_checkpoint_on_worldC_val",
+        "fix": (
+            "exp0012_balanced_null_loss_checkpoint_null_f1_calibrated_threshold"
+            if balanced_null_loss
+            else "worldC_oversample_copy_features_checkpoint_on_worldC_val"
+        ),
+        "balanced_null_loss": balanced_null_loss,
+        "null_loss_weight": NULL_LOSS_WEIGHT if balanced_null_loss else 1.0,
     }
     return model, summary
 
@@ -970,6 +1112,79 @@ def apply_pass_rule(neural: dict, classical: dict, majority: dict, random_b: dic
             "vocab_f1_max": PASS_VOCAB_F1_MAX,
             "recon_margin": PASS_RECON_MARGIN,
             "pred_bits_margin": PASS_PRED_BITS_MARGIN,
+        },
+    }
+
+
+def apply_pass_rule_v12(neural: dict, classical: dict, majority: dict, random_b: dict, vocab_b: dict) -> dict:
+    """EXP-0012 rule: null-class recall/precision + recon; blocks delete-nothing."""
+
+    def check(name: str, m: dict) -> dict:
+        reasons = []
+        ok = True
+        nr = float(m.get("null_recall", 0.0))
+        np_ = float(m.get("null_precision", 0.0))
+        pr = float(m.get("pred_null_rate", 0.0))
+        if nr < PASS12_NULL_RECALL_MIN:
+            ok = False
+            reasons.append(f"null_recall {nr:.4f} < {PASS12_NULL_RECALL_MIN}")
+        if np_ < PASS12_NULL_PRECISION_MIN:
+            ok = False
+            reasons.append(f"null_precision {np_:.4f} < {PASS12_NULL_PRECISION_MIN}")
+        if not (PASS12_PRED_NULL_RATE_MIN <= pr <= PASS12_PRED_NULL_RATE_MAX):
+            ok = False
+            reasons.append(
+                f"pred_null_rate {pr:.4f} not in "
+                f"[{PASS12_PRED_NULL_RATE_MIN}, {PASS12_PRED_NULL_RATE_MAX}]"
+            )
+        if m["recon_acc"] < random_b["recon_acc"] + PASS12_RECON_MARGIN:
+            ok = False
+            reasons.append("recon_acc margin vs matched random failed")
+        if m["mask_acc"] < majority["mask_acc"] + PASS12_MASK_ACC_MARGIN:
+            ok = False
+            reasons.append(
+                f"mask_acc {m['mask_acc']:.4f} not >= majority_acc+{PASS12_MASK_ACC_MARGIN} "
+                f"(majority_acc={majority['mask_acc']:.4f})"
+            )
+        if vocab_b["mask_f1"] > PASS12_VOCAB_F1_MAX:
+            ok = False
+            reasons.append(f"vocab_filter_f1 {vocab_b['mask_f1']:.4f} > {PASS12_VOCAB_F1_MAX} (cheat surface)")
+        if m["pred_bits_gain"] < random_b["pred_bits_gain"] + PASS12_PRED_BITS_MARGIN:
+            ok = False
+            reasons.append("pred_bits_gain margin vs matched random failed")
+        return {
+            "model": name,
+            "pass": ok,
+            "reasons": reasons,
+            "metrics": m,
+            "null_f1": null_f1_from_metrics(m),
+        }
+
+    n_res = check("neural", neural)
+    c_res = check("classical", classical)
+    passed = n_res["pass"] or c_res["pass"]
+    winner = None
+    if n_res["pass"] and c_res["pass"]:
+        winner = "classical" if c_res["null_f1"] >= n_res["null_f1"] else "neural"
+    elif n_res["pass"]:
+        winner = "neural"
+    elif c_res["pass"]:
+        winner = "classical"
+    return {
+        "passed": passed,
+        "winner": winner,
+        "rule": "EXP-0012",
+        "neural_check": n_res,
+        "classical_check": c_res,
+        "thresholds": {
+            "null_recall_min": PASS12_NULL_RECALL_MIN,
+            "null_precision_min": PASS12_NULL_PRECISION_MIN,
+            "pred_null_rate_min": PASS12_PRED_NULL_RATE_MIN,
+            "pred_null_rate_max": PASS12_PRED_NULL_RATE_MAX,
+            "recon_margin": PASS12_RECON_MARGIN,
+            "mask_acc_margin": PASS12_MASK_ACC_MARGIN,
+            "pred_bits_margin": PASS12_PRED_BITS_MARGIN,
+            "vocab_f1_max": PASS12_VOCAB_F1_MAX,
         },
     }
 
@@ -1130,7 +1345,11 @@ def run_experiment(args: argparse.Namespace) -> dict:
     root = Path(args.root)
     experiment_id = str(getattr(args, "experiment_id", None) or "EXP-0011")
     filler_families = parse_filler_families(getattr(args, "filler_families", None))
-    slug = experiment_id.lower().replace("_", "")
+    use_v12 = experiment_id.upper() in {"EXP-0012", "EXP0012"}
+    slug = experiment_id.lower().replace("_", "").replace("-", "")
+    # Keep readable dirs: exp0012 / exp0011a
+    if experiment_id.upper().startswith("EXP-"):
+        slug = experiment_id.lower().replace("-", "")
     raw_root = root / "data" / "raw" / "latent_corpora"
     proc_root = root / "data" / "processed" / slug
     out_root = root / "outputs" / experiment_id
@@ -1193,8 +1412,9 @@ def run_experiment(args: argparse.Namespace) -> dict:
         "n_holdout": len(holdout),
         "worlds": WORLD_NAMES,
         "derived_sha256": digests,
-        "pass_rule": asdict_pass_thresholds(),
-        "pass_rule_source": "EXP-0011 frozen thresholds (unchanged)",
+        "pass_rule": asdict_pass_thresholds_v12() if use_v12 else asdict_pass_thresholds(),
+        "pass_rule_source": "EXP-0012" if use_v12 else "EXP-0011 frozen thresholds (unchanged)",
+        "escalation": use_v12,
     })
 
     vocab = build_vocab()
@@ -1203,14 +1423,39 @@ def run_experiment(args: argparse.Namespace) -> dict:
     world_b_texts = [s["text"] for s in train if s["world"] == WORLD_B]
     rank_model = fit_rank_bigram(world_b_texts[:400] or [s["text"] for s in train[:400]])
 
-    model, train_summary = train_model(train, val, vocab, device, updates=args.updates)
-    torch.save({"model": model.state_dict(), "vocab": vocab, "summary": train_summary}, out_root / "model.pt")
+    model, train_summary = train_model(
+        train,
+        val,
+        vocab,
+        device,
+        updates=args.updates,
+        balanced_null_loss=use_v12,
+    )
+    torch.save(
+        {
+            "model": model.state_dict(),
+            "vocab": vocab,
+            "summary": train_summary,
+            "signal_threshold": train_summary.get("signal_threshold", 0.5),
+        },
+        out_root / "model.pt",
+    )
 
-    # Holdout evaluation — first time looking at Finnish metrics for this ablation
-    neural_preds = predict_masks(model, holdout, vocab, device)
+    # Holdout evaluation — first time looking at Finnish metrics for this run id
+    if use_v12:
+        holdout_probs = predict_mask_probs(model, holdout, vocab, device)
+        thr = float(train_summary.get("signal_threshold", 0.5))
+        neural_preds = probs_to_masks(holdout_probs, thr)
+        classical_preds = [classical_hsmm_null_mask(s["text"], PRIMARY_FILLER_RATE) for s in holdout]
+    else:
+        neural_preds = predict_masks(model, holdout, vocab, device)
+        classical_preds = [classical_null_mask(s["text"], PRIMARY_FILLER_RATE) for s in holdout]
     neural_metrics = evaluate_masks(holdout, neural_preds, rank_model)
-    classical_preds = [classical_null_mask(s["text"], PRIMARY_FILLER_RATE) for s in holdout]
     classical_metrics = evaluate_masks(holdout, classical_preds, rank_model)
+    neural_metrics["null_f1"] = null_f1_from_metrics(neural_metrics)
+    classical_metrics["null_f1"] = null_f1_from_metrics(classical_metrics)
+    if use_v12:
+        neural_metrics["signal_threshold"] = thr
     majority = majority_baseline(holdout, rank_model)
     random_b = matched_random_baseline(holdout, rank_model)
     # Training surface token vocab from world B/C only (ciphered surfaces)
@@ -1220,7 +1465,10 @@ def run_experiment(args: argparse.Namespace) -> dict:
             train_token_vocab.update(re.findall(r"\S+", s["text"]))
     vocab_b = vocab_filter_baseline(holdout, train_token_vocab, rank_model)
 
-    decision = apply_pass_rule(neural_metrics, classical_metrics, majority, random_b, vocab_b)
+    if use_v12:
+        decision = apply_pass_rule_v12(neural_metrics, classical_metrics, majority, random_b, vocab_b)
+    else:
+        decision = apply_pass_rule(neural_metrics, classical_metrics, majority, random_b, vocab_b)
 
     voynich_result = None
     if decision["passed"] and args.voynich_if_pass:
@@ -1254,7 +1502,7 @@ def run_experiment(args: argparse.Namespace) -> dict:
 
     report = {
         "experiment": experiment_id,
-        "parent_pass_rule": "EXP-0011",
+        "parent_pass_rule": "EXP-0012" if use_v12 else "EXP-0011",
         "filler_families": list(filler_families),
         "environment": environment(),
         "train_summary": {k: v for k, v in train_summary.items() if k != "history"},
@@ -1275,10 +1523,21 @@ def run_experiment(args: argparse.Namespace) -> dict:
         "simplifications": [
             "Character-level BiLSTM with copy-aware side features (~tens of k params), not a large transformer",
             "Primary reconstruction target is C(L) via mask deletion, not full plaintext cryptanalysis",
-            "Classical model is a 2-state feature Viterbi with token-level copy/mutate scores, not a full 20-state HSMM",
+            (
+                "Classical is sticky-null Viterbi with periodic/rarity emissions (path kept; no top-k overwrite)"
+                if use_v12
+                else "Classical model is a 2-state feature Viterbi with token-level copy/mutate scores, not a full 20-state HSMM"
+            ),
             "Finnish diacritics folded to ASCII a-z by shared cleaner (syntax/vocab still Finnish)",
             "Single primary filler rate 0.30 in the scored holdout",
             f"Ablation filler families: {list(filler_families)}",
+            *(
+                [
+                    f"EXP-0012 null-loss weight {NULL_LOSS_WEIGHT}; checkpoint on null F1; val-calibrated signal threshold",
+                ]
+                if use_v12
+                else []
+            ),
         ],
     }
     write_json(res_root / "results.json", report)
@@ -1294,6 +1553,19 @@ def asdict_pass_thresholds() -> dict:
         "vocab_f1_max": PASS_VOCAB_F1_MAX,
         "recon_margin": PASS_RECON_MARGIN,
         "pred_bits_margin": PASS_PRED_BITS_MARGIN,
+    }
+
+
+def asdict_pass_thresholds_v12() -> dict:
+    return {
+        "null_recall_min": PASS12_NULL_RECALL_MIN,
+        "null_precision_min": PASS12_NULL_PRECISION_MIN,
+        "pred_null_rate_min": PASS12_PRED_NULL_RATE_MIN,
+        "pred_null_rate_max": PASS12_PRED_NULL_RATE_MAX,
+        "recon_margin": PASS12_RECON_MARGIN,
+        "mask_acc_margin": PASS12_MASK_ACC_MARGIN,
+        "pred_bits_margin": PASS12_PRED_BITS_MARGIN,
+        "vocab_f1_max": PASS12_VOCAB_F1_MAX,
     }
 
 
@@ -1336,6 +1608,8 @@ def main():
             "recon_acc": report["neural"]["recon_acc"],
             "pred_bits_gain": report["neural"]["pred_bits_gain"],
             "null_recall": report["neural"].get("null_recall"),
+            "null_precision": report["neural"].get("null_precision"),
+            "null_f1": report["neural"].get("null_f1"),
             "pred_null_rate": report["neural"].get("pred_null_rate"),
         },
         "classical": {
@@ -1344,9 +1618,16 @@ def main():
             "recon_acc": report["classical"]["recon_acc"],
             "pred_bits_gain": report["classical"]["pred_bits_gain"],
             "null_recall": report["classical"].get("null_recall"),
+            "null_precision": report["classical"].get("null_precision"),
+            "null_f1": report["classical"].get("null_f1"),
             "pred_null_rate": report["classical"].get("pred_null_rate"),
         },
-        "baselines": {k: v["mask_f1"] for k, v in report["baselines"].items()},
+        "baselines": {
+            "majority_f1": report["baselines"]["majority"]["mask_f1"],
+            "matched_random_f1": report["baselines"]["matched_random"]["mask_f1"],
+            "matched_random_recon": report["baselines"]["matched_random"]["recon_acc"],
+            "vocab_filter_f1": report["baselines"]["vocab_filter"]["mask_f1"],
+        },
     }, indent=2))
 
 

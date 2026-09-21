@@ -1,0 +1,37 @@
+{
+  "experiment": "EXP-0012",
+  "data_seed": 4011,
+  "finnish_seed": 4012,
+  "filler_rate_primary": 0.3,
+  "filler_families": [
+    "random_char",
+    "periodic"
+  ],
+  "seq_len": 128,
+  "n_train": 4000,
+  "n_val": 400,
+  "n_holdout": 300,
+  "worlds": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "derived_sha256": {
+    "train": "8c996b2183b1b1784a6e3945d845f2e1ec4eec65393ba0ab0b75c655361bc432",
+    "validation": "0d516e073ebd16d1a39a688a6a041900f94b72e4d10dacfc46c6eda8887d65ad",
+    "finnish_holdout": "31984a91eac2d4fecc44b716805dba11c939eb2c8a0b951090e683e7a3b93740"
+  },
+  "pass_rule": {
+    "null_recall_min": 0.55,
+    "null_precision_min": 0.5,
+    "pred_null_rate_min": 0.15,
+    "pred_null_rate_max": 0.45,
+    "recon_margin": 0.08,
+    "mask_acc_margin": 0.05,
+    "pred_bits_margin": 0.03,
+    "vocab_f1_max": 0.55
+  },
+  "pass_rule_source": "EXP-0012",
+  "escalation": true
+}
