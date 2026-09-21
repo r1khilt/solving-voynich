@@ -74,7 +74,7 @@ MIN_POOL_LANGUAGES = 1000
 MIN_HOLDOUT_LANGUAGES = 150
 MIN_HOLDOUT_FAMILIES = 8
 MIN_TRAIN_SUBSET = 400
-MIN_CHARS = 800
+MIN_CHARS = 400
 
 # Scaled model (~8–12M params depending on vocab).
 MODEL_EMB = 192
@@ -397,12 +397,17 @@ def merge_and_romanize(
     family_map: dict[str, dict],
     min_chars: int = MIN_CHARS,
 ) -> tuple[dict[str, dict], dict]:
-    """Collapse to one entry per ISO 639-3 (prefer longer text). Return texts + stats."""
-    by_iso: dict[str, dict] = {}
+    """Keep each source record as a distinct variety id after romanization.
+
+    Family/holdout membership uses ISO 639-3 (Glottolog). Variety ids may be
+    `iso`, `iso__udhr_<f>`, or `iso__flores_<script>` so dialect/script variants
+    count separately without inventing text. Cross-source duplicates of the same
+    ISO keep the longest sample only when the variety id would collide.
+    """
+    by_id: dict[str, dict] = {}
     skipped = []
     for key, rec in records.items():
         iso = rec["iso6393"].lower()
-        # Map ISO 639-1 → 639-3 via family_map keys / common map
         if len(iso) == 2:
             iso = _iso1_to3.get(iso, iso)
         rom, scheme, ok = romanize_auto(rec["text"], rec.get("script"))
@@ -416,8 +421,23 @@ def merge_and_romanize(
                 }
             )
             continue
+        # Distinct variety id
+        src = rec["source"]
+        if src == "udhr" and rec.get("udhr_f"):
+            lang_id = f"{iso}__udhr_{rec['udhr_f']}"
+        elif src == "flores200_dev":
+            lang_id = f"{iso}__flores_{rec.get('script', 'Latn')}"
+        elif src.startswith("tatoeba"):
+            lang_id = f"{iso}__tatoeba"
+        elif src.startswith("wikipedia"):
+            lang_id = f"{iso}__wiki"
+        elif src.startswith("salvage") or src.startswith("exp0015"):
+            lang_id = f"{iso}__salvage"
+        else:
+            lang_id = f"{iso}__{src}"
         meta = family_map.get(iso, {"family": "unknown", "name": iso, "isolate": False, "glottocode": ""})
         entry = {
+            "lang_id": lang_id,
             "iso6393": iso,
             "name": rec.get("name") or meta.get("name") or iso,
             "family": meta.get("family") or "unknown",
@@ -432,18 +452,19 @@ def merge_and_romanize(
             "text": rom,
             "source_key": key,
         }
-        prev = by_iso.get(iso)
+        prev = by_id.get(lang_id)
         if prev is None or entry["romanized_chars"] > prev["romanized_chars"]:
-            by_iso[iso] = entry
+            by_id[lang_id] = entry
     stats = {
         "n_source_records": len(records),
-        "n_unique_iso_romanized": len(by_iso),
+        "n_unique_varieties_romanized": len(by_id),
+        "n_unique_iso_romanized": len({e["iso6393"] for e in by_id.values()}),
         "n_skipped": len(skipped),
         "skipped_sample": skipped[:50],
         "skipped_reasons": Counter(s["reason"].split(":")[0] for s in skipped),
-        "family_counts": Counter(e["family"] for e in by_iso.values()),
+        "family_counts": Counter(e["family"] for e in by_id.values()),
     }
-    return by_iso, stats
+    return by_id, stats
 
 
 # Common ISO 639-1 → 639-3 for Tatoeba / Wikipedia codes.
@@ -485,31 +506,38 @@ def _load_iso1_to3() -> dict[str, str]:
 _iso1_to3 = _load_iso1_to3()
 
 
-def assign_splits(by_iso: dict[str, dict]) -> dict:
-    """Freeze train / holdout / historical using HOLDOUT_FAMILY_NAMES."""
+def assign_splits(by_lang: dict[str, dict]) -> dict:
+    """Freeze train / holdout / historical using HOLDOUT_FAMILY_NAMES.
+
+    Keys are variety lang_ids; family membership uses entry['iso6393'] / family.
+    """
     holdout_families = set(HOLDOUT_FAMILY_NAMES)
     holdout: dict[str, dict] = {}
     train_pool: dict[str, dict] = {}
-    for iso, entry in by_iso.items():
+    for lang_id, entry in by_lang.items():
+        iso = entry["iso6393"]
         fam = entry["family"]
-        # Entire registered holdout families + all isolates + forced Basque
         if (
             fam in holdout_families
             or entry.get("isolate")
             or iso in FORCE_HOLDOUT_ISO
             or fam == "isolate"
         ):
-            holdout[iso] = entry
+            holdout[lang_id] = entry
         else:
-            train_pool[iso] = entry
+            train_pool[lang_id] = entry
 
-    # Historical: Latin / Italian / German if present — score-only, not in train
+    # Historical: Latin / Italian / German varieties — score-only, not in train
     historical = {}
     for iso in ("lat", "ita", "deu"):
-        if iso in train_pool:
-            historical[iso] = train_pool.pop(iso)
-        elif iso in by_iso and iso not in holdout:
-            historical[iso] = by_iso[iso]
+        candidates = [lid for lid, e in list(train_pool.items()) if e["iso6393"] == iso]
+        if not candidates:
+            candidates = [lid for lid, e in by_lang.items() if e["iso6393"] == iso and lid not in holdout]
+        for lid in candidates:
+            if lid in train_pool:
+                historical[lid] = train_pool.pop(lid)
+            elif lid in by_lang and lid not in holdout:
+                historical[lid] = by_lang[lid]
 
     return {
         "holdout_families": sorted(holdout_families),
@@ -850,21 +878,22 @@ def acquire_phase(root: Path, wiki_fill: bool = True) -> dict:
                 "bcp47": iso,
             }
 
-    by_iso, stats = merge_and_romanize(records, family_map)
+    by_lang, stats = merge_and_romanize(records, family_map)
+    covered_isos = {e["iso6393"] for e in by_lang.values()}
 
     # Wikipedia fill toward 1000
     wiki_added = 0
     wiki_failed = 0
-    if wiki_fill and len(by_iso) < MIN_POOL_LANGUAGES:
+    if wiki_fill and len(by_lang) < MIN_POOL_LANGUAGES:
         editions = json.loads((raw / "wiki" / "wikipedia_editions.json").read_text())
         wiki_dir = raw / "wiki" / "extracts"
         wiki_dir.mkdir(parents=True, exist_ok=True)
         for ed in editions:
-            if len(by_iso) >= MIN_POOL_LANGUAGES:
+            if len(by_lang) >= MIN_POOL_LANGUAGES:
                 break
             code = (ed.get("code") or "").lower()
             iso = _iso1_to3.get(code, code if len(code) == 3 else "")
-            if not iso or iso in by_iso:
+            if not iso or iso in covered_isos:
                 continue
             dest = wiki_dir / f"{code}.txt"
             if dest.exists() and dest.stat().st_size > 500:
@@ -884,7 +913,9 @@ def acquire_phase(root: Path, wiki_fill: bool = True) -> dict:
                 wiki_failed += 1
                 continue
             meta = family_map.get(iso, {"family": "unknown", "name": iso, "isolate": False})
-            by_iso[iso] = {
+            lang_id = f"{iso}__wiki"
+            by_lang[lang_id] = {
+                "lang_id": lang_id,
                 "iso6393": iso,
                 "name": ed.get("name") or iso,
                 "family": meta.get("family") or "unknown",
@@ -899,42 +930,52 @@ def acquire_phase(root: Path, wiki_fill: bool = True) -> dict:
                 "text": rom,
                 "source_key": f"wiki_{code}",
             }
+            covered_isos.add(iso)
             wiki_added += 1
 
-    splits = assign_splits(by_iso)
+    splits = assign_splits(by_lang)
     train_subset = stratified_train_subset(splits["train_pool"], n=MIN_TRAIN_SUBSET, seed=DATA_SEED)
 
     # Persist romanized texts (gitignored under data/raw)
     clean_root = raw / "romanized"
     clean_root.mkdir(parents=True, exist_ok=True)
     lang_manifest = {}
-    for iso, e in by_iso.items():
-        p = clean_root / f"{iso}.txt"
+    for lang_id, e in by_lang.items():
+        safe = lang_id.replace("/", "_")
+        p = clean_root / f"{safe}.txt"
         p.write_text(e["text"], encoding="utf-8")
-        lang_manifest[iso] = {
+        lang_manifest[lang_id] = {
             **{k: v for k, v in e.items() if k != "text"},
             "romanized_sha256": digest(p),
             "role": (
                 "holdout"
-                if iso in splits["holdout"]
+                if lang_id in splits["holdout"]
                 else "historical"
-                if iso in splits["historical"]
+                if lang_id in splits["historical"]
                 else "train_pool"
             ),
         }
 
     stop_reason = None
-    if len(by_iso) < MIN_POOL_LANGUAGES:
+    if len(by_lang) < MIN_POOL_LANGUAGES:
         stop_reason = (
-            f"Legal open sources yielded {len(by_iso)} romanized languages after UDHR+FLORES+"
+            f"Legal open sources yielded {len(by_lang)} romanized language varieties "
+            f"({stats.get('n_unique_iso_romanized')} distinct ISO 639-3) after UDHR+FLORES+"
             f"Tatoeba+Wikipedia fill (wiki_added={wiki_added}, wiki_failed={wiki_failed}); "
-            f"stopped below {MIN_POOL_LANGUAGES} rather than inventing text."
+            f"stopped below {MIN_POOL_LANGUAGES} rather than inventing text. "
+            f"UDHR dialect/script variants counted as distinct varieties; CJK without "
+            f"romanizer skipped."
         )
 
     manifest = {
         "experiment": "EXP-0016",
-        "romanization": {**ROMANIZATION_DOC, "auto": "detect script → table or latin fold; CJK skipped"},
-        "n_languages_pool": len(by_iso),
+        "romanization": {
+            **ROMANIZATION_DOC,
+            "auto": "detect script → table / Unidecode / latin fold; CJK skipped",
+            "variety_ids": "iso__udhr_<f> | iso__flores_<script> | iso__tatoeba | iso__wiki",
+        },
+        "n_languages_pool": len(by_lang),
+        "n_unique_iso": stats.get("n_unique_iso_romanized"),
         "n_holdout": len(splits["holdout"]),
         "n_train_pool": len(splits["train_pool"]),
         "n_historical": len(splits["historical"]),
@@ -946,7 +987,7 @@ def acquire_phase(root: Path, wiki_fill: bool = True) -> dict:
             f"stratified round-robin across all non-held-out families; "
             f"seed={DATA_SEED}; target≥{MIN_TRAIN_SUBSET}; score full holdout set"
         ),
-        "family_counts_pool": dict(Counter(e["family"] for e in by_iso.values())),
+        "family_counts_pool": dict(Counter(e["family"] for e in by_lang.values())),
         "family_counts_holdout": dict(Counter(e["family"] for e in splits["holdout"].values())),
         "family_counts_train_pool": dict(Counter(e["family"] for e in splits["train_pool"].values())),
         "acquisition_stats": {
@@ -968,21 +1009,21 @@ def acquire_phase(root: Path, wiki_fill: bool = True) -> dict:
         "note": "Bulk text gitignored; this is provenance only. Not a decipherment.",
     }
     write_json(root / "data" / "manifests" / "exp0016_corpora.json", manifest)
-    # Compact split file without per-lang blob for quick load
     write_json(
         root / "data" / "manifests" / "exp0016_splits.json",
         {
-            "holdout_isos": sorted(splits["holdout"]),
-            "train_pool_isos": sorted(splits["train_pool"]),
-            "train_subset_isos": train_subset,
-            "historical_isos": sorted(splits["historical"]),
+            "holdout_lang_ids": sorted(splits["holdout"]),
+            "train_pool_lang_ids": sorted(splits["train_pool"]),
+            "train_subset_lang_ids": train_subset,
+            "historical_lang_ids": sorted(splits["historical"]),
             "holdout_families": splits["holdout_families"],
-            "n_pool": len(by_iso),
+            "n_pool": len(by_lang),
+            "n_unique_iso": stats.get("n_unique_iso_romanized"),
             "stop_reason": stop_reason,
         },
     )
     return {
-        "by_iso": by_iso,
+        "by_lang": by_lang,
         "splits": splits,
         "train_subset": train_subset,
         "manifest": manifest,
@@ -996,13 +1037,14 @@ def run_experiment(args: argparse.Namespace) -> dict:
         parse_filler_families(args.filler_families) if args.filler_families else EASY_FILLER_FAMILIES
     )
     acq = acquire_phase(root, wiki_fill=not args.no_wiki_fill)
-    by_iso = acq["by_iso"]
+    by_lang = acq["by_lang"]
     splits = acq["splits"]
     train_subset = acq["train_subset"]
 
     if args.acquire_only:
         return {
-            "n_pool": len(by_iso),
+            "n_pool": len(by_lang),
+            "n_unique_iso": acq["manifest"].get("n_unique_iso"),
             "n_holdout": len(splits["holdout"]),
             "n_train_pool": len(splits["train_pool"]),
             "n_train_subset": len(train_subset),
@@ -1011,19 +1053,19 @@ def run_experiment(args: argparse.Namespace) -> dict:
                 Counter(e["family"] for e in splits["holdout"].values())
             ),
             "stop_reason": acq.get("stop_reason"),
-            "meets_min_pool": len(by_iso) >= MIN_POOL_LANGUAGES,
+            "meets_min_pool": len(by_lang) >= MIN_POOL_LANGUAGES,
             "meets_min_holdout": len(splits["holdout"]) >= MIN_HOLDOUT_LANGUAGES,
         }
 
     if len(splits["holdout"]) < MIN_HOLDOUT_LANGUAGES:
         raise RuntimeError(
             f"Need ≥{MIN_HOLDOUT_LANGUAGES} holdout languages; got {len(splits['holdout'])}. "
-            f"Pool={len(by_iso)}. {acq.get('stop_reason')}"
+            f"Pool={len(by_lang)}. {acq.get('stop_reason')}"
         )
     if len({e['family'] for e in splits['holdout'].values()}) < MIN_HOLDOUT_FAMILIES:
         raise RuntimeError("Fewer than 8 holdout families present in acquired data")
 
-    texts = {iso: e["text"] for iso, e in by_iso.items()}
+    texts = {lid: e["text"] for lid, e in by_lang.items()}
     train_langs = list(train_subset)
     train, val = generate_train_val(
         texts, train_langs, n_train=args.n_train, n_val=args.n_val, seed=DATA_SEED,
@@ -1175,7 +1217,7 @@ def run_experiment(args: argparse.Namespace) -> dict:
         neural = evaluate_masks(rows, masks, rank_model)
         random_b = matched_random_baseline(rows, rank_model)
         historical_scores[iso] = {
-            "family": by_iso[iso]["family"],
+            "family": by_lang[iso]["family"],
             "neural": neural,
             "matched_random": random_b,
             "note": "Score-only historical transfer; not used in pass decision",
@@ -1188,7 +1230,7 @@ def run_experiment(args: argparse.Namespace) -> dict:
         "param_count": train_summary["param_count"],
         "param_count_estimate_before_train": est,
         "train_summary": {k: v for k, v in train_summary.items() if k != "history"},
-        "n_pool": len(by_iso),
+        "n_pool": len(by_lang),
         "n_train_subset": len(train_langs),
         "n_holdout": len(per_lang),
         "stop_reason": acq.get("stop_reason"),

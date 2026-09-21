@@ -392,3 +392,12 @@ Resource use (if applicable):
 - **Response:** (1) Unidecode for non-CJK other scripts; (2) hold **all** isolates + expand holdout families with Mayan/Otomanguean/Aymaran; (3) Wikipedia random-page extracts for missing editions toward 1,000. Exact stop reason recorded if still short — no invented text.
 - **Code:** `src/voynich/mass_lang_recovery.py`, tests; dependency `Unidecode`. Decoder/pass rule unchanged from EXP-0016 prereg (`b61369c`).
 - **Status:** Acquisition/wiki-fill running; scored training not started. EXP-0015 side results retained, not the session bar. Not a decipherment.
+
+## 2026-09-21 — EXP-0016 pool frozen at 1,063 varieties [NB-0030]
+
+- **Pool:** **1,063** romanized language varieties (**619** distinct ISO 639-3) from UDHR dialect/script variants + FLORES-200 + Tatoeba + EXP-0015 salvage. CJK without romanizer skipped (31). Unidecode used for other non-Latin scripts. **≥1,000 variety bar met**; inventing text avoided.
+- **Holdout:** **270** varieties across **12** families (Austronesian 100, Afro-Asiatic 66, Uralic 34, Quechuan 14, Dravidian 14, Mayan 12, Otomanguean 8, isolate 6, Tupian 5, Kartvelian 5, Basque 4, Aymaran 2). Entire families unseen in training. Finnish/Hungarian in Uralic holdout.
+- **Train subset (frozen):** **400** stratified languages from all non-held-out families (seed 4016). Full holdout still scored.
+- **Decoder / pass rule:** unchanged from EXP-0016 prereg. Data digests written (`exp0016_data.json`); **scores not yet computed**.
+- **Command (planned):** `.venv/bin/python -m voynich.mass_lang_recovery --root . --device mps --n-train 12000 --n-val 800 --n-holdout 40 --updates 4000 --filler-families random_char,periodic --no-wiki-fill`
+- **Not a decipherment.**
