@@ -6,6 +6,8 @@ A long-term research project aimed at deciphering the Voynich Manuscript by reve
 
 ## Start here
 
+- [Current status and agent handoff](docs/CURRENT_STATUS.md): active work, live monitoring paths and continuation instructions.
+- [Three-track campaign](docs/experiments/CAMPAIGN-0001.md): registered blind recovery, causal mapping and longer-context experiments running under finite local resource limits.
 - [Progress in plain English](docs/PROGRESS_EXPLAINED.md): what the models actually do, the terminology, which results concern artificial data, and proposed useful larger experiments.
 - [AGENTS.md](AGENTS.md): instructions for agents working in this repository.
 - [Project memory](MEMORY.md): compact continuity record and current constraints.
@@ -51,4 +53,4 @@ The pipeline needs no paid APIs or pretrained weights. Training evaluates valida
 - [EXP-0007: group forms versus ordering](docs/experiments/EXP-0007-results.md): the matched character-versus-group contrast is only **+0.005090 bits/unit**; all three descriptive leaf-bootstrap intervals include zero. Boundary/recency effects remain an untested explanation.
 - [Latest visual overview](results/research-round-2-2026-09-20/overview.png), [first-round overview](results/research-round-2026-09-20/overview.png), [research notebook](NOTEBOOK.md), and [initial 200-update pilot](docs/experiments/EXP-0001-results.md).
 
-Synthetic probes and intervention fitting use known-generator supervision after text-only language-model training; this is not unsupervised decipherment. Manuscript hypotheses remain unresolved and its final test set remains unscored. Current implementation checks: **249 tests and 23 subtests passed**; live MPS intervention and cached-forward controls also passed. All research runs used local compute, with no paid API calls.
+Earlier synthetic probes and intervention fitting use known-generator supervision after text-only language-model training; this is not unsupervised decipherment. EXP-0008 separately registers blind fitting before truth diagnostics. Manuscript hypotheses remain unresolved and its final test set remains unscored. Current implementation checks: **295 tests and 23 subtests passed**; live MPS intervention and cached-forward controls also passed. All research runs used local compute, with no paid API calls.

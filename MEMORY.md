@@ -1,6 +1,6 @@
 # Project memory
 
-Last updated: 2026-09-20 (America/Los_Angeles).
+Last updated: 2026-09-21.
 
 ## Current state
 
@@ -12,7 +12,7 @@ Last updated: 2026-09-20 (America/Los_Angeles).
 - Setup checkpoint `e07c276` was successfully pushed to `origin/main`; see notebook entry NB-0002 for validation and environment limitations.
 - Targeted prior-work and architecture reviews are complete, with primary-source links and limitations. This is not an exhaustive literature survey or a replication of prior results.
 - Official ZL3b transcription acquired and prepared: 226 modeling pages, frozen section-aware physical-group split with 177/24/25 pages, train-only 112-entry vocabulary. Raw/derived text stays Git-ignored; provenance/manifests tracked. See DATA.md.
-- Dense reference and controlled variants implemented with native causal hooks, training/resume, baselines and explicit test-evaluation gating. Current validation: 249 tests passed plus 23 subtests; lint and documentation checks passed; live MPS identity/restoration and cached-forward controls passed.
+- Dense reference and controlled variants implemented with native causal hooks, training/resume, baselines and explicit test-evaluation gating. Current validation: 295 tests passed plus 23 subtests; lint and whitespace checks passed; earlier live MPS identity/restoration and cached-forward controls passed.
 - EXP-0001 completed on clean source revision `4fc9019`: 1,814,208-parameter reference trained 200 CPU steps, validation 1.960671 bits/token vs five-gram 2.087802 on identical targets. Single seed, no architecture ranking or decipherment claim. Test split unscored. Results and local-checkpoint digests tracked in `results/EXP-0001/`; checkpoints themselves stay in ignored `outputs/`.
 
 ## Durable intent and preferences
@@ -70,3 +70,8 @@ User requests further theories/experiments and authorizes local RAM/GPU. No paid
 - New synthetic evaluation pools are now exposed; adaptive successors need fresh pools. Manuscript final test remains unscored. No Voynich filler assignments, coding rules or translation established.
 - Next unexecuted candidates: independently isolate line-boundary/recency effects, discover predictive states without labels, compare stateful/homophonic/null/copy-mutate generators with family/key holdouts, and test earlier interventions against multiple future decisions. See `docs/research/BACKLOG.md`; hypotheses are not findings or scheduled background work.
 - Explanation/compute planning, 2026-09-21 UTC: live read-only hardware check confirms Apple M5 Pro, 18 CPU cores, 20 GPU cores, 64 GB memory, MPS available and Metal recommended working set 51.8400 GiB (not free memory). User wants useful experiments that exercise the machine. Recommended first larger direction is blind synthetic mechanism recovery, preceded by a scaling benchmark and bounded by a proposed 8-hour campaign. This is a proposed time budget, not a runtime estimate or launched job. Detailed guide: `docs/PROGRESS_EXPLAINED.md`.
+
+
+## Active parallel campaign
+
+User now explicitly authorizes all three proposed tracks in parallel with delegated agents. CAMPAIGN-0001 coordinates EXP-0008 blind synthetic recovery, EXP-0009 broader causal mapping, and EXP-0010 longer context/layout. All code/registrations passed final checks; root is publishing this setup before immediate central launch. Consult `outputs/CAMPAIGN-0001/status.json` for actual execution state: this tracked note remains frozen during the campaign. Root owns shared notes/Git/resource supervisor; agents own separate experiment files. Per-worker MPS allocator fraction0.23 and CPUthreads2; three concurrent jobs,8h overall ceiling,3h/2h/3h internal caps plus60s supervisor cleanup grace. No paid API or manuscript final-test scoring. Report synthetic and Voynich findings separately in plain English. See `docs/CURRENT_STATUS.md`, `docs/experiments/CAMPAIGN-0001.md` and NB-0018/0019.

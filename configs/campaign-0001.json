@@ -1,0 +1,22 @@
+{
+  "campaign": "CAMPAIGN-0001",
+  "max_seconds": 28800,
+  "rss_ceiling_gib": 48,
+  "jobs": [
+    {
+      "name": "blind-recovery",
+      "max_seconds": 10860,
+      "command": [".venv/bin/python", "-m", "voynich.blind_recovery", "run", "--config", "configs/exp0008_blind.json", "--data-root", "data/processed/exp0008-blind", "--output-root", "outputs/EXP-0008", "--device", "mps"]
+    },
+    {
+      "name": "causal-mapping",
+      "max_seconds": 7260,
+      "command": [".venv/bin/python", "-m", "voynich.causal_mapping", "--output-root", "outputs/EXP-0009", "--device", "mps", "--max-seconds", "7200"]
+    },
+    {
+      "name": "long-context",
+      "max_seconds": 10860,
+      "command": [".venv/bin/python", "scripts/run_long_context.py", "run", "--config", "configs/exp0010.json", "--output-root", "outputs/EXP-0010/campaign", "--data", "data/processed/zl3b", "--device", "mps"]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "data_seed": 8201,
+  "extraction_seed": 8202,
+  "diagnostic_seed": 8203,
+  "context": 256,
+  "analysis_context": 128,
+  "train_per_key": 1024,
+  "lm_validation_per_key": 16,
+  "fit_contexts": 1024,
+  "validation_contexts": 512,
+  "test_contexts": 1024,
+  "sizes": ["compact", "large"],
+  "seeds": [42, 43],
+  "updates": 4000,
+  "eval_every": 500,
+  "batch_size": 32,
+  "analysis_batch": 32,
+  "learning_rate": 0.0003,
+  "max_seconds": 10800
+}

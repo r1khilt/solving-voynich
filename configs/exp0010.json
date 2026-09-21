@@ -1,0 +1,16 @@
+{
+  "experiment": "EXP-0010",
+  "seeds": [10111, 10112, 10113],
+  "steps": 1200,
+  "eval_interval": 200,
+  "warmup_steps": 100,
+  "learning_rate": 0.0006,
+  "source_block_width": 2048,
+  "global_source_blocks": 4,
+  "microbatch_tokens": 2048,
+  "primary_targets_per_page": 16,
+  "long_targets_per_page": 32,
+  "max_wall_seconds": 10800,
+  "max_process_rss_gib": 12,
+  "threads": 2
+}
