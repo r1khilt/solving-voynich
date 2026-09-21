@@ -340,3 +340,15 @@ Resource use (if applicable):
 - **Interpretation:** Closing the delete-nothing metric trap works; localization of nulls still insufficient for `C(L)` reconstruction above matched random. Not a decipherment. Voynich not run.
 - **Next (highest EV):** train an explicit subsequence / alignment objective so kept tokens match `C(L)` (e.g. stronger recon head + CTC/alignment loss or CRF deletion), still under EXP-0012-style null gates. Falsifier: must beat matched-random recon on this easy Finnish holdout; if that passes, reintroduce `copy_mutate` alone—if recon collapses, escalate copy-aware detection rather than rate calibration.
 
+
+## 2026-09-21 — EXP-0013 preregistered (CTC deletion alignment) [NB-0026]
+
+- **Status at write:** Preregistration **before** Finnish holdout scores. Registration: `docs/experiments/EXP-0013.md`; contingent falsifier `docs/experiments/EXP-0013b.md`.
+- **Confirmed prior failures:** EXP-0011a neural recon 0.096 vs matched-random ~0.20; EXP-0012 neural null_recall 0.584 / null_precision 0.542 / pred_null_rate 0.309 but recon 0.151 < matched-random 0.204 (bits_gain −0.308). Localization bug, not class balance.
+- **`recon_acc` (unchanged primary):** kept subsequence vs `C(L)` = prefix match fraction × min/max length ratio. Not exact full-string equality. Kept for comparability; secondary `recon_edit_sim` = 1 − Levenshtein/max_len.
+- **Question:** If training forces the kept subsequence to align to `C(L)` via copy-constrained CTC deletion, does free-running localization beat matched-random deletion on easy Finnish holdout (`random_char`+`periodic`, rate 0.30)?
+- **Pass rule (frozen):** null_recall≥0.50; null_precision≥0.50; pred_null_rate∈[0.15,0.45]; recon_acc **>** matched_random recon; vocab signal-f1≤0.55. EXP-0011/0012 thresholds untouched. Teacher-forced gold-mask recon is secondary sanity only.
+- **Command (planned):** `.venv/bin/python -m voynich.latent_recovery --root . --device mps --experiment-id EXP-0013 --filler-families random_char,periodic --n-train 4000 --n-val 400 --n-holdout 300 --updates 3000 --no-voynich` (Voynich only if PASS).
+- **If PASS:** run EXP-0013b (`random_char,periodic,copy_mutate`) under the same rule before starting another architecture. **If FAIL:** diagnose from examples; stop (no third architecture this session).
+- **Next:** commit this preregistration + implementation, then score once.
+

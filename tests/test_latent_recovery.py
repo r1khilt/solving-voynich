@@ -158,6 +158,65 @@ def test_f1_perfect():
     assert f1_binary(y, y) == 1.0
 
 
+def test_recon_acc_definition_prefix_length_pen():
+    from voynich.latent_recovery import recon_accuracy
+
+    # Exact match
+    assert recon_accuracy("abc", "axbxc", np.array([1, 0, 1, 0, 1])) == 1.0
+    # Length mismatch penalizes
+    score = recon_accuracy("abcd", "axbxc", np.array([1, 0, 1, 0, 1]))
+    assert 0.0 < score < 1.0
+
+
+def test_ctc_deletion_loss_runs():
+    import torch
+    from voynich.latent_recovery import build_vocab, ctc_deletion_loss, encode
+
+    vocab = build_vocab()
+    text = "αβγδε"
+    x = torch.tensor([encode(text, vocab)], dtype=torch.long)
+    # Prefer keeping all positions
+    mask_logit = torch.full((1, len(text)), 3.0, requires_grad=True)
+    target = encode(text, vocab)
+    loss = ctc_deletion_loss(mask_logit, x, [target], len(vocab))
+    assert torch.isfinite(loss)
+    loss.backward()
+    assert mask_logit.grad is not None
+
+
+def test_pass_rule_v13_requires_recon_above_random():
+    from voynich.latent_recovery import apply_pass_rule_v13
+
+    neural = {
+        "mask_f1": 0.7,
+        "mask_acc": 0.75,
+        "recon_acc": 0.18,
+        "pred_bits_gain": 0.0,
+        "null_recall": 0.55,
+        "null_precision": 0.55,
+        "pred_null_rate": 0.30,
+    }
+    classical = {
+        "mask_f1": 0.6,
+        "mask_acc": 0.6,
+        "recon_acc": 0.10,
+        "pred_bits_gain": 0.0,
+        "null_recall": 0.4,
+        "null_precision": 0.4,
+        "pred_null_rate": 0.30,
+    }
+    majority = {"mask_f1": 0.83, "mask_acc": 0.71}
+    random_b = {"mask_f1": 0.71, "recon_acc": 0.20, "pred_bits_gain": -0.03}
+    vocab_b = {"mask_f1": 0.42}
+    decision = apply_pass_rule_v13(neural, classical, majority, random_b, vocab_b)
+    assert decision["passed"] is False
+    # Same null gates but recon above random → pass
+    neural2 = {**neural, "recon_acc": 0.25}
+    decision2 = apply_pass_rule_v13(neural2, classical, majority, random_b, vocab_b)
+    assert decision2["passed"] is True
+    assert decision2["winner"] == "neural"
+
+
 def test_homophone_cipher_runs():
     rng = np.random.default_rng(5)
     alphabet = "".join(list(CIPHER_POOL)[:40])
