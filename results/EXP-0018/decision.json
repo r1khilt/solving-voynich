@@ -1,0 +1,17 @@
+{
+  "experiment": "EXP-0018",
+  "passed": false,
+  "selected_rate": 0.7,
+  "confirm": {
+    "mean_gain": -0.15206720803389245,
+    "mean_random_gain": -0.1958138528316116,
+    "fraction_beats_random": 0.45871559633027525
+  },
+  "reasons": [
+    "fraction_beats_random 0.4587 not > 0.50"
+  ],
+  "criteria": {
+    "mean_gain_gt_mean_random_gain": true,
+    "fraction_beats_random_gt_0_50": false
+  }
+}

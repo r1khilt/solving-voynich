@@ -496,6 +496,25 @@ Resource use (if applicable):
 - **Decisions / next state:** R3 registered and scored as FAIL under its own iid gate. Ranked remainder: optional **R3 redesign under a new id** (harder iid falsifier, not weaker held-outs), then **R4** (edge-emitting / joint continuations) and **R5** (language-ID attacks with null controls). EXP-0018 null-rate grid still unexecuted.
 - **Resources:** Local CPU/numpy only; no paid API.
 
+## 2026-09-21 — R4 edge-emitting joint futures EXP-0020 [NB-0037]
+
+- **Phase / question:** Ranked memo R4 / NEXT_DESIGN P2 — does a compact explicit edge-emitting channel predict **joint continuation strings** on fresh keys better than a transformer reference, under frozen probability-validity, update-closure, non-first-symbol-only, and equivalent-generator gates?
+- **Registration:** new id `docs/experiments/EXP-0020.md` written **before** scores. P2 was design-only (no prior experiment id). EXP-0018 is a ZL3b null-rate grid, **not** a P2 prerequisite; left unexecuted.
+- **Frozen gates:** validity (row/distribution sums within 1e-6); update closure \(<10^{-5}\); structured families (`cycle_null`, `delayed_parity`, `copy_lag`) macro \(\Delta_{\mathrm{joint}}\ge 0.05\) and \(\Delta_{\mathrm{joint}}\ge\Delta_1+0.02\); equivalent-generator mean |KL gap| ≤ 0.05 with oracle agreement ≤1e-8.
+- **Actions:** Implemented `voynich.edge_emitting`; unit tests; one scored run. Did **not** retune thresholds. Did not start R5. Did not score ZL3b. No paid API.
+- **Command:** `.venv/bin/python -m voynich.edge_emitting --root . --device mps` (~2165 s; data seed 4020; model seed 42).
+- **Observations:**
+  - Validity **ok**; closure **ok**; equivalent KL gap **0.0** (oracle agree).
+  - Fresh-key Δ_joint: cycle_null **+0.175**, delayed_parity **+0.329**, copy_lag **−0.495**; structured macro **0.0028**.
+  - IID selected K=1; equivalent selected K=2.
+- **Decision:** **FAIL** mode `joint_not_better`. Copy-lag transformer win cancelled HMM-family edge wins. Stop tuning this id.
+- **Interpretation:** Explicit channels can beat this transformer on edge-like generators and still fail the preregistered three-family joint bar. Synthetic miss ≠ decipherment. HYP-003 / HYP-005 unresolved.
+- **Validation:** `.venv/bin/python -m pytest -q tests/test_edge_emitting.py` (5 passed). Charter not modified.
+- **Artifacts:** `docs/experiments/EXP-0020.md`, `EXP-0020-results.md`; `results/EXP-0020/{results,decision}.json`; `data/manifests/exp0020_data.json`.
+- **Decisions / next state:** R4 registered and scored FAIL. Ranked remainder: **R5** (language-ID attacks with null controls). EXP-0018 still unexecuted. Unrelated dirty tree files left unstaged.
+- **Resources:** Local MPS; ~36 min; no paid API.
+
+
 
 ## 2026-09-21 — Integrated communication-system implementation [NB-WMD-IMPL-01]
 
@@ -508,3 +527,16 @@ Resource use (if applicable):
 - **Validation so far:** `.venv/bin/python -m pytest -q` returned **667 passed, 1 skipped, 23 subtests passed** in 6.72s. The skip is the accelerator-only denoiser test in the sandbox. One warning came from unrelated `tests/test_edge_emitting.py` converting a gradient-bearing tensor to a scalar. The accelerator-only test also passed outside the sandbox (1 passed, 63 deselected, 2.61s). Targeted lint and Git whitespace checks passed. CLI evidence/grounding/extraction fixture outputs matched analytic information gain0.3680642072/0 nats, two ambiguous graph alignments, and one known/one unknown transition. Fixtures are explicitly invented, not scientific observations.
 - **Registration / resources:** WMD-0001 written before scored training. Joint: 4,944,924 parameters, width256/layers6/heads8, seed41021, batch16, maximum2,000updates or1,200seconds. Action: entities4/width64/layers2, seed41022, maximum1,000updates or180seconds. Free-running development evaluation frozen to64 examples × zero/two oracle-anchor conditions;4 denoising proposals,12 steps,20,000 compiler expansions/beam32; trained/untrained get identical search budgets. No final synthetic or manuscript holdout scoring. No paid research API/cloud job.
 - **Next state:** Commit the implementation, registration and documentation checkpoint before the bounded training runs; then report measured outcomes, controls and remaining failures. Bulk generated worlds/checkpoints stay in ignored outputs. No decipherment claimed.
+
+## 2026-09-21 — EXP-0018 scored; confirm FAIL [NB-0034b]
+
+- **Question:** Frozen EXP-0016 exact-count, preregistered null-rate grid on ZL3b validation with select/confirm halves (seed 4018). Does any candidate rate beat matched-random on confirm?
+- **Prereg SHA:** `8051d71` (docs + split ids committed before scores). Checkpoint sha256 `434d84f80f405f375dee5a2108da667b22e4f622dd3688e2111e89975856a359`; not retrained. Segmentation unchanged (transcribed characters, PUA stripped, SEQ_LEN=128).
+- **Command:** `.venv/bin/python -m voynich.null_rate_grid --root . --device auto`
+- **Select (99 windows, labeled selection only):** neural Δ vs matched-random negative at all rates except **0.70** (Δ +0.0041, frac 0.475). Rate 0 reference Δ 0. Selected **r=0.70**.
+- **Confirm (109 windows, counts):** neural mean_gain −0.1521 > mean_random −0.1958, but fraction_beats_random **0.4587 ≯ 0.50**. **FAIL.**
+- **Interpretation:** Fixed-rate exact-count transfer from the thousand-language deletion model is **rejected** on this validation split. Mean-gain edge at 70% deletion is not a majority-of-windows structure win and is not a null-component proof. Synthetic EXP-0016 knew the true deletion count; this manuscript run does not. **Not a decipherment.** Test split untouched.
+- **Not a one-line bug:** checkpoint digest matched; units match EXP-0016 Voynich gate. Failure stands.
+- **Next change (design only; not implemented):** **EXP-0021** (next free after EXP-0020) — rate-free generative keep/delete: per-window implied n_null from model posteriors without a global r, or joint generation of the observed stream. **Falsifier:** same confirm-style split; bits-gain at the *implied* deletion count must beat matched random **and** fraction_beats_random > 0.50; if implied rates collapse to a single high global r, treat as the rejected EXP-0018 family.
+- **Resources:** Local inference seconds; no paid API; no retrain.
+- **Git:** results + scorer + notebook/memory after scores.
