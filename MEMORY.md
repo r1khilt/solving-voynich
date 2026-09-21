@@ -26,6 +26,7 @@ Last updated: 2026-09-20 (America/Los_Angeles).
 - Do not assume spaces delimit plaintext words; consider multiple representational levels.
 - Keep an updated Markdown notebook. Commit and push progress regularly; routine Git checkpoints have standing user authorization.
 - Ask for concrete resources or assistance when needed. Do not repeatedly ask for permission already granted.
+- Explain progress in plain English before reporting technical metrics. The user explicitly says the terminology and progress are hard to understand. Separate real-manuscript findings from synthetic accuracies; define vocabulary/tokens, baselines and bits when relevant. See `docs/PROGRESS_EXPLAINED.md`.
 
 ## Resources reported by the user
 
@@ -68,3 +69,4 @@ User requests further theories/experiments and authorizes local RAM/GPU. No paid
 - **EXP-0007**, clean `389a12c`: same 768 manuscript validation targets; matched character-minus-group loss difference only 0.005090 bits, all three descriptive leaf-bootstrap intervals include zero. Both matched conditions preserve separators/local suffix and change 43.14% of remote positions. Block-scale effects are not monotonic. Results: `docs/experiments/EXP-0007-results.md`.
 - New synthetic evaluation pools are now exposed; adaptive successors need fresh pools. Manuscript final test remains unscored. No Voynich filler assignments, coding rules or translation established.
 - Next unexecuted candidates: independently isolate line-boundary/recency effects, discover predictive states without labels, compare stateful/homophonic/null/copy-mutate generators with family/key holdouts, and test earlier interventions against multiple future decisions. See `docs/research/BACKLOG.md`; hypotheses are not findings or scheduled background work.
+- Explanation/compute planning, 2026-09-21 UTC: live read-only hardware check confirms Apple M5 Pro, 18 CPU cores, 20 GPU cores, 64 GB memory, MPS available and Metal recommended working set 51.8400 GiB (not free memory). User wants useful experiments that exercise the machine. Recommended first larger direction is blind synthetic mechanism recovery, preceded by a scaling benchmark and bounded by a proposed 8-hour campaign. This is a proposed time budget, not a runtime estimate or launched job. Detailed guide: `docs/PROGRESS_EXPLAINED.md`.

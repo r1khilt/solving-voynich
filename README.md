@@ -6,6 +6,7 @@ A long-term research project aimed at deciphering the Voynich Manuscript by reve
 
 ## Start here
 
+- [Progress in plain English](docs/PROGRESS_EXPLAINED.md): what the models actually do, the terminology, which results concern artificial data, and proposed useful larger experiments.
 - [AGENTS.md](AGENTS.md): instructions for agents working in this repository.
 - [Project memory](MEMORY.md): compact continuity record and current constraints.
 - [Research notebook](NOTEBOOK.md): chronological record of work, decisions, validation, and unresolved issues. Update this whenever substantive work happens.
