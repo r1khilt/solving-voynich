@@ -39,3 +39,7 @@ uv sync --extra dev --locked
 ```
 
 The pipeline needs no paid APIs or pretrained weights. Training evaluates validation pages; final test scoring requires a separate explicit command. Raw text, derived corpora, and checkpoints stay local and are reproducible from tracked code/manifests. Architecture configs are candidates, not a completed ranking or evidence of decipherment.
+
+## Initial measured result
+
+[EXP-0001](docs/experiments/EXP-0001-results.md) completed: the 1,814,208-parameter reference reached **1.961 validation bits/token** after 200 CPU steps, versus **2.088** for a matched five-gram baseline. This is a single-seed engineering pilot; the test split remains unscored. All 222 implementation tests and 23 subtests passed before the run. Multi-seed architecture comparisons and actual mechanism recovery remain future experiments.

@@ -12,7 +12,8 @@ Last updated: 2026-09-20 (America/Los_Angeles).
 - Setup checkpoint `e07c276` was successfully pushed to `origin/main`; see notebook entry NB-0002 for validation and environment limitations.
 - Targeted prior-work and architecture reviews are complete, with primary-source links and limitations. This is not an exhaustive literature survey or a replication of prior results.
 - Official ZL3b transcription acquired and prepared: 226 modeling pages, frozen section-aware physical-group split with 177/24/25 pages, train-only 112-entry vocabulary. Raw/derived text stays Git-ignored; provenance/manifests tracked. See DATA.md.
-- Dense reference and controlled variants implemented with native causal hooks, training/resume, baselines and explicit test-evaluation gating. Pre-pilot validation: 222 tests passed plus 23 subtests, lint and documentation checks passed. EXP-0001 real-data pilot is registered and pending; no decipherment claim.
+- Dense reference and controlled variants implemented with native causal hooks, training/resume, baselines and explicit test-evaluation gating. Pre-pilot validation: 222 tests passed plus 23 subtests, lint and documentation checks passed.
+- EXP-0001 completed on clean source revision `4fc9019`: 1,814,208-parameter reference trained 200 CPU steps, validation 1.960671 bits/token vs five-gram 2.087802 on identical targets. Single seed, no architecture ranking or decipherment claim. Test split unscored. Results and local-checkpoint digests tracked in `results/EXP-0001/`; checkpoints themselves stay in ignored `outputs/`.
 
 ## Durable intent and preferences
 
@@ -33,7 +34,7 @@ Reported on 2026-09-20; not verified account balances:
 - Approximately $1,000 in GPT-6 Astra credits available.
 - Approximately $20,000 in GPT-6 API credits expected in about one week (roughly 2026-09-27); availability must be checked before reliance.
 - User is willing to help with downloads and additional resources.
-- No API credentials, compute inventory, spending schedule, or per-experiment budget has been established.
+- No API credentials or paid-run spending schedule established; local compute and EXP-0001 limits are recorded below.
 
 Local implementation inventory: arm64 Mac, 64 GiB memory, 18 logical CPUs; sandboxed PyTorch reports no available accelerator. Python 3.12.13 / PyTorch 2.14.0 / NumPy 2.5.3 installed in ignored `.venv`, dependency resolution tracked in `uv.lock`. No paid research API used. EXP-0001 bounds the initial local CPU pilots.
 
@@ -52,4 +53,4 @@ The user's reference to an AI model solving Navier–Stokes is motivation, not v
 
 ## Next state
 
-Carry out the authorized research, data acquisition, architecture and pipeline implementation. Review both Voynich-specific precedents and the underlying methods before attempts. Favor measured prediction quality and causal inspectability over untested architectural complexity. See NB-0006 for the phase transition; resource-intensive training remains subject to explicit bounded estimates.
+The requested targeted review, data acquisition, architecture and runnable pipeline are complete, with bounded EXP-0001 validation. Next research candidates: a separately registered multi-seed ablation comparison, synthetic known-generator calibration, and prespecified causal behaviors. Continue to review both Voynich-specific precedents and the underlying methods before attempts. No full sweep or semantic/cipher-recovery experiment has run.

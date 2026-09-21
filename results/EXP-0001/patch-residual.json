@@ -1,0 +1,50 @@
+{
+  "site": "blocks.3.resid_post",
+  "positions": "all",
+  "head": null,
+  "metric": "log probability of specified next token (natural log)",
+  "clean": -6.927624702453613,
+  "corrupted": -4.867769718170166,
+  "clean_corrupted_gap": -2.0598549842834473,
+  "patched": -6.927624702453613,
+  "absolute_patch_effect": -2.0598549842834473,
+  "normalized_recovery": 1.0,
+  "normalized_recovery_warning": "Undefined below |gap|=1e-4; unstable near zero and may exceed [0,1]",
+  "identity_patch": -4.867769718170166,
+  "identity_max_logit_difference": 0.0,
+  "shuffled_donor_patch": -5.275091648101807,
+  "reverse_patch": -4.867769718170166,
+  "shuffled_donor_ids": [
+    [
+      2,
+      16,
+      22,
+      28,
+      15,
+      35,
+      26,
+      16,
+      16,
+      22,
+      35,
+      16,
+      15,
+      26,
+      4,
+      28
+    ]
+  ],
+  "seed": 42,
+  "interpretation": "Single-pair diagnostic; no circuit discovery, semantic claim, or historical inference",
+  "checkpoint": "outputs/EXP-0001-reference/best.pt",
+  "checkpoint_sha256": "ba58eac2b2f9da8cfdac094c4ef92b724cf8d09242f8483af3e6fe6167489699",
+  "clean_text": "qokeedy qokeedy",
+  "corrupted_text": "qokedy qokeedyq",
+  "target": "y",
+  "corpus_identity": {
+    "train.jsonl": "49618c7be69cef573fe9ad8ae3627ad9f7b495601af1897aafb6082837fceca4",
+    "validation.jsonl": "9bee4149f26fc49b49e4a826b73598dfb79a1e785731c15a1763489315a2efd3",
+    "test.jsonl": "7972ce73d178674cda28a2dbe019aaf3dafa641936987e35c4072cbb3e4acee0",
+    "tokenizer.json": "ade614f664299920424c788f91ff3dea1ca5b7c0491d3952585a37f6b6a7d030"
+  }
+}

@@ -1,0 +1,340 @@
+[
+  {
+    "step": 0,
+    "validation": {
+      "nll_nats": 4.803513871449152,
+      "bits_per_token": 6.930005641181037,
+      "accuracy": 0.00976193232241386,
+      "scored_tokens": 25917,
+      "metric_units": "EVA transcription units including definite spaces, newlines and EOS; uncertainty/UNK excluded",
+      "context_policy": "non-overlapping page windows; reset context per window; every next-token target scored once",
+      "pages": {
+        "f11r": {
+          "bits_per_token": 6.925302088451563,
+          "scored_tokens": 304
+        },
+        "f11v": {
+          "bits_per_token": 6.862384697630386,
+          "scored_tokens": 257
+        },
+        "f27r": {
+          "bits_per_token": 6.861017418488033,
+          "scored_tokens": 469
+        },
+        "f27v": {
+          "bits_per_token": 6.801589447744495,
+          "scored_tokens": 338
+        },
+        "f36r": {
+          "bits_per_token": 6.897122004958722,
+          "scored_tokens": 342
+        },
+        "f36v": {
+          "bits_per_token": 6.911617005518146,
+          "scored_tokens": 402
+        },
+        "f37r": {
+          "bits_per_token": 6.911372114931225,
+          "scored_tokens": 446
+        },
+        "f37v": {
+          "bits_per_token": 6.953853448119982,
+          "scored_tokens": 543
+        },
+        "f49r": {
+          "bits_per_token": 6.866603519394342,
+          "scored_tokens": 663
+        },
+        "f49v": {
+          "bits_per_token": 6.829650098162472,
+          "scored_tokens": 936
+        },
+        "f67r1": {
+          "bits_per_token": 6.966021903422833,
+          "scored_tokens": 956
+        },
+        "f67r2": {
+          "bits_per_token": 6.948859508975598,
+          "scored_tokens": 1067
+        },
+        "f67v2": {
+          "bits_per_token": 6.90518984842156,
+          "scored_tokens": 361
+        },
+        "f67v1": {
+          "bits_per_token": 6.9686863269135815,
+          "scored_tokens": 486
+        },
+        "f73r": {
+          "bits_per_token": 7.026077485685345,
+          "scored_tokens": 611
+        },
+        "f73v": {
+          "bits_per_token": 6.960255798187074,
+          "scored_tokens": 596
+        },
+        "f76r": {
+          "bits_per_token": 6.92882821065329,
+          "scored_tokens": 3232
+        },
+        "f76v": {
+          "bits_per_token": 6.957364530392691,
+          "scored_tokens": 2494
+        },
+        "f89r1": {
+          "bits_per_token": 6.9347221247650745,
+          "scored_tokens": 841
+        },
+        "f89r2": {
+          "bits_per_token": 6.943889305495166,
+          "scored_tokens": 1400
+        },
+        "f89v2": {
+          "bits_per_token": 6.953990169621406,
+          "scored_tokens": 1016
+        },
+        "f89v1": {
+          "bits_per_token": 6.915119986388956,
+          "scored_tokens": 928
+        },
+        "f111r": {
+          "bits_per_token": 6.960446866997953,
+          "scored_tokens": 3845
+        },
+        "f111v": {
+          "bits_per_token": 6.896904723999239,
+          "scored_tokens": 3384
+        }
+      }
+    },
+    "elapsed_seconds": 0.0
+  },
+  {
+    "step": 100,
+    "train_batch_loss": 1.5027379989624023,
+    "grad_norm": 1.0368952751159668,
+    "learning_rate": 0.0006,
+    "validation": {
+      "nll_nats": 1.4836348139053464,
+      "bits_per_token": 2.1404325885114632,
+      "accuracy": 0.518308446193618,
+      "scored_tokens": 25917,
+      "metric_units": "EVA transcription units including definite spaces, newlines and EOS; uncertainty/UNK excluded",
+      "context_policy": "non-overlapping page windows; reset context per window; every next-token target scored once",
+      "pages": {
+        "f11r": {
+          "bits_per_token": 2.129525498477784,
+          "scored_tokens": 304
+        },
+        "f11v": {
+          "bits_per_token": 2.3754288706953766,
+          "scored_tokens": 257
+        },
+        "f27r": {
+          "bits_per_token": 2.1567683449956743,
+          "scored_tokens": 469
+        },
+        "f27v": {
+          "bits_per_token": 2.5165819695823806,
+          "scored_tokens": 338
+        },
+        "f36r": {
+          "bits_per_token": 2.4150436086633005,
+          "scored_tokens": 342
+        },
+        "f36v": {
+          "bits_per_token": 2.3154377834074538,
+          "scored_tokens": 402
+        },
+        "f37r": {
+          "bits_per_token": 2.040223048748654,
+          "scored_tokens": 446
+        },
+        "f37v": {
+          "bits_per_token": 2.193968652394271,
+          "scored_tokens": 543
+        },
+        "f49r": {
+          "bits_per_token": 2.1772572703573956,
+          "scored_tokens": 663
+        },
+        "f49v": {
+          "bits_per_token": 2.345753232979909,
+          "scored_tokens": 936
+        },
+        "f67r1": {
+          "bits_per_token": 2.4404222446929373,
+          "scored_tokens": 956
+        },
+        "f67r2": {
+          "bits_per_token": 2.716491268429626,
+          "scored_tokens": 1067
+        },
+        "f67v2": {
+          "bits_per_token": 2.9081890395437715,
+          "scored_tokens": 361
+        },
+        "f67v1": {
+          "bits_per_token": 2.5525316829271127,
+          "scored_tokens": 486
+        },
+        "f73r": {
+          "bits_per_token": 2.3972170514560576,
+          "scored_tokens": 611
+        },
+        "f73v": {
+          "bits_per_token": 2.4660718720237744,
+          "scored_tokens": 596
+        },
+        "f76r": {
+          "bits_per_token": 1.9498458322771723,
+          "scored_tokens": 3232
+        },
+        "f76v": {
+          "bits_per_token": 1.900210788095621,
+          "scored_tokens": 2494
+        },
+        "f89r1": {
+          "bits_per_token": 2.298287508603595,
+          "scored_tokens": 841
+        },
+        "f89r2": {
+          "bits_per_token": 2.133220660093569,
+          "scored_tokens": 1400
+        },
+        "f89v2": {
+          "bits_per_token": 2.358017784827067,
+          "scored_tokens": 1016
+        },
+        "f89v1": {
+          "bits_per_token": 2.211993601681511,
+          "scored_tokens": 928
+        },
+        "f111r": {
+          "bits_per_token": 1.9412883804616277,
+          "scored_tokens": 3845
+        },
+        "f111v": {
+          "bits_per_token": 1.9287554239426312,
+          "scored_tokens": 3384
+        }
+      }
+    },
+    "elapsed_seconds": 7.338002417003736,
+    "scored_training_tokens_this_invocation": 180750
+  },
+  {
+    "step": 200,
+    "train_batch_loss": 1.227027177810669,
+    "grad_norm": 0.7215006947517395,
+    "learning_rate": 5.9999999999999995e-05,
+    "validation": {
+      "nll_nats": 1.3590337402470922,
+      "bits_per_token": 1.9606712374552597,
+      "accuracy": 0.5466296253424393,
+      "scored_tokens": 25917,
+      "metric_units": "EVA transcription units including definite spaces, newlines and EOS; uncertainty/UNK excluded",
+      "context_policy": "non-overlapping page windows; reset context per window; every next-token target scored once",
+      "pages": {
+        "f11r": {
+          "bits_per_token": 1.9147068934198956,
+          "scored_tokens": 304
+        },
+        "f11v": {
+          "bits_per_token": 2.1537316540141873,
+          "scored_tokens": 257
+        },
+        "f27r": {
+          "bits_per_token": 2.0441654700002925,
+          "scored_tokens": 469
+        },
+        "f27v": {
+          "bits_per_token": 2.3827920534917415,
+          "scored_tokens": 338
+        },
+        "f36r": {
+          "bits_per_token": 2.198557077638978,
+          "scored_tokens": 342
+        },
+        "f36v": {
+          "bits_per_token": 2.063305481065007,
+          "scored_tokens": 402
+        },
+        "f37r": {
+          "bits_per_token": 1.812665229985653,
+          "scored_tokens": 446
+        },
+        "f37v": {
+          "bits_per_token": 1.9985951447832195,
+          "scored_tokens": 543
+        },
+        "f49r": {
+          "bits_per_token": 2.056199911974288,
+          "scored_tokens": 663
+        },
+        "f49v": {
+          "bits_per_token": 2.2862700256875224,
+          "scored_tokens": 936
+        },
+        "f67r1": {
+          "bits_per_token": 2.2523366984802684,
+          "scored_tokens": 956
+        },
+        "f67r2": {
+          "bits_per_token": 2.5214802134711682,
+          "scored_tokens": 1067
+        },
+        "f67v2": {
+          "bits_per_token": 2.7069920607060736,
+          "scored_tokens": 361
+        },
+        "f67v1": {
+          "bits_per_token": 2.377373295271641,
+          "scored_tokens": 486
+        },
+        "f73r": {
+          "bits_per_token": 2.1870844670046092,
+          "scored_tokens": 611
+        },
+        "f73v": {
+          "bits_per_token": 2.254921979976164,
+          "scored_tokens": 596
+        },
+        "f76r": {
+          "bits_per_token": 1.7279701902445777,
+          "scored_tokens": 3232
+        },
+        "f76v": {
+          "bits_per_token": 1.6935556139361614,
+          "scored_tokens": 2494
+        },
+        "f89r1": {
+          "bits_per_token": 2.1162445475080562,
+          "scored_tokens": 841
+        },
+        "f89r2": {
+          "bits_per_token": 1.9631363832137239,
+          "scored_tokens": 1400
+        },
+        "f89v2": {
+          "bits_per_token": 2.188635587480174,
+          "scored_tokens": 1016
+        },
+        "f89v1": {
+          "bits_per_token": 2.036495388217617,
+          "scored_tokens": 928
+        },
+        "f111r": {
+          "bits_per_token": 1.7882169629997378,
+          "scored_tokens": 3845
+        },
+        "f111v": {
+          "bits_per_token": 1.75956564773001,
+          "scored_tokens": 3384
+        }
+      }
+    },
+    "elapsed_seconds": 14.432293292018585,
+    "scored_training_tokens_this_invocation": 358387
+  }
+]
