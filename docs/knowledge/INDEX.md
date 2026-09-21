@@ -45,8 +45,12 @@ These are deferred discovery topics, not established findings or an active resea
 - [Implemented architecture](../research/ARCHITECTURE.md): exact design and its tradeoffs.
 - [EXP-0001](../experiments/EXP-0001.md): bounded implementation-validation pilot, registered before training.
 - [EXP-0002 results](../experiments/EXP-0002-results.md): six model families × three seeds; compact model selected by the registered near-tie rule.
-- [EXP-0003 results](../experiments/EXP-0003-results.md): paired context perturbations and head interventions; no stable distant-order effect or semantic interpretation established.
+- [EXP-0003 results](../experiments/EXP-0003-results.md): initial paired context perturbations and head interventions; the inconsistent distant-order hint was revised by EXP-0005.
 - [EXP-0004 registration](../experiments/EXP-0004.md) and [results](../experiments/EXP-0004-results.md): primary-source synthetic/causal-method rationale, positive hidden-state readout calibration, IID control, and negative causal steering result.
+- [EXP-0005 registration](../experiments/EXP-0005.md) and [results](../experiments/EXP-0005-results.md): prior page-heterogeneity/cache work, matched distant donors, approximate symbol-frequency controls and revised order sensitivity.
+- [EXP-0006 registration](../experiments/EXP-0006.md) and [results](../experiments/EXP-0006-results.md): primary causal-alignment paper, subspace-steering critique and reply; supervised synthetic late steering passes, output-weight control matches it, early shuffled-supervision control fails.
+- [EXP-0007 registration](../experiments/EXP-0007.md) and [results](../experiments/EXP-0007-results.md): word-form/conditional-entropy motivation, matched group/character corruptions, weak contrast and untested boundary/recency hypothesis.
+- [Latest scientific overview](../../results/research-round-2-2026-09-20/overview.png): plotted directly from archived EXP-0005/0006/0007 reports.
 
 The original source register above is preserved for early discussions. The targeted reviews contain their own source/version/access records; follow the exact citation for each claim rather than treating a review as proof of a manuscript hypothesis.
 

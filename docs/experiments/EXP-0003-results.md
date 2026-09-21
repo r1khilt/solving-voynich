@@ -1,5 +1,7 @@
 # EXP-0003 results — Context matters; distant ordering remains unestablished
 
+**Later evidence:** EXP-0005 repeats the distant-order question on 768 targets and finds consistent shuffle damage across seeds. Its [results](EXP-0005-results.md) revise the small-sample order hint below; the original measurements remain unchanged.
+
 Completed 2026-09-20 PDT / 2026-09-21 UTC from clean analysis source `a84e46da3bb5508898acf4bac8df7ba51fea5a90`. [Registration](EXP-0003.md), [summary](../../results/EXP-0003/summary.json), [seed-42 full head interventions](../../results/EXP-0003/small-seed42.json).
 
 ## Paired context experiment

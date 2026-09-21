@@ -1,0 +1,871 @@
+{
+  "experiment": "EXP-0006",
+  "source_commit": "2a367274e0ec75c8b264467441f6fe200722f69b",
+  "completion": {
+    "elapsed_seconds": 42.1723550419556,
+    "peak_resident_bytes": 1320108032,
+    "alignment_fits": 14,
+    "alignment_updates": 5600,
+    "frozen_weights_verified": true,
+    "manuscript_test_evaluated": false
+  },
+  "trained_sites": {
+    "0": {
+      "scores_mean_across_seeds": {
+        "test128": {
+          "clean": {
+            "oracle_kl": 1.3864569216917364,
+            "donor_model_kl": 1.4276531664373995,
+            "retention_kl": -6.815540211297604e-09,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 0.0
+          },
+          "full": {
+            "oracle_kl": 1.1182612882655196,
+            "donor_model_kl": 1.1512630459135191,
+            "retention_kl": 0.06472765875281539,
+            "category_agreement": 0.035807291666666664,
+            "displacement_norm": 1.1431476507471718
+          },
+          "learned": {
+            "oracle_kl": 1.0842888678264444,
+            "donor_model_kl": 1.116238903748581,
+            "retention_kl": 0.07317169785251723,
+            "category_agreement": 0.045572916666666664,
+            "displacement_norm": 0.7135328318054235
+          },
+          "readout_span": {
+            "oracle_kl": 1.2099580704776447,
+            "donor_model_kl": 1.2471150906699695,
+            "retention_kl": 0.018933815386797354,
+            "category_agreement": 0.016276041666666668,
+            "displacement_norm": 0.5311371820735076
+          },
+          "shuffled_supervision": {
+            "oracle_kl": 1.0806812511655153,
+            "donor_model_kl": 1.1124599721916202,
+            "retention_kl": 0.08075096609159053,
+            "category_agreement": 0.029947916666666668,
+            "displacement_norm": 0.7200955024763971
+          },
+          "random_norm_0": {
+            "oracle_kl": 1.3422571443231845,
+            "donor_model_kl": 1.3825500414179526,
+            "retention_kl": 0.002801698167514657,
+            "category_agreement": 0.008463541666666666,
+            "displacement_norm": 0.7135328309893035
+          },
+          "random_norm_1": {
+            "oracle_kl": 1.340409189026559,
+            "donor_model_kl": 1.3809639033242813,
+            "retention_kl": 0.003969795993053458,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 0.713532830385399
+          },
+          "random_norm_2": {
+            "oracle_kl": 1.3539503660711034,
+            "donor_model_kl": 1.394531362087984,
+            "retention_kl": 0.0019151928143160805,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 0.7135328314040331
+          },
+          "random_norm_3": {
+            "oracle_kl": 1.3529310055982553,
+            "donor_model_kl": 1.3934403365024082,
+            "retention_kl": 0.0019649347353053476,
+            "category_agreement": 0.008463541666666666,
+            "displacement_norm": 0.7135328345354234
+          },
+          "random_norm_4": {
+            "oracle_kl": 1.3417906275005482,
+            "donor_model_kl": 1.3822447182359572,
+            "retention_kl": 0.002364119660584588,
+            "category_agreement": 0.008463541666666666,
+            "displacement_norm": 0.7135328312909527
+          },
+          "random_norm_5": {
+            "oracle_kl": 1.3332839633468059,
+            "donor_model_kl": 1.3735098519569344,
+            "retention_kl": 0.004784941288742041,
+            "category_agreement": 0.008463541666666666,
+            "displacement_norm": 0.713532833983057
+          },
+          "random_norm_6": {
+            "oracle_kl": 1.3371978357117011,
+            "donor_model_kl": 1.3776317256731356,
+            "retention_kl": 0.00376297101615667,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 0.7135328315462175
+          },
+          "random_norm_7": {
+            "oracle_kl": 1.3504355793583425,
+            "donor_model_kl": 1.3909242495229819,
+            "retention_kl": 0.002953171916247197,
+            "category_agreement": 0.009114583333333334,
+            "displacement_norm": 0.7135328306309626
+          },
+          "random_norm_mean": {
+            "oracle_kl": 1.3440319638670626,
+            "donor_model_kl": 1.3844745235902045,
+            "retention_kl": 0.003064603198990005,
+            "category_agreement": 0.00830078125,
+            "displacement_norm": 0.7135328318456686
+          }
+        },
+        "test96": {
+          "clean": {
+            "oracle_kl": 1.399147452233592,
+            "donor_model_kl": 1.4100349201495799,
+            "retention_kl": -4.6325395064139374e-09,
+            "category_agreement": 0.006510416666666667,
+            "displacement_norm": 0.0
+          },
+          "full": {
+            "oracle_kl": 1.1662631041929974,
+            "donor_model_kl": 1.1706121605115338,
+            "retention_kl": 0.0596434879508004,
+            "category_agreement": 0.03125,
+            "displacement_norm": 1.133685001230333
+          },
+          "learned": {
+            "oracle_kl": 1.12815497251313,
+            "donor_model_kl": 1.1318009152631323,
+            "retention_kl": 0.06499632574872043,
+            "category_agreement": 0.040364583333333336,
+            "displacement_norm": 0.6914665203657933
+          },
+          "readout_span": {
+            "oracle_kl": 1.232959103967005,
+            "donor_model_kl": 1.2410002638813846,
+            "retention_kl": 0.018604973886611715,
+            "category_agreement": 0.01171875,
+            "displacement_norm": 0.5161810493336816
+          },
+          "shuffled_supervision": {
+            "oracle_kl": 1.1288609882103628,
+            "donor_model_kl": 1.1328732508870114,
+            "retention_kl": 0.06760988379088127,
+            "category_agreement": 0.0234375,
+            "displacement_norm": 0.6875774750781906
+          },
+          "random_norm_0": {
+            "oracle_kl": 1.3592037400230765,
+            "donor_model_kl": 1.3695279333987855,
+            "retention_kl": 0.0029460386876681657,
+            "category_agreement": 0.006510416666666667,
+            "displacement_norm": 0.691466522931781
+          },
+          "random_norm_1": {
+            "oracle_kl": 1.3549862270107649,
+            "donor_model_kl": 1.3651542095079396,
+            "retention_kl": 0.0032408056928078612,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 0.6914665188572447
+          },
+          "random_norm_2": {
+            "oracle_kl": 1.367193655135149,
+            "donor_model_kl": 1.377337137448194,
+            "retention_kl": 0.002049763181195837,
+            "category_agreement": 0.006510416666666667,
+            "displacement_norm": 0.6914665222817954
+          },
+          "random_norm_3": {
+            "oracle_kl": 1.3629207158034358,
+            "donor_model_kl": 1.372965664464573,
+            "retention_kl": 0.0021851085410000783,
+            "category_agreement": 0.006510416666666667,
+            "displacement_norm": 0.6914665185977356
+          },
+          "random_norm_4": {
+            "oracle_kl": 1.3584842263808241,
+            "donor_model_kl": 1.368404105885323,
+            "retention_kl": 0.0022426371254835598,
+            "category_agreement": 0.006510416666666667,
+            "displacement_norm": 0.6914665191361564
+          },
+          "random_norm_5": {
+            "oracle_kl": 1.352574545016978,
+            "donor_model_kl": 1.3625666040510016,
+            "retention_kl": 0.0033030212694887076,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 0.6914665220150104
+          },
+          "random_norm_6": {
+            "oracle_kl": 1.358646092179697,
+            "donor_model_kl": 1.3688829976284371,
+            "retention_kl": 0.0026593966634821387,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 0.6914665201450892
+          },
+          "random_norm_7": {
+            "oracle_kl": 1.3641908453040135,
+            "donor_model_kl": 1.374336610492416,
+            "retention_kl": 0.0032876873857117495,
+            "category_agreement": 0.006510416666666667,
+            "displacement_norm": 0.6914665202590792
+          },
+          "random_norm_mean": {
+            "oracle_kl": 1.3597750058567424,
+            "donor_model_kl": 1.3698969078595837,
+            "retention_kl": 0.002739307318354762,
+            "category_agreement": 0.006998697916666667,
+            "displacement_norm": 0.6914665205279865
+          }
+        },
+        "test192": {
+          "clean": {
+            "oracle_kl": 1.4374436149276637,
+            "donor_model_kl": 1.5303215518627742,
+            "retention_kl": -6.004162148097025e-09,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.0
+          },
+          "full": {
+            "oracle_kl": 1.1606886075484606,
+            "donor_model_kl": 1.2423478968327497,
+            "retention_kl": 0.07773290352336086,
+            "category_agreement": 0.048177083333333336,
+            "displacement_norm": 1.1235246045253007
+          },
+          "learned": {
+            "oracle_kl": 1.1465653623896894,
+            "donor_model_kl": 1.2282207118975446,
+            "retention_kl": 0.07502512065368812,
+            "category_agreement": 0.041666666666666664,
+            "displacement_norm": 0.6840476014610127
+          },
+          "readout_span": {
+            "oracle_kl": 1.2869021195341095,
+            "donor_model_kl": 1.376084029955867,
+            "retention_kl": 0.017611500262225615,
+            "category_agreement": 0.014322916666666666,
+            "displacement_norm": 0.5085607615158855
+          },
+          "shuffled_supervision": {
+            "oracle_kl": 1.1402055987715964,
+            "donor_model_kl": 1.2221980890960065,
+            "retention_kl": 0.08741441420274054,
+            "category_agreement": 0.033854166666666664,
+            "displacement_norm": 0.6950662699139988
+          },
+          "random_norm_0": {
+            "oracle_kl": 1.3970524167380063,
+            "donor_model_kl": 1.489373147317868,
+            "retention_kl": 0.002535508854057622,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.684047600722503
+          },
+          "random_norm_1": {
+            "oracle_kl": 1.3950290991536651,
+            "donor_model_kl": 1.4868718769915479,
+            "retention_kl": 0.0031444921317535604,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.6840476024238645
+          },
+          "random_norm_2": {
+            "oracle_kl": 1.4035327203237102,
+            "donor_model_kl": 1.4953673815349855,
+            "retention_kl": 0.0017153314756564082,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.6840476005187762
+          },
+          "random_norm_3": {
+            "oracle_kl": 1.4071510114711903,
+            "donor_model_kl": 1.499072672855012,
+            "retention_kl": 0.0014291126892585309,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.684047601310643
+          },
+          "random_norm_4": {
+            "oracle_kl": 1.3959750758149312,
+            "donor_model_kl": 1.4876807443167006,
+            "retention_kl": 0.001835122451127454,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.6840476018454259
+          },
+          "random_norm_5": {
+            "oracle_kl": 1.387846088592293,
+            "donor_model_kl": 1.4792437038995558,
+            "retention_kl": 0.00369409775400803,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.684047601196653
+          },
+          "random_norm_6": {
+            "oracle_kl": 1.3928571988023275,
+            "donor_model_kl": 1.4846318508886422,
+            "retention_kl": 0.0026268513451491726,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.6840476007552448
+          },
+          "random_norm_7": {
+            "oracle_kl": 1.4003641282167034,
+            "donor_model_kl": 1.4921588919460191,
+            "retention_kl": 0.0028723169309357774,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.6840476001537658
+          },
+          "random_norm_mean": {
+            "oracle_kl": 1.3974759673891033,
+            "donor_model_kl": 1.4893000337187914,
+            "retention_kl": 0.0024816042039933193,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.6840476011158595
+          }
+        },
+        "preservation": {
+          "clean": {
+            "oracle_kl": 0.014444447499840862,
+            "donor_model_kl": 0.01827783362513132,
+            "retention_kl": -9.256625721863523e-09,
+            "category_agreement": 0.984375,
+            "displacement_norm": 0.0
+          },
+          "full": {
+            "oracle_kl": 0.01258360039624525,
+            "donor_model_kl": 0.015564373206417978,
+            "retention_kl": 0.001290791270387559,
+            "category_agreement": 0.9869791666666666,
+            "displacement_norm": 0.2834888347618592
+          },
+          "learned": {
+            "oracle_kl": 0.011922098769635644,
+            "donor_model_kl": 0.01521158747728594,
+            "retention_kl": 0.00098123241308762,
+            "category_agreement": 0.9869791666666666,
+            "displacement_norm": 0.1274157233413765
+          },
+          "readout_span": {
+            "oracle_kl": 0.01261830485562617,
+            "donor_model_kl": 0.01585607515799377,
+            "retention_kl": 0.0006125017393831487,
+            "category_agreement": 0.9869791666666666,
+            "displacement_norm": 0.11632075014616323
+          },
+          "shuffled_supervision": {
+            "oracle_kl": 0.012056555009242706,
+            "donor_model_kl": 0.015328856824256073,
+            "retention_kl": 0.0010035767719439963,
+            "category_agreement": 0.9869791666666666,
+            "displacement_norm": 0.1306670653702895
+          },
+          "random_norm_0": {
+            "oracle_kl": 0.014057729126136564,
+            "donor_model_kl": 0.017864798010975253,
+            "retention_kl": 0.00010530795375398704,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.12741572326134096
+          },
+          "random_norm_1": {
+            "oracle_kl": 0.014126575279381845,
+            "donor_model_kl": 0.018009206171465546,
+            "retention_kl": 0.0001003817886239599,
+            "category_agreement": 0.984375,
+            "displacement_norm": 0.12741572297333428
+          },
+          "random_norm_2": {
+            "oracle_kl": 0.014387818004157301,
+            "donor_model_kl": 0.018294199426395135,
+            "retention_kl": 8.108167543444122e-05,
+            "category_agreement": 0.984375,
+            "displacement_norm": 0.12741572338139426
+          },
+          "random_norm_3": {
+            "oracle_kl": 0.014569609291622024,
+            "donor_model_kl": 0.018405012239130453,
+            "retention_kl": 9.939886768160998e-05,
+            "category_agreement": 0.984375,
+            "displacement_norm": 0.12741572339109553
+          },
+          "random_norm_4": {
+            "oracle_kl": 0.014173860565885358,
+            "donor_model_kl": 0.01804624076428792,
+            "retention_kl": 9.292065254330711e-05,
+            "category_agreement": 0.984375,
+            "displacement_norm": 0.1274157238446302
+          },
+          "random_norm_5": {
+            "oracle_kl": 0.013909862243044321,
+            "donor_model_kl": 0.017722685717071585,
+            "retention_kl": 0.0001193168079958,
+            "category_agreement": 0.984375,
+            "displacement_norm": 0.12741572376580734
+          },
+          "random_norm_6": {
+            "oracle_kl": 0.014103845670263127,
+            "donor_model_kl": 0.018073996787569453,
+            "retention_kl": 0.00017554926969409976,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.1274157232868068
+          },
+          "random_norm_7": {
+            "oracle_kl": 0.014350829957455366,
+            "donor_model_kl": 0.018195112686713404,
+            "retention_kl": 7.950118131807606e-05,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.12741572312249141
+          },
+          "random_norm_mean": {
+            "oracle_kl": 0.014210016267243239,
+            "donor_model_kl": 0.018076406475451095,
+            "retention_kl": 0.00010668227463066014,
+            "category_agreement": 0.98486328125,
+            "displacement_norm": 0.1274157233783626
+          }
+        }
+      },
+      "per_seed_decisions": [
+        {
+          "seed": 42,
+          "gain": 0.3751749958819346,
+          "margin_over_random": 0.33698980558702374,
+          "margin_over_shuffled": 0.015690699405922715,
+          "meets_registered_threshold": false
+        },
+        {
+          "seed": 43,
+          "gain": 0.3098777289528698,
+          "margin_over_random": 0.2579430390542825,
+          "margin_over_shuffled": 0.008671285352647828,
+          "meets_registered_threshold": false
+        },
+        {
+          "seed": 44,
+          "gain": 0.22145143676107182,
+          "margin_over_random": 0.18429644348054808,
+          "margin_over_shuffled": -0.03518483474135792,
+          "meets_registered_threshold": false
+        }
+      ],
+      "all_seeds_meet_threshold": false
+    },
+    "1": {
+      "scores_mean_across_seeds": {
+        "test128": {
+          "clean": {
+            "oracle_kl": 1.3864569236928521,
+            "donor_model_kl": 1.4276531709829026,
+            "retention_kl": -3.2018901882447106e-09,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 0.0
+          },
+          "full": {
+            "oracle_kl": 0.025282520836716078,
+            "donor_model_kl": 4.830029830954485e-10,
+            "retention_kl": 1.3106028605698536,
+            "category_agreement": 0.9713541666666666,
+            "displacement_norm": 6.439569267715949
+          },
+          "learned": {
+            "oracle_kl": 0.034799490622077656,
+            "donor_model_kl": 0.01824134843811483,
+            "retention_kl": 1.1481701779561415,
+            "category_agreement": 0.970703125,
+            "displacement_norm": 5.834915233465533
+          },
+          "readout_span": {
+            "oracle_kl": 0.03633597927534993,
+            "donor_model_kl": 0.017853366955942345,
+            "retention_kl": 1.2770241525197434,
+            "category_agreement": 0.9713541666666666,
+            "displacement_norm": 5.372834589080109
+          },
+          "shuffled_supervision": {
+            "oracle_kl": 0.3530677218508724,
+            "donor_model_kl": 0.36191066368138536,
+            "retention_kl": 0.3395281173278022,
+            "category_agreement": 0.3372395833333333,
+            "displacement_norm": 4.509527758792198
+          },
+          "random_norm_0": {
+            "oracle_kl": 0.8174738987304409,
+            "donor_model_kl": 0.8465729545838485,
+            "retention_kl": 0.10485997931740106,
+            "category_agreement": 0.010416666666666666,
+            "displacement_norm": 5.8349152225224925
+          },
+          "random_norm_1": {
+            "oracle_kl": 0.8374930872562724,
+            "donor_model_kl": 0.866820750702658,
+            "retention_kl": 0.1100651884342696,
+            "category_agreement": 0.01171875,
+            "displacement_norm": 5.834915227858194
+          },
+          "random_norm_2": {
+            "oracle_kl": 0.8835694815371653,
+            "donor_model_kl": 0.9142917377493754,
+            "retention_kl": 0.08414149252023861,
+            "category_agreement": 0.008463541666666666,
+            "displacement_norm": 5.834915237249031
+          },
+          "random_norm_3": {
+            "oracle_kl": 0.9043015117629238,
+            "donor_model_kl": 0.9356246721217758,
+            "retention_kl": 0.08496125485841806,
+            "category_agreement": 0.009114583333333334,
+            "displacement_norm": 5.8349152343192445
+          },
+          "random_norm_4": {
+            "oracle_kl": 0.8460698517840228,
+            "donor_model_kl": 0.8753145904715135,
+            "retention_kl": 0.10297038679253727,
+            "category_agreement": 0.013020833333333334,
+            "displacement_norm": 5.834915235949059
+          },
+          "random_norm_5": {
+            "oracle_kl": 0.7751119358956657,
+            "donor_model_kl": 0.8029981164522155,
+            "retention_kl": 0.12298290511381538,
+            "category_agreement": 0.024088541666666668,
+            "displacement_norm": 5.83491522805222
+          },
+          "random_norm_6": {
+            "oracle_kl": 0.9119461847700071,
+            "donor_model_kl": 0.9422798919341346,
+            "retention_kl": 0.08222666062872126,
+            "category_agreement": 0.009114583333333334,
+            "displacement_norm": 5.834915233232702
+          },
+          "random_norm_7": {
+            "oracle_kl": 0.8523497402657085,
+            "donor_model_kl": 0.8816680749769906,
+            "retention_kl": 0.10582359614378826,
+            "category_agreement": 0.017578125,
+            "displacement_norm": 5.834915229099958
+          },
+          "random_norm_mean": {
+            "oracle_kl": 0.8535394615002758,
+            "donor_model_kl": 0.883196348624064,
+            "retention_kl": 0.0997539329761487,
+            "category_agreement": 0.012939453125,
+            "displacement_norm": 5.834915231035363
+          }
+        },
+        "test96": {
+          "clean": {
+            "oracle_kl": 1.3991474571812432,
+            "donor_model_kl": 1.410034932329533,
+            "retention_kl": -9.895977060445209e-10,
+            "category_agreement": 0.006510416666666667,
+            "displacement_norm": 0.0
+          },
+          "full": {
+            "oracle_kl": 0.033870942355292755,
+            "donor_model_kl": 1.7695134709357536e-09,
+            "retention_kl": 1.29119531064498,
+            "category_agreement": 0.9583333333333334,
+            "displacement_norm": 6.317241406456257
+          },
+          "learned": {
+            "oracle_kl": 0.0420689115230933,
+            "donor_model_kl": 0.019282759393642362,
+            "retention_kl": 1.1245807563245762,
+            "category_agreement": 0.9583333333333334,
+            "displacement_norm": 5.7282194904206944
+          },
+          "readout_span": {
+            "oracle_kl": 0.04302698695156929,
+            "donor_model_kl": 0.01912988777390486,
+            "retention_kl": 1.2580368396350725,
+            "category_agreement": 0.9583333333333334,
+            "displacement_norm": 5.260828573334341
+          },
+          "shuffled_supervision": {
+            "oracle_kl": 0.3687549229907745,
+            "donor_model_kl": 0.3602026828484668,
+            "retention_kl": 0.33297338519878394,
+            "category_agreement": 0.3502604166666667,
+            "displacement_norm": 4.436842791348075
+          },
+          "random_norm_0": {
+            "oracle_kl": 0.8455096834174279,
+            "donor_model_kl": 0.848670734000431,
+            "retention_kl": 0.09727186790496489,
+            "category_agreement": 0.01171875,
+            "displacement_norm": 5.728219487626727
+          },
+          "random_norm_1": {
+            "oracle_kl": 0.8544680203340249,
+            "donor_model_kl": 0.8586883220850723,
+            "retention_kl": 0.10915604862968091,
+            "category_agreement": 0.016927083333333332,
+            "displacement_norm": 5.728219475209092
+          },
+          "random_norm_2": {
+            "oracle_kl": 0.8930261289982203,
+            "donor_model_kl": 0.8975051438634788,
+            "retention_kl": 0.086566332304983,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 5.728219500898073
+          },
+          "random_norm_3": {
+            "oracle_kl": 0.9213760793791153,
+            "donor_model_kl": 0.9264785747291171,
+            "retention_kl": 0.08155470596132848,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 5.7282194780030595
+          },
+          "random_norm_4": {
+            "oracle_kl": 0.8644441305368673,
+            "donor_model_kl": 0.8692686828168613,
+            "retention_kl": 0.09878636982648459,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 5.728219494922087
+          },
+          "random_norm_5": {
+            "oracle_kl": 0.7937577101571757,
+            "donor_model_kl": 0.7979165393117,
+            "retention_kl": 0.11845232202297969,
+            "category_agreement": 0.015625,
+            "displacement_norm": 5.728219488558049
+          },
+          "random_norm_6": {
+            "oracle_kl": 0.9218647226856168,
+            "donor_model_kl": 0.9262112833336383,
+            "retention_kl": 0.08116962398548822,
+            "category_agreement": 0.010416666666666666,
+            "displacement_norm": 5.7282194832029445
+          },
+          "random_norm_7": {
+            "oracle_kl": 0.8578828575021665,
+            "donor_model_kl": 0.8612105182352631,
+            "retention_kl": 0.10116447537651159,
+            "category_agreement": 0.013020833333333334,
+            "displacement_norm": 5.728219483668606
+          },
+          "random_norm_mean": {
+            "oracle_kl": 0.8690411666263268,
+            "donor_model_kl": 0.8732437247969452,
+            "retention_kl": 0.09676521825155267,
+            "category_agreement": 0.011393229166666666,
+            "displacement_norm": 5.72821948651108
+          }
+        },
+        "test192": {
+          "clean": {
+            "oracle_kl": 1.437443623925598,
+            "donor_model_kl": 1.5303215701327038,
+            "retention_kl": 1.3058525309261187e-09,
+            "category_agreement": 0.005208333333333333,
+            "displacement_norm": 0.0
+          },
+          "full": {
+            "oracle_kl": 0.01025909558575222,
+            "donor_model_kl": 3.029465787604546e-09,
+            "retention_kl": 1.454782218580173,
+            "category_agreement": 0.9973958333333334,
+            "displacement_norm": 6.640294729421536
+          },
+          "learned": {
+            "oracle_kl": 0.0178278188616711,
+            "donor_model_kl": 0.01777483919916752,
+            "retention_kl": 1.3052729289920535,
+            "category_agreement": 0.99609375,
+            "displacement_norm": 6.04183141157652
+          },
+          "readout_span": {
+            "oracle_kl": 0.024507927610670777,
+            "donor_model_kl": 0.02046027928819664,
+            "retention_kl": 1.449620380163348,
+            "category_agreement": 0.9973958333333334,
+            "displacement_norm": 5.557012178314229
+          },
+          "shuffled_supervision": {
+            "oracle_kl": 0.329685936319341,
+            "donor_model_kl": 0.3704514927727966,
+            "retention_kl": 0.3909632818492052,
+            "category_agreement": 0.4544270833333333,
+            "displacement_norm": 4.653538543730974
+          },
+          "random_norm_0": {
+            "oracle_kl": 0.8226648573036073,
+            "donor_model_kl": 0.8971429672625769,
+            "retention_kl": 0.11855257363276905,
+            "category_agreement": 0.013020833333333334,
+            "displacement_norm": 6.041831420734525
+          },
+          "random_norm_1": {
+            "oracle_kl": 0.8302068491999913,
+            "donor_model_kl": 0.9058786210080143,
+            "retention_kl": 0.12842931248815148,
+            "category_agreement": 0.015625,
+            "displacement_norm": 6.041831396520138
+          },
+          "random_norm_2": {
+            "oracle_kl": 0.8715517999031969,
+            "donor_model_kl": 0.9484977559477556,
+            "retention_kl": 0.10308238003320487,
+            "category_agreement": 0.010416666666666666,
+            "displacement_norm": 6.0418314025737345
+          },
+          "random_norm_3": {
+            "oracle_kl": 0.9064497951379357,
+            "donor_model_kl": 0.9844232150159465,
+            "retention_kl": 0.09686852855035492,
+            "category_agreement": 0.0078125,
+            "displacement_norm": 6.041831405988584
+          },
+          "random_norm_4": {
+            "oracle_kl": 0.8425993195536042,
+            "donor_model_kl": 0.9174209484287227,
+            "retention_kl": 0.11701592664879475,
+            "category_agreement": 0.016927083333333332,
+            "displacement_norm": 6.041831419803202
+          },
+          "random_norm_5": {
+            "oracle_kl": 0.7752407646451805,
+            "donor_model_kl": 0.8482059730692223,
+            "retention_kl": 0.13648424987695762,
+            "category_agreement": 0.020833333333333332,
+            "displacement_norm": 6.041831417009234
+          },
+          "random_norm_6": {
+            "oracle_kl": 0.9071184986920949,
+            "donor_model_kl": 0.9848379886534531,
+            "retention_kl": 0.09405535192612054,
+            "category_agreement": 0.009114583333333334,
+            "displacement_norm": 6.041831402884175
+          },
+          "random_norm_7": {
+            "oracle_kl": 0.8417328430199026,
+            "donor_model_kl": 0.9176719323731959,
+            "retention_kl": 0.11750890637146465,
+            "category_agreement": 0.018229166666666668,
+            "displacement_norm": 6.041831417940557
+          },
+          "random_norm_mean": {
+            "oracle_kl": 0.8496955909319391,
+            "donor_model_kl": 0.9255099252198609,
+            "retention_kl": 0.11399965369097724,
+            "category_agreement": 0.013997395833333334,
+            "displacement_norm": 6.041831410431769
+          }
+        },
+        "preservation": {
+          "clean": {
+            "oracle_kl": 0.014444453983154895,
+            "donor_model_kl": 0.018277839152117004,
+            "retention_kl": -3.417585893682287e-09,
+            "category_agreement": 0.984375,
+            "displacement_norm": 0.0
+          },
+          "full": {
+            "oracle_kl": 0.006950571011467825,
+            "donor_model_kl": -3.302349753317909e-09,
+            "retention_kl": 0.017173441452917437,
+            "category_agreement": 0.9934895833333334,
+            "displacement_norm": 0.9269180105960307
+          },
+          "learned": {
+            "oracle_kl": 0.011629985321164327,
+            "donor_model_kl": 0.004030540549438151,
+            "retention_kl": 0.021854303857070434,
+            "category_agreement": 0.9947916666666666,
+            "displacement_norm": 0.5605447843966734
+          },
+          "readout_span": {
+            "oracle_kl": 0.013449281121552303,
+            "donor_model_kl": 0.005586558818603038,
+            "retention_kl": 0.025122249611529607,
+            "category_agreement": 0.9934895833333334,
+            "displacement_norm": 0.5094043582721497
+          },
+          "shuffled_supervision": {
+            "oracle_kl": 0.007505984697464403,
+            "donor_model_kl": 0.005684546898126659,
+            "retention_kl": 0.006731660847223135,
+            "category_agreement": 0.9921875,
+            "displacement_norm": 0.44462803418597713
+          },
+          "random_norm_0": {
+            "oracle_kl": 0.010902182726141518,
+            "donor_model_kl": 0.013279245897241351,
+            "retention_kl": 0.0018461629032442788,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.5605447854056061
+          },
+          "random_norm_1": {
+            "oracle_kl": 0.011687726354769742,
+            "donor_model_kl": 0.014056074038177139,
+            "retention_kl": 0.002302614958272895,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.5605447863781592
+          },
+          "random_norm_2": {
+            "oracle_kl": 0.01241331029714369,
+            "donor_model_kl": 0.014714180442927235,
+            "retention_kl": 0.0019439560347511871,
+            "category_agreement": 0.984375,
+            "displacement_norm": 0.5605447816075563
+          },
+          "random_norm_3": {
+            "oracle_kl": 0.012547426762447836,
+            "donor_model_kl": 0.015157851192979225,
+            "retention_kl": 0.002088370299162963,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.560544783667865
+          },
+          "random_norm_4": {
+            "oracle_kl": 0.011305138516869798,
+            "donor_model_kl": 0.013386610544042851,
+            "retention_kl": 0.0022728687531815865,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.5605447824552053
+          },
+          "random_norm_5": {
+            "oracle_kl": 0.010194526523283306,
+            "donor_model_kl": 0.011495287403959628,
+            "retention_kl": 0.002770643308770008,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.5605447838534019
+          },
+          "random_norm_6": {
+            "oracle_kl": 0.01237376972100416,
+            "donor_model_kl": 0.015213021522828996,
+            "retention_kl": 0.0021901849392962033,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.5605447831815885
+          },
+          "random_norm_7": {
+            "oracle_kl": 0.011254909386309464,
+            "donor_model_kl": 0.013481854578736,
+            "retention_kl": 0.0019318190940042443,
+            "category_agreement": 0.9856770833333334,
+            "displacement_norm": 0.5605447824115496
+          },
+          "random_norm_mean": {
+            "oracle_kl": 0.011584873785996189,
+            "donor_model_kl": 0.013848015702611552,
+            "retention_kl": 0.002168327536335421,
+            "category_agreement": 0.9855143229166667,
+            "displacement_norm": 0.5605447836201165
+          }
+        }
+      },
+      "per_seed_decisions": [
+        {
+          "seed": 42,
+          "gain": 1.3675867554586887,
+          "margin_over_random": 0.837215416800376,
+          "margin_over_shuffled": 0.3289543147584766,
+          "meets_registered_threshold": true
+        },
+        {
+          "seed": 43,
+          "gain": 1.3473488797727668,
+          "margin_over_random": 0.8044294128701495,
+          "margin_over_shuffled": 0.34732313344272825,
+          "meets_registered_threshold": true
+        },
+        {
+          "seed": 44,
+          "gain": 1.340036663980868,
+          "margin_over_random": 0.814575082964069,
+          "margin_over_shuffled": 0.27852724548517926,
+          "meets_registered_threshold": true
+        }
+      ],
+      "all_seeds_meet_threshold": true
+    }
+  },
+  "interpretation": "Late practical steering criterion can pass while a readout-span control matches it; this is not unique circuit recovery. Early true-vs-shuffled distinction is required."
+}

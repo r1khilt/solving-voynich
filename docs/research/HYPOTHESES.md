@@ -1,6 +1,6 @@
 # Hypothesis register
 
-All entries below are **untested**. They are derived from the charter or introduced as methodological controls. No probabilities, historical plausibility rankings, or experimental support are assigned. Mechanisms can coexist; a model family is not necessarily a historical explanation.
+The historical explanations below are **unresolved**. They are derived from the charter or introduced as methodological controls. The method-status sections record bounded experiments; no historical explanation has been established. Mechanisms can coexist; a model family is not necessarily a historical explanation.
 
 | ID | Candidate explanation | Proposed discriminating evidence | Main failure mode / control |
 | --- | --- | --- | --- |
@@ -34,3 +34,12 @@ Historical HYP-001 through HYP-006 remain unresolved; the synthetic generator wa
 - **M-002:** 18 controlled Voynich runs complete, compact model selected, paired context tests and one seed's head interventions performed. Prediction beyond five-gram is established on repeatedly consulted validation, not final test. [EXP-0002](../experiments/EXP-0002-results.md), [EXP-0003](../experiments/EXP-0003-results.md).
 - **M-003:** causal assay implemented; synthetic probe-direction steering failed to outperform a norm-matched random control meaningfully. No shared historical/synthetic circuit established.
 - **New exploratory implication for HYP-003:** distant symbol mixture/page context could explain some prediction benefit; preserved-local-context distant shuffling caused inconsistent damage. Requires length/content/section-matched replacement controls before interpretation.
+
+## Updated status after EXP-0005/0006/0007
+
+- **HYP-003 / M-002:** EXP-0005 revises the earlier small-sample hint: distant shuffling consistently harms prediction on a larger fixed sample. Both content and some order information affect these models. Category donor differences partly shrink with histogram matching, but residual histogram imbalance remains; no distinct category-specific cipher is established.
+- **HYP-006:** EXP-0007 finds a small, uncertain contrast between moving complete groups and destroying forms at exactly matched positions. This does not identify plaintext word boundaries or a natural coding-unit size. Broad block-permutation effects are not monotonic in block length.
+- **M-001 / M-003:** EXP-0006 supplies supervised causal calibration on fresh within-family synthetic contexts. Late steering passes the fixed practical threshold, but an output-weight span nearly matches it. Early steering fails against shuffled supervision. Label-free state discovery, family/key transfer and faithful algorithm recovery remain untested.
+- **Exploratory candidate for HYP-003:** layout boundaries or recency-weighted symbol statistics may account for part of the distant-order effect. Current interventions confound these factors. A future test should independently perturb definite spaces, line boundaries and recency while matching changed positions/content. This is a new proposal, not supporting evidence for a historical mechanism.
+
+Results: [EXP-0005](../experiments/EXP-0005-results.md), [EXP-0006](../experiments/EXP-0006-results.md), [EXP-0007](../experiments/EXP-0007-results.md). All historical HYP-001 through HYP-006 remain unresolved; no signal/filler assignment or translation has been inferred for Voynich.

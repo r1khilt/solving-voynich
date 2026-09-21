@@ -91,3 +91,24 @@ UV_CACHE_DIR=/private/tmp/voynich-plot-cache MPLCONFIGDIR=/private/tmp/voynich-m
 ```
 
 Checkpoints were produced on earlier exact source revisions recorded in their manifests. Reproducing training may produce hardware/library numerical differences; preserve source, RNG, data, selection policy and recorded metrics rather than claiming cross-machine bitwise equivalence.
+
+## Second research round: content, causal alignment and order scale
+
+EXP-0005 uses the frozen compact EXP-0002 checkpoints and prepared manuscript corpus. EXP-0006 additionally requires the structured synthetic EXP-0004 corpus and its initial/best checkpoints. EXP-0007 requires the completed EXP-0005 output for original-score parity. Run in this order on fresh destinations; existing completed outputs/data must not be overwritten:
+
+```sh
+.venv/bin/python -m voynich.context_controls --output-root outputs/EXP-0005 --device mps
+.venv/bin/python -m voynich.causal_alignment prepare
+.venv/bin/python -m voynich.causal_alignment run --device mps
+.venv/bin/python -m voynich.order_scale --output-root outputs/EXP-0007 --device mps
+```
+
+The registrations record distinct source revisions published before each run. EXP-0006 updates only the intervention bases; the backbone weights remain frozen. Its Bayesian targets are known-generator supervision, unlike an unknown-manuscript decoder. Fresh synthetic test pools are now exposed and must be replaced for adaptive successor methods. Voynich final test is still unscored.
+
+Archival scripts `summarize_context_controls.py` and `archive_second_round.py` audit this exact round's source/data/weight identity and controls, then copy results without overwriting existing archives. Use them only when populating an empty archive. Tracked JSON retains individual scores and provenance; bulk activations, text and basis/checkpoint tensors stay in ignored directories. Recreate the scientific overview without modifying training dependencies:
+
+```sh
+UV_CACHE_DIR=/private/tmp/voynich-plot-cache MPLCONFIGDIR=/private/tmp/voynich-mpl uv run --no-project --python .venv/bin/python --with matplotlib==3.10.0 python scripts/plot_second_round.py
+```
+
+This round used MPS and no paid services. The 14 alignment fits took 42.17 seconds, with 1.32 GB peak process RSS reported; this does not independently measure total GPU allocations. See each results narrative for the limits of timing, inference and comparisons.
