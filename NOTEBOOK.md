@@ -575,3 +575,18 @@ Resource use (if applicable):
 - **Next change (notebook only; not started):** Stop further keep-head decode variants of the EXP-0016 checkpoint as a path to a Voynich null-layer claim (absolute and fixed-rate transfers both rejected). Next registered attempt should be a **different mechanism class** that does not rely on transferring this checkpoint’s keep posteriors—ranked candidate: **R5** language-ID / cipher attacks with explicit null controls (or a fresh generative hypothesis under a new id, not another threshold on these logits). **Falsifier:** a preregistered confirm-style gate that requires positive structure gain vs full text **and** matched controls **without** crowning a global high deletion rate on these pages; if the procedure again reduces to delete-nothing or the rejected 0.70-rate family, FAIL and leave the null-layer claim unsupported.
 - **Resources:** Local inference seconds; no paid API; no retrain.
 - **Git:** results + docs + MEMORY/NOTEBOOK after scores.
+
+## 2026-09-21 — R5 language-ID attack EXP-0022 [NB-0039]
+
+- **Phase / question:** Ranked memo R5 — under a frozen UDHR/FLORES panel and monoalphabetic/soft-homophonic attack, does any language uniquely prefer true ZL3b EVA over scrambled-glyph and section-shuffled nulls, and does the attack avoid preferring Hebrew/Latin on length+unigram-matched null text?
+- **Registration:** `docs/experiments/EXP-0022.md` written **before** rankings. EXP-0021 is the separate rate-free decode track (not a prerequisite). Panel, letter budget 12,000, margin 0.020, seeds 4022/4023/4024, and pass modes frozen before scores.
+- **Actions:** Implemented `voynich.language_id_attack`; unit tests (5 passed); one scored run. Did **not** retune margin or panel after scores. Did not open ZL3b test for scoring. No paid API. No LLM translation.
+- **Command:** `.venv/bin/python -m voynich.language_id_attack --root .` (~119.5 s CPU).
+- **Observations (mono preferred sets):** `true_eva` → **eng** (3.585 vs tur 3.630, margin 0.045); `scrambled_glyph` → **heb** (3.427); `section_shuffled` → empty (heb/gle margin 0.004 < 0.020); `zipf_length_null` → **heb** (4.237).
+- **Decision:** **FAIL** mode `hebrew_latin_null_preferred`. Attack prefers Hebrew on the Zipf/length-matched null; EVA language rankings are not interpreted as ID. Secondary note only: eng-on-true vs heb-on-scrambled is consistent with artifact risk but is superseded by the null gate.
+- **Interpretation:** Simple monoalphabetic language-ID claims from this attack class are untrustworthy on this panel/budget (Hauer–Kondrak artifact warning without replaying anagram+abjad). **Not a decipherment.** No frozen reading. HYP-005 still open; HYP-004 unresolved.
+- **Validation:** `.venv/bin/python -m pytest -q tests/test_language_id_attack.py` (5 passed).
+- **Artifacts:** `docs/experiments/EXP-0022.md`, `EXP-0022-results.md`; `results/EXP-0022/{results,decision}.json`; `data/manifests/exp0022_data.json`.
+- **Decisions / next state:** R5 registered and scored. Ranked memo R1–R5 stretch complete for this program block. **Stop** — do not open a new research program in this return. Optional later: R6 (LLM proposer + local verifier) only with explicit spend auth; optional R3 redesign under a new id. Unrelated dirty tree files left unstaged.
+- **Resources:** Local CPU only; no paid API.
+- **Git:** checkpoint of registration, code, compact results, notebook/memory.
