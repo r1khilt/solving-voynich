@@ -1,6 +1,6 @@
 # Project memory
 
-Last updated: 2026-09-21 (EXP-0020 R4/P2 FAIL `joint_not_better`; EXP-0018 FAIL retained).
+Last updated: 2026-09-21 (EXP-0021 FAIL: rate-free EXP-0016 decode rejected; EXP-0018 fixed-rate FAIL retained).
 
 ## Current state
 
@@ -10,7 +10,8 @@ Last updated: 2026-09-21 (EXP-0020 R4/P2 FAIL `joint_not_better`; EXP-0018 FAIL 
 - **Latent recovery track:** EXP-0011–0013 FAIL (threshold decode). **EXP-0014 PASS:** frozen EXP-0013 weights + exact-count; Finnish recon 0.218 > frozen matched-random 0.2043 (confirms peeked ~0.218). **EXP-0014b FAIL** on copy_mutate without retrain (recon 0.185). **EXP-0017 PASS:** typed program search selected `exact_count_neural`. **EXP-0016 PASS** (1,063 varieties / 270 family holdouts; macro recon 0.3155 > 0.1918) and **EXP-0016b copy_mutate PASS**. Prior ZL3b validation label-free under 0.30 null was negative (other session). This block did **not** rescore ZL3b. Synthetic PASS ≠ decipherment.
 - **R3 / HYP-005:** **EXP-0019 FAIL** (`iid_control_failed`): iid matched Zipf+adjacent under frozen floors (2/4 separate; need ≥3); search never forced ≥3/4 optimizable surface match. Held-out not interpreted. HYP-005 unresolved. Optional R3 redesign (new id, harder iid falsifier) not this stretch.
 - **R4 / NEXT_DESIGN P2:** **EXP-0020 FAIL** (`joint_not_better`): validity + equivalent-generator controls passed; structured fresh-key Δ_joint=0.0028<0.05 (copy_lag TF win cancelled cycle/parity edge wins). Ranked next: **R5**.
-- **EXP-0018 FAIL (durable):** Frozen EXP-0016 checkpoint, exact-count rate grid on ZL3b validation with seed-4018 select/confirm split. SELECT chose r=0.70 (only candidate with neural Δ vs matched-random > 0). CONFIRM: mean_gain −0.152 > mean_random −0.196, but fraction_beats_random 0.459 ≯ 0.50. **Fixed-rate exact-count transfer from the multilingual deletion model is rejected on this validation split.** Not a decipherment; ZL3b test unscored. Next (unregistered): rate-free generative hypothesis, new id; see NOTEBOOK NB-0034b.
+- **EXP-0018 FAIL (durable):** Frozen EXP-0016 checkpoint, exact-count rate grid on ZL3b validation with seed-4018 select/confirm split. SELECT chose r=0.70 (only candidate with neural Δ vs matched-random > 0). CONFIRM: mean_gain −0.152 > mean_random −0.196, but fraction_beats_random 0.459 ≯ 0.50. **Fixed-rate exact-count transfer from the multilingual deletion model is rejected on this validation split.** Not a decipherment; ZL3b test unscored.
+- **EXP-0021 FAIL (durable):** Same frozen EXP-0016 checkpoint and same seed-4018 confirm pages; rate-free keep iff P(signal)≥0.5 (not tuned on Voynich). Confirm implied null rates all 0 (std 0); mean bits-gain 0 (= delete-nothing); fraction_beats_random 0. **Absolute keep-scores saturate near 1 on ZL3b validation, so the threshold deletes nothing.** **Neither fixed-rate (EXP-0018) nor this rate-free decode of EXP-0016 establishes a Voynich null layer.** Not a decipherment; ZL3b test unscored. See NOTEBOOK NB-0038b.
 - Earlier research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved.
 - Repository: `/Users/rikhil/coding/solving-voynich`.
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.

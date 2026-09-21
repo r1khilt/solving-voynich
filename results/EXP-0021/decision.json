@@ -1,0 +1,32 @@
+{
+  "experiment": "EXP-0021",
+  "passed": false,
+  "decode_rule": "keep iff P(signal) >= 0.5",
+  "confirm": {
+    "mean_gain": 0.0,
+    "mean_random_gain": 0.0,
+    "delete_nothing_gain": 0.0,
+    "fraction_beats_random": 0.0,
+    "implied_null_rate_distribution": {
+      "min": 0.0,
+      "median": 0.0,
+      "mean": 0.0,
+      "max": 0.0,
+      "std": 0.0,
+      "n_windows": 109
+    }
+  },
+  "reasons": [
+    "mean_gain 0.000000 not > 0 (kept not more predictable than full text)",
+    "mean_gain 0.000000 not > mean_random_gain 0.000000",
+    "fraction_beats_random 0.0000 not > 0.50",
+    "implied_null_rate std 0.000000 not > 0.05"
+  ],
+  "criteria": {
+    "mean_gain_gt_0": false,
+    "mean_gain_gt_mean_random_gain": false,
+    "fraction_beats_random_gt_0_50": false,
+    "implied_null_rate_std_gt_0_05": false,
+    "median_implied_null_rate_outside_0_65_0_75": true
+  }
+}

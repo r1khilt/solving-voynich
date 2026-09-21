@@ -562,3 +562,16 @@ Resource use (if applicable):
 - **Artifacts:** `docs/experiments/EXP-0021.md`; `data/manifests/exp0021_split.json`; scorer `src/voynich/rate_free_decode.py`; unit tests (no Voynich scores).
 - **Non-claims:** Not a decipherment. ZL3b test unscored. Full decipherment remains the objective.
 - **Next:** commit+push this prereg, then score once; if FAIL, stop (one notebook diagnosis + next change/falsifier only).
+
+## 2026-09-21 — EXP-0021 scored; confirm FAIL [NB-0038b]
+
+- **Question:** Frozen EXP-0016, rate-free keep iff P(signal)≥0.5, same EXP-0018 confirm pages (seed 4018). Does the kept stream beat full-text predictability and matched-random without collapsing to the rejected 0.70-rate family?
+- **Prereg SHA:** `2771196` (docs + split reuse + scorer committed before scores). Checkpoint sha256 `434d84f80f405f375dee5a2108da667b22e4f622dd3688e2111e89975856a359`; 5,440,829 params; not retrained.
+- **Command:** `.venv/bin/python -m voynich.rate_free_decode --root . --device auto`
+- **Implied rates:** SELECT and CONFIRM both min=median=mean=max=std=**0** (99 / 109 windows). Model kept every character under the frozen threshold.
+- **Confirm:** mean_gain **0.000** (= delete-nothing); mean_random 0.000; fraction_beats_random **0.000**; rate std **0.000**. Failed criteria 1–3 and the std half of criterion 4; median 0.0 is outside [0.65, 0.75] only. **FAIL.**
+- **Diagnosis:** Keep-scores on validation saturate near 1 (typical P(signal) min ≈0.97–1.0), so ≥0.5 deletes nothing. EXP-0018 could force deletions via relative ranking and still failed confirm; absolute threshold transfer fails by refusing to delete. Negative result stands. **Not a decipherment.** Test untouched. No threshold retune after scores.
+- **Durable claim rejected:** Fixed-rate **and** this rate-free decode of EXP-0016 do **not** establish a Voynich null layer.
+- **Next change (notebook only; not started):** Stop further keep-head decode variants of the EXP-0016 checkpoint as a path to a Voynich null-layer claim (absolute and fixed-rate transfers both rejected). Next registered attempt should be a **different mechanism class** that does not rely on transferring this checkpoint’s keep posteriors—ranked candidate: **R5** language-ID / cipher attacks with explicit null controls (or a fresh generative hypothesis under a new id, not another threshold on these logits). **Falsifier:** a preregistered confirm-style gate that requires positive structure gain vs full text **and** matched controls **without** crowning a global high deletion rate on these pages; if the procedure again reduces to delete-nothing or the rejected 0.70-rate family, FAIL and leave the null-layer claim unsupported.
+- **Resources:** Local inference seconds; no paid API; no retrain.
+- **Git:** results + docs + MEMORY/NOTEBOOK after scores.
