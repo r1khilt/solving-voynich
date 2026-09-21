@@ -4,6 +4,7 @@ Last updated: 2026-09-21 (EXP-0011 Finnish holdout FAIL; Voynich not run).
 
 ## Current state
 
+- **Current isolated implementation:** EXP-0012/0013 successor system built on branch `codex/episodic-rule-recovery`; read `docs/research/EPISODIC_IMPLEMENTATION.md` and the registrations. Fresh-task/canonical training, GRU and signed recurrence, explicit edge HMMs, joint-future and temporal causal diagnostics are implemented. Scientific run is pending this source checkpoint; no results yet. Original checkout's concurrent EXP-0011a/b edits are outside this worktree.
 - Phase: **active research and implementation**. The user explicitly authorized prior-work/methods research, corpus acquisition, architecture design, and code; the earlier preparation-only restriction is superseded.
 - **EXP-0011 completed (NB-0023/b):** Finnish held-out latent recovery under cipher+structured nulls **FAILED** the preregistered rule after one registered fix (world-C oversampling + copy features). Neural 70,301 params; near delete-nothing on holdout null rate. Classical ~30% nulls but recon≈matched random. **Voynich label-free not run.** Results: `docs/experiments/EXP-0011-results.md`. Not a decipherment.
 - Latest research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved.

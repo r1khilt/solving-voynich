@@ -6,6 +6,8 @@ A long-term research project aimed at deciphering the Voynich Manuscript by reve
 
 **Current phase: active research and implementation.** The user has authorized continued bounded experiments, corpus research, model training and mechanistic interpretation. Design choices, validation, and completed runs are documented in the notebook; no decipherment claim is made.
 
+**Current isolated implementation:** [episodic rule recovery](docs/research/EPISODIC_IMPLEMENTATION.md), [EXP-0012](docs/experiments/EXP-0012.md) and [EXP-0013](docs/experiments/EXP-0013.md): fresh-task learning, a10.6M-parameter capacity comparison, explicit probabilistic models and joint-future causal tests. Registrations and code are complete; scientific execution/results follow on branch `codex/episodic-rule-recovery`.
+
 ## Start here
 
 - [Current status and agent handoff](docs/CURRENT_STATUS.md): active work, live monitoring paths and continuation instructions.

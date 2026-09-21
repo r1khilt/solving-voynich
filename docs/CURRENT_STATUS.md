@@ -1,5 +1,11 @@
 # Agent handoff and current status
 
+## Active isolated successor implementation
+
+EXP-0012/0013 code and registrations are complete on `codex/episodic-rule-recovery`, in `/Users/rikhil/.codex/worktrees/episodic-rule-recovery/solving-voynich`. See [implementation map](research/EPISODIC_IMPLEMENTATION.md). Final prelaunch checks:421tests plus23subtests passed with MPS enabled; Ruff and whitespace checks pass; seven-condition tiny integration passed. Scientific launch follows the frozen source commit; no result is available at this checkpoint.
+
+Live artifacts after launch: `outputs/EXP-0012/supervisor/status.json`, `gpu.log`, `cpu.log`; analysis has its own `analysis-supervisor/status.json` and `analysis.log`; individual run histories are under `outputs/EXP-0012/runs/`. Do not edit tracked scientific source while the campaign is running. Original checkout's active EXP-0011a/b work is separate and preserved. No manuscript input or paid service in this campaign.
+
 Updated 2026-09-21 after the expanded literature/design review. **All three requested parallel experiments completed and were audited. This review launched no successor experiment.** No Voynich word, language, filler assignment or historical encoding rule has been established. The final manuscript test set remains unscored. Separate concurrent PDF-assessment/generator work in the shared checkout is recorded independently in the notebook and is outside this review checkpoint.
 
 Latest work is a [deep source-based review](research/deep-review-2026-09-21/README.md): 93 records /92 distinct works and resources, with 75 selected-section/documentation records, 17 abstract-only and one fully read short note. Four topic reviews cover architectures, mechanistic interpretation, decipherment and inference theory. A [concrete next design](research/deep-review-2026-09-21/NEXT_DESIGN.md) proposes fresh-key task learning, explicit probabilistic transitions, joint futures and selective causal tests. **Design only: no successor training or scientific implementation occurred.** Before running, register exact controls, new synthetic pools, thresholds and measured resource estimates. The [source audit](research/deep-review-2026-09-21/SOURCE_AUDIT.md) retains corrected metadata, recent-source qualifications and unresolved date conflicts.

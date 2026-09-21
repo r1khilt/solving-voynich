@@ -1,0 +1,162 @@
+{
+  "experiment": "EXP-0012",
+  "schema_version": 1,
+  "data_seed": 12120000,
+  "model_seeds": [
+    121,
+    122,
+    123
+  ],
+  "steps": 1200,
+  "batch_size": 128,
+  "context": 128,
+  "warmup": 32,
+  "learning_rate": 0.0006,
+  "weight_decay": 0.02,
+  "eval_every": 400,
+  "dev_tasks_per_family": 4,
+  "test_tasks_per_family": 8,
+  "sequences_per_task": 8,
+  "joint_prefixes_per_task": 2,
+  "joint_prefix_length": 64,
+  "joint_horizon": 3,
+  "explicit_tasks_per_family": 2,
+  "em_iterations": 25,
+  "run_seconds_cap": 3600,
+  "campaign_seconds_cap": 14400,
+  "explicit_seconds_cap": 1800,
+  "driver_bytes_cap": 34359738368,
+  "conditions": [
+    {
+      "name": "raw_fixed",
+      "regime": "fixed",
+      "model": {
+        "alphabet": 4,
+        "width": 128,
+        "layers": 3,
+        "heads": 4,
+        "ff_width": 384,
+        "context": 256,
+        "dropout": 0,
+        "kind": "transformer",
+        "canonical": false
+      }
+    },
+    {
+      "name": "raw_fresh",
+      "regime": "fresh",
+      "model": {
+        "alphabet": 4,
+        "width": 128,
+        "layers": 3,
+        "heads": 4,
+        "ff_width": 384,
+        "context": 256,
+        "dropout": 0,
+        "kind": "transformer",
+        "canonical": false
+      }
+    },
+    {
+      "name": "canonical_fixed",
+      "regime": "fixed",
+      "model": {
+        "alphabet": 4,
+        "width": 128,
+        "layers": 3,
+        "heads": 4,
+        "ff_width": 384,
+        "context": 256,
+        "dropout": 0,
+        "kind": "transformer",
+        "canonical": true
+      }
+    },
+    {
+      "name": "canonical_fresh",
+      "regime": "fresh",
+      "model": {
+        "alphabet": 4,
+        "width": 128,
+        "layers": 3,
+        "heads": 4,
+        "ff_width": 384,
+        "context": 256,
+        "dropout": 0,
+        "kind": "transformer",
+        "canonical": true
+      }
+    },
+    {
+      "name": "canonical_large",
+      "regime": "fresh",
+      "model": {
+        "alphabet": 4,
+        "width": 384,
+        "layers": 6,
+        "heads": 8,
+        "ff_width": 1024,
+        "context": 256,
+        "dropout": 0,
+        "kind": "transformer",
+        "canonical": true
+      }
+    },
+    {
+      "name": "gru_fresh",
+      "regime": "fresh",
+      "model": {
+        "alphabet": 4,
+        "width": 256,
+        "layers": 2,
+        "heads": 4,
+        "ff_width": 384,
+        "context": 256,
+        "dropout": 0,
+        "kind": "gru",
+        "canonical": false
+      }
+    },
+    {
+      "name": "signed_delta_fresh",
+      "regime": "fresh",
+      "model": {
+        "alphabet": 4,
+        "width": 256,
+        "layers": 2,
+        "heads": 4,
+        "ff_width": 384,
+        "context": 256,
+        "dropout": 0,
+        "kind": "signed_delta",
+        "canonical": false
+      }
+    }
+  ],
+  "contrasts": [
+    [
+      "raw_fresh",
+      "raw_fixed"
+    ],
+    [
+      "canonical_fresh",
+      "canonical_fixed"
+    ],
+    [
+      "canonical_fresh",
+      "raw_fresh"
+    ],
+    [
+      "canonical_large",
+      "canonical_fresh"
+    ],
+    [
+      "gru_fresh",
+      "raw_fresh"
+    ],
+    [
+      "signed_delta_fresh",
+      "gru_fresh"
+    ]
+  ]
+}
