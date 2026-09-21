@@ -1,0 +1,677 @@
+[
+  {
+    "id": "D01",
+    "title": "The Beinecke Cipher (Voynich) Manuscript",
+    "authors": [
+      "Yale University Library"
+    ],
+    "year": null,
+    "version_date": null,
+    "url": "https://beinecke.library.yale.edu/beinecke/collections/beinecke-cipher-voynich-manuscript",
+    "source_type": "institutional_collection_record",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Collection description",
+      "Access and digitization"
+    ],
+    "supported_claims": [
+      "Official manuscript custody and access record; text and illustrations constitute distinct evidence."
+    ],
+    "limitations": [
+      "Catalog descriptions are not a decipherment or proof of everyday use."
+    ],
+    "voynich_implication": "Anchor manuscript identity and image access; do not turn illustrative section names into translated content.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D02",
+    "title": "Voynich MS - Text Analysis - Transliteration of the Text",
+    "authors": [
+      "René Zandbergen"
+    ],
+    "year": null,
+    "version_date": null,
+    "url": "https://www.voynich.nu/transcr.html",
+    "source_type": "transcription_editor_documentation",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Transcription systems",
+      "Transliteration files"
+    ],
+    "supported_claims": [
+      "Transcription alphabets encode different choices about glyph decomposition and uncertainty."
+    ],
+    "limitations": [
+      "A Latin transcription character is not established as an original grapheme or phoneme; mutable web documentation."
+    ],
+    "voynich_implication": "Evaluate hypotheses across transcription views and preserve ambiguous readings rather than force one alphabet.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D03",
+    "title": "The Linguistics of the Voynich Manuscript",
+    "authors": [
+      "Claire L. Bowern",
+      "Luke Lindemann"
+    ],
+    "year": 2021,
+    "version_date": "2020-11-11",
+    "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-011619-030613",
+    "source_type": "peer_reviewed_review",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Publisher abstract and publication metadata"
+    ],
+    "supported_claims": [
+      "Review argues for meaningful language and surveys statistical linguistic approaches."
+    ],
+    "limitations": [
+      "Full author-hosted PDF exceeded the web fetch limit in this pass; detailed evidence is separately read in D04, not attributed to this abstract."
+    ],
+    "voynich_implication": "Treat language as a serious hypothesis, not settled ground truth.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D04",
+    "title": "Character Entropy in Modern and Historical Texts: Comparison Metrics for an Undeciphered Manuscript",
+    "authors": [
+      "Luke Lindemann",
+      "Claire Bowern"
+    ],
+    "year": 2021,
+    "version_date": "2021-05-18",
+    "url": "https://alumniacademy.yale.edu/sites/default/files/2021-07/Character%20Entropy%20in%20Modern%20and%20Historical%20Texts%20Comparison%20Metrics%20for%20an%20Undeciphered%20Manuscript.pdf",
+    "source_type": "author_hosted_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 2-3 corpus and transcription",
+      "Section 4 structure and comparison",
+      "Version note"
+    ],
+    "supported_claims": [
+      "Comparison corpus includes 311 Wikipedia languages, 18 historical texts, multiple transcription and scribal partitions.",
+      "Unusually constrained within-word character placement persists across tested transcription choices."
+    ],
+    "limitations": [
+      "Not exhaustive over languages or encodings; unusual entropy does not identify a cipher.",
+      "Scribe, Currier class and illustration category are correlated."
+    ],
+    "voynich_implication": "Use diplomatic historical corpora and factor scribal/layout differences out of language comparisons.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D05",
+    "title": "Topic Modeling in the Voynich Manuscript",
+    "authors": [
+      "Rachel Sterneck",
+      "Annie Polish",
+      "Claire Bowern"
+    ],
+    "year": 2021,
+    "version_date": "2021-07-06",
+    "url": "https://arxiv.org/abs/2107.02858",
+    "source_type": "preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Section 3 vectorization and clustering",
+      "Scribal/illustration comparisons"
+    ],
+    "supported_claims": [
+      "Text-only page clusters align with combinations of scribal and illustration categories.",
+      "Authors explicitly allow similarity to reflect meaning, encipherment, or both."
+    ],
+    "limitations": [
+      "Bag-of-words topic alignment is not recovered semantics; section-dependent meaningless generators remain competitors."
+    ],
+    "voynich_implication": "Use cross-scribe same-topic comparisons and same-scribe cross-topic comparisons wherever overlap permits.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D06",
+    "title": "Keywords and Co-Occurrence Patterns in the Voynich Manuscript: An Information-Theoretic Analysis",
+    "authors": [
+      "Marcelo A. Montemurro",
+      "Damián H. Zanette"
+    ],
+    "year": 2013,
+    "version_date": null,
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0066344",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Results on informative words",
+      "Discussion",
+      "Materials and Methods"
+    ],
+    "supported_claims": [
+      "Word-distribution information and co-occurrence reveal organization beyond globally shuffled text."
+    ],
+    "limitations": [
+      "Calling co-occurrence semantic requires an additional assumption; global shuffling is a weak alternative to structured nonsemantic generation."
+    ],
+    "voynich_implication": "Require section-aware and copy/mutate null generators before semantic claims.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D07",
+    "title": "A possible generating algorithm of the Voynich manuscript: accompanying self-citation materials",
+    "authors": [
+      "Torsten Timm",
+      "Andreas Schinner"
+    ],
+    "year": 2020,
+    "version_date": null,
+    "url": "https://github.com/TorstenTimm/SelfCitationTextgenerator",
+    "source_type": "author_repository",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Repository description",
+      "Generated text and similarity graph inventory"
+    ],
+    "supported_claims": [
+      "Authors supply a self-citation generator and outputs accompanying their published nonsemantic-generation argument."
+    ],
+    "limitations": [
+      "This pass inspected repository materials, not the full publisher paper or executable implementation.",
+      "Statistical resemblance does not prove historical production or meaninglessness."
+    ],
+    "voynich_implication": "Use a faithful pinned generator as an adversarial negative control, not as an accepted explanation.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D08",
+    "title": "The Naibbe cipher: a substitution cipher that encrypts Latin and Italian as Voynich Manuscript-like ciphertext",
+    "authors": [
+      "Michael A. Greshko"
+    ],
+    "year": 2025,
+    "version_date": "2025-11-26",
+    "url": "https://github.com/greshko/naibbe-cipher",
+    "source_type": "author_repository",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "README",
+      "Encryption/decryption implementation inventory",
+      "Publisher metadata"
+    ],
+    "supported_claims": [
+      "Author provides reversible verbose homophonic encryption and decryption with Voynich-like statistics."
+    ],
+    "limitations": [
+      "Publisher PDF fetch failed in this pass; repository abstract and implementation inventory were read.",
+      "Not a Voynich decipherment and not a match to all manuscript properties."
+    ],
+    "voynich_implication": "Use as a difficult semantic positive control paired against nonsemantic generators.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D09",
+    "title": "Decoding Anagrammed Texts Written in an Unknown Language and Script",
+    "authors": [
+      "Bradley Hauer",
+      "Grzegorz Kondrak"
+    ],
+    "year": 2016,
+    "version_date": "2016-04",
+    "url": "https://aclanthology.org/Q16-1006/",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Task formulation",
+      "Sections 4-5 synthetic and Voynich applications"
+    ],
+    "supported_claims": [
+      "Models substitution plus within-word anagramming, optional missing vowels, and language selection from supplied comparison texts."
+    ],
+    "limitations": [
+      "Voynich Hebrew suggestion is conditional on this flexible family; synthetic accuracy is not manuscript decipherment.",
+      "Changing order, restoring vowels and dictionary search increase chances of plausible accidental output."
+    ],
+    "voynich_implication": "Every added decoder freedom must be costed and evaluated against wrong-language and nonsemantic controls.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D10",
+    "title": "What We Know About The Voynich Manuscript",
+    "authors": [
+      "Sravana Reddy",
+      "Kevin Knight"
+    ],
+    "year": 2011,
+    "version_date": "2011-06",
+    "url": "https://aclanthology.org/W11-1511/",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Line-edge analysis",
+      "Page-level structure",
+      "Conclusion"
+    ],
+    "supported_claims": [
+      "Documents linguistic-looking and atypical properties at different scales, including line-edge distributions."
+    ],
+    "limitations": [
+      "Descriptive similarities do not uniquely choose linguistic or hoax accounts; some historical statements predate later scholarship."
+    ],
+    "voynich_implication": "Model physical line position explicitly and avoid using one statistic as a language detector.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D11",
+    "title": "The Copiale Cipher",
+    "authors": [
+      "Kevin Knight",
+      "Beáta Megyesi",
+      "Christiane Schaefer"
+    ],
+    "year": 2011,
+    "version_date": "2011-06",
+    "url": "https://aclanthology.org/W11-1202/",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 3-5 clustering and decipherment",
+      "Recovered substitution table",
+      "Conclusion"
+    ],
+    "supported_claims": [
+      "Successful decipherment combined context clustering, language evidence, human corrections and a reusable mapping with homophones, multiletter symbols, spaces and a repeat operator."
+    ],
+    "limitations": [
+      "Early choice of informative versus null-like symbols was wrong; human expertise was central.",
+      "This historical success is not a ciphertext-only neural result."
+    ],
+    "voynich_implication": "Mixed typed operations are a realistic control family; demand globally reusable rules rather than sentence improvisation.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D12",
+    "title": "Can Sequence-to-Sequence Models Crack Substitution Ciphers?",
+    "authors": [
+      "Nada Aldarrab",
+      "Jonathan May"
+    ],
+    "year": 2021,
+    "version_date": null,
+    "url": "https://aclanthology.org/2021.acl-long.561/",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Section 3 model and frequency encoding",
+      "Synthetic and historical evaluation"
+    ],
+    "supported_claims": [
+      "Frequency-rank encoding addresses changing symbol identities in supervised random-key substitution tasks.",
+      "Model is trained on ciphertext/plaintext pairs and can accommodate character edits."
+    ],
+    "limitations": [
+      "No language label is different from no language training; substitution is a specified family."
+    ],
+    "voynich_implication": "Baseline raw-symbol training against canonicalized representations; calibrate edit tolerance before manuscript use.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D13",
+    "title": "Decipherment as Regression: Solving Historical Substitution Ciphers by Learning Symbol Recurrence Relations",
+    "authors": ["Nishant Kambhatla", "Logan Born", "Anoop Sarkar"],
+    "year": 2023,
+    "version_date": "2023-05",
+    "url": "https://aclanthology.org/2023.findings-eacl.160/",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 3-8",
+      "Synthetic and historical results",
+      "Unknown plaintext language"
+    ],
+    "supported_claims": [
+      "First-occurrence indexing removes arbitrary cipher symbol names; training uses two million synthetic homophonic pairs.",
+      "English-only zero-shot Latin example has 45.14% symbol error; three manual interventions reduce this to 3.89%."
+    ],
+    "limitations": [
+      "Recurrence preserves equality structure, not arbitrary homophone regrouping or cipher-family invariance.",
+      "Supervised plaintext exposure and human intervention materially affect transfer claims."
+    ],
+    "voynich_implication": "Most direct candidate for testing whether our failed unseen-key transfer comes from representation rather than insufficient size.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D14",
+    "title": "ALICE: An Interpretable Neural Architecture for Generalization in Substitution Ciphers",
+    "authors": [
+      "Jeff Shen",
+      "Lindsay M. Smith"
+    ],
+    "year": 2025,
+    "version_date": "2025-09-25",
+    "url": "https://arxiv.org/html/2509.07282v2",
+    "source_type": "preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 1-3",
+      "Symbol pooling",
+      "Bijective decoding",
+      "Ablations and multilingual evaluation"
+    ],
+    "supported_claims": [
+      "Encoder transformer pools by symbol; optional Gumbel-Sinkhorn head produces inspectable permutations.",
+      "Training preserves spaces/punctuation and supplies plaintext/ciphertext pairs under random bijections."
+    ],
+    "limitations": [
+      "Bijective head is less accurate; dynamic embeddings do not improve the reported comparison.",
+      "Layerwise early exits are not causal identification of an algorithm; a bijection is unverified for Voynich."
+    ],
+    "voynich_implication": "Borrow symbol-consistent outputs as a controlled solver variant, not a manuscript-wide assumption.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D15",
+    "title": "Unsupervised Cipher Cracking Using Discrete GANs",
+    "authors": ["Aidan N. Gomez", "Sicong Huang", "Ivan Zhang", "Bryan M. Li", "Muhammad Osama", "Lukasz Kaiser"],
+    "year": 2018,
+    "version_date": "2018-01-15",
+    "url": "https://arxiv.org/abs/1801.04883v1",
+    "source_type": "conference_paper_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "CycleGAN objective",
+      "Discrete GAN method",
+      "Cipher task setup"
+    ],
+    "supported_claims": [
+      "Learns mappings between unpaired plaintext and ciphertext distributions using adversarial and cycle losses."
+    ],
+    "limitations": [
+      "Unpaired still includes plaintext samples; cycle consistency does not uniquely identify historically correct semantics."
+    ],
+    "voynich_implication": "Defer until candidate language/channel assumptions and null calibration are fixed.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D16",
+    "title": "Neural Decipherment via Minimum-Cost Flow: From Ugaritic to Linear B",
+    "authors": [
+      "Jiaming Luo",
+      "Yuan Cao",
+      "Regina Barzilay"
+    ],
+    "year": 2019,
+    "version_date": null,
+    "url": "https://aclanthology.org/P19-1303/",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Linguistic assumptions",
+      "Neural alignment and flow formulation",
+      "Evaluation"
+    ],
+    "supported_claims": [
+      "Joint sequence alignment and global flow constraints identify cognates using known related-language vocabularies."
+    ],
+    "limitations": [
+      "67.3% refers to Linear B cognates in the evaluated setting, not complete free translation.",
+      "Known related language and vocabulary proximity are substantial supervision."
+    ],
+    "voynich_implication": "Use global coverage and correspondence constraints only in a separately labeled cognate hypothesis.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D17",
+    "title": "Deciphering Undersegmented Ancient Scripts Using Phonetic Prior",
+    "authors": [
+      "Jiaming Luo",
+      "Frederik Hartmann",
+      "Enrico Santus",
+      "Regina Barzilay",
+      "Yuan Cao"
+    ],
+    "year": 2021,
+    "version_date": "2021-02",
+    "url": "https://aclanthology.org/2021.tacl-1.5/",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Section 3 generative framework and objective",
+      "Section 4 setup",
+      "Language closeness results"
+    ],
+    "supported_claims": [
+      "Joint segmentation/cognate alignment uses IPA geometry, monotone edits, coverage and sound-preservation regularizers.",
+      "Language comparison need not assume one predetermined closest relative."
+    ],
+    "limitations": [
+      "Requires supplied known-language vocabularies and an alphabetic lost-script assumption; not arbitrary cipher recovery."
+    ],
+    "voynich_implication": "A useful segmentation/noisy-channel template, with phonetic priors switched off unless evidence supports them.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D18",
+    "title": "Decipherment of Lost Ancient Scripts as Combinatorial Optimisation using Coupled Simulated Annealing",
+    "authors": [
+      "Fabio Tamburini"
+    ],
+    "year": 2023,
+    "version_date": "2023-07-14",
+    "url": "https://aclanthology.org/2023.cawl-1.10/",
+    "source_type": "peer_reviewed_workshop_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Problem scope",
+      "Mapping representation",
+      "Lexicon matching and optimization"
+    ],
+    "supported_claims": [
+      "Explicit k-permutation representation accommodates null, one-to-many and many-to-one sign mappings."
+    ],
+    "limitations": [
+      "Benchmark concerns cognate matching with known-language lexica, not unconstrained sentence decipherment.",
+      "Greater mapping flexibility increases ambiguity."
+    ],
+    "voynich_implication": "A transparent bounded-search baseline for multigraph channels; charge every extra operation.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D19",
+    "title": "Decipherment of Historical Manuscript Images",
+    "authors": ["Xusen Yin", "Nada Aldarrab", "Beáta Megyesi", "Kevin Knight"],
+    "year": 2019,
+    "version_date": "2019-06-02",
+    "url": "https://arxiv.org/abs/1810.04297v3",
+    "source_type": "conference_paper_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Data and preprocessing",
+      "Segmentation and clustering",
+      "Joint model setup"
+    ],
+    "supported_claims": [
+      "Combines unsupervised image segmentation, glyph clustering and probabilistic decipherment on known historical ciphers."
+    ],
+    "limitations": [
+      "Copiale nomenclators are removed; Borg plaintext fragments are removed; evaluation conditions simplify full manuscripts.",
+      "Language-model and cipher assumptions supply information absent in Voynich."
+    ],
+    "voynich_implication": "Retain alternative glyph hypotheses jointly with channel inference; benchmark simplified cases transparently.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D20",
+    "title": "Joint Transcription and Decryption of Images of Encrypted Handwritten Documents: A Comparison with the Traditional Pipeline",
+    "authors": [
+      "Marino Oliveros-Blanco",
+      "Lei Kang",
+      "Alicia Fornés",
+      "Beáta Megyesi"
+    ],
+    "year": 2026,
+    "version_date": "2026-06-26",
+    "url": "https://arxiv.org/html/2606.27700v1",
+    "source_type": "conference_paper_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 3-5 synthetic data and architectures",
+      "Experimental comparison"
+    ],
+    "supported_claims": [
+      "Direct image-to-German training is compared with transcription/decryption pipeline on Copiale; synthetic inputs are generated using the known cipher."
+    ],
+    "limitations": [
+      "Supervised known-key Copiale rendering is not discovery of an unknown script or language.",
+      "No pretrained weights does not mean absence of plaintext supervision."
+    ],
+    "voynich_implication": "Use for an image-noise calibration benchmark; do not train direct Voynich-to-English outputs.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D21",
+    "title": "Attention-Augmented LSTMs for Automatic Homophonic Ciphertext Decipherment",
+    "authors": [
+      "Micaella Bruton",
+      "Meriem Beloucif",
+      "Beáta Megyesi"
+    ],
+    "year": 2026,
+    "version_date": "2026-06-03",
+    "url": "https://arxiv.org/html/2606.05078v1",
+    "source_type": "preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 3-4",
+      "Shared key-space definition",
+      "Training and evaluation"
+    ],
+    "supported_claims": [
+      "Every ciphertext code has the same plaintext value across the dataset; keys vary only in chosen subsets.",
+      "Near-perfect reported results concern this shared-pool supervised task."
+    ],
+    "limitations": [
+      "This is explicitly not general homophonic cryptanalysis with independently reassigned keys."
+    ],
+    "voynich_implication": "Reject headline accuracy as evidence for unseen-key recovery; preserve as an easy diagnostic control only.",
+    "decision": "reject_for_now",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D22",
+    "title": "DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning",
+    "authors": [
+      "Kevin Ellis", "Catherine Wong", "Maxwell Nye", "Mathias Sable-Meyer", "Luc Cary", "Lucas Morales", "Luke Hewitt", "Armando Solar-Lezama", "Joshua B. Tenenbaum"
+    ],
+    "year": 2021,
+    "version_date": "2020-06-15 (v1; conference publication 2021)",
+    "url": "https://arxiv.org/abs/2006.08381v1",
+    "source_type": "research_paper_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Wake/sleep program learning",
+      "Description-length prior",
+      "Task likelihood and library abstraction"
+    ],
+    "supported_claims": [
+      "Neurally guided search learns reusable program libraries scored by task likelihood and a description-length prior."
+    ],
+    "limitations": [
+      "Requires a domain-specific language and evaluable task likelihood; no Voynich decipherment demonstrated. Same work as T13."
+    ],
+    "voynich_implication": "Use as inspiration for explicit bounded decoder-program search; minimal programs need not encode meaning.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D23",
+    "title": "A Generative Grammar Underlying the Voynich Manuscript, the Pastiche Hypothesis: Evidence from Large Language Models",
+    "authors": [
+      "Nicolas Turenne"
+    ],
+    "year": 2026,
+    "version_date": "2026-07-28",
+    "url": "https://arxiv.org/abs/2609.20835",
+    "source_type": "preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Abstract and submission metadata",
+      "Section 9 rare initial-letter events"
+    ],
+    "supported_claims": [
+      "Proposes probabilistic grammar and LLM-assisted botanical comparison as evidence for structured pastiche.",
+      "Section 9 starts from independent uniformly distributed initials; displayed alphabet-size references are inconsistent."
+    ],
+    "limitations": [
+      "Metadata conflict: arXiv identifier has 2609 prefix while page reports submission 2026-07-28.",
+      "Rejecting that simple null does not reject language or encipherment; visual similarity is not a decipherment."
+    ],
+    "voynich_implication": "Reproduce only under empirical, section-aware nulls and independent image annotation before taking the conclusion seriously.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D24",
+    "title": "The Voice But Not the Song: A Shorthand Hypothesis and the Statistical Fingerprint of the Voynich Manuscript",
+    "authors": [
+      "Matthew Ruckman"
+    ],
+    "year": 2026,
+    "version_date": "2026-04",
+    "url": "https://mattruckman.com/papers/voice-but-not-the-song/voice-but-not-the-song.pdf",
+    "source_type": "author_hosted_preprint",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract and introductory hypothesis"
+    ],
+    "supported_claims": [
+      "Author proposes Italian syllabic shorthand and reports permutation-tested candidate words while explicitly denying complete decipherment."
+    ],
+    "limitations": [
+      "Full optimization/search degrees of freedom and permutation-selection pipeline not audited here.",
+      "Author index labels March 2026; retrieved PDF says April 2026; no frozen version identifier located."
+    ],
+    "voynich_implication": "Independent replication lead only; rerun the complete selection pipeline for every null and language.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "D25",
+    "title": "The Voynich manuscript: Symbol roles revisited",
+    "authors": ["Vladimír Matlach", "Barbora Anna Janečková", "Daniel Dostál"],
+    "year": 2022,
+    "version_date": "2022-01-27",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0260948",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Symbol recurrence analysis",
+      "Transcription preprocessing",
+      "Ligature hypothesis methods"
+    ],
+    "supported_claims": [
+      "Analyzes symbol recurrence intervals and proposed ligature roles across Voynich and comparison texts."
+    ],
+    "limitations": [
+      "Dependence and nonstationarity can affect recurrence statistics; ligature candidates are not decoded values."
+    ],
+    "voynich_implication": "Include transcriber-sensitive segmentation and section-conditioned controls when proposing glyph roles.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  }
+]

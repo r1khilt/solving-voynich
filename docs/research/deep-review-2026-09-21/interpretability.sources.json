@@ -1,0 +1,771 @@
+[
+  {
+    "id": "M01",
+    "title": "Finding Alignments Between Interpretable Causal Variables and Distributed Neural Representations",
+    "authors": [
+      "Atticus Geiger",
+      "Zhengxuan Wu",
+      "Christopher Potts",
+      "Thomas Icard",
+      "Noah D. Goodman"
+    ],
+    "year": 2024,
+    "version_date": "2023-11-21",
+    "url": "https://arxiv.org/html/2303.02536v3",
+    "source_type": "primary_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Introduction",
+      "3 Methods",
+      "task descriptions"
+    ],
+    "supported_claims": [
+      "DAS learns orthogonal alignments using supervised interchange interventions; demonstrations use hierarchical equality and natural-language inference."
+    ],
+    "limitations": [
+      "The high-level variables and counterfactual answers are supplied; alignment is not unsupervised discovery of a generator."
+    ],
+    "voynich_implication": "Retain low-rank causal alignment as synthetic calibration; demand new-key transition transfer before manuscript interpretation.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M02",
+    "title": "Causal Abstraction: A Theoretical Foundation for Mechanistic Interpretability",
+    "authors": [
+      "Atticus Geiger",
+      "Duligur Ibeling",
+      "Amir Zur",
+      "Maheep Chaudhary",
+      "Sonakshi Chauhan",
+      "Jing Huang",
+      "Aryaman Arora",
+      "Zhengxuan Wu",
+      "Noah Goodman",
+      "Christopher Potts",
+      "Thomas Icard"
+    ],
+    "year": 2025,
+    "version_date": null,
+    "url": "https://jmlr.org/papers/v26/23-0058.html",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "JMLR abstract"
+    ],
+    "supported_claims": [
+      "Formalizes mechanism transformations and graded causal faithfulness across several intervention methods."
+    ],
+    "limitations": [
+      "Abstract inspected here; the 64-page derivations were not audited. Formal faithfulness remains relative to the chosen abstraction and intervention family."
+    ],
+    "voynich_implication": "Specify the proposed state variable, update rule and intervention correspondence before claiming a circuit.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M03",
+    "title": "Is This the Subspace You Are Looking For? An Interpretability Illusion for Subspace Activation Patching",
+    "authors": [
+      "Aleksandar Makelov",
+      "Georg Lange",
+      "Atticus Geiger",
+      "Neel Nanda"
+    ],
+    "year": 2024,
+    "version_date": null,
+    "url": "https://openreview.net/pdf?id=Ebt7JgMHv1",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "ICLR 2024 abstract",
+      "arXiv v2 abstract for version comparison"
+    ],
+    "supported_claims": [
+      "Successful output changes can arise through dormant pathways, so steering and natural computation can diverge."
+    ],
+    "limitations": [
+      "The definition and empirical interpretation are disputed by M04. The ICLR author list differs from the older arXiv record; do not merge versions silently."
+    ],
+    "voynich_implication": "Keep output-span, shuffled-supervision, untrained-model and earlier multi-step controls together.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M04",
+    "title": "A Reply to Makelov et al. (2023)'s 'Interpretability Illusion' Arguments",
+    "authors": [
+      "Zhengxuan Wu",
+      "Atticus Geiger",
+      "Jing Huang",
+      "Aryaman Arora",
+      "Thomas Icard",
+      "Christopher Potts",
+      "Noah D. Goodman"
+    ],
+    "year": 2024,
+    "version_date": "2024-01-23",
+    "url": "https://arxiv.org/html/2401.12631v1",
+    "source_type": "primary_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2 Nullspace decomposition",
+      "3 Toy example",
+      "4 task and evaluation discussion"
+    ],
+    "supported_claims": [
+      "Shows a proposed illusion diagnostic can reject an intuitive valid direction; multiple causal abstractions can coexist."
+    ],
+    "limitations": [
+      "A rebuttal of one diagnostic does not make arbitrary steering faithful; task, alignment and intervention support still matter."
+    ],
+    "voynich_implication": "Do not use nullspace removal alone as a universal veto. Test a whole intervention algebra and held-out transitions.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M05",
+    "title": "Towards Best Practices of Activation Patching in Language Models: Metrics and Methods",
+    "authors": [
+      "Fred Zhang",
+      "Neel Nanda"
+    ],
+    "year": 2024,
+    "version_date": "2024-01-17",
+    "url": "https://arxiv.org/html/2309.16042v2",
+    "source_type": "primary_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2.1 patching, corruption and metrics",
+      "2.2 task settings",
+      "recommendations excerpt"
+    ],
+    "supported_claims": [
+      "Localization results depend on corruption and scoring choices."
+    ],
+    "limitations": [
+      "Semantic replacement is controlled in their tasks; manuscript donors have no known semantic answer. Metric recommendations are task-dependent."
+    ],
+    "voynich_implication": "Pre-register donor matching and report absolute KL/loss changes, not only normalized recovery.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M06",
+    "title": "Circuit Tracing: Revealing Computational Graphs in Language Models",
+    "authors": [
+      "Emmanuel Ameisen",
+      "Jack Lindsey",
+      "Adam Pearce",
+      "Wes Gurnee",
+      "Nicholas L. Turner",
+      "Brian Chen",
+      "Craig Citro",
+      "David Abrahams",
+      "Shan Carter",
+      "Basil Hosmer",
+      "Jonathan Marcus",
+      "Michael Sklar",
+      "Adly Templeton",
+      "Trenton Bricken",
+      "Callum McDougall",
+      "Hoagy Cunningham",
+      "Thomas Henighan",
+      "Adam Jermyn",
+      "Andy Jones",
+      "Andrew Persic",
+      "Zhenyi Qi",
+      "T. Ben Thompson",
+      "Sam Zimmerman",
+      "Kelley Rivoire",
+      "Tom Conerly",
+      "Chris Olah",
+      "Joshua Batson"
+    ],
+    "year": 2025,
+    "version_date": "2025-03-27",
+    "url": "https://www.transformer-circuits.pub/2025/attribution-graphs/methods.html",
+    "source_type": "official_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Architecture equations",
+      "Replacement versus local replacement model",
+      "Limitations",
+      "CLT compute appendix"
+    ],
+    "supported_claims": [
+      "Cross-layer transcoders replace MLP computations with sparse features; attribution graphs expose prompt-specific dependencies."
+    ],
+    "limitations": [
+      "The local attribution graph freezes attention, unlike the ordinary replacement forward pass; reconstruction, inhibition and substitute-mechanism faithfulness remain limitations. Frontier CLT training is expensive."
+    ],
+    "voynich_implication": "Use a small frozen-model pilot only after predictive-state tests succeed; measure intervention mismatch and retain error nodes.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M07",
+    "title": "A Toy Model of Mechanistic (Un)Faithfulness",
+    "authors": [
+      "Chris Olah"
+    ],
+    "year": 2025,
+    "version_date": "2025-08-07",
+    "url": "https://www.transformer-circuits.pub/2025/faithfulness-toy-model/index.html",
+    "source_type": "official_preliminary_research_note",
+    "read_depth": "full_text",
+    "sections_read": [
+      "Full note, including repeated-data toy and Jacobian matching"
+    ],
+    "supported_claims": [
+      "A sparse transcoder can memorize repeated points absent from the original absolute-value mechanism; Jacobian matching mitigates this toy failure."
+    ],
+    "limitations": [
+      "Explicitly preliminary; matching gradients can itself be gamed and exact matching may preserve superposition artifacts."
+    ],
+    "voynich_implication": "Our repeated tiny corpus makes this a direct warning: compare intervention responses, not just reconstruction loss.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M08",
+    "title": "Tracing Attention Computation Through Feature Interactions",
+    "authors": [
+      "Harish Kamath",
+      "Emmanuel Ameisen",
+      "Isaac Kauvar",
+      "Rodrigo Luger",
+      "Wes Gurnee",
+      "Adam Pearce",
+      "Sam Zimmerman",
+      "Joshua Batson",
+      "Thomas Conerly",
+      "Chris Olah",
+      "Jack Lindsey"
+    ],
+    "year": 2025,
+    "version_date": "2025-07-31",
+    "url": "https://www.transformer-circuits.pub/2025/attention-qk/index.html",
+    "source_type": "official_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Problem statement",
+      "High-level strategy",
+      "QK decomposition excerpt"
+    ],
+    "supported_claims": [
+      "Bilinear query-key feature interactions explain attention scores; head loadings connect those scores with graph edges."
+    ],
+    "limitations": [
+      "Retrieved primary-source excerpts rather than every derivation; pre-softmax attribution does not alone establish complete causal computation."
+    ],
+    "voynich_implication": "If tracing prefix-state updates, explicitly test attention routing as well as MLP features.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M09",
+    "title": "Sparse Crosscoders for Cross-Layer Features and Model Diffing",
+    "authors": [
+      "Jack Lindsey",
+      "Adly Templeton",
+      "Jonathan Marcus",
+      "Thomas Conerly",
+      "Joshua Batson",
+      "Christopher Olah"
+    ],
+    "year": 2024,
+    "version_date": "2024-10-25",
+    "url": "https://www.transformer-circuits.pub/2024/crosscoders/index.html",
+    "source_type": "official_preliminary_research_note",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2 Crosscoder basics",
+      "3.1 performance comparison",
+      "faithfulness caveat"
+    ],
+    "supported_claims": [
+      "Shared sparse features can reconstruct several layers or models and reduce duplicate-feature descriptions."
+    ],
+    "limitations": [
+      "Preliminary note; shared representations can have different downstream roles, and crosscoder graphs can differ from original mechanisms."
+    ],
+    "voynich_implication": "Compare seeds with shared dictionaries as a descriptive aid, then independently test functional substitution.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M10",
+    "title": "SAEBench: A Comprehensive Benchmark for Sparse Autoencoders in Language Model Interpretability",
+    "authors": [
+      "Adam Karvonen",
+      "Can Rager",
+      "Johnny Lin",
+      "Curt Tigges",
+      "Joseph Bloom",
+      "David Chanin",
+      "Yeu-Tong Lau",
+      "Eoin Farrell",
+      "Callum McDougall",
+      "Kola Ayonrinde",
+      "Matthew Wearden",
+      "Arthur Conmy",
+      "Samuel Marks",
+      "Neel Nanda"
+    ],
+    "year": 2025,
+    "version_date": "2025-03-12",
+    "url": "https://arxiv.org/html/2503.09532v1",
+    "source_type": "primary_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "3.1 evaluation design",
+      "3.2 reconstruction, auto-interpretation and probing metrics"
+    ],
+    "supported_claims": [
+      "Seven metric families across over 200 SAEs show reconstruction proxies need not track practical usefulness."
+    ],
+    "limitations": [
+      "Several metrics rely on English labels or automatic explanations unavailable for unknown text. No metric alone establishes a state-update mechanism."
+    ],
+    "voynich_implication": "Use reconstruction, cross-seed stability, synthetic ground truth and causal transfer separately; no single SAE quality score.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M11",
+    "title": "Sparse Autoencoders Do Not Find Canonical Units of Analysis",
+    "authors": [
+      "Patrick Leask",
+      "Bart Bussmann",
+      "Michael Pearce",
+      "Joseph Bloom",
+      "Curt Tigges",
+      "Noura Al Moubayed",
+      "Lee Sharkey",
+      "Neel Nanda"
+    ],
+    "year": 2025,
+    "version_date": "2025-02-07",
+    "url": "https://arxiv.org/abs/2502.04878",
+    "source_type": "primary_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract"
+    ],
+    "supported_claims": [
+      "Stitching and meta-SAEs challenge completeness and atomicity of SAE features."
+    ],
+    "limitations": [
+      "Does not imply SAEs are useless or all decompositions equivalent; dictionary size changes the analytical grain."
+    ],
+    "voynich_implication": "Never label an SAE neuron as a discovered historical character class without competing resolutions and controls.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M12",
+    "title": "Toward Identifiable Sparse Autoencoders",
+    "authors": [
+      "Walter Nelson",
+      "Theofanis Karaletsos",
+      "Francesco Locatello"
+    ],
+    "year": 2026,
+    "version_date": "2026-05-29",
+    "url": "https://arxiv.org/pdf/2605.31245",
+    "source_type": "primary_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "3.1 Identifiability definition",
+      "3.2 Bidirectional features",
+      "3.3 Dictionary conditioning",
+      "3.4 multistep encoder",
+      "4 synthetic experiment table and stability metrics",
+      "Table 2 real-activation tradeoffs (audit)"
+    ],
+    "supported_claims": [
+      "Introduces signed codes, approximate restricted-isometry regularization and multistep encoding; gains differ by regime and metric, with strong synthetic improvements and mixed real-activation stability/reconstruction tradeoffs."
+    ],
+    "limitations": [
+      "Run-to-run statistical identifiability differs from identifying a true generative concept. Distributional and dictionary assumptions are material. Real-activation reconstruction improvement can accompany worse dictionary cosine/IoU stability."
+    ],
+    "voynich_implication": "Pilot only against ordinary TopK and PCA on known ground truth; measure codes and subspaces, not decoder cosine alone.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M13",
+    "title": "Unstable Features, Reproducible Subspaces: Understanding Seed Dependence in Sparse Autoencoders",
+    "authors": [
+      "Gleb Gerasimov",
+      "Timofei Rusalev",
+      "Nikita Balagansky",
+      "Daniil Laptev",
+      "Vadim Kurochkin",
+      "Daniil Gavrilov"
+    ],
+    "year": 2026,
+    "version_date": "2026-06-10",
+    "url": "https://arxiv.org/html/2606.12138v1",
+    "source_type": "primary_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "3-4 definitions and matching",
+      "5 masking and 96-seed setup",
+      "6 subspace/synthetic analysis",
+      "7 training/random-model controls"
+    ],
+    "supported_claims": [
+      "Individual instability can coexist with reproducible low-rank subspaces; stable features carry greater measured functional effects in their settings."
+    ],
+    "limitations": [
+      "Cosine thresholds and masking define the measurements; 96-seed GPT-2 and other tested models do not establish tiny-corpus behavior."
+    ],
+    "voynich_implication": "Test feature matching, principal-angle subspace agreement and functional substitutions across our seeds; retain random-model controls.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M14",
+    "title": "Transformers Represent Belief State Geometry in their Residual Stream",
+    "authors": [
+      "Adam S. Shai",
+      "Sarah E. Marzen",
+      "Lucas Teixeira",
+      "Alexander Gietelink Oldenziel",
+      "Paul M. Riechers"
+    ],
+    "year": 2024,
+    "version_date": "2024-11-11",
+    "url": "https://arxiv.org/html/2405.15943v2",
+    "source_type": "primary_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2.3 supervised affine readout",
+      "3.1 Mess3 controls",
+      "3.2 RRXOR and multi-layer representation"
+    ],
+    "supported_claims": [
+      "Known HMM beliefs can be linearly read from trained transformer activations; RRXOR requires information across layers beyond immediate forecasts."
+    ],
+    "limitations": [
+      "Readouts use oracle beliefs. This version does not establish blind generator identification or a faithful state-update circuit."
+    ],
+    "voynich_implication": "Diagnose RRXOR across layers and joint futures, rather than equating failed final-layer clustering with absent information.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M15",
+    "title": "Sparse Autoencoders Can Interpret Randomly Initialized Transformers",
+    "authors": [
+      "Thomas Heap",
+      "Tim Lawson",
+      "Lucy Farnik",
+      "Laurence Aitchison"
+    ],
+    "year": 2025,
+    "version_date": "2025-01-29",
+    "url": "https://arxiv.org/html/2501.17727v1",
+    "source_type": "primary_preprint",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract"
+    ],
+    "supported_claims": [
+      "Automatic feature explanations and common SAE quality measures can look similar on random and trained transformers."
+    ],
+    "limitations": [
+      "Abstract-level here; this challenges the sufficiency of those metrics rather than every causal use of SAEs."
+    ],
+    "voynich_implication": "Every automatic naming or saliency claim needs an equally processed untrained backbone and held-out behavioral test.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M16",
+    "title": "Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations",
+    "authors": [
+      "Kit Fraser-Taliente",
+      "Subhash Kantamneni",
+      "Euan Ong",
+      "Dan Mossing",
+      "Christina Lu",
+      "Paul C. Bogdan",
+      "Emmanuel Ameisen",
+      "James Chen",
+      "Dzmitry Kishylau",
+      "Adam Pearce",
+      "Julius Tarng",
+      "Alex Wu",
+      "Jeff Wu",
+      "Yang Zhang",
+      "Daniel M. Ziegler",
+      "Evan Hubinger",
+      "Joshua Batson",
+      "Jack Lindsey",
+      "Samuel Zimmerman",
+      "Samuel Marks"
+    ],
+    "year": 2026,
+    "version_date": "2026-05-07",
+    "url": "https://transformer-circuits.pub/2026/nla/",
+    "source_type": "official_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Introduction",
+      "training overview",
+      "future-work limitations excerpt"
+    ],
+    "supported_claims": [
+      "An activation verbalizer and reconstructor use a natural-language bottleneck and reconstruction-driven reinforcement learning."
+    ],
+    "limitations": [
+      "Pretrained language-capable modules supply semantic structure. Activation reconstruction is not a guarantee that descriptions recover unknown plaintext."
+    ],
+    "voynich_implication": "Defer as a Voynich decoder; at most use independently tested descriptions of known synthetic variables.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M17",
+    "title": "Characterizing interference weights in a tiny language model",
+    "authors": [
+      "Nicholas L. Turner",
+      "Jeffrey Wu",
+      "Joshua Batson"
+    ],
+    "year": 2026,
+    "version_date": "2026-08-21",
+    "url": "https://www.transformer-circuits.pub/2026/interference_effectiveness_helpfulness/index.html",
+    "source_type": "official_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Introduction",
+      "Training details",
+      "Fisher metric limitation"
+    ],
+    "supported_claims": [
+      "Studies virtual-weight effects in a 2.9M-parameter one-layer transformer without normalization or biases."
+    ],
+    "limitations": [
+      "A single final-checkpoint local Fisher metric is narrower than global mechanism recovery; architecture and corpus differ from ours."
+    ],
+    "voynich_implication": "Consider virtual-weight perturbation as a small-model diagnostic, calibrated against actual held-out interventions.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M18",
+    "title": "Jacobian Sparse Autoencoders: Sparsify Computations, Not Just Activations",
+    "authors": [
+      "Lucy Farnik",
+      "Tim Lawson",
+      "Conor Houghton",
+      "Laurence Aitchison"
+    ],
+    "year": 2025,
+    "version_date": "2025-02-25",
+    "url": "https://arxiv.org/html/2502.18147v1",
+    "source_type": "primary_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "4.1 paired-SAE objective",
+      "4.2 sparse Jacobian setup",
+      "6 limitations and 7 conclusion"
+    ],
+    "supported_claims": [
+      "Paired input/output SAEs penalize the Jacobian's density in feature coordinates, targeting sparse computation rather than only sparse activations."
+    ],
+    "limitations": [
+      "Sparse Jacobians need not imply sparse computational graphs; initial method addresses a single MLP, not complete temporal dynamics."
+    ],
+    "voynich_implication": "A possible local comparator to transcoders, with finite interventions and random-model controls; do not mistake gradient sparsity for a recovered algorithm.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M19",
+    "title": "The Belief State Transformer",
+    "authors": [
+      "Edward S. Hu",
+      "Kwangjun Ahn",
+      "Qinghua Liu",
+      "Haoran Xu",
+      "Manan Tomar",
+      "Ada Langford",
+      "Jayden Teoh",
+      "Bryon Xu",
+      "David Yan",
+      "Dinesh Jayaraman",
+      "Alex Lamb",
+      "John Langford"
+    ],
+    "year": 2025,
+    "version_date": "2025-09-16",
+    "url": "https://arxiv.org/html/2410.23506v3",
+    "source_type": "primary_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "3 star-graph mechanism and ablations",
+      "4.1 ideal-model sufficiency theorem"
+    ],
+    "supported_claims": [
+      "Forward-prefix/backward-suffix training and two prediction objectives improve tested planning tasks; an ideal conditional-prediction theorem yields a future-sufficient representation."
+    ],
+    "limitations": [
+      "The theorem assumes exact conditionals over all supported prefixes/suffixes. It does not establish unique generator recovery, finite-data optimization success, or a minimal historical state."
+    ],
+    "voynich_implication": "Useful objective ablation for parity/delayed-information controls; causal evaluation must hide the future and compare equal training information.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M20",
+    "title": "Extracting Automata from Recurrent Neural Networks Using Queries and Counterexamples",
+    "authors": [
+      "Gail Weiss",
+      "Yoav Goldberg",
+      "Eran Yahav"
+    ],
+    "year": 2018,
+    "version_date": null,
+    "url": "https://proceedings.mlr.press/v80/weiss18a/weiss18a.pdf",
+    "source_type": "peer_reviewed_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "1 oracle setup",
+      "4 extraction overview",
+      "6 equivalence queries and counterexamples"
+    ],
+    "supported_claims": [
+      "L-star learning uses a trained RNN acceptor as oracle and refines state partitions using concrete disagreements."
+    ],
+    "limitations": [
+      "An approximate equivalence oracle can terminate without proving global equivalence; the teacher's behavior, not the historical generator, is extracted."
+    ],
+    "voynich_implication": "Require counterexample-guided refinement and finite stop limits; use a probabilistic extension for next-token models rather than silently binarizing text.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M21",
+    "title": "Causal Scrubbing: a method for rigorously testing interpretability hypotheses",
+    "authors": [
+      "Lawrence Chan",
+      "Adria Garriga-Alonso",
+      "Nicholas Goldowsky-Dill",
+      "Ryan Greenblatt",
+      "Jenny Nitishinskaya",
+      "Ansh Radhakrishnan",
+      "Buck Shlegeris",
+      "Nate Thomas"
+    ],
+    "year": 2022,
+    "version_date": null,
+    "url": "https://www.alignmentforum.org/s/h95ayYYwMebGEYN5y/p/JvZhhzycHu2Yd57RN",
+    "source_type": "primary_technical_report",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2 hypothesis graph and correspondence",
+      "3 equivalent-input resampling"
+    ],
+    "supported_claims": [
+      "A proposed interpretation specifies activation replacements that should preserve behavior; recursive resampling tests those invariances."
+    ],
+    "limitations": [
+      "Needs a concrete hypothesis and equivalence classes; the authors explicitly note that it cannot eliminate every incorrect hypothesis."
+    ],
+    "voynich_implication": "After discovering candidate variables on synthetic development data, test nuisance-preserving resampling and irrelevant-path removal on fresh cases.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M22",
+    "title": "Sparse Autoencoders Trained on the Same Data Learn Different Features",
+    "authors": [
+      "Goncalo Paulo",
+      "Nora Belrose"
+    ],
+    "year": 2025,
+    "version_date": "2025-01-28",
+    "url": "https://arxiv.org/abs/2501.16615",
+    "source_type": "primary_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "arXiv abstract",
+      "ICLR 2026 proceedings abstract"
+    ],
+    "supported_claims": [
+      "Changing SAE seed can change discovered feature sets substantially; effects vary with architecture and sparsity."
+    ],
+    "limitations": [
+      "A particular reported overlap is not a universal instability rate. Seed dependence alone does not exclude stable subspaces or useful interventions."
+    ],
+    "voynich_implication": "Use paired feature/code/subspace comparisons rather than one attractive dictionary; M13 refines this question.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M23",
+    "title": "Weight-sparse transformers have interpretable circuits",
+    "authors": [
+      "Leo Gao",
+      "Achyuta Rajaram",
+      "Jacob Coxon",
+      "Soham V. Govande",
+      "Bowen Baker",
+      "Dan Mossing"
+    ],
+    "year": 2025,
+    "version_date": "2025-11-17",
+    "url": "https://arxiv.org/html/2511.13653v1",
+    "source_type": "primary_preprint",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "1 causal circuit validation and capability tradeoff",
+      "2.1 architecture and sparsity optimization",
+      "2.2 curated tasks and pruning",
+      "2.3 bridges"
+    ],
+    "supported_claims": [
+      "Constraining weights and activations enables smaller circuits on curated tasks; sparsity trades capability for interpretability. Optimization retains dense gradients and moments."
+    ],
+    "limitations": [
+      "Mean-ablation necessity/sufficiency is task-conditional; sparse training remains inefficient. Sparse coordinates need not map to historical units."
+    ],
+    "voynich_implication": "Candidate small de-novo synthetic comparator, matched by predictive quality and exposure; budget memory using dense optimizer state.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "M24",
+    "title": "Cross-Layer Transcoders are incentivized to learn Unfaithful Circuits",
+    "authors": [
+      "Georg Lange",
+      "RGRGRG",
+      "Kat Dearstyne",
+      "Kamal Maher"
+    ],
+    "year": 2026,
+    "version_date": "2026-02-02",
+    "url": "https://www.lesswrong.com/posts/6CS2NDmoLCFcEJMor/cross-layer-transcoders-are-incentivized-to-learn-unfaithful",
+    "source_type": "primary_preliminary_research_report",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Boolean toy description",
+      "sparsity-objective shortcut argument",
+      "GPT-2 and Gemma comparison excerpt"
+    ],
+    "supported_claims": [
+      "Cross-layer reconstruction can skip intermediate computations in a known toy; preliminary real-model comparisons yield differing circuit accounts."
+    ],
+    "limitations": [
+      "Original author report from a one-week sprint; one author is listed by pseudonym. The later OpenReview PDF was access-blocked, so its version is not claimed read."
+    ],
+    "voynich_implication": "Compare per-layer and cross-layer replacements against actual intermediate interventions before interpreting sparse graphs.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  }
+]

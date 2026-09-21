@@ -1,0 +1,812 @@
+[
+  {
+    "id": "A01",
+    "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
+    "authors": [
+      "DeepSeek-AI"
+    ],
+    "year": 2026,
+    "version_date": "2026-04-26",
+    "url": "https://arxiv.org/html/2606.19348v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Abstract",
+      "1 Introduction",
+      "2.1-2.3 architecture"
+    ],
+    "supported_claims": [
+      "V4 combines CSA/HCA, mHC, MoE and MTP; Pro has 1.6T total parameters and pretraining uses more than 32T tokens."
+    ],
+    "limitations": [
+      "Version identifier and displayed April 26 date disagree; preserve both. No tiny-data controlled result."
+    ],
+    "voynich_implication": "Defer compressed caches until profiling demonstrates a local need.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A02",
+    "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+    "authors": [
+      "DeepSeek-AI"
+    ],
+    "year": 2026,
+    "version_date": "2026-09-10 (official release; PDF accessed 2026-09-21)",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
+    "source_type": "official_technical_report",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "PDF pp1-14: abstract and architecture",
+      "PDF pp21,23-24,37: training/evaluation/limitations selections"
+    ],
+    "supported_claims": [
+      "Uses causal encoder-decoder, CSA2 cache sharing and Engram; omits backbone-pretraining MTP."
+    ],
+    "limitations": [
+      "Many simultaneous architecture/data changes; deployment savings do not isolate small-corpus scientific utility."
+    ],
+    "voynich_implication": "Do not import the entire frontier architecture; use separately testable mechanisms.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21",
+    "artifact_sha256": "ba68e2e40408125ae6d2f63a9a241b61c73910691c74ec1a2a7023c851eac08d"
+  },
+  {
+    "id": "A03",
+    "title": "DeepSeek-V3 Technical Report",
+    "authors": [
+      "DeepSeek-AI"
+    ],
+    "year": 2024,
+    "version_date": "2024-12-27",
+    "url": "https://arxiv.org/abs/2412.19437v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract and bibliographic record"
+    ],
+    "supported_claims": [
+      "Reports 671B-total/37B-active MoE, MLA and MTP, trained on 14.8T tokens."
+    ],
+    "limitations": [
+      "No new section-level re-read here; architectural details inherited from earlier project review must not be counted as new reading."
+    ],
+    "voynich_implication": "Reference lineage for MLA/MTP; defer cache compression.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A04",
+    "title": "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models",
+    "authors": [
+      "DeepSeek-AI"
+    ],
+    "year": 2025,
+    "version_date": "2025-12-02",
+    "url": "https://arxiv.org/abs/2512.02556v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract and bibliographic record"
+    ],
+    "supported_claims": [
+      "Reports DSA for efficient long-context attention and substantial post-training changes."
+    ],
+    "limitations": [
+      "Abstract cannot isolate architectural contributions from training changes."
+    ],
+    "voynich_implication": "Use as versioned sparse-attention lead, not evidence for tiny-data superiority.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A05",
+    "title": "mHC: Manifold-Constrained Hyper-Connections",
+    "authors": [
+      "Xie, Zhenda",
+      "Wei, Yixuan",
+      "Cao, Huanqi",
+      "Zhao, Chenggang",
+      "Deng, Chengqi",
+      "Li, Jiashi",
+      "Dai, Damai",
+      "Gao, Huazuo",
+      "Chang, Jiang",
+      "Zhao, Liang",
+      "Zhou, Shangyan",
+      "Xu, Zhean",
+      "Zhang, Zhengyan",
+      "Zeng, Wangding",
+      "Hu, Shengding",
+      "Wang, Yuqing",
+      "Yuan, Jingyang",
+      "Wang, Lean",
+      "Liang, Wenfeng"
+    ],
+    "year": 2025,
+    "version_date": "2025-12-31",
+    "url": "https://arxiv.org/html/2512.24880v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "1 Introduction",
+      "3 Preliminary (selected)",
+      "V4 section 2.2 cross-check"
+    ],
+    "supported_claims": [
+      "Constrains expanded residual-stream mixing through doubly stochastic matrices to improve propagation stability."
+    ],
+    "limitations": [
+      "Mixing is not a literal identity map; reported overhead depends on custom large-scale infrastructure."
+    ],
+    "voynich_implication": "Defer until shallow-model instability exists; stream mixing increases intervention complexity.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A06",
+    "title": "Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models",
+    "authors": [
+      "Cheng, Xin",
+      "Zeng, Wangding",
+      "Dai, Damai",
+      "Chen, Qinyu",
+      "Wang, Bingxuan",
+      "Xie, Zhenda",
+      "Huang, Kezhao",
+      "Yu, Xingkai",
+      "Hao, Zhewen",
+      "Li, Yukun",
+      "Zhang, Han",
+      "Zhang, Huishuai",
+      "Zhao, Dongyan",
+      "Liang, Wenfeng"
+    ],
+    "year": 2026,
+    "version_date": "2026-01-12",
+    "url": "https://arxiv.org/html/2601.07372v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "1 Introduction",
+      "2.1-2.3 retrieval and gating",
+      "5.1 context-extension setup"
+    ],
+    "supported_claims": [
+      "Engram retrieves hashed suffix n-gram embeddings and gates their contribution using contextual state."
+    ],
+    "limitations": [
+      "Large MoE experiments; mechanistic similarity metrics do not establish a unique causal explanation."
+    ],
+    "voynich_implication": "A small lookup branch is a candidate only against matched n-gram controls and fresh-key transfer.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A07",
+    "title": "Qwen3.5-0.8B model card",
+    "authors": [
+      "Qwen Team"
+    ],
+    "year": 2026,
+    "version_date": null,
+    "url": "https://huggingface.co/Qwen/Qwen3.5-0.8B/blob/main/README.md",
+    "source_type": "official_model_card",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Introduction and Model Overview",
+      "Language benchmark table (selected rows)"
+    ],
+    "supported_claims": [
+      "The dense 0.8B model uses six groups of three Gated DeltaNet blocks and one gated-attention block; the card lists multi-step MTP."
+    ],
+    "limitations": [
+      "Mutable model card; no isolated ablation proving the hybrid ratio is best at Voynich scale. Family MoE marketing does not describe every size."
+    ],
+    "voynich_implication": "Validate current hybrid lineage, then compare a small independently instrumented recurrence.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A08",
+    "title": "Gated Delta Networks: Improving Mamba2 with Delta Rule",
+    "authors": [
+      "Yang, Songlin",
+      "Kautz, Jan",
+      "Hatamizadeh, Ali"
+    ],
+    "year": 2024,
+    "version_date": "2025-03-05",
+    "url": "https://arxiv.org/html/2412.06464v2",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2 Preliminary",
+      "3.1 and 3.4 gated delta rule and hybrid models",
+      "4 setup, Tables 3-4 and retrieval discussion"
+    ],
+    "supported_claims": [
+      "Combines targeted delta-rule writes with scalar decay; 1.3B-model/100B-token comparisons include recurrent and attention hybrids."
+    ],
+    "limitations": [
+      "Fixed-state memory still limits retrieval; billion-scale results do not predict tiny-model ranking."
+    ],
+    "voynich_implication": "Ablate gate, signed update and short-attention branch separately.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A09",
+    "title": "Kimi Linear: An Expressive, Efficient Attention Architecture",
+    "authors": [
+      "Kimi Team"
+    ],
+    "year": 2025,
+    "version_date": "2025-10-30",
+    "url": "https://arxiv.org/html/2510.26692v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2.2 and 3 KDA rule",
+      "4 hybrid and NoPE design",
+      "5.1 synthetic tests",
+      "5.2 component ablations"
+    ],
+    "supported_claims": [
+      "KDA uses coordinate-specific decay; a 3:1 recurrent/MLA hybrid is tested. Two-layer synthetic tasks include copying, recall and stacks."
+    ],
+    "limitations": [
+      "Synthetic curves select best training accuracy after LR search; 48B-total/3B-active frontier configuration is far larger."
+    ],
+    "voynich_implication": "Promising recurrence control; use development selection and untouched transfer tests.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A10",
+    "title": "Mamba-3: Improved Sequence Modeling using State Space Principles",
+    "authors": [
+      "Lahoti, Aakash",
+      "Li, Kevin Y.",
+      "Chen, Berlin",
+      "Wang, Caitlin",
+      "Bick, Aviv",
+      "Kolter, J. Zico",
+      "Dao, Tri",
+      "Gu, Albert"
+    ],
+    "year": 2026,
+    "version_date": "2026-03-16",
+    "url": "https://arxiv.org/html/2603.15569v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "3.1 discretization",
+      "4.1 language-modeling and retrieval experiments"
+    ],
+    "supported_claims": [
+      "Mamba-3 adds complex transitions, richer discretization and MIMO. Matched 100B-token language experiments span 180M to 1.5B parameters."
+    ],
+    "limitations": [
+      "Transformer retrieval remains stronger; model-scale gains and CUDA kernels do not imply MPS speed or hidden-rule identification."
+    ],
+    "voynich_implication": "Consider transition components as separate controls after an inspectable recurrence reference.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A11",
+    "title": "The Illusion of State in State-Space Models",
+    "authors": [
+      "Merrill, William",
+      "Petty, Jackson",
+      "Sabharwal, Ashish"
+    ],
+    "year": 2024,
+    "version_date": "2025-03-05",
+    "url": "https://arxiv.org/html/2404.08819v3",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "1 Introduction",
+      "2.1 architecture and 2.2 numeric assumptions"
+    ],
+    "supported_claims": [
+      "Bounded-depth diagonal or non-gated SSM classes have restricted state-tracking expressivity under specified arithmetic assumptions."
+    ],
+    "limitations": [
+      "Complexity separation uses a standard conjecture; does not cover arbitrary nonlinear RNNs or all newer transitions."
+    ],
+    "voynich_implication": "Specify the exact transition class before claiming a recurrent model can represent our synthetic rules.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A12",
+    "title": "DeltaProduct: Improving State-Tracking in Linear RNNs via Householder Products",
+    "authors": [
+      "Siems, Julien",
+      "Carstensen, Timur",
+      "Zela, Arber",
+      "Hutter, Frank",
+      "Pontil, Massimiliano",
+      "Grazzi, Riccardo"
+    ],
+    "year": 2025,
+    "version_date": "2025-02-14",
+    "url": "https://arxiv.org/html/2502.10297v3",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "3 DeltaProduct",
+      "5.1 selected results",
+      "5.2 length extrapolation",
+      "Appendix C runtime"
+    ],
+    "supported_claims": [
+      "Multiple distinct Householder updates enlarge transition expressivity; formal-language tests train at lengths 3-40 and test through 256."
+    ],
+    "limitations": [
+      "Known task supervision differs from ciphertext-only recovery; runtime measured on Nvidia L40, not Mac."
+    ],
+    "voynich_implication": "Test one versus two/four signed transition factors with equal-budget controls.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A13",
+    "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+    "authors": [
+      "Sun, Yu",
+      "Li, Xinhao",
+      "Dalal, Karan",
+      "Xu, Jiarui",
+      "Vikram, Arjun",
+      "Zhang, Genghan",
+      "Dubois, Yann",
+      "Chen, Xinlei",
+      "Wang, Xiaolong",
+      "Koyejo, Sanmi",
+      "Hashimoto, Tatsunori",
+      "Guestrin, Carlos"
+    ],
+    "year": 2024,
+    "version_date": "2024-07-05",
+    "url": "https://arxiv.org/html/2407.04620v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Abstract",
+      "2.1-2.4 hidden-model updates",
+      "2.5 dual-form derivation (selected)"
+    ],
+    "supported_claims": [
+      "TTT uses trainable fast-state weights and an inner reconstruction objective; mini-batching trades sequential updates for parallelization."
+    ],
+    "limitations": [
+      "125M-1.3B language experiments; no proof fast weights recover a cipher or retain uniquely interpretable state."
+    ],
+    "voynich_implication": "Candidate for prefix-only adaptation with complete fast-state reset and intervention replay.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A14",
+    "title": "Titans: Learning to Memorize at Test Time",
+    "authors": [
+      "Behrouz, Ali",
+      "Zhong, Peilin",
+      "Mirrokni, Vahab"
+    ],
+    "year": 2024,
+    "version_date": "2024-12-31",
+    "url": "https://arxiv.org/html/2501.00663v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Abstract",
+      "3 neural long-term memory: objective, momentum and forgetting"
+    ],
+    "supported_claims": [
+      "Titans combines an inner associative-memory objective with momentum-like updates and adaptive forgetting."
+    ],
+    "limitations": [
+      "Broad benchmark gains do not identify a historical mechanism; complete method/evaluation not re-read."
+    ],
+    "voynich_implication": "Defer deep memory until simpler online estimators and TTT-Linear establish a transfer benefit.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A15",
+    "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+    "authors": [
+      "Behrouz, Ali",
+      "Razaviyayn, Meisam",
+      "Zhong, Peilin",
+      "Mirrokni, Vahab"
+    ],
+    "year": 2025,
+    "version_date": "2025-12-31",
+    "url": "https://arxiv.org/abs/2512.24695v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract and bibliographic record"
+    ],
+    "supported_claims": [
+      "Proposes nested optimization timescales, continuum memory and the Hope module."
+    ],
+    "limitations": [
+      "Abstract-only: no independently checked theorem, implementation or benchmark claim is used."
+    ],
+    "voynich_implication": "Conceptual lead for later review, not an accepted architecture.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A16",
+    "title": "Byte Latent Transformer: Patches Scale Better Than Tokens",
+    "authors": [
+      "Pagnoni, Artidoro",
+      "Pasunuru, Ram",
+      "Rodriguez, Pedro",
+      "Nguyen, John",
+      "Muller, Benjamin",
+      "Li, Margaret",
+      "Zhou, Chunting",
+      "Yu, Lili",
+      "Weston, Jason",
+      "Zettlemoyer, Luke",
+      "Ghosh, Gargi",
+      "Lewis, Mike",
+      "Holtzman, Ari",
+      "Iyer, Srinivasan"
+    ],
+    "year": 2024,
+    "version_date": "2024-12-13",
+    "url": "https://arxiv.org/html/2412.09871v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2 patching",
+      "4.6 bits per byte",
+      "4.7-4.8 configuration",
+      "5 scaling setup"
+    ],
+    "supported_claims": [
+      "BLT uses causal entropy-guided patches and local byte modules; studies up to 8B parameters and 4T bytes."
+    ],
+    "limitations": [
+      "2024 version header coexists with a 2026 rendered footer; learned patches are not historical linguistic units."
+    ],
+    "voynich_implication": "Compare reversible segmentations on identical underlying symbols, with causal-prefix checks.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A17",
+    "title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
+    "authors": [
+      "Hwang, Sukjun",
+      "Wang, Brandon",
+      "Gu, Albert"
+    ],
+    "year": 2025,
+    "version_date": "2025-07-10",
+    "url": "https://arxiv.org/html/2507.07955v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "1 design overview",
+      "2.1 hierarchy",
+      "2.4 causal training/inference",
+      "3 experimental architecture table"
+    ],
+    "supported_claims": [
+      "H-Net learns chunk routing and causal smoothing within a hierarchical model; language-model comparisons use large byte corpora."
+    ],
+    "limitations": [
+      "Hundreds of millions to billions of parameters; qualitative boundaries do not prove semantic or glyph identity."
+    ],
+    "voynich_implication": "Later segmentation ablation with fixed/random controls and original-position alignment.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A18",
+    "title": "Better & Faster Large Language Models via Multi-token Prediction",
+    "authors": [
+      "Gloeckle, Fabian",
+      "Idrissi, Badr Youbi",
+      "Rozière, Baptiste",
+      "Lopez-Paz, David",
+      "Synnaeve, Gabriel"
+    ],
+    "year": 2024,
+    "version_date": "2024-04-30",
+    "url": "https://arxiv.org/html/2404.19737v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Abstract",
+      "Prior project review of section 4.1 and Appendix J; current page reopened"
+    ],
+    "supported_claims": [
+      "Multi-token training shares a trunk across future predictions and reports data-efficiency gains in tested settings."
+    ],
+    "limitations": [
+      "Independent marginals are not joint future predictions; current re-read initially limited, prior notes identify test-selected checkpoints."
+    ],
+    "voynich_implication": "Require joint-future diagnostics rather than claiming MTP solved hidden dynamics.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A19",
+    "title": "Reasoning with Latent Thoughts: On the Power of Looped Transformers",
+    "authors": [
+      "Saunshi, Nikunj",
+      "Dikkala, Nishanth",
+      "Li, Zhiyuan",
+      "Kumar, Sanjiv",
+      "Reddi, Sashank J."
+    ],
+    "year": 2025,
+    "version_date": "2025-02-24",
+    "url": "https://arxiv.org/abs/2502.17416v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract and bibliographic record"
+    ],
+    "supported_claims": [
+      "Studies expressive and empirical effects of repeated parameter-shared transformer layers."
+    ],
+    "limitations": [
+      "Extra compute is not extra independent data or guaranteed algorithm learning."
+    ],
+    "voynich_implication": "Later matched-parameter and matched-compute loop ablation with per-iteration hooks.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A20",
+    "title": "Scaling Data-Constrained Language Models",
+    "authors": [
+      "Muennighoff, Niklas",
+      "Rush, Alexander M.",
+      "Barak, Boaz",
+      "Scao, Teven Le",
+      "Piktus, Aleksandra",
+      "Tazi, Nouamane",
+      "Pyysalo, Sampo",
+      "Wolf, Thomas",
+      "Raffel, Colin"
+    ],
+    "year": 2023,
+    "version_date": "2023-05-25",
+    "url": "https://arxiv.org/abs/2305.16264v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract and bibliographic record"
+    ],
+    "supported_claims": [
+      "Data repetition has diminishing returns under tested recipes; study spans up to 9B parameters and 900B training tokens."
+    ],
+    "limitations": [
+      "No universal epoch cutoff and no numerical scaling extrapolation to the manuscript."
+    ],
+    "voynich_implication": "Track unique data separately from sampled training exposure.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A21",
+    "title": "Muon is Scalable for LLM Training",
+    "authors": [
+      "Liu, Jingyuan",
+      "Su, Jianlin",
+      "Yao, Xingcheng",
+      "Jiang, Zhejun",
+      "Lai, Guokun",
+      "Du, Yulun",
+      "Qin, Yidao",
+      "Xu, Weixin",
+      "Lu, Enzhe",
+      "Yan, Junjie",
+      "Chen, Yanru",
+      "Zheng, Huabin",
+      "Liu, Yibo",
+      "Liu, Shaowei",
+      "Yin, Bohong",
+      "He, Weiran",
+      "Zhu, Han",
+      "Wang, Yuzhi",
+      "Wang, Jianzhou",
+      "Dong, Mengnan",
+      "Zhang, Zheng",
+      "Kang, Yongsheng",
+      "Zhang, Hao",
+      "Xu, Xinran",
+      "Zhang, Yutao",
+      "Wu, Yuxin",
+      "Zhou, Xinyu",
+      "Yang, Zhilin"
+    ],
+    "year": 2025,
+    "version_date": "2025-02-24",
+    "url": "https://arxiv.org/abs/2502.16982v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract and bibliographic record"
+    ],
+    "supported_claims": [
+      "Muon scaling work adds weight decay and update-scale adjustments; releases a large MoE trained with the optimizer."
+    ],
+    "limitations": [
+      "Compute-optimal frontier improvements are not a local throughput estimate."
+    ],
+    "voynich_implication": "Isolated optimizer comparison preserves the causal model graph.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A22",
+    "title": "Unlocking State-Tracking in Linear RNNs Through Negative Eigenvalues",
+    "authors": [
+      "Grazzi, Riccardo",
+      "Siems, Julien",
+      "Franke, Jörg K. H.",
+      "Zela, Arber",
+      "Hutter, Frank",
+      "Pontil, Massimiliano"
+    ],
+    "year": 2024,
+    "version_date": "2024-11-19",
+    "url": "https://arxiv.org/html/2411.12537v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "4.2 modulo construction (selected)",
+      "4.3 Householder expressivity: Proposition 1 and Theorems 3-4"
+    ],
+    "supported_claims": [
+      "Signed eigenvalues and products of transition factors support stronger finite-state constructions than positive-only restrictions."
+    ],
+    "limitations": [
+      "The broad regular-language construction can require exponential depth; representability is not learnability."
+    ],
+    "voynich_implication": "Include signed-transition and nonlinear recurrent controls, not just positive forgetting gates.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A23",
+    "title": "Data-Constrained Language Model Pretraining: Improved Regularization and Scaling Laws",
+    "authors": [
+      "Xu, Zhiwei",
+      "Wu, Shihao",
+      "Cho, Hanseul",
+      "Hu, Wei",
+      "Wang, Yixin"
+    ],
+    "year": 2026,
+    "version_date": "2026-06-05",
+    "url": "https://arxiv.org/html/2606.06888v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "2 setup",
+      "3.1-3.4 regularization, MIR and experiments"
+    ],
+    "supported_claims": [
+      "MIR adds a masked-input next-token auxiliary loss to tuned strong-weight-decay AR models; tested at 72M-1.4B and 100M unique tokens."
+    ],
+    "limitations": [
+      "Extra compute; much larger corpus; AR/diffusion estimators and checkpoint selection differ; toy theory does not prove cipher benefits."
+    ],
+    "voynich_implication": "Prioritize a small regularization factorial with clean held-out scoring and synthetic recovery diagnostics.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A24",
+    "title": "Learning State-Tracking from Code Using Linear RNNs",
+    "authors": [
+      "Siems, Julien",
+      "Grazzi, Riccardo",
+      "Kalinin, Kirill",
+      "Ballani, Hitesh",
+      "Rahmani, Babak"
+    ],
+    "year": 2026,
+    "version_date": "2026-02-16",
+    "url": "https://arxiv.org/html/2602.14814v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Abstract",
+      "5 partial observability and PFSA-SR belief update"
+    ],
+    "supported_claims": [
+      "Distinguishes deterministic visible transitions from uncertain transitions requiring belief conditioning and renormalization."
+    ],
+    "limitations": [
+      "Code traces and state reveals are stronger structure than manuscript ciphertext; full results not yet audited."
+    ],
+    "voynich_implication": "Keep ambiguous-state controls; compare explicit belief updates with linear and nonlinear recurrent models.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A25",
+    "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free",
+    "authors": [
+      "Qiu, Zihan",
+      "Wang, Zekun",
+      "Zheng, Bo",
+      "Huang, Zeyu",
+      "Wen, Kaiyue",
+      "Yang, Songlin",
+      "Men, Rui",
+      "Yu, Le",
+      "Huang, Fei",
+      "Huang, Suozhi",
+      "Liu, Dayiheng",
+      "Zhou, Jingren",
+      "Lin, Junyang"
+    ],
+    "year": 2025,
+    "version_date": "2025-05-10",
+    "url": "https://arxiv.org/abs/2505.06708v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Bibliographic record; abstract-level lead retained from prior architecture review"
+    ],
+    "supported_claims": [
+      "Studies sigmoid attention-output gating and alternative placements."
+    ],
+    "limitations": [
+      "No new methods-level reading this turn; no claim that a low gate identifies filler."
+    ],
+    "voynich_implication": "Existing isolated gate switch remains preferable to combining untested changes.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "A26",
+    "title": "When Data Is Scarce: Scaling Sparse Language Models with Repeated Training",
+    "authors": [
+      "Wu, Boqian",
+      "Xiao, Qiao",
+      "Okanovic, Patrik",
+      "Sternal, Tomasz",
+      "van Keulen, Maurice",
+      "Pechenizkiy, Mykola",
+      "Mocanu, Elena",
+      "Hoefler, Torsten",
+      "Mocanu, Decebal Constantin"
+    ],
+    "year": 2026,
+    "version_date": "2026-05-31",
+    "url": "https://arxiv.org/abs/2606.01155v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Abstract and bibliographic record"
+    ],
+    "supported_claims": [
+      "Studies sparse repeated-data training across explicit unique-data, sparsity and epoch budgets."
+    ],
+    "limitations": [
+      "Abstract-only; sparse parameter training is not automatically MoE; studied data budgets dwarf Voynich."
+    ],
+    "voynich_implication": "Defer until methods and sparse-implementation costs are reviewed.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  }
+]

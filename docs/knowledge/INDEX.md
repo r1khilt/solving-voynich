@@ -39,6 +39,7 @@ These are deferred discovery topics, not established findings or an active resea
 
 ## Active research records
 
+- [Expanded architecture, interpretation, decipherment and theory review](../research/deep-review-2026-09-21/README.md): 93 records /92 works/resources, honest reading-depth labels, audited recent claims and proposed next design. [Searchable catalog](../research/deep-review-2026-09-21/CATALOG.md); run `python3 scripts/research_catalog.py --query <term>` from the repository root.
 - [Prior Voynich models and neural decipherment](../research/PRIOR_WORK.md): original reports, supervision distinctions, evaluation limitations and source links.
 - [Modern architecture and interpretability review](../research/ARCHITECTURE_REVIEW.md): verified primary-source claims and adopt/ablate/defer decisions.
 - [Data provenance and representation](../research/DATA.md): official transcription, usage terms, parsing, uncertainty and split policy; machine-readable manifests live in `data/manifests/` at the repository root.

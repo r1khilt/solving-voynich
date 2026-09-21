@@ -1,0 +1,505 @@
+[
+  {
+    "id": "T01",
+    "title": "Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations",
+    "authors": [
+      "Francesco Locatello",
+      "Stefan Bauer",
+      "Mario Lucic",
+      "Gunnar Raetsch",
+      "Sylvain Gelly",
+      "Bernhard Schölkopf",
+      "Olivier Bachem"
+    ],
+    "year": 2019,
+    "version_date": null,
+    "url": "https://proceedings.mlr.press/v97/locatello19a/locatello19a.pdf",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Section 3, Theorem 1",
+      "Section 4 experimental design"
+    ],
+    "supported_claims": [
+      "Under the theorem's factorized continuous-prior assumptions, observational distributions admit entangling reparameterizations."
+    ],
+    "limitations": [
+      "Not a general impossibility theorem for all structured sequence models or Voynich."
+    ],
+    "voynich_implication": "State the inductive biases and auxiliary evidence needed to distinguish explanations.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T02",
+    "title": "Variational Autoencoders and Nonlinear ICA: A Unifying Framework",
+    "authors": [
+      "Ilyes Khemakhem",
+      "Diederik P. Kingma",
+      "Ricardo Pio Monti",
+      "Aapo Hyvärinen"
+    ],
+    "year": 2020,
+    "version_date": null,
+    "url": "https://proceedings.mlr.press/v108/khemakhem20a/khemakhem20a.pdf",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 2–4, Theorems 1–4",
+      "Section 5.1"
+    ],
+    "supported_claims": [
+      "Auxiliary-variable modulation can identify sufficient statistics up to specified transformations under injectivity, factorial exponential-family and full-rank variability assumptions."
+    ],
+    "limitations": [
+      "Ideal-model results; stronger identifiability needs additional assumptions. Metadata alone does not satisfy them."
+    ],
+    "voynich_implication": "Test section/scribe conditioning as a hypothesis and confound, not an automatic identification theorem.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T03",
+    "title": "A Spectral Algorithm for Learning Hidden Markov Models",
+    "authors": [
+      "Daniel Hsu",
+      "Sham M. Kakade",
+      "Tong Zhang"
+    ],
+    "year": 2009,
+    "version_date": null,
+    "url": "https://www.learningtheory.org/colt2009/papers/011.pdf",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 2–4",
+      "Lemma 3 and Theorem 6"
+    ],
+    "supported_claims": [
+      "Low-order observation moments and SVD estimate observable operators under rank/support conditions; their products predict sequences."
+    ],
+    "limitations": [
+      "Sample complexity depends on conditioning and horizon; finite estimates need probability-validity checks."
+    ],
+    "voynich_implication": "Use a spectral comparator with singular-value diagnostics beside probabilistic fitting.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T04",
+    "title": "Inference in finite state space non parametric Hidden Markov Models and applications",
+    "authors": [
+      "Elisabeth Gassiat",
+      "Alice Cleynen",
+      "Stéphane Robin"
+    ],
+    "year": 2015,
+    "version_date": null,
+    "url": "https://alice.cleynen.fr/wp-content/uploads/2015/03/GCR_2015.pdf",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Section 2, Theorem 1 and factorization",
+      "Section 3 categorical inference"
+    ],
+    "supported_claims": [
+      "With known state count, full-rank transition and linearly independent emissions, stationary positive-support HMMs are identified up to label permutation by the distribution of three consecutive observations."
+    ],
+    "limitations": [
+      "A distribution of triples is not three samples. Ordinary node-emitting assumptions do not directly describe every edge-emitting process."
+    ],
+    "voynich_implication": "Check model class and observable equivalences before scoring latent-state recovery.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T05",
+    "title": "Computational Mechanics: Pattern and Prediction, Structure and Simplicity",
+    "authors": [
+      "Cosma Rohilla Shalizi",
+      "James P. Crutchfield"
+    ],
+    "year": 2001,
+    "version_date": "2000-06-19 (preprint v2; journal 2001)",
+    "url": "https://arxiv.org/pdf/cond-mat/9907176v2",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Causal-state definitions and Section III",
+      "Theorem 3",
+      "Section VII B"
+    ],
+    "supported_claims": [
+      "Predictive equivalence classes of pasts provide minimal prescient representations under the paper's process assumptions."
+    ],
+    "limitations": [
+      "Whole-future distributions and infinite pasts are idealizations; predictive states need not be the physical generator's variables."
+    ],
+    "voynich_implication": "Target observable predictive equivalence before asserting historical hidden states.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T06",
+    "title": "Blind Construction of Optimal Nonlinear Recursive Predictors for Discrete Sequences",
+    "authors": [
+      "Cosma Rohilla Shalizi",
+      "Kristina Lisa Shalizi"
+    ],
+    "year": 2004,
+    "version_date": "2004-06-06",
+    "url": "https://arxiv.org/pdf/cs/0406011v1",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 2–4",
+      "Even-process example in Section 5"
+    ],
+    "supported_claims": [
+      "CSSR constructs predictive history classes and deterministic recursive updates; one-step sufficiency plus recursive closure supports whole-future sufficiency."
+    ],
+    "limitations": [
+      "Consistency requires stationarity, finite-state and synchronization conditions; sparse counts and large alphabets matter."
+    ],
+    "voynich_implication": "Compare explicit update closure with next-output clustering. Author names follow the cited version.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T07",
+    "title": "Predictive Representations of State",
+    "authors": [
+      "Michael L. Littman",
+      "Richard S. Sutton",
+      "Satinder Singh"
+    ],
+    "year": 2001,
+    "version_date": null,
+    "url": "https://proceedings.neurips.cc/paper/2001/file/1e4d36177d71bbb3558e43af9577d70e-Paper.pdf",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Introduction",
+      "Linear PSR definition",
+      "Theorem 1 and construction"
+    ],
+    "supported_claims": [
+      "Predictions of multi-step tests can represent state, with a finite linear representation constructed from a finite POMDP."
+    ],
+    "limitations": [
+      "Existence/construction from a known process is not an unknown-model learning guarantee; our text provides no chosen actions."
+    ],
+    "voynich_implication": "Use joint continuation tests as coordinates and demand consistent updates.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T08",
+    "title": "Learning Hidden Markov Models Using Conditional Samples",
+    "authors": [
+      "Gaurav Mahajan",
+      "Sham Kakade",
+      "Akshay Krishnamurthy",
+      "Cyril Zhang"
+    ],
+    "year": 2023,
+    "version_date": null,
+    "url": "https://proceedings.mlr.press/v195/mahajan23a/mahajan23a.pdf",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Introduction and access definitions",
+      "Main-result statements and fidelity distinction"
+    ],
+    "supported_claims": [
+      "Conditional probability queries and conditional sampling support different learning guarantees; the sample-based result requires a fidelity condition."
+    ],
+    "limitations": [
+      "Interactive conditional access is stronger than a static corpus; detailed proofs not fully reviewed."
+    ],
+    "voynich_implication": "Queries to our LM reveal that LM's approximation, not an oracle for the manuscript's author.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T09",
+    "title": "Learning Hidden Markov Models When the Locations of Missing Observations are Unknown",
+    "authors": [
+      "Binyamin Perets",
+      "Mark Kozdoba",
+      "Shie Mannor"
+    ],
+    "year": 2023,
+    "version_date": null,
+    "url": "https://proceedings.mlr.press/v202/perets23a/perets23a.pdf",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 2.1–2.2, Proposition 2.1",
+      "Section 3 sampler",
+      "Section 4 misspecification experiment"
+    ],
+    "supported_claims": [
+      "Unknown observation omissions alter the inferred dynamics and require an explicit observation model."
+    ],
+    "limitations": [
+      "Deletion is not filler insertion; unknown retention rates can confound recovery."
+    ],
+    "voynich_implication": "Represent channel assumptions explicitly and test omission-rate misspecification.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T10",
+    "title": "Bayesian Structural Inference for Hidden Processes",
+    "authors": [
+      "Christopher C. Strelioff",
+      "James P. Crutchfield"
+    ],
+    "year": 2014,
+    "version_date": null,
+    "url": "https://arxiv.org/pdf/1309.1392",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Section III topology classes",
+      "Section IV conjugate inference",
+      "Section VII limitations"
+    ],
+    "supported_claims": [
+      "For a fixed unifilar topology and start state, observations determine a unique path, enabling integrated parameter likelihoods and topology comparison."
+    ],
+    "limitations": [
+      "The enumerated binary topology family is restricted; posterior confidence is relative to candidate models."
+    ],
+    "voynich_implication": "Keep competing topologies and complexity costs; do not generalize binary enumeration to the full glyph alphabet.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T11",
+    "title": "Minimum Description Length Revisited",
+    "authors": [
+      "Peter Grünwald",
+      "Teemu Roos"
+    ],
+    "year": 2019,
+    "version_date": null,
+    "url": "https://arxiv.org/pdf/1908.08484",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Section 2 two-part and prequential coding",
+      "Section 6.3 misspecification"
+    ],
+    "supported_claims": [
+      "Description-length model selection accounts for both a model and its data encoding; prequential choices and misspecification matter."
+    ],
+    "limitations": [
+      "A shorter code under a chosen language is not proof of historical truth; discrete sequential estimates need smoothing."
+    ],
+    "voynich_implication": "Charge for keys, exceptions, null masks and segmentation choices under a frozen coding convention.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T12",
+    "title": "Transformers Can Do Bayesian Inference",
+    "authors": [
+      "Samuel Müller",
+      "Noah Hollmann",
+      "Sebastian Pineda Arango",
+      "Josif Grabocka",
+      "Frank Hutter"
+    ],
+    "year": 2022,
+    "version_date": "2024-08-13 (v7; ICLR 2022)",
+    "url": "https://arxiv.org/pdf/2112.10510v7",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 1–3",
+      "Algorithm 1 and Insight 1"
+    ],
+    "supported_claims": [
+      "Training over prior-sampled datasets with held-out prediction approximates posterior prediction under that prior."
+    ],
+    "limitations": [
+      "Prior misspecification remains; the paper's supervised tasks differ from our proposed visible-only sequence episodes."
+    ],
+    "voynich_implication": "Train on fresh task/key episodes; assess inference under both matched and deliberately wrong priors.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T13",
+    "title": "DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning",
+    "authors": [
+      "Kevin Ellis",
+      "Catherine Wong",
+      "Maxwell Nye",
+      "Mathias Sablé-Meyer",
+      "Luc Cary",
+      "Lucas Morales",
+      "Luke Hewitt",
+      "Armando Solar-Lezama",
+      "Joshua B. Tenenbaum"
+    ],
+    "year": 2021,
+    "version_date": null,
+    "url": "https://arxiv.org/pdf/2006.08381",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Introduction and Figure 2",
+      "Wake/sleep algorithm description",
+      "List and text task results"
+    ],
+    "supported_claims": [
+      "Neural-guided program search and library compression alternate with generated training tasks."
+    ],
+    "limitations": [
+      "A task specification and program grammar are supplied; this does not supply plaintext supervision. Same work as D22."
+    ],
+    "voynich_implication": "Consider a small typed transducer grammar, with search limits and a cost for every exception.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T14",
+    "title": "Deep Adaptive Design: Amortizing Sequential Bayesian Experimental Design",
+    "authors": [
+      "Adam Foster",
+      "Desi R. Ivanova",
+      "Ilyas Malik",
+      "Tom Rainforth"
+    ],
+    "year": 2021,
+    "version_date": null,
+    "url": "https://proceedings.mlr.press/v139/foster21a/foster21a.pdf",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 2–4, Theorem 1",
+      "Section 6.3"
+    ],
+    "supported_claims": [
+      "A learned policy amortizes sequential design using expected information gain under a prior and likelihood."
+    ],
+    "limitations": [
+      "Training cost pays off for repeated design tasks; the historical generating process cannot be queried experimentally."
+    ],
+    "voynich_implication": "First enumerate feasible diagnostics that separate live hypotheses; no learned design policy is needed initially.",
+    "decision": "defer",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T15",
+    "title": "The frontier of simulation-based inference",
+    "authors": [
+      "Kyle Cranmer",
+      "Johann Brehmer",
+      "Gilles Louppe"
+    ],
+    "year": 2020,
+    "version_date": null,
+    "url": "https://arxiv.org/pdf/1911.01429",
+    "source_type": "author_review",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Abstract",
+      "Diagnostics and model-misspecification discussion"
+    ],
+    "supported_claims": [
+      "Simulation-based inference learns relative to a simulator-defined statistical model; diagnostics do not solve physical misspecification."
+    ],
+    "limitations": [
+      "Author review rather than an independent Voynich experiment; only selected discussion inspected."
+    ],
+    "voynich_implication": "Benchmark simulator mismatch and real-data discrepancy independently of inference calibration.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T16",
+    "title": "Validating Bayesian Inference Algorithms with Simulation-Based Calibration",
+    "authors": [
+      "Sean Talts",
+      "Michael Betancourt",
+      "Daniel Simpson",
+      "Aki Vehtari",
+      "Andrew Gelman"
+    ],
+    "year": 2018,
+    "version_date": null,
+    "url": "https://arxiv.org/html/1804.06788v2",
+    "source_type": "primary_research_paper",
+    "read_depth": "selected_sections",
+    "sections_read": [
+      "Sections 2 and 4.1, Theorem 1 and Algorithm 1",
+      "Sections 4.2, 5.1 and 6.1"
+    ],
+    "supported_claims": [
+      "Prior predictive simulation and posterior rank checks diagnose inference calibration under specified sampling assumptions."
+    ],
+    "limitations": [
+      "Correlated posterior samples require care; calibration against a simulator does not validate that simulator historically."
+    ],
+    "voynich_implication": "Use equivalence-aware calibration and assess informativeness and posterior predictions separately.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T17",
+    "title": "Learning regular sets from queries and counterexamples",
+    "authors": [
+      "Dana Angluin"
+    ],
+    "year": 1987,
+    "version_date": null,
+    "url": "https://www.sciencedirect.com/science/article/pii/0890540187900526",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Publisher abstract"
+    ],
+    "supported_claims": [
+      "Efficient regular-language learning uses membership queries and equivalence queries/counterexamples."
+    ],
+    "limitations": [
+      "This is an active teacher-access model, not a guarantee from static positive strings."
+    ],
+    "voynich_implication": "Approximate counterexample search is useful engineering but must not be called an equivalence proof.",
+    "decision": "ablate_candidate",
+    "accessed_date": "2026-09-21"
+  },
+  {
+    "id": "T18",
+    "title": "The reusable holdout: Preserving validity in adaptive data analysis",
+    "authors": [
+      "Cynthia Dwork",
+      "Vitaly Feldman",
+      "Moritz Hardt",
+      "Toniann Pitassi",
+      "Omer Reingold",
+      "Aaron Roth"
+    ],
+    "year": 2015,
+    "version_date": "2015-08-07",
+    "url": "https://research.ibm.com/publications/the-reusable-holdout-preserving-validity-in-adaptive-data-analysis",
+    "source_type": "primary_research_paper",
+    "read_depth": "abstract",
+    "sections_read": [
+      "Authors' institutional abstract"
+    ],
+    "supported_claims": [
+      "Adaptive analysis can compromise ordinary holdout reasoning; a formal protected mechanism can support bounded reuse."
+    ],
+    "limitations": [
+      "We have not implemented the proposed privacy-based mechanism; this record is abstract-only."
+    ],
+    "voynich_implication": "Use fresh synthetic final pools and preserve the unopened manuscript holdout.",
+    "decision": "adopt_candidate",
+    "accessed_date": "2026-09-21"
+  }
+]

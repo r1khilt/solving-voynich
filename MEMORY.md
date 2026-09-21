@@ -5,7 +5,7 @@ Last updated: 2026-09-21.
 ## Current state
 
 - Phase: **active research and implementation**. The user explicitly authorized prior-work/methods research, corpus acquisition, architecture design, and code; the earlier preparation-only restriction is superseded.
-- Latest checkpoint: **CAMPAIGN-0001 completed**, all three tracks and 25 new models; no job remains running. Read `docs/CURRENT_STATUS.md` and `docs/experiments/CAMPAIGN-0001-results.md` before new work. Historical hypotheses remain unresolved.
+- Latest research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. This review implemented no successor model and launched no training. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved. Separate ongoing workspace work has its own notebook records.
 - Repository: `/Users/rikhil/coding/solving-voynich`.
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.
 - The user describes the repository as private; remote visibility has not been independently verified.
@@ -51,6 +51,7 @@ The user's reference to an AI model solving Navier–Stokes is motivation, not v
 - Research standards: `docs/research/PROTOCOL.md`.
 - Deferred candidates: `docs/research/BACKLOG.md`.
 - Literature and architecture: `docs/research/PRIOR_WORK.md`, `docs/research/ARCHITECTURE_REVIEW.md`, `docs/research/ARCHITECTURE.md`.
+- Expanded review: `docs/research/deep-review-2026-09-21/README.md`; four topic reviews and source ledgers, `CATALOG.md`, `SOURCE_AUDIT.md`, `NEXT_DESIGN.md`. Search with `python3 scripts/research_catalog.py --query <term>`; validate with `--check`. Candidate direction: fresh-key episodic inference, explicit edge-emitting beliefs, joint continuations and selective causal update tests. These are proposed methods, not findings or a launched campaign.
 - Reproduction commands: `docs/RUNBOOK.md`; completed experiment registrations/results: `docs/experiments/EXP-0001*` through `EXP-0010*`; latest visual overview: `results/CAMPAIGN-0001/overview.png`.
 
 ## Latest experiments and next state
