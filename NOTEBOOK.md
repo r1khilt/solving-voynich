@@ -445,3 +445,16 @@ Resource use (if applicable):
 - **Limitations:** Deep targeted review, not an exhaustive systematic search or replication. Some recent leads were inspected only at abstract level; historical shorthand/palaeography and licensed comparative grounded corpora need further work. No runtime, successful transfer, language identification, null assignment, translation or decipherment has been demonstrated. Proposed scale ranges are planning context, not resource estimates or spend authorization.
 - **Resources and boundaries:** Web research and document work only; conversation/tool usage not measured. No model implementation, training, paid research API/cloud job or manuscript final-test scoring for this review. No experiment result is attributed to this task. Concurrent data/code/results changes from other repository tasks are excluded from this checkpoint; their scientific state is not reassessed here. Original charter preserved.
 - **Next state:** Research dossier complete and available from its README/SYNTHESIS. The user can evaluate the integrated research agenda before authorizing any implementation under this task. No background experiment or follow-up run scheduled. Commit and push this coherent documentation checkpoint under standing repository authorization.
+
+## 2026-09-21 — EXP-0018 preregistration (null-rate grid, select/confirm) [NB-0034]
+
+- **Question:** On the frozen EXP-0016 checkpoint, does any fixed exact-count null rate in a preregistered grid beat matched-random deletions (same count) on ZL3b validation, with rate chosen on a SELECT half and confirmed on a held-aside CONFIRM half?
+- **Status at write:** **Preregistration only — no per-rate scores inspected.** Id is EXP-0018 because untracked `EXP-0017.md` already names a typed decoder-program search.
+- **Checkpoint:** `outputs/EXP-0016/model.pt` sha256 `434d84f80f405f375dee5a2108da667b22e4f622dd3688e2111e89975856a359` (present; no retrain).
+- **Segmentation (frozen):** ZL3b transcribed character stream; PUA stripped; not lowercased; SEQ_LEN=128 non-overlapping windows; same as EXP-0016 Voynich gate.
+- **Bits-gain:** `full_bits − selected_bits` under train-fitted rank-bucket bigram; window beats random if gain > mean_random + 0.05; 20 matched-random masks with seed base 9011 (EXP-0016 Voynich gate).
+- **Grid:** candidates 0.05…0.70 as in `docs/experiments/EXP-0018.md`; rate 0 reference only.
+- **Split seed 4018:** SELECT `f11r,f27r,f37r,f49r,f49v,f67r2,f67v1,f73r,f73v,f76r,f76v,f89v1`; CONFIRM `f11v,f27v,f36r,f36v,f37v,f67r1,f67v2,f89r1,f89r2,f89v2,f111r,f111v` (`data/manifests/exp0018_split.json`).
+- **Pass (CONFIRM only):** mean_gain > mean_random_gain AND fraction_beats_random > 0.50. Else reject fixed-rate transfer; no new architecture this session.
+- **ZL3b test:** unscored / unfitted.
+- **Next:** commit+push this prereg, then score select → select rate → confirm once.
