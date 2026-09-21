@@ -30,3 +30,12 @@ Resource use (if applicable):
 - **Validation:** the charter is byte-for-byte identical to the attachment (SHA-256 `ba74631f91464449097cd230bc7045cd58876c90b56be1292f723c185d407604`). An initial generic trailing-whitespace check flagged the charter's original Markdown hard-break spaces; these were preserved deliberately and exempted in `.gitattributes`. Authored documents are checked separately. Local Markdown links and the preparation-only state are checked before committing.
 - **Git / environment:** the first remote check failed because the sandbox could not resolve GitHub. The approved network retry succeeded; `git ls-remote --heads origin` returned no heads. The initial documentation commit and push are pending; completion will be recorded in the next entry.
 - **Next state:** preparation only; wait for the user's instruction to start research.
+
+## 2026-09-20 — Setup validated and published [NB-0002]
+
+- **Phase:** preparation only; no research execution.
+- **Validation results:** all 9 Markdown files inspected by the validation script; all 11 relative Markdown links resolved; authored files passed whitespace checks; the original charter remained byte-for-byte unchanged. Preparation-only wording is present in both README and project memory. `git diff --cached --check` passed before the initial commit.
+- **Git checkpoint:** `e07c276` (`Initialize Voynich research knowledge base and notebook`) created the 11 setup files. `git push -u origin main` succeeded and established `main` tracking `origin/main` on the configured GitHub repository.
+- **Environment limitation:** the sandbox initially blocked `.git/index.lock`; an approved escalation allowed the commit. Network access and push also used the environment's approval flow. These requirements are separate from the user's standing authorization for routine Git work.
+- **Follow-up:** this entry records the successful initial publication and is included in a documentation-only follow-up checkpoint. No corpus downloads, dependency installations, training runs, or paid research API calls were performed.
+- **Next state:** wait for the user's instruction to begin research; maintain these records at future substantive checkpoints.

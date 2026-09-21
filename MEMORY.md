@@ -9,6 +9,7 @@ Last updated: 2026-09-20 (America/Los_Angeles).
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.
 - The user describes the repository as private; remote visibility has not been independently verified.
 - Initial local checkout had no commits or project files. This checkpoint establishes documentation only.
+- Setup checkpoint `e07c276` was successfully pushed to `origin/main`; see notebook entry NB-0002 for validation and environment limitations.
 - No corpus, external bibliography, trained model, experiment result, or decipherment claim exists in the project yet.
 
 ## Durable intent and preferences
