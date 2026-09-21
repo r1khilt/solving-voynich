@@ -1,0 +1,30 @@
+[
+  {
+    "id": "discriminating-annotation",
+    "cost": 1,
+    "outcome_probabilities": {
+      "system-a": {
+        "present": 0.9,
+        "absent": 0.1
+      },
+      "system-b": {
+        "present": 0.1,
+        "absent": 0.9
+      }
+    }
+  },
+  {
+    "id": "uninformative-repeat",
+    "cost": 1,
+    "outcome_probabilities": {
+      "system-a": {
+        "present": 0.5,
+        "absent": 0.5
+      },
+      "system-b": {
+        "present": 0.5,
+        "absent": 0.5
+      }
+    }
+  }
+]

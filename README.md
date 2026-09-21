@@ -2,11 +2,13 @@
 
 A long-term research project aimed at deciphering the Voynich Manuscript by reverse-engineering the process that produced its text. Modern AI is a research tool; fluent generation, attractive translations, and statistical similarity are not themselves decipherment.
 
-**Latest research:** [deep review and next design](docs/research/deep-review-2026-09-21/README.md), with 93 source records covering 92 works/resources, four topic reviews, a searchable catalog and a bounded successor architecture plan. No new training occurred in this review; the completed campaign below remains the latest experimental evidence.
+**Research and implementation:** the [world-model/diffusion/linguistics dossier](docs/research/world-models-diffusion-2026-09-21/README.md) develops the ambitious program; the [communication-system workbench](docs/COMMUNICATION_SYSTEM.md) implements its computational core. The [earlier deep review](docs/research/deep-review-2026-09-21/README.md) supplies additional architecture and decipherment context. See the notebook for current measured results.
 
 **Current phase: active research and implementation.** The user has authorized continued bounded experiments, corpus research, model training and mechanistic interpretation. Design choices, validation, and completed runs are documented in the notebook; no decipherment claim is made.
 
 ## Start here
+
+- [Communication-system inference workbench](docs/COMMUNICATION_SYSTEM.md): joint masked inference, executable linguistic/world models, causal controls, relational grounding and active evidence selection; [bounded qualification](docs/experiments/WMD-0001.md).
 
 - [Current status and agent handoff](docs/CURRENT_STATUS.md): active work, live monitoring paths and continuation instructions.
 - [Completed three-track campaign](docs/experiments/CAMPAIGN-0001-results.md): 25 new models, 41,200 updates, 54.62 minutes of bounded local work; positive calibration and negative transfer/context results.
@@ -59,4 +61,4 @@ The pipeline needs no paid APIs or pretrained weights. Training evaluates valida
 - [EXP-0007: group forms versus ordering](docs/experiments/EXP-0007-results.md): the matched character-versus-group contrast is only **+0.005090 bits/unit**; all three descriptive leaf-bootstrap intervals include zero. Boundary/recency effects remain an untested explanation.
 - [Previous second-round overview](results/research-round-2-2026-09-20/overview.png), [first-round overview](results/research-round-2026-09-20/overview.png), [research notebook](NOTEBOOK.md), and [initial 200-update pilot](docs/experiments/EXP-0001-results.md).
 
-Earlier synthetic probes and intervention fitting use known-generator supervision after text-only language-model training; this is not unsupervised decipherment. EXP-0008 completed blind fitting before truth diagnostics, with explicit key/family failures. Manuscript hypotheses remain unresolved and its final test set remains unscored. Current implementation checks: **295 tests and 23 subtests passed**; live MPS intervention and cached-forward controls also passed. All research runs used local compute, with no paid research API calls. No experiment remains running.
+Earlier synthetic probes and intervention fitting use known-generator supervision after text-only language-model training; this is not unsupervised decipherment. EXP-0008 completed blind fitting before truth diagnostics, with explicit key/family failures. Manuscript hypotheses remain unresolved and its final test set remains unscored. At the earlier campaign checkpoint, **295 tests and 23 subtests passed**; live MPS intervention and cached-forward controls also passed. All research runs used local compute, with no paid research API calls. That campaign has completed; current work is recorded in the notebook.

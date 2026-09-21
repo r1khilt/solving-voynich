@@ -20,6 +20,7 @@ dev = ["pytest>=8,<10", "ruff>=0.11"]
 voynich-train = "voynich.train:main"
 voynich-evaluate = "voynich.evaluate:main"
 voynich-interpret = "voynich.interpret:main"
+voynich-worlds = "voynich.communication.__main__:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/voynich"]
