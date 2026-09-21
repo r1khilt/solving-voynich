@@ -590,3 +590,18 @@ Resource use (if applicable):
 - **Decisions / next state:** R5 registered and scored. Ranked memo R1–R5 stretch complete for this program block. **Stop** — do not open a new research program in this return. Optional later: R6 (LLM proposer + local verifier) only with explicit spend auth; optional R3 redesign under a new id. Unrelated dirty tree files left unstaged.
 - **Resources:** Local CPU only; no paid API.
 - **Git:** checkpoint of registration, code, compact results, notebook/memory.
+
+
+## 2026-09-21 — EXP-0023 typed copy_mutate transfer FAIL [NB-0040]
+
+- **Hole check:** Verified decisions for EXP-0014/0014b/0017/0019/0020/0022. No prior id scored a **retrained** TinySignalModel + EXP-0017 typed search on Finnish `copy_mutate` under frozen EXP-0014 gates with a no-retrain control. EXP-0017 used frozen easy-filler weights; EXP-0014b was no-retrain only; EXP-0016b is a different scale/bar.
+- **Question:** Does retrain+typed search on `random_char,periodic,copy_mutate` clear recon > 0.2043264147237504 and null/vocab floors?
+- **Registration:** `docs/experiments/EXP-0023.md` frozen before scores. Seeds 4011/42/4012/4023; updates 3000; `copy_lag` excluded (separate channel).
+- **Command:** `.venv/bin/python -m voynich.copy_mutate_transfer --root . --device auto` (MPS; ~325 s).
+- **Observations:** Winner `exact_count_neural` (7/200 feasible). Holdout recon **0.1759**, null_prec **0.492**; failed frozen gate and null_precision. No-retrain control recon **0.1848** (exact EXP-0014b match; also FAIL). Matched-random 0.1950 (transparency). Retrained recon < no-retrain.
+- **Decision:** **FAIL.** Do not search architectures inside this id.
+- **Interpretation:** This architecture/family does not transfer to the copy_mutate filler channel under the frozen bar. **Not a manuscript reading.** Ranked program remains done; **HYP-005 still open**; no decipherment.
+- **Validation:** `.venv/bin/python -m pytest -q tests/test_copy_mutate_transfer.py` (5 passed).
+- **Artifacts:** `docs/experiments/EXP-0023.md`, `EXP-0023-results.md`; `results/EXP-0023/{results,decision}.json`; `data/manifests/exp0023_data.json`. Checkpoint digest only (weights ignored under `outputs/EXP-0023/`).
+- **Resources:** Local MPS; no paid API; ZL3b unscored.
+- **Git:** this checkpoint only; unrelated dirty files left unstaged.

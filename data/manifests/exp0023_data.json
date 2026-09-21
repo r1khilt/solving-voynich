@@ -1,0 +1,40 @@
+{
+  "experiment": "EXP-0023",
+  "data_seed": 4011,
+  "model_seed": 42,
+  "finnish_seed": 4012,
+  "search_seed": 4023,
+  "filler_rate": 0.3,
+  "filler_families": [
+    "random_char",
+    "periodic",
+    "copy_mutate"
+  ],
+  "seq_len": 128,
+  "n_train": 4000,
+  "n_val": 400,
+  "n_holdout": 300,
+  "updates": 3000,
+  "derived_sha256": {
+    "train": "2c824915231d69f98f41120829140525b03839a19518d02973ac68f654f6e08e",
+    "validation": "7d5728698430763a6b5ec67e9dbd1cc73ce6cac33445118a78c0211c4e6dd2df",
+    "finnish_holdout": "cd72bf0fca93f14eebb274c548072cb58a23bd04a7f629c8984d76a888ac59b4"
+  },
+  "checkpoint_sha256": "cec0602d572c2c7abd057da1adfe5ed6058102a9f7ed10d9c7cfe335857056b1",
+  "checkpoint_path": "outputs/EXP-0023/model.pt",
+  "param_count": 70301,
+  "ops": [
+    "exact_count_neural",
+    "joint_keep_run_neural",
+    "exact_count_anti_copy",
+    "exact_count_anti_periodic",
+    "delete_copy_tokens",
+    "homophone_collapse",
+    "mono_sub_rank"
+  ],
+  "length_penalty": 0.02,
+  "max_candidates": 200,
+  "frozen_matched_random_recon": 0.2043264147237504,
+  "pass_rule_source": "EXP-0014 gates + EXP-0017 typed search",
+  "copy_lag_scope": "excluded; separate channel (see EXP-0020)"
+}

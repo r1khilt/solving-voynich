@@ -1,0 +1,73 @@
+{
+  "passed": false,
+  "winner_program": "exact_count_neural",
+  "reasons": [
+    "null_precision 0.4920 < 0.5",
+    "recon_acc 0.1759 not > frozen_matched_random 0.2043"
+  ],
+  "rule": "EXP-0023",
+  "parent_pass_rule": "EXP-0014",
+  "holdout_metrics": {
+    "mask_f1": 0.7942884996334407,
+    "mask_acc": 0.7083333333333334,
+    "recon_acc": 0.17585403660739804,
+    "recon_edit_sim": 0.6625990877840205,
+    "pred_bits_gain": -0.09831271572309826,
+    "n": 300,
+    "null_precision": 0.49201754385964913,
+    "null_recall": 0.5090760573606825,
+    "pred_null_rate": 0.296875,
+    "true_null_rate": 0.28692708333333333,
+    "null_f1": 0.5004014631100008,
+    "n_ops": 1,
+    "program": "exact_count_neural",
+    "selection_score": 0.17585403660739804
+  },
+  "val_winner_metrics": {
+    "recon_acc": 0.17443583650465685,
+    "selection_score": 0.17443583650465685,
+    "null_recall": 0.5234608985024959,
+    "null_precision": 0.5131578947368421,
+    "pred_null_rate": 0.296875
+  },
+  "controls": {
+    "matched_random_recon": 0.195041072664315,
+    "matched_random_frozen_gate": 0.2043264147237504,
+    "vocab_filter_recon": 0.048189135601220935,
+    "vocab_filter_mask_f1": 0.3785354196720935,
+    "random_program_val_score_mean": 0.13819327518546565,
+    "no_retrain": {
+      "program": "exact_count_neural",
+      "checkpoint": "outputs/EXP-0013/model.pt",
+      "passed_exp0014_gates": false,
+      "reasons": [
+        "recon_acc 0.1848 not > frozen_matched_random 0.2043"
+      ],
+      "metrics": {
+        "mask_f1": 0.8074125844692116,
+        "mask_acc": 0.726875,
+        "recon_acc": 0.18482031420889536,
+        "recon_edit_sim": 0.6809908522912557,
+        "pred_bits_gain": -0.08561119837891,
+        "n": 300,
+        "null_precision": 0.5232456140350877,
+        "null_recall": 0.5413868215647123,
+        "pred_null_rate": 0.296875,
+        "true_null_rate": 0.28692708333333333,
+        "null_f1": 0.5321616558122937,
+        "n_ops": 1,
+        "program": "exact_count_neural",
+        "selection_score": 0.18482031420889536
+      }
+    }
+  },
+  "thresholds": {
+    "length_penalty": 0.02,
+    "null_recall_min": 0.5,
+    "null_precision_min": 0.5,
+    "pred_null_rate_min": 0.15,
+    "pred_null_rate_max": 0.45,
+    "recon_vs_frozen_matched_random": 0.2043264147237504,
+    "vocab_f1_max": 0.55
+  }
+}
