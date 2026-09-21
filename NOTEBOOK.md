@@ -458,3 +458,23 @@ Resource use (if applicable):
 - **Pass (CONFIRM only):** mean_gain > mean_random_gain AND fraction_beats_random > 0.50. Else reject fixed-rate transfer; no new architecture this session.
 - **ZL3b test:** unscored / unfitted.
 - **Next:** commit+push this prereg, then score select → select rate → confirm once.
+
+## 2026-09-21 — R2 exact-count gate + R1 program search [NB-0035]
+
+- **Phase / question:** Execute ranked program R2 then R1 from `docs/research/ai-hard-problems-2026-09-21/README.md`. R2 = finish EXP-0013/0016 exact-count / joint keep-run synthetic gate before label-free manuscript decode. R1 = typed decoder-program search scored by recon/null gates + length penalty. No paid LLM API; no image anchors; ZL3b not scored in this block.
+- **Frozen rule located:** EXP-0014 already preregistered exact-count `n_keep=round(0.70 L)` on frozen EXP-0013 weights, recon gate **> 0.2043264147237504** (recorded EXP-0013 matched-random), plus EXP-0013 null-rate gates and vocab-f1≤0.55. The ~0.218 vs 0.199 figure is the EXP-0013 exploratory note, not a prior scored pass. EXP-0014c (joint keep-run) registered **before** any 0014c scores, contingent on 0014 FAIL. EXP-0017 registered **before** Finnish program-search scores.
+- **Actions:** Implemented `voynich.exact_count_decode` and `voynich.decoder_programs`. Did not retrain EXP-0013. Did not run EXP-0014c (0014 passed). Did not start R3/R4/R5.
+- **Exact inputs:** checkpoint `outputs/EXP-0013/model.pt`; holdout digest `31984a91…` for 0014/0017; 0014b holdout regenerated with `random_char,periodic,copy_mutate`; seeds 4011/42/4012; search seed 4017; Python 3.12.13 / torch 2.14.0 / MPS.
+- **Commands:**
+  - `.venv/bin/python -m voynich.exact_count_decode --root . --device mps --experiment-id EXP-0014 --decoder exact_count --filler-families random_char,periodic`
+  - `.venv/bin/python -m voynich.exact_count_decode --root . --device mps --experiment-id EXP-0014b --decoder exact_count --filler-families random_char,periodic,copy_mutate`
+  - `.venv/bin/python -m voynich.decoder_programs --root . --device mps`
+- **Observations:**
+  - **EXP-0014 PASS:** recon 0.21774 > 0.20433; null_rec 0.625; null_prec 0.603; pred_null 0.297; vocab f1 0.424. Confirms exploratory ~0.218.
+  - **EXP-0014b FAIL:** recon 0.1848 ≯ 0.2043; null gates cleared. Frozen easy-filler encoder + exact-count does not beat the frozen random gate under copy_mutate.
+  - **EXP-0017 PASS:** 200 candidates, 52 val-feasible; winner `exact_count_neural`; Finnish recon 0.218 > matched-random 0.2043 and vocab-filter 0.056; val score 0.204 > random-program mean 0.125.
+- **Interpretation:** Decode-count, not a new architecture, was the easy-filler Finnish miss. Program search recovered that same short program; it is not evidence of a historical Voynich encoding. Copy-mutate remains a falsifier for this frozen tiny model. EXP-0016/0016b (separate larger exact-count model) are not re-scored here.
+- **Validation:** `.venv/bin/python -m pytest -q tests/test_exact_count_decode.py tests/test_decoder_programs.py` (7 passed). Charter not modified.
+- **Decisions / next state:** R2 and R1 have registered results. EXP-0014c unused. Next unfinished ranked item is **R3** (generator-adversary for HYP-005 with held-out diagnostics). Do not treat synthetic PASS as decipherment. Unrelated dirty tree files left unstaged.
+- **Resources:** Local MPS; decode-only seconds; EXP-0017 ~207 s; no paid API.
+- **Git:** checkpoint of this block’s registrations, code, compact results, notebook/memory.

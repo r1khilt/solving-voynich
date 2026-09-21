@@ -1,0 +1,18 @@
+{
+  "experiment": "EXP-0017",
+  "train_digest": "8c996b2183b1b1784a6e3945d845f2e1ec4eec65393ba0ab0b75c655361bc432",
+  "val_digest": "0d516e073ebd16d1a39a688a6a041900f94b72e4d10dacfc46c6eda8887d65ad",
+  "holdout_digest": "31984a91eac2d4fecc44b716805dba11c939eb2c8a0b951090e683e7a3b93740",
+  "ops": [
+    "exact_count_neural",
+    "joint_keep_run_neural",
+    "exact_count_anti_copy",
+    "exact_count_anti_periodic",
+    "delete_copy_tokens",
+    "homophone_collapse",
+    "mono_sub_rank"
+  ],
+  "length_penalty": 0.02,
+  "search_seed": 4017,
+  "max_candidates": 200
+}

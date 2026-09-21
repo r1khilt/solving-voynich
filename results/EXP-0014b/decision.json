@@ -1,0 +1,35 @@
+{
+  "passed": false,
+  "winner": null,
+  "rule": "EXP-0014",
+  "neural_check": {
+    "model": "neural",
+    "pass": false,
+    "reasons": [
+      "recon_acc 0.1848 not > frozen_matched_random 0.2043"
+    ],
+    "metrics": {
+      "mask_f1": 0.8074125844692116,
+      "mask_acc": 0.726875,
+      "recon_acc": 0.18482031420889536,
+      "recon_edit_sim": 0.6809908522912557,
+      "pred_bits_gain": -0.0804349686356603,
+      "n": 300,
+      "null_precision": 0.5232456140350877,
+      "null_recall": 0.5413868215647123,
+      "pred_null_rate": 0.296875,
+      "true_null_rate": 0.28692708333333333,
+      "null_f1": 0.5321616558122937,
+      "teacher_forced_recon_acc": 1.0
+    },
+    "null_f1": 0.5321616558122937
+  },
+  "thresholds": {
+    "null_recall_min": 0.5,
+    "null_precision_min": 0.5,
+    "pred_null_rate_min": 0.15,
+    "pred_null_rate_max": 0.45,
+    "recon_vs_frozen_matched_random": 0.2043264147237504,
+    "vocab_f1_max": 0.55
+  }
+}

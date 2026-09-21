@@ -1,0 +1,200 @@
+{
+  "experiment": "EXP-0014b",
+  "parent_pass_rule": "EXP-0014",
+  "decoder": "exact_count",
+  "filler_families": [
+    "random_char",
+    "periodic",
+    "copy_mutate"
+  ],
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch": "2.14.0",
+    "git_commit": "1f88ad27e9f7ba17fdcc686bd72afa72289ee191",
+    "git_dirty": true,
+    "threads": 6,
+    "source_sha256": {
+      "configs/attention_only.json": "19568963a2123e2da116329df17f25a33e5b86c9e87134332c7e33586fa4568d",
+      "configs/campaign-0001.json": "5dbd84d691fa1a6668106de2f2bd514789ebe09e4beda3c965b2b84242b8744a",
+      "configs/exp0008_blind.json": "7e196c6b04eea92c6c64b8e78c55cb9504fdb08841acdf93e527e636c0400dd0",
+      "configs/exp0010.json": "d91aeadb2570c5ae8a669e7de79ec2506edb6324f1c63cc00b359e6c914ab1e6",
+      "configs/gated_attention.json": "1125863bd361a41c07f8a985db76aa6f4096da82a40f21baacb416141feb86a9",
+      "configs/mtp.json": "969ba75363fc9ba66110764ccb784fe580aa1c81aac78d9f9fcfb64fc4b93381",
+      "configs/qk_norm.json": "7dfc1174d18eda5c3540a43c55799a40f58d135f806f836e6d83a6a22f5c1072",
+      "configs/reference.json": "116b37ece409b936678e95a4d646bb34fb1ad4b13bea340012495aef6eb993be",
+      "configs/small.json": "3fef5ff1faa993178642decb6f1a3fbc3000d220e813d2a9c2e0c63440d54c3c",
+      "configs/smoke.json": "155905e76753c67adc46460e28e21c988e90a8fe8ccfe1b36c36197f2ca989cd",
+      "configs/synthetic_small.json": "632ac1f84a4bb178af1b300ae81122ce8c54e5af38edf8b19262576f62ce2993",
+      "data/manifests/exp-0011a_data.json": "fcce5d99816e085a9e30f93f3f6dbe215c52546b8a97d6f7798c4f6417088986",
+      "data/manifests/exp0011_corpora.json": "ee7f05f5657a98326cae4a2f73c3515d46d4474d1242f5f869d59cf53abfe856",
+      "data/manifests/exp0011_data.json": "d2acbe723735fc8e19c9cae69acb3633c34818030ff73b2c1c6675def336cd2b",
+      "data/manifests/exp0012_data.json": "01eab2130966cb3511ed4b6fe4e9c21aaee634c81807e4f5195227f39bf8f0b2",
+      "data/manifests/exp0013_data.json": "9290822a7d7d7017f7dc0d293aa69b48f075ab71a8b7fdea16580ff4c0e486a6",
+      "data/manifests/exp0014_data.json": "89874dbde064b904e0f47007efcd66015fbd261f9efae8782df25fec956e1957",
+      "data/manifests/exp0014b_data.json": "402dc0e4b56def7aff1bf3686a458f3873a58f689d01a1676194bc26de4c9213",
+      "data/manifests/exp0015_corpora.json": "69d34688ba294c76ea9c87bd3ddf2c6df46bcc8bedd00e0381dcac78044e6b41",
+      "data/manifests/exp0015_data.json": "d1e40967edcd66ea0314763c33086547dad6559dc5ea38057a41ba084a7a4f04",
+      "data/manifests/exp0015b_data.json": "62affc2b555587fda2539454aca4b14d9bd6221e988da66145257f0c8e3837a1",
+      "data/manifests/exp0016_corpora.json": "2afbe43a14a917ca8c51f0271e6ea5b732ce9c0ed2fa2c24f28f230b8113e41f",
+      "data/manifests/exp0016_data.json": "df1da6ad5dd8aa261b4d89882e33f569cd861e2ea5ea0645f42f817def96eabe",
+      "data/manifests/exp0016_splits.json": "fd7dac1973031b858c3c5a39a62fdd78cb2e3bd4b8a3255654c9b58237da6f50",
+      "data/manifests/iso639_1_to_3.json": "19f1c415bee21e557597f9356840d0ad97ce56983ae7575dd357bb116c4db98d",
+      "data/manifests/zl3b_preparation.json": "07c59f09990682537788b4ecf35952a47571454188697352a5def7539a620974",
+      "data/manifests/zl3b_source.json": "683f249c035db5401ecf063595fbbf613adbdc9de2f5c6c318f06d697dfc9aff",
+      "data/manifests/zl3b_split.json": "9fc80cb4b000fdd5d952b7c2416b37b6b92f07bc56486a63309142953ed6634e",
+      "data/manifests/zl3b_split_provisional_v1.json": "5ffc815ba878bbb303599ee8b3fdf5a6acfdedee2e91071277be9f3f4e391fe8",
+      "pyproject.toml": "6386965b84660c10678d8506fa1dec9a1ae0b54ca0a7cee7ba409c782bc41c85",
+      "src/voynich/__init__.py": "f51cc6d99d838a811a4a377c45d913ca33c23d265c4a35cccce39606bce5d8be",
+      "src/voynich/blind_recovery.py": "cc273e2d5d7f73b5bb0b23837ed5dbe9678c285be0f56608ca6e7d734c7ae911",
+      "src/voynich/calibration.py": "a18e852d4e71eb83b4b4c31cab189c2c52da619ef0ba41fc6b9b0b51dc541230",
+      "src/voynich/causal_alignment.py": "c20d8e0c8f35333e1a5c879b633d8361f4cad61cb9f009601c62ea48ae2326ff",
+      "src/voynich/causal_mapping.py": "1db6eafe7df0cdbf8a50bf893710398501fa3be47d69cfd59cb0dc647da2f298",
+      "src/voynich/context_analysis.py": "8acad13b9c10f209a7f25994b3a00e345dbdabf20ea3f69a3cf29117dd514fe4",
+      "src/voynich/context_controls.py": "ceb8b46183ff05433f564adb3836d79b0c56cbd544470afba958a10e90fa628b",
+      "src/voynich/data.py": "2b34268167c3d7c07bc1baf86e0d99af06de9d5abf007e9fa5027a9769295661",
+      "src/voynich/decoder_programs.py": "0c5794fa7b5f3b9f69ecea9de7949e4141249a352435886f64b469faf1843ed4",
+      "src/voynich/evaluate.py": "499f688bb399b988dac0ce838e9caa36800a2e9d28d68b9a47ebef818e5480dc",
+      "src/voynich/exact_count_decode.py": "de04760e46aa829a6ad81fe68f098d24c0946190fb12d5512789d9cc53de09af",
+      "src/voynich/interpret.py": "89f2d3161b7f6a08efc9c64161418e53d3b2c6db83a28dc8dbd2cf5f4f21436e",
+      "src/voynich/latent_recovery.py": "07f39846ae1daad63019cb3baae0ccff5a99be05220c442d5913c0543bb35e50",
+      "src/voynich/long_context.py": "a798f3c9abcb8d8a9bb8eca6629b9d5c20f8531d6b351d6c7a915b32316b7944",
+      "src/voynich/mass_lang_recovery.py": "e6d402b183e53a805f19751c8f7d98e62a0aea4836e941aa6661f032798870f0",
+      "src/voynich/model.py": "771c4e6f4cb3abdbb3ef7f7101f845ac63f129bdc08de249db190997f63cc629",
+      "src/voynich/multilang_recovery.py": "486c699bed56bf66b27e0afee023f18ed56b60abc2debbf99daf9af453c6cb8a",
+      "src/voynich/order_scale.py": "b95eb06d09e6753bff5698c04e325c7e611844c5306c6da85f1ec2f72a3a81fc",
+      "src/voynich/romanize.py": "97bff601792b55336c9af7219393b399d215e92cf422179145bb5a780b1e5617",
+      "src/voynich/runtime.py": "6749f192095f210a14d9508a6fa22942c1b6c5fd9a31acd5e474850ddfa6506c",
+      "src/voynich/synthetic.py": "7c6f53cefa165b4d45ca0fd151fbdba26bb841795a88ac6a3849180603a38e6e",
+      "src/voynich/tokenizer.py": "c8a0cea5dd14697c0abb8b2150d4b0f31853ce9162a8fc0441f7a5a706e81d1c",
+      "src/voynich/train.py": "517f795c8f400f8ffd465e58bf96a04d3deac9d7ba44c2e5073648cc09cb4c9e",
+      "uv.lock": "c736ffb780b9c5ed7892a269e85da769f7d3ca651185a486c5e4903e20b6bdf4"
+    }
+  },
+  "checkpoint_param_count": 70301,
+  "checkpoint_summary": {
+    "param_count": 70301,
+    "best_val_score": 0.2044971512170666,
+    "best_val_mask_f1": 0.8364549606193576,
+    "signal_threshold": 0.4507434666156769,
+    "updates": 3000,
+    "seconds": 79.62471294403076,
+    "device": "mps",
+    "fix": "exp0013_ctc_deletion_alignment_checkpoint_recon_acc_calibrated_threshold",
+    "balanced_null_loss": false,
+    "alignment_ctc": true,
+    "null_loss_weight": 3.5
+  },
+  "holdout_language": "finnish",
+  "holdout_digest": "regenerated",
+  "holdout_regenerated": true,
+  "filler_rate": 0.3,
+  "neural": {
+    "mask_f1": 0.8074125844692116,
+    "mask_acc": 0.726875,
+    "recon_acc": 0.18482031420889536,
+    "recon_edit_sim": 0.6809908522912557,
+    "pred_bits_gain": -0.0804349686356603,
+    "n": 300,
+    "null_precision": 0.5232456140350877,
+    "null_recall": 0.5413868215647123,
+    "pred_null_rate": 0.296875,
+    "true_null_rate": 0.28692708333333333,
+    "null_f1": 0.5321616558122937,
+    "teacher_forced_recon_acc": 1.0
+  },
+  "classical": {
+    "mask_f1": 0.7349306310214433,
+    "mask_acc": 0.6338541666666667,
+    "recon_acc": 0.10239863457607769,
+    "recon_edit_sim": 0.5636367974551183,
+    "pred_bits_gain": -0.00622858181891508,
+    "n": 300,
+    "null_precision": 0.3533551870420363,
+    "null_recall": 0.33263750226901434,
+    "pred_null_rate": 0.27010416666666665,
+    "true_null_rate": 0.28692708333333333,
+    "null_f1": 0.3426834969611968
+  },
+  "baselines": {
+    "majority": {
+      "mask_f1": 0.8322145271108372,
+      "mask_acc": 0.7130729166666666,
+      "recon_acc": 0.07255208333333334,
+      "recon_edit_sim": 0.7130729166666666,
+      "pred_bits_gain": 0.0,
+      "n": 300,
+      "null_precision": 0.0,
+      "null_recall": 0.0,
+      "pred_null_rate": 0.0,
+      "true_null_rate": 0.28692708333333333
+    },
+    "matched_random_recomputed": {
+      "mask_f1": 0.7129952333621075,
+      "mask_f1_std": 0.0017232922123361098,
+      "recon_acc": 0.195041072664315,
+      "pred_bits_gain": -0.04132020697246398
+    },
+    "matched_random_frozen_gate": 0.2043264147237504,
+    "vocab_filter": {
+      "mask_f1": 0.37524880139202643,
+      "mask_acc": 0.442421875,
+      "recon_acc": 0.048384570634099004,
+      "recon_edit_sim": 0.24259910893848655,
+      "pred_bits_gain": 1.0666229984496385,
+      "n": 300,
+      "null_precision": 0.33099164146095555,
+      "null_recall": 0.92367035759666,
+      "pred_null_rate": 0.800703125,
+      "true_null_rate": 0.28692708333333333
+    }
+  },
+  "decision": {
+    "passed": false,
+    "winner": null,
+    "rule": "EXP-0014",
+    "neural_check": {
+      "model": "neural",
+      "pass": false,
+      "reasons": [
+        "recon_acc 0.1848 not > frozen_matched_random 0.2043"
+      ],
+      "metrics": {
+        "mask_f1": 0.8074125844692116,
+        "mask_acc": 0.726875,
+        "recon_acc": 0.18482031420889536,
+        "recon_edit_sim": 0.6809908522912557,
+        "pred_bits_gain": -0.0804349686356603,
+        "n": 300,
+        "null_precision": 0.5232456140350877,
+        "null_recall": 0.5413868215647123,
+        "pred_null_rate": 0.296875,
+        "true_null_rate": 0.28692708333333333,
+        "null_f1": 0.5321616558122937,
+        "teacher_forced_recon_acc": 1.0
+      },
+      "null_f1": 0.5321616558122937
+    },
+    "thresholds": {
+      "null_recall_min": 0.5,
+      "null_precision_min": 0.5,
+      "pred_null_rate_min": 0.15,
+      "pred_null_rate_max": 0.45,
+      "recon_vs_frozen_matched_random": 0.2043264147237504,
+      "vocab_f1_max": 0.55
+    }
+  },
+  "transparency_exp0013_rule_on_recomputed_random": {
+    "passed": false,
+    "neural_reasons": [
+      "recon_acc 0.1848 not > matched_random 0.1950"
+    ]
+  },
+  "voynich_label_free": null,
+  "simplifications": [
+    "Decode-only on frozen EXP-0013 weights; no retrain",
+    "Primary recon gate is frozen EXP-0013 matched-random 0.2043264147237504",
+    "Recomputed matched-random reported for transparency only",
+    "ZL3b not scored"
+  ]
+}

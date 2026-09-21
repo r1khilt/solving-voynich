@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "winner_program": "exact_count_neural",
+  "reasons": [
+    "all EXP-0017 gates cleared"
+  ],
+  "rule": "EXP-0017",
+  "holdout_metrics": {
+    "mask_f1": 0.8411468917802949,
+    "mask_acc": 0.7747916666666667,
+    "recon_acc": 0.21774310295101287,
+    "recon_edit_sim": 0.7278059185120866,
+    "pred_bits_gain": -0.0865790220268921,
+    "n": 300,
+    "null_precision": 0.6031578947368421,
+    "null_recall": 0.6250909090909091,
+    "pred_null_rate": 0.296875,
+    "true_null_rate": 0.2864583333333333,
+    "null_f1": 0.6139285714285715,
+    "n_ops": 1,
+    "program": "exact_count_neural",
+    "selection_score": 0.21774310295101287
+  },
+  "val_winner_metrics": {
+    "recon_acc": 0.2041935437472731,
+    "selection_score": 0.2041935437472731,
+    "null_recall": 0.639407443092858,
+    "null_precision": 0.6265046023129572,
+    "pred_null_rate": 0.296875
+  },
+  "baselines": {
+    "matched_random_recon": 0.2043264147237504,
+    "vocab_filter_recon": 0.05588467949075159,
+    "vocab_filter_mask_f1": 0.4239045218386442,
+    "random_program_val_score_mean": 0.12468668741335484
+  },
+  "thresholds": {
+    "length_penalty": 0.02,
+    "null_recall_min": 0.5,
+    "null_precision_min": 0.5,
+    "pred_null_rate_min": 0.15,
+    "pred_null_rate_max": 0.45,
+    "vocab_f1_max": 0.55
+  }
+}
