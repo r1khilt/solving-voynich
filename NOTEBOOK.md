@@ -50,3 +50,13 @@ Resource use (if applicable):
 - **Evidence that would increase confidence:** a compact frozen mechanism or decoder making independently checkable predictions on excluded manuscript material; progressively stronger evidence would be required for semantic claims. No numerical success probability assigned.
 - **Validation / checkpoint:** source links and attribution scope recorded; preparation-only status preserved; documentation link and whitespace checks accompany this checkpoint. Commit and push outcome is verified in the session's tool record.
 - **Next state:** continue discussion or await instruction to begin; no direction selected for execution and no resources spent on training or paid research API calls.
+
+## 2026-09-20 — Reader usability and mechanistic interpretation [NB-0004]
+
+- **User position:** cumbersome private codebook lookup seems unlikely for an everyday reference; the user remains particularly optimistic about mechanistic interpretability.
+- **Limited source check:** SRC-0006 reports Davis's assessment of wear consistent with repeated use. This supports the user's premise in qualified form; it does not establish daily-use consensus or a particular encoding.
+- **Assistant clarification:** the arbitrary private-codebook example was a limiting case for identifiability, not a favored historical explanation. Frequent use would disfavor continual expensive lookup, conditional on that use being established. It would not exclude learned private conventions, memorized vocabulary, or shared abbreviations.
+- **Working methodological inference:** reader learnability can help prioritize compact, reusable candidate rules. Ease for a trained reader does not guarantee recoverability for an outsider. This is a modeling preference, not a new observed manuscript property.
+- **Potential interpretability question:** whether different surface forms converge on a common internal representation that causally supports predictions across contexts. Such a representation would still need synthetic calibration, competing generator controls, and independent validation before being interpreted as a historical or semantic unit.
+- **Validation / checkpoint:** preparation-only state retained, no experiment executed; documentation links and whitespace checked before the discussion checkpoint. Git publication verified in the session tool record.
+- **Next state:** continue discussion; mechanistic interpretability is a user preference, not yet an authorized execution task.

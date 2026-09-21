@@ -10,7 +10,7 @@ Last updated: 2026-09-20 (America/Los_Angeles).
 - The user describes the repository as private; remote visibility has not been independently verified.
 - Initial local checkout had no commits or project files. This checkpoint establishes documentation only.
 - Setup checkpoint `e07c276` was successfully pushed to `origin/main`; see notebook entry NB-0002 for validation and environment limitations.
-- A limited source check supported the feasibility discussion in NB-0003; the source register now includes those references. No systematic literature review, corpus, trained model, experiment result, or decipherment claim exists in the project yet.
+- Limited source checks supported the feasibility discussions in NB-0003 and NB-0004; the source register includes those references. No systematic literature review, corpus, trained model, experiment result, or decipherment claim exists in the project yet.
 
 ## Durable intent and preferences
 
@@ -19,6 +19,7 @@ Last updated: 2026-09-20 (America/Los_Angeles).
 - The charter is flexible. Abandon or revise its proposals if evidence favors another account.
 - Investigate structured null/filler material and non-one-to-one or state-dependent mappings without assuming either exists.
 - Consider synthetic ground-truth tasks, small interpretable models, and causal analysis. Keep frontier models in the researcher role where useful.
+- The user is particularly enthusiastic about mechanistic interpretability and argues that routine use would disfavor cumbersome codebook lookup. Treat reader learnability as a conditional modeling preference, not established evidence of a specific encoding or authorization to begin experiments (NB-0004).
 - Do not assume spaces delimit plaintext words; consider multiple representational levels.
 - Keep an updated Markdown notebook. Commit and push progress regularly; routine Git checkpoints have standing user authorization.
 - Ask for concrete resources or assistance when needed. Do not repeatedly ask for permission already granted.
