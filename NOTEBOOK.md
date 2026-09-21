@@ -499,7 +499,7 @@ Resource use (if applicable):
 ## 2026-09-21 — R4 edge-emitting joint futures EXP-0020 [NB-0037]
 
 - **Phase / question:** Ranked memo R4 / NEXT_DESIGN P2 — does a compact explicit edge-emitting channel predict **joint continuation strings** on fresh keys better than a transformer reference, under frozen probability-validity, update-closure, non-first-symbol-only, and equivalent-generator gates?
-- **Registration:** new id `docs/experiments/EXP-0020.md` written **before** scores. P2 was design-only (no prior experiment id). EXP-0018 is a ZL3b null-rate grid, **not** a P2 prerequisite; left unexecuted.
+- **Registration:** new id `docs/experiments/EXP-0020.md` written **before** scores. P2 was design-only (no prior experiment id). EXP-0018 is a ZL3b null-rate grid, **not** a P2 prerequisite (scored FAIL in NB-0034b; not used here).
 - **Frozen gates:** validity (row/distribution sums within 1e-6); update closure \(<10^{-5}\); structured families (`cycle_null`, `delayed_parity`, `copy_lag`) macro \(\Delta_{\mathrm{joint}}\ge 0.05\) and \(\Delta_{\mathrm{joint}}\ge\Delta_1+0.02\); equivalent-generator mean |KL gap| ≤ 0.05 with oracle agreement ≤1e-8.
 - **Actions:** Implemented `voynich.edge_emitting`; unit tests; one scored run. Did **not** retune thresholds. Did not start R5. Did not score ZL3b. No paid API.
 - **Command:** `.venv/bin/python -m voynich.edge_emitting --root . --device mps` (~2165 s; data seed 4020; model seed 42).
@@ -511,7 +511,7 @@ Resource use (if applicable):
 - **Interpretation:** Explicit channels can beat this transformer on edge-like generators and still fail the preregistered three-family joint bar. Synthetic miss ≠ decipherment. HYP-003 / HYP-005 unresolved.
 - **Validation:** `.venv/bin/python -m pytest -q tests/test_edge_emitting.py` (5 passed). Charter not modified.
 - **Artifacts:** `docs/experiments/EXP-0020.md`, `EXP-0020-results.md`; `results/EXP-0020/{results,decision}.json`; `data/manifests/exp0020_data.json`.
-- **Decisions / next state:** R4 registered and scored FAIL. Ranked remainder: **R5** (language-ID attacks with null controls). EXP-0018 still unexecuted. Unrelated dirty tree files left unstaged.
+- **Decisions / next state:** R4 registered and scored FAIL. Ranked remainder: **R5** (language-ID attacks with null controls). HYP-005 still open. Unrelated dirty tree files left unstaged.
 - **Resources:** Local MPS; ~36 min; no paid API.
 
 

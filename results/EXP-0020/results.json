@@ -1,0 +1,1188 @@
+{
+  "experiment": "EXP-0020",
+  "question": "Does an explicit edge-emitting channel predict joint continuation strings on fresh keys better than a transformer reference under P2 controls?",
+  "device": "mps",
+  "elapsed_s": 2164.7240358749405,
+  "transformer": {
+    "best_val_bits": 1.7277306592790902,
+    "history": [
+      {
+        "step": 100,
+        "val_bits": 1.8939518913379947
+      },
+      {
+        "step": 200,
+        "val_bits": 1.803440689859265
+      },
+      {
+        "step": 300,
+        "val_bits": 1.763056067748962
+      },
+      {
+        "step": 400,
+        "val_bits": 1.7532042135769368
+      },
+      {
+        "step": 500,
+        "val_bits": 1.74195672019316
+      },
+      {
+        "step": 600,
+        "val_bits": 1.7277306592790902
+      },
+      {
+        "step": 700,
+        "val_bits": 1.7299361647937548
+      },
+      {
+        "step": 800,
+        "val_bits": 1.7323822740369765
+      }
+    ]
+  },
+  "data_manifest_sha256": "87221eeae8a1d9b7582e5bcb2927039e82b04a4dbcdd23909acbd21b50af6e9b",
+  "per_family": {
+    "iid": {
+      "keys": [
+        {
+          "key": 6,
+          "selected_k": 1,
+          "val_bits": 1.9996149664373528,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9996149664373528
+            },
+            {
+              "k": 2,
+              "val_bits": 2.000549674946527
+            },
+            {
+              "k": 4,
+              "val_bits": 2.0032203247387153
+            },
+            {
+              "k": 8,
+              "val_bits": 2.0019257425326105
+            },
+            {
+              "k": 16,
+              "val_bits": 2.0028727306030563
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.0000000894069672
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 0.0,
+          "edge_joint_bits": 2.0008119929179444,
+          "edge_first_bits": 2.001405705692498,
+          "tf_joint_bits": 2.0064505014540317,
+          "tf_first_bits": 2.0053288019413293,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.005638508536087272,
+          "delta_first_tf_minus_edge": 0.00392309624883147
+        },
+        {
+          "key": 7,
+          "selected_k": 1,
+          "val_bits": 1.9989219666452671,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9989219666452671
+            },
+            {
+              "k": 2,
+              "val_bits": 1.9992965233610152
+            },
+            {
+              "k": 4,
+              "val_bits": 1.9986316427323458
+            },
+            {
+              "k": 8,
+              "val_bits": 1.999371344413273
+            },
+            {
+              "k": 16,
+              "val_bits": 1.9994516517120933
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.0000000298023224
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 0.0,
+          "edge_joint_bits": 1.9970081953012613,
+          "edge_first_bits": 1.9938630625736076,
+          "tf_joint_bits": 2.000060199423473,
+          "tf_first_bits": 2.000197441578861,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.0030520041222115157,
+          "delta_first_tf_minus_edge": 0.006334379005253465
+        },
+        {
+          "key": 8,
+          "selected_k": 1,
+          "val_bits": 1.9991772017978466,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9991772017978466
+            },
+            {
+              "k": 2,
+              "val_bits": 1.9988014197057113
+            },
+            {
+              "k": 4,
+              "val_bits": 1.9990910126923667
+            },
+            {
+              "k": 8,
+              "val_bits": 1.9992841836058157
+            },
+            {
+              "k": 16,
+              "val_bits": 1.9990569128322668
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.999999925494194
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 0.0,
+          "edge_joint_bits": 2.0015752519224734,
+          "edge_first_bits": 2.003968333181679,
+          "tf_joint_bits": 2.0014955666275736,
+          "tf_first_bits": 2.000484652605802,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": -7.96852948998783e-05,
+          "delta_first_tf_minus_edge": -0.0034836805758771128
+        },
+        {
+          "key": 9,
+          "selected_k": 1,
+          "val_bits": 1.9998747505310472,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9998747505310472
+            },
+            {
+              "k": 2,
+              "val_bits": 1.999705257329056
+            },
+            {
+              "k": 4,
+              "val_bits": 2.0005294282889543
+            },
+            {
+              "k": 8,
+              "val_bits": 2.0005665335458778
+            },
+            {
+              "k": 16,
+              "val_bits": 2.001468040804303
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.000000074505806
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 0.0,
+          "edge_joint_bits": 1.9992458042440868,
+          "edge_first_bits": 2.005076417401188,
+          "tf_joint_bits": 1.9996539764021348,
+          "tf_first_bits": 1.9991596122722295,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.00040817215804800355,
+          "delta_first_tf_minus_edge": -0.0059168051289586465
+        }
+      ],
+      "macro_edge_joint": 1.9996603110964415,
+      "macro_tf_joint": 2.001915060976803,
+      "macro_edge_first": 2.001078379712243,
+      "macro_tf_first": 2.0012926270995557,
+      "macro_delta_joint": 0.0022547498803617283,
+      "macro_delta_first": 0.0002142473873122941,
+      "mean_selected_k": 1.0
+    },
+    "cycle_null": {
+      "keys": [
+        {
+          "key": 6,
+          "selected_k": 2,
+          "val_bits": 1.817919217005235,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9998557765450908
+            },
+            {
+              "k": 2,
+              "val_bits": 1.817919217005235
+            },
+            {
+              "k": 4,
+              "val_bits": 1.8190090237685237
+            },
+            {
+              "k": 8,
+              "val_bits": 1.818412691124922
+            },
+            {
+              "k": 16,
+              "val_bits": 1.8193018242316175
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.00000004703179,
+              0.9999999129213393
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 5.551115123125783e-17,
+          "edge_joint_bits": 1.8000812380848612,
+          "edge_first_bits": 1.784766383671954,
+          "tf_joint_bits": 1.9934601932139615,
+          "tf_first_bits": 1.9900349867393778,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.1933789551291003,
+          "delta_first_tf_minus_edge": 0.20526860306742378
+        },
+        {
+          "key": 7,
+          "selected_k": 2,
+          "val_bits": 1.8025785881257188,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9997987943932938
+            },
+            {
+              "k": 2,
+              "val_bits": 1.8025785881257188
+            },
+            {
+              "k": 4,
+              "val_bits": 1.8015022175070288
+            },
+            {
+              "k": 8,
+              "val_bits": 1.8027811406927725
+            },
+            {
+              "k": 16,
+              "val_bits": 1.8009170809339983
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.9999999050050974,
+              1.0000000107102096
+            ],
+            "init_sum": 0.9999999999999998
+          },
+          "closure_err": 1.1102230246251565e-16,
+          "edge_joint_bits": 1.8282116950283371,
+          "edge_first_bits": 1.9159984333434237,
+          "tf_joint_bits": 1.9816196463224593,
+          "tf_first_bits": 1.9810826018313652,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.1534079512941222,
+          "delta_first_tf_minus_edge": 0.06508416848794152
+        },
+        {
+          "key": 8,
+          "selected_k": 2,
+          "val_bits": 1.801446778899523,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 2.0001158530092917
+            },
+            {
+              "k": 2,
+              "val_bits": 1.801446778899523
+            },
+            {
+              "k": 4,
+              "val_bits": 1.8021544703095584
+            },
+            {
+              "k": 8,
+              "val_bits": 1.8012814992724777
+            },
+            {
+              "k": 16,
+              "val_bits": 1.8012618158580864
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.999999884981662,
+              0.9999999837018549
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 5.551115123125783e-17,
+          "edge_joint_bits": 1.766349994133387,
+          "edge_first_bits": 1.7233016760627458,
+          "tf_joint_bits": 1.9806927744894096,
+          "tf_first_bits": 1.9739521151352677,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.21434278035602272,
+          "delta_first_tf_minus_edge": 0.25065043907252194
+        },
+        {
+          "key": 9,
+          "selected_k": 2,
+          "val_bits": 1.8017706179315316,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.999746047314274
+            },
+            {
+              "k": 2,
+              "val_bits": 1.8017706179315316
+            },
+            {
+              "k": 4,
+              "val_bits": 1.8010100719533195
+            },
+            {
+              "k": 8,
+              "val_bits": 1.7993443468870869
+            },
+            {
+              "k": 16,
+              "val_bits": 1.800697484886244
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.9999999080318958,
+              1.0000000118743628
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.1102230246251565e-16,
+          "edge_joint_bits": 1.861527944843279,
+          "edge_first_bits": 1.8256409843545651,
+          "tf_joint_bits": 1.9992711430213141,
+          "tf_first_bits": 1.999917109857955,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.13774319817803504,
+          "delta_first_tf_minus_edge": 0.17427612550338978
+        }
+      ],
+      "macro_edge_joint": 1.814042718022466,
+      "macro_tf_joint": 1.9887609392617862,
+      "macro_edge_first": 1.812426869358172,
+      "macro_tf_first": 1.9862467033909914,
+      "macro_delta_joint": 0.17471822123932007,
+      "macro_delta_first": 0.17381983403281925,
+      "mean_selected_k": 2.0
+    },
+    "delayed_parity": {
+      "keys": [
+        {
+          "key": 6,
+          "selected_k": 8,
+          "val_bits": 1.729630809597148,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.999588012456396
+            },
+            {
+              "k": 2,
+              "val_bits": 1.927635570620995
+            },
+            {
+              "k": 4,
+              "val_bits": 1.8805894241069676
+            },
+            {
+              "k": 8,
+              "val_bits": 1.729630809597148
+            },
+            {
+              "k": 16,
+              "val_bits": 1.7326563240915602
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.0000000660402293,
+              0.9999999326701072,
+              0.9999999858791853,
+              1.0000000062391337,
+              0.9999999438832674,
+              1.000000062322215,
+              0.9999999877218215,
+              1.0000000259897206
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.1102230246251565e-16,
+          "edge_joint_bits": 1.6743651306469642,
+          "edge_first_bits": 1.690686542187821,
+          "tf_joint_bits": 2.0080891521514523,
+          "tf_first_bits": 2.0125274797584938,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.3337240215044881,
+          "delta_first_tf_minus_edge": 0.3218409375706728
+        },
+        {
+          "key": 7,
+          "selected_k": 8,
+          "val_bits": 1.7317432295020332,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9994062310940006
+            },
+            {
+              "k": 2,
+              "val_bits": 1.9157942555403193
+            },
+            {
+              "k": 4,
+              "val_bits": 1.8912935899001384
+            },
+            {
+              "k": 8,
+              "val_bits": 1.7317432295020332
+            },
+            {
+              "k": 16,
+              "val_bits": 1.7384861532944114
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.9999998383300408,
+              0.9999999073397703,
+              0.9999999341598595,
+              1.00000009629548,
+              0.9999998974867594,
+              1.0000000921945684,
+              0.9999999894425855,
+              0.9999999161700543
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.1102230246251565e-16,
+          "edge_joint_bits": 1.6693620980058146,
+          "edge_first_bits": 1.6666173122255947,
+          "tf_joint_bits": 2.000415630235256,
+          "tf_first_bits": 2.0047498223471996,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.3310535322294412,
+          "delta_first_tf_minus_edge": 0.33813251012160483
+        },
+        {
+          "key": 8,
+          "selected_k": 8,
+          "val_bits": 1.7292320721206889,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 2.0004079870396136
+            },
+            {
+              "k": 2,
+              "val_bits": 1.9540039549508472
+            },
+            {
+              "k": 4,
+              "val_bits": 1.887513918582994
+            },
+            {
+              "k": 8,
+              "val_bits": 1.7292320721206889
+            },
+            {
+              "k": 16,
+              "val_bits": 1.7366360843242847
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.999999914340151,
+              0.9999999539504643,
+              0.9999998776838765,
+              1.00000005835318,
+              1.0000000617073965,
+              0.999999988503987,
+              0.9999999456922524,
+              0.9999999243073034
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.6653345369377348e-16,
+          "edge_joint_bits": 1.6737246672551511,
+          "edge_first_bits": 1.6957871176557848,
+          "tf_joint_bits": 2.001574334681669,
+          "tf_first_bits": 2.001641407915505,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.32784966742651767,
+          "delta_first_tf_minus_edge": 0.30585429025972033
+        },
+        {
+          "key": 9,
+          "selected_k": 16,
+          "val_bits": 1.73704179139767,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9992316945007724
+            },
+            {
+              "k": 2,
+              "val_bits": 1.923442745381683
+            },
+            {
+              "k": 4,
+              "val_bits": 1.8975919987339642
+            },
+            {
+              "k": 8,
+              "val_bits": 1.815130380735374
+            },
+            {
+              "k": 16,
+              "val_bits": 1.73704179139767
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.0000001122937192,
+              1.0000000477484718,
+              0.9999999827866759,
+              1.0000000066411303,
+              1.0000000149884727,
+              1.0000000992877176,
+              0.9999999280939846,
+              1.0000000188265403,
+              0.9999999863503035,
+              1.0000000417967385,
+              1.0000000418394848,
+              1.0000000622649168,
+              1.000000114760951,
+              1.000000018379069,
+              0.999999990863671,
+              1.0000000979143806
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.6653345369377348e-16,
+          "edge_joint_bits": 1.683190420375989,
+          "edge_first_bits": 1.6647337582333452,
+          "tf_joint_bits": 2.0046181982917393,
+          "tf_first_bits": 2.0021891726585035,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": 0.32142777791575017,
+          "delta_first_tf_minus_edge": 0.33745541442515825
+        }
+      ],
+      "macro_edge_joint": 1.6751605790709798,
+      "macro_tf_joint": 2.003674328840029,
+      "macro_edge_first": 1.6794561825756364,
+      "macro_tf_first": 2.0052769706699256,
+      "macro_delta_joint": 0.3285137497690493,
+      "macro_delta_first": 0.32582078809428905,
+      "mean_selected_k": 10.0
+    },
+    "copy_lag": {
+      "keys": [
+        {
+          "key": 6,
+          "selected_k": 16,
+          "val_bits": 1.6427759936722914,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9987252356909455
+            },
+            {
+              "k": 2,
+              "val_bits": 1.9449754505215628
+            },
+            {
+              "k": 4,
+              "val_bits": 1.7563782780860318
+            },
+            {
+              "k": 8,
+              "val_bits": 1.7372799916686814
+            },
+            {
+              "k": 16,
+              "val_bits": 1.6427759936722914
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.9999999177452992,
+              0.9999999976207619,
+              1.0000000135041773,
+              0.9999999853616828,
+              1.0000000869458745,
+              0.9999999347128323,
+              1.000000062304025,
+              1.000000009778887,
+              0.9999999694664439,
+              0.999999894778739,
+              1.0000000067520887,
+              1.0000000389063644,
+              1.0000000395775714,
+              1.0000000917298166,
+              0.9999999179563019,
+              1.000000001356966
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 2.220446049250313e-16,
+          "edge_joint_bits": 1.5699059642006097,
+          "edge_first_bits": 1.5797837017615897,
+          "tf_joint_bits": 1.0451404611024475,
+          "tf_first_bits": 1.105121990330615,
+          "tf_adapt_mode": "frozen",
+          "delta_joint_tf_minus_edge": -0.5247655030981622,
+          "delta_first_tf_minus_edge": -0.4746617114309746
+        },
+        {
+          "key": 7,
+          "selected_k": 16,
+          "val_bits": 1.4859099771849493,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 2.00011971831937
+            },
+            {
+              "k": 2,
+              "val_bits": 1.905560195724149
+            },
+            {
+              "k": 4,
+              "val_bits": 1.7334341027313884
+            },
+            {
+              "k": 8,
+              "val_bits": 1.6278152744685312
+            },
+            {
+              "k": 16,
+              "val_bits": 1.4859099771849493
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.9999998980056262,
+              0.9999999396895873,
+              0.9999999975148057,
+              0.9999999505071173,
+              0.9999999544015736,
+              0.9999999828178261,
+              0.9999999995488906,
+              1.0000000050713425,
+              0.999999966865289,
+              1.0000000676081982,
+              0.9999998768471414,
+              1.00000008069037,
+              0.9999999476785888,
+              1.00000007757626,
+              0.9999999994324753,
+              1.000000040687155
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.6653345369377348e-16,
+          "edge_joint_bits": 1.586826190667996,
+          "edge_first_bits": 1.5560087341149895,
+          "tf_joint_bits": 1.0927148752596205,
+          "tf_first_bits": 1.130913411562919,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": -0.4941113154083754,
+          "delta_first_tf_minus_edge": -0.4250953225520706
+        },
+        {
+          "key": 8,
+          "selected_k": 16,
+          "val_bits": 1.5375079584223992,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 2.003850899128104
+            },
+            {
+              "k": 2,
+              "val_bits": 1.945593801244041
+            },
+            {
+              "k": 4,
+              "val_bits": 1.8192932766938699
+            },
+            {
+              "k": 8,
+              "val_bits": 1.683772676239618
+            },
+            {
+              "k": 16,
+              "val_bits": 1.5375079584223992
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.9999999587889761,
+              0.9999999643696356,
+              1.000000087198714,
+              1.0000000594154699,
+              0.9999999512692739,
+              0.9999999749543349,
+              1.000000029525836,
+              1.0000000223735697,
+              1.0000000301870386,
+              0.9999998747371137,
+              1.0000000343061402,
+              1.0000000397849362,
+              0.999999983174348,
+              1.0000000164436642,
+              1.0000001622465788,
+              0.9999999631349965
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.1102230246251565e-16,
+          "edge_joint_bits": 1.4703872287104907,
+          "edge_first_bits": 1.3372483500613548,
+          "tf_joint_bits": 0.9685451211631814,
+          "tf_first_bits": 0.8714321793165443,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": -0.5018421075473093,
+          "delta_first_tf_minus_edge": -0.4658161707448105
+        },
+        {
+          "key": 9,
+          "selected_k": 16,
+          "val_bits": 1.561245908953184,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.9980242043090646
+            },
+            {
+              "k": 2,
+              "val_bits": 1.9984349547736864
+            },
+            {
+              "k": 4,
+              "val_bits": 1.7547884274657932
+            },
+            {
+              "k": 8,
+              "val_bits": 1.6073912361393905
+            },
+            {
+              "k": 16,
+              "val_bits": 1.561245908953184
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.0000000799191184,
+              1.0000000570598786,
+              1.0000000127256499,
+              0.999999938896508,
+              0.9999998329476512,
+              0.9999998955063347,
+              0.9999999823776307,
+              1.0000000130821718,
+              0.9999999862229743,
+              0.9999999950814527,
+              0.9999999005231075,
+              0.9999998802304617,
+              1.000000023675966,
+              0.9999999396895873,
+              0.9999999726787792,
+              1.0000000748405
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.1102230246251565e-16,
+          "edge_joint_bits": 1.5269107027777598,
+          "edge_first_bits": 1.498464371032199,
+          "tf_joint_bits": 1.0683054349502126,
+          "tf_first_bits": 1.1279001465328142,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": -0.4586052678275472,
+          "delta_first_tf_minus_edge": -0.37056422449938475
+        }
+      ],
+      "macro_edge_joint": 1.5385075215892139,
+      "macro_tf_joint": 1.0436764731188655,
+      "macro_edge_first": 1.4928762892425333,
+      "macro_tf_first": 1.058841931935723,
+      "macro_delta_joint": -0.49483104847034853,
+      "macro_delta_first": -0.4340343573068101,
+      "mean_selected_k": 16.0
+    },
+    "equivalent": {
+      "keys": [
+        {
+          "key": 6,
+          "selected_k": 2,
+          "val_bits": 0.029118143722931165,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.0032354263671919
+            },
+            {
+              "k": 2,
+              "val_bits": 0.029118143722931165
+            },
+            {
+              "k": 4,
+              "val_bits": 0.027501103628109314
+            },
+            {
+              "k": 8,
+              "val_bits": 0.02744385019635395
+            },
+            {
+              "k": 16,
+              "val_bits": 0.027191916632008643
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.0000000486907084,
+              1.0000000336003723
+            ],
+            "init_sum": 0.9999999999999998
+          },
+          "closure_err": 2.220446049250313e-16,
+          "edge_joint_bits": 0.00398153564008467,
+          "edge_first_bits": 0.003983042447717473,
+          "tf_joint_bits": 0.0,
+          "tf_first_bits": 0.0,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": -0.00398153564008467,
+          "delta_first_tf_minus_edge": -0.003983042447717473,
+          "equiv": {
+            "mean_abs_kl_gap_bits": 0.0,
+            "max_oracle_marginal_diff": 0.0,
+            "oracle_agree_ok": true
+          }
+        },
+        {
+          "key": 7,
+          "selected_k": 2,
+          "val_bits": 0.028744723293534447,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.0036138741904155
+            },
+            {
+              "k": 2,
+              "val_bits": 0.028744723293534447
+            },
+            {
+              "k": 4,
+              "val_bits": 0.02742795486360097
+            },
+            {
+              "k": 8,
+              "val_bits": 0.027363335225123606
+            },
+            {
+              "k": 16,
+              "val_bits": 0.026449398804453673
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.0000000357540557,
+              0.9999998502462404
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 2.220446049250313e-16,
+          "edge_joint_bits": 0.003794951706950757,
+          "edge_first_bits": 0.0037997949332231507,
+          "tf_joint_bits": 0.0,
+          "tf_first_bits": 0.0,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": -0.003794951706950757,
+          "delta_first_tf_minus_edge": -0.0037997949332231507,
+          "equiv": {
+            "mean_abs_kl_gap_bits": 0.0,
+            "max_oracle_marginal_diff": 0.0,
+            "oracle_agree_ok": true
+          }
+        },
+        {
+          "key": 8,
+          "selected_k": 2,
+          "val_bits": 0.02954330947439419,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.003283495518108
+            },
+            {
+              "k": 2,
+              "val_bits": 0.02954330947439419
+            },
+            {
+              "k": 4,
+              "val_bits": 0.02796006007398494
+            },
+            {
+              "k": 8,
+              "val_bits": 0.027312220251383565
+            },
+            {
+              "k": 16,
+              "val_bits": 0.028415284445951303
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              1.0000000185100362,
+              0.9999998874263838
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 2.220446049250313e-16,
+          "edge_joint_bits": 0.004189710337909907,
+          "edge_first_bits": 0.004188105726341213,
+          "tf_joint_bits": 0.0,
+          "tf_first_bits": 0.0,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": -0.004189710337909907,
+          "delta_first_tf_minus_edge": -0.004188105726341213,
+          "equiv": {
+            "mean_abs_kl_gap_bits": 0.0,
+            "max_oracle_marginal_diff": 0.0,
+            "oracle_agree_ok": true
+          }
+        },
+        {
+          "key": 9,
+          "selected_k": 2,
+          "val_bits": 0.030067561451404823,
+          "k_candidates": [
+            {
+              "k": 1,
+              "val_bits": 1.0030222968671103
+            },
+            {
+              "k": 2,
+              "val_bits": 0.030067561451404823
+            },
+            {
+              "k": 4,
+              "val_bits": 0.030732099408001364
+            },
+            {
+              "k": 8,
+              "val_bits": 0.02906955968215881
+            },
+            {
+              "k": 16,
+              "val_bits": 0.029208250988724226
+            }
+          ],
+          "validity": {
+            "ok": true,
+            "row_sums": [
+              0.9999999315623427,
+              0.9999999419669621
+            ],
+            "init_sum": 1.0
+          },
+          "closure_err": 1.1102230246251565e-16,
+          "edge_joint_bits": 0.004019209469860587,
+          "edge_first_bits": 0.0040172540629499955,
+          "tf_joint_bits": 0.0,
+          "tf_first_bits": 0.0,
+          "tf_adapt_mode": "adapted",
+          "delta_joint_tf_minus_edge": -0.004019209469860587,
+          "delta_first_tf_minus_edge": -0.0040172540629499955,
+          "equiv": {
+            "mean_abs_kl_gap_bits": 0.0,
+            "max_oracle_marginal_diff": 0.0,
+            "oracle_agree_ok": true
+          }
+        }
+      ],
+      "macro_edge_joint": 0.00399635178870148,
+      "macro_tf_joint": 0.0,
+      "macro_edge_first": 0.003997049292557958,
+      "macro_tf_first": 0.0,
+      "macro_delta_joint": -0.00399635178870148,
+      "macro_delta_first": -0.003997049292557958,
+      "mean_selected_k": 2.0
+    }
+  },
+  "structured_macro": {
+    "families": [
+      "cycle_null",
+      "delayed_parity",
+      "copy_lag"
+    ],
+    "delta_joint": 0.002800307512673609,
+    "delta_first": 0.021868754940099395
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch": "2.14.0",
+    "git_commit": "34d058a23ab2d7781634ec0b90e5d067682eb117",
+    "git_dirty": true,
+    "threads": 6,
+    "source_sha256": {
+      "configs/attention_only.json": "19568963a2123e2da116329df17f25a33e5b86c9e87134332c7e33586fa4568d",
+      "configs/campaign-0001.json": "5dbd84d691fa1a6668106de2f2bd514789ebe09e4beda3c965b2b84242b8744a",
+      "configs/communication-local.json": "1e8d292e7706f83cea4b6f7800226361d05253e7c06e0c22cf5af448e77a9efc",
+      "configs/exp0008_blind.json": "7e196c6b04eea92c6c64b8e78c55cb9504fdb08841acdf93e527e636c0400dd0",
+      "configs/exp0010.json": "d91aeadb2570c5ae8a669e7de79ec2506edb6324f1c63cc00b359e6c914ab1e6",
+      "configs/gated_attention.json": "1125863bd361a41c07f8a985db76aa6f4096da82a40f21baacb416141feb86a9",
+      "configs/mtp.json": "969ba75363fc9ba66110764ccb784fe580aa1c81aac78d9f9fcfb64fc4b93381",
+      "configs/qk_norm.json": "7dfc1174d18eda5c3540a43c55799a40f58d135f806f836e6d83a6a22f5c1072",
+      "configs/reference.json": "116b37ece409b936678e95a4d646bb34fb1ad4b13bea340012495aef6eb993be",
+      "configs/small.json": "3fef5ff1faa993178642decb6f1a3fbc3000d220e813d2a9c2e0c63440d54c3c",
+      "configs/smoke.json": "155905e76753c67adc46460e28e21c988e90a8fe8ccfe1b36c36197f2ca989cd",
+      "configs/synthetic_small.json": "632ac1f84a4bb178af1b300ae81122ce8c54e5af38edf8b19262576f62ce2993",
+      "data/manifests/exp-0011a_data.json": "fcce5d99816e085a9e30f93f3f6dbe215c52546b8a97d6f7798c4f6417088986",
+      "data/manifests/exp0011_corpora.json": "ee7f05f5657a98326cae4a2f73c3515d46d4474d1242f5f869d59cf53abfe856",
+      "data/manifests/exp0011_data.json": "d2acbe723735fc8e19c9cae69acb3633c34818030ff73b2c1c6675def336cd2b",
+      "data/manifests/exp0012_data.json": "01eab2130966cb3511ed4b6fe4e9c21aaee634c81807e4f5195227f39bf8f0b2",
+      "data/manifests/exp0013_data.json": "9290822a7d7d7017f7dc0d293aa69b48f075ab71a8b7fdea16580ff4c0e486a6",
+      "data/manifests/exp0014_data.json": "89874dbde064b904e0f47007efcd66015fbd261f9efae8782df25fec956e1957",
+      "data/manifests/exp0014b_data.json": "402dc0e4b56def7aff1bf3686a458f3873a58f689d01a1676194bc26de4c9213",
+      "data/manifests/exp0015_corpora.json": "69d34688ba294c76ea9c87bd3ddf2c6df46bcc8bedd00e0381dcac78044e6b41",
+      "data/manifests/exp0015_data.json": "d1e40967edcd66ea0314763c33086547dad6559dc5ea38057a41ba084a7a4f04",
+      "data/manifests/exp0015b_data.json": "62affc2b555587fda2539454aca4b14d9bd6221e988da66145257f0c8e3837a1",
+      "data/manifests/exp0016_corpora.json": "2afbe43a14a917ca8c51f0271e6ea5b732ce9c0ed2fa2c24f28f230b8113e41f",
+      "data/manifests/exp0016_data.json": "df1da6ad5dd8aa261b4d89882e33f569cd861e2ea5ea0645f42f817def96eabe",
+      "data/manifests/exp0016_splits.json": "fd7dac1973031b858c3c5a39a62fdd78cb2e3bd4b8a3255654c9b58237da6f50",
+      "data/manifests/exp0017_data.json": "562c75b3ac1e357ffd8cfd8e2a3e5da42b235e92e4a7c76d0200aa4d687350b7",
+      "data/manifests/exp0018_split.json": "a39c5022b75d54697aa4d054754b40bef005774fe7732feacf463186f1689de9",
+      "data/manifests/exp0019_data.json": "a59df51d794453a6588c82a4fed44bfe56daf110023d090dd5aea10a7c312cbd",
+      "data/manifests/iso639_1_to_3.json": "19f1c415bee21e557597f9356840d0ad97ce56983ae7575dd357bb116c4db98d",
+      "data/manifests/zl3b_preparation.json": "07c59f09990682537788b4ecf35952a47571454188697352a5def7539a620974",
+      "data/manifests/zl3b_source.json": "683f249c035db5401ecf063595fbbf613adbdc9de2f5c6c318f06d697dfc9aff",
+      "data/manifests/zl3b_split.json": "9fc80cb4b000fdd5d952b7c2416b37b6b92f07bc56486a63309142953ed6634e",
+      "data/manifests/zl3b_split_provisional_v1.json": "5ffc815ba878bbb303599ee8b3fdf5a6acfdedee2e91071277be9f3f4e391fe8",
+      "pyproject.toml": "5c39a6dcabfd69969b676d6d723dc2c119481fcb7823a40eab3b27e97e80dbcd",
+      "src/voynich/__init__.py": "f51cc6d99d838a811a4a377c45d913ca33c23d265c4a35cccce39606bce5d8be",
+      "src/voynich/blind_recovery.py": "cc273e2d5d7f73b5bb0b23837ed5dbe9678c285be0f56608ca6e7d734c7ae911",
+      "src/voynich/calibration.py": "a18e852d4e71eb83b4b4c31cab189c2c52da619ef0ba41fc6b9b0b51dc541230",
+      "src/voynich/causal_alignment.py": "c20d8e0c8f35333e1a5c879b633d8361f4cad61cb9f009601c62ea48ae2326ff",
+      "src/voynich/causal_mapping.py": "1db6eafe7df0cdbf8a50bf893710398501fa3be47d69cfd59cb0dc647da2f298",
+      "src/voynich/context_analysis.py": "8acad13b9c10f209a7f25994b3a00e345dbdabf20ea3f69a3cf29117dd514fe4",
+      "src/voynich/context_controls.py": "ceb8b46183ff05433f564adb3836d79b0c56cbd544470afba958a10e90fa628b",
+      "src/voynich/data.py": "2b34268167c3d7c07bc1baf86e0d99af06de9d5abf007e9fa5027a9769295661",
+      "src/voynich/decoder_programs.py": "0c5794fa7b5f3b9f69ecea9de7949e4141249a352435886f64b469faf1843ed4",
+      "src/voynich/edge_emitting.py": "c877a1ff1f25179c6f5458a2044d4b77d607220c49fc016a2f72e153c7edb383",
+      "src/voynich/evaluate.py": "499f688bb399b988dac0ce838e9caa36800a2e9d28d68b9a47ebef818e5480dc",
+      "src/voynich/exact_count_decode.py": "de04760e46aa829a6ad81fe68f098d24c0946190fb12d5512789d9cc53de09af",
+      "src/voynich/generator_adversary.py": "7648ffc671f1eb1871e9695fbd55dc801704b10dff8553cae604b32d96a8704d",
+      "src/voynich/interpret.py": "89f2d3161b7f6a08efc9c64161418e53d3b2c6db83a28dc8dbd2cf5f4f21436e",
+      "src/voynich/latent_recovery.py": "07f39846ae1daad63019cb3baae0ccff5a99be05220c442d5913c0543bb35e50",
+      "src/voynich/long_context.py": "a798f3c9abcb8d8a9bb8eca6629b9d5c20f8531d6b351d6c7a915b32316b7944",
+      "src/voynich/mass_lang_recovery.py": "e6d402b183e53a805f19751c8f7d98e62a0aea4836e941aa6661f032798870f0",
+      "src/voynich/model.py": "771c4e6f4cb3abdbb3ef7f7101f845ac63f129bdc08de249db190997f63cc629",
+      "src/voynich/multilang_recovery.py": "486c699bed56bf66b27e0afee023f18ed56b60abc2debbf99daf9af453c6cb8a",
+      "src/voynich/null_rate_grid.py": "700630e3fda3aea5341bc1a43a9e0802f327ad30af54dfe483fdeed7c5de5409",
+      "src/voynich/order_scale.py": "b95eb06d09e6753bff5698c04e325c7e611844c5306c6da85f1ec2f72a3a81fc",
+      "src/voynich/romanize.py": "97bff601792b55336c9af7219393b399d215e92cf422179145bb5a780b1e5617",
+      "src/voynich/runtime.py": "6749f192095f210a14d9508a6fa22942c1b6c5fd9a31acd5e474850ddfa6506c",
+      "src/voynich/synthetic.py": "7c6f53cefa165b4d45ca0fd151fbdba26bb841795a88ac6a3849180603a38e6e",
+      "src/voynich/tokenizer.py": "c8a0cea5dd14697c0abb8b2150d4b0f31853ce9162a8fc0441f7a5a706e81d1c",
+      "src/voynich/train.py": "517f795c8f400f8ffd465e58bf96a04d3deac9d7ba44c2e5073648cc09cb4c9e",
+      "uv.lock": "c736ffb780b9c5ed7892a269e85da769f7d3ca651185a486c5e4903e20b6bdf4"
+    }
+  },
+  "decision": {
+    "passed": false,
+    "mode": "joint_not_better",
+    "reasons": [
+      "structured macro Δ_joint=0.0028 < 0.05"
+    ],
+    "rule": "EXP-0020",
+    "gates": {
+      "joint_margin": 0.05,
+      "first_symbol_extra": 0.02,
+      "equiv_kl_gap_max": 0.05,
+      "update_closure_tol": 1e-05,
+      "k_near_tie_bits": 0.01,
+      "delta_joint_structured": 0.002800307512673609,
+      "delta_first_structured": 0.021868754940099395,
+      "probability_validity_ok": true,
+      "update_closure_ok": true,
+      "equivalent": {
+        "mean_abs_kl_gap_bits": 0.0,
+        "oracle_agree_ok": true,
+        "max_oracle_marginal_diff": 0.0
+      }
+    },
+    "thresholds": {
+      "JOINT_MARGIN": 0.05,
+      "FIRST_SYMBOL_EXTRA": 0.02,
+      "EQUIV_KL_GAP_MAX": 0.05,
+      "UPDATE_CLOSURE_TOL": 1e-05,
+      "K_NEAR_TIE_BITS": 0.01,
+      "PROB_TOL": 1e-06,
+      "STATE_GRID": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "DATA_SEED": 4020,
+      "MODEL_SEED": 42,
+      "PREFIX": 32,
+      "HORIZON": 3
+    }
+  }
+}

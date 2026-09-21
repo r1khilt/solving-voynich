@@ -1,0 +1,43 @@
+{
+  "passed": false,
+  "mode": "joint_not_better",
+  "reasons": [
+    "structured macro Δ_joint=0.0028 < 0.05"
+  ],
+  "rule": "EXP-0020",
+  "gates": {
+    "joint_margin": 0.05,
+    "first_symbol_extra": 0.02,
+    "equiv_kl_gap_max": 0.05,
+    "update_closure_tol": 1e-05,
+    "k_near_tie_bits": 0.01,
+    "delta_joint_structured": 0.002800307512673609,
+    "delta_first_structured": 0.021868754940099395,
+    "probability_validity_ok": true,
+    "update_closure_ok": true,
+    "equivalent": {
+      "mean_abs_kl_gap_bits": 0.0,
+      "oracle_agree_ok": true,
+      "max_oracle_marginal_diff": 0.0
+    }
+  },
+  "thresholds": {
+    "JOINT_MARGIN": 0.05,
+    "FIRST_SYMBOL_EXTRA": 0.02,
+    "EQUIV_KL_GAP_MAX": 0.05,
+    "UPDATE_CLOSURE_TOL": 1e-05,
+    "K_NEAR_TIE_BITS": 0.01,
+    "PROB_TOL": 1e-06,
+    "STATE_GRID": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "DATA_SEED": 4020,
+    "MODEL_SEED": 42,
+    "PREFIX": 32,
+    "HORIZON": 3
+  }
+}
