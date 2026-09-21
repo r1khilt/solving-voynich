@@ -158,3 +158,29 @@ UV_CACHE_DIR=/private/tmp/voynich-plot-cache MPLCONFIGDIR=/private/tmp/voynich-m
 ```
 
 The offline command requires the existing cached plotting environment; a fresh machine must first install the specified plotting dependency. Visually inspect the generated PNG/SVG. Scores across the figure's panels have different denominators; lower prediction loss, causal intervention effects and cluster agreement are not decipherment accuracy. No manuscript final-test scores were used in this campaign.
+
+## Completed episodic campaign (publication aliases EPISODIC-0012/0013)
+
+Scientific source is `c9c95a0cfef9bdfc542136e4d38482e7d37c59ea`. Reproducing the historical experiment requires a separate clean checkout of that revision and the locked dependencies. Do not reset a shared checkout, reuse a populated output directory, or call exposed confirmation keys a fresh holdout for adaptive work. The registrations are now published as [EPISODIC-0012](experiments/EPISODIC-0012.md) / [EPISODIC-0013](experiments/EPISODIC-0013.md); c9 used the old EXP names. Source guards compare the full recorded source, not just neural code.
+
+Historical launch from the isolated c9 checkout:
+
+```sh
+PYTHONPATH=src /Users/rikhil/coding/solving-voynich/.venv/bin/python scripts/run_episodic_campaign.py run --config configs/exp0012.json --out outputs/EXP-0012
+```
+
+Recovery after a host interruption is recorded in `results/episodic-20260921/provenance/`. The archived script is immutable historical evidence, not a command to rerun. It retained 13 completed runs and replayed two unfinished runs after preserving their originals. Resource sampling has a gap. No scientific source or choices changed before confirmation.
+
+After all phases complete, the frozen archiver verifies input/checkpoint/source integrity and primary gates:
+
+```sh
+python3 scripts/archive_episodic_campaign.py --out outputs/EXP-0012 --results results/episodic-20260921
+```
+
+Always pass the namespace explicitly: top-level EXP-0012/0013 now refer to other experiments. Publication adds a separate recovery/figure manifest without rewriting the frozen archive manifests. Replot from committed compact JSON with Matplotlib 3.10.8 in a separate environment:
+
+```sh
+MPLCONFIGDIR=/private/tmp/voynich-mpl /private/tmp/voynich-report-env/bin/python scripts/plot_episodic_results.py
+```
+
+The temporary environment path is local to this machine; elsewhere install the specified Matplotlib version in a separate environment. The script records input/source hashes in `figure_provenance.json`. Visually inspect PNG/SVG/PDF. The runtime panel sums completed run durations, excludes discarded partial attempts and is not whole-campaign elapsed time. The figure displays frozen results; it does not redefine scientific gates.

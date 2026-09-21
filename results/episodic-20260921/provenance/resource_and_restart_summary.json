@@ -1,0 +1,200 @@
+{
+  "interrupted_runs": {
+    "canonical_large-s121": {
+      "changed_manifest_fields": [],
+      "exact_updates_before_termination": null,
+      "original_artifact_sha256": {
+        "best.pt": "5f2391cfabf324645d5de0a830b9b48083b403246ea62108f570063485e62a3e",
+        "history.json": "6d94eac3689adb3bb082c7cae47a18a423d200e65ed4d23761a613fb96305c62",
+        "manifest.json": "a4aa189415ec3a19bf8881eed83d21971413669b5dd88e1696313be939b2393d"
+      },
+      "recorded_completed_updates_lower_bound": 400,
+      "recorded_history_entries": 1,
+      "unchanged_manifest_fields": [
+        "condition",
+        "model_seed",
+        "spec",
+        "parameters",
+        "initial_hash",
+        "provenance",
+        "data_manifest_sha256"
+      ]
+    },
+    "signed_delta_fresh-s122": {
+      "changed_manifest_fields": [],
+      "exact_updates_before_termination": null,
+      "original_artifact_sha256": {
+        "best.pt": "bab86e48880ed0b22ef6bbee6effb5626c64a551af242b02a5119bcbba51aa4c",
+        "history.json": "56ca4c3347b277f4c4111382fb5bc840f43532132fb5e460bfac761a1abb0729",
+        "manifest.json": "2485c9a33d40bc9ab92d637bbaf8d843fcbf0b3b800adf94461808e701ec9618"
+      },
+      "recorded_completed_updates_lower_bound": 800,
+      "recorded_history_entries": 2,
+      "unchanged_manifest_fields": [
+        "condition",
+        "model_seed",
+        "spec",
+        "parameters",
+        "initial_hash",
+        "provenance",
+        "data_manifest_sha256"
+      ]
+    }
+  },
+  "limits": [
+    "No supervisor resource samples exist between original supervisor loss and recovery.",
+    "RSS samples and Metal driver allocations overlap and are not additive physical-memory peaks.",
+    "Completed-run target and duration totals exclude discarded partial attempts; exact extra updates are unknown.",
+    "Same seed/configuration/init replay does not imply bit-identical MPS arithmetic.",
+    "Original worker exit codes are unknown; they were explicitly terminated, not counted as successful completions."
+  ],
+  "original_launch_through_analysis_elapsed_seconds": 5612.901497,
+  "recovery": {
+    "confirmation_inspected": false,
+    "elapsed_before_recovery_seconds": 1892.622055,
+    "original_started_utc": "2026-09-21T18:59:44.040435+00:00",
+    "original_worker_exit_codes": null,
+    "original_worker_pids": [
+      99586,
+      99587
+    ],
+    "policy": "Preserve all prior artifacts; replay incomplete runs from initial seeds without adaptive changes.",
+    "reason": "Chat turn interruption killed supervisor; workers became orphans (PPID 1).",
+    "recovery_script_sha256": "9e8e07a6a7e19adafd4e84f616c4544e9e0da422f179372e4b4cd749289f4257",
+    "recovery_started_utc": "2026-09-21T19:31:16.663486+00:00",
+    "remaining_original_training_budget_seconds": 12507,
+    "resource_limitation": "Supervisor sampling absent between host interruption and worker termination; previous samples retained.",
+    "restarted_incomplete_runs": [
+      "canonical_large-s121",
+      "signed_delta_fresh-s122"
+    ],
+    "retained_completed_runs": [
+      "canonical_fixed-s121",
+      "canonical_fixed-s122",
+      "canonical_fixed-s123",
+      "canonical_fresh-s121",
+      "canonical_fresh-s122",
+      "canonical_fresh-s123",
+      "raw_fixed-s121",
+      "raw_fixed-s122",
+      "raw_fixed-s123",
+      "raw_fresh-s121",
+      "raw_fresh-s122",
+      "raw_fresh-s123",
+      "signed_delta_fresh-s121"
+    ],
+    "scientific_source_unchanged": {
+      "git_commit": "c9c95a0cfef9bdfc542136e4d38482e7d37c59ea",
+      "git_dirty": false,
+      "source_sha256": {
+        "configs/attention_only.json": "19568963a2123e2da116329df17f25a33e5b86c9e87134332c7e33586fa4568d",
+        "configs/campaign-0001.json": "5dbd84d691fa1a6668106de2f2bd514789ebe09e4beda3c965b2b84242b8744a",
+        "configs/exp0008_blind.json": "7e196c6b04eea92c6c64b8e78c55cb9504fdb08841acdf93e527e636c0400dd0",
+        "configs/exp0010.json": "d91aeadb2570c5ae8a669e7de79ec2506edb6324f1c63cc00b359e6c914ab1e6",
+        "configs/exp0012.json": "9c60e4aece02f472bafd0125f4b21fc1c1d6aac7f0fcdbaf3e292c1d40f19962",
+        "configs/gated_attention.json": "1125863bd361a41c07f8a985db76aa6f4096da82a40f21baacb416141feb86a9",
+        "configs/mtp.json": "969ba75363fc9ba66110764ccb784fe580aa1c81aac78d9f9fcfb64fc4b93381",
+        "configs/qk_norm.json": "7dfc1174d18eda5c3540a43c55799a40f58d135f806f836e6d83a6a22f5c1072",
+        "configs/reference.json": "116b37ece409b936678e95a4d646bb34fb1ad4b13bea340012495aef6eb993be",
+        "configs/small.json": "3fef5ff1faa993178642decb6f1a3fbc3000d220e813d2a9c2e0c63440d54c3c",
+        "configs/smoke.json": "155905e76753c67adc46460e28e21c988e90a8fe8ccfe1b36c36197f2ca989cd",
+        "configs/synthetic_small.json": "632ac1f84a4bb178af1b300ae81122ce8c54e5af38edf8b19262576f62ce2993",
+        "docs/experiments/CAMPAIGN-0001-results.md": "44a93a290964589ae9278acc90a490d0d146600094351555b82e8b30bb3a4b6b",
+        "docs/experiments/CAMPAIGN-0001.md": "f1c86a188370171132f714a01078c5b155f1cc21bbf1f09e4c2eb0a18be1e5eb",
+        "docs/experiments/EXP-0001-results.md": "a7ae28ed6dcc230ea56e7a6c69803048e9c869cd02e4a34e19ff1d5669eeba83",
+        "docs/experiments/EXP-0001.md": "c4ce50e85309a05bfb2dbf199342b362aceb396addf3ee98bd0f9ce4f0c9e75d",
+        "docs/experiments/EXP-0002-results.md": "2157bda5ce5762ba91264cd1c525b00b5145830048596fed5736c6729bfe0217",
+        "docs/experiments/EXP-0002.md": "408f331c3244d23afbf8f9021ba5555898c5daf568a9ac774fdf9a6c33b23070",
+        "docs/experiments/EXP-0003-results.md": "a979728b615a64d1d6605852c7165a49e8b34ca5204ea326c2cb5aef377fa79d",
+        "docs/experiments/EXP-0003.md": "612aac053c2ca915677be101c1797c75a60af0aa945e3a9f5951eae1ab4e775c",
+        "docs/experiments/EXP-0004-results.md": "1d1d004af1321d27841e1707773ec0dab966deb2b7da928333a04395c0dbc3f8",
+        "docs/experiments/EXP-0004.md": "ce58f9389ac6ad4d1620d991c0713643f80b91c5d1c6052bd5a1554e9acbc8fc",
+        "docs/experiments/EXP-0005-results.md": "7671f255cf38a4944460e862051745142b1e68a6c25eaae21c793e77942988aa",
+        "docs/experiments/EXP-0005.md": "442a10bf622cecb49975ed66c4eb52fdd86fdcea7a7d2ec26e76c13f5c1d0525",
+        "docs/experiments/EXP-0006-results.md": "7e58d8650ef8e772050161a1e731b4bb7349e442ab3902acd7f3b95dd4010e15",
+        "docs/experiments/EXP-0006.md": "6e2c2bc27b2d7b6c361eaedd3b127187e77b6f17f868c43becc27b77ab6ab29e",
+        "docs/experiments/EXP-0007-results.md": "671f0c92f94274b1d09745eb571dcb4b2be2614ae5e74fdfe0c65ea84570eb7d",
+        "docs/experiments/EXP-0007.md": "0ea87c05197bf4861dcec2a0ef5623a535e76a92bec85f77d738437ccdfe1a15",
+        "docs/experiments/EXP-0008-results.md": "2e15778920d4a7517f44d5964c65485b38f2baadec12bd31e7bb6b5b0dce09e6",
+        "docs/experiments/EXP-0008.md": "ce15002b5266304e9959f00554d84f2dc2298ad0b6668d1e75d0009cbb79e63a",
+        "docs/experiments/EXP-0009-results.md": "fb12e4c39de92286fe17deb801ec63a09360ac9a8330ee9fdecbf49943f932cc",
+        "docs/experiments/EXP-0009.md": "d1f095f01fdf6fb4172d0db5130b82cc650ad6ee52dc2fad586d12424a0d6cd2",
+        "docs/experiments/EXP-0010-results.md": "9b285db37a39b1148ad24bec246e0264e65a0e784b688e60594b1e06618a3daa",
+        "docs/experiments/EXP-0010.md": "0df8fb905da1d14b520ffa921abca51817bbda2f3de302cfab42d77c6f4bb6c2",
+        "docs/experiments/EXP-0011-results.md": "d49307dc1f2bc2338641a618e8ba4bd02e3b1f77453048196fb87c75dd20f9ea",
+        "docs/experiments/EXP-0011.md": "392ffc73821d2680fc054af02325b1278cfa5e8a18c87d18f002b161e49f5b67",
+        "docs/experiments/EXP-0012.md": "4cd46af44e8ce82d61fe9c1d9230849b2d2e2d4014d488313779b92b83778dae",
+        "docs/experiments/EXP-0013.md": "1be448dc3684e1b66589b0a5d3ed31984b155cfa5042cec12dfdcd0aff6530b1",
+        "pyproject.toml": "cb082b83ecf2a0ee5f90bbea80c7e02d6cd82d9598e6dba782f1cf8ed6cba000",
+        "scripts/archive_blind_recovery.py": "e56c22c5e96ffaa7cefe63aae3f7f3bb359d9be99b87462740ebe877e5c472ef",
+        "scripts/archive_causal_mapping.py": "46860a3e08db11f443af8325b9845b081fa85b9e56742ede5299f97484c442d8",
+        "scripts/archive_episodic_campaign.py": "c0a14e5853e14ffeb419c57c7f4c06890fa5a94689c9c9bd46233db2848b82d8",
+        "scripts/archive_interpretation_results.py": "92a15c195b4d9ba540f936d27fe4c486865ef58ee44126b945bd6bd5ef694be8",
+        "scripts/archive_parallel_campaign.py": "57b2a202b603be4a91c538871e3f17eb71197667454d7e8d5627dfad099de963",
+        "scripts/archive_second_round.py": "b6e6763dabc81225a9eebea41a935552b61de2011cbf1d1a72db184c8d2c2706",
+        "scripts/benchmark_device.py": "4d9f5879a8c6db1707b14e5048fb40863099cf787be3c793c6b09c6604b05ad8",
+        "scripts/download_data.py": "af0e2b81e113cd3fcf9433cf3d0556bf4ae6c9f34646256182da368c6d785ff3",
+        "scripts/plot_parallel_campaign.py": "73a22778c8c0e3927b8f914531ac7f6f36bd7f01db425855d2be8824fd5a4e39",
+        "scripts/plot_research_round.py": "aab928c4eb04ecb174f3dce55f94edb1ba878f127bc0f24e6bea210d455fa70b",
+        "scripts/plot_second_round.py": "a8795f1134c41f46db6b0018334bc42028bf63853780aa9b75b5122984b9f89d",
+        "scripts/research_catalog.py": "0ad2be2115bda5d6c9664e39273c4a4bc3b332630d05ffedbfe6cee031a82224",
+        "scripts/run_ablations.py": "67c8bd7e71292047e9c2dda4b9b1966941fb833575d60083d84bfa2f433f46e8",
+        "scripts/run_episodic_campaign.py": "28202a51367f416170630f8dc77fbba6fba8490cb3a62f49a9b2e21ee32101f5",
+        "scripts/run_interpretation_round.py": "78a7e427c2104b310fc97eca263dc9ea23c9cec642970de6f46a56ed533637ab",
+        "scripts/run_latent_recovery.py": "e81123b176bfa7b5a502913cec79a4e44937c3ca15a380e4f5b83c0abf5246f4",
+        "scripts/run_long_context.py": "4fe7850c1bf241e45834808f8ad89a08beb4fb7f5a75d65a11cb792d134bdf56",
+        "scripts/run_parallel_campaign.py": "a173c775686015e20c11a1e7bac37aafb7aaa887010238189669fb1b9895245a",
+        "scripts/summarize_ablations.py": "afa3becc36c91febec317685b105868d77a52a3b6cad31d94481283172504bba",
+        "scripts/summarize_context_controls.py": "8886b69207f88d4b1b96c51d45eb74427bf6990c1b8d14e13a0113654f4be397",
+        "src/voynich/__init__.py": "f51cc6d99d838a811a4a377c45d913ca33c23d265c4a35cccce39606bce5d8be",
+        "src/voynich/blind_recovery.py": "cc273e2d5d7f73b5bb0b23837ed5dbe9678c285be0f56608ca6e7d734c7ae911",
+        "src/voynich/calibration.py": "a18e852d4e71eb83b4b4c31cab189c2c52da619ef0ba41fc6b9b0b51dc541230",
+        "src/voynich/causal_alignment.py": "c20d8e0c8f35333e1a5c879b633d8361f4cad61cb9f009601c62ea48ae2326ff",
+        "src/voynich/causal_mapping.py": "1db6eafe7df0cdbf8a50bf893710398501fa3be47d69cfd59cb0dc647da2f298",
+        "src/voynich/context_analysis.py": "8acad13b9c10f209a7f25994b3a00e345dbdabf20ea3f69a3cf29117dd514fe4",
+        "src/voynich/context_controls.py": "ceb8b46183ff05433f564adb3836d79b0c56cbd544470afba958a10e90fa628b",
+        "src/voynich/data.py": "2b34268167c3d7c07bc1baf86e0d99af06de9d5abf007e9fa5027a9769295661",
+        "src/voynich/episodic_campaign.py": "ba440bfdf9dcff774311f9ff07e1af92d04f05a4586471258abf33d9d0f4440d",
+        "src/voynich/episodic_causal.py": "e3997d5852c3db41a3f74f7a346e801ad7ca083db225d4b4c5df2749681ff8ba",
+        "src/voynich/episodic_data.py": "8eac731151b25942b9a6b155946f55c5e456bdc5df4cf9e9f016830da9c15f74",
+        "src/voynich/episodic_models.py": "7859080fd6ad5b687318fba23e3cebd20b3fa55683d2d281710db5eb091c8287",
+        "src/voynich/evaluate.py": "499f688bb399b988dac0ce838e9caa36800a2e9d28d68b9a47ebef818e5480dc",
+        "src/voynich/interpret.py": "89f2d3161b7f6a08efc9c64161418e53d3b2c6db83a28dc8dbd2cf5f4f21436e",
+        "src/voynich/latent_recovery.py": "fdff0ed7d7021f122385b2aea15e3f4d05ba9b735b0a77d584cc47e2e6cc5412",
+        "src/voynich/long_context.py": "a798f3c9abcb8d8a9bb8eca6629b9d5c20f8531d6b351d6c7a915b32316b7944",
+        "src/voynich/model.py": "771c4e6f4cb3abdbb3ef7f7101f845ac63f129bdc08de249db190997f63cc629",
+        "src/voynich/order_scale.py": "b95eb06d09e6753bff5698c04e325c7e611844c5306c6da85f1ec2f72a3a81fc",
+        "src/voynich/runtime.py": "6749f192095f210a14d9508a6fa22942c1b6c5fd9a31acd5e474850ddfa6506c",
+        "src/voynich/synthetic.py": "7c6f53cefa165b4d45ca0fd151fbdba26bb841795a88ac6a3849180603a38e6e",
+        "src/voynich/tokenizer.py": "c8a0cea5dd14697c0abb8b2150d4b0f31853ce9162a8fc0441f7a5a706e81d1c",
+        "src/voynich/train.py": "517f795c8f400f8ffd465e58bf96a04d3deac9d7ba44c2e5073648cc09cb4c9e",
+        "uv.lock": "e02b7e8e700235d4fc5f07d79156986ea76df06adef1b6eb2429e52b625660b9"
+      }
+    },
+    "stopped_by_recovery": "SIGTERM to those two PIDs only; exit verified before replay"
+  },
+  "resource_phases": {
+    "analysis-supervisor": {
+      "last_sample_elapsed_seconds": 337.89172508299816,
+      "memory_sampling_errors": 0,
+      "peak_sampled_sum_process_group_rss_bytes": 780369920,
+      "samples": 68,
+      "sha256": "fbb00fcacd00cee15c419cd9786e5dad87b0837466e3539b7312a79470c1f167"
+    },
+    "interrupted-supervisor": {
+      "last_sample_elapsed_seconds": 1636.992529958021,
+      "memory_sampling_errors": 0,
+      "peak_sampled_sum_process_group_rss_bytes": 1921056768,
+      "samples": 323,
+      "sha256": "4d919cdaf7697d296c8542fe565816af63728272079b398dedf6073de897810f"
+    },
+    "supervisor": {
+      "last_sample_elapsed_seconds": 3382.0678484999808,
+      "memory_sampling_errors": 0,
+      "peak_sampled_sum_process_group_rss_bytes": 1954512896,
+      "samples": 667,
+      "sha256": "5cce5d35c269a4559ee547e1a684407fa134cbc5c90cb156b2a6846cb76478e6"
+    }
+  },
+  "scientific_source": "c9c95a0cfef9bdfc542136e4d38482e7d37c59ea"
+}

@@ -1,6 +1,6 @@
 # Deferred research candidates
 
-**Latest successor design:** [2026-09-21 deep review](deep-review-2026-09-21/README.md) and [bounded work packages P1–P5](deep-review-2026-09-21/NEXT_DESIGN.md). Priority is fresh-key inference, explicit joint-state updates and selective causal confirmation; source records explain the tradeoffs. These packages are not yet implemented, formally registered or scheduled. Preserve the historical inventory below.
+**Latest successor evidence:** the [deep review](deep-review-2026-09-21/README.md) and [work packages P1–P5](deep-review-2026-09-21/NEXT_DESIGN.md) led to the completed [EPISODIC-0012](../experiments/EPISODIC-0012-results.md) and [EPISODIC-0013](../experiments/EPISODIC-0013-results.md) studies. Fresh raw training improved prediction, canonical fixed training nearly matched it, and both primary causal claims failed. Next candidates: separate parameter diversity from permutation coverage; qualify parity teachers; jointly constrain immediate preservation and temporal consistency. These successors are proposals requiring fresh pools and registration, not scheduled runs. Preserve the historical inventory below.
 
 **Status: active research.** Source review, corpus preparation, 18-run architecture comparison, two rounds of context tests and supervised synthetic causal calibration are complete. The table preserves the original candidate inventory; current priorities follow it.
 

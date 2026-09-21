@@ -1,0 +1,3279 @@
+{
+  "aggregation": "Matched subset; equal-key means; seed differences averaged within keys present in all three seeds.",
+  "bootstrap": {
+    "interval": "two-sided percentile 95%",
+    "samples": 2000,
+    "seed": 130013
+  },
+  "experiment": "EXP-0013",
+  "limitations": [
+    "Rank16 and Fisher candidates cannot promote a primary claim.",
+    "Immediate-output preservation does not establish a semantic nuisance variable.",
+    "A positive result would concern model behavior, not historical decipherment."
+  ],
+  "primary_families": {
+    "gru_fresh": {
+      "claim": "qualified predictive-state transplantation, not latent identification or semantics",
+      "control_comparisons_learned_minus_control": {
+        "output_jacobian": {
+          "excluded_key_counts_by_seed": [
+            0,
+            0,
+            0
+          ],
+          "hi95": -0.020903732440737986,
+          "independent_keys": 8,
+          "lo95": -0.04233695936117653,
+          "mean": -0.03048960541552292,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": -0.014935473076230476,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.016410798311144822,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.02242879595154177,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.037692812433535304,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.02137817179835919,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.06260873548065622,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": -0.04617414775614937,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.022287908516566216
+          },
+          "status": "passed"
+        },
+        "pca": {
+          "excluded_key_counts_by_seed": [
+            0,
+            0,
+            0
+          ],
+          "hi95": -0.03379936350825572,
+          "independent_keys": 8,
+          "lo95": -0.05830310318750981,
+          "mean": -0.04509341981206365,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": -0.03929677680282602,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.029695845173336764,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.03934925646649269,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.0429634993430227,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.030288219581254654,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.07771123930191,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": -0.07320415292245647,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.028238368905209876
+          },
+          "status": "passed"
+        },
+        "random_norm_0": {
+          "excluded_key_counts_by_seed": [
+            0,
+            0,
+            0
+          ],
+          "hi95": -0.025620000823515603,
+          "independent_keys": 8,
+          "lo95": -0.04646824959249341,
+          "mean": -0.0347374236367843,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": -0.021345561037638357,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.023397026956820537,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.02327672535400818,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.03823209729873472,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.028030258973336053,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.06886842086290319,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": -0.04881249978207052,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.025936798828762847
+          },
+          "status": "passed"
+        },
+        "random_norm_1": {
+          "excluded_key_counts_by_seed": [
+            0,
+            0,
+            0
+          ],
+          "hi95": -0.026216736496354108,
+          "independent_keys": 8,
+          "lo95": -0.05087214362782321,
+          "mean": -0.03690964637361367,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": -0.018352873852506044,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.02328189370646166,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.02844356942709989,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.03832951697210471,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.028068187633632787,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.07666523987427354,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": -0.05474968586220509,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.027386203660625656
+          },
+          "status": "passed"
+        },
+        "random_norm_2": {
+          "excluded_key_counts_by_seed": [
+            0,
+            0,
+            0
+          ],
+          "hi95": -0.027001280329639773,
+          "independent_keys": 8,
+          "lo95": -0.04889555995142064,
+          "mean": -0.03691077459135115,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": -0.017559399835706233,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.025052769643022978,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.030628333652943925,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.04452490149307306,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.028086933139194217,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.0698612299747765,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": -0.05114080396273898,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.028431825029353302
+          },
+          "status": "passed"
+        },
+        "shuffled_targets": {
+          "excluded_key_counts_by_seed": [
+            0,
+            0,
+            0
+          ],
+          "hi95": -0.017225055194721794,
+          "independent_keys": 8,
+          "lo95": -0.028384201752197684,
+          "mean": -0.022493946239915096,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": -0.013444297547851291,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.01603057112904492,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.01489395018366397,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.03174573416493971,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.016843665787018833,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.0341724317210416,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": -0.032716151373460886,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.020104768012299552
+          },
+          "status": "passed"
+        }
+      },
+      "missing_or_ineligible": [],
+      "per_seed": {
+        "121": {
+          "absolute_reduction_bits": 0.04232808504196342,
+          "commuting_symmetric_kl_bits": 0.008640514779818616,
+          "failed_requirements": [
+            "Teacher oracle H3 KL exceeds 0.30 bits",
+            "Learned recipient_immediate_tv exceeds 0.02"
+          ],
+          "learned_kl_bits": 0.026435481312607104,
+          "matched_keys": 8,
+          "matched_rows": 65,
+          "missing_or_ineligible": [
+            "Untrained control lacks a comparable qualifying gap; specificity inconclusive"
+          ],
+          "recipient_immediate_tv": 0.04523147359741704,
+          "relative_reduction": 0.6155597693072531,
+          "status": "not_established",
+          "teacher_oracle_joint_kl_bits": 0.5422943106268213,
+          "unchanged_kl_bits": 0.06876356635457052,
+          "untrained_specificity": {
+            "learned_kl_bits": 0.0018806546321936519,
+            "matched_keys": 8,
+            "matched_rows": 114,
+            "relative_reduction": 0.7691475296280462,
+            "status": "inconclusive",
+            "unchanged_kl_bits": 0.008146564899927244
+          }
+        },
+        "122": {
+          "absolute_reduction_bits": 0.03008653513685626,
+          "commuting_symmetric_kl_bits": 0.008591456566926978,
+          "failed_requirements": [
+            "Teacher oracle H3 KL exceeds 0.30 bits",
+            "Learned recipient_immediate_tv exceeds 0.02"
+          ],
+          "learned_kl_bits": 0.023872272236269164,
+          "matched_keys": 8,
+          "matched_rows": 65,
+          "missing_or_ineligible": [
+            "Untrained control lacks a comparable qualifying gap; specificity inconclusive"
+          ],
+          "recipient_immediate_tv": 0.042598930570282835,
+          "relative_reduction": 0.5575833974388595,
+          "status": "not_established",
+          "teacher_oracle_joint_kl_bits": 0.5357537228920336,
+          "unchanged_kl_bits": 0.053958807373125424,
+          "untrained_specificity": {
+            "learned_kl_bits": 0.0026637337239211727,
+            "matched_keys": 8,
+            "matched_rows": 110,
+            "relative_reduction": 0.663799471085794,
+            "status": "inconclusive",
+            "unchanged_kl_bits": 0.007923050366767635
+          }
+        },
+        "123": {
+          "absolute_reduction_bits": 0.035737931116905416,
+          "commuting_symmetric_kl_bits": 0.005755070233135484,
+          "failed_requirements": [
+            "Teacher oracle H3 KL exceeds 0.30 bits",
+            "Learned recipient_immediate_tv exceeds 0.02"
+          ],
+          "learned_kl_bits": 0.017558696384297773,
+          "matched_keys": 8,
+          "matched_rows": 61,
+          "missing_or_ineligible": [
+            "Untrained control lacks a comparable qualifying gap; specificity inconclusive"
+          ],
+          "recipient_immediate_tv": 0.043330967954049504,
+          "relative_reduction": 0.670547702405722,
+          "status": "not_established",
+          "teacher_oracle_joint_kl_bits": 0.5355595017507553,
+          "unchanged_kl_bits": 0.05329662750120319,
+          "untrained_specificity": {
+            "learned_kl_bits": 0.0014757032187344042,
+            "matched_keys": 8,
+            "matched_rows": 101,
+            "relative_reduction": 0.779149347538765,
+            "status": "inconclusive",
+            "unchanged_kl_bits": 0.00668190563300884
+          }
+        }
+      },
+      "rank": 4,
+      "status": "not_established"
+    },
+    "signed_delta_fresh": {
+      "claim": "qualified predictive-state transplantation, not latent identification or semantics",
+      "control_comparisons_learned_minus_control": {
+        "output_jacobian": {
+          "excluded_key_counts_by_seed": [
+            1,
+            1,
+            0
+          ],
+          "hi95": 0.009595165073411233,
+          "independent_keys": 7,
+          "lo95": -0.029632329970574356,
+          "mean": -0.007750870125335925,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.024194665253162384,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.007524380531339424,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.010346320199055811,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.015174214676436454,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.005495928297370741,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.06685665436089039,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.004737755058274146
+          },
+          "status": "not_established"
+        },
+        "pca": {
+          "excluded_key_counts_by_seed": [
+            1,
+            1,
+            0
+          ],
+          "hi95": 0.0020995953611982515,
+          "independent_keys": 7,
+          "lo95": -0.03708340820076294,
+          "mean": -0.016509115442623328,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.017659340053796768,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.010603313910819237,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.023544362901399527,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.03174037910583946,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0017033328404237648,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.0687912826736768,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.000247142400848802
+          },
+          "status": "not_established"
+        },
+        "random_norm_0": {
+          "excluded_key_counts_by_seed": [
+            1,
+            1,
+            0
+          ],
+          "hi95": -0.013147108230885014,
+          "independent_keys": 7,
+          "lo95": -0.07974310963113368,
+          "mean": -0.04904316819917205,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.025139036277929943,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.031554012497266144,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.1049062623642385,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.09608808485791087,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.018921684482436637,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.0846150250484546,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.03235614442182754
+          },
+          "status": "passed"
+        },
+        "random_norm_1": {
+          "excluded_key_counts_by_seed": [
+            1,
+            1,
+            0
+          ],
+          "hi95": -0.024527785552147702,
+          "independent_keys": 7,
+          "lo95": -0.11570101257305218,
+          "mean": -0.06701221369883956,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.003339409828186035,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.04070034169015431,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.11991052520978782,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.07106125546205376,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.01981799125167735,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.1885403785854578,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.032394413520931885
+          },
+          "status": "passed"
+        },
+        "random_norm_2": {
+          "excluded_key_counts_by_seed": [
+            1,
+            1,
+            0
+          ],
+          "hi95": -0.03117983842186958,
+          "independent_keys": 7,
+          "lo95": -0.08682815365658036,
+          "mean": -0.05663182791694873,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": -0.025469940155744553,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.06638439045775504,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": -0.09165811704264747,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": -0.012595118592596719,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": -0.03173460450570483,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.13083553252120814,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.037745092142984354
+          },
+          "status": "passed"
+        },
+        "shuffled_targets": {
+          "excluded_key_counts_by_seed": [
+            1,
+            1,
+            0
+          ],
+          "hi95": 0.027801949993244836,
+          "independent_keys": 7,
+          "lo95": -0.0004438034252277499,
+          "mean": 0.011580763094232858,
+          "resamples": 2000,
+          "seed": 130013,
+          "seed_averaged_per_key_differences": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.05474815517663956,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": -0.001601979225164372,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.0145246636432906,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.019552015285525054,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0028648169793726954,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": -0.001544959843158722,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": -0.0074773703568748046
+          },
+          "status": "not_established"
+        }
+      },
+      "missing_or_ineligible": [],
+      "per_seed": {
+        "121": {
+          "absolute_reduction_bits": -0.015022205382593606,
+          "commuting_symmetric_kl_bits": 0.02851992574934698,
+          "failed_requirements": [
+            "Teacher oracle H3 KL exceeds 0.30 bits",
+            "Learned intervention misses 0.005-bit or 20-percent reduction",
+            "Learned recipient_immediate_tv exceeds 0.02",
+            "Learned commuting_symmetric_kl_bits exceeds 0.02",
+            "Qualifying untrained control matches/exceeds trained relative reduction"
+          ],
+          "learned_kl_bits": 0.15588580833640137,
+          "matched_keys": 8,
+          "matched_rows": 64,
+          "missing_or_ineligible": [],
+          "recipient_immediate_tv": 0.0487355912828443,
+          "relative_reduction": -0.10664362594445148,
+          "status": "not_established",
+          "teacher_oracle_joint_kl_bits": 0.6855904984510074,
+          "unchanged_kl_bits": 0.14086360295380776,
+          "untrained_specificity": {
+            "learned_kl_bits": 0.0006456572754259457,
+            "matched_keys": 8,
+            "matched_rows": 187,
+            "relative_reduction": 0.9548232682847161,
+            "status": "failed",
+            "unchanged_kl_bits": 0.014291810206525188
+          }
+        },
+        "122": {
+          "absolute_reduction_bits": 0.010452703243470224,
+          "commuting_symmetric_kl_bits": 0.0287965928548375,
+          "failed_requirements": [
+            "Teacher oracle H3 KL exceeds 0.30 bits",
+            "Learned intervention misses 0.005-bit or 20-percent reduction",
+            "Learned recipient_immediate_tv exceeds 0.02",
+            "Learned commuting_symmetric_kl_bits exceeds 0.02",
+            "Qualifying untrained control matches/exceeds trained relative reduction"
+          ],
+          "learned_kl_bits": 0.1423820739952662,
+          "matched_keys": 8,
+          "matched_rows": 45,
+          "missing_or_ineligible": [],
+          "recipient_immediate_tv": 0.041336922180129305,
+          "relative_reduction": 0.06839217769881341,
+          "status": "not_established",
+          "teacher_oracle_joint_kl_bits": 0.6845357951800342,
+          "unchanged_kl_bits": 0.15283477723873642,
+          "untrained_specificity": {
+            "learned_kl_bits": 0.0006137077681728923,
+            "matched_keys": 8,
+            "matched_rows": 152,
+            "relative_reduction": 0.9414942624227154,
+            "status": "failed",
+            "unchanged_kl_bits": 0.01048970226829803
+          }
+        },
+        "123": {
+          "absolute_reduction_bits": 0.03520689255371301,
+          "commuting_symmetric_kl_bits": 0.024177370722225984,
+          "failed_requirements": [
+            "Teacher oracle H3 KL exceeds 0.30 bits",
+            "Learned intervention misses 0.005-bit or 20-percent reduction",
+            "Learned recipient_immediate_tv exceeds 0.02",
+            "Learned commuting_symmetric_kl_bits exceeds 0.02",
+            "Qualifying untrained control matches/exceeds trained relative reduction"
+          ],
+          "learned_kl_bits": 0.14172068138847432,
+          "matched_keys": 7,
+          "matched_rows": 47,
+          "missing_or_ineligible": [],
+          "recipient_immediate_tv": 0.05353600094746295,
+          "relative_reduction": 0.19899042172599493,
+          "status": "not_established",
+          "teacher_oracle_joint_kl_bits": 0.7000040434507651,
+          "unchanged_kl_bits": 0.17692757394218733,
+          "untrained_specificity": {
+            "learned_kl_bits": 0.0010961011854616362,
+            "matched_keys": 8,
+            "matched_rows": 162,
+            "relative_reduction": 0.9247343929363407,
+            "status": "failed",
+            "unchanged_kl_bits": 0.014563108280446855
+          }
+        }
+      },
+      "rank": 4,
+      "status": "not_established"
+    }
+  },
+  "schema_version": 1,
+  "secondary_descriptive_only": [
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 16,
+          "fraction_sketch_energy_captured": 0.9685843586921692,
+          "leading_singular_values": [
+            0.4429188668727875,
+            0.3970699906349182,
+            0.31795990467071533,
+            0.11779333651065826,
+            0.09854249656200409,
+            0.09385988116264343,
+            0.0855698361992836,
+            0.08461688458919525
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 6.458779535777493e-15,
+          "split_half_subspace_overlap": 0.6485520005226135,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.9860819578170776,
+          "leading_singular_values": [
+            0.7246631979942322,
+            0.6345765590667725,
+            0.5543997287750244,
+            0.433350145816803,
+            0.38375723361968994,
+            0.3019735515117645,
+            0.12591980397701263,
+            0.10203947126865387
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.7085734009742737
+        },
+        "horizon": 3,
+        "seed": 700322,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.1395101547241211,
+          "coordinate_mse": 0.010833613574504852,
+          "coordinate_mse_over_fit_mean_baseline": 0.04420212958700341,
+          "current_state_fixed_complement_joint_kl_bits": 0.14369413256645203,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.009045086801052094,
+          "coordinate_mse": 0.016132289543747902,
+          "coordinate_mse_over_fit_mean_baseline": 0.06777028262499982,
+          "current_state_fixed_complement_joint_kl_bits": 0.005423410329967737,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.021250823512673378,
+          "coordinate_mse": 0.04713355377316475,
+          "coordinate_mse_over_fit_mean_baseline": 0.08457032267248143,
+          "current_state_fixed_complement_joint_kl_bits": 0.0165728610008955,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.07421443611383438,
+          "coordinate_mse": 0.014394228346645832,
+          "coordinate_mse_over_fit_mean_baseline": 0.021737836183838333,
+          "current_state_fixed_complement_joint_kl_bits": 0.053825993090867996,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.11798888444900513,
+          "coordinate_mse": 0.033857475966215134,
+          "coordinate_mse_over_fit_mean_baseline": 0.00797564154698589,
+          "current_state_fixed_complement_joint_kl_bits": 0.10150054842233658,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2168269157409668,
+          "coordinate_mse": 0.018698686733841896,
+          "coordinate_mse_over_fit_mean_baseline": 0.13325294267250784,
+          "current_state_fixed_complement_joint_kl_bits": 0.2160961776971817,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2134888917207718,
+          "coordinate_mse": 0.014458145014941692,
+          "coordinate_mse_over_fit_mean_baseline": 0.10898616198682487,
+          "current_state_fixed_complement_joint_kl_bits": 0.21918022632598877,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21561335027217865,
+          "coordinate_mse": 0.01432215515524149,
+          "coordinate_mse_over_fit_mean_baseline": 0.0850080013659391,
+          "current_state_fixed_complement_joint_kl_bits": 0.21364878118038177,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.11106552928686142,
+          "coordinate_mse": 0.03604764863848686,
+          "coordinate_mse_over_fit_mean_baseline": 0.09062740395476056,
+          "current_state_fixed_complement_joint_kl_bits": 0.10350843518972397,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.017306479414655192,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 7,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 8,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 9,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 6,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 10
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.02747079304286412,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.027877659304067492,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.012430456932634115,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.016178005168007478,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.009411077046145995,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.009425799828022718,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.023553174454718828,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.012104869540780782
+          },
+          "rows": 65
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.006301074871970784,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 7,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 8,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 9,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 6,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 10
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.005273225384631327,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.008574080595280975,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.0040898259612731636,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.007790410444916536,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.005555238854140043,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.006604728056117892,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.008142386407901844,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.004378703271504492
+          },
+          "rows": 65
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.0068773008656751785,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 7,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 8,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 9,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 6,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 10
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.006999139141823564,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.006797294830903411,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.004686558473622426,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.009290598022441069,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.005936928900579611,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.007477026199921966,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.008594031911343336,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.0052368294447660444
+          },
+          "rows": 65
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.06876356635457052,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 7,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 8,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 9,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 6,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 10
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.051110937393137386,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.07874325755983591,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.05499139241874218,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.08540564982427491,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.047867502396305404,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.09847623482346535,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.07590104639530182,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.05761251002550125
+          },
+          "rows": 65
+        }
+      },
+      "rank": 16,
+      "run": "gru_fresh-s121-r16",
+      "teacher_oracle_joint_kl_bits": 0.5422943106268213
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 4,
+          "fraction_sketch_energy_captured": 0.8533300161361694,
+          "leading_singular_values": [
+            0.46299922466278076,
+            0.4136529564857483,
+            0.32909131050109863,
+            0.12894710898399353,
+            0.10348924249410629,
+            0.09869710355997086,
+            0.09362940490245819,
+            0.08779501914978027
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 1.6477040755362286e-15,
+          "split_half_subspace_overlap": 0.7867256999015808,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.8080040812492371,
+          "leading_singular_values": [
+            0.7246631979942322,
+            0.6345765590667725,
+            0.5543997287750244,
+            0.433350145816803,
+            0.38375723361968994,
+            0.3019735515117645,
+            0.12591980397701263,
+            0.10203947126865387
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.7301727533340454
+        },
+        "horizon": 3,
+        "seed": 700322,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.1302836537361145,
+          "coordinate_mse": 0.025467725470662117,
+          "coordinate_mse_over_fit_mean_baseline": 0.07558279803021543,
+          "current_state_fixed_complement_joint_kl_bits": 0.13299699127674103,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.06157923862338066,
+          "coordinate_mse": 0.01836136169731617,
+          "coordinate_mse_over_fit_mean_baseline": 0.0736513712120542,
+          "current_state_fixed_complement_joint_kl_bits": 0.04472101852297783,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.036619871854782104,
+          "coordinate_mse": 0.08844874054193497,
+          "coordinate_mse_over_fit_mean_baseline": 0.1093898815491348,
+          "current_state_fixed_complement_joint_kl_bits": 0.03196130320429802,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.09633836150169373,
+          "coordinate_mse": 0.04384273290634155,
+          "coordinate_mse_over_fit_mean_baseline": 0.23971601389622155,
+          "current_state_fixed_complement_joint_kl_bits": 0.06991458684206009,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21806025505065918,
+          "coordinate_mse": 0.08356630057096481,
+          "coordinate_mse_over_fit_mean_baseline": 0.006508501152135858,
+          "current_state_fixed_complement_joint_kl_bits": 0.2141914814710617,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2200080007314682,
+          "coordinate_mse": 0.02927117608487606,
+          "coordinate_mse_over_fit_mean_baseline": 0.2681396081665681,
+          "current_state_fixed_complement_joint_kl_bits": 0.2238186150789261,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.22239160537719727,
+          "coordinate_mse": 0.029016265645623207,
+          "coordinate_mse_over_fit_mean_baseline": 0.18242050802355705,
+          "current_state_fixed_complement_joint_kl_bits": 0.2278989553451538,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.221674382686615,
+          "coordinate_mse": 0.04019055888056755,
+          "coordinate_mse_over_fit_mean_baseline": 0.3716130936737149,
+          "current_state_fixed_complement_joint_kl_bits": 0.22975744307041168,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.10819884389638901,
+          "coordinate_mse": 0.0888105258345604,
+          "coordinate_mse_over_fit_mean_baseline": 0.1639850272199847,
+          "current_state_fixed_complement_joint_kl_bits": 0.09262057393789291,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.029160915454249044,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 7,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 8,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 9,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 6,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 10
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.018895005075527087,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.02747664332855493,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.025332626421004534,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.047217877167794436,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0242960742674768,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.03631492145359516,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.023016083985567093,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.03073809193447232
+          },
+          "rows": 65
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.04806571637247024,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 7,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 8,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 9,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 6,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 10
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.035814025306275914,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.061243166448548436,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.04081949288956821,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.0691481800749898,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.028223703118662038,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.06670103222131729,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.0385401266006132,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.04403600431978703
+          },
+          "rows": 65
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.026435481312607104,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 7,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 8,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 9,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 6,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 10
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.02392002521082759,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.039852348156273365,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.026610373752191663,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.02863561858733495,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.01827333544691404,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.01699666678905487,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.029744206617275875,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.02745127594098449
+          },
+          "rows": 65
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.06876356635457052,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 7,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 8,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 9,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 6,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 10
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.051110937393137386,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.07874325755983591,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.05499139241874218,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.08540564982427491,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.047867502396305404,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.09847623482346535,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.07590104639530182,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.05761251002550125
+          },
+          "rows": 65
+        }
+      },
+      "rank": 4,
+      "run": "gru_fresh-s121-r4",
+      "teacher_oracle_joint_kl_bits": 0.5422943106268213
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 16,
+          "fraction_sketch_energy_captured": 0.9671986103057861,
+          "leading_singular_values": [
+            0.4390992820262909,
+            0.4221266508102417,
+            0.3713222146034241,
+            0.12490759789943695,
+            0.10564243048429489,
+            0.09879796952009201,
+            0.09213858842849731,
+            0.08856265991926193
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 5.078455068448359e-15,
+          "split_half_subspace_overlap": 0.6434645652770996,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.9841227531433105,
+          "leading_singular_values": [
+            0.7276577353477478,
+            0.6790015697479248,
+            0.5934634208679199,
+            0.38180220127105713,
+            0.35773766040802,
+            0.32817360758781433,
+            0.12982401251792908,
+            0.1117674857378006
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.6840236783027649
+        },
+        "horizon": 3,
+        "seed": 700323,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.137640580534935,
+          "coordinate_mse": 0.014880451373755932,
+          "coordinate_mse_over_fit_mean_baseline": 0.07108888158739156,
+          "current_state_fixed_complement_joint_kl_bits": 0.13852852582931519,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.01178268063813448,
+          "coordinate_mse": 0.019496293738484383,
+          "coordinate_mse_over_fit_mean_baseline": 0.08561830279887213,
+          "current_state_fixed_complement_joint_kl_bits": 0.007089553866535425,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.019709931686520576,
+          "coordinate_mse": 0.04736587405204773,
+          "coordinate_mse_over_fit_mean_baseline": 0.103253743361141,
+          "current_state_fixed_complement_joint_kl_bits": 0.016812393441796303,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.07253891229629517,
+          "coordinate_mse": 0.01657615415751934,
+          "coordinate_mse_over_fit_mean_baseline": 0.022203247861603326,
+          "current_state_fixed_complement_joint_kl_bits": 0.04818236827850342,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.11292251944541931,
+          "coordinate_mse": 0.036229413002729416,
+          "coordinate_mse_over_fit_mean_baseline": 0.008165764661839913,
+          "current_state_fixed_complement_joint_kl_bits": 0.09789092093706131,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.212987020611763,
+          "coordinate_mse": 0.012179333716630936,
+          "coordinate_mse_over_fit_mean_baseline": 0.07133502615645627,
+          "current_state_fixed_complement_joint_kl_bits": 0.2185366302728653,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2195480316877365,
+          "coordinate_mse": 0.01442269328981638,
+          "coordinate_mse_over_fit_mean_baseline": 0.0781161234251627,
+          "current_state_fixed_complement_joint_kl_bits": 0.22303162515163422,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2113162726163864,
+          "coordinate_mse": 0.014164065010845661,
+          "coordinate_mse_over_fit_mean_baseline": 0.11315934516616323,
+          "current_state_fixed_complement_joint_kl_bits": 0.21167635917663574,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.12071631103754044,
+          "coordinate_mse": 0.03167625144124031,
+          "coordinate_mse_over_fit_mean_baseline": 0.07280846829726483,
+          "current_state_fixed_complement_joint_kl_bits": 0.1129385232925415,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.012614866921715227,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 9,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 9,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 12,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 8,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 11
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.006981347338296473,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.016300682495865557,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.012945104183422195,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.011916048650164157,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.011072085277798275,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.016065210103988647,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.017783875577151775,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.007854581747034734
+          },
+          "rows": 65
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.006495646282212075,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 9,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 9,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 12,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 8,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 11
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.0066022399987559766,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.005306548852887418,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.005474551787806882,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.0059796667483169585,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.004916093001763026,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.010499301366508007,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.008491773623973131,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.0046949948776852
+          },
+          "rows": 65
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.008179778617657098,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 9,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 9,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 12,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 8,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 11
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.009815608073646823,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.00757026258442137,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.007488009675095479,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.006576275598490611,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.007242654780081163,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.00952383503317833,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.010576739034149796,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.0066448441621932116
+          },
+          "rows": 65
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.053958807373125424,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 9,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 9,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 12,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 8,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 11
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.046922508316735424,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.032134884554478854,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.05703257852130466,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.05925370426848531,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.03846083697862923,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.09321554005146027,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.05483106384053826,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.04981934245337139
+          },
+          "rows": 65
+        }
+      },
+      "rank": 16,
+      "run": "gru_fresh-s122-r16",
+      "teacher_oracle_joint_kl_bits": 0.5357537228920336
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 4,
+          "fraction_sketch_energy_captured": 0.8453879356384277,
+          "leading_singular_values": [
+            0.446503609418869,
+            0.429953008890152,
+            0.3885991871356964,
+            0.13012535870075226,
+            0.11132921278476715,
+            0.10320156812667847,
+            0.09786539524793625,
+            0.09289859235286713
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 1.4359167219650916e-15,
+          "split_half_subspace_overlap": 0.7144520878791809,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.8097392916679382,
+          "leading_singular_values": [
+            0.7276577353477478,
+            0.6790015697479248,
+            0.5934634208679199,
+            0.38180220127105713,
+            0.35773766040802,
+            0.32817360758781433,
+            0.12982401251792908,
+            0.1117674857378006
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.5825562477111816
+        },
+        "horizon": 3,
+        "seed": 700323,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.1331213265657425,
+          "coordinate_mse": 0.018645649775862694,
+          "coordinate_mse_over_fit_mean_baseline": 0.074666949372975,
+          "current_state_fixed_complement_joint_kl_bits": 0.13693250715732574,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.04708809033036232,
+          "coordinate_mse": 0.015165763907134533,
+          "coordinate_mse_over_fit_mean_baseline": 0.056492885776659986,
+          "current_state_fixed_complement_joint_kl_bits": 0.033816780894994736,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.05432581529021263,
+          "coordinate_mse": 0.08009912818670273,
+          "coordinate_mse_over_fit_mean_baseline": 0.10764736965170738,
+          "current_state_fixed_complement_joint_kl_bits": 0.042191725224256516,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.08966684341430664,
+          "coordinate_mse": 0.03678876906633377,
+          "coordinate_mse_over_fit_mean_baseline": 0.2117881425868006,
+          "current_state_fixed_complement_joint_kl_bits": 0.05885032191872597,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.209078848361969,
+          "coordinate_mse": 0.09412491321563721,
+          "coordinate_mse_over_fit_mean_baseline": 0.00704432170805582,
+          "current_state_fixed_complement_joint_kl_bits": 0.204207181930542,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21852296590805054,
+          "coordinate_mse": 0.03954504057765007,
+          "coordinate_mse_over_fit_mean_baseline": 0.2489919561970065,
+          "current_state_fixed_complement_joint_kl_bits": 0.2256176918745041,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2229434698820114,
+          "coordinate_mse": 0.02760998345911503,
+          "coordinate_mse_over_fit_mean_baseline": 0.17177532353285557,
+          "current_state_fixed_complement_joint_kl_bits": 0.23238122463226318,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21751610934734344,
+          "coordinate_mse": 0.03969636559486389,
+          "coordinate_mse_over_fit_mean_baseline": 0.27702183675937514,
+          "current_state_fixed_complement_joint_kl_bits": 0.22460944950580597,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.16198845207691193,
+          "coordinate_mse": 0.14629216492176056,
+          "coordinate_mse_over_fit_mean_baseline": 0.19785997653936155,
+          "current_state_fixed_complement_joint_kl_bits": 0.1240226998925209,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.025312508712022924,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 9,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 9,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 12,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 8,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 11
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.025753130787052214,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.016660305774874158,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.026068184938695695,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.027121942257508636,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.014200553259191414,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.04195718467235565,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.02333124924916774,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.027407518757337875
+          },
+          "rows": 65
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.033656794251815295,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 9,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 9,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 12,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 8,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 11
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.03255204840873679,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.02161983535107639,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.030146944750514295,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.035120134823955595,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.020587453967891634,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.07373345643281937,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.025153615279123187,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.030340865000405094
+          },
+          "rows": 65
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.023872272236269164,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 9,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 9,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 12,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 8,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 11
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.0301894578927507,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.0200219653132889,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.02038683814720975,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.01691146777011454,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.017115231409358483,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.03928731009364128,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.023632827447727323,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.02343307981606234
+          },
+          "rows": 65
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.053958807373125424,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 9,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 9,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 12,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 8,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 11
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.046922508316735424,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.032134884554478854,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.05703257852130466,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.05925370426848531,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.03846083697862923,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.09321554005146027,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.05483106384053826,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.04981934245337139
+          },
+          "rows": 65
+        }
+      },
+      "rank": 4,
+      "run": "gru_fresh-s122-r4",
+      "teacher_oracle_joint_kl_bits": 0.5357537228920336
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 16,
+          "fraction_sketch_energy_captured": 0.9662443399429321,
+          "leading_singular_values": [
+            0.4653315246105194,
+            0.37536630034446716,
+            0.3108384907245636,
+            0.11929922550916672,
+            0.10524702817201614,
+            0.09475398063659668,
+            0.08823105692863464,
+            0.08413831889629364
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 5.2633420320432386e-15,
+          "split_half_subspace_overlap": 0.6008727550506592,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.9870684742927551,
+          "leading_singular_values": [
+            0.7652469873428345,
+            0.7164733409881592,
+            0.6442021727561951,
+            0.4499419927597046,
+            0.33504489064216614,
+            0.3194279372692108,
+            0.12170765548944473,
+            0.1131925880908966
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.6646947860717773
+        },
+        "horizon": 3,
+        "seed": 700324,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.14282287657260895,
+          "coordinate_mse": 0.01103715319186449,
+          "coordinate_mse_over_fit_mean_baseline": 0.04939615914256754,
+          "current_state_fixed_complement_joint_kl_bits": 0.14623454213142395,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.009307675063610077,
+          "coordinate_mse": 0.015606585890054703,
+          "coordinate_mse_over_fit_mean_baseline": 0.07051919199006022,
+          "current_state_fixed_complement_joint_kl_bits": 0.005505483131855726,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.015514974482357502,
+          "coordinate_mse": 0.030631328001618385,
+          "coordinate_mse_over_fit_mean_baseline": 0.0666985431233616,
+          "current_state_fixed_complement_joint_kl_bits": 0.011359836906194687,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.05554145202040672,
+          "coordinate_mse": 0.011405597440898418,
+          "coordinate_mse_over_fit_mean_baseline": 0.01806123771713953,
+          "current_state_fixed_complement_joint_kl_bits": 0.036221686750650406,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.12151984125375748,
+          "coordinate_mse": 0.027293795719742775,
+          "coordinate_mse_over_fit_mean_baseline": 0.006459819341734069,
+          "current_state_fixed_complement_joint_kl_bits": 0.10715790838003159,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21603816747665405,
+          "coordinate_mse": 0.013688535429537296,
+          "coordinate_mse_over_fit_mean_baseline": 0.07049980618007363,
+          "current_state_fixed_complement_joint_kl_bits": 0.2251971960067749,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21761365234851837,
+          "coordinate_mse": 0.012892874889075756,
+          "coordinate_mse_over_fit_mean_baseline": 0.09351808983085325,
+          "current_state_fixed_complement_joint_kl_bits": 0.22862637042999268,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21121299266815186,
+          "coordinate_mse": 0.011853544972836971,
+          "coordinate_mse_over_fit_mean_baseline": 0.08980543319312158,
+          "current_state_fixed_complement_joint_kl_bits": 0.21740108728408813,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.08124838024377823,
+          "coordinate_mse": 0.029498880729079247,
+          "coordinate_mse_over_fit_mean_baseline": 0.07675771888285063,
+          "current_state_fixed_complement_joint_kl_bits": 0.06654871255159378,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.015227230459207756,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 7,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 5,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 10,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 7
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.015193097215766707,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.010673957610768932,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.008259242467050041,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.012199567072093487,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.01497201422850291,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.014194492483511567,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.0329441393725574,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.013381333223411016
+          },
+          "rows": 61
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.0060963889920718165,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 7,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 5,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 10,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 7
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.006074248463846743,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.0063229125225916505,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.005602527359899666,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.005740339681506157,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.005548664578236639,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.004386629676446319,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.008469828707166015,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.006625960946881345
+          },
+          "rows": 61
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.005556791646328444,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 7,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 5,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 10,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 7
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.004054622491821647,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.004764081477852804,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.003902205648565931,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.004467517323791981,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.004758432678257426,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.008743852726183832,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.0071148787625133995,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.006648742061640535
+          },
+          "rows": 61
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.05329662750120319,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 7,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 5,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 10,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 7
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.03636311739683151,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.03291194872664554,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.032899788447788784,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.04630723595619202,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.049416562045613927,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.0792597346007824,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.10598046854138374,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.04323416429438761
+          },
+          "rows": 61
+        }
+      },
+      "rank": 16,
+      "run": "gru_fresh-s123-r16",
+      "teacher_oracle_joint_kl_bits": 0.5355595017507553
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 4,
+          "fraction_sketch_energy_captured": 0.8427003026008606,
+          "leading_singular_values": [
+            0.48180457949638367,
+            0.3898830711841583,
+            0.3331248462200165,
+            0.1261070966720581,
+            0.11271114647388458,
+            0.10108441859483719,
+            0.09445962309837341,
+            0.09167026728391647
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 2.521237613215682e-15,
+          "split_half_subspace_overlap": 0.762493371963501,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.8422843217849731,
+          "leading_singular_values": [
+            0.7652469873428345,
+            0.7164733409881592,
+            0.6442021727561951,
+            0.4499419927597046,
+            0.33504489064216614,
+            0.3194279372692108,
+            0.12170765548944473,
+            0.1131925880908966
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.7943979501724243
+        },
+        "horizon": 3,
+        "seed": 700324,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.12846310436725616,
+          "coordinate_mse": 0.030787840485572815,
+          "coordinate_mse_over_fit_mean_baseline": 0.09954105271028556,
+          "current_state_fixed_complement_joint_kl_bits": 0.13216044008731842,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.05195393040776253,
+          "coordinate_mse": 0.01613595522940159,
+          "coordinate_mse_over_fit_mean_baseline": 0.07551788123391864,
+          "current_state_fixed_complement_joint_kl_bits": 0.03786075860261917,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.03868281841278076,
+          "coordinate_mse": 0.0625683143734932,
+          "coordinate_mse_over_fit_mean_baseline": 0.0989330707425818,
+          "current_state_fixed_complement_joint_kl_bits": 0.031891465187072754,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.08506610244512558,
+          "coordinate_mse": 0.03929533436894417,
+          "coordinate_mse_over_fit_mean_baseline": 0.2454734676928327,
+          "current_state_fixed_complement_joint_kl_bits": 0.0560605525970459,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.20252899825572968,
+          "coordinate_mse": 0.06521090865135193,
+          "coordinate_mse_over_fit_mean_baseline": 0.005010946831939954,
+          "current_state_fixed_complement_joint_kl_bits": 0.1979074627161026,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21300752460956573,
+          "coordinate_mse": 0.031052028760313988,
+          "coordinate_mse_over_fit_mean_baseline": 0.19897919942021153,
+          "current_state_fixed_complement_joint_kl_bits": 0.2224317342042923,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2125919908285141,
+          "coordinate_mse": 0.026423772796988487,
+          "coordinate_mse_over_fit_mean_baseline": 0.1482181026969507,
+          "current_state_fixed_complement_joint_kl_bits": 0.22151164710521698,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.21300970017910004,
+          "coordinate_mse": 0.026509331539273262,
+          "coordinate_mse_over_fit_mean_baseline": 0.22753075866645042,
+          "current_state_fixed_complement_joint_kl_bits": 0.22189445793628693,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.15754522383213043,
+          "coordinate_mse": 0.06573019176721573,
+          "coordinate_mse_over_fit_mean_baseline": 0.19118419053204777,
+          "current_state_fixed_complement_joint_kl_bits": 0.14972533285617828,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.01925459627832641,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 7,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 5,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 10,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 7
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.01455631316639483,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.009879062883555889,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.01596346138311284,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.01951194051653147,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.025205715217938025,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.013052574824541807,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.036495473235845566,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.019372228998690844
+          },
+          "rows": 61
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.03350632014030236,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 7,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 5,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 10,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 7
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.020220654861380655,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.02112586916025196,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.02277839303548847,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.032336825504899025,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0370867816110452,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.043273973278701305,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.06639303006231785,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.024835033608334407
+          },
+          "rows": 61
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.017558696384297773,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 7,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 5,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 10,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 7
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.01601477440757056,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.011718655171404992,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.013408886268734932,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.018306021951138972,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.01747510340064764,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.017709354404360056,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.029110799450427292,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.016725976020097733
+          },
+          "rows": 61
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.05329662750120319,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 6,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 7,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 5,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 15,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 10,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 7
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.03636311739683151,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.03291194872664554,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.032899788447788784,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.04630723595619202,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.049416562045613927,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.0792597346007824,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.10598046854138374,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.04323416429438761
+          },
+          "rows": 61
+        }
+      },
+      "rank": 4,
+      "run": "gru_fresh-s123-r4",
+      "teacher_oracle_joint_kl_bits": 0.5355595017507553
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 16,
+          "fraction_sketch_energy_captured": 0.978079080581665,
+          "leading_singular_values": [
+            2.877716302871704,
+            2.19022274017334,
+            2.000798225402832,
+            1.482826590538025,
+            1.2535333633422852,
+            0.9408327341079712,
+            0.8982642889022827,
+            0.8041743040084839
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 8.604977217970336e-15,
+          "split_half_subspace_overlap": 0.7286475896835327,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.9951573610305786,
+          "leading_singular_values": [
+            12.923248291015625,
+            11.778521537780762,
+            8.117424011230469,
+            4.237771511077881,
+            3.551074981689453,
+            3.1422319412231445,
+            2.40488862991333,
+            2.065457582473755
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.7859582901000977
+        },
+        "horizon": 3,
+        "seed": 700322,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.23078644275665283,
+          "coordinate_mse": 4.551845995592885e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.015616681184300202,
+          "current_state_fixed_complement_joint_kl_bits": 0.22735275328159332,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.026791593059897423,
+          "coordinate_mse": 9.160159243037924e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.022969246453282723,
+          "current_state_fixed_complement_joint_kl_bits": 0.019960269331932068,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.22707206010818481,
+          "coordinate_mse": 0.0003253292525187135,
+          "coordinate_mse_over_fit_mean_baseline": 0.0005089477590819036,
+          "current_state_fixed_complement_joint_kl_bits": 0.20879799127578735,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.027412468567490578,
+          "coordinate_mse": 5.871114626643248e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.008545652682955032,
+          "current_state_fixed_complement_joint_kl_bits": 0.017720475792884827,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.08324699848890305,
+          "coordinate_mse": 5.611110736936098e-06,
+          "coordinate_mse_over_fit_mean_baseline": 2.366741450170946e-06,
+          "current_state_fixed_complement_joint_kl_bits": 0.08099941164255142,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.40923061966896057,
+          "coordinate_mse": 6.924300396349281e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0007514953610196637,
+          "current_state_fixed_complement_joint_kl_bits": 0.410459041595459,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.4093569219112396,
+          "coordinate_mse": 3.930670573026873e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0006949349092733809,
+          "current_state_fixed_complement_joint_kl_bits": 0.41353166103363037,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.45395490527153015,
+          "coordinate_mse": 3.6795794585486874e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0004758267271066613,
+          "current_state_fixed_complement_joint_kl_bits": 0.45481541752815247,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2547426223754883,
+          "coordinate_mse": 9.91224660538137e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0001182328300439751,
+          "current_state_fixed_complement_joint_kl_bits": 0.2537824213504791,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.14087839500889893,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 10,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 6,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 11,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 14
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.3954024910926819,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.126531820371747,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.13600159032891193,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.11191617604345083,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.07195695388046178,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.07103796675801277,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.16323616829785434,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.05094399329807077
+          },
+          "rows": 64
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.014704214322331082,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 10,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 6,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 11,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 14
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.013275171630084515,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.014118124824017286,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.01154973761488994,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.01445611915551126,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.026271795388311148,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.00826292671263218,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.021344103427095848,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.008355735826106476
+          },
+          "rows": 64
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.13448182328758373,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 10,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 6,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 11,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 14
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.28352390229701996,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.18292272984981536,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.10856512188911438,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.0917080040089786,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.08483992466195063,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.08149276673793793,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.1496310836889527,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.09317105316690036
+          },
+          "rows": 64
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.14086360295380776,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 10,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 6,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 11,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 14
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.3504822999238968,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.15001423992216587,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.13099883372584978,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.1184290493838489,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0824110396206379,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.053538376465439796,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.18015997111797333,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.06087501347064972
+          },
+          "rows": 64
+        }
+      },
+      "rank": 16,
+      "run": "signed_delta_fresh-s121-r16",
+      "teacher_oracle_joint_kl_bits": 0.6855904984510074
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 4,
+          "fraction_sketch_energy_captured": 0.7392337322235107,
+          "leading_singular_values": [
+            4.254055500030518,
+            3.711865186691284,
+            3.238224506378174,
+            2.4180665016174316,
+            2.119009017944336,
+            1.7322808504104614,
+            1.4283744096755981,
+            1.260002851486206
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 1.5371175715250753e-15,
+          "split_half_subspace_overlap": 0.6405388116836548,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.8969040513038635,
+          "leading_singular_values": [
+            12.923248291015625,
+            11.778521537780762,
+            8.117424011230469,
+            4.237771511077881,
+            3.551074981689453,
+            3.1422319412231445,
+            2.40488862991333,
+            2.065457582473755
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.7361026406288147
+        },
+        "horizon": 3,
+        "seed": 700322,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.18220849335193634,
+          "coordinate_mse": 0.0001483657251810655,
+          "coordinate_mse_over_fit_mean_baseline": 0.027681142615591216,
+          "current_state_fixed_complement_joint_kl_bits": 0.17724478244781494,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.14126700162887573,
+          "coordinate_mse": 0.00017308550013694912,
+          "coordinate_mse_over_fit_mean_baseline": 0.08222076305069861,
+          "current_state_fixed_complement_joint_kl_bits": 0.09766486287117004,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2547013461589813,
+          "coordinate_mse": 0.03889361768960953,
+          "coordinate_mse_over_fit_mean_baseline": 0.06286688314472272,
+          "current_state_fixed_complement_joint_kl_bits": 0.23713870346546173,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.15655890107154846,
+          "coordinate_mse": 0.00017791340360417962,
+          "coordinate_mse_over_fit_mean_baseline": 0.06683992325935534,
+          "current_state_fixed_complement_joint_kl_bits": 0.10884364694356918,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.24423553049564362,
+          "coordinate_mse": 0.040046099573373795,
+          "coordinate_mse_over_fit_mean_baseline": 0.004676606820120933,
+          "current_state_fixed_complement_joint_kl_bits": 0.22853951156139374,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.37883463501930237,
+          "coordinate_mse": 0.0016838433220982552,
+          "coordinate_mse_over_fit_mean_baseline": 0.026352377375457346,
+          "current_state_fixed_complement_joint_kl_bits": 0.3892833888530731,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2899361848831177,
+          "coordinate_mse": 0.0019425521604716778,
+          "coordinate_mse_over_fit_mean_baseline": 0.025040194215336792,
+          "current_state_fixed_complement_joint_kl_bits": 0.2874995768070221,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.34299346804618835,
+          "coordinate_mse": 0.002239841967821121,
+          "coordinate_mse_over_fit_mean_baseline": 0.03277345736582845,
+          "current_state_fixed_complement_joint_kl_bits": 0.3656405210494995,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2425175905227661,
+          "coordinate_mse": 0.021137433126568794,
+          "coordinate_mse_over_fit_mean_baseline": 0.0170269767634697,
+          "current_state_fixed_complement_joint_kl_bits": 0.23884332180023193,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.04985126307328913,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 10,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 6,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 11,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 14
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.06311971880495548,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.05893921349197626,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.031093327639003594,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.05284529132768512,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.05156121580776843,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.011602049693465233,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.09444213099777699,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.03520715682368193
+          },
+          "rows": 64
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.10251968303341036,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 10,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 6,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 11,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 14
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.1968923658132553,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.14243306294083596,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.09501116381337245,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.09082671906799078,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.08341884579170834,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.02342399675399065,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.13838104835965417,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.04977026172647519
+          },
+          "rows": 64
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.15588580833640137,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 10,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 6,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 11,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 14
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.43223923444747925,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.1592740062624216,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.11373756577571233,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.11134490696713328,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.08263093063777144,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.07824489660561085,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.19150292060591959,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.07811200538916248
+          },
+          "rows": 64
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.14086360295380776,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 10,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 6,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 8,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 11,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 14
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.3504822999238968,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.15001423992216587,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.13099883372584978,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.1184290493838489,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0824110396206379,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.053538376465439796,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.18015997111797333,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.06087501347064972
+          },
+          "rows": 64
+        }
+      },
+      "rank": 4,
+      "run": "signed_delta_fresh-s121-r4",
+      "teacher_oracle_joint_kl_bits": 0.6855904984510074
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 16,
+          "fraction_sketch_energy_captured": 0.9782262444496155,
+          "leading_singular_values": [
+            1.9169092178344727,
+            1.6842931509017944,
+            1.271945595741272,
+            0.9396057724952698,
+            0.8451895713806152,
+            0.7342843413352966,
+            0.611984372138977,
+            0.4569861888885498
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 7.473836714712735e-15,
+          "split_half_subspace_overlap": 0.7303122282028198,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.9947601556777954,
+          "leading_singular_values": [
+            8.237531661987305,
+            6.417684555053711,
+            5.627413272857666,
+            2.2822649478912354,
+            2.0415759086608887,
+            1.670257329940796,
+            1.3886477947235107,
+            1.2660068273544312
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.7502886652946472
+        },
+        "horizon": 3,
+        "seed": 700323,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.25128161907196045,
+          "coordinate_mse": 0.0002066371962428093,
+          "coordinate_mse_over_fit_mean_baseline": 0.019511902986334678,
+          "current_state_fixed_complement_joint_kl_bits": 0.2393776923418045,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.04041290283203125,
+          "coordinate_mse": 0.00027875418891198933,
+          "coordinate_mse_over_fit_mean_baseline": 0.02524852099070425,
+          "current_state_fixed_complement_joint_kl_bits": 0.027669677510857582,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.1568709760904312,
+          "coordinate_mse": 0.0011575856478884816,
+          "coordinate_mse_over_fit_mean_baseline": 0.0020097381536594476,
+          "current_state_fixed_complement_joint_kl_bits": 0.1454063504934311,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.0415462926030159,
+          "coordinate_mse": 0.00014916945656295866,
+          "coordinate_mse_over_fit_mean_baseline": 0.007493889088540465,
+          "current_state_fixed_complement_joint_kl_bits": 0.025802388787269592,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.0926024317741394,
+          "coordinate_mse": 1.6744725144235417e-05,
+          "coordinate_mse_over_fit_mean_baseline": 7.2521747138953094e-06,
+          "current_state_fixed_complement_joint_kl_bits": 0.08898206800222397,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.42573070526123047,
+          "coordinate_mse": 0.0001294727117056027,
+          "coordinate_mse_over_fit_mean_baseline": 0.0015814376929869027,
+          "current_state_fixed_complement_joint_kl_bits": 0.41928279399871826,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.36652132868766785,
+          "coordinate_mse": 0.0001471455761929974,
+          "coordinate_mse_over_fit_mean_baseline": 0.0019267938934616473,
+          "current_state_fixed_complement_joint_kl_bits": 0.36664095520973206,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.4080253839492798,
+          "coordinate_mse": 8.308186806971207e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0012102921682774143,
+          "current_state_fixed_complement_joint_kl_bits": 0.39237871766090393,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.23295296728610992,
+          "coordinate_mse": 0.0003851641376968473,
+          "coordinate_mse_over_fit_mean_baseline": 0.0005462969286473305,
+          "current_state_fixed_complement_joint_kl_bits": 0.22336357831954956,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.1349894767732952,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 3,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 2,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 4,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 12
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.10766233131289482,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.10137397795915604,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.1374555081129074,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.14648838341236115,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.08399260704490272,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.32889129500836134,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.08414604142308235,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.08990566991269588
+          },
+          "rows": 45
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.015904735206340104,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 3,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 2,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 4,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 12
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.021698597818613052,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.012175593225817596,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.019066210215290386,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.027314976789057255,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.00881837773009796,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.01732765743508935,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.007141208392567933,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.013695260044187307
+          },
+          "rows": 45
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.0897871684875174,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 3,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 2,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 4,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 12
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.11429253965616226,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.04450658043580396,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.12129884585738182,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.1532060205936432,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.053168499672954735,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.1070824135094881,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.06408091448247433,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.06066153369223078
+          },
+          "rows": 45
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.15283477723873642,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 3,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 2,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 4,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 12
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.11177603527903557,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.10705812275409698,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.12931808332602182,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.18791671097278595,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.09352256391536105,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.35430471040308475,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.11861063539981842,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.12017135585968693
+          },
+          "rows": 45
+        }
+      },
+      "rank": 16,
+      "run": "signed_delta_fresh-s122-r16",
+      "teacher_oracle_joint_kl_bits": 0.6845357951800342
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 4,
+          "fraction_sketch_energy_captured": 0.6874191761016846,
+          "leading_singular_values": [
+            2.293156862258911,
+            2.062373638153076,
+            1.719286322593689,
+            1.4496184587478638,
+            1.265372395515442,
+            0.9928122758865356,
+            0.977243959903717,
+            0.8959933519363403
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 1.9172592878683456e-15,
+          "split_half_subspace_overlap": 0.6425079703330994,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.9046379327774048,
+          "leading_singular_values": [
+            8.237531661987305,
+            6.417684555053711,
+            5.627413272857666,
+            2.2822649478912354,
+            2.0415759086608887,
+            1.670257329940796,
+            1.3886477947235107,
+            1.2660068273544312
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.7365376949310303
+        },
+        "horizon": 3,
+        "seed": 700323,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.19555746018886566,
+          "coordinate_mse": 0.0006523689371533692,
+          "coordinate_mse_over_fit_mean_baseline": 0.04320792460700095,
+          "current_state_fixed_complement_joint_kl_bits": 0.1780291199684143,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.15044540166854858,
+          "coordinate_mse": 0.0006700805970467627,
+          "coordinate_mse_over_fit_mean_baseline": 0.10426384430102423,
+          "current_state_fixed_complement_joint_kl_bits": 0.09972206503152847,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.23326325416564941,
+          "coordinate_mse": 0.028577158227562904,
+          "coordinate_mse_over_fit_mean_baseline": 0.044863005855502514,
+          "current_state_fixed_complement_joint_kl_bits": 0.21622876822948456,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.17301642894744873,
+          "coordinate_mse": 0.0004965841653756797,
+          "coordinate_mse_over_fit_mean_baseline": 0.07971548194126969,
+          "current_state_fixed_complement_joint_kl_bits": 0.12042113393545151,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.26682987809181213,
+          "coordinate_mse": 0.051099877804517746,
+          "coordinate_mse_over_fit_mean_baseline": 0.0062830467555870075,
+          "current_state_fixed_complement_joint_kl_bits": 0.24719186127185822,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.3668785095214844,
+          "coordinate_mse": 0.0031830167863518,
+          "coordinate_mse_over_fit_mean_baseline": 0.038125218361119206,
+          "current_state_fixed_complement_joint_kl_bits": 0.36592158675193787,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2983170747756958,
+          "coordinate_mse": 0.006364027503877878,
+          "coordinate_mse_over_fit_mean_baseline": 0.12983227631959646,
+          "current_state_fixed_complement_joint_kl_bits": 0.27348726987838745,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2848910093307495,
+          "coordinate_mse": 0.0035798910539597273,
+          "coordinate_mse_over_fit_mean_baseline": 0.06633263833724991,
+          "current_state_fixed_complement_joint_kl_bits": 0.267840176820755,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.25697264075279236,
+          "coordinate_mse": 0.025258168578147888,
+          "coordinate_mse_over_fit_mean_baseline": 0.02275301483181599,
+          "current_state_fixed_complement_joint_kl_bits": 0.24209028482437134,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 8,
+          "mean": 0.07098296683435873,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 3,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 2,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 4,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 12
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.030366473831236362,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.0361328912632806,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.07674952720602353,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.0767909549176693,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.038461658341640774,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.15385519247502089,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.10325087793171406,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.052256158708284296
+          },
+          "rows": 45
+        },
+        "future_jacobian": {
+          "keys": 8,
+          "mean": 0.127156995124742,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 3,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 2,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 4,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 12
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.06341904774308205,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.09898620950324195,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.08344180136919022,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.19491352885961533,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.084430175579407,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.2865863125771284,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.12148985452950001,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.08398903083677094
+          },
+          "rows": 45
+        },
+        "learned": {
+          "keys": 8,
+          "mean": 0.1423820739952662,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 3,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 2,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 4,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 12
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.12576823309063911,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.0799224493759019,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.13820497443278631,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.22091374546289444,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0907145081595941,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.27348821610212326,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.11923850513994694,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.09080596019824345
+          },
+          "rows": 45
+        },
+        "unchanged": {
+          "keys": 8,
+          "mean": 0.15283477723873642,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 3,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 2,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 11,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 4,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 4,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 12
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.11177603527903557,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.10705812275409698,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.12931808332602182,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.18791671097278595,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.09352256391536105,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.35430471040308475,
+            "d99f34ba24c8a1f994c41c97643bad19e3c3a9b79c5a3aaaf1304890ab5e3d52": 0.11861063539981842,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.12017135585968693
+          },
+          "rows": 45
+        }
+      },
+      "rank": 4,
+      "run": "signed_delta_fresh-s122-r4",
+      "teacher_oracle_joint_kl_bits": 0.6845357951800342
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 16,
+          "fraction_sketch_energy_captured": 0.9828592538833618,
+          "leading_singular_values": [
+            3.4003489017486572,
+            2.590045690536499,
+            2.225111961364746,
+            1.7163079977035522,
+            1.2864784002304077,
+            1.0710521936416626,
+            0.9482059478759766,
+            0.8373937606811523
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 1.0211399766393587e-14,
+          "split_half_subspace_overlap": 0.7657463550567627,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.99534672498703,
+          "leading_singular_values": [
+            15.132309913635254,
+            11.707518577575684,
+            8.64688491821289,
+            4.27916145324707,
+            3.698507308959961,
+            3.256645441055298,
+            2.274674892425537,
+            2.0832788944244385
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.7837332487106323
+        },
+        "horizon": 3,
+        "seed": 700324,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.24449491500854492,
+          "coordinate_mse": 3.3154396078316495e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.008831324643373606,
+          "current_state_fixed_complement_joint_kl_bits": 0.24389183521270752,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.030097054317593575,
+          "coordinate_mse": 0.00013316261174622923,
+          "coordinate_mse_over_fit_mean_baseline": 0.02547864871660335,
+          "current_state_fixed_complement_joint_kl_bits": 0.02008279226720333,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.23147861659526825,
+          "coordinate_mse": 0.0005711571429856122,
+          "coordinate_mse_over_fit_mean_baseline": 0.0006746441859457147,
+          "current_state_fixed_complement_joint_kl_bits": 0.20862697064876556,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.036588821560144424,
+          "coordinate_mse": 5.602652163361199e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0075224642897827165,
+          "current_state_fixed_complement_joint_kl_bits": 0.025723768398165703,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.09533759951591492,
+          "coordinate_mse": 6.41905580778257e-06,
+          "coordinate_mse_over_fit_mean_baseline": 2.5546390705202647e-06,
+          "current_state_fixed_complement_joint_kl_bits": 0.08927875012159348,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.4107002317905426,
+          "coordinate_mse": 6.261055386858061e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0008156673474109446,
+          "current_state_fixed_complement_joint_kl_bits": 0.4352315366268158,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.43094050884246826,
+          "coordinate_mse": 3.8393180147977546e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0005305065237578196,
+          "current_state_fixed_complement_joint_kl_bits": 0.45409154891967773,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.3975437581539154,
+          "coordinate_mse": 3.734178972081281e-05,
+          "coordinate_mse_over_fit_mean_baseline": 0.0006538774580800589,
+          "current_state_fixed_complement_joint_kl_bits": 0.3930312395095825,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2553105056285858,
+          "coordinate_mse": 0.00010259609553031623,
+          "coordinate_mse_over_fit_mean_baseline": 0.0001075195589139429,
+          "current_state_fixed_complement_joint_kl_bits": 0.24451406300067902,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 7,
+          "mean": 0.13226938991504109,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 6,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 13,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 9
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.1278686262667179,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.10110884851643018,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.11070461943745613,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.13750614846746126,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.09033716555971366,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.29290519654750824,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.06545512461000019
+          },
+          "rows": 47
+        },
+        "future_jacobian": {
+          "keys": 7,
+          "mean": 0.013222410927298655,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 6,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 13,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 9
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.0023468922590836883,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.018843468744307756,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.01276590849738568,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.0201494621578604,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.016280132596595928,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.011358957272022963,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.01081205496383417
+          },
+          "rows": 47
+        },
+        "learned": {
+          "keys": 7,
+          "mean": 0.1191325644257784,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 6,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 13,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 9
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.07486721500754356,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.11796897490109716,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.11437595961615443,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.10811113007366657,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.12046979310420844,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.19254674017429352,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.10558813810348511
+          },
+          "rows": 47
+        },
+        "unchanged": {
+          "keys": 7,
+          "mean": 0.17692757394218733,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 6,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 13,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 9
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.10878651216626167,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.08825077222926277,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.14165778830647469,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.23950804273287454,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0904236246760075,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.4933934509754181,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.07647282650901212
+          },
+          "rows": 47
+        }
+      },
+      "rank": 16,
+      "run": "signed_delta_fresh-s123-r16",
+      "teacher_oracle_joint_kl_bits": 0.7000040434507651
+    },
+    {
+      "future_sensitivity": {
+        "delayed_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "excluded_output_span_dimension": 4,
+          "fraction_sketch_energy_captured": 0.7330294251441956,
+          "leading_singular_values": [
+            4.226215839385986,
+            3.7645771503448486,
+            3.3350820541381836,
+            2.326061248779297,
+            2.0562732219696045,
+            1.8680660724639893,
+            1.5050114393234253,
+            1.1878083944320679
+          ],
+          "limitation": "Excludes only the rank-matched sampled output-control span; not all immediate effects.",
+          "null_completion_dimensions": 0,
+          "output_span_overlap": 1.1644389566009441e-15,
+          "split_half_subspace_overlap": 0.6690701246261597,
+          "status": "completed"
+        },
+        "fit_state_count": 8,
+        "fit_state_indexes": [
+          0,
+          27,
+          54,
+          81,
+          109,
+          136,
+          163,
+          191
+        ],
+        "future_jacobian": {
+          "effective_sensitivity_rank": 64,
+          "fraction_sketch_energy_captured": 0.9064099788665771,
+          "leading_singular_values": [
+            15.132309913635254,
+            11.707518577575684,
+            8.64688491821289,
+            4.27916145324707,
+            3.698507308959961,
+            3.256645441055298,
+            2.274674892425537,
+            2.0832788944244385
+          ],
+          "null_completion_dimensions": 0,
+          "split_half_subspace_overlap": 0.8878335952758789
+        },
+        "horizon": 3,
+        "seed": 700324,
+        "sketches_per_state": 8,
+        "sqrt_probability_weights_detached": true
+      },
+      "held_out_affine_closure": {
+        "delayed_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.1876068264245987,
+          "coordinate_mse": 0.0002675458381418139,
+          "coordinate_mse_over_fit_mean_baseline": 0.034789117542467315,
+          "current_state_fixed_complement_joint_kl_bits": 0.18129606544971466,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "future_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.19795601069927216,
+          "coordinate_mse": 0.0002377701021032408,
+          "coordinate_mse_over_fit_mean_baseline": 0.07220461725991976,
+          "current_state_fixed_complement_joint_kl_bits": 0.1383819431066513,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "learned": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.26045510172843933,
+          "coordinate_mse": 0.028363386169075966,
+          "coordinate_mse_over_fit_mean_baseline": 0.03842669712940796,
+          "current_state_fixed_complement_joint_kl_bits": 0.2465396672487259,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "output_jacobian": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2264186143875122,
+          "coordinate_mse": 0.0002551232173573226,
+          "coordinate_mse_over_fit_mean_baseline": 0.09831554091247394,
+          "current_state_fixed_complement_joint_kl_bits": 0.17627958953380585,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "pca": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.28328239917755127,
+          "coordinate_mse": 0.04267038404941559,
+          "coordinate_mse_over_fit_mean_baseline": 0.004721154428525589,
+          "current_state_fixed_complement_joint_kl_bits": 0.2774764597415924,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_0": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.47103166580200195,
+          "coordinate_mse": 0.0030664794612675905,
+          "coordinate_mse_over_fit_mean_baseline": 0.037587671458127206,
+          "current_state_fixed_complement_joint_kl_bits": 0.4914756715297699,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_1": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.4861085116863251,
+          "coordinate_mse": 0.0035831246059387922,
+          "coordinate_mse_over_fit_mean_baseline": 0.07824072857664395,
+          "current_state_fixed_complement_joint_kl_bits": 0.4983985126018524,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "random_norm_2": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.35040974617004395,
+          "coordinate_mse": 0.002400304889306426,
+          "coordinate_mse_over_fit_mean_baseline": 0.028026604870361817,
+          "current_state_fixed_complement_joint_kl_bits": 0.3399221897125244,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        },
+        "shuffled_targets": {
+          "affine_updated_fixed_complement_joint_kl_bits": 0.2729678452014923,
+          "coordinate_mse": 0.021542558446526527,
+          "coordinate_mse_over_fit_mean_baseline": 0.022040079544489933,
+          "current_state_fixed_complement_joint_kl_bits": 0.26481369137763977,
+          "interpretation": "Descriptive held-out affine closure; neither imposed algebraically nor a causal success rule.",
+          "symbols_weighted_uniformly": true
+        }
+      },
+      "methods": {
+        "delayed_jacobian": {
+          "keys": 7,
+          "mean": 0.05732576336942973,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 6,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 13,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 9
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.01768552605062723,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.04662108527762549,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.08867927826941013,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.05029701006909212,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.052001096021670565,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.08773786947131157,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.058258478426271014
+          },
+          "rows": 47
+        },
+        "future_jacobian": {
+          "keys": 7,
+          "mean": 0.1277352268873382,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 6,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 13,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 9
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.07692931592464447,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.07820821074502808,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.1260134968906641,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.19564234962066016,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.06971272797538684,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.2975485920906067,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.05009189496437708
+          },
+          "rows": 47
+        },
+        "learned": {
+          "keys": 7,
+          "mean": 0.14172068138847432,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 6,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 13,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 9
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.08942409604787827,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.07835866590695721,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.14239916717633605,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.1627900619059801,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.10237366018386987,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.33675502240657806,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.07994409609172079
+          },
+          "rows": 47
+        },
+        "unchanged": {
+          "keys": 7,
+          "mean": 0.17692757394218733,
+          "per_key_counts": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 2,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 7,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 8,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 6,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 13,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 2,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 9
+          },
+          "per_key_means": {
+            "44b01f83bf01a8f5f994dde6e21bca99030ec496d14bbf10ecc7869e3920b00c": 0.10878651216626167,
+            "57be72ef9111beffb79d0a7e187fd3fe33ed1328f16f13e05031bb2eded3fe91": 0.08825077222926277,
+            "6a3cd2655fcc32cab3ffee41727922ca98bb4884857b9b62bb7ff4d985ed4343": 0.14165778830647469,
+            "78c58e5b5d31dcbd829b34c93f7caaf8e3718820b84c0ad45121ae981ce18bfc": 0.23950804273287454,
+            "9e7bb0a606f91f617b7a087f03ec4ae12bbee4c4db8254d6b08c50ed1441044e": 0.0904236246760075,
+            "d3f7b8351f360e41a358b0d26a32ddf379ea4058406d3781558c0ae1e62c6d5a": 0.4933934509754181,
+            "e8ff07c030f8346f004db513a01cad4b142c47231f1425e1c03f55175b69a97d": 0.07647282650901212
+          },
+          "rows": 47
+        }
+      },
+      "rank": 4,
+      "run": "signed_delta_fresh-s123-r4",
+      "teacher_oracle_joint_kl_bits": 0.7000040434507651
+    }
+  ],
+  "specificity_rule": "Untrained gap >=.01 bits, >=32 pairs and >=4 keys is comparable. Smaller gap is inconclusive and blocks the strict overall gate."
+}

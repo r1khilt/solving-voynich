@@ -1,0 +1,72 @@
+{
+  "condition": {
+    "name": "canonical_fresh",
+    "regime": "fresh",
+    "model": {
+      "alphabet": 4,
+      "width": 128,
+      "layers": 3,
+      "heads": 4,
+      "ff_width": 384,
+      "context": 256,
+      "dropout": 0,
+      "kind": "transformer",
+      "canonical": true
+    }
+  },
+  "model_seed": 122,
+  "spec": {
+    "kind": "transformer",
+    "alphabet": 4,
+    "canonical": true,
+    "width": 128,
+    "layers": 3,
+    "heads": 4,
+    "ff_width": 384,
+    "context": 256,
+    "dropout": 0
+  },
+  "parameters": 641152,
+  "initial_hash": "e60a0b71ec8f2cb3eeeebe6b52c1030021c8fcfccb3ac3d1fd078cffa93b2a7e",
+  "provenance": {
+    "git_commit": "c9c95a0cfef9bdfc542136e4d38482e7d37c59ea",
+    "python": "3.12.13",
+    "torch": "2.14.0",
+    "source_hashes": {
+      "src/voynich/__init__.py": "f51cc6d99d838a811a4a377c45d913ca33c23d265c4a35cccce39606bce5d8be",
+      "src/voynich/blind_recovery.py": "cc273e2d5d7f73b5bb0b23837ed5dbe9678c285be0f56608ca6e7d734c7ae911",
+      "src/voynich/calibration.py": "a18e852d4e71eb83b4b4c31cab189c2c52da619ef0ba41fc6b9b0b51dc541230",
+      "src/voynich/causal_alignment.py": "c20d8e0c8f35333e1a5c879b633d8361f4cad61cb9f009601c62ea48ae2326ff",
+      "src/voynich/causal_mapping.py": "1db6eafe7df0cdbf8a50bf893710398501fa3be47d69cfd59cb0dc647da2f298",
+      "src/voynich/context_analysis.py": "8acad13b9c10f209a7f25994b3a00e345dbdabf20ea3f69a3cf29117dd514fe4",
+      "src/voynich/context_controls.py": "ceb8b46183ff05433f564adb3836d79b0c56cbd544470afba958a10e90fa628b",
+      "src/voynich/data.py": "2b34268167c3d7c07bc1baf86e0d99af06de9d5abf007e9fa5027a9769295661",
+      "src/voynich/episodic_campaign.py": "ba440bfdf9dcff774311f9ff07e1af92d04f05a4586471258abf33d9d0f4440d",
+      "src/voynich/episodic_causal.py": "e3997d5852c3db41a3f74f7a346e801ad7ca083db225d4b4c5df2749681ff8ba",
+      "src/voynich/episodic_data.py": "8eac731151b25942b9a6b155946f55c5e456bdc5df4cf9e9f016830da9c15f74",
+      "src/voynich/episodic_models.py": "7859080fd6ad5b687318fba23e3cebd20b3fa55683d2d281710db5eb091c8287",
+      "src/voynich/evaluate.py": "499f688bb399b988dac0ce838e9caa36800a2e9d28d68b9a47ebef818e5480dc",
+      "src/voynich/interpret.py": "89f2d3161b7f6a08efc9c64161418e53d3b2c6db83a28dc8dbd2cf5f4f21436e",
+      "src/voynich/latent_recovery.py": "fdff0ed7d7021f122385b2aea15e3f4d05ba9b735b0a77d584cc47e2e6cc5412",
+      "src/voynich/long_context.py": "a798f3c9abcb8d8a9bb8eca6629b9d5c20f8531d6b351d6c7a915b32316b7944",
+      "src/voynich/model.py": "771c4e6f4cb3abdbb3ef7f7101f845ac63f129bdc08de249db190997f63cc629",
+      "src/voynich/order_scale.py": "b95eb06d09e6753bff5698c04e325c7e611844c5306c6da85f1ec2f72a3a81fc",
+      "src/voynich/runtime.py": "6749f192095f210a14d9508a6fa22942c1b6c5fd9a31acd5e474850ddfa6506c",
+      "src/voynich/synthetic.py": "7c6f53cefa165b4d45ca0fd151fbdba26bb841795a88ac6a3849180603a38e6e",
+      "src/voynich/tokenizer.py": "c8a0cea5dd14697c0abb8b2150d4b0f31853ce9162a8fc0441f7a5a706e81d1c",
+      "src/voynich/train.py": "517f795c8f400f8ffd465e58bf96a04d3deac9d7ba44c2e5073648cc09cb4c9e"
+    }
+  },
+  "data_manifest_sha256": "cb31bc272ccdea2b26b4b5c27a01d52341e89d74c82b72f5b6e7e595b31115c0",
+  "elapsed_seconds": 115.41788795799948,
+  "best_development_bits": 1.5615717494332921,
+  "best_checkpoint_sha256": "d41db9be5d038ee6d4e091ca60f750df472da4ca5b3087af4831373d92656681",
+  "updates": 1200,
+  "sampled_targets": 14745600,
+  "resources": {
+    "max_rss_bytes": 531988480,
+    "mps_allocated_bytes": 10258688,
+    "mps_driver_bytes": 1245380608,
+    "mps_recommended_bytes": 55662788608
+  }
+}

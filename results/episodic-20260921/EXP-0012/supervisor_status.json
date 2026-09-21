@@ -1,0 +1,46 @@
+{
+  "state": "completed",
+  "elapsed_seconds": 3382.109348249971,
+  "jobs": {
+    "gpu": {
+      "state": "completed",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/.venv/bin/python",
+        "/Users/rikhil/.codex/worktrees/episodic-rule-recovery/solving-voynich/scripts/run_episodic_campaign.py",
+        "worker",
+        "--config",
+        "configs/exp0012.json",
+        "--out",
+        "outputs/EXP-0012",
+        "--track",
+        "gpu"
+      ],
+      "max_seconds": 12447,
+      "started_elapsed_seconds": 0.0006681249942630529,
+      "peak_rss_bytes": 676839424,
+      "pid": 5198,
+      "returncode": 0,
+      "finished_elapsed_seconds": 3382.1085378749995
+    },
+    "cpu": {
+      "state": "completed",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/.venv/bin/python",
+        "/Users/rikhil/.codex/worktrees/episodic-rule-recovery/solving-voynich/scripts/run_episodic_campaign.py",
+        "worker",
+        "--config",
+        "configs/exp0012.json",
+        "--out",
+        "outputs/EXP-0012",
+        "--track",
+        "cpu"
+      ],
+      "max_seconds": 12447,
+      "started_elapsed_seconds": 0.0023072499316185713,
+      "peak_rss_bytes": 1309278208,
+      "pid": 5199,
+      "returncode": 0,
+      "finished_elapsed_seconds": 2735.9228378329426
+    }
+  }
+}

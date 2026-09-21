@@ -52,3 +52,11 @@ Results: [EXP-0005](../experiments/EXP-0005-results.md), [EXP-0006](../experimen
 - **Limits:** the longer-prefix subgroup spans only4pages/2leaves; development pages have been repeatedly consulted. All new synthetic diagnostic pools are now exposed. Future adaptive work needs fresh keys/families/contexts. Historical HYP-001 through HYP-006 remain unresolved.
 
 Results: [EXP-0008](../experiments/EXP-0008-results.md), [EXP-0009](../experiments/EXP-0009-results.md), [EXP-0010](../experiments/EXP-0010-results.md).
+
+## Updated status after EPISODIC-0012/0013
+
+- **M-001 / M-004:** fresh raw-task training improves held-out task prediction over a fixed 32-task pool. Canonical fixed training nearly matches fresh, so parameter diversity and arbitrary renaming remain confounded in the raw comparison. Explicit HMMs improve aggregate prediction with extra per-key adaptation data but choose one state on tested parity/XOR tasks. No general mechanism recovery.
+- **M-003:** neither stronger primary causal gate passes. Learned GRU patches alter future distributions beyond controls, but fail immediate preservation and teacher qualification; untrained specificity is inconclusive. Secondary delayed directions preserve immediate predictions better while leaving temporal-consistency/teacher failures. No latent-variable or historical-circuit claim.
+- **Scope:** artificial four-symbol processes only; no new manuscript scoring. Every final synthetic pool is exposed. Historical HYP-001 through HYP-006 remain unresolved. Larger capacity and the simplified signed recurrence do not justify indiscriminate scaling under this schedule.
+
+Results: [EPISODIC-0012](../experiments/EPISODIC-0012-results.md), [EPISODIC-0013](../experiments/EPISODIC-0013-results.md).

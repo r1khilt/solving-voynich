@@ -1,6 +1,20 @@
 # Progress explained, and useful ways to scale the experiments
 
-Updated 2026-09-21 after all three tracks of CAMPAIGN-0001 completed. This guide separates manuscript findings from artificial-cipher calibration. The original larger-compute proposals are preserved below as history.
+Updated 2026-09-21 after the episodic successor completed. This guide separates manuscript findings from artificial-process calibration. Earlier compute proposals and campaign explanations are preserved below as history.
+
+## What the latest work means
+
+We trained **21 models on artificial texts whose rules we know**, then tested them on new examples. This lets us check whether our tools can learn and explain a rule before trusting their explanations of Voynich.
+
+Giving the ordinary transformer lots of different artificial processes helped much more than repeatedly showing it 32 processes. But a simple representation that renames symbols by their order of appearance already removed most of that disadvantage. We have evidence that arbitrary symbol naming matters; we have not isolated how much benefit comes from learning genuinely different rules.
+
+The larger model had about **16.6 times as many parameters**—adjustable numbers learned during training. It improved familiar-rule prediction a little, below the improvement threshold we set beforehand, and did not establish an advantage on entirely excluded rule families. These results give us no reason to expect that filling all 64 GB with a larger version would solve the problem.
+
+The interpretation experiment asked: can we move a model's internal memory from one example into another, change what it predicts later, preserve what it predicts immediately, and have that memory keep updating coherently? Some interventions achieved parts of this, but **none met all our requirements**. The models also predicted the true three-symbol future too poorly for us to claim that we had recovered its generating rule. This is useful feedback about what the next architecture/objective needs to fix.
+
+**Bits per symbol** measure prediction surprise; lower means the model assigned more probability to the symbols that actually occurred. A **joint future** is a complete continuation, such as the next three symbols together. **KL** measures disagreement between two probability distributions; zero means they agree. Neither metric is a percentage of the manuscript decoded.
+
+The campaign finished in **93.55 minutes from its original launch**, including an interruption and recovery. It used the local CPU/GPU, no paid research API, and no manuscript inputs. Details: [prediction results](experiments/EPISODIC-0012-results.md), [causal results](experiments/EPISODIC-0013-results.md), [figure](../results/episodic-20260921/EXP-0012/overview.png).
 
 ## Where we actually are
 

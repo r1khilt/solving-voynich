@@ -2,11 +2,13 @@
 
 A long-term research project aimed at deciphering the Voynich Manuscript by reverse-engineering the process that produced its text. Modern AI is a research tool; fluent generation, attractive translations, and statistical similarity are not themselves decipherment.
 
-**Latest research:** [deep review and next design](docs/research/deep-review-2026-09-21/README.md), with 93 source records covering 92 works/resources, four topic reviews, a searchable catalog and a bounded successor architecture plan. No new training occurred in this review; the completed campaign below remains the latest experimental evidence.
+**Latest experiments:** the [fresh-task campaign](docs/experiments/EPISODIC-0012-results.md) trained 21 synthetic models; varied tasks improved prediction, while scaling from 0.64M to 10.6M parameters brought only a modest gain. The [causal study](docs/experiments/EPISODIC-0013-results.md) found useful intervention effects but established neither primary claim. [Scientific overview](results/episodic-20260921/EXP-0012/overview.png). No manuscript decoding follows from these results.
+
+**Research basis:** [deep review and next design](docs/research/deep-review-2026-09-21/README.md), with 93 source records covering 92 works/resources, four topic reviews and a searchable catalog. Reading depth and unresolved source questions are recorded.
 
 **Current phase: active research and implementation.** The user has authorized continued bounded experiments, corpus research, model training and mechanistic interpretation. Design choices, validation, and completed runs are documented in the notebook; no decipherment claim is made.
 
-**Current isolated implementation:** [episodic rule recovery](docs/research/EPISODIC_IMPLEMENTATION.md), [EXP-0012](docs/experiments/EXP-0012.md) and [EXP-0013](docs/experiments/EXP-0013.md): fresh-task learning, a10.6M-parameter capacity comparison, explicit probabilistic models and joint-future causal tests. Registrations and code are complete; scientific execution/results follow on branch `codex/episodic-rule-recovery`.
+**Completed isolated implementation:** [episodic rule recovery](docs/research/EPISODIC_IMPLEMENTATION.md), [EPISODIC-0012](docs/experiments/EPISODIC-0012.md) and [EPISODIC-0013](docs/experiments/EPISODIC-0013.md), on `codex/episodic-rule-recovery`. All scientific phases used frozen source `c9c95a0`; all workers completed after a documented interruption/recovery. Results are namespaced to preserve the separate latent-recovery experiments in the shared checkout.
 
 ## Start here
 

@@ -1,4 +1,6 @@
-# EXP-0012 — Fresh-task inference, explicit transitions and joint futures
+# EPISODIC-0012 — Fresh-task inference, explicit transitions and joint futures
+
+Publication note (2026-09-21): this registration was frozen under the original identifier EXP-0012 at scientific source `c9c95a0cfef9bdfc542136e4d38482e7d37c59ea`. Its publication alias is **EPISODIC-0012** to avoid collision with the separate latent-recovery series. The registration below is historical; execution is now complete. See [results](EPISODIC-0012-results.md). Original command paths and JSON identifiers remain unchanged; rules were not revised after results.
 
 Status: registered implementation checkpoint before scientific training or confirmation. Date 2026-09-21. Exploratory architecture comparison with frozen decision rules; no manuscript inference or plaintext claim. This work is isolated on branch `codex/episodic-rule-recovery`, based on `03444f8`, preserving unrelated ongoing EXP-0011a/b edits in the original checkout.
 
@@ -71,4 +73,4 @@ Command, from isolated checkout:
 PYTHONPATH=src /Users/rikhil/coding/solving-voynich/.venv/bin/python scripts/run_episodic_campaign.py run --config configs/exp0012.json --out outputs/EXP-0012
 ```
 
-The absolute Python path is the local existing dependency environment. Reproduction elsewhere uses the project environment with the same locked dependencies. Outputs stay ignored until compact archival after every worker exits. [EXP-0013](EXP-0013.md) registers the dependent causal study. No manuscript transfer is automatically authorized by a synthetic win; the next manuscript analysis needs its own appropriate inputs and frozen rules.
+The absolute Python path is the local existing dependency environment. Reproduction elsewhere uses the project environment with the same locked dependencies. Outputs stay ignored until compact archival after every worker exits. [EXP-0013](EPISODIC-0013.md) registers the dependent causal study. No manuscript transfer is automatically authorized by a synthetic win; the next manuscript analysis needs its own appropriate inputs and frozen rules.

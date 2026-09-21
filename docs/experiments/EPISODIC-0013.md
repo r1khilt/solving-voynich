@@ -1,6 +1,8 @@
-# EXP-0013 — Joint-future causal abstractions and temporal update tests
+# EPISODIC-0013 — Joint-future causal abstractions and temporal update tests
 
-Status: registered before backbone training/causal confirmation. Date2026-09-21. Depends on frozen recurrent models from [EXP-0012](EXP-0012.md). This is an expansive but bounded account of trained-model computation, not a discovered manuscript variable.
+Publication note (2026-09-21): this registration was frozen under the original identifier EXP-0013 at scientific source `c9c95a0cfef9bdfc542136e4d38482e7d37c59ea`. Its publication alias is **EPISODIC-0013** to avoid collision with the separate latent-recovery series. The registration below is historical; execution is now complete. See [results](EPISODIC-0013-results.md). Original command paths and JSON identifiers remain unchanged; rules were not revised after results.
+
+Status: registered before backbone training/causal confirmation. Date2026-09-21. Depends on frozen recurrent models from [EXP-0012](EPISODIC-0012.md). This is an expansive but bounded account of trained-model computation, not a discovered manuscript variable.
 
 ## Motivation and reviewed methods
 
