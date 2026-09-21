@@ -39,6 +39,7 @@ These are deferred discovery topics, not established findings or an active resea
 
 ## Active research records
 
+- [World models, diffusion, linguistics and ambitious decipherment](../research/world-models-diffusion-2026-09-21/README.md): approximately 35,000 words, 98 annotated source records, independent linguistics foundations, action/VLA transfer, causal interpretation and five integrated research directions. [Synthesis](../research/world-models-diffusion-2026-09-21/SYNTHESIS.md); [evidence audit](../research/world-models-diffusion-2026-09-21/REVIEW_AUDIT.md). Research and ideation only; no implementation or decipherment result.
 - [Expanded architecture, interpretation, decipherment and theory review](../research/deep-review-2026-09-21/README.md): 93 records /92 works/resources, honest reading-depth labels, audited recent claims and proposed next design. [Searchable catalog](../research/deep-review-2026-09-21/CATALOG.md); run `python3 scripts/research_catalog.py --query <term>` from the repository root.
 - [Prior Voynich models and neural decipherment](../research/PRIOR_WORK.md): original reports, supervision distinctions, evaluation limitations and source links.
 - [Modern architecture and interpretability review](../research/ARCHITECTURE_REVIEW.md): verified primary-source claims and adopt/ablate/defer decisions.

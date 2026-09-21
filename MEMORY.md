@@ -1,13 +1,14 @@
 # Project memory
 
-Last updated: 2026-09-21 (AI/hard-problems research memo; NS C/D claim sourced, prize not awarded).
+Last updated: 2026-09-21 (world models/diffusion/linguistics research dossier; AI/hard-problems memo retained).
 
 ## Current state
 
 - Phase: **active research and implementation**. The user explicitly authorized prior-work/methods research, corpus acquisition, architecture design, and code; the earlier preparation-only restriction is superseded.
+- **World models / diffusion / linguistics review completed:** approximately 35,000 words, 11 documents, 98 annotated source records with explicit reading depths. This specific user request was **research and ideation only**; no implementation, training or manuscript scoring was performed for it. Leading proposal: infer a document-producing system using external multi-system training, globally revisable structured inference, explicit rule execution, independent grounding and causal extraction. Five ambitious research directions remain unimplemented hypotheses. Start at `docs/research/world-models-diffusion-2026-09-21/README.md`; notebook NB-0032-WMD. This does not change the scope of separate experimental tasks.
 - **Latent recovery track:** EXP-0011 Finnish full-mix FAIL → EXP-0011a easy fillers FAIL → EXP-0012 null-aware FAIL (rate ok, recon below matched random) → **EXP-0013 copy-constrained CTC FAIL**: null gates cleared (recall 0.666 / prec 0.574 / pred_null 0.333) but free-running `recon_acc` 0.199 ≯ matched-random 0.204. Edit similarity 0.71; teacher-forced recon 1.0. **Voynich label-free not run.** Results: `docs/experiments/EXP-0011-results.md`, `EXP-0011a-results.md`, `EXP-0012-results.md`, `EXP-0013-results.md`. Not a decipherment.
 - Durable methodological note: signal-class `mask_f1` and null-rate calibration are insufficient; subsequence alignment helps keep-scores but **global threshold decode** still fails prefix `recon_acc`. Highest-EV next: decode-only exact-count / fixed-blank-count on frozen alignment weights before another encoder.
-- Latest research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved.
+- Earlier research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved.
 - Repository: `/Users/rikhil/coding/solving-voynich`.
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.
 - The user describes the repository as private; remote visibility has not been independently verified.
@@ -55,6 +56,7 @@ Local implementation inventory: arm64 Mac, 64 GiB memory, 18 logical CPUs; user 
 - Deferred candidates: `docs/research/BACKLOG.md`.
 - Literature and architecture: `docs/research/PRIOR_WORK.md`, `docs/research/ARCHITECTURE_REVIEW.md`, `docs/research/ARCHITECTURE.md`.
 - Expanded review: `docs/research/deep-review-2026-09-21/README.md`; four topic reviews and source ledgers, `CATALOG.md`, `SOURCE_AUDIT.md`, `NEXT_DESIGN.md`. Search with `python3 scripts/research_catalog.py --query <term>`; validate with `--check`. Candidate direction: fresh-key episodic inference, explicit edge-emitting beliefs, joint continuations and selective causal update tests. These are proposed methods, not findings or a launched campaign.
+- World/action models, diffusion, separate linguistic foundations, and mechanistic identification: `docs/research/world-models-diffusion-2026-09-21/README.md`; the integrated proposal is `SYNTHESIS.md`. Research only; 98 source records are not 98 unique or fully read papers.
 - AI on hard problems (NS, Erdős, formal math) and Voynich analogues: `docs/research/ai-hard-problems-2026-09-21/README.md`.
 - Reproduction commands: `docs/RUNBOOK.md`; completed experiment registrations/results: `docs/experiments/EXP-0001*` through `EXP-0010*`; latest visual overview: `results/CAMPAIGN-0001/overview.png`.
 
