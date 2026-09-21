@@ -74,3 +74,22 @@ def test_cli_generation_separates_inputs_from_hidden_audit(tmp_path, capsys):
     with pytest.raises(ValueError):
         main(["generate", "--output", str(destination), "--count", "3"])
     capsys.readouterr()
+
+
+def test_rare_glyph_escapes_are_not_mislabeled_as_uncertainty(tmp_path):
+    data = corpus(tmp_path / "data")
+    for split in ("train", "validation", "test"):
+        path = data / f"{split}.jsonl"
+        record = json.loads(path.read_text())
+        record["text"] += "\ue000\ue182"
+        path.write_text(json.dumps(record) + "\n")
+    manifest = {
+        "derived_sha256": {
+            name: hashlib.sha256((data / name).read_bytes()).hexdigest()
+            for name in ("train.jsonl", "validation.jsonl", "test.jsonl", "tokenizer.json")
+        }
+    }
+    (data / "preparation.json").write_text(json.dumps(manifest))
+    report = export_manuscript(data, tmp_path / "out")
+    assert report["uncertain_codepoints"] == [0xE000]
+    assert report["rare_glyph_codepoints"] == [0xE182]

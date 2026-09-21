@@ -5,6 +5,7 @@ import hashlib
 import json
 
 from ..runtime import corpus_identity
+from ..tokenizer import ALTERNATIVE, UNREADABLE, UNKNOWN_SPAN, UNCERTAIN_SPACE, RARE_BASE
 from .schema import Observation, save_json
 
 
@@ -74,7 +75,10 @@ def export_manuscript(data_dir, output_dir, *, split="validation", window=128, p
         "pages": len(page_ids),
         "alphabet_size": len(symbols),
         "symbol_inventory": symbols,
-        "uncertain_codepoints": [ord(c) for c in symbols if ord(c) >= 0xE000],
+        "uncertain_codepoints": [
+            ord(c) for c in symbols if c in {ALTERNATIVE, UNREADABLE, UNKNOWN_SPAN, UNCERTAIN_SPACE}
+        ],
+        "rare_glyph_codepoints": [ord(c) for c in symbols if RARE_BASE + 128 <= ord(c) <= RARE_BASE + 255],
         "observations_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
         "interpretation": "Literal transcription inventory, including layout/uncertainty units; not linguistic units",
         "claim": "Read-only format export; no scientific scoring or decipherment",

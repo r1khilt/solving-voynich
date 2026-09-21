@@ -540,3 +540,11 @@ Resource use (if applicable):
 - **Next change (design only; not implemented):** **EXP-0021** (next free after EXP-0020) — rate-free generative keep/delete: per-window implied n_null from model posteriors without a global r, or joint generation of the observed stream. **Falsifier:** same confirm-style split; bits-gain at the *implied* deletion count must beat matched random **and** fraction_beats_random > 0.50; if implied rates collapse to a single high global r, treat as the rejected EXP-0018 family.
 - **Resources:** Local inference seconds; no paid API; no retrain.
 - **Git:** results + scorer + notebook/memory after scores.
+
+
+## 2026-09-21 — Real-corpus adapter audit before training [NB-WMD-IMPL-02]
+
+- **Question:** Does the new observation adapter preserve the registered manuscript representation, including the distinction between uncertainty markers and escaped rare glyphs?
+- **Actions / finding:** Exported training observations only from the checksum-verified ZL3b preparation. The first manifest incorrectly labeled all private-use codepoints as uncertain. The existing tokenizer defines four uncertainty codepoints separately from rare-glyph escapes. Corrected adapter metadata to use those exact definitions and added an independent regression fixture; no symbols were removed or merged.
+- **Validation / exact result:** Adapter tests:4 passed. Corrected export:177 training pages,1,532 explicit128-unit windows,108 observed transcription units,4 uncertainty markers and75 rare-glyph escape units. Original data and frozen splits unchanged; no manuscript scoring or final-test parsing. The24-symbol synthetic model cannot silently accept this108-unit inventory. The first incorrect local manifest is retained only under ignored outputs for audit; corrected export is `outputs/WMD-0001/manuscript-format-export-v2/`.
+- **Git / state:** Implementation checkpoint `dd866a4` exists locally. Its push attempt exceeded30seconds; remote backup not verified. This metadata correction occurs before all scientific training. Commit the correction and freeze source for the registered local runs; no gate or architecture was changed after seeing scores.
