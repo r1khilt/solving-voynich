@@ -2,7 +2,7 @@
 
 A long-term research project aimed at deciphering the Voynich Manuscript by reverse-engineering the process that produced its text. Modern AI is a research tool; fluent generation, attractive translations, and statistical similarity are not themselves decipherment.
 
-**Current phase: active research and implementation.** The user has authorized a prior-work and methods review, manuscript acquisition, and an interpretable Voynich-only modeling pipeline. Design choices, validation, and completed runs are documented in the notebook; no decipherment claim is made.
+**Current phase: active research and implementation.** The user has authorized continued bounded experiments, corpus research, model training and mechanistic interpretation. Design choices, validation, and completed runs are documented in the notebook; no decipherment claim is made.
 
 ## Start here
 
@@ -38,8 +38,13 @@ uv sync --extra dev --locked
 .venv/bin/python -m voynich.train --config configs/smoke.json --run-dir outputs/my-smoke
 ```
 
-The pipeline needs no paid APIs or pretrained weights. Training evaluates validation pages; final test scoring requires a separate explicit command. Raw text, derived corpora, and checkpoints stay local and are reproducible from tracked code/manifests. Architecture configs are candidates, not a completed ranking or evidence of decipherment.
+The pipeline needs no paid APIs or pretrained weights. Training evaluates validation pages; final test scoring requires a separate explicit command. Raw text, derived corpora, and checkpoints stay local and are reproducible from tracked code/manifests. Architecture comparisons and interpretation experiments are documented below; none establishes decipherment.
 
-## Initial measured result
+## Current measured results
 
-[EXP-0001](docs/experiments/EXP-0001-results.md) completed: the 1,814,208-parameter reference reached **1.961 validation bits/token** after 200 CPU steps, versus **2.088** for a matched five-gram baseline. This is a single-seed engineering pilot; the test split remains unscored. All 222 implementation tests and 23 subtests passed before the run. Multi-seed architecture comparisons and actual mechanism recovery remain future experiments.
+- [EXP-0002: 18-model comparison](docs/experiments/EXP-0002-results.md): compact model **1.839734 validation bits/unit**, MTP **1.837866**, five-gram **2.087802**. Registered near-tie rule selects the compact 430,720-parameter model. More elaborate architectures made small differences under this schedule.
+- [EXP-0003: context and causal head tests](docs/experiments/EXP-0003-results.md): removing distant context hurts; shuffling distant order has inconsistent effects across seeds. A candidate influential head was localized in one seed, with no function or semantic assignment.
+- [EXP-0004: synthetic calibration](docs/experiments/EXP-0004-results.md): diagnostic readouts recover hidden state at **86.25%** and signal/filler at **81.58%** in a known toy generator. An IID control stays near chance/majority guessing. Probe-direction causal steering **failed** to outperform its matched random control meaningfully.
+- [Visual overview](results/research-round-2026-09-20/overview.png), [research notebook](NOTEBOOK.md), and [initial 200-update pilot](docs/experiments/EXP-0001-results.md).
+
+Synthetic probes use labeled examples after text-only language-model training; this is not unsupervised decipherment. Manuscript hypotheses remain unresolved and its final test set remains unscored. Current implementation checks: **237 tests and 23 subtests passed**; live MPS intervention identity/restoration controls also passed. All research runs used local compute, with no paid API calls.

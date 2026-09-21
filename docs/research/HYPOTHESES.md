@@ -25,3 +25,12 @@ As a methodological deduction, if two proposed processes produce the same distri
 ## Updating an entry
 
 Keep the ID stable. Add operational definitions, supporting and conflicting source IDs, experiment IDs, status changes, scope, and next discriminating tests. Preserve failed versions and reasons for revision. Do not recast an exploratory finding as a prediction made in advance.
+
+## Method status after EXP-0002/0003/0004
+
+Historical HYP-001 through HYP-006 remain unresolved; the synthetic generator was invented as a calibration and is not evidence that Voynich uses its rules.
+
+- **M-001:** first within-family synthetic calibration complete. Trained-model activations support supervised state/role readouts; IID labels remain unrecoverable. Cross-key/language/family and label-free recovery are not tested. [EXP-0004](../experiments/EXP-0004-results.md).
+- **M-002:** 18 controlled Voynich runs complete, compact model selected, paired context tests and one seed's head interventions performed. Prediction beyond five-gram is established on repeatedly consulted validation, not final test. [EXP-0002](../experiments/EXP-0002-results.md), [EXP-0003](../experiments/EXP-0003-results.md).
+- **M-003:** causal assay implemented; synthetic probe-direction steering failed to outperform a norm-matched random control meaningfully. No shared historical/synthetic circuit established.
+- **New exploratory implication for HYP-003:** distant symbol mixture/page context could explain some prediction benefit; preserved-local-context distant shuffling caused inconsistent damage. Requires length/content/section-matched replacement controls before interpretation.

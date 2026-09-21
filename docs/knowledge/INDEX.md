@@ -44,6 +44,9 @@ These are deferred discovery topics, not established findings or an active resea
 - [Data provenance and representation](../research/DATA.md): official transcription, usage terms, parsing, uncertainty and split policy; machine-readable manifests live in `data/manifests/` at the repository root.
 - [Implemented architecture](../research/ARCHITECTURE.md): exact design and its tradeoffs.
 - [EXP-0001](../experiments/EXP-0001.md): bounded implementation-validation pilot, registered before training.
+- [EXP-0002 results](../experiments/EXP-0002-results.md): six model families × three seeds; compact model selected by the registered near-tie rule.
+- [EXP-0003 results](../experiments/EXP-0003-results.md): paired context perturbations and head interventions; no stable distant-order effect or semantic interpretation established.
+- [EXP-0004 registration](../experiments/EXP-0004.md) and [results](../experiments/EXP-0004-results.md): primary-source synthetic/causal-method rationale, positive hidden-state readout calibration, IID control, and negative causal steering result.
 
 The original source register above is preserved for early discussions. The targeted reviews contain their own source/version/access records; follow the exact citation for each claim rather than treating a review as proof of a manuscript hypothesis.
 

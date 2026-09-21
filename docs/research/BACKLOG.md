@@ -1,6 +1,6 @@
 # Deferred research candidates
 
-**Status: active implementation.** The user authorized literature review, data acquisition and an interpretable model pipeline. The targeted reviews and initial data/model implementation are underway/completed as recorded in the notebook; later decipherment and synthetic calibration tasks remain separate work.
+**Status: active research.** Source review, corpus preparation, 18-run architecture comparison, first causal context tests and initial synthetic calibration are complete. The table preserves the original candidate inventory; current priorities follow it.
 
 | Candidate | Concrete output | Prerequisite |
 | --- | --- | --- |
@@ -15,3 +15,12 @@
 | Introduce visual constraints | Traceable image/text alignments and independently justified weak constraints | Verified images, annotations, and a question benefiting from them |
 
 Choose the next step by expected information gain, reproducibility, cost, and ability to rule out competing explanations. There is no reason to train a model or build a retrieval stack before it answers a defined question.
+
+## Priorities suggested by the first experimental round (not yet executed)
+
+1. **Separate distant content from order.** Hold prefix length and the last 16 units fixed; compare frequency-matched prefix replacements within and across manuscript sections, with explicit histogram/adaptive-frequency predictors. This tests the EXP-0003 suggestion without assuming linguistic meaning.
+2. **Learn a causally useful predictive state.** The EXP-0004 supervised state readout worked, but patching its weight directions did not. Review causal representation-alignment methods before attempting optimized low-rank interventions or state-machine extraction. Use a fresh synthetic holdout; this round's synthetic test is now exposed.
+3. **Stress-test ambitious generator theories.** Extend calibration to state-dependent alphabets, homophonic classes, insertion/null processes, and copy/mutate systems matched for superficial statistics. Include generator-family holdouts and impossible-label controls. Eventually ask whether a compact discovered mechanism predicts unseen outcomes, not merely whether activations look similar.
+4. **Develop label-free candidates.** Voynich lacks the synthetic state/role labels used by these probes. Test unsupervised candidate state/equivalence classes and complexity penalties on synthetic tasks before assigning manuscript glyphs to signal or filler. Keep exact historical semantic claims downstream of independently testable rules.
+
+Every priority needs a new bounded registration and method-specific source review. No final manuscript test scoring or paid API spending is scheduled by this backlog.

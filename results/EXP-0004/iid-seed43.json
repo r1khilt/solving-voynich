@@ -1,0 +1,191 @@
+{
+  "checkpoint": "outputs/EXP-0004/iid-seed43/best.pt",
+  "checkpoint_sha256": "4b904f508e4aaa5e14d1b73dcb8b4454f320733657f25f2ff4b5cafdba7de51f",
+  "corpus_identity": {
+    "train.jsonl": "edf865790f6524fd1e925a183a5bd1cccf08430ce2d9f85e67e486d68c5c5172",
+    "validation.jsonl": "824c198739d43b6738d2aba8967619840409f0761e9ac6d7be1fb796ffedd34e",
+    "test.jsonl": "0b506fc8d4a47b2546987f232df84629439527bee74c51d4a8aab065c24438a0",
+    "tokenizer.json": "ce4c5b26589b876d1dafa78b4615a4c915edd74efea160f1a28055f13dcde73e"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch": "2.14.0",
+    "git_commit": "a84e46da3bb5508898acf4bac8df7ba51fea5a90",
+    "git_dirty": false,
+    "threads": 4,
+    "source_sha256": {
+      "configs/attention_only.json": "19568963a2123e2da116329df17f25a33e5b86c9e87134332c7e33586fa4568d",
+      "configs/gated_attention.json": "1125863bd361a41c07f8a985db76aa6f4096da82a40f21baacb416141feb86a9",
+      "configs/mtp.json": "969ba75363fc9ba66110764ccb784fe580aa1c81aac78d9f9fcfb64fc4b93381",
+      "configs/qk_norm.json": "7dfc1174d18eda5c3540a43c55799a40f58d135f806f836e6d83a6a22f5c1072",
+      "configs/reference.json": "116b37ece409b936678e95a4d646bb34fb1ad4b13bea340012495aef6eb993be",
+      "configs/small.json": "3fef5ff1faa993178642decb6f1a3fbc3000d220e813d2a9c2e0c63440d54c3c",
+      "configs/smoke.json": "155905e76753c67adc46460e28e21c988e90a8fe8ccfe1b36c36197f2ca989cd",
+      "configs/synthetic_small.json": "632ac1f84a4bb178af1b300ae81122ce8c54e5af38edf8b19262576f62ce2993",
+      "data/manifests/zl3b_preparation.json": "07c59f09990682537788b4ecf35952a47571454188697352a5def7539a620974",
+      "data/manifests/zl3b_source.json": "683f249c035db5401ecf063595fbbf613adbdc9de2f5c6c318f06d697dfc9aff",
+      "data/manifests/zl3b_split.json": "9fc80cb4b000fdd5d952b7c2416b37b6b92f07bc56486a63309142953ed6634e",
+      "data/manifests/zl3b_split_provisional_v1.json": "5ffc815ba878bbb303599ee8b3fdf5a6acfdedee2e91071277be9f3f4e391fe8",
+      "pyproject.toml": "cb082b83ecf2a0ee5f90bbea80c7e02d6cd82d9598e6dba782f1cf8ed6cba000",
+      "src/voynich/__init__.py": "f51cc6d99d838a811a4a377c45d913ca33c23d265c4a35cccce39606bce5d8be",
+      "src/voynich/calibration.py": "a18e852d4e71eb83b4b4c31cab189c2c52da619ef0ba41fc6b9b0b51dc541230",
+      "src/voynich/context_analysis.py": "8acad13b9c10f209a7f25994b3a00e345dbdabf20ea3f69a3cf29117dd514fe4",
+      "src/voynich/data.py": "2b34268167c3d7c07bc1baf86e0d99af06de9d5abf007e9fa5027a9769295661",
+      "src/voynich/evaluate.py": "499f688bb399b988dac0ce838e9caa36800a2e9d28d68b9a47ebef818e5480dc",
+      "src/voynich/interpret.py": "89f2d3161b7f6a08efc9c64161418e53d3b2c6db83a28dc8dbd2cf5f4f21436e",
+      "src/voynich/model.py": "771c4e6f4cb3abdbb3ef7f7101f845ac63f129bdc08de249db190997f63cc629",
+      "src/voynich/runtime.py": "6749f192095f210a14d9508a6fa22942c1b6c5fd9a31acd5e474850ddfa6506c",
+      "src/voynich/synthetic.py": "7c6f53cefa165b4d45ca0fd151fbdba26bb841795a88ac6a3849180603a38e6e",
+      "src/voynich/tokenizer.py": "c8a0cea5dd14697c0abb8b2150d4b0f31853ce9162a8fc0441f7a5a706e81d1c",
+      "src/voynich/train.py": "517f795c8f400f8ffd465e58bf96a04d3deac9d7ba44c2e5073648cc09cb4c9e",
+      "uv.lock": "e02b7e8e700235d4fc5f07d79156986ea76df06adef1b6eb2429e52b625660b9"
+    }
+  },
+  "family": "iid",
+  "device": "mps",
+  "synthetic_test_evaluated": true,
+  "manuscript_test_evaluated": false,
+  "probe_positions_zero_based": [
+    32,
+    40,
+    48,
+    56,
+    65,
+    73,
+    81,
+    90,
+    98,
+    106,
+    115,
+    123,
+    131,
+    139,
+    148,
+    156,
+    164,
+    173,
+    181,
+    189,
+    198,
+    206,
+    214,
+    223
+  ],
+  "ridge_alpha": 1.0,
+  "test_character_bits": 3.0006934839507773,
+  "oracle_character_bits": 3.0,
+  "uniform_character_bits": 3.0,
+  "probes": {
+    "state": {
+      "majority": {
+        "accuracy": 0.2443576388888889,
+        "class_recall": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": 0.25,
+        "count": 4608
+      },
+      "oracle_full": {
+        "accuracy": 0.2510850694444444,
+        "class_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": 0.25,
+        "count": 4608
+      },
+      "oracle_last4": {
+        "accuracy": 0.2510850694444444,
+        "class_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": 0.25,
+        "count": 4608
+      },
+      "embedding": {
+        "accuracy": 0.2625868055555556,
+        "class_recall": [
+          0.1313742437337943,
+          0.5266429840142096,
+          0.384297520661157,
+          0.0
+        ],
+        "balanced_accuracy": 0.2605786871022902,
+        "count": 4608
+      },
+      "final_residual": {
+        "accuracy": 0.2645399305555556,
+        "class_recall": [
+          0.21089023336214346,
+          0.38099467140319715,
+          0.2958677685950413,
+          0.16860986547085202
+        ],
+        "balanced_accuracy": 0.2640906347078085,
+        "count": 4608
+      }
+    },
+    "signal": {
+      "majority": {
+        "accuracy": 0.6434461805555556,
+        "class_recall": [
+          0.0,
+          1.0
+        ],
+        "balanced_accuracy": 0.5,
+        "count": 4608
+      },
+      "oracle_full": {
+        "accuracy": 0.6434461805555556,
+        "class_recall": [
+          0.0,
+          1.0
+        ],
+        "balanced_accuracy": 0.5,
+        "count": 4608
+      },
+      "oracle_last4": {
+        "accuracy": 0.6434461805555556,
+        "class_recall": [
+          0.0,
+          1.0
+        ],
+        "balanced_accuracy": 0.5,
+        "count": 4608
+      },
+      "embedding": {
+        "accuracy": 0.6434461805555556,
+        "class_recall": [
+          0.0,
+          1.0
+        ],
+        "balanced_accuracy": 0.5,
+        "count": 4608
+      },
+      "final_residual": {
+        "accuracy": 0.6434461805555556,
+        "class_recall": [
+          0.0,
+          1.0
+        ],
+        "balanced_accuracy": 0.5,
+        "count": 4608
+      }
+    }
+  },
+  "label_access": "Language model trained only on synthetic visible text. Diagnostic readouts fitted afterward using training ground truth. Test labels used for scoring only.",
+  "limitations": [
+    "One generator/alphabet and one unrecoverable IID control.",
+    "No mechanism-family/key/language transfer claim.",
+    "Probe decodability alone is not causal interpretation or unsupervised recovery."
+  ]
+}
