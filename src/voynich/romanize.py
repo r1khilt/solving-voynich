@@ -136,4 +136,5 @@ ROMANIZATION_DOC = {
     "arabic": "Buckwalter-inspired map then latin fold",
     "devanagari": "IAST-inspired ASCII map then latin fold",
     "cjk_policy": "Han/kana/hangul never used as cipher alphabet; require romanized source or skip",
+    "other_scripts": "Unidecode ASCII transliteration then Latin fold when script-specific table missing",
 }

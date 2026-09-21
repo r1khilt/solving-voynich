@@ -384,3 +384,11 @@ Resource use (if applicable):
 - **Sources planned:** UDHR (efele/Unicode), FLORES-200 dev (CC BY-SA), Tatoeba (CC BY 2.0 FR), Wikipedia extracts (CC BY-SA) for remaining editions; family tags via documented ISO→family map / Glottolog fallback. Romanize to `a–z`+space; skip unromanizable with counts.
 - **Train subset rule (frozen):** if needed, ≥400 stratified train languages from all non-held-out families (seed 4016); still score full holdout set.
 - **Status:** Preregistration authored; corpus acquisition and scored run not yet complete. Not a decipherment.
+
+## 2026-09-21 — EXP-0016 acquisition in progress [NB-0029]
+
+- **Sources downloaded (bulk gitignored):** UDHR txt+xml (efele.net; 534 txt files), FLORES-200 `dev` (CC BY-SA; 204 lang files), Tatoeba `sentences.csv` (CC BY 2.0 FR; ~13.6M lines), Glottolog CLDF languages CSV, Wikimedia sitematrix (~364 Wikipedia editions).
+- **First merge (no wiki fill):** 1,075 source records → **563** unique ISO after romanization; 130 skipped (94 unromanizable, 31 CJK, 5 too short). Holdout under 8 families: **129** langs (Austronesian 48, Afro-Asiatic 34, Uralic 20, Quechuan 13, …). Below 1,000-pool / 150-holdout minima.
+- **Response:** (1) Unidecode for non-CJK other scripts; (2) hold **all** isolates + expand holdout families with Mayan/Otomanguean/Aymaran; (3) Wikipedia random-page extracts for missing editions toward 1,000. Exact stop reason recorded if still short — no invented text.
+- **Code:** `src/voynich/mass_lang_recovery.py`, tests; dependency `Unidecode`. Decoder/pass rule unchanged from EXP-0016 prereg (`b61369c`).
+- **Status:** Acquisition/wiki-fill running; scored training not started. EXP-0015 side results retained, not the session bar. Not a decipherment.
