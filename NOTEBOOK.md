@@ -313,3 +313,12 @@ Resource use (if applicable):
 - **Artifacts:** `results/EXP-0011/results.json`, `results_v1_pre_fix.json`, `docs/experiments/EXP-0011-results.md`. Thresholds not moved.
 - **Next (highest EV):** first verify recoverability on world-C with **copy/mutate disabled** (random-char + periodic only). If that still fails the same rule, the objective/architecture is insufficient; if it passes, add copy/mutate back as the falsifier for a copy-aware detector. Do not treat synthetic wins as manuscript plaintext.
 
+
+## 2026-09-21 — EXP-0011a easy-filler ablation; FAIL → escalate [NB-0024]
+
+- **Question:** On Finnish world-C holdout, can neural or classical recover nulls when filler is only `random_char` + `periodic` (rate 0.30)? Same EXP-0011 pass rule (thresholds frozen). Preregistered in `docs/experiments/EXP-0011a.md` before scores.
+- **Inputs / command:** same corpora and seeds as EXP-0011. `.venv/bin/python -m voynich.latent_recovery --root . --device mps --n-train 4000 --n-val 400 --n-holdout 300 --updates 3000 --experiment-id EXP-0011a --filler-families random_char,periodic --no-voynich`
+- **Observations:** neural mask_f1=0.804 acc=0.731 recon=0.096 bits=−0.213 null_recall=0.331 pred_null_rate=0.173; classical f1=0.717 acc=0.599 recon=0.185 bits=0.009 null_recall=0.319 pred_null≈0.297; majority f1=0.833 acc=0.714; matched_random f1=0.713; vocab_filter f1=0.424. **FAIL** under frozen EXP-0011 rule (neural: acc/recon/bits; classical: acc/f1-vs-random/recon/bits).
+- **Interpretation:** Easy fillers improve neural null recall vs full mix (~0.04→0.33) but do not pass reconstruction/structure margins. Missing piece is not “only hard fillers”; architecture/objective still insufficient for identifiable recovery. EXP-0011b not run. Voynich not run.
+- **Next:** preregister **EXP-0012** (new id): null-class recall/precision + recon above matched random; class-balanced / recall-seeking neural mask loss + classical Viterbi that keeps run structure (no top-k overwrite). Same easy fillers and Finnish holdout. Not a decipherment.
+

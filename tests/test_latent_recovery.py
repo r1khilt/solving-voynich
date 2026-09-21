@@ -76,6 +76,24 @@ def test_insert_nulls_preserves_signal_order():
     assert recovered == ciphered
 
 
+def test_easy_filler_families_only():
+    from voynich.latent_recovery import EASY_FILLER_FAMILIES, parse_filler_families
+
+    assert parse_filler_families("random_char,periodic") == EASY_FILLER_FAMILIES
+    rng = np.random.default_rng(5)
+    alphabet = "".join(list(CIPHER_POOL)[:30])
+    for _ in range(20):
+        sample = make_sample(
+            "the quick brown fox jumps over the lazy dog " * 4,
+            rng,
+            WORLD_C,
+            0.3,
+            alphabet,
+            filler_families=EASY_FILLER_FAMILIES,
+        )
+        assert sample["filler_family"] in EASY_FILLER_FAMILIES
+
+
 def test_param_count_under_100k():
     vocab = build_vocab()
     model = TinySignalModel(len(vocab))

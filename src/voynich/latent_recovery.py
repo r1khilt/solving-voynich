@@ -58,6 +58,21 @@ FILLER_FAMILIES = (
     "shift_phase",
     "stateful",
 )
+EASY_FILLER_FAMILIES = ("random_char", "periodic")
+COPY_MUTATE_ONLY = ("copy_mutate",)
+
+
+def parse_filler_families(spec: str | None) -> tuple[str, ...]:
+    """Parse comma-separated filler family names; None/empty → full EXP-0011 set."""
+    if not spec or not str(spec).strip():
+        return FILLER_FAMILIES
+    names = tuple(x.strip() for x in str(spec).split(",") if x.strip())
+    unknown = [n for n in names if n not in FILLER_FAMILIES]
+    if unknown:
+        raise ValueError(f"Unknown filler families: {unknown}; allowed={FILLER_FAMILIES}")
+    if not names:
+        raise ValueError("filler families list is empty")
+    return names
 
 WORLD_A, WORLD_B, WORLD_C, WORLD_D = 0, 1, 2, 3
 WORLD_NAMES = ("A", "B", "C", "D")
@@ -210,6 +225,7 @@ def insert_nulls(
     rng: np.random.Generator,
     filler_rate: float,
     alphabet: str,
+    filler_families: tuple[str, ...] | None = None,
 ) -> tuple[str, list[int], list[str]]:
     """Return noisy text, binary mask (1=signal), and per-token filler family or ''."""
     # Operate on characters; spaces retained as tokens.
@@ -220,7 +236,9 @@ def insert_nulls(
     # n_null / (n_sig + n_null) = filler_rate => n_null = filler_rate/(1-f) * n_sig
     n_sig = len(signal_chars)
     n_null = int(round(filler_rate / max(1e-6, 1 - filler_rate) * n_sig))
-    families = list(FILLER_FAMILIES)
+    families = list(filler_families) if filler_families is not None else list(FILLER_FAMILIES)
+    if not families:
+        raise ValueError("filler_families must be non-empty")
     family = str(rng.choice(families))
     # Build insertion plan: positions in final stream.
     out_chars: list[str] = []
@@ -330,6 +348,7 @@ def make_sample(
     world: int,
     filler_rate: float,
     alphabet: str | None = None,
+    filler_families: tuple[str, ...] | None = None,
 ) -> dict:
     alphabet = alphabet or "".join(rng.choice(list(CIPHER_POOL), size=36, replace=False))
     if world == WORLD_A:
@@ -371,7 +390,9 @@ def make_sample(
         rate = 0.0
         kept = text
     else:
-        noisy, mask_full, fams = insert_nulls(ciphered, rng, filler_rate, alphabet)
+        noisy, mask_full, fams = insert_nulls(
+            ciphered, rng, filler_rate, alphabet, filler_families=filler_families
+        )
         text, mask = _fit_len(noisy, mask_full)
         family = next((f for f in fams[: len(text)] if f), "mixed")
         rate = filler_rate
@@ -642,6 +663,7 @@ def generate_dataset(
     n_val: int,
     seed: int,
     filler_rate: float = PRIMARY_FILLER_RATE,
+    filler_families: tuple[str, ...] | None = None,
 ) -> tuple[list[dict], list[dict]]:
     rng = np.random.default_rng(seed)
     langs = [k for k in ("english", "latin") if k in corpora]
@@ -658,7 +680,9 @@ def generate_dataset(
             lang = str(rng.choice(langs))
             piece = chunks_from_text(corpora[lang], rng, 1)[0]
             alphabet = "".join(rng.choice(list(CIPHER_POOL), size=36, replace=False))
-            sample = make_sample(piece, rng, world, filler_rate, alphabet)
+            sample = make_sample(
+                piece, rng, world, filler_rate, alphabet, filler_families=filler_families
+            )
             sample["language"] = lang
             store.append(sample)
 
@@ -672,6 +696,7 @@ def generate_finnish_holdout(
     n: int,
     seed: int,
     filler_rate: float = PRIMARY_FILLER_RATE,
+    filler_families: tuple[str, ...] | None = None,
 ) -> list[dict]:
     rng = np.random.default_rng(seed)
     # Unseen alphabet subset: take from the end of the pool / reshuffle with dedicated seed
@@ -679,7 +704,9 @@ def generate_finnish_holdout(
     pieces = chunks_from_text(finnish_text, rng, n)
     out = []
     for piece in pieces:
-        sample = make_sample(piece, rng, WORLD_C, filler_rate, alphabet)
+        sample = make_sample(
+            piece, rng, WORLD_C, filler_rate, alphabet, filler_families=filler_families
+        )
         sample["language"] = "finnish"
         out.append(sample)
     return out
@@ -722,6 +749,9 @@ def evaluate_masks(
     rank_model: dict,
 ) -> dict:
     f1s, accs, recons, gains = [], [], [], []
+    null_tps = null_fps = null_fns = null_tns = 0
+    pred_nulls = true_nulls = 0
+    total_tok = 0
     for s, pred in zip(samples, pred_masks):
         true = np.array(s["mask"], dtype=int)
         pred = np.asarray(pred, dtype=int)[: len(true)]
@@ -736,12 +766,26 @@ def evaluate_masks(
         full_bits = bigram_bits(rank_bucket_sequence(s["text"]), rank_model)
         sel_bits = pred_bits_of_selected(s["text"], pred, rank_model)
         gains.append(full_bits - sel_bits)
+        # Null class = 0 in mask. Exploratory for EXP-0011*; required in later ids.
+        null_tps += int(((true == 0) & (pred == 0)).sum())
+        null_fps += int(((true == 1) & (pred == 0)).sum())
+        null_fns += int(((true == 0) & (pred == 1)).sum())
+        null_tns += int(((true == 1) & (pred == 1)).sum())
+        pred_nulls += int((pred == 0).sum())
+        true_nulls += int((true == 0).sum())
+        total_tok += len(true)
+    null_prec = null_tps / max(null_tps + null_fps, 1)
+    null_rec = null_tps / max(null_tps + null_fns, 1)
     return {
         "mask_f1": float(np.mean(f1s)),
         "mask_acc": float(np.mean(accs)),
         "recon_acc": float(np.mean(recons)),
         "pred_bits_gain": float(np.mean(gains)),
         "n": len(samples),
+        "null_precision": float(null_prec),
+        "null_recall": float(null_rec),
+        "pred_null_rate": float(pred_nulls / max(total_tok, 1)),
+        "true_null_rate": float(true_nulls / max(total_tok, 1)),
     }
 
 
@@ -1084,14 +1128,18 @@ def label_free_voynich(pages: list[str], rank_model: dict, classical_rate: float
 
 def run_experiment(args: argparse.Namespace) -> dict:
     root = Path(args.root)
+    experiment_id = str(getattr(args, "experiment_id", None) or "EXP-0011")
+    filler_families = parse_filler_families(getattr(args, "filler_families", None))
+    slug = experiment_id.lower().replace("_", "")
     raw_root = root / "data" / "raw" / "latent_corpora"
-    proc_root = root / "data" / "processed" / "exp0011"
-    out_root = root / "outputs" / "EXP-0011"
-    res_root = root / "results" / "EXP-0011"
+    proc_root = root / "data" / "processed" / slug
+    out_root = root / "outputs" / experiment_id
+    res_root = root / "results" / experiment_id
     for p in (proc_root, out_root, res_root, root / "data" / "manifests"):
         p.mkdir(parents=True, exist_ok=True)
 
     downloaded = download_corpora(raw_root)
+    # Corpora manifest shared; per-run data manifest is experiment-specific.
     write_json(root / "data" / "manifests" / "exp0011_corpora.json", downloaded["manifest"])
     texts = downloaded["texts"]
     for required in ("english", "latin", "finnish"):
@@ -1104,8 +1152,14 @@ def run_experiment(args: argparse.Namespace) -> dict:
         n_val=args.n_val,
         seed=DATA_SEED,
         filler_rate=PRIMARY_FILLER_RATE,
+        filler_families=filler_families,
     )
-    holdout = generate_finnish_holdout(texts["finnish"], n=args.n_holdout, seed=FINNISH_SEED)
+    holdout = generate_finnish_holdout(
+        texts["finnish"],
+        n=args.n_holdout,
+        seed=FINNISH_SEED,
+        filler_families=filler_families,
+    )
     # Persist compact derived samples (not huge)
     def dump(name, rows):
         path = proc_root / name
@@ -1127,19 +1181,20 @@ def run_experiment(args: argparse.Namespace) -> dict:
         "validation": dump("validation.jsonl", val),
         "finnish_holdout": dump("finnish_holdout.jsonl", holdout),
     }
-    write_json(root / "data" / "manifests" / "exp0011_data.json", {
-        "experiment": "EXP-0011",
+    write_json(root / "data" / "manifests" / f"{slug}_data.json", {
+        "experiment": experiment_id,
         "data_seed": DATA_SEED,
         "finnish_seed": FINNISH_SEED,
         "filler_rate_primary": PRIMARY_FILLER_RATE,
+        "filler_families": list(filler_families),
         "seq_len": SEQ_LEN,
         "n_train": len(train),
         "n_val": len(val),
         "n_holdout": len(holdout),
         "worlds": WORLD_NAMES,
-        "filler_families": FILLER_FAMILIES,
         "derived_sha256": digests,
         "pass_rule": asdict_pass_thresholds(),
+        "pass_rule_source": "EXP-0011 frozen thresholds (unchanged)",
     })
 
     vocab = build_vocab()
@@ -1151,7 +1206,7 @@ def run_experiment(args: argparse.Namespace) -> dict:
     model, train_summary = train_model(train, val, vocab, device, updates=args.updates)
     torch.save({"model": model.state_dict(), "vocab": vocab, "summary": train_summary}, out_root / "model.pt")
 
-    # Holdout evaluation — first time looking at Finnish metrics
+    # Holdout evaluation — first time looking at Finnish metrics for this ablation
     neural_preds = predict_masks(model, holdout, vocab, device)
     neural_metrics = evaluate_masks(holdout, neural_preds, rank_model)
     classical_preds = [classical_null_mask(s["text"], PRIMARY_FILLER_RATE) for s in holdout]
@@ -1198,7 +1253,9 @@ def run_experiment(args: argparse.Namespace) -> dict:
         }
 
     report = {
-        "experiment": "EXP-0011",
+        "experiment": experiment_id,
+        "parent_pass_rule": "EXP-0011",
+        "filler_families": list(filler_families),
         "environment": environment(),
         "train_summary": {k: v for k, v in train_summary.items() if k != "history"},
         "train_history_tail": train_summary["history"][-5:],
@@ -1221,12 +1278,8 @@ def run_experiment(args: argparse.Namespace) -> dict:
             "Classical model is a 2-state feature Viterbi with token-level copy/mutate scores, not a full 20-state HSMM",
             "Finnish diacritics folded to ASCII a-z by shared cleaner (syntax/vocab still Finnish)",
             "Single primary filler rate 0.30 in the scored holdout",
-            "One registered post-fail fix: world-C oversampling + copy features + checkpoint on world-C val",
+            f"Ablation filler families: {list(filler_families)}",
         ],
-        "first_run_failure": {
-            "note": "Preserved in results_v1 if present; this report is the single registered rerun",
-            "diagnosis": "Mixed-world validation inflated neural metrics; Finnish world-C null detection failed to transfer",
-        },
     }
     write_json(res_root / "results.json", report)
     write_json(res_root / "decision.json", decision)
@@ -1252,6 +1305,12 @@ def main():
     parser.add_argument("--n-val", type=int, default=400)
     parser.add_argument("--n-holdout", type=int, default=300)
     parser.add_argument("--updates", type=int, default=MAX_UPDATES)
+    parser.add_argument("--experiment-id", default="EXP-0011")
+    parser.add_argument(
+        "--filler-families",
+        default="",
+        help="Comma-separated subset of FILLER_FAMILIES; empty = full EXP-0011 set",
+    )
     parser.add_argument("--voynich-if-pass", action="store_true", default=True)
     parser.add_argument("--no-voynich", action="store_true")
     parser.add_argument("--download-only", action="store_true")
@@ -1266,11 +1325,27 @@ def main():
         return
     report = run_experiment(args)
     print(json.dumps({
+        "experiment": report["experiment"],
+        "filler_families": report["filler_families"],
         "passed": report["decision"]["passed"],
         "winner": report["decision"]["winner"],
         "param_count": report["param_count"],
-        "neural_f1": report["neural"]["mask_f1"],
-        "classical_f1": report["classical"]["mask_f1"],
+        "neural": {
+            "mask_f1": report["neural"]["mask_f1"],
+            "mask_acc": report["neural"]["mask_acc"],
+            "recon_acc": report["neural"]["recon_acc"],
+            "pred_bits_gain": report["neural"]["pred_bits_gain"],
+            "null_recall": report["neural"].get("null_recall"),
+            "pred_null_rate": report["neural"].get("pred_null_rate"),
+        },
+        "classical": {
+            "mask_f1": report["classical"]["mask_f1"],
+            "mask_acc": report["classical"]["mask_acc"],
+            "recon_acc": report["classical"]["recon_acc"],
+            "pred_bits_gain": report["classical"]["pred_bits_gain"],
+            "null_recall": report["classical"].get("null_recall"),
+            "pred_null_rate": report["classical"].get("pred_null_rate"),
+        },
         "baselines": {k: v["mask_f1"] for k, v in report["baselines"].items()},
     }, indent=2))
 
