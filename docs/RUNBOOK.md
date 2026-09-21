@@ -158,3 +158,9 @@ UV_CACHE_DIR=/private/tmp/voynich-plot-cache MPLCONFIGDIR=/private/tmp/voynich-m
 ```
 
 The offline command requires the existing cached plotting environment; a fresh machine must first install the specified plotting dependency. Visually inspect the generated PNG/SVG. Scores across the figure's panels have different denominators; lower prediction loss, causal intervention effects and cluster agreement are not decipherment accuracy. No manuscript final-test scores were used in this campaign.
+
+## Random-offset training option
+
+The ordinary training entry point accepts `--window-sampling random_offsets`, or the training config can set `"window_sampling": "random_offsets"`. `configs/small_random_offsets.json` is the compact configuration with this option enabled. This file is a runnable implementation example, not a registered comparison or a completed experiment.
+
+Pages are sampled in proportion to raw next-symbol positions, then a full-window start is sampled uniformly with both endpoints included. Short pages stay padded; no window crosses a page. The saved sampler RNG makes interrupted training reproducible. Validation remains deterministic. Historical configs without this key retain fixed-window training, and an old checkpoint should be resumed without a redundant sampler override. Changing sampling policy requires a new run. See [the audit response](research/EXTERNAL_AUDIT_2026-09-21.md) for exposure limits and corrected claims about the earlier code.

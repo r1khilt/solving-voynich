@@ -85,6 +85,7 @@ class PageWindows:
             raise ValueError("Test evaluation requires explicit allow_test=True after model selection is frozen")
         if context_length < 1:
             raise ValueError("context_length must be positive")
+        self.split = split
         self.context_length = context_length
         self.tokenizer = tokenizer or EVATokenizer.load(Path(data_dir) / "tokenizer.json")
         self.ignored_ids = set(self.tokenizer.uncertainty_ids) | {self.tokenizer.pad_id, self.tokenizer.unk_id}
@@ -103,15 +104,44 @@ class PageWindows:
             self.sequences[key] = ids
             for start in range(0, len(ids) - 1, context_length):
                 self.windows.append(Window(key, ids, start, min(context_length, len(ids) - 1 - start)))
+        self._page_items = list(self.sequences.items())
+        self._page_weights = torch.tensor([len(ids) - 1 for _, ids in self._page_items], dtype=torch.float64)
+
+    def sample_random_windows(self, batch_size, generator):
+        """Training-only random offsets; all draws use the checkpointed CPU RNG.
+
+        Sample pages in proportion to their number of next-symbol targets, then
+        uniformly among inclusive full-window starts. Short pages have one
+        right-padded window. This varies context boundaries, but does not make
+        individual target exposure uniform (edge targets occur less often).
+        """
+        if self.split != "train":
+            raise ValueError("Random-offset sampling is training-only; evaluation stays deterministic")
+        if not isinstance(batch_size, int) or isinstance(batch_size, bool) or batch_size < 1:
+            raise ValueError("batch_size must be a positive integer")
+        pages = torch.multinomial(self._page_weights, batch_size, replacement=True, generator=generator)
+        windows = []
+        for index in pages.tolist():
+            key, sequence = self._page_items[index]
+            count = min(self.context_length, len(sequence) - 1)
+            last_start = max(0, len(sequence) - 1 - self.context_length)
+            start = int(torch.randint(last_start + 1, (), generator=generator))
+            windows.append(Window(key, sequence, start, count))
+        return windows
+
+    def random_offset_batch(self, batch_size, device, generator, horizons=(1,)):
+        return self._batch_windows(self.sample_random_windows(batch_size, generator), device, horizons)
 
     def batch(self, indices, device, horizons=(1,)):
+        return self._batch_windows([self.windows[int(index)] for index in indices], device, horizons)
+
+    def _batch_windows(self, windows, device, horizons):
         pad = self.tokenizer.pad_id
         width = self.context_length
-        inputs = torch.full((len(indices), width), pad, dtype=torch.long)
+        inputs = torch.full((len(windows), width), pad, dtype=torch.long)
         targets = {h: torch.full_like(inputs, -100) for h in horizons}
         page_ids = []
-        for row, index in enumerate(indices):
-            window = self.windows[int(index)]
+        for row, window in enumerate(windows):
             seq, start, count = window.sequence, window.start, window.length
             inputs[row, :count] = torch.tensor(seq[start:start + count])
             for h in horizons:

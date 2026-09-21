@@ -18,6 +18,10 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
+from voynich.recovery_metrics import (
+    FixedRankBigram, binary_mask, edit_distance, fixed_rank_deletion_diagnostic,
+    reconstruction_diagnostics, summarize_reconstruction,
+)
 from voynich.runtime import digest, environment, resolve_device, write_json
 
 # ---------------------------------------------------------------------------
@@ -482,20 +486,8 @@ def recon_accuracy(true_ciphered: str, text: str, pred_mask: np.ndarray) -> floa
 
 
 def levenshtein(a: str, b: str) -> int:
-    if a == b:
-        return 0
-    if not a:
-        return len(b)
-    if not b:
-        return len(a)
-    prev = list(range(len(b) + 1))
-    for i, ca in enumerate(a, 1):
-        cur = [i]
-        for j, cb in enumerate(b, 1):
-            ins, delete, sub = cur[j - 1] + 1, prev[j] + 1, prev[j - 1] + (ca != cb)
-            cur.append(min(ins, delete, sub))
-        prev = cur
-    return int(prev[-1])
+    """Backward-compatible public name for the shared unit-cost distance."""
+    return edit_distance(a, b)
 
 
 def recon_edit_similarity(true_ciphered: str, text: str, pred_mask: np.ndarray) -> float:
@@ -961,8 +953,15 @@ def evaluate_masks(
     samples: list[dict],
     pred_masks: list[np.ndarray],
     rank_model: dict,
+    *,
+    fixed_rank_model: FixedRankBigram | None = None,
+    diagnostic_random_replicates: int = MATCHED_RANDOM_SEEDS,
 ) -> dict:
+    """Legacy gate metrics plus additive diagnostics; no implicit new LM fit."""
+    if not samples or len(samples) != len(pred_masks):
+        raise ValueError("one prediction mask is required per nonempty sample list")
     f1s, accs, recons, gains, edit_sims = [], [], [], [], []
+    reconstruction_rows, rank_diagnostics = [], []
     null_tps = null_fps = null_fns = null_tns = 0
     pred_nulls = true_nulls = 0
     total_tok = 0
@@ -975,7 +974,13 @@ def evaluate_masks(
         f1s.append(f1_binary(true, pred))
         accs.append(float((true == pred).mean()))
         recons.append(recon_accuracy(true_c, s["text"], pred))
-        edit_sims.append(recon_edit_similarity(true_c, s["text"], pred))
+        diagnostic = reconstruction_diagnostics(true_c, s["text"], pred)
+        reconstruction_rows.append(diagnostic)
+        edit_sims.append(diagnostic["aligned_similarity"])
+        if fixed_rank_model is not None:
+            rank_diagnostics.append(fixed_rank_deletion_diagnostic(
+                s["text"], pred, fixed_rank_model, n_random=diagnostic_random_replicates,
+                seed=91021 + len(reconstruction_rows) - 1))
         # pred_bits_gain: lower bits than full text is good; report full_bits - selected_bits
         full_bits = bigram_bits(rank_bucket_sequence(s["text"]), rank_model)
         sel_bits = pred_bits_of_selected(s["text"], pred, rank_model)
@@ -990,11 +995,14 @@ def evaluate_masks(
         total_tok += len(true)
     null_prec = null_tps / max(null_tps + null_fps, 1)
     null_rec = null_tps / max(null_tps + null_fns, 1)
-    return {
+    reconstruction = summarize_reconstruction(reconstruction_rows)
+    result = {
         "mask_f1": float(np.mean(f1s)),
         "mask_acc": float(np.mean(accs)),
         "recon_acc": float(np.mean(recons)),
         "recon_edit_sim": float(np.mean(edit_sims)),
+        "recon_exact_match_rate": reconstruction["exact_sequence_match_rate"],
+        "reconstruction_diagnostics": reconstruction,
         "pred_bits_gain": float(np.mean(gains)),
         "n": len(samples),
         "null_precision": float(null_prec),
@@ -1002,35 +1010,66 @@ def evaluate_masks(
         "pred_null_rate": float(pred_nulls / max(total_tok, 1)),
         "true_null_rate": float(true_nulls / max(total_tok, 1)),
     }
+    if fixed_rank_model is not None:
+        result["fixed_rank_deletion_diagnostics"] = {
+            "model": fixed_rank_model.metadata(), "per_sample": rank_diagnostics,
+            "role": "Additive offline diagnostic; never read by historical pass rules.",
+        }
+    return result
 
 
-def matched_random_baseline(samples: list[dict], rank_model: dict, n_seeds: int = MATCHED_RANDOM_SEEDS) -> dict:
+def matched_random_baseline(samples: list[dict], rank_model: dict, n_seeds: int = MATCHED_RANDOM_SEEDS,
+                            *, reference_masks: list[np.ndarray] | None = None) -> dict:
+    """Legacy gold-count baseline, or opt-in prediction-count matching.
+
+    Omitting reference_masks preserves historical random draws and gate meaning.
+    Supplying masks matches each prediction's retained count instead; this is a
+    separately named diagnostic, not a replacement for old archived baselines.
+    """
+    if not samples or not isinstance(n_seeds, int) or isinstance(n_seeds, bool) or n_seeds < 1:
+        raise ValueError("nonempty samples and a positive integer seed count are required")
+    if reference_masks is not None and len(reference_masks) != len(samples):
+        raise ValueError("one reference mask is required per sample")
+    reference_null_counts = None if reference_masks is None else [
+        int((~binary_mask(sample["text"], mask)).sum())
+        for sample, mask in zip(samples, reference_masks, strict=True)]
     f1s, recons, gains = [], [], []
+    reconstruction_rows = []
     for seed in range(n_seeds):
         rng = np.random.default_rng(10_000 + seed)
         pf1, pr, pg = [], [], []
-        for s in samples:
+        for sample_index, s in enumerate(samples):
             true = np.array(s["mask"], dtype=int)
-            n_null = int((true == 0).sum())
+            n_null = (int((true == 0).sum()) if reference_null_counts is None
+                      else reference_null_counts[sample_index])
             pred = np.ones(len(true), dtype=int)
             if n_null > 0:
                 idx = rng.choice(len(true), size=n_null, replace=False)
                 pred[idx] = 0
             pf1.append(f1_binary(true, pred))
-            pr.append(recon_accuracy(s.get("ciphered") or "".join(
+            target = s.get("ciphered") or "".join(
                 ch for ch, m in zip(s["text"], true) if m == 1
-            ), s["text"], pred))
+            )
+            pr.append(recon_accuracy(target, s["text"], pred))
+            reconstruction_rows.append(reconstruction_diagnostics(target, s["text"], pred))
             full_bits = bigram_bits(rank_bucket_sequence(s["text"]), rank_model)
             sel_bits = pred_bits_of_selected(s["text"], pred, rank_model)
             pg.append(full_bits - sel_bits)
         f1s.append(float(np.mean(pf1)))
         recons.append(float(np.mean(pr)))
         gains.append(float(np.mean(pg)))
+    reconstruction = summarize_reconstruction(reconstruction_rows)
     return {
         "mask_f1": float(np.mean(f1s)),
         "mask_f1_std": float(np.std(f1s)),
         "recon_acc": float(np.mean(recons)),
+        "recon_edit_sim": reconstruction["aligned_similarity_mean"],
+        "recon_exact_match_rate": reconstruction["exact_sequence_match_rate"],
+        "reconstruction_diagnostics": reconstruction,
         "pred_bits_gain": float(np.mean(gains)),
+        "matched_count_source": "gold_signal_mask" if reference_masks is None else "supplied_prediction_mask",
+        "n_samples": len(samples),
+        "n_random_seeds": n_seeds,
     }
 
 
