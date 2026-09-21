@@ -1,0 +1,47 @@
+{
+  "experiment": "EXP-0006",
+  "generator": "cycle_null",
+  "master_seed": 6201,
+  "old_corpus_identity": {
+    "train.jsonl": "8fbdeb26257e4eda66f97930951fa29d8bb71c9c3d7e65b2ed25b3d87561e9e9",
+    "validation.jsonl": "0c80f30c711cb188f26d24278370b1d3a50cca1be505a5320728d14c51bf7fe6",
+    "test.jsonl": "d36d0d521d8538f5765c6686358eec5afc670575aaa6b560fb2ef215d2505b85",
+    "tokenizer.json": "ce4c5b26589b876d1dafa78b4615a4c915edd74efea160f1a28055f13dcde73e"
+  },
+  "pools": {
+    "fit": {
+      "count": 4096,
+      "length": 128,
+      "sha256": "e9efb5bca880d3db04dd93973d49ac6afeb3e36b4c05888130b1bdb8d6426bc6",
+      "pair_count": 2048
+    },
+    "validation": {
+      "count": 1024,
+      "length": 128,
+      "sha256": "46ca10de0de814b825cfdcca3e206cbe77e2418b25e5f69250cf2345725aa2cb",
+      "pair_count": 512
+    },
+    "test128": {
+      "count": 1024,
+      "length": 128,
+      "sha256": "209b2f531091bb7ebafaf1969d6cdf70dbbf8d53c4b1fcf5896ad9fbfd9d151e",
+      "pair_count": 512
+    },
+    "test96": {
+      "count": 512,
+      "length": 96,
+      "sha256": "29ab0a44fa3b2212c09d965dbc2c04cce7984d20300e1debb00509882186be0e",
+      "pair_count": 256
+    },
+    "test192": {
+      "count": 512,
+      "length": 192,
+      "sha256": "445fb64afdf6580ef3f523a1f45d7fbe18f417a1e8076f8ddccb6952235ac1e7",
+      "pair_count": 256
+    }
+  },
+  "pairs_sha256": "bf6ca1048b5b7dc99a8fc682618c6b2ab4ec44de0d7b6878e58975e1a95a8cde",
+  "preservation_pair_count": 256,
+  "overlap_audit": "No repeated full fresh contexts; no fresh context equals any same-length substring of old structured synthetic corpus.",
+  "label_access": "Oracle probabilities supervise alignment; frozen LM received only text during original training."
+}

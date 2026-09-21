@@ -61,4 +61,6 @@ The user's reference to an AI model solving Navier–Stokes is motivation, not v
 
 ## Active continuation
 
-The user requests further experiments and authorizes local RAM/GPU use. EXP-0005 is registered/implemented for matched distant-content/order and metadata controls. Next, design supervised causal subspace alignment on fresh synthetic contexts with controls for misleading steering. Keep all runs bounded; manuscript test unscored; no paid APIs. No new historical inference established at registration time.
+User requests further theories/experiments and authorizes local RAM/GPU. EXP-0005 completed from clean933bade:768 targets; distant shuffling consistently hurts by mean0.037202 bits, correcting the earlier192-target hint. Random cross-vs-same category gap0.172691 falls to0.128584 after approximate histogram matching, but histogram imbalance remains. Fixed histogram/category n-gram controls help and still trail the transformer. Results: `docs/experiments/EXP-0005-results.md`.
+
+EXP-0006 prepared/registered: supervised rank-three causal interchange optimization with early/late sites, fresh7,168-context synthetic pools, true/shuffled/random/readout/untrained controls.14 bounded fits,5,600 total alignment steps; language models frozen, no Voynich test or paid APIs. Full checks246 tests+23 subtests passed; MPS smoke passed. Run and evaluate the fixed registration, retaining failures; no historical inference from steering alone.
