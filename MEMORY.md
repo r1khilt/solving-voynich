@@ -1,6 +1,6 @@
 # Project memory
 
-Last updated: 2026-09-21 (EXP-0013 CTC alignment FAIL; Voynich not run).
+Last updated: 2026-09-21 (AI/hard-problems research memo; NS C/D claim sourced, prize not awarded).
 
 ## Current state
 
@@ -43,7 +43,7 @@ Reported on 2026-09-20; not verified account balances:
 
 Local implementation inventory: arm64 Mac, 64 GiB memory, 18 logical CPUs; user identifies it as M5 Pro. MPS is available outside the sandbox and tensor execution verified. A bounded reference-size synthetic benchmark measured 0.01947 s/step on MPS versus 0.06590 on CPU; use approved outside-sandbox runs for GPU access. Python 3.12.13 / PyTorch 2.14.0 / NumPy 2.5.3 installed in ignored `.venv`, dependency resolution tracked in `uv.lock`. No paid research API used.
 
-The user's reference to an AI model solving Navier–Stokes is motivation, not verified evidence in this project. No conclusion about that claim has been drawn and no independent verification has been performed.
+**Navier–Stokes (sourced 2026-09-21):** OpenAI published a claimed finite-time blowup for 3D Navier–Stokes **with a designed smooth force** (zero initial velocity; bounded energy; velocity \(L^\infty\) blowup), aimed at Clay alternatives **C/D**, plus a Lean artifact. This is **not** unforced global regularity (A/B), **not** a PINN/FNO theorem, and **not** a CMI prize award (CMI 11 Sep 2026: “apparently been settled”; rules require qualifying publication, ≥2 years, community acceptance). This repo did not compile the Lean. Memo: `docs/research/ai-hard-problems-2026-09-21/README.md`. Transferable lesson: generate + **exact verifier**, not EVA-like generation. Highest-EV scientific next remains synthetic exact-count/program-search gates (EXP-0013/0016 track) plus typed decoder search—not a PDE-net or LLM translator.
 
 ## Reading map
 
@@ -55,6 +55,7 @@ The user's reference to an AI model solving Navier–Stokes is motivation, not v
 - Deferred candidates: `docs/research/BACKLOG.md`.
 - Literature and architecture: `docs/research/PRIOR_WORK.md`, `docs/research/ARCHITECTURE_REVIEW.md`, `docs/research/ARCHITECTURE.md`.
 - Expanded review: `docs/research/deep-review-2026-09-21/README.md`; four topic reviews and source ledgers, `CATALOG.md`, `SOURCE_AUDIT.md`, `NEXT_DESIGN.md`. Search with `python3 scripts/research_catalog.py --query <term>`; validate with `--check`. Candidate direction: fresh-key episodic inference, explicit edge-emitting beliefs, joint continuations and selective causal update tests. These are proposed methods, not findings or a launched campaign.
+- AI on hard problems (NS, Erdős, formal math) and Voynich analogues: `docs/research/ai-hard-problems-2026-09-21/README.md`.
 - Reproduction commands: `docs/RUNBOOK.md`; completed experiment registrations/results: `docs/experiments/EXP-0001*` through `EXP-0010*`; latest visual overview: `results/CAMPAIGN-0001/overview.png`.
 
 ## Latest experiments and next state

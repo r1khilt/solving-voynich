@@ -57,6 +57,7 @@ These are deferred discovery topics, not established findings or an active resea
 - [EXP-0010 results](../experiments/EXP-0010-results.md): matched-exposure longer contexts fail registered criteria; boundary information and sparse full-prefix coverage remain qualified.
 - [Latest scientific overview](../../results/CAMPAIGN-0001/overview.png): plotted directly from archived EXP-0008/0009/0010 reports. [Previous overview](../../results/research-round-2-2026-09-20/overview.png) retains EXP-0005/0006/0007.
 - [Predictive-rule extraction notes](../research/PREDICTIVE_RULES.md) and [Belief Net review](../research/BELIEF_NET_REVIEW.md): primary-method reviews added after campaign registration; unimplemented candidates, not empirical manuscript evidence.
+- [AI on hard problems and Voynich analogues](../research/ai-hard-problems-2026-09-21/README.md): sourced NS/Erdős/formal-math mechanisms, analogy map, ranked experiments; [source list](../research/ai-hard-problems-2026-09-21/SOURCES.md). Not a decipherment.
 
 The original source register above is preserved for early discussions. The targeted reviews contain their own source/version/access records; follow the exact citation for each claim rather than treating a review as proof of a manuscript hypothesis.
 
