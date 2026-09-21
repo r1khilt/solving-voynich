@@ -1,0 +1,157 @@
+{
+  "passed": false,
+  "mode": "iid_control_failed",
+  "reasons": [
+    "iid_char separated on only 2/4 optimizable metrics (need \u22653)"
+  ],
+  "rule": "EXP-0019",
+  "gates": {
+    "optimizable_match_min": 3,
+    "heldout_separate_min": 2,
+    "iid_optimizable_separate_min": 3,
+    "winner_optimizable_n_match": 1,
+    "winner_heldout_n_separate": 1,
+    "iid_optimizable_n_separate": 2
+  },
+  "winner_genome": {
+    "window": 15,
+    "p_cite": 0.3,
+    "p_mutate_given_cite": 0.6163222195678989,
+    "p_splice_given_cite": 0.33367778043210095
+  },
+  "optimizable": {
+    "per_metric": {
+      "zipf_slope_top500": {
+        "validation": -0.8760135238209574,
+        "train": -0.8880327359922592,
+        "generator": -0.5995918889153624,
+        "abs_delta_vs_validation": 0.276421634905595,
+        "tolerance": 0.15,
+        "verdict": "separate"
+      },
+      "adjacent_repeat_rate": {
+        "validation": 0.005380288579114698,
+        "train": 0.007774368986194394,
+        "generator": 0.0017119100024455857,
+        "abs_delta_vs_validation": 0.0036683785766691117,
+        "tolerance": 0.005,
+        "verdict": "match"
+      },
+      "char_h2_bits": {
+        "validation": 2.175485878446618,
+        "train": 2.1646380461898445,
+        "generator": 2.8180676111900107,
+        "abs_delta_vs_validation": 0.6425817327433929,
+        "tolerance": 0.25,
+        "verdict": "separate"
+      },
+      "top1_word_share": {
+        "validation": 0.02982885085574572,
+        "train": 0.02088199407355761,
+        "generator": 0.007579462102689487,
+        "abs_delta_vs_validation": 0.022249388753056234,
+        "tolerance": 0.01,
+        "verdict": "separate"
+      }
+    },
+    "n_match": 1,
+    "n_metrics": 4,
+    "excess": 3.6380767056498287
+  },
+  "heldout": {
+    "per_metric": {
+      "line_initial_type_share": {
+        "validation": 0.16251830161054173,
+        "train": 0.1386949193354202,
+        "generator": 0.0849194729136164,
+        "abs_delta_vs_validation": 0.07759882869692533,
+        "tolerance": 0.05,
+        "verdict": "separate"
+      },
+      "ab_top50_jaccard": {
+        "validation": 0.13636363636363635,
+        "train": 0.2345679012345679,
+        "generator": 0.13636363636363635,
+        "abs_delta_vs_validation": 0.0,
+        "tolerance": 0.15,
+        "verdict": "match"
+      },
+      "word_h2_bits": {
+        "validation": 2.1739922387014357,
+        "train": 3.816846255239436,
+        "generator": 0.6075548052234382,
+        "abs_delta_vs_validation": 1.5664374334779976,
+        "tolerance": 1.6428540165380006,
+        "verdict": "match"
+      }
+    },
+    "n_match": 2,
+    "n_metrics": 3,
+    "excess": 0.5519765739385065
+  },
+  "iid_optimizable": {
+    "per_metric": {
+      "zipf_slope_top500": {
+        "validation": -0.8760135238209574,
+        "train": -0.8880327359922592,
+        "generator": -0.7944990151025219,
+        "abs_delta_vs_validation": 0.08151450871843557,
+        "tolerance": 0.15,
+        "verdict": "match"
+      },
+      "adjacent_repeat_rate": {
+        "validation": 0.005380288579114698,
+        "train": 0.007774368986194394,
+        "generator": 0.002445585717779408,
+        "abs_delta_vs_validation": 0.0029347028613352895,
+        "tolerance": 0.005,
+        "verdict": "match"
+      },
+      "char_h2_bits": {
+        "validation": 2.175485878446618,
+        "train": 2.1646380461898445,
+        "generator": 3.8634216604484863,
+        "abs_delta_vs_validation": 1.6879357820018686,
+        "tolerance": 0.25,
+        "verdict": "separate"
+      },
+      "top1_word_share": {
+        "validation": 0.02982885085574572,
+        "train": 0.02088199407355761,
+        "generator": 0.01882640586797066,
+        "abs_delta_vs_validation": 0.01100244498777506,
+        "tolerance": 0.01,
+        "verdict": "separate"
+      }
+    },
+    "n_match": 2,
+    "n_metrics": 4,
+    "excess": 5.851987626784981
+  },
+  "thresholds": {
+    "floors": {
+      "zipf_slope_top500": 0.15,
+      "adjacent_repeat_rate": 0.005,
+      "char_h2_bits": 0.25,
+      "top1_word_share": 0.01,
+      "line_initial_type_share": 0.05,
+      "ab_top50_jaccard": 0.15,
+      "word_h2_bits": 0.25
+    },
+    "optimizable_metrics": [
+      "zipf_slope_top500",
+      "adjacent_repeat_rate",
+      "char_h2_bits",
+      "top1_word_share"
+    ],
+    "heldout_metrics": [
+      "line_initial_type_share",
+      "ab_top50_jaccard",
+      "word_h2_bits"
+    ],
+    "match_rule": "abs(G-R) <= max(|T-R|, floor)",
+    "population": 24,
+    "generations": 20,
+    "seed": 4019
+  }
+}

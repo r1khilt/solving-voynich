@@ -478,3 +478,20 @@ Resource use (if applicable):
 - **Decisions / next state:** R2 and R1 have registered results. EXP-0014c unused. Next unfinished ranked item is **R3** (generator-adversary for HYP-005 with held-out diagnostics). Do not treat synthetic PASS as decipherment. Unrelated dirty tree files left unstaged.
 - **Resources:** Local MPS; decode-only seconds; EXP-0017 ~207 s; no paid API.
 - **Git:** checkpoint of this block’s registrations, code, compact results, notebook/memory.
+
+## 2026-09-21 — R3 generator-adversary for HYP-005 [NB-0036]
+
+- **Phase / question:** Ranked memo R3 — can evolutionary search force a simplified copy-mutate/self-citation generator to match preregistered *optimizable* ZL3b surface stats and then fail withheld diagnostics (joint word futures, line-initial inventory, A/B Jaccard)? Linked HYP-005; protocol in `docs/experiments/EXP-0019.md` (registered before scores).
+- **Prior verification:** EXP-0014 PASS (recon 0.21774 > 0.20433), EXP-0014b FAIL (0.1848), EXP-0017 PASS (`exact_count_neural`) confirmed via `results/*/decision.json`. Commit `e159a6d` pushed to `origin/main` (github.com:443 reachable this stretch).
+- **Frozen gates (pre-score):** optimizable match ≥3/4; held-out separate ≥2/3; iid separate ≥3/4 optimizable. Floors and τ = max(|T−R|, floor) as in registration. Held-out never in fitness.
+- **Actions:** Implemented `voynich.generator_adversary`; unit tests; ran full search once. Did **not** retune floors or weaken iid after scores. Did not start R4/R5. Did not score ZL3b test. No paid API.
+- **Command:** `.venv/bin/python -m voynich.generator_adversary --root .` (~29.4 s; seed 4019; 241 genomes).
+- **Observations:**
+  - **iid_char:** separated on only **2/4** optimizable (matched Zipf slope and adjacent-repeat under τ; separated on char_h2 and top1 share).
+  - **Winner:** genome window=15, p_cite=0.30, mutate≈0.616, splice≈0.334; optimizable **1/4** all generations (never forced surface match). Held-out audit: separate 1/3.
+- **Decision:** **FAIL** mode `iid_control_failed`. Do not interpret surface/held-out pattern. Thresholds unchanged.
+- **Interpretation:** On this validation-sized sample, Zipf + adjacent-repeat floors admit iid “matches,” so the sanity control rejects the run. Secondary non-deciding note: searched selfcite also failed to force ≥3/4 surface match. HYP-005 unresolved; not a decipherment; matching selected stats remains insufficient by protocol.
+- **Validation:** `.venv/bin/python -m pytest -q tests/test_generator_adversary.py` (5 passed).
+- **Artifacts:** `docs/experiments/EXP-0019.md`, `EXP-0019-results.md`; `results/EXP-0019/{results,decision}.json`; `data/manifests/exp0019_data.json`.
+- **Decisions / next state:** R3 registered and scored as FAIL under its own iid gate. Ranked remainder: optional **R3 redesign under a new id** (harder iid falsifier, not weaker held-outs), then **R4** (edge-emitting / joint continuations) and **R5** (language-ID attacks with null controls). EXP-0018 null-rate grid still unexecuted.
+- **Resources:** Local CPU/numpy only; no paid API.

@@ -1,13 +1,13 @@
 # Project memory
 
-Last updated: 2026-09-21 (EXP-0014/0017 exact-count program gates; EXP-0016 thousand-language PASS retained).
+Last updated: 2026-09-21 (EXP-0019 R3 generator-adversary FAIL; EXP-0014/0017 PASS retained).
 
 ## Current state
 
 - Phase: **active research and implementation**. The user explicitly authorized prior-work/methods research, corpus acquisition, architecture design, and code; the earlier preparation-only restriction is superseded.
 - **World models / diffusion / linguistics review completed:** approximately 35,000 words, 11 documents, 98 annotated source records with explicit reading depths. This specific user request was **research and ideation only**; no implementation, training or manuscript scoring was performed for it. Leading proposal: infer a document-producing system using external multi-system training, globally revisable structured inference, explicit rule execution, independent grounding and causal extraction. Five ambitious research directions remain unimplemented hypotheses. Start at `docs/research/world-models-diffusion-2026-09-21/README.md`; notebook NB-0032-WMD. This does not change the scope of separate experimental tasks.
 - **Latent recovery track:** EXP-0011–0013 FAIL (threshold decode). **EXP-0014 PASS:** frozen EXP-0013 weights + exact-count; Finnish recon 0.218 > frozen matched-random 0.2043 (confirms peeked ~0.218). **EXP-0014b FAIL** on copy_mutate without retrain (recon 0.185). **EXP-0017 PASS:** typed program search selected `exact_count_neural`. **EXP-0016 PASS** (1,063 varieties / 270 family holdouts; macro recon 0.3155 > 0.1918) and **EXP-0016b copy_mutate PASS**. Prior ZL3b validation label-free under 0.30 null was negative (other session). This block did **not** rescore ZL3b. Synthetic PASS ≠ decipherment.
-- Durable methodological note: exact-count decode, not a new encoder, cleared the easy-filler Finnish recon gate. Copy-mutate still fails the tiny frozen encoder. Ranked memo next is **R3** (HYP-005 generator-adversary). A separate EXP-0018 null-rate grid on ZL3b validation is preregistered elsewhere and was not executed here.
+- **R3 / HYP-005:** **EXP-0019 FAIL** (`iid_control_failed`): iid matched Zipf+adjacent under frozen floors (2/4 separate; need ≥3); search never forced ≥3/4 optimizable surface match. Held-out not interpreted. HYP-005 unresolved. Ranked next: optional R3 redesign (new id, harder iid falsifier) or **R4** / **R5**. EXP-0018 null-rate grid remains preregistered and unexecuted.
 - Earlier research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved.
 - Repository: `/Users/rikhil/coding/solving-voynich`.
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.
