@@ -352,3 +352,13 @@ Resource use (if applicable):
 - **If PASS:** run EXP-0013b (`random_char,periodic,copy_mutate`) under the same rule before starting another architecture. **If FAIL:** diagnose from examples; stop (no third architecture this session).
 - **Next:** commit this preregistration + implementation, then score once.
 
+
+## 2026-09-21 — EXP-0013 executed; FAIL (recon just under matched random) [NB-0026b]
+
+- **Question / rule:** as NB-0026 / `docs/experiments/EXP-0013.md`. Preregistration SHA `b83897a`.
+- **Command:** `.venv/bin/python -m voynich.latent_recovery --root . --device mps --n-train 4000 --n-val 400 --n-holdout 300 --updates 3000 --experiment-id EXP-0013 --filler-families random_char,periodic --no-voynich`
+- **Observations:** neural null_recall=0.666 null_precision=0.574 pred_null_rate=0.333 recon=0.199 edit_sim=0.713 bits=−0.189 null_f1=0.617 (params 70,301; thr≈0.451; teacher-forced recon=1.0); classical recon=0.102; matched_random recon=0.204; vocab signal_f1=0.424. **FAIL** — only recon beat-matched-random gate missed (0.199 ≯ 0.204).
+- **Diagnosis:** CTC improves keep-scores (edit_sim 0.71; some exact reconstructions) but threshold decode still mis-localizes for prefix `recon_acc` (median first kept-mismatch ≈1; ~5% catastrophic over-delete). Exploratory exact-count decode on frozen weights ≈0.218 recon (not a scored pass).
+- **Interpretation:** Alignment objective alone with global threshold does not pass. Localization/decode remains the bug. Not a decipherment. EXP-0013b and Voynich not run.
+- **Next (stop; no new architecture this session):** preregister decode-only exact-count / fixed-blank-count path on frozen EXP-0013 weights under the same rule; if that PASSES, failure was decode; else escalate joint keep-run DP under copy-CTC emissions.
+

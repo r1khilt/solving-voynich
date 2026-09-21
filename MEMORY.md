@@ -1,12 +1,12 @@
 # Project memory
 
-Last updated: 2026-09-21 (EXP-0011a easy-filler FAIL; EXP-0012 null-aware escalation FAIL; Voynich not run).
+Last updated: 2026-09-21 (EXP-0013 CTC alignment FAIL; Voynich not run).
 
 ## Current state
 
 - Phase: **active research and implementation**. The user explicitly authorized prior-work/methods research, corpus acquisition, architecture design, and code; the earlier preparation-only restriction is superseded.
-- **Latent recovery track:** EXP-0011 Finnish full-mix FAIL → EXP-0011a easy fillers (`random_char`+`periodic`) FAIL under same frozen rule → EXP-0012 null-balanced neural + sticky Viterbi FAIL under new null-class rule. Neural in 0012 hit null recall/precision/rate gates but **recon stayed below matched random**. **Voynich label-free not run.** Results: `docs/experiments/EXP-0011-results.md`, `EXP-0011a-results.md`, `EXP-0012-results.md`. Not a decipherment.
-- Durable methodological note: signal-class `mask_f1` can look strong under delete-nothing; require null-class recall/precision and recon above matched random (EXP-0012 rule). Rate calibration alone is insufficient.
+- **Latent recovery track:** EXP-0011 Finnish full-mix FAIL → EXP-0011a easy fillers FAIL → EXP-0012 null-aware FAIL (rate ok, recon below matched random) → **EXP-0013 copy-constrained CTC FAIL**: null gates cleared (recall 0.666 / prec 0.574 / pred_null 0.333) but free-running `recon_acc` 0.199 ≯ matched-random 0.204. Edit similarity 0.71; teacher-forced recon 1.0. **Voynich label-free not run.** Results: `docs/experiments/EXP-0011-results.md`, `EXP-0011a-results.md`, `EXP-0012-results.md`, `EXP-0013-results.md`. Not a decipherment.
+- Durable methodological note: signal-class `mask_f1` and null-rate calibration are insufficient; subsequence alignment helps keep-scores but **global threshold decode** still fails prefix `recon_acc`. Highest-EV next: decode-only exact-count / fixed-blank-count on frozen alignment weights before another encoder.
 - Latest research checkpoint: **deep research/design review completed**, 93 source records /92 distinct works and resources, with reading depth and a searchable catalog. Read `docs/research/deep-review-2026-09-21/README.md` and `NEXT_DESIGN.md`. CAMPAIGN-0001 remains the latest completed neural campaign; historical hypotheses remain unresolved.
 - Repository: `/Users/rikhil/coding/solving-voynich`.
 - Configured remote: `https://github.com/r1khilt/solving-voynich`; branch at setup: `main`.
