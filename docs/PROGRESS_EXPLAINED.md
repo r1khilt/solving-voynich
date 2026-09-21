@@ -1,12 +1,24 @@
 # Progress explained, and useful ways to scale the experiments
 
-Updated 2026-09-21 UTC. This is an explanation and proposed compute plan, not a new experiment registration or a report of additional training.
+Updated 2026-09-21 after all three tracks of CAMPAIGN-0001 completed. This guide separates manuscript findings from artificial-cipher calibration. The original larger-compute proposals are preserved below as history.
 
 ## Where we actually are
 
 We have built and checked a working research pipeline, trained small models that predict Voynich transcription, and tested interpretation methods on an artificial process whose rules we know. We have **not** decoded a Voynich word, identified its language, established which characters are filler, or recovered the historical encoding algorithm.
 
 Those distinctions matter: a system can become good at completing strings without knowing what they mean. Our current manuscript models are specialized autocomplete systems. They receive previous transcription symbols and predict the next one; we never supplied translations.
+
+## What the parallel campaign added
+
+**Blind recovery:** previously, our diagnostics were taught the correct artificial hidden-state labels. This time, fitting did not receive those answers. It found useful groups on some familiar artificial cipher keys, but failed the stronger criterion on every unfamiliar cycle/branch key. A completely omitted rule family also failed. The copying control mostly recovered which symbol would be copied next; it did not recover the whole copying rule. Bigger models improved familiar-key prediction without solving transfer. See [EXP-0008 results](experiments/EXP-0008-results.md).
+
+**Causal interpretation:** changing an earlier computation in the toy-cipher models affected later predictions, beating random and wrong-example controls across all three trained models. Merely changing the final answer could not do that. The same registered test failed across all three Voynich models. This validates an experimental tool on a known toy; it does not identify the manuscript's mechanism. See [EXP-0009 results](experiments/EXP-0009-results.md).
+
+**Longer context and boundaries:** we trained 21 Voynich models with exactly matched training examples. None of the longer-context comparisons met the registered criterion. The 2,048-unit models used extra history when it was available, but their separately trained 256-unit counterparts still predicted better. Hiding the transcription's line/record-boundary identity hurt overall, with mixed evidence when looking only at ordinary glyphs. This does not mean the text lacks long dependencies or that we found historical line rules. See [EXP-0010 results](experiments/EXP-0010-results.md).
+
+The campaign trained **25 new models for 41,200 updates**, processing about **219 million sampled targets** in **54.62 minutes elapsed** on the Mac. Those targets include repeated synthetic and manuscript examples; they are not 219 million independent manuscript characters. Three jobs ran together, followed by the remainder of the longest track. No paid research API or cloud training was used, and the final manuscript test remains unscored. [Visual overview](../results/CAMPAIGN-0001/overview.png), [campaign report](experiments/CAMPAIGN-0001-results.md), [agent handoff](CURRENT_STATUS.md).
+
+Finding a pattern, controlling a prediction, and recovering a reusable rule are different achievements. Our next methods need to handle unfamiliar encodings and predict complete future sequences under explicit rules. [Candidate source reviews](research/PREDICTIVE_RULES.md) and an [explicit hidden-state model review](research/BELIEF_NET_REVIEW.md) describe possible next tests; no additional experiment is automatically scheduled.
 
 ## What the model reads
 
@@ -43,7 +55,13 @@ Definite spaces and source-segment boundaries are also tokens. A source segment 
 | Intervention / patch | Deliberately changing an internal computation and measuring what behavior changes. |
 | Mechanistic interpretability | Trying to explain the computations that cause a model's behavior, with tests rather than attention pictures alone. |
 | Synthetic | Artificial data produced by rules we wrote, so we can check answers against known truth. |
-| Hidden state | An unobserved internal condition of a generating process. Our toy uses four states. This is a property of that toy, not an established Voynich feature. |
+| Hidden state | An unobserved internal condition of a generating process. Our artificial generators use different state counts; none establishes that Voynich uses such states. |
+| Cipher key | In the synthetic tests, a particular assignment of visible symbols to the generator's categories. A new key changes that assignment. No Voynich key has been found. |
+| Blind fitting | Finding groups or predictors without using correct hidden-state labels. Observed text and following symbols are still training information. |
+| Cluster / partition | A grouping of examples treated as similar. A cluster is not automatically a letter, word, state or meaning. |
+| ARI | Adjusted Rand index: a chance-corrected comparison between groupings. It is not an accuracy or decipherment percentage. |
+| Prediction horizon | How far ahead we inspect a prediction. In the causal tests, later horizons follow additional shared observed symbols. |
+| Marginal versus joint prediction | Predicting each future symbol separately versus predicting a whole sequence and its dependencies. Success at the first does not establish the second. |
 | Filler / null | In our toy, an emission that leaves its hidden state unchanged. Such symbols can still affect an observer's uncertainty; historical filler is an unresolved hypothesis. |
 | Control | A comparison that can expose a misleading interpretation, such as random directions or deliberately shuffled labels. |
 | Ablation | Removing/zeroing a component to measure its contribution. Damage does not by itself identify the component's function. |
@@ -68,8 +86,11 @@ The whole-validation comparisons are approximately 4.00 bits for unigram, 2.09 f
 | EXP-0005 | Use a larger 768-target sample; replace distant prefixes with same/other illustration-category text; approximately match symbol frequencies. | Distant order has a small consistent effect. Symbol composition explains part of category replacement effects, with residual confounding. No category-specific cipher discovered. |
 | EXP-0006 | Fit supervised interventions inside frozen toy models on fresh artificial contexts. | Late interventions select the desired next category about 97% of the time. Direct output-weight directions work almost as well; early true supervision fails against shuffled supervision. We can control outputs, but have not recovered a unique algorithm. |
 | EXP-0007 | Move complete equal-length transcription groups versus scrambling their characters at matched positions. | The difference is small and uncertain. Boundaries and recency are candidate explanations requiring separate tests. |
+| EXP-0008 | Train four models; fit 160 blind partitions before opening correct-state diagnostics. | Familiar-key improvements fail to transfer to unfamiliar stateful keys. The copying control captures mainly the next symbol; output-only groups generally match or beat hidden-vector groups. |
+| EXP-0009 | Map earlier components and prefix positions; select on discovery examples, then test later predictions independently. | All three trained toy models pass; the untrained model and all three Voynich models fail. Broad component changes carry useful information without revealing a state-only variable or transition rule. |
+| EXP-0010 | Train 21 models with contexts from 256 to 2,048 units, identical sampled target exposure, and a boundary-marker ablation. | No longer-context comparison passes. Removing boundary identity hurts overall, but glyph-only effects vary. Bigger context is not a reliable improvement at this budget; historical layout rules remain unknown. |
 
-The 86%/82%/97% numbers concern **our artificial generator**, not Voynich decoding. Its rules are a calibration challenge, not an assertion that the manuscript was generated this way. The 249 passing software tests and 23 subtests check implementation behavior, not a historical hypothesis.
+The 86%/82%/97% numbers concern **our artificial generator**, not Voynich decoding. Its rules are a calibration challenge, not an assertion that the manuscript was generated this way. The 295 passing software tests and 23 subtests check implementation behavior, not a historical hypothesis.
 
 The main 18 Voynich plus six synthetic model runs used 40,300 training updates and about 11.93 minutes of summed measured training time. Two earlier pilots, process startup, data preparation, evaluation, interpretation and coding/research time are additional. EXP-0006's separate 5,600 updates changed intervention bases while keeping language-model weights frozen. No paid research APIs were used.
 
@@ -81,7 +102,9 @@ The earlier bounded reference-model benchmark measured about 0.0195 seconds/upda
 
 RAM is working space; GPU throughput determines how quickly arithmetic happens. Useful scaling can mean longer sequences, many independent hypotheses, larger batches or reusable activation caches. Allocating all RAM is not itself scientific progress, and tiny-data memorization remains possible on powerful hardware.
 
-## Recommended larger experiments — proposed, not launched
+## Original larger-experiment proposals — historical planning record
+
+The bounded implementations are EXP-0008/0009/0010. This earlier proposal had a broader scope; not every candidate family, model size or representation below was implemented. Follow the registrations and results for actual work.
 
 ### 1. Blind recovery across many artificial cipher families
 
@@ -107,10 +130,10 @@ Why useful: our current main training context is only 256 units. This could test
 
 This remains limited by one manuscript. Better scores alone would not establish a language or cipher. Separate uncertainty/alternative-transcription sensitivity could be valuable, but independent transcriptions need provenance and alignment before comparing them.
 
-## Concrete first compute budget
+## Original proposed compute budget
 
 Recommend a short scaling benchmark followed by a registered **8-hour local campaign** focused on proposal 1, with checkpoints and automatic stopping. Eight hours is a chosen budget, not a prediction that the whole proposed benchmark will finish. The short benchmark must determine how many settings fit that budget and whether larger models help enough to keep them.
 
 Start with a measured workload using roughly 24–40 GiB total working memory if that improves throughput or analysis reuse, keeping the system responsive; do not allocate padding merely to hit a memory target. Monitor GPU allocator/driver statistics and system memory pressure without summing overlapping unified-memory accounting. Model size, batch, contexts and number of trials follow measured throughput. Run the same scientific comparisons on smaller models; stop scaling a branch when its extra cost provides no useful improvement.
 
-No new training, stress test, paid service, final manuscript test evaluation or background automation was launched during this explanation/planning turn. Next work requires a concrete method review and experiment registration, not repeated permission for already-authorized bounded local research.
+The original explanation/planning turn launched no experiments. The subsequent authorized campaign is documented above and in its registrations/results. Future work requires method review and a bounded registration; no recurring background automation is configured.

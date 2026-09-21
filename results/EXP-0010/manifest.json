@@ -1,0 +1,6686 @@
+{
+  "experiment": "EXP-0010",
+  "config": {
+    "experiment": "EXP-0010",
+    "seeds": [
+      10111,
+      10112,
+      10113
+    ],
+    "steps": 1200,
+    "eval_interval": 200,
+    "warmup_steps": 100,
+    "learning_rate": 0.0006,
+    "source_block_width": 2048,
+    "global_source_blocks": 4,
+    "microbatch_tokens": 2048,
+    "primary_targets_per_page": 16,
+    "long_targets_per_page": 32,
+    "max_wall_seconds": 10800,
+    "max_process_rss_gib": 12,
+    "threads": 2
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch": "2.14.0",
+    "git_commit": "72f632804a162009b488e6de5d8550493670f937",
+    "git_dirty": false,
+    "threads": 2,
+    "source_sha256": {
+      "configs/attention_only.json": "19568963a2123e2da116329df17f25a33e5b86c9e87134332c7e33586fa4568d",
+      "configs/campaign-0001.json": "5dbd84d691fa1a6668106de2f2bd514789ebe09e4beda3c965b2b84242b8744a",
+      "configs/exp0008_blind.json": "7e196c6b04eea92c6c64b8e78c55cb9504fdb08841acdf93e527e636c0400dd0",
+      "configs/exp0010.json": "d91aeadb2570c5ae8a669e7de79ec2506edb6324f1c63cc00b359e6c914ab1e6",
+      "configs/gated_attention.json": "1125863bd361a41c07f8a985db76aa6f4096da82a40f21baacb416141feb86a9",
+      "configs/mtp.json": "969ba75363fc9ba66110764ccb784fe580aa1c81aac78d9f9fcfb64fc4b93381",
+      "configs/qk_norm.json": "7dfc1174d18eda5c3540a43c55799a40f58d135f806f836e6d83a6a22f5c1072",
+      "configs/reference.json": "116b37ece409b936678e95a4d646bb34fb1ad4b13bea340012495aef6eb993be",
+      "configs/small.json": "3fef5ff1faa993178642decb6f1a3fbc3000d220e813d2a9c2e0c63440d54c3c",
+      "configs/smoke.json": "155905e76753c67adc46460e28e21c988e90a8fe8ccfe1b36c36197f2ca989cd",
+      "configs/synthetic_small.json": "632ac1f84a4bb178af1b300ae81122ce8c54e5af38edf8b19262576f62ce2993",
+      "data/manifests/zl3b_preparation.json": "07c59f09990682537788b4ecf35952a47571454188697352a5def7539a620974",
+      "data/manifests/zl3b_source.json": "683f249c035db5401ecf063595fbbf613adbdc9de2f5c6c318f06d697dfc9aff",
+      "data/manifests/zl3b_split.json": "9fc80cb4b000fdd5d952b7c2416b37b6b92f07bc56486a63309142953ed6634e",
+      "data/manifests/zl3b_split_provisional_v1.json": "5ffc815ba878bbb303599ee8b3fdf5a6acfdedee2e91071277be9f3f4e391fe8",
+      "pyproject.toml": "cb082b83ecf2a0ee5f90bbea80c7e02d6cd82d9598e6dba782f1cf8ed6cba000",
+      "src/voynich/__init__.py": "f51cc6d99d838a811a4a377c45d913ca33c23d265c4a35cccce39606bce5d8be",
+      "src/voynich/blind_recovery.py": "cc273e2d5d7f73b5bb0b23837ed5dbe9678c285be0f56608ca6e7d734c7ae911",
+      "src/voynich/calibration.py": "a18e852d4e71eb83b4b4c31cab189c2c52da619ef0ba41fc6b9b0b51dc541230",
+      "src/voynich/causal_alignment.py": "c20d8e0c8f35333e1a5c879b633d8361f4cad61cb9f009601c62ea48ae2326ff",
+      "src/voynich/causal_mapping.py": "1db6eafe7df0cdbf8a50bf893710398501fa3be47d69cfd59cb0dc647da2f298",
+      "src/voynich/context_analysis.py": "8acad13b9c10f209a7f25994b3a00e345dbdabf20ea3f69a3cf29117dd514fe4",
+      "src/voynich/context_controls.py": "ceb8b46183ff05433f564adb3836d79b0c56cbd544470afba958a10e90fa628b",
+      "src/voynich/data.py": "2b34268167c3d7c07bc1baf86e0d99af06de9d5abf007e9fa5027a9769295661",
+      "src/voynich/evaluate.py": "499f688bb399b988dac0ce838e9caa36800a2e9d28d68b9a47ebef818e5480dc",
+      "src/voynich/interpret.py": "89f2d3161b7f6a08efc9c64161418e53d3b2c6db83a28dc8dbd2cf5f4f21436e",
+      "src/voynich/long_context.py": "a798f3c9abcb8d8a9bb8eca6629b9d5c20f8531d6b351d6c7a915b32316b7944",
+      "src/voynich/model.py": "771c4e6f4cb3abdbb3ef7f7101f845ac63f129bdc08de249db190997f63cc629",
+      "src/voynich/order_scale.py": "b95eb06d09e6753bff5698c04e325c7e611844c5306c6da85f1ec2f72a3a81fc",
+      "src/voynich/runtime.py": "6749f192095f210a14d9508a6fa22942c1b6c5fd9a31acd5e474850ddfa6506c",
+      "src/voynich/synthetic.py": "7c6f53cefa165b4d45ca0fd151fbdba26bb841795a88ac6a3849180603a38e6e",
+      "src/voynich/tokenizer.py": "c8a0cea5dd14697c0abb8b2150d4b0f31853ce9162a8fc0441f7a5a706e81d1c",
+      "src/voynich/train.py": "517f795c8f400f8ffd465e58bf96a04d3deac9d7ba44c2e5073648cc09cb4c9e",
+      "uv.lock": "e02b7e8e700235d4fc5f07d79156986ea76df06adef1b6eb2429e52b625660b9"
+    }
+  },
+  "command": [
+    "scripts/run_long_context.py",
+    "run",
+    "--config",
+    "configs/exp0010.json",
+    "--output-root",
+    "outputs/EXP-0010/campaign",
+    "--data",
+    "data/processed/zl3b",
+    "--device",
+    "mps"
+  ],
+  "device": "mps",
+  "corpus_identity": {
+    "train.jsonl": "49618c7be69cef573fe9ad8ae3627ad9f7b495601af1897aafb6082837fceca4",
+    "validation.jsonl": "9bee4149f26fc49b49e4a826b73598dfb79a1e785731c15a1763489315a2efd3",
+    "test.jsonl": "7972ce73d178674cda28a2dbe019aaf3dafa641936987e35c4072cbb3e4acee0",
+    "tokenizer.json": "ade614f664299920424c788f91ff3dea1ca5b7c0491d3952585a37f6b6a7d030"
+  },
+  "plan": [
+    {
+      "size": "main",
+      "context": 256,
+      "representation": "original",
+      "seed": 10111,
+      "name": "main-c256-original-seed10111"
+    },
+    {
+      "size": "main",
+      "context": 512,
+      "representation": "original",
+      "seed": 10111,
+      "name": "main-c512-original-seed10111"
+    },
+    {
+      "size": "main",
+      "context": 1024,
+      "representation": "original",
+      "seed": 10111,
+      "name": "main-c1024-original-seed10111"
+    },
+    {
+      "size": "main",
+      "context": 2048,
+      "representation": "original",
+      "seed": 10111,
+      "name": "main-c2048-original-seed10111"
+    },
+    {
+      "size": "compact",
+      "context": 256,
+      "representation": "original",
+      "seed": 10111,
+      "name": "compact-c256-original-seed10111"
+    },
+    {
+      "size": "compact",
+      "context": 2048,
+      "representation": "original",
+      "seed": 10111,
+      "name": "compact-c2048-original-seed10111"
+    },
+    {
+      "size": "main",
+      "context": 2048,
+      "representation": "merge_locus_boundary",
+      "seed": 10111,
+      "name": "main-c2048-merge_locus_boundary-seed10111"
+    },
+    {
+      "size": "main",
+      "context": 512,
+      "representation": "original",
+      "seed": 10112,
+      "name": "main-c512-original-seed10112"
+    },
+    {
+      "size": "main",
+      "context": 1024,
+      "representation": "original",
+      "seed": 10112,
+      "name": "main-c1024-original-seed10112"
+    },
+    {
+      "size": "main",
+      "context": 2048,
+      "representation": "original",
+      "seed": 10112,
+      "name": "main-c2048-original-seed10112"
+    },
+    {
+      "size": "compact",
+      "context": 256,
+      "representation": "original",
+      "seed": 10112,
+      "name": "compact-c256-original-seed10112"
+    },
+    {
+      "size": "compact",
+      "context": 2048,
+      "representation": "original",
+      "seed": 10112,
+      "name": "compact-c2048-original-seed10112"
+    },
+    {
+      "size": "main",
+      "context": 2048,
+      "representation": "merge_locus_boundary",
+      "seed": 10112,
+      "name": "main-c2048-merge_locus_boundary-seed10112"
+    },
+    {
+      "size": "main",
+      "context": 256,
+      "representation": "original",
+      "seed": 10112,
+      "name": "main-c256-original-seed10112"
+    },
+    {
+      "size": "main",
+      "context": 1024,
+      "representation": "original",
+      "seed": 10113,
+      "name": "main-c1024-original-seed10113"
+    },
+    {
+      "size": "main",
+      "context": 2048,
+      "representation": "original",
+      "seed": 10113,
+      "name": "main-c2048-original-seed10113"
+    },
+    {
+      "size": "compact",
+      "context": 256,
+      "representation": "original",
+      "seed": 10113,
+      "name": "compact-c256-original-seed10113"
+    },
+    {
+      "size": "compact",
+      "context": 2048,
+      "representation": "original",
+      "seed": 10113,
+      "name": "compact-c2048-original-seed10113"
+    },
+    {
+      "size": "main",
+      "context": 2048,
+      "representation": "merge_locus_boundary",
+      "seed": 10113,
+      "name": "main-c2048-merge_locus_boundary-seed10113"
+    },
+    {
+      "size": "main",
+      "context": 256,
+      "representation": "original",
+      "seed": 10113,
+      "name": "main-c256-original-seed10113"
+    },
+    {
+      "size": "main",
+      "context": 512,
+      "representation": "original",
+      "seed": 10113,
+      "name": "main-c512-original-seed10113"
+    }
+  ],
+  "config_sha256": "d91aeadb2570c5ae8a669e7de79ec2506edb6324f1c63cc00b359e6c914ab1e6",
+  "targets": [
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 93,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 106,
+      "target": 5,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 109,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 138,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 157,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 173,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 190,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 212,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 233,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 245,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 254,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 275,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 290,
+      "target": 25,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 291,
+      "target": 5,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 297,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11r",
+      "leaf_id": "f11",
+      "position": 299,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 79,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 96,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 102,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 108,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 174,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 176,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 177,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 192,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 195,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 199,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 201,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 222,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 236,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 253,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 257,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f11v",
+      "leaf_id": "f11",
+      "position": 259,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 109,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 116,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 128,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 140,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 171,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 230,
+      "target": 29,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 260,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 297,
+      "target": 24,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 299,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 345,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 346,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 403,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 430,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 445,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 458,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27r",
+      "leaf_id": "f27",
+      "position": 465,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 73,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 110,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 142,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 176,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 212,
+      "target": 28,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 260,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 290,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 294,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 298,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 301,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 304,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 318,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 322,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 325,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 333,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f27v",
+      "leaf_id": "f27",
+      "position": 339,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 76,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 92,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 121,
+      "target": 53,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 160,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 196,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 210,
+      "target": 29,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 247,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 251,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 255,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 257,
+      "target": 25,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 285,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 298,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 307,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 310,
+      "target": 29,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 331,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36r",
+      "leaf_id": "f36",
+      "position": 344,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 112,
+      "target": 24,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 141,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 144,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 156,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 181,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 195,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 201,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 207,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 221,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 257,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 274,
+      "target": 25,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 315,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 347,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 358,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 406,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f36v",
+      "leaf_id": "f36",
+      "position": 413,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 127,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 169,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 181,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 197,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 249,
+      "target": 5,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 258,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 265,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 270,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 279,
+      "target": 25,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 292,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 309,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 321,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 336,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 370,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 435,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37r",
+      "leaf_id": "f37",
+      "position": 442,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 112,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 144,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 166,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 173,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 227,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 283,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 293,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 304,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 413,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 425,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 427,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 437,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 438,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 466,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 523,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f37v",
+      "leaf_id": "f37",
+      "position": 538,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 150,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 188,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 197,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 281,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 296,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 307,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 343,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 414,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 447,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 453,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 461,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 509,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 546,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 618,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 661,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f49r",
+      "leaf_id": "f49",
+      "position": 665,
+      "target": 29,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 162,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 191,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 233,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 284,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 314,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 344,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 385,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 431,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 437,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 439,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 586,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 657,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 746,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 764,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 782,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f49v",
+      "leaf_id": "f49",
+      "position": 845,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 116,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 125,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 136,
+      "target": 25,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 175,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 185,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 209,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 214,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 233,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 267,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 424,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 449,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 803,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 840,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 858,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 861,
+      "target": 27,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r1",
+      "leaf_id": "f67",
+      "position": 938,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 104,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 206,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 272,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 348,
+      "target": 24,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 358,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 361,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 427,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 522,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 543,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 590,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 615,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 680,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 752,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 957,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 975,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67r2",
+      "leaf_id": "f67",
+      "position": 1048,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 67,
+      "target": 5,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 71,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 86,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 95,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 117,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 178,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 188,
+      "target": 17,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 196,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 207,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 230,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 242,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 258,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 268,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 295,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 338,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v2",
+      "leaf_id": "f67",
+      "position": 356,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 119,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 137,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 144,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 219,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 220,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 257,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 258,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 260,
+      "target": 5,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 306,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 314,
+      "target": 18,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 351,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 379,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 391,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 400,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 403,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f67v1",
+      "leaf_id": "f67",
+      "position": 417,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 87,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 89,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 105,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 138,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 148,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 163,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 290,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 297,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 390,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 448,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 480,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 507,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 529,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 547,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 554,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73r",
+      "leaf_id": "f73",
+      "position": 588,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 132,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 155,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 156,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 158,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 176,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 218,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 236,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 360,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 363,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 384,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 389,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 452,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 505,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 545,
+      "target": 27,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 549,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f73v",
+      "leaf_id": "f73",
+      "position": 596,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 84,
+      "target": 28,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 403,
+      "target": 28,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 835,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 963,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 1234,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 1478,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 1495,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 1593,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 1771,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 1791,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 1830,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2229,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2261,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2821,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2928,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3233,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2165,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2169,
+      "target": 12,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2173,
+      "target": 26,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2181,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2305,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2356,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2406,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2410,
+      "target": 15,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2502,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2585,
+      "target": 26,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2621,
+      "target": 25,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2703,
+      "target": 14,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2762,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2769,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2790,
+      "target": 22,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2861,
+      "target": 30,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2865,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2885,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2900,
+      "target": 5,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2913,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2936,
+      "target": 25,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2945,
+      "target": 29,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 2973,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3020,
+      "target": 28,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3037,
+      "target": 22,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3046,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3108,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3130,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3185,
+      "target": 14,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3208,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3222,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76r",
+      "leaf_id": "f76",
+      "position": 3236,
+      "target": 20,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 77,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 137,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 739,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 783,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 1144,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 1145,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 1416,
+      "target": 28,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 1496,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 1552,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 1768,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2059,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2109,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2112,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2217,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2267,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2509,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2054,
+      "target": 25,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2088,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2105,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2121,
+      "target": 20,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2127,
+      "target": 29,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2134,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2146,
+      "target": 26,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2157,
+      "target": 15,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2161,
+      "target": 26,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2168,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2202,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2226,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2245,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2268,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2272,
+      "target": 28,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2280,
+      "target": 22,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2292,
+      "target": 30,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2304,
+      "target": 30,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2342,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2348,
+      "target": 12,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2357,
+      "target": 30,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2360,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2366,
+      "target": 15,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2381,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2399,
+      "target": 15,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2459,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2467,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2475,
+      "target": 5,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2476,
+      "target": 30,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2489,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2503,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f76v",
+      "leaf_id": "f76",
+      "position": 2517,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 65,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 121,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 134,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 154,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 189,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 200,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 211,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 220,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 252,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 358,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 423,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 437,
+      "target": 25,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 438,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 470,
+      "target": 25,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 669,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r1",
+      "leaf_id": "f89",
+      "position": 818,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 406,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 531,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 564,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 569,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 643,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 655,
+      "target": 5,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 657,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 787,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 801,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 950,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 973,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 996,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 1227,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 1290,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 1309,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89r2",
+      "leaf_id": "f89",
+      "position": 1376,
+      "target": 29,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 110,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 116,
+      "target": 17,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 280,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 326,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 471,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 521,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 547,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 563,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 650,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 707,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 771,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 783,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 873,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 900,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 965,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v2",
+      "leaf_id": "f89",
+      "position": 1031,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 210,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 290,
+      "target": 25,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 350,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 388,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 392,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 453,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 524,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 566,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 624,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 635,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 638,
+      "target": 20,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 654,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 668,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 688,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 695,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f89v1",
+      "leaf_id": "f89",
+      "position": 826,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 101,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 143,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 154,
+      "target": 23,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 311,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 530,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 646,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 1112,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 1837,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2058,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2405,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2423,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2543,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2612,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2636,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2771,
+      "target": 14,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3609,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2099,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2145,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2161,
+      "target": 26,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2223,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2241,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2280,
+      "target": 29,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2411,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2552,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2587,
+      "target": 15,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2588,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2589,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2698,
+      "target": 14,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2727,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2840,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2860,
+      "target": 14,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2939,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 2971,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3043,
+      "target": 15,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3085,
+      "target": 26,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3160,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3236,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3247,
+      "target": 26,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3325,
+      "target": 14,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3349,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3350,
+      "target": 26,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3440,
+      "target": 35,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3447,
+      "target": 5,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3497,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3672,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3677,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3756,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111r",
+      "leaf_id": "f111",
+      "position": 3782,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 105,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 276,
+      "target": 15,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 613,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 649,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 1067,
+      "target": 31,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 1404,
+      "target": 28,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 1491,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 1671,
+      "target": 26,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 1751,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 1768,
+      "target": 30,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 1947,
+      "target": 22,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2955,
+      "target": 12,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3222,
+      "target": 4,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3262,
+      "target": 19,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3361,
+      "target": 16,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3362,
+      "target": 35,
+      "groups": [
+        "primary"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2057,
+      "target": 14,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2061,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2062,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2158,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2176,
+      "target": 31,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2183,
+      "target": 22,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2194,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2201,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2268,
+      "target": 12,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2300,
+      "target": 12,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2600,
+      "target": 22,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2622,
+      "target": 12,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2669,
+      "target": 14,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2680,
+      "target": 5,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "locus_boundary"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2690,
+      "target": 12,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2711,
+      "target": 14,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2714,
+      "target": 12,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2811,
+      "target": 31,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2830,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2879,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 2885,
+      "target": 24,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3008,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3086,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3112,
+      "target": 4,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "space"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3221,
+      "target": 25,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3234,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3238,
+      "target": 12,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3257,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3287,
+      "target": 23,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3328,
+      "target": 16,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3377,
+      "target": 29,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    },
+    {
+      "page_id": "f111v",
+      "leaf_id": "f111",
+      "position": 3442,
+      "target": 19,
+      "groups": [
+        "full2048"
+      ],
+      "target_kind": "glyph"
+    }
+  ],
+  "train_blocks": [
+    {
+      "page_id": "f1r",
+      "start": 0,
+      "length": 1210
+    },
+    {
+      "page_id": "f1v",
+      "start": 0,
+      "length": 483
+    },
+    {
+      "page_id": "f2r",
+      "start": 0,
+      "length": 577
+    },
+    {
+      "page_id": "f2v",
+      "start": 0,
+      "length": 348
+    },
+    {
+      "page_id": "f3r",
+      "start": 0,
+      "length": 677
+    },
+    {
+      "page_id": "f3v",
+      "start": 0,
+      "length": 471
+    },
+    {
+      "page_id": "f4r",
+      "start": 0,
+      "length": 389
+    },
+    {
+      "page_id": "f4v",
+      "start": 0,
+      "length": 504
+    },
+    {
+      "page_id": "f5r",
+      "start": 0,
+      "length": 322
+    },
+    {
+      "page_id": "f5v",
+      "start": 0,
+      "length": 283
+    },
+    {
+      "page_id": "f6r",
+      "start": 0,
+      "length": 479
+    },
+    {
+      "page_id": "f6v",
+      "start": 0,
+      "length": 633
+    },
+    {
+      "page_id": "f7r",
+      "start": 0,
+      "length": 411
+    },
+    {
+      "page_id": "f7v",
+      "start": 0,
+      "length": 442
+    },
+    {
+      "page_id": "f8r",
+      "start": 0,
+      "length": 860
+    },
+    {
+      "page_id": "f8v",
+      "start": 0,
+      "length": 686
+    },
+    {
+      "page_id": "f9r",
+      "start": 0,
+      "length": 488
+    },
+    {
+      "page_id": "f9v",
+      "start": 0,
+      "length": 478
+    },
+    {
+      "page_id": "f10r",
+      "start": 0,
+      "length": 524
+    },
+    {
+      "page_id": "f10v",
+      "start": 0,
+      "length": 327
+    },
+    {
+      "page_id": "f13r",
+      "start": 0,
+      "length": 429
+    },
+    {
+      "page_id": "f13v",
+      "start": 0,
+      "length": 358
+    },
+    {
+      "page_id": "f14r",
+      "start": 0,
+      "length": 425
+    },
+    {
+      "page_id": "f14v",
+      "start": 0,
+      "length": 407
+    },
+    {
+      "page_id": "f16r",
+      "start": 0,
+      "length": 465
+    },
+    {
+      "page_id": "f16v",
+      "start": 0,
+      "length": 435
+    },
+    {
+      "page_id": "f17r",
+      "start": 0,
+      "length": 451
+    },
+    {
+      "page_id": "f17v",
+      "start": 0,
+      "length": 775
+    },
+    {
+      "page_id": "f18r",
+      "start": 0,
+      "length": 496
+    },
+    {
+      "page_id": "f18v",
+      "start": 0,
+      "length": 366
+    },
+    {
+      "page_id": "f19r",
+      "start": 0,
+      "length": 422
+    },
+    {
+      "page_id": "f19v",
+      "start": 0,
+      "length": 445
+    },
+    {
+      "page_id": "f20r",
+      "start": 0,
+      "length": 563
+    },
+    {
+      "page_id": "f20v",
+      "start": 0,
+      "length": 474
+    },
+    {
+      "page_id": "f21r",
+      "start": 0,
+      "length": 602
+    },
+    {
+      "page_id": "f21v",
+      "start": 0,
+      "length": 340
+    },
+    {
+      "page_id": "f22r",
+      "start": 0,
+      "length": 622
+    },
+    {
+      "page_id": "f22v",
+      "start": 0,
+      "length": 454
+    },
+    {
+      "page_id": "f23r",
+      "start": 0,
+      "length": 579
+    },
+    {
+      "page_id": "f23v",
+      "start": 0,
+      "length": 503
+    },
+    {
+      "page_id": "f24r",
+      "start": 0,
+      "length": 569
+    },
+    {
+      "page_id": "f24v",
+      "start": 0,
+      "length": 483
+    },
+    {
+      "page_id": "f25r",
+      "start": 0,
+      "length": 298
+    },
+    {
+      "page_id": "f25v",
+      "start": 0,
+      "length": 346
+    },
+    {
+      "page_id": "f26r",
+      "start": 0,
+      "length": 523
+    },
+    {
+      "page_id": "f26v",
+      "start": 0,
+      "length": 553
+    },
+    {
+      "page_id": "f28r",
+      "start": 0,
+      "length": 414
+    },
+    {
+      "page_id": "f28v",
+      "start": 0,
+      "length": 375
+    },
+    {
+      "page_id": "f29r",
+      "start": 0,
+      "length": 371
+    },
+    {
+      "page_id": "f29v",
+      "start": 0,
+      "length": 517
+    },
+    {
+      "page_id": "f30r",
+      "start": 0,
+      "length": 583
+    },
+    {
+      "page_id": "f30v",
+      "start": 0,
+      "length": 402
+    },
+    {
+      "page_id": "f31r",
+      "start": 0,
+      "length": 622
+    },
+    {
+      "page_id": "f31v",
+      "start": 0,
+      "length": 642
+    },
+    {
+      "page_id": "f32r",
+      "start": 0,
+      "length": 434
+    },
+    {
+      "page_id": "f32v",
+      "start": 0,
+      "length": 466
+    },
+    {
+      "page_id": "f33r",
+      "start": 0,
+      "length": 436
+    },
+    {
+      "page_id": "f33v",
+      "start": 0,
+      "length": 561
+    },
+    {
+      "page_id": "f34r",
+      "start": 0,
+      "length": 820
+    },
+    {
+      "page_id": "f34v",
+      "start": 0,
+      "length": 705
+    },
+    {
+      "page_id": "f38r",
+      "start": 0,
+      "length": 241
+    },
+    {
+      "page_id": "f38v",
+      "start": 0,
+      "length": 338
+    },
+    {
+      "page_id": "f39r",
+      "start": 0,
+      "length": 922
+    },
+    {
+      "page_id": "f39v",
+      "start": 0,
+      "length": 769
+    },
+    {
+      "page_id": "f40r",
+      "start": 0,
+      "length": 533
+    },
+    {
+      "page_id": "f40v",
+      "start": 0,
+      "length": 611
+    },
+    {
+      "page_id": "f41r",
+      "start": 0,
+      "length": 632
+    },
+    {
+      "page_id": "f41v",
+      "start": 0,
+      "length": 420
+    },
+    {
+      "page_id": "f42r",
+      "start": 0,
+      "length": 831
+    },
+    {
+      "page_id": "f42v",
+      "start": 0,
+      "length": 633
+    },
+    {
+      "page_id": "f43r",
+      "start": 0,
+      "length": 909
+    },
+    {
+      "page_id": "f43v",
+      "start": 0,
+      "length": 913
+    },
+    {
+      "page_id": "f45r",
+      "start": 0,
+      "length": 492
+    },
+    {
+      "page_id": "f45v",
+      "start": 0,
+      "length": 447
+    },
+    {
+      "page_id": "f46r",
+      "start": 0,
+      "length": 953
+    },
+    {
+      "page_id": "f46v",
+      "start": 0,
+      "length": 661
+    },
+    {
+      "page_id": "f47r",
+      "start": 0,
+      "length": 432
+    },
+    {
+      "page_id": "f47v",
+      "start": 0,
+      "length": 478
+    },
+    {
+      "page_id": "f48r",
+      "start": 0,
+      "length": 560
+    },
+    {
+      "page_id": "f48v",
+      "start": 0,
+      "length": 715
+    },
+    {
+      "page_id": "f50r",
+      "start": 0,
+      "length": 559
+    },
+    {
+      "page_id": "f50v",
+      "start": 0,
+      "length": 604
+    },
+    {
+      "page_id": "f51r",
+      "start": 0,
+      "length": 562
+    },
+    {
+      "page_id": "f51v",
+      "start": 0,
+      "length": 506
+    },
+    {
+      "page_id": "f52r",
+      "start": 0,
+      "length": 391
+    },
+    {
+      "page_id": "f52v",
+      "start": 0,
+      "length": 465
+    },
+    {
+      "page_id": "f53r",
+      "start": 0,
+      "length": 326
+    },
+    {
+      "page_id": "f53v",
+      "start": 0,
+      "length": 467
+    },
+    {
+      "page_id": "f54r",
+      "start": 0,
+      "length": 565
+    },
+    {
+      "page_id": "f54v",
+      "start": 0,
+      "length": 516
+    },
+    {
+      "page_id": "f55r",
+      "start": 0,
+      "length": 674
+    },
+    {
+      "page_id": "f55v",
+      "start": 0,
+      "length": 571
+    },
+    {
+      "page_id": "f56r",
+      "start": 0,
+      "length": 597
+    },
+    {
+      "page_id": "f56v",
+      "start": 0,
+      "length": 530
+    },
+    {
+      "page_id": "f57r",
+      "start": 0,
+      "length": 571
+    },
+    {
+      "page_id": "f57v",
+      "start": 0,
+      "length": 673
+    },
+    {
+      "page_id": "f58r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f58r",
+      "start": 2048,
+      "length": 247
+    },
+    {
+      "page_id": "f58v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f58v",
+      "start": 2048,
+      "length": 131
+    },
+    {
+      "page_id": "f65r",
+      "start": 0,
+      "length": 15
+    },
+    {
+      "page_id": "f65v",
+      "start": 0,
+      "length": 259
+    },
+    {
+      "page_id": "f68r1",
+      "start": 0,
+      "length": 461
+    },
+    {
+      "page_id": "f68r2",
+      "start": 0,
+      "length": 552
+    },
+    {
+      "page_id": "f68r3",
+      "start": 0,
+      "length": 693
+    },
+    {
+      "page_id": "f68v3",
+      "start": 0,
+      "length": 1009
+    },
+    {
+      "page_id": "f68v2",
+      "start": 0,
+      "length": 657
+    },
+    {
+      "page_id": "f68v1",
+      "start": 0,
+      "length": 568
+    },
+    {
+      "page_id": "f69r",
+      "start": 0,
+      "length": 869
+    },
+    {
+      "page_id": "f69v",
+      "start": 0,
+      "length": 764
+    },
+    {
+      "page_id": "f71r",
+      "start": 0,
+      "length": 573
+    },
+    {
+      "page_id": "f71v",
+      "start": 0,
+      "length": 592
+    },
+    {
+      "page_id": "f72r1",
+      "start": 0,
+      "length": 648
+    },
+    {
+      "page_id": "f72r2",
+      "start": 0,
+      "length": 670
+    },
+    {
+      "page_id": "f72r3",
+      "start": 0,
+      "length": 1048
+    },
+    {
+      "page_id": "f72v3",
+      "start": 0,
+      "length": 799
+    },
+    {
+      "page_id": "f72v2",
+      "start": 0,
+      "length": 712
+    },
+    {
+      "page_id": "f72v1",
+      "start": 0,
+      "length": 658
+    },
+    {
+      "page_id": "f75r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f75r",
+      "start": 2048,
+      "length": 367
+    },
+    {
+      "page_id": "f75v",
+      "start": 0,
+      "length": 2039
+    },
+    {
+      "page_id": "f77r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f77r",
+      "start": 2048,
+      "length": 51
+    },
+    {
+      "page_id": "f77v",
+      "start": 0,
+      "length": 2037
+    },
+    {
+      "page_id": "f78r",
+      "start": 0,
+      "length": 1741
+    },
+    {
+      "page_id": "f78v",
+      "start": 0,
+      "length": 1654
+    },
+    {
+      "page_id": "f80r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f80r",
+      "start": 2048,
+      "length": 630
+    },
+    {
+      "page_id": "f80v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f80v",
+      "start": 2048,
+      "length": 156
+    },
+    {
+      "page_id": "f81r",
+      "start": 0,
+      "length": 1196
+    },
+    {
+      "page_id": "f81v",
+      "start": 0,
+      "length": 1488
+    },
+    {
+      "page_id": "f82r",
+      "start": 0,
+      "length": 1866
+    },
+    {
+      "page_id": "f82v",
+      "start": 0,
+      "length": 1979
+    },
+    {
+      "page_id": "f83r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f83r",
+      "start": 2048,
+      "length": 167
+    },
+    {
+      "page_id": "f83v",
+      "start": 0,
+      "length": 1655
+    },
+    {
+      "page_id": "f84r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f84r",
+      "start": 2048,
+      "length": 112
+    },
+    {
+      "page_id": "f84v",
+      "start": 0,
+      "length": 1982
+    },
+    {
+      "page_id": "f85r1",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f85r1",
+      "start": 2048,
+      "length": 94
+    },
+    {
+      "page_id": "f85r2",
+      "start": 0,
+      "length": 953
+    },
+    {
+      "page_id": "fRos",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "fRos",
+      "start": 2048,
+      "length": 1111
+    },
+    {
+      "page_id": "f86v4",
+      "start": 0,
+      "length": 1121
+    },
+    {
+      "page_id": "f86v6",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f86v6",
+      "start": 2048,
+      "length": 870
+    },
+    {
+      "page_id": "f86v5",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f86v5",
+      "start": 2048,
+      "length": 165
+    },
+    {
+      "page_id": "f86v3",
+      "start": 0,
+      "length": 1802
+    },
+    {
+      "page_id": "f87r",
+      "start": 0,
+      "length": 655
+    },
+    {
+      "page_id": "f87v",
+      "start": 0,
+      "length": 561
+    },
+    {
+      "page_id": "f93r",
+      "start": 0,
+      "length": 908
+    },
+    {
+      "page_id": "f93v",
+      "start": 0,
+      "length": 562
+    },
+    {
+      "page_id": "f94r",
+      "start": 0,
+      "length": 476
+    },
+    {
+      "page_id": "f94v",
+      "start": 0,
+      "length": 581
+    },
+    {
+      "page_id": "f96r",
+      "start": 0,
+      "length": 537
+    },
+    {
+      "page_id": "f96v",
+      "start": 0,
+      "length": 380
+    },
+    {
+      "page_id": "f99r",
+      "start": 0,
+      "length": 1161
+    },
+    {
+      "page_id": "f99v",
+      "start": 0,
+      "length": 1104
+    },
+    {
+      "page_id": "f100r",
+      "start": 0,
+      "length": 734
+    },
+    {
+      "page_id": "f100v",
+      "start": 0,
+      "length": 586
+    },
+    {
+      "page_id": "f101r",
+      "start": 0,
+      "length": 1289
+    },
+    {
+      "page_id": "f101v",
+      "start": 0,
+      "length": 1269
+    },
+    {
+      "page_id": "f102r1",
+      "start": 0,
+      "length": 713
+    },
+    {
+      "page_id": "f102r2",
+      "start": 0,
+      "length": 845
+    },
+    {
+      "page_id": "f102v2",
+      "start": 0,
+      "length": 1057
+    },
+    {
+      "page_id": "f102v1",
+      "start": 0,
+      "length": 805
+    },
+    {
+      "page_id": "f103r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f103r",
+      "start": 2048,
+      "length": 1260
+    },
+    {
+      "page_id": "f103v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f103v",
+      "start": 2048,
+      "length": 648
+    },
+    {
+      "page_id": "f104r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f104r",
+      "start": 2048,
+      "length": 820
+    },
+    {
+      "page_id": "f104v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f104v",
+      "start": 2048,
+      "length": 974
+    },
+    {
+      "page_id": "f105r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f105r",
+      "start": 2048,
+      "length": 283
+    },
+    {
+      "page_id": "f105v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f105v",
+      "start": 2048,
+      "length": 399
+    },
+    {
+      "page_id": "f106r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f106r",
+      "start": 2048,
+      "length": 775
+    },
+    {
+      "page_id": "f106v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f106v",
+      "start": 2048,
+      "length": 767
+    },
+    {
+      "page_id": "f107r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f107r",
+      "start": 2048,
+      "length": 963
+    },
+    {
+      "page_id": "f107v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f107v",
+      "start": 2048,
+      "length": 792
+    },
+    {
+      "page_id": "f108r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f108r",
+      "start": 2048,
+      "length": 1065
+    },
+    {
+      "page_id": "f108v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f108v",
+      "start": 2048,
+      "length": 1596
+    },
+    {
+      "page_id": "f112r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f112r",
+      "start": 2048,
+      "length": 327
+    },
+    {
+      "page_id": "f112v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f112v",
+      "start": 2048,
+      "length": 595
+    },
+    {
+      "page_id": "f113r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f113r",
+      "start": 2048,
+      "length": 1363
+    },
+    {
+      "page_id": "f113v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f113v",
+      "start": 2048,
+      "length": 1005
+    },
+    {
+      "page_id": "f114r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f114r",
+      "start": 2048,
+      "length": 916
+    },
+    {
+      "page_id": "f114v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f114v",
+      "start": 2048,
+      "length": 426
+    },
+    {
+      "page_id": "f115r",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f115r",
+      "start": 2048,
+      "length": 860
+    },
+    {
+      "page_id": "f115v",
+      "start": 0,
+      "length": 2048
+    },
+    {
+      "page_id": "f115v",
+      "start": 2048,
+      "length": 609
+    }
+  ],
+  "target_coverage": {
+    "primary": {
+      "targets": 384,
+      "page_count": 24,
+      "leaf_count": 10,
+      "contexts": {
+        "256": {
+          "targets_with_full_prefix": 256,
+          "page_count_with_full_prefix": 24,
+          "leaf_count_with_full_prefix": 10,
+          "mean_prefix_units": 225.15104166666666
+        },
+        "512": {
+          "targets_with_full_prefix": 125,
+          "page_count_with_full_prefix": 15,
+          "leaf_count_with_full_prefix": 7,
+          "mean_prefix_units": 341.734375
+        },
+        "1024": {
+          "targets_with_full_prefix": 52,
+          "page_count_with_full_prefix": 7,
+          "leaf_count_with_full_prefix": 4,
+          "mean_prefix_units": 446.3958333333333
+        },
+        "2048": {
+          "targets_with_full_prefix": 24,
+          "page_count_with_full_prefix": 4,
+          "leaf_count_with_full_prefix": 2,
+          "mean_prefix_units": 542.609375
+        }
+      }
+    },
+    "full2048": {
+      "targets": 128,
+      "page_count": 4,
+      "leaf_count": 2,
+      "contexts": {
+        "256": {
+          "targets_with_full_prefix": 128,
+          "page_count_with_full_prefix": 4,
+          "leaf_count_with_full_prefix": 2,
+          "mean_prefix_units": 256.0
+        },
+        "512": {
+          "targets_with_full_prefix": 128,
+          "page_count_with_full_prefix": 4,
+          "leaf_count_with_full_prefix": 2,
+          "mean_prefix_units": 512.0
+        },
+        "1024": {
+          "targets_with_full_prefix": 128,
+          "page_count_with_full_prefix": 4,
+          "leaf_count_with_full_prefix": 2,
+          "mean_prefix_units": 1024.0
+        },
+        "2048": {
+          "targets_with_full_prefix": 128,
+          "page_count_with_full_prefix": 4,
+          "leaf_count_with_full_prefix": 2,
+          "mean_prefix_units": 2048.0
+        }
+      }
+    }
+  },
+  "training_scorable_positions_per_block": [
+    1188,
+    471,
+    571,
+    341,
+    672,
+    466,
+    384,
+    493,
+    316,
+    277,
+    474,
+    620,
+    408,
+    431,
+    849,
+    685,
+    478,
+    473,
+    516,
+    320,
+    423,
+    348,
+    418,
+    393,
+    452,
+    427,
+    446,
+    767,
+    491,
+    363,
+    419,
+    435,
+    556,
+    469,
+    590,
+    337,
+    610,
+    448,
+    562,
+    491,
+    565,
+    475,
+    296,
+    339,
+    516,
+    547,
+    411,
+    372,
+    365,
+    511,
+    572,
+    396,
+    608,
+    628,
+    427,
+    452,
+    430,
+    549,
+    806,
+    695,
+    237,
+    332,
+    909,
+    754,
+    524,
+    603,
+    615,
+    413,
+    818,
+    620,
+    896,
+    901,
+    489,
+    432,
+    938,
+    650,
+    424,
+    472,
+    553,
+    704,
+    548,
+    595,
+    549,
+    494,
+    382,
+    452,
+    316,
+    462,
+    551,
+    506,
+    662,
+    554,
+    584,
+    515,
+    560,
+    653,
+    2012,
+    240,
+    2012,
+    130,
+    14,
+    251,
+    460,
+    546,
+    683,
+    999,
+    648,
+    558,
+    851,
+    737,
+    561,
+    584,
+    636,
+    659,
+    1019,
+    781,
+    685,
+    641,
+    2022,
+    362,
+    2010,
+    2018,
+    50,
+    2013,
+    1709,
+    1626,
+    2028,
+    618,
+    2022,
+    152,
+    1179,
+    1468,
+    1847,
+    1957,
+    2032,
+    167,
+    1638,
+    2007,
+    109,
+    1960,
+    2020,
+    92,
+    938,
+    1992,
+    1077,
+    1098,
+    2018,
+    855,
+    2024,
+    165,
+    1782,
+    646,
+    553,
+    899,
+    557,
+    470,
+    573,
+    536,
+    378,
+    1147,
+    1094,
+    724,
+    584,
+    1266,
+    1234,
+    707,
+    827,
+    1028,
+    793,
+    2011,
+    1245,
+    2017,
+    637,
+    2020,
+    814,
+    2028,
+    949,
+    2021,
+    281,
+    2022,
+    394,
+    2025,
+    757,
+    2016,
+    758,
+    2021,
+    951,
+    2029,
+    777,
+    2022,
+    1055,
+    2015,
+    1576,
+    2009,
+    318,
+    2019,
+    586,
+    2023,
+    1344,
+    2016,
+    982,
+    2014,
+    894,
+    2029,
+    416,
+    2023,
+    851,
+    2025,
+    595
+  ],
+  "started_utc": "2026-09-21T07:48:32.158715+00:00",
+  "test_evaluated": false,
+  "allocator_environment": {
+    "PYTORCH_MPS_HIGH_WATERMARK_RATIO": "0.23",
+    "PYTORCH_MPS_LOW_WATERMARK_RATIO": "0.18"
+  }
+}

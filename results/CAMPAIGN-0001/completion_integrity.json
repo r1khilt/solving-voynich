@@ -1,0 +1,90 @@
+{
+  "campaign": "CAMPAIGN-0001",
+  "source_unchanged_and_clean": true,
+  "git_commit": "72f632804a162009b488e6de5d8550493670f937",
+  "status": {
+    "state": "completed",
+    "elapsed_seconds": 3277.17863650003,
+    "jobs": {
+      "blind-recovery": {
+        "state": "completed",
+        "command": [
+          ".venv/bin/python",
+          "-m",
+          "voynich.blind_recovery",
+          "run",
+          "--config",
+          "configs/exp0008_blind.json",
+          "--data-root",
+          "data/processed/exp0008-blind",
+          "--output-root",
+          "outputs/EXP-0008",
+          "--device",
+          "mps"
+        ],
+        "max_seconds": 10860,
+        "started_elapsed_seconds": 0.0005229590460658073,
+        "peak_rss_bytes": 549847040,
+        "pid": 76378,
+        "returncode": 0,
+        "finished_elapsed_seconds": 1322.051753167063
+      },
+      "causal-mapping": {
+        "state": "completed",
+        "command": [
+          ".venv/bin/python",
+          "-m",
+          "voynich.causal_mapping",
+          "--output-root",
+          "outputs/EXP-0009",
+          "--device",
+          "mps",
+          "--max-seconds",
+          "7200"
+        ],
+        "max_seconds": 7260,
+        "started_elapsed_seconds": 0.0015594169963151217,
+        "peak_rss_bytes": 528351232,
+        "pid": 76379,
+        "returncode": 0,
+        "finished_elapsed_seconds": 246.37919200002216
+      },
+      "long-context": {
+        "state": "completed",
+        "command": [
+          ".venv/bin/python",
+          "scripts/run_long_context.py",
+          "run",
+          "--config",
+          "configs/exp0010.json",
+          "--output-root",
+          "outputs/EXP-0010/campaign",
+          "--data",
+          "data/processed/zl3b",
+          "--device",
+          "mps"
+        ],
+        "max_seconds": 10860,
+        "started_elapsed_seconds": 0.0026096670189872384,
+        "peak_rss_bytes": 814874624,
+        "pid": 76380,
+        "returncode": 0,
+        "finished_elapsed_seconds": 3277.1750018750317
+      }
+    }
+  },
+  "sample_count": 653,
+  "nominal_sampling_seconds": 5,
+  "max_summed_process_rss_bytes": 1686142976,
+  "memory_accounting": "Process-group RSS sampled; shared pages can be counted more than once. MPS allocator cap is separate. No summing RSS with GPU memory.",
+  "input_sha256": {
+    "manifest.json": "2d163a43281076d0e9d9051f546033d14d5ea679c2a99996e30c06d4aabbbeeb",
+    "status.json": "093d6f4f38a6da014cd3bb1032df0d5f35e7ec6ae77bbba1a06f89c2db502696",
+    "resources.jsonl": "c789cdfd4c6b473393fa34cbcfae241785ba0b814f8228491955986cea8d2ca3",
+    "blind-recovery.log": "d126b19ddda36d476382ad1066b90b69576003657436d451fc45c2289da2fd3d",
+    "causal-mapping.log": "123755a5deee8e26c8d38a9e0467a848e0994f4f7caa3a7263dd18c3da9da824",
+    "long-context.log": "b4a83d3751dfd375e841c496c8d65fc86dca25ace2087b0a3d428e054759ef18"
+  },
+  "manuscript_final_test_scored": false,
+  "paid_research_api_calls": 0
+}

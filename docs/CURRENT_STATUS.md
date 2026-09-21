@@ -1,42 +1,45 @@
 # Agent handoff and current status
 
-Read `AGENTS.md`, `MEMORY.md`, the latest `NOTEBOOK.md` entries and `docs/research/PROTOCOL.md` first. The user authorizes active bounded local research, delegation, routine commits/pushes and useful GPU/RAM use. Explain results in plain English. Preserve the original charter, existing results, dataset splits and final manuscript holdout.
+Updated 2026-09-21 after CAMPAIGN-0001. **All three requested parallel experiments completed and were audited. No experiment remains running or scheduled.** No Voynich word, language, filler assignment or historical encoding rule has been established. The final manuscript test set remains unscored.
 
-## Established work
+Read `AGENTS.md`, `MEMORY.md`, the latest `NOTEBOOK.md` entries and `docs/research/PROTOCOL.md` before new work. The user authorizes ambitious bounded local research, delegation, routine commits/pushes and useful GPU/RAM use. Review both prior Voynich applications and the relevant method literature before a new attempt. Explain progress in plain English and preserve negative results, original charter, splits and untouched final holdout.
 
-EXP-0001 through EXP-0007 are complete and published. `docs/PROGRESS_EXPLAINED.md` explains every experiment and the terminology. No Voynich translation, signal/filler assignment or historical cipher has been established. Synthetic state/steering percentages concern known artificial generators. Manuscript final test remains unscored.
+## Repository and reproducible source
 
-Repository: `/Users/rikhil/coding/solving-voynich`, branch `main`, remote `https://github.com/r1khilt/solving-voynich`. Latest completed-results checkpoint before this campaign is `4914052`; the explanatory guide is `c81ebef`. Preserve the user's uncommitted work if the checkout changes.
+- Checkout: `/Users/rikhil/coding/solving-voynich`; branch `main`; remote `https://github.com/r1khilt/solving-voynich`. Inspect actual status/remotes before editing and preserve unrelated changes.
+- EXP-0001 through EXP-0007 were already completed and published; previous results checkpoint `4914052`, explanation checkpoint `c81ebef`.
+- All three new jobs ran from clean, published source **`72f632804a162009b488e6de5d8550493670f937`**, unchanged until every worker exited. Completion integrity was captured before archival/documentation edits. The results publication is the later commit containing this handoff; use repository history for its identity.
+- [Plain-English progress and vocabulary](PROGRESS_EXPLAINED.md), [combined results](experiments/CAMPAIGN-0001-results.md), [scientific overview](../results/CAMPAIGN-0001/overview.png), [research notebook](../NOTEBOOK.md).
 
-## Current task
+## Completed campaign
 
-User asked to run all three proposed larger ideas in parallel. CAMPAIGN-0001 passed final integration checks (295 tests plus23subtests, Ruff and whitespace); this checkpoint publishes the setup before immediate central execution. This tracked handoff remains frozen during the runs; use the live status path below for actual state:
+Three independent MPS workers ran concurrently for **54.62 minutes elapsed**, training **25 new models for 41,200 updates**. The 219,160,063 sampled training targets include repeated exposure; they are not additional independent evidence. No paid research API or cloud training was used. Codex conversation credit usage was not measured.
 
-- EXP-0008: four synthetic language models /16,000updates plus blind predictive partitions; hidden truth used only after frozen extraction. Own code `src/voynich/blind_recovery.py`; registration `docs/experiments/EXP-0008.md`; config `configs/exp0008_blind.json`.
-- EXP-0009: frozen-model mapping across48sites, discovery/confirmation separation, horizons1/2/4/8 and negative controls. Own code `src/voynich/causal_mapping.py`; registration `docs/experiments/EXP-0009.md`.
-- EXP-0010:21runs across context lengths256–2048, compact controls and input-only locus-marker removal. Exact matched token exposure perseed; fixed1200-update endpoints; final test excluded. Own code `src/voynich/long_context.py`; registration `docs/experiments/EXP-0010.md`; config `configs/exp0010.json`.
+| Track | Work and findings | Interpretation and limits |
+| --- | --- | --- |
+| [EXP-0008: blind recovery](experiments/EXP-0008-results.md) | Four synthetic LMs: compact 405,376 / large 3,220,224 parameters, seeds 42/43, 4,000 updates each. Fit 160 partitions across 20 datasets before opening truth diagnostics. Larger models improved familiar-key prediction/grouping, but no unfamiliar cycle/branch key passed the stronger criterion. Every omitted-family RRXOR partition chose one group. | Fitting used visible text, with per-key unlabeled adaptation; this is not zero-shot transfer. Output-probability groups usually matched or beat hidden-vector groups. Copy success mainly concerns the next symbol, not the complete copying rule. IID/RRXOR gains equal a simpler unigram estimate. ARI is cluster agreement, never percent deciphered. |
+| [EXP-0009: causal mapping](experiments/EXP-0009-results.md) | Seven frozen models, 48 sites, independent discovery/confirmation and horizons 1/2/4/8. All three trained synthetic models passed at horizons 2/4; untrained and all three Voynich models failed. | Earlier broad component replacements affected later toy predictions beyond matched controls. They do not isolate a state-only variable, transition rule or manuscript mechanism. Late output replacement affected only the immediate answer. |
+| [EXP-0010: longer context](experiments/EXP-0010-results.md) | 21 models, three seeds, seven conditions, 1,200 updates each with exactly matched sampled target exposure and starting weights. None of four registered longer-context contrasts passed. Main 2048 lost 0.034861 bits/unit versus main 256; compact 2048 lost 0.030688. | The long model uses extra history relative to its own truncated inputs but loses to a separately trained short model. Hiding boundary identity costs 0.035553 bits overall; glyph-only effects vary by seed. Only four pages/two leaves provide a full 2048-unit prefix. No inference that the manuscript lacks long dependencies. |
 
-The first preparation attempt was interrupted by an agent usage limit; code survived. Only two short artificial-input GPU benchmarks had run. Three agents resumed their own code/review and completed the missing registrations. Do not mistake prepared code or hardware benchmarks for completed scientific runs.
+The primary EXP-0010 evaluation has 384 development targets across 24 pages/10 leaves, not the same denominator as prior whole-validation scores. All 21 fixed final endpoints were retained even though 13 runs achieved an earlier best observed score. Do not compare different target samples as if they measured learning progress.
 
-## Execution and monitoring
+## Audits and local assets
 
-The launcher uses `configs/campaign-0001.json` and requires a clean tree:
+- Post-run software validation: **295 tests plus 23 subtests passed**; Ruff passed. Scientific audits are separate from software tests.
+- EXP-0008: 320 frozen fitting artifacts, 83 dataset files and four selected checkpoint hashes checked. All 32 held-out/training key pairs differ in stationary visible bigram probabilities, ruling out aliases for these particular pairs. No general identifiability theorem follows. Independent review agreed with the failed-transfer interpretation.
+- EXP-0009: raw per-example score aggregates, discovery selection, control comparisons, thresholds and hashes recomputed. All identity, restoration and future-invariance numerical errors were exactly 0.0; backbone weights unchanged.
+- EXP-0010: all 512 evaluation coordinates and 209 source blocks reconstructed; per-seed sampled streams and exact target totals matched. All 63 initial/best/last checkpoint payloads/hashes checked. Same-capacity initial tensors matched across conditions.
+- Compact numerical records: `results/EXP-0008/`, `results/EXP-0009/`, `results/EXP-0010/`; supervisor manifests/status/resources/completion integrity and figure: `results/CAMPAIGN-0001/`.
+- Ignored originals and weights: `outputs/EXP-0008`, `outputs/EXP-0009`, `outputs/EXP-0010/campaign`; synthetic corpus: `data/processed/exp0008-blind`. Earlier EXP-0002 and EXP-0004 checkpoints are required for reproducing EXP-0009. Source/corpus/checkpoint identities are recorded; these bulk assets are **not backed up by Git**.
+- Real corpus: official ZL3b, 226 modeling pages, physical-group split 177/24/25, train-only 112-entry vocabulary. Preserve hashes and preprocessing; see [data record](research/DATA.md).
+- Machine: Apple M5 Pro, 64 GB memory; `.venv` Python 3.12.13, PyTorch 2.14.0, NumPy 2.5.3; `uv.lock` retained. MPS is available via the approved outside-sandbox execution path. A sandbox-only unavailable result does not establish absence of the GPU.
 
-```sh
-.venv/bin/python scripts/run_parallel_campaign.py
-.venv/bin/python scripts/run_parallel_campaign.py --execute
-```
+Maximum sampled sum of worker process RSS was 1.5703 GiB; largest recorded EXP-0010 Metal driver sample was 5.757 GiB. These are different, overlapping counters, not additive or total physical-memory peaks. No deadline/resource stop or monitoring failure occurred. The campaign did not exhaust this Mac's RAM; adding parameters merely to fill memory is not supported by these results.
 
-The first command prints the plan; the second runs it. Inspect `outputs/CAMPAIGN-0001/status.json`, per-track `.log` files and `resources.jsonl` for live truth. A missing status means no launch has been recorded there; inspect processes before assuming. The launcher refuses overwriting a nonempty campaign directory. Root must commit/push all source and registrations before execution, then keep tracked files unchanged until every track ends.
+## Reproduction and continuation
 
-All jobs run concurrently on one GPU with2CPUthreads each; MPS allocator high/low fractions0.23/0.18. Total conservative process-RSS guard48GiB. Internal track limits3h/2h/3h, supervisor grace60s, overall8h cap. These are ceilings, not elapsed-time forecasts. Do not change device memory policies globally or use broad process-kill commands. MPS generally needs the approved outside-sandbox tool path.
+See [runbook](RUNBOOK.md) for exact launch/archive/plot commands and required earlier assets. Do not relaunch into populated output directories. The supervisor requires clean published source and tracks three separate process groups, 2 CPU threads/worker, MPS allocator fractions 0.23/0.18, 48 GiB summed-RSS guard, internal 3h/2h/3h limits plus 60s grace, and an 8h campaign cap. Those are ceilings, not measured durations or promises. Keep tracked source frozen while jobs run; preserve any failure before making a newly registered fix.
 
-Outputs: `outputs/EXP-0008`, `outputs/EXP-0009`, `outputs/EXP-0010/campaign`; synthetic data `data/processed/exp0008-blind`; weights/activations/raw text stay ignored. EXP-0010's artificial benchmark is `outputs/EXP-0010/benchmark.json`, estimating44.17minutes training alone before evaluation and shared-GPU contention. Final reports must audit manifests, frozen artifacts, data/checkpoint hashes, matched exposures and all failures before publication. Archive compact reports under `results/`; write results narratives, update notebook/memory/README, commit/push and verify remote agreement.
+All current synthetic final diagnostic pools are now exposed. Adaptive successors require **fresh keys, families and contexts**, with rules/selection criteria frozen before inspecting their answers. Manuscript development data have been consulted repeatedly; preserve the final manuscript holdout for a genuinely frozen claim.
 
-## Important pending review/interpretation constraints
-
-- EXP-0008 extracts predictive clusters, not a complete automaton or plaintext decoder. Neural weights transfer unchanged to evaluation keys, but extraction adapts to unlabeled visible text perkey. Copy/IID key labels denote fresh streams, not different encodings. No claim of zero-shot rule recovery.
-- EXP-0009 must freeze discovery-selected sites before confirmation. All patches remain within the original prefix, with no future labels leaking into pair selection. Effective final-answer steering is insufficient; future consequences and matched controls matter.
-- EXP-0010's full2048-prefix validation subset has only4pages/2leaves. Primary targets span24pages, often with shorter available prefixes. Different target samples must not be compared as if they were training progress.
-- If a job fails integrity/numerical checks, preserve the failure. Source fixes require a new clean published revision and explicit rerun record; do not silently change code under other active jobs.
-- Check actual completion files and processes after an interruption. The earlier conversation's statement that a handoff was already ready was not verified at that time; this file is the actual maintained handoff.
+The most useful proposed next direction is explicit, reusable probabilistic update rules tested on unfamiliar encodings and **joint future sequences**, compared with observed-text baselines. Separate possibilities are narrower causal interventions and careful boundary/recency isolation. These are proposals, not implemented findings or scheduled jobs. [Predictive-rule review](research/PREDICTIVE_RULES.md) and [Belief Net review](research/BELIEF_NET_REVIEW.md) were added after campaign registration and did not change any running method. Read their applicability limits before using them. [Backlog](research/BACKLOG.md) and [hypothesis registry](research/HYPOTHESES.md) record open questions; all historical hypotheses remain unresolved.

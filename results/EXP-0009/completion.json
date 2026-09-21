@@ -1,0 +1,250 @@
+{
+  "experiment": "EXP-0009",
+  "jobs_completed": 7,
+  "results": [
+    {
+      "kind": "synthetic",
+      "seed": 42,
+      "selected": "L0-mlp-all128",
+      "selected_site": {
+        "layer": 0,
+        "kind": "mlp",
+        "region": "all128",
+        "head": null
+      },
+      "selection_metric": "Discovery equal-group primary loss averaged over horizons 2 and 4",
+      "confirmation_gain_by_horizon": [
+        0.7313181161880493,
+        0.5738596320152283,
+        0.16548585891723633,
+        0.00017649431538302451
+      ],
+      "random_margin_by_horizon": [
+        0.5985010862350464,
+        0.43480440974235535,
+        0.09916666895151138,
+        -3.6191118852002546e-05
+      ],
+      "wrong_donor_margin_by_horizon": [
+        0.7102170586585999,
+        0.5516180396080017,
+        0.16309915482997894,
+        0.00017688101797830313
+      ],
+      "meets_registered_practical_threshold": true,
+      "meaning": "Future causal mediation under this intervention, not a complete state machine or historical circuit.",
+      "report_path": "outputs/EXP-0009/synthetic-seed42.json",
+      "report_sha256": "6e596188d3cd3494330189282dca019fdeb6fe8c68d82a11800d483e900fb0d0"
+    },
+    {
+      "kind": "synthetic",
+      "seed": 43,
+      "selected": "L0-mlp-all128",
+      "selected_site": {
+        "layer": 0,
+        "kind": "mlp",
+        "region": "all128",
+        "head": null
+      },
+      "selection_metric": "Discovery equal-group primary loss averaged over horizons 2 and 4",
+      "confirmation_gain_by_horizon": [
+        0.9162807464599609,
+        0.6780965924263,
+        0.17045626044273376,
+        0.00018183553765993565
+      ],
+      "random_margin_by_horizon": [
+        0.8076350688934326,
+        0.570387065410614,
+        0.1120552271604538,
+        0.000225370007683523
+      ],
+      "wrong_donor_margin_by_horizon": [
+        0.8910953402519226,
+        0.6456810832023621,
+        0.16689589619636536,
+        0.00014948780881240964
+      ],
+      "meets_registered_practical_threshold": true,
+      "meaning": "Future causal mediation under this intervention, not a complete state machine or historical circuit.",
+      "report_path": "outputs/EXP-0009/synthetic-seed43.json",
+      "report_sha256": "90c2679d35aae3204f45ba541e9132ea000ecda90aca3f95a263cdf7f2cea1e1"
+    },
+    {
+      "kind": "synthetic",
+      "seed": 44,
+      "selected": "L0-mlp-recent8",
+      "selected_site": {
+        "layer": 0,
+        "kind": "mlp",
+        "region": "recent8",
+        "head": null
+      },
+      "selection_metric": "Discovery equal-group primary loss averaged over horizons 2 and 4",
+      "confirmation_gain_by_horizon": [
+        0.987981915473938,
+        0.7235574126243591,
+        0.15189968049526215,
+        0.0005369001883082092
+      ],
+      "random_margin_by_horizon": [
+        0.8531232476234436,
+        0.5833768844604492,
+        0.08898404985666275,
+        0.0004630636249203235
+      ],
+      "wrong_donor_margin_by_horizon": [
+        0.9663949608802795,
+        0.697170078754425,
+        0.14974860846996307,
+        0.0005488339229486883
+      ],
+      "meets_registered_practical_threshold": true,
+      "meaning": "Future causal mediation under this intervention, not a complete state machine or historical circuit.",
+      "report_path": "outputs/EXP-0009/synthetic-seed44.json",
+      "report_sha256": "477b7c4cc01857ba4ad019cb6b47f4513b5a4176540d96c352a53a708a441f6b"
+    },
+    {
+      "kind": "synthetic_untrained",
+      "seed": 42,
+      "selected": "L0-head1-all128",
+      "selected_site": {
+        "layer": 0,
+        "kind": "head",
+        "region": "all128",
+        "head": 1
+      },
+      "selection_metric": "Discovery equal-group primary loss averaged over horizons 2 and 4",
+      "confirmation_gain_by_horizon": [
+        -0.0008999933488667011,
+        -0.0005296213203109801,
+        0.00010695017408579588,
+        0.00021658468176610768
+      ],
+      "random_margin_by_horizon": [
+        -0.0008824325632303953,
+        -0.0005522017017938197,
+        1.6441583284176886e-05,
+        0.00015956588322296739
+      ],
+      "wrong_donor_margin_by_horizon": [
+        -0.001435755519196391,
+        -0.0006992702255956829,
+        0.00010574233601801097,
+        0.0004205287550576031
+      ],
+      "meets_registered_practical_threshold": false,
+      "meaning": "Future causal mediation under this intervention, not a complete state machine or historical circuit.",
+      "report_path": "outputs/EXP-0009/synthetic_untrained-seed42.json",
+      "report_sha256": "2d2e460df6228d5a610e9b3396086494dddb0d7a6742b1535a80b2f3e6925b1d"
+    },
+    {
+      "kind": "manuscript",
+      "seed": 42,
+      "selected": "L0-mlp-all128",
+      "selected_site": {
+        "layer": 0,
+        "kind": "mlp",
+        "region": "all128",
+        "head": null
+      },
+      "selection_metric": "Discovery equal-group primary loss averaged over horizons 2 and 4",
+      "confirmation_gain_by_horizon": [
+        0.03974703699350357,
+        0.022278297692537308,
+        0.0025475702714174986,
+        0.02396504022181034
+      ],
+      "random_margin_by_horizon": [
+        0.04134639352560043,
+        0.015294956043362617,
+        0.0009487207280471921,
+        0.013335342518985271
+      ],
+      "wrong_donor_margin_by_horizon": [
+        0.9926684498786926,
+        0.21961931884288788,
+        0.09776659309864044,
+        0.04799150303006172
+      ],
+      "meets_registered_practical_threshold": false,
+      "meaning": "Future causal mediation under this intervention, not a complete state machine or historical circuit.",
+      "report_path": "outputs/EXP-0009/manuscript-seed42.json",
+      "report_sha256": "0ac524573b9f84af170e2bbac44f15c7b0c5f1f8a61f99d298f6a56fc3cec5d2"
+    },
+    {
+      "kind": "manuscript",
+      "seed": 43,
+      "selected": "L0-mlp-all128",
+      "selected_site": {
+        "layer": 0,
+        "kind": "mlp",
+        "region": "all128",
+        "head": null
+      },
+      "selection_metric": "Discovery equal-group primary loss averaged over horizons 2 and 4",
+      "confirmation_gain_by_horizon": [
+        0.051540620625019073,
+        0.005040989723056555,
+        0.0084993289783597,
+        0.03008643351495266
+      ],
+      "random_margin_by_horizon": [
+        0.04917234554886818,
+        -0.0035560273099690676,
+        0.010075559839606285,
+        0.013692582026124
+      ],
+      "wrong_donor_margin_by_horizon": [
+        1.0065120458602905,
+        0.19731102883815765,
+        0.09146920591592789,
+        0.0296955443918705
+      ],
+      "meets_registered_practical_threshold": false,
+      "meaning": "Future causal mediation under this intervention, not a complete state machine or historical circuit.",
+      "report_path": "outputs/EXP-0009/manuscript-seed43.json",
+      "report_sha256": "92a3967c69fed2cc70697ea66d3b77e5ced385033e00b766be3bb3078c659300"
+    },
+    {
+      "kind": "manuscript",
+      "seed": 44,
+      "selected": "L0-head0-all128",
+      "selected_site": {
+        "layer": 0,
+        "kind": "head",
+        "region": "all128",
+        "head": 0
+      },
+      "selection_metric": "Discovery equal-group primary loss averaged over horizons 2 and 4",
+      "confirmation_gain_by_horizon": [
+        0.003231644630432129,
+        -0.0010632755002006888,
+        0.0005399406072683632,
+        0.00420418381690979
+      ],
+      "random_margin_by_horizon": [
+        0.005960390903055668,
+        0.0006851543439552188,
+        0.0010541088413447142,
+        0.003897520247846842
+      ],
+      "wrong_donor_margin_by_horizon": [
+        0.037177834659814835,
+        0.02019612491130829,
+        0.012543420307338238,
+        0.011037913151085377
+      ],
+      "meets_registered_practical_threshold": false,
+      "meaning": "Future causal mediation under this intervention, not a complete state machine or historical circuit.",
+      "report_path": "outputs/EXP-0009/manuscript-seed44.json",
+      "report_sha256": "ba9348f7e36f76360c8b47fcf84c83cb5b58e6c56b84736d19bc0cc279b3720f"
+    }
+  ],
+  "elapsed_seconds": 240.83954487508163,
+  "peak_process_rss_bytes": 529235968,
+  "test_evaluated": false,
+  "paid_api_calls": 0,
+  "synthetic_all_trained_seeds_pass": true,
+  "manuscript_all_seeds_pass": false
+}

@@ -1,0 +1,645 @@
+{
+  "experiment": "EXP-0010",
+  "completion": {
+    "experiment": "EXP-0010",
+    "runs_completed": 21,
+    "runs_planned": 21,
+    "all_runs_finished": true,
+    "elapsed_seconds": 3273.2730070829857,
+    "test_evaluated": false,
+    "source_unchanged": true,
+    "source_git_commit_unchanged": true,
+    "total_scored_training_tokens": 88088063,
+    "total_updates": 25200,
+    "process_max_rss_bytes": 819118080,
+    "mps_current_allocated_bytes": 0,
+    "mps_driver_allocated_bytes": 161153024,
+    "mps_recommended_max_bytes": 55662788608
+  },
+  "comparisons": {
+    "main-c512-original": {
+      "per_seed": [
+        {
+          "seed": 10111,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.0006732254047771372,
+              "equal_leaf_mean": 0.00921296067754156,
+              "equal_leaf_bootstrap_95": [
+                -0.032670975208347955,
+                0.0554766671827019
+              ],
+              "leaf_means": {
+                "f11": -0.04074134958500508,
+                "f27": -0.0071869333914946765,
+                "f36": -0.046319267712533474,
+                "f37": 0.06058500026119873,
+                "f49": -0.04470946266519604,
+                "f67": -0.0915287496172823,
+                "f73": 0.15150022931629792,
+                "f76": 0.06840981140703661,
+                "f89": -0.008679562015458941,
+                "f111": 0.05079989077785285
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.012640516511055466,
+              "equal_leaf_mean": -0.012640516511055466,
+              "leaf_means": {
+                "f76": -0.022752739780116826,
+                "f111": -0.002528293241994106
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.012538237461437044
+        },
+        {
+          "seed": 10112,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": 0.022356844075450983,
+              "equal_leaf_mean": 0.03271949886402581,
+              "equal_leaf_bootstrap_95": [
+                -0.03789517031111245,
+                0.10569665095259544
+              ],
+              "leaf_means": {
+                "f11": 0.1581554804870393,
+                "f27": 0.23477409343468025,
+                "f36": 0.1589525183517253,
+                "f37": -0.10981328110210598,
+                "f49": -0.013017758501518983,
+                "f67": 0.020657427288824692,
+                "f73": 0.05054381661466323,
+                "f76": -0.13612500069575617,
+                "f89": -0.07957028702367097,
+                "f111": 0.0426379797863774
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": 0.010295890140696429,
+              "equal_leaf_mean": 0.010295890140696429,
+              "leaf_means": {
+                "f76": -0.020236409589415416,
+                "f111": 0.040828189870808274
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": -0.002934004183164992
+        },
+        {
+          "seed": 10113,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.020364655617110355,
+              "equal_leaf_mean": -0.023341854779573623,
+              "equal_leaf_bootstrap_95": [
+                -0.10208790095783116,
+                0.048100368982140936
+              ],
+              "leaf_means": {
+                "f11": 0.1489421596743341,
+                "f27": -0.10477420579991303,
+                "f36": -0.2369852483170689,
+                "f37": 0.12551705382065848,
+                "f49": 0.08883276026608655,
+                "f67": -0.0331054498674348,
+                "f73": -0.18396407237742096,
+                "f76": -0.023333592147537274,
+                "f89": 0.022148130257846788,
+                "f111": -0.036696083305287175
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": 0.014497512348498276,
+              "equal_leaf_mean": 0.014497512348498276,
+              "leaf_means": {
+                "f76": -0.02466679844656028,
+                "f111": 0.05366182314355683
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.012332106385656516
+        }
+      ],
+      "mean_gain_primary_bits": 0.00043965435118782994,
+      "registered_context_signal": false
+    },
+    "main-c1024-original": {
+      "per_seed": [
+        {
+          "seed": 10111,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.039056122518862445,
+              "equal_leaf_mean": -0.025938658567611128,
+              "equal_leaf_bootstrap_95": [
+                -0.07770464520317545,
+                0.02929395504515914
+              ],
+              "leaf_means": {
+                "f11": -0.11892143776640296,
+                "f27": 0.03819681913591921,
+                "f36": -0.09967826560023241,
+                "f37": 0.03622029384132475,
+                "f49": -0.08968500057380879,
+                "f67": -0.14380444612470455,
+                "f73": 0.11180453607812524,
+                "f76": 0.0805646961016464,
+                "f89": -0.06548243842553347,
+                "f111": -0.008601342342444696
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.012205752217596455,
+              "equal_leaf_mean": -0.012205752217596455,
+              "leaf_means": {
+                "f76": -0.06542582833208144,
+                "f111": 0.04101432389688853
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.03188085237464596
+        },
+        {
+          "seed": 10112,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.021409523730350582,
+              "equal_leaf_mean": -0.01450412503181724,
+              "equal_leaf_bootstrap_95": [
+                -0.06708939146215927,
+                0.04067767992735749
+              ],
+              "leaf_means": {
+                "f11": 0.11249687094823457,
+                "f27": 0.12998044560663402,
+                "f36": 0.07346130658697803,
+                "f37": -0.16344665351789445,
+                "f49": -0.05404692605952732,
+                "f67": -0.07872631290229037,
+                "f73": -0.01211945159593597,
+                "f76": -0.07461327268538298,
+                "f89": -0.033146721543744206,
+                "f111": -0.044880535155243706
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": 0.010648197611772048,
+              "equal_leaf_mean": 0.010648197611772048,
+              "leaf_means": {
+                "f76": 0.004778290283866227,
+                "f111": 0.01651810493967787
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": -0.004269375642252271
+        },
+        {
+          "seed": 10113,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": 0.025139143865393027,
+              "equal_leaf_mean": 0.02652726584383345,
+              "equal_leaf_bootstrap_95": [
+                -0.029236458887862683,
+                0.09258084362015319
+              ],
+              "leaf_means": {
+                "f11": 0.24856304475542856,
+                "f27": -0.03395614860346541,
+                "f36": -0.0623980869204388,
+                "f37": 0.010593070939648896,
+                "f49": 0.10116694174212171,
+                "f67": 0.07716239267028868,
+                "f73": -0.05399102543015033,
+                "f76": 0.08316427813406335,
+                "f89": -0.040765324723906815,
+                "f111": -0.06426648412525537
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": 0.003771576803046628,
+              "equal_leaf_mean": 0.003771576803046628,
+              "leaf_means": {
+                "f76": -0.012985246226890013,
+                "f111": 0.02052839983298327
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.01807465021556709
+        }
+      ],
+      "mean_gain_primary_bits": -0.011775500794606666,
+      "registered_context_signal": false
+    },
+    "main-c2048-original": {
+      "per_seed": [
+        {
+          "seed": 10111,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.007303373345469784,
+              "equal_leaf_mean": 0.006925396853330312,
+              "equal_leaf_bootstrap_95": [
+                -0.046693742207553436,
+                0.06268962932492284
+              ],
+              "leaf_means": {
+                "f11": -0.017505873416666873,
+                "f27": 0.0035132870252709836,
+                "f36": -0.11833456845488399,
+                "f37": 0.015695149777457118,
+                "f49": 0.12405167221004376,
+                "f67": -0.11050181381870061,
+                "f73": 0.002200627524871379,
+                "f76": 0.17446039635979105,
+                "f89": -0.04639263486023992,
+                "f111": 0.04206772618636023
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": 0.028527726904030715,
+              "equal_leaf_mean": 0.028527726904030715,
+              "leaf_means": {
+                "f76": 0.027615295228315517,
+                "f111": 0.029440158579745912
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.03891579720584559
+        },
+        {
+          "seed": 10112,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.04575973605460604,
+              "equal_leaf_mean": -0.033160819693875965,
+              "equal_leaf_bootstrap_95": [
+                -0.10176954195216241,
+                0.044861654450178264
+              ],
+              "leaf_means": {
+                "f11": -0.05795849923742935,
+                "f27": 0.2199123944155872,
+                "f36": -0.11248057008197065,
+                "f37": -0.1427149623632431,
+                "f49": -0.08855339240108151,
+                "f67": -0.1931785540364217,
+                "f73": 0.10119532071985304,
+                "f76": 0.009289203400840051,
+                "f89": -0.024330081680091098,
+                "f111": -0.04278905567480251
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": 0.009269337466321304,
+              "equal_leaf_mean": 0.009269337466321304,
+              "leaf_means": {
+                "f76": -0.017833334917668253,
+                "f111": 0.03637200985031086
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.030330086308519338
+        },
+        {
+          "seed": 10113,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.05151902979650913,
+              "equal_leaf_mean": -0.049458463486735126,
+              "equal_leaf_bootstrap_95": [
+                -0.12499151060288569,
+                0.026539997658119194
+              ],
+              "leaf_means": {
+                "f11": -0.03930408930318663,
+                "f27": -0.07057927874848247,
+                "f36": -0.1466147031824221,
+                "f37": -0.00338422367349267,
+                "f49": 0.09796969027229352,
+                "f67": -0.06327884846541565,
+                "f73": -0.28929156658705324,
+                "f76": 0.19524115375679685,
+                "f89": -0.060364874225342646,
+                "f111": -0.11497789471104625
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.018013503035945178,
+              "equal_leaf_mean": -0.018013503035945178,
+              "leaf_means": {
+                "f76": -0.0024600189353805035,
+                "f111": -0.03356698713650985
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.029871665348158178
+        }
+      ],
+      "mean_gain_primary_bits": -0.03486071306552832,
+      "registered_context_signal": false
+    },
+    "compact-c2048-original": {
+      "per_seed": [
+        {
+          "seed": 10111,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.04760583511476094,
+              "equal_leaf_mean": -0.03986498806916643,
+              "equal_leaf_bootstrap_95": [
+                -0.06762607565528014,
+                -0.011723663814955232
+              ],
+              "leaf_means": {
+                "f11": -0.09425915802421514,
+                "f27": -0.08867978089256212,
+                "f36": -0.03484891635889653,
+                "f37": 0.03029000572860241,
+                "f49": -0.02370438034995459,
+                "f67": -0.09899958811001852,
+                "f73": -0.023458599811419845,
+                "f76": 0.02793628125800751,
+                "f89": -0.07362055257544853,
+                "f111": -0.019305191555758938
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.0020898260936519364,
+              "equal_leaf_mean": -0.0020898260936519364,
+              "leaf_means": {
+                "f76": -0.0005851975292898715,
+                "f111": -0.0035944546580140013
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.01805624288317631
+        },
+        {
+          "seed": 10112,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.017964842446114442,
+              "equal_leaf_mean": -0.029982383199239848,
+              "equal_leaf_bootstrap_95": [
+                -0.07524329687432328,
+                0.012854089132288183
+              ],
+              "leaf_means": {
+                "f11": -0.07632419871515594,
+                "f27": 0.012329372053500265,
+                "f36": -0.16220561815134715,
+                "f37": 0.030615341966040432,
+                "f49": 0.008654517092509195,
+                "f67": 0.07419072417542338,
+                "f73": -0.0866165867773816,
+                "f76": 0.016978899693640415,
+                "f89": 0.010054998463601805,
+                "f111": -0.12750128179322928
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.05628611655993154,
+              "equal_leaf_mean": -0.05628611655993154,
+              "leaf_means": {
+                "f76": -0.04025127299246378,
+                "f111": -0.0723209601273993
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.01645695840246238
+        },
+        {
+          "seed": 10113,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.0264935972678965,
+              "equal_leaf_mean": -0.034804320508919774,
+              "equal_leaf_bootstrap_95": [
+                -0.08183458305149544,
+                0.003702764791223668
+              ],
+              "leaf_means": {
+                "f11": 0.0319894715648843,
+                "f27": -0.034171042148955166,
+                "f36": -0.1595982210856164,
+                "f37": 0.020867898303549737,
+                "f49": 0.035465958397253416,
+                "f67": 0.020755598379764706,
+                "f73": -0.15169890807010233,
+                "f76": -0.04195337551573175,
+                "f89": 0.009364439494675025,
+                "f111": -0.07906502440891927
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.08259070289295778,
+              "equal_leaf_mean": -0.08259070289295778,
+              "leaf_means": {
+                "f76": -0.09992888238048181,
+                "f111": -0.06525252340543375
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.011893823203839323
+        }
+      ],
+      "mean_gain_primary_bits": -0.03068809160959063,
+      "registered_context_signal": false
+    },
+    "main-c2048-merge_locus_boundary": {
+      "per_seed": [
+        {
+          "seed": 10111,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.0560827860305532,
+              "equal_leaf_mean": -0.08261924631369766,
+              "equal_leaf_bootstrap_95": [
+                -0.16584482504968037,
+                0.011986102106839085
+              ],
+              "leaf_means": {
+                "f11": -0.17102080368204042,
+                "f27": -0.15664918639231473,
+                "f36": -0.07625210340484045,
+                "f37": 0.04434911272255704,
+                "f49": -0.2827564745530253,
+                "f67": 0.22368719631049316,
+                "f73": -0.25415388331748545,
+                "f76": 0.00602365563827334,
+                "f89": -0.07048816554015502,
+                "f111": -0.08893181091843871
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.1036268785919674,
+              "equal_leaf_mean": -0.1036268785919674,
+              "leaf_means": {
+                "f76": -0.1195742437557783,
+                "f111": -0.0876795134281565
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.024814853692684363
+        },
+        {
+          "seed": 10112,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.0011028148752908844,
+              "equal_leaf_mean": -0.02830634135461878,
+              "equal_leaf_bootstrap_95": [
+                -0.10603000665571016,
+                0.07582977662259507
+              ],
+              "leaf_means": {
+                "f11": -0.05028883878549095,
+                "f27": -0.23251833667745814,
+                "f36": -0.01648259577632416,
+                "f37": -0.0412741515901871,
+                "f49": -0.0468317524791928,
+                "f67": 0.3578257456829306,
+                "f73": -0.12065426795743406,
+                "f76": 0.06733165771584027,
+                "f89": -0.08799611064023338,
+                "f111": -0.11217476303863805
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.07719358766098594,
+              "equal_leaf_mean": -0.07719358766098594,
+              "leaf_means": {
+                "f76": -0.07656474565737881,
+                "f111": -0.07782242966459307
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.03162225993340447
+        },
+        {
+          "seed": 10113,
+          "gain_bits_reference_minus_treatment": {
+            "primary": {
+              "sample_mean": -0.049473133596620755,
+              "equal_leaf_mean": -0.05939370410487754,
+              "equal_leaf_bootstrap_95": [
+                -0.11480009284052357,
+                -0.006369966461479654
+              ],
+              "leaf_means": {
+                "f11": 0.011315666255541146,
+                "f27": -0.1472452815505676,
+                "f36": -0.23925306099408772,
+                "f37": -0.022392045648302883,
+                "f49": -0.13060042931465432,
+                "f67": 0.027968707523541525,
+                "f73": 0.07689491659402847,
+                "f76": -0.09159528729651356,
+                "f89": -0.02770926963421516,
+                "f111": -0.05132095698354533
+              },
+              "leaf_count": 10,
+              "target_count": 384
+            },
+            "full2048": {
+              "sample_mean": -0.01690027151016693,
+              "equal_leaf_mean": -0.01690027151016693,
+              "leaf_means": {
+                "f76": -0.07975267613073811,
+                "f111": 0.04595213311040425
+              },
+              "leaf_count": 2,
+              "target_count": 128,
+              "uncertainty_note": "Only two leaf groups; no interval-based generalization claim."
+            }
+          },
+          "within_treatment_gain_full_vs_cap256": 0.029728972098382656
+        }
+      ],
+      "mean_gain_primary_bits": -0.03555291150082161,
+      "registered_context_signal": false
+    }
+  },
+  "manifest_sha256": "7e15c41e5e0899d736f3c3edc743bb2c35c14268731caeffd38ef4d01057c271",
+  "test_evaluated": false,
+  "limitations": [
+    "Development validation, repeatedly exposed in prior work; not a final test.",
+    "Full2048 coverage has only four pages from two leaf groups.",
+    "Exposure matched; computation differs and concurrent wall time is noisy.",
+    "Locus separators are transcription record boundaries, not uniformly physical lines.",
+    "No translations or historical production mechanism inferred."
+  ]
+}

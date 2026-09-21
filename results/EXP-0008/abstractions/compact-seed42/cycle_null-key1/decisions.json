@@ -1,0 +1,122 @@
+{
+  "residual": {
+    "candidates": [
+      {
+        "count": 1,
+        "validation_bits_mean_three_horizons": 3.597564540030928,
+        "per_horizon_bits": [
+          3.6011167218466364,
+          3.591941519069162,
+          3.5996353791769753
+        ]
+      },
+      {
+        "count": 2,
+        "validation_bits_mean_three_horizons": 3.593927280922474,
+        "per_horizon_bits": [
+          3.580548960522638,
+          3.5903615887005698,
+          3.610871293544198
+        ]
+      },
+      {
+        "count": 4,
+        "validation_bits_mean_three_horizons": 3.571278459673612,
+        "per_horizon_bits": [
+          3.5364269401938944,
+          3.566504226465988,
+          3.610904212360957
+        ]
+      },
+      {
+        "count": 8,
+        "validation_bits_mean_three_horizons": 3.5234339968636568,
+        "per_horizon_bits": [
+          3.446197911434075,
+          3.5282555454062607,
+          3.595848533750622
+        ]
+      },
+      {
+        "count": 16,
+        "validation_bits_mean_three_horizons": 3.504401827605907,
+        "per_horizon_bits": [
+          3.37202670036177,
+          3.506557232531934,
+          3.634621549924016
+        ]
+      },
+      {
+        "count": 32,
+        "validation_bits_mean_three_horizons": 3.5522777487197765,
+        "per_horizon_bits": [
+          3.429335198337046,
+          3.5471522479234823,
+          3.680345799898794
+        ]
+      }
+    ],
+    "selected_count": 16,
+    "selection": "smallest count within 0.01 bits of minimum validation mean(h1,h2,h3)"
+  },
+  "forecast": {
+    "candidates": [
+      {
+        "count": 1,
+        "validation_bits_mean_three_horizons": 3.597564540030928,
+        "per_horizon_bits": [
+          3.6011167218466364,
+          3.591941519069162,
+          3.5996353791769753
+        ]
+      },
+      {
+        "count": 2,
+        "validation_bits_mean_three_horizons": 3.558074015791617,
+        "per_horizon_bits": [
+          3.519784355813073,
+          3.5603329098434724,
+          3.594104781718294
+        ]
+      },
+      {
+        "count": 4,
+        "validation_bits_mean_three_horizons": 3.5522129487572816,
+        "per_horizon_bits": [
+          3.483085110307615,
+          3.5671139033103705,
+          3.6064398326538374
+        ]
+      },
+      {
+        "count": 8,
+        "validation_bits_mean_three_horizons": 3.5260003299974834,
+        "per_horizon_bits": [
+          3.4112413249262246,
+          3.5594137956000815,
+          3.6073458694661538
+        ]
+      },
+      {
+        "count": 16,
+        "validation_bits_mean_three_horizons": 3.534495210961408,
+        "per_horizon_bits": [
+          3.400959210193671,
+          3.5303901848398644,
+          3.6721362378506663
+        ]
+      },
+      {
+        "count": 32,
+        "validation_bits_mean_three_horizons": 3.551016432777559,
+        "per_horizon_bits": [
+          3.3892198109127514,
+          3.5594643364899263,
+          3.7043651509299935
+        ]
+      }
+    ],
+    "selected_count": 8,
+    "selection": "smallest count within 0.01 bits of minimum validation mean(h1,h2,h3)"
+  }
+}

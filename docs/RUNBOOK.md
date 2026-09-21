@@ -112,3 +112,49 @@ UV_CACHE_DIR=/private/tmp/voynich-plot-cache MPLCONFIGDIR=/private/tmp/voynich-m
 ```
 
 This round used MPS and no paid services. The 14 alignment fits took 42.17 seconds, with 1.32 GB peak process RSS reported; this does not independently measure total GPU allocations. See each results narrative for the limits of timing, inference and comparisons.
+
+## Completed parallel campaign: EXP-0008 / EXP-0009 / EXP-0010
+
+CAMPAIGN-0001 completed all three tracks on clean published source `72f632804a162009b488e6de5d8550493670f937`. Results are in `docs/experiments/CAMPAIGN-0001-results.md`. The following records the launch commands; **the current destinations are populated, so do not rerun them in place**:
+
+```sh
+.venv/bin/python scripts/run_parallel_campaign.py
+.venv/bin/python scripts/run_parallel_campaign.py --execute
+```
+
+The first prints the argument arrays and budgets without launching; the second requires a clean tree and starts three isolated worker process groups. `configs/campaign-0001.json` specifies the exact inputs/outputs and finite limits. A new supervisor output directory alone is insufficient: the job-specific destinations and synthetic-data root must also be fresh. For a new experiment, register and publish those changes before running; for reproduction, use an isolated checkout with the recorded scientific source and required assets. Never overwrite the original corpus, outputs or archives.
+
+Prerequisites are the locked `.venv`, prepared ZL3b corpus, and the recorded EXP-0002 compact and EXP-0004 structured-synthetic initial/best checkpoints used by EXP-0009. Git does not contain these checkpoints. Recreate them with their original registrations or obtain the trusted local assets and verify recorded hashes. EXP-0008 generates its own visible/hidden synthetic corpus. Its fitting path must not consume sealed truth before every extraction artifact is frozen; future adaptive research requires new held-out keys/families rather than reusing exposed final diagnostics.
+
+All workers use MPS, two CPU threads each and allocator high/low fractions 0.23/0.18. The supervisor watches the sum of process-group RSS against 48 GiB, internal track budgets of 3h/2h/3h with 60s supervisor grace, and an 8h campaign cap. These are ceilings. MPS/process monitoring uses the environment's approved outside-sandbox execution path. Scope any termination to the recorded process groups; do not kill unrelated workloads.
+
+Live status, manifests, per-track logs and five-second resource samples are under `outputs/CAMPAIGN-0001/`. Actual track outputs are `outputs/EXP-0008`, `outputs/EXP-0009` and `outputs/EXP-0010/campaign`; synthetic data is `data/processed/exp0008-blind`. Keep tracked files unchanged until **every** worker stops. Capture completion integrity before editing any tracked documentation:
+
+```sh
+.venv/bin/python scripts/archive_parallel_campaign.py --capture-completion
+```
+
+For this historical run the same capture helper was staged under ignored `outputs/CAMPAIGN-0001/` until completion, then published under `scripts/`. Capture checks the current clean source against the launch manifest. It is expected to reject the later documentation/results working tree; do not recapture historical integrity from a different revision.
+
+The completed-run archival commands were:
+
+```sh
+.venv/bin/python scripts/archive_blind_recovery.py --destination results/EXP-0008
+.venv/bin/python scripts/archive_causal_mapping.py --destination results/EXP-0009
+.venv/bin/python scripts/run_long_context.py archive --source outputs/EXP-0010/campaign --destination results/EXP-0010
+.venv/bin/python scripts/archive_parallel_campaign.py
+```
+
+Use empty destinations. These helpers audit this exact registered campaign; they do not fit models or silently repair failed runs. EXP-0008 checks all frozen files/datasets/selected weights and performs post-run key-equivalence diagnostics. EXP-0009 rederives aggregates/selections/controls from ignored per-pair arrays. EXP-0010 verifies complete conditions, source/data/weights/exposure and retains every endpoint. Campaign archival checks original log hashes and historical source blobs. It also expects the original ignored context benchmark and `/private/tmp/voynich-exp0008-benchmark.log`; their compact results and digests are already in the published archive if temporary files later disappear. Preserve failures separately rather than using these completion-only helpers to relabel them as success.
+
+Weights, raw text, activation arrays, sealed truth and original logs remain local/ignored. Compact JSON, audit records and the overview are tracked.
+
+The exact supplemental EXP-0010 coordinate/exposure audit is preserved as `results/EXP-0010/independent-audit-source.py`. Run from the repository root with ordinary `.venv/bin/python` (not `-O`), original local data/weights and an existing `outputs/EXP-0010/audit-draft/` directory; it writes only ignored `audit.json`. Its count field counts available summaries, so it is a historical check, not a generic completion gate. The additional 63-payload checkpoint audit was an inline restricted `torch.load(..., weights_only=True)` inspection; its JSON report is retained, but no separate script provenance is claimed.
+
+Regenerate the figure from the compact results without changing training dependencies:
+
+```sh
+UV_CACHE_DIR=/private/tmp/voynich-plot-cache MPLCONFIGDIR=/private/tmp/voynich-mpl uv run --offline --no-project --python .venv/bin/python --with matplotlib==3.10.0 python scripts/plot_parallel_campaign.py
+```
+
+The offline command requires the existing cached plotting environment; a fresh machine must first install the specified plotting dependency. Visually inspect the generated PNG/SVG. Scores across the figure's panels have different denominators; lower prediction loss, causal intervention effects and cluster agreement are not decipherment accuracy. No manuscript final-test scores were used in this campaign.

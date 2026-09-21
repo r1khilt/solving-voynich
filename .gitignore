@@ -26,6 +26,13 @@ checkpoints/
 models/
 outputs/
 runs/
+# Only the audited compact per-run reports belong in this result archive.
+!results/EXP-0010/runs/
+results/EXP-0010/runs/**
+!results/EXP-0010/runs/*/
+!results/EXP-0010/runs/*/manifest.json
+!results/EXP-0010/runs/*/history.json
+!results/EXP-0010/runs/*/summary.json
 wandb/
 *.safetensors
 *.pt

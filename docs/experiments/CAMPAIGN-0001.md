@@ -2,6 +2,8 @@
 
 Registered 2026-09-21 UTC. The user explicitly authorized all three proposals in parallel and agent delegation. This document coordinates execution; each scientific question, source review, controls and decision criteria lives in its experiment registration.
 
+**Completed:** all three tracks finished normally on unchanged clean source `72f6328`; see the [results and audit](CAMPAIGN-0001-results.md). The registration below remains the original design.
+
 | Track | Experiment | Work |
 | --- | --- | --- |
 | Blind recovery | EXP-0008 | Infer predictive states from visible synthetic text/activations without using latent truth for fitting or selection; evaluate unseen keys and a new family. |

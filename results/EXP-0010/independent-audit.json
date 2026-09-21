@@ -1,0 +1,1857 @@
+{
+  "verified_complete_run_count": 21,
+  "expected_exposure_by_seed": {
+    "10111": {
+      "scored_training_tokens": 4160465,
+      "sampled_block_indices_sha256": "e04652eb47338a9995d2ce0fc3a0021a4df0f5bd975237476753768358fbdc49"
+    },
+    "10112": {
+      "scored_training_tokens": 4188664,
+      "sampled_block_indices_sha256": "fe1aa990beca5d8005dbc540cb0bffafe99d114804f9dd631dacebb2bf217ffe"
+    },
+    "10113": {
+      "scored_training_tokens": 4234880,
+      "sampled_block_indices_sha256": "b1bff4c18ec239d0322f7371e9a3d10c9e1dee8be81500dd53423674bede2d69"
+    }
+  },
+  "source_commit": "72f632804a162009b488e6de5d8550493670f937",
+  "coordinates_and_source_verified": true,
+  "results": {
+    "compact-c2048-original-seed10111": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9324125376066756,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.103191409548435,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.6532442497604705,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.5312630236148834,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.55368710919538,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6234500894926969,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0703565779587496,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.571322411298752,
+          "count": 4
+        }
+      },
+      "seconds": 191.94817262503784,
+      "tokens": 4160465,
+      "cap256_damage_primary": 0.01805624288317631,
+      "remote_shuffle_keep256_damage_primary": -0.005769023299459756
+    },
+    "compact-c2048-original-seed10112": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9376235318134907,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.1029814187805886,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.6766308912254394,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.6931557854016623,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5942882601866586,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6641164966513136,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0114426034624162,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 3.182487815618515,
+          "count": 4
+        }
+      },
+      "seconds": 111.87844662496354,
+      "tokens": 4188664,
+      "cap256_damage_primary": 0.01645695840246238,
+      "remote_shuffle_keep256_damage_primary": 0.006825588766029493
+    },
+    "compact-c2048-original-seed10113": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9168371423947974,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.0780394587502604,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.689110823371943,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.641032189130783,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5961178455327172,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6525435025001516,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0383272616435653,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 3.378665864467621,
+          "count": 4
+        }
+      },
+      "seconds": 112.71130495797843,
+      "tokens": 4234880,
+      "cap256_damage_primary": 0.011893823203839323,
+      "remote_shuffle_keep256_damage_primary": -0.00026618687600906316
+    },
+    "compact-c256-original-seed10111": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.8848067024919146,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.04580951840659,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.703299632018551,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.2579567432403564,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.551597283101728,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6578280504488636,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0334958800155183,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.8483534753322601,
+          "count": 4
+        }
+      },
+      "seconds": 68.39781358407345,
+      "tokens": 4160465
+    },
+    "compact-c256-original-seed10112": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9196586893673764,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.0795166830052523,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.6994151967637082,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.6594000657399497,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.538002143626727,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6313331227283925,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0301328251219315,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.1016435027122498,
+          "count": 4
+        }
+      },
+      "seconds": 31.107981999986805,
+      "tokens": 4188664
+    },
+    "compact-c256-original-seed10113": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.8903435451269008,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.0640240728674355,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.5756425657012361,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.607458770275116,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5135271426397594,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6133080184595696,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 0.9160739559194316,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.429415851831436,
+          "count": 4
+        }
+      },
+      "seconds": 32.131377959041856,
+      "tokens": 4234880
+    },
+    "main-c1024-original-seed10111": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9563922063656112,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.117607124234209,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.6973483396218495,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.925212860107422,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.497496642106853,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.5979856263274457,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 0.9800283910463685,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.935592234134674,
+          "count": 4
+        }
+      },
+      "seconds": 223.02630633302033,
+      "tokens": 4160465,
+      "cap256_damage_primary": 0.03188085237464596,
+      "remote_shuffle_keep256_damage_primary": 0.014955306608802251
+    },
+    "main-c1024-original-seed10112": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9372000673762766,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.093543238263279,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.7773223445215758,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.3979773024717965,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.4884013253504236,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.5859330037820827,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 0.9572014036061971,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.0801259949803352,
+          "count": 4
+        }
+      },
+      "seconds": 106.87860904203262,
+      "tokens": 4188664,
+      "cap256_damage_primary": -0.004269375642252271,
+      "remote_shuffle_keep256_damage_primary": -0.006206815556045815
+    },
+    "main-c1024-original-seed10113": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.8834389297577825,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.0603146806522483,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.5748955698961273,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.3760496576627097,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.518003178410254,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6110662289487088,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0094071517738958,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.0925883054733276,
+          "count": 4
+        }
+      },
+      "seconds": 108.27468933304772,
+      "tokens": 4234880,
+      "cap256_damage_primary": 0.01807465021556709,
+      "remote_shuffle_keep256_damage_primary": 0.012021963965707982
+    },
+    "main-c2048-merge_locus_boundary-seed10111": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9807222432227718,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.1402816720176037,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.753022618354001,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.795340816179911,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5603900415771932,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6331465308333166,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.055050051568643,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.6289936304092407,
+          "count": 4
+        }
+      },
+      "seconds": 274.7166500000749,
+      "tokens": 4160465,
+      "cap256_damage_primary": 0.024814853692684363,
+      "remote_shuffle_keep256_damage_primary": 0.0009660291913557254
+    },
+    "main-c2048-merge_locus_boundary-seed10112": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.962653094575823,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.1295879845657972,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.7050677888253902,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.6044965585072837,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5669737731568603,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6413602364678304,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0168942456012187,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.8516728579998016,
+          "count": 4
+        }
+      },
+      "seconds": 249.70925816695672,
+      "tokens": 4188664,
+      "cap256_damage_primary": 0.03162225993340447,
+      "remote_shuffle_keep256_damage_primary": 0.007356549447346576
+    },
+    "main-c2048-merge_locus_boundary-seed10113": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 2.0095702370163053,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.1637893392847922,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.8072742332327874,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.9198017915089927,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5566885297594126,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6298635401348076,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0885224334247734,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.4009745717048645,
+          "count": 4
+        }
+      },
+      "seconds": 252.15201541606802,
+      "tokens": 4234880,
+      "cap256_damage_primary": 0.029728972098382656,
+      "remote_shuffle_keep256_damage_primary": 0.011989424594503362
+    },
+    "main-c2048-original-seed10111": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9246394571922185,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.0818834218718507,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.7771168980905985,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.238940785328547,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.4567631629852258,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.5436196325664953,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0889067423894354,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.3788117244839668,
+          "count": 4
+        }
+      },
+      "seconds": 444.4140952921007,
+      "tokens": 4160465,
+      "cap256_damage_primary": 0.03891579720584559,
+      "remote_shuffle_keep256_damage_primary": 0.007615869841174572
+    },
+    "main-c2048-original-seed10112": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.961550279700532,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.1325012138429917,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.6692575909435114,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.6537164747714996,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.4897801854958743,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.5963479630490027,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 0.9641385237969782,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.8213833570480347,
+          "count": 4
+        }
+      },
+      "seconds": 250.91688620799687,
+      "tokens": 4188664,
+      "cap256_damage_primary": 0.030330086308519338,
+      "remote_shuffle_keep256_damage_primary": 0.014360815362730742
+    },
+    "main-c2048-original-seed10113": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9600971034196846,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.140432835054328,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.6585342045477096,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.20715194940567,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5397882582492457,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6608959433857795,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 0.9735650482547024,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.7376026660203934,
+          "count": 4
+        }
+      },
+      "seconds": 249.56790649995673,
+      "tokens": 4234880,
+      "cap256_damage_primary": 0.029871665348158178,
+      "remote_shuffle_keep256_damage_primary": 0.0010800529753396404
+    },
+    "main-c256-original-seed10111": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9173360838467488,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.085943076165894,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.7401514173227739,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.8371302286783855,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.4852908898892565,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.5986605864744357,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0653668709261261,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.0372691601514816,
+          "count": 4
+        }
+      },
+      "seconds": 145.19098900002427,
+      "tokens": 4160465
+    },
+    "main-c256-original-seed10112": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.915790543645926,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.08778462510238,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.6429062628365577,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.3983772496382394,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.4990495229621956,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.586637751048311,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.098716636147836,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.5893608629703522,
+          "count": 4
+        }
+      },
+      "seconds": 56.509875124902464,
+      "tokens": 4188664
+    },
+    "main-c256-original-seed10113": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9085780736231754,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.0633523939068366,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.7216559431733603,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.667751426498095,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5217747552133005,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6202173174259777,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 0.9680909170242755,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.219782128930092,
+          "count": 4
+        }
+      },
+      "seconds": 57.16245149995666,
+      "tokens": 4234880
+    },
+    "main-c512-original-seed10111": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.918009309251526,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.0865380186847835,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.7457797039062419,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.8033074140548706,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.497931406400312,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6128457088512138,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 0.9972237453026616,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.4754143208265305,
+          "count": 4
+        }
+      },
+      "seconds": 166.67831620806828,
+      "tokens": 4160465,
+      "cap256_damage_primary": 0.012538237461437044,
+      "remote_shuffle_keep256_damage_primary": -0.0010109095110237831
+    },
+    "main-c512-original-seed10112": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.893433699570475,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.0576222542795746,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.7656019096203307,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.670380786061287,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.4887536328214992,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.6095534150481758,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 0.9126656775808205,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 1.7510648742318153,
+          "count": 4
+        }
+      },
+      "seconds": 69.02745141705964,
+      "tokens": 4188664,
+      "cap256_damage_primary": -0.002934004183164992,
+      "remote_shuffle_keep256_damage_primary": -0.006470517657362507
+    },
+    "main-c512-original-seed10113": {
+      "steps": 1200,
+      "stop_reason": "step_budget",
+      "primary": {
+        "bits_per_token": 1.9289427292402859,
+        "scored_tokens": 384,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f11r",
+          "f11v",
+          "f27r",
+          "f27v",
+          "f36r",
+          "f36v",
+          "f37r",
+          "f37v",
+          "f49r",
+          "f49v",
+          "f67r1",
+          "f67r2",
+          "f67v1",
+          "f67v2",
+          "f73r",
+          "f73v",
+          "f76r",
+          "f76v",
+          "f89r1",
+          "f89r2",
+          "f89v1",
+          "f89v2"
+        ],
+        "leaves": [
+          "f11",
+          "f111",
+          "f27",
+          "f36",
+          "f37",
+          "f49",
+          "f67",
+          "f73",
+          "f76",
+          "f89"
+        ],
+        "glyph": {
+          "bits_per_token": 2.100734372560309,
+          "count": 331
+        },
+        "space": {
+          "bits_per_token": 0.7077728327997821,
+          "count": 47
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.01760126153628,
+          "count": 6
+        }
+      },
+      "full2048": {
+        "bits_per_token": 1.5072772428648022,
+        "scored_tokens": 128,
+        "pages": [
+          "f111r",
+          "f111v",
+          "f76r",
+          "f76v"
+        ],
+        "leaves": [
+          "f111",
+          "f76"
+        ],
+        "glyph": {
+          "bits_per_token": 1.5884580997851594,
+          "count": 101
+        },
+        "space": {
+          "bits_per_token": 1.0426554024300498,
+          "count": 23
+        },
+        "locus_boundary": {
+          "bits_per_token": 2.1290361881256104,
+          "count": 4
+        }
+      },
+      "seconds": 67.09021512500476,
+      "tokens": 4234880,
+      "cap256_damage_primary": 0.012332106385656516,
+      "remote_shuffle_keep256_damage_primary": 0.0058275491376965265
+    }
+  }
+}

@@ -1,0 +1,988 @@
+[
+  {
+    "size": "compact",
+    "family": "cycle_null",
+    "transfer": "seen_key",
+    "n_model_key_cases": 4,
+    "baselines": {
+      "unigram": 3.594196439207591,
+      "last_symbol": 3.494395955584954,
+      "last_four_backoff": 3.519564200140602,
+      "neural_next_bits": 3.530579149723053,
+      "neural_next_oracle_kl_bits": 0.3842906331497614
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.5264333025778565,
+        "actual_label_ari": 0.14237205123991353,
+        "posterior_map_ari": 0.20648370422559992,
+        "unrecoverable_nuisance_ari": -0.0005991444842540244,
+        "last_symbol_map_ari": 0.21975157883713858,
+        "mean_bits_gain_over_last_symbol": -0.03203734699290228,
+        "per_horizon_oracle_kl_bits": [
+          0.23510626909536625,
+          0.15059711271754173,
+          0.0928965654523606
+        ],
+        "per_horizon_bits": [
+          3.403870766036442,
+          3.5583227770081494,
+          3.6171063646889823
+        ],
+        "predictive_partition_passes": 4,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          8,
+          16,
+          8,
+          16
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.5055695886416376,
+        "actual_label_ari": 0.18564508213345216,
+        "posterior_map_ari": 0.2635493811492514,
+        "unrecoverable_nuisance_ari": -0.00026771668575435595,
+        "last_symbol_map_ari": 0.21975157883713858,
+        "mean_bits_gain_over_last_symbol": -0.011173633056682952,
+        "per_horizon_oracle_kl_bits": [
+          0.21051076615005193,
+          0.13935746568068608,
+          0.08139402017781794
+        ],
+        "per_horizon_bits": [
+          3.3645524122341652,
+          3.5456754436534164,
+          3.6064809100373214
+        ],
+        "predictive_partition_passes": 4,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          16,
+          8,
+          16,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "size": "compact",
+    "family": "cycle_null",
+    "transfer": "unseen_key",
+    "n_model_key_cases": 4,
+    "baselines": {
+      "unigram": 3.5939315925869706,
+      "last_symbol": 3.469761794681473,
+      "last_four_backoff": 3.4972271887611424,
+      "neural_next_bits": 3.5663614869117737,
+      "neural_next_oracle_kl_bits": 0.41944395659036393
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.5225425337629064,
+        "actual_label_ari": 0.10460909459528484,
+        "posterior_map_ari": 0.14938460346748156,
+        "unrecoverable_nuisance_ari": -0.0003995162507212125,
+        "last_symbol_map_ari": 0.21894091864836218,
+        "mean_bits_gain_over_last_symbol": -0.0527807390814331,
+        "per_horizon_oracle_kl_bits": [
+          0.2738641717043007,
+          0.15590741595040022,
+          0.0972025227594956
+        ],
+        "per_horizon_bits": [
+          3.427545899245964,
+          3.5377168591645622,
+          3.6023648428782016
+        ],
+        "predictive_partition_passes": 3,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          16,
+          4,
+          16,
+          16
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.5164406289201677,
+        "actual_label_ari": 0.13010250439124155,
+        "posterior_map_ari": 0.18550114161469905,
+        "unrecoverable_nuisance_ari": -0.0002426683278393836,
+        "last_symbol_map_ari": 0.21894091864836218,
+        "mean_bits_gain_over_last_symbol": -0.046678834238694344,
+        "per_horizon_oracle_kl_bits": [
+          0.2568834160135605,
+          0.15286450332839413,
+          0.09525524858392359
+        ],
+        "per_horizon_bits": [
+          3.3995845468218366,
+          3.5494862233024573,
+          3.6002511166362
+        ],
+        "predictive_partition_passes": 3,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          8,
+          16,
+          16,
+          8
+        ]
+      }
+    }
+  },
+  {
+    "size": "compact",
+    "family": "branch_null",
+    "transfer": "seen_key",
+    "n_model_key_cases": 4,
+    "baselines": {
+      "unigram": 3.5959930000838023,
+      "last_symbol": 3.5447957689082163,
+      "last_four_backoff": 3.5557198506910224,
+      "neural_next_bits": 3.557806074619293,
+      "neural_next_oracle_kl_bits": 0.26408233533428893
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.5861056203952737,
+        "actual_label_ari": 0.15262064044192597,
+        "posterior_map_ari": 0.2538476369279421,
+        "unrecoverable_nuisance_ari": 0.00043215323198936414,
+        "last_symbol_map_ari": 0.36428498650940866,
+        "mean_bits_gain_over_last_symbol": -0.04130985148705757,
+        "per_horizon_oracle_kl_bits": [
+          0.2104429157827618,
+          0.09945501054646702,
+          0.06475086679624699
+        ],
+        "per_horizon_bits": [
+          3.510232049938401,
+          3.6172726369572707,
+          3.6308121742901385
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          8,
+          8,
+          8,
+          4
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.5872240899117047,
+        "actual_label_ari": 0.14284675598850916,
+        "posterior_map_ari": 0.23070554617605837,
+        "unrecoverable_nuisance_ari": 0.00036956622486512716,
+        "last_symbol_map_ari": 0.36428498650940866,
+        "mean_bits_gain_over_last_symbol": -0.04242832100348837,
+        "per_horizon_oracle_kl_bits": [
+          0.217469667277296,
+          0.09848381962812221,
+          0.06051150420100809
+        ],
+        "per_horizon_bits": [
+          3.5152833945018935,
+          3.608225935289239,
+          3.6381629399439817
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          16,
+          2,
+          8,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "size": "compact",
+    "family": "branch_null",
+    "transfer": "unseen_key",
+    "n_model_key_cases": 4,
+    "baselines": {
+      "unigram": 3.595348764283804,
+      "last_symbol": 3.542960126672582,
+      "last_four_backoff": 3.550515063228898,
+      "neural_next_bits": 3.5744293332099915,
+      "neural_next_oracle_kl_bits": 0.27248629460933405
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.59175997298387,
+        "actual_label_ari": 0.04898428223483221,
+        "posterior_map_ari": 0.0898197150105579,
+        "unrecoverable_nuisance_ari": 0.00022178460279039653,
+        "last_symbol_map_ari": 0.3651472640419845,
+        "mean_bits_gain_over_last_symbol": -0.04879984631128775,
+        "per_horizon_oracle_kl_bits": [
+          0.2614956857548527,
+          0.08815317955582386,
+          0.04011711149024927
+        ],
+        "per_horizon_bits": [
+          3.5645703737987002,
+          3.6031091281452534,
+          3.607600417007662
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          4,
+          8
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.5783759271893056,
+        "actual_label_ari": 0.09675806335749992,
+        "posterior_map_ari": 0.1752425347950683,
+        "unrecoverable_nuisance_ari": -2.8577142354052517e-06,
+        "last_symbol_map_ari": 0.3651472640419845,
+        "mean_bits_gain_over_last_symbol": -0.03541580051672377,
+        "per_horizon_oracle_kl_bits": [
+          0.22223064550547708,
+          0.08458931698773589,
+          0.05588062917697161
+        ],
+        "per_horizon_bits": [
+          3.520181612487609,
+          3.5950937161559664,
+          3.6198524529243374
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          4,
+          1,
+          8,
+          16
+        ]
+      }
+    }
+  },
+  {
+    "size": "compact",
+    "family": "copy_lag",
+    "transfer": "fresh_stream_control",
+    "n_model_key_cases": 8,
+    "baselines": {
+      "unigram": 3.5944889893749963,
+      "last_symbol": 3.673478989373212,
+      "last_four_backoff": 3.6707663398753745,
+      "neural_next_bits": 1.3494002223014832,
+      "neural_next_oracle_kl_bits": 0.0019512228312810133
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 2.9641541248341805,
+        "actual_label_ari": 0.7713131190927456,
+        "posterior_map_ari": 0.7713131190927456,
+        "unrecoverable_nuisance_ari": 0.0009850529957396474,
+        "last_symbol_map_ari": -4.780883065660081e-05,
+        "mean_bits_gain_over_last_symbol": 0.7093248645390315,
+        "per_horizon_oracle_kl_bits": [
+          0.14337011747053732,
+          2.376664814997219,
+          2.3823611989729274
+        ],
+        "per_horizon_bits": [
+          1.4917282751060628,
+          3.6976843726804027,
+          3.703049726716078
+        ],
+        "predictive_partition_passes": 8,
+        "beyond_last_symbol_passes": 8,
+        "chosen_counts": [
+          16,
+          16,
+          32,
+          32,
+          32,
+          16,
+          32,
+          32
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 2.962537129055924,
+        "actual_label_ari": 0.8165977138109413,
+        "posterior_map_ari": 0.8165977138109413,
+        "unrecoverable_nuisance_ari": 0.001335705311704705,
+        "last_symbol_map_ari": -4.780883065660081e-05,
+        "mean_bits_gain_over_last_symbol": 0.7109418603172883,
+        "per_horizon_oracle_kl_bits": [
+          0.15921577643454832,
+          2.371996419116133,
+          2.3667943092405044
+        ],
+        "per_horizon_bits": [
+          1.502919137770626,
+          3.6987625980651497,
+          3.6859296513320015
+        ],
+        "predictive_partition_passes": 8,
+        "beyond_last_symbol_passes": 8,
+        "chosen_counts": [
+          16,
+          16,
+          32,
+          32,
+          16,
+          16,
+          32,
+          32
+        ]
+      }
+    }
+  },
+  {
+    "size": "compact",
+    "family": "iid",
+    "transfer": "fresh_stream_control",
+    "n_model_key_cases": 8,
+    "baselines": {
+      "unigram": 3.594412443751746,
+      "last_symbol": 3.6649438180629126,
+      "last_four_backoff": 3.6639384310112746,
+      "neural_next_bits": 3.608563870191574,
+      "neural_next_oracle_kl_bits": 0.020531092993684955
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.594412443751746,
+        "actual_label_ari": 0.0,
+        "posterior_map_ari": 0.0,
+        "unrecoverable_nuisance_ari": 0.0,
+        "last_symbol_map_ari": -0.0006650005550253552,
+        "mean_bits_gain_over_last_symbol": 0.07053137431116618,
+        "per_horizon_oracle_kl_bits": [
+          0.008315529856305019,
+          0.007863220535490892,
+          0.008427264255904988
+        ],
+        "per_horizon_bits": [
+          3.5927838126477347,
+          3.594395935021537,
+          3.5960575835859663
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.594412443751746,
+        "actual_label_ari": 0.0,
+        "posterior_map_ari": 0.0,
+        "unrecoverable_nuisance_ari": 0.0,
+        "last_symbol_map_ari": -0.0006650005550253552,
+        "mean_bits_gain_over_last_symbol": 0.07053137431116618,
+        "per_horizon_oracle_kl_bits": [
+          0.008315529856305019,
+          0.007863220535490892,
+          0.008427264255904988
+        ],
+        "per_horizon_bits": [
+          3.5927838126477347,
+          3.594395935021537,
+          3.5960575835859663
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  {
+    "size": "compact",
+    "family": "rrxor",
+    "transfer": "novel_family",
+    "n_model_key_cases": 8,
+    "baselines": {
+      "unigram": 3.5912235754402664,
+      "last_symbol": 3.665048568253359,
+      "last_four_backoff": 3.661511626921038,
+      "neural_next_bits": 3.6039509177207947,
+      "neural_next_oracle_kl_bits": 0.355736643875416
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.5912235754402664,
+        "actual_label_ari": 0.0,
+        "posterior_map_ari": 0.0,
+        "unrecoverable_nuisance_ari": 0.0,
+        "last_symbol_map_ari": 0.033656092473261914,
+        "mean_bits_gain_over_last_symbol": 0.07382499281309274,
+        "per_horizon_oracle_kl_bits": [
+          0.3463465085214795,
+          0.006787554877359978,
+          0.007609510031814554
+        ],
+        "per_horizon_bits": [
+          3.593394332821504,
+          3.5880602759831133,
+          3.592216117516155
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.5912235754402664,
+        "actual_label_ari": 0.0,
+        "posterior_map_ari": 0.0,
+        "unrecoverable_nuisance_ari": 0.0,
+        "last_symbol_map_ari": 0.033656092473261914,
+        "mean_bits_gain_over_last_symbol": 0.07382499281309274,
+        "per_horizon_oracle_kl_bits": [
+          0.3463465085214795,
+          0.006787554877359978,
+          0.007609510031814554
+        ],
+        "per_horizon_bits": [
+          3.593394332821504,
+          3.5880602759831133,
+          3.592216117516155
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  {
+    "size": "large",
+    "family": "cycle_null",
+    "transfer": "seen_key",
+    "n_model_key_cases": 4,
+    "baselines": {
+      "unigram": 3.594196439207591,
+      "last_symbol": 3.494395955584954,
+      "last_four_backoff": 3.519564200140602,
+      "neural_next_bits": 3.2046626210212708,
+      "neural_next_oracle_kl_bits": 0.06819031279611683
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.4407467347297302,
+        "actual_label_ari": 0.39433150265471023,
+        "posterior_map_ari": 0.5725231601707625,
+        "unrecoverable_nuisance_ari": -0.0008099509021953937,
+        "last_symbol_map_ari": 0.21975157883713858,
+        "mean_bits_gain_over_last_symbol": 0.05364922085522417,
+        "per_horizon_oracle_kl_bits": [
+          0.12378976814644216,
+          0.07856250637031297,
+          0.05066119677105782
+        ],
+        "per_horizon_bits": [
+          3.273218748380576,
+          3.477641664756271,
+          3.5713797910523444
+        ],
+        "predictive_partition_passes": 4,
+        "beyond_last_symbol_passes": 4,
+        "chosen_counts": [
+          4,
+          8,
+          4,
+          4
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.4183208528584084,
+        "actual_label_ari": 0.5408096902437893,
+        "posterior_map_ari": 0.7916910563814562,
+        "unrecoverable_nuisance_ari": -0.0009045476954355873,
+        "last_symbol_map_ari": 0.21975157883713858,
+        "mean_bits_gain_over_last_symbol": 0.07607510272654594,
+        "per_horizon_oracle_kl_bits": [
+          0.08825989851342572,
+          0.05682504284508333,
+          0.036806223827243335
+        ],
+        "per_horizon_bits": [
+          3.2321560686224555,
+          3.4597190599375987,
+          3.5630874300151483
+        ],
+        "predictive_partition_passes": 4,
+        "beyond_last_symbol_passes": 4,
+        "chosen_counts": [
+          4,
+          4,
+          4,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "size": "large",
+    "family": "cycle_null",
+    "transfer": "unseen_key",
+    "n_model_key_cases": 4,
+    "baselines": {
+      "unigram": 3.5939315925869706,
+      "last_symbol": 3.469761794681473,
+      "last_four_backoff": 3.4972271887611424,
+      "neural_next_bits": 3.530003547668457,
+      "neural_next_oracle_kl_bits": 0.38326514764020136
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.540905514460098,
+        "actual_label_ari": 0.10741742052684794,
+        "posterior_map_ari": 0.15410683603956804,
+        "unrecoverable_nuisance_ari": -0.00025541929790488533,
+        "last_symbol_map_ari": 0.21894091864836218,
+        "mean_bits_gain_over_last_symbol": -0.07114371977862466,
+        "per_horizon_oracle_kl_bits": [
+          0.3356994289367473,
+          0.1626263950188127,
+          0.08767267975128665
+        ],
+        "per_horizon_bits": [
+          3.4741648423566343,
+          3.5491247508849644,
+          3.5994269501386884
+        ],
+        "predictive_partition_passes": 2,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          16,
+          4,
+          1,
+          4
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.5475724187703674,
+        "actual_label_ari": 0.11883045636941103,
+        "posterior_map_ari": 0.17844312868540868,
+        "unrecoverable_nuisance_ari": -0.00043514378287195317,
+        "last_symbol_map_ari": 0.21894091864836218,
+        "mean_bits_gain_over_last_symbol": -0.07781062408889428,
+        "per_horizon_oracle_kl_bits": [
+          0.3430903485982504,
+          0.15918590068816382,
+          0.07461635196341361
+        ],
+        "per_horizon_bits": [
+          3.4938474554378187,
+          3.560024692414098,
+          3.5888451084591786
+        ],
+        "predictive_partition_passes": 2,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          4,
+          1,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "size": "large",
+    "family": "branch_null",
+    "transfer": "seen_key",
+    "n_model_key_cases": 4,
+    "baselines": {
+      "unigram": 3.5959930000838023,
+      "last_symbol": 3.5447957689082163,
+      "last_four_backoff": 3.5557198506910224,
+      "neural_next_bits": 3.4128910303115845,
+      "neural_next_oracle_kl_bits": 0.11704721994597395
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.538234718006312,
+        "actual_label_ari": 0.3180868246877387,
+        "posterior_map_ari": 0.5260391706839189,
+        "unrecoverable_nuisance_ari": -0.0005866359959164983,
+        "last_symbol_map_ari": 0.36428498650940866,
+        "mean_bits_gain_over_last_symbol": 0.006561050901904619,
+        "per_horizon_oracle_kl_bits": [
+          0.15484022916475804,
+          0.061799712478167866,
+          0.038067483790141084
+        ],
+        "per_horizon_bits": [
+          3.4460062764942823,
+          3.5737333642333513,
+          3.5949645132913073
+        ],
+        "predictive_partition_passes": 2,
+        "beyond_last_symbol_passes": 1,
+        "chosen_counts": [
+          4,
+          4,
+          8,
+          2
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.510474574662092,
+        "actual_label_ari": 0.4212579188912985,
+        "posterior_map_ari": 0.7089533833215758,
+        "unrecoverable_nuisance_ari": -0.0010877761104409762,
+        "last_symbol_map_ari": 0.36428498650940866,
+        "mean_bits_gain_over_last_symbol": 0.034321194246124676,
+        "per_horizon_oracle_kl_bits": [
+          0.10695583938523079,
+          0.047978716177124646,
+          0.03294437701021319
+        ],
+        "per_horizon_bits": [
+          3.3999991938217513,
+          3.55037731780436,
+          3.5810472123601595
+        ],
+        "predictive_partition_passes": 4,
+        "beyond_last_symbol_passes": 2,
+        "chosen_counts": [
+          4,
+          4,
+          4,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "size": "large",
+    "family": "branch_null",
+    "transfer": "unseen_key",
+    "n_model_key_cases": 4,
+    "baselines": {
+      "unigram": 3.595348764283804,
+      "last_symbol": 3.542960126672582,
+      "last_four_backoff": 3.550515063228898,
+      "neural_next_bits": 3.575918138027191,
+      "neural_next_oracle_kl_bits": 0.2770667382927229
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.595162018497847,
+        "actual_label_ari": 0.06828136519938496,
+        "posterior_map_ari": 0.12306087131178253,
+        "unrecoverable_nuisance_ari": 0.0005293297730737175,
+        "last_symbol_map_ari": 0.3651472640419845,
+        "mean_bits_gain_over_last_symbol": -0.05220189182526502,
+        "per_horizon_oracle_kl_bits": [
+          0.2534111540682066,
+          0.08995264244469794,
+          0.05181186640985476
+        ],
+        "per_horizon_bits": [
+          3.560971009940633,
+          3.610346111879558,
+          3.6141689336733505
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          8,
+          8,
+          4
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.596246874695136,
+        "actual_label_ari": 0.008228598357218928,
+        "posterior_map_ari": 0.01510328891193258,
+        "unrecoverable_nuisance_ari": -0.00030613477054392983,
+        "last_symbol_map_ari": 0.3651472640419845,
+        "mean_bits_gain_over_last_symbol": -0.053286748022554176,
+        "per_horizon_oracle_kl_bits": [
+          0.28873796444461575,
+          0.08388150253462796,
+          0.03254841349429017
+        ],
+        "per_horizon_bits": [
+          3.5914606616194575,
+          3.597770922915668,
+          3.5995090395502896
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "size": "large",
+    "family": "copy_lag",
+    "transfer": "fresh_stream_control",
+    "n_model_key_cases": 8,
+    "baselines": {
+      "unigram": 3.5944889893749963,
+      "last_symbol": 3.673478989373212,
+      "last_four_backoff": 3.6707663398753745,
+      "neural_next_bits": 1.3500733524560928,
+      "neural_next_oracle_kl_bits": 0.0015983242081593933
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 2.9800246516412323,
+        "actual_label_ari": 0.7774299419413346,
+        "posterior_map_ari": 0.7774299419413346,
+        "unrecoverable_nuisance_ari": 0.001265048665701039,
+        "last_symbol_map_ari": -4.780883065660081e-05,
+        "mean_bits_gain_over_last_symbol": 0.69345433773198,
+        "per_horizon_oracle_kl_bits": [
+          0.22435388719284352,
+          2.366288407381359,
+          2.3685024377990453
+        ],
+        "per_horizon_bits": [
+          1.5673898825212327,
+          3.688995998926763,
+          3.683688073475707
+        ],
+        "predictive_partition_passes": 8,
+        "beyond_last_symbol_passes": 8,
+        "chosen_counts": [
+          16,
+          16,
+          32,
+          32,
+          16,
+          16,
+          16,
+          32
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 2.956167184548719,
+        "actual_label_ari": 0.8383042344989691,
+        "posterior_map_ari": 0.8383042344989691,
+        "unrecoverable_nuisance_ari": 0.001140987855210513,
+        "last_symbol_map_ari": -4.780883065660081e-05,
+        "mean_bits_gain_over_last_symbol": 0.717311804824493,
+        "per_horizon_oracle_kl_bits": [
+          0.12941384970606817,
+          2.3728701403981796,
+          2.37446445260341
+        ],
+        "per_horizon_bits": [
+          1.4723869281297757,
+          3.7014826987351652,
+          3.694631926781222
+        ],
+        "predictive_partition_passes": 8,
+        "beyond_last_symbol_passes": 8,
+        "chosen_counts": [
+          16,
+          16,
+          32,
+          32,
+          32,
+          16,
+          32,
+          32
+        ]
+      }
+    }
+  },
+  {
+    "size": "large",
+    "family": "iid",
+    "transfer": "fresh_stream_control",
+    "n_model_key_cases": 8,
+    "baselines": {
+      "unigram": 3.594412443751746,
+      "last_symbol": 3.6649438180629126,
+      "last_four_backoff": 3.6639384310112746,
+      "neural_next_bits": 3.600422590970993,
+      "neural_next_oracle_kl_bits": 0.013499513696417532
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.594412443751746,
+        "actual_label_ari": 0.0,
+        "posterior_map_ari": 0.0,
+        "unrecoverable_nuisance_ari": 0.0,
+        "last_symbol_map_ari": -0.0006650005550253552,
+        "mean_bits_gain_over_last_symbol": 0.07053137431116618,
+        "per_horizon_oracle_kl_bits": [
+          0.008315529856305019,
+          0.007863220535490892,
+          0.008427264255904988
+        ],
+        "per_horizon_bits": [
+          3.5927838126477347,
+          3.594395935021537,
+          3.5960575835859663
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.594412443751746,
+        "actual_label_ari": 0.0,
+        "posterior_map_ari": 0.0,
+        "unrecoverable_nuisance_ari": 0.0,
+        "last_symbol_map_ari": -0.0006650005550253552,
+        "mean_bits_gain_over_last_symbol": 0.07053137431116618,
+        "per_horizon_oracle_kl_bits": [
+          0.008315529856305019,
+          0.007863220535490892,
+          0.008427264255904988
+        ],
+        "per_horizon_bits": [
+          3.5927838126477347,
+          3.594395935021537,
+          3.5960575835859663
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  {
+    "size": "large",
+    "family": "rrxor",
+    "transfer": "novel_family",
+    "n_model_key_cases": 8,
+    "baselines": {
+      "unigram": 3.5912235754402664,
+      "last_symbol": 3.665048568253359,
+      "last_four_backoff": 3.661511626921038,
+      "neural_next_bits": 3.5962134897708893,
+      "neural_next_oracle_kl_bits": 0.3490603598757219
+    },
+    "methods": {
+      "residual": {
+        "mean_three_horizon_bits": 3.5912235754402664,
+        "actual_label_ari": 0.0,
+        "posterior_map_ari": 0.0,
+        "unrecoverable_nuisance_ari": 0.0,
+        "last_symbol_map_ari": 0.033656092473261914,
+        "mean_bits_gain_over_last_symbol": 0.07382499281309274,
+        "per_horizon_oracle_kl_bits": [
+          0.3463465085214795,
+          0.006787554877359978,
+          0.007609510031814554
+        ],
+        "per_horizon_bits": [
+          3.593394332821504,
+          3.5880602759831133,
+          3.592216117516155
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "forecast": {
+        "mean_three_horizon_bits": 3.5912235754402664,
+        "actual_label_ari": 0.0,
+        "posterior_map_ari": 0.0,
+        "unrecoverable_nuisance_ari": 0.0,
+        "last_symbol_map_ari": 0.033656092473261914,
+        "mean_bits_gain_over_last_symbol": 0.07382499281309274,
+        "per_horizon_oracle_kl_bits": [
+          0.3463465085214795,
+          0.006787554877359978,
+          0.007609510031814554
+        ],
+        "per_horizon_bits": [
+          3.593394332821504,
+          3.5880602759831133,
+          3.592216117516155
+        ],
+        "predictive_partition_passes": 0,
+        "beyond_last_symbol_passes": 0,
+        "chosen_counts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  }
+]

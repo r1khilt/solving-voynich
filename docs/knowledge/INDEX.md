@@ -50,7 +50,12 @@ These are deferred discovery topics, not established findings or an active resea
 - [EXP-0005 registration](../experiments/EXP-0005.md) and [results](../experiments/EXP-0005-results.md): prior page-heterogeneity/cache work, matched distant donors, approximate symbol-frequency controls and revised order sensitivity.
 - [EXP-0006 registration](../experiments/EXP-0006.md) and [results](../experiments/EXP-0006-results.md): primary causal-alignment paper, subspace-steering critique and reply; supervised synthetic late steering passes, output-weight control matches it, early shuffled-supervision control fails.
 - [EXP-0007 registration](../experiments/EXP-0007.md) and [results](../experiments/EXP-0007-results.md): word-form/conditional-entropy motivation, matched group/character corruptions, weak contrast and untested boundary/recency hypothesis.
-- [Latest scientific overview](../../results/research-round-2-2026-09-20/overview.png): plotted directly from archived EXP-0005/0006/0007 reports.
+- [Completed parallel campaign](../experiments/CAMPAIGN-0001-results.md): all three tracks, finite resources, verified source/holdouts and combined interpretation.
+- [EXP-0008 results](../experiments/EXP-0008-results.md): blind fitting helps familiar synthetic keys but unfamiliar-key/family transfer fails; narrow copy control and output-information limitations retained.
+- [EXP-0009 results](../experiments/EXP-0009-results.md): earlier synthetic computations affect later predictions; untrained/manuscript criteria fail; broad replacement is not state-machine recovery.
+- [EXP-0010 results](../experiments/EXP-0010-results.md): matched-exposure longer contexts fail registered criteria; boundary information and sparse full-prefix coverage remain qualified.
+- [Latest scientific overview](../../results/CAMPAIGN-0001/overview.png): plotted directly from archived EXP-0008/0009/0010 reports. [Previous overview](../../results/research-round-2-2026-09-20/overview.png) retains EXP-0005/0006/0007.
+- [Predictive-rule extraction notes](../research/PREDICTIVE_RULES.md) and [Belief Net review](../research/BELIEF_NET_REVIEW.md): primary-method reviews added after campaign registration; unimplemented candidates, not empirical manuscript evidence.
 
 The original source register above is preserved for early discussions. The targeted reviews contain their own source/version/access records; follow the exact citation for each claim rather than treating a review as proof of a manuscript hypothesis.
 

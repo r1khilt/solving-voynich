@@ -1,0 +1,1181 @@
+{
+  "runs": [
+    {
+      "id": "compact-seed42",
+      "size": "compact",
+      "seed": 42,
+      "summary": {
+        "seed": 42,
+        "config": {
+          "vocab_size": 13,
+          "pad_id": 0,
+          "d_model": 128,
+          "n_layers": 2,
+          "n_heads": 4,
+          "d_ff": 352,
+          "context_length": 256,
+          "dropout": 0.0,
+          "rope_base": 10000.0,
+          "qk_norm": false,
+          "attention_gate": false,
+          "attention_only": false,
+          "tie_embeddings": false,
+          "auxiliary_horizons": []
+        },
+        "parameters": 405376,
+        "history": [
+          {
+            "step": 500,
+            "validation_bits": 3.0756313782587426,
+            "elapsed_seconds": 15.633684457978234,
+            "peak_process_rss_bytes": 496533504,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 1000,
+            "validation_bits": 3.0380432692938784,
+            "elapsed_seconds": 32.09245858294889,
+            "peak_process_rss_bytes": 497336320,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 1500,
+            "validation_bits": 3.031667802558442,
+            "elapsed_seconds": 48.25898575002793,
+            "peak_process_rss_bytes": 497549312,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 2000,
+            "validation_bits": 3.031201697327857,
+            "elapsed_seconds": 64.68658508302178,
+            "peak_process_rss_bytes": 497991680,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 2500,
+            "validation_bits": 3.0302872010797253,
+            "elapsed_seconds": 81.0407755409833,
+            "peak_process_rss_bytes": 498171904,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 3000,
+            "validation_bits": 3.0292171357749726,
+            "elapsed_seconds": 97.41151612496469,
+            "peak_process_rss_bytes": 498352128,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 3500,
+            "validation_bits": 3.0246957387560784,
+            "elapsed_seconds": 113.86490245803725,
+            "peak_process_rss_bytes": 498565120,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 4000,
+            "validation_bits": 3.021788839621075,
+            "elapsed_seconds": 130.53819954104256,
+            "peak_process_rss_bytes": 498728960,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          }
+        ],
+        "best_sha256": "02386d4aad30d4b9f6281db3b85e46865380d886cfdb352331b889d8d3a33d0a",
+        "elapsed_seconds": 130.5478783750441
+      }
+    },
+    {
+      "id": "compact-seed43",
+      "size": "compact",
+      "seed": 43,
+      "summary": {
+        "seed": 43,
+        "config": {
+          "vocab_size": 13,
+          "pad_id": 0,
+          "d_model": 128,
+          "n_layers": 2,
+          "n_heads": 4,
+          "d_ff": 352,
+          "context_length": 256,
+          "dropout": 0.0,
+          "rope_base": 10000.0,
+          "qk_norm": false,
+          "attention_gate": false,
+          "attention_only": false,
+          "tie_embeddings": false,
+          "auxiliary_horizons": []
+        },
+        "parameters": 405376,
+        "history": [
+          {
+            "step": 500,
+            "validation_bits": 3.088080138212049,
+            "elapsed_seconds": 17.042443500016816,
+            "peak_process_rss_bytes": 499400704,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 1000,
+            "validation_bits": 3.0358807271951824,
+            "elapsed_seconds": 34.70985320897307,
+            "peak_process_rss_bytes": 499564544,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 1500,
+            "validation_bits": 3.030969558370397,
+            "elapsed_seconds": 53.37798112502787,
+            "peak_process_rss_bytes": 499744768,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 2000,
+            "validation_bits": 3.0303627820803216,
+            "elapsed_seconds": 71.51554162497632,
+            "peak_process_rss_bytes": 499908608,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 2500,
+            "validation_bits": 3.0297800833613673,
+            "elapsed_seconds": 89.88593724998645,
+            "peak_process_rss_bytes": 500105216,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 3000,
+            "validation_bits": 3.0295932027133734,
+            "elapsed_seconds": 108.32698858401272,
+            "peak_process_rss_bytes": 500269056,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 3500,
+            "validation_bits": 3.0291366586432846,
+            "elapsed_seconds": 122.62508054205682,
+            "peak_process_rss_bytes": 500449280,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          },
+          {
+            "step": 4000,
+            "validation_bits": 3.0287526321328238,
+            "elapsed_seconds": 136.7941384590231,
+            "peak_process_rss_bytes": 500613120,
+            "mps_allocated_bytes": 6978048,
+            "mps_driver_allocated_bytes": 1169915904
+          }
+        ],
+        "best_sha256": "6f700ebb1724f4afafd528550f3a3cfb724bacf6c39168a0c4294301e56449c1",
+        "elapsed_seconds": 136.8016295840498
+      }
+    },
+    {
+      "id": "large-seed42",
+      "size": "large",
+      "seed": 42,
+      "summary": {
+        "seed": 42,
+        "config": {
+          "vocab_size": 13,
+          "pad_id": 0,
+          "d_model": 256,
+          "n_layers": 4,
+          "n_heads": 4,
+          "d_ff": 704,
+          "context_length": 256,
+          "dropout": 0.0,
+          "rope_base": 10000.0,
+          "qk_norm": false,
+          "attention_gate": false,
+          "attention_only": false,
+          "tie_embeddings": false,
+          "auxiliary_horizons": []
+        },
+        "parameters": 3220224,
+        "history": [
+          {
+            "step": 500,
+            "validation_bits": 3.031596064295201,
+            "elapsed_seconds": 51.42852650000714,
+            "peak_process_rss_bytes": 505774080,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 1000,
+            "validation_bits": 3.0230590389868532,
+            "elapsed_seconds": 108.11407033295836,
+            "peak_process_rss_bytes": 508788736,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 1500,
+            "validation_bits": 3.0210541404855045,
+            "elapsed_seconds": 165.0956124169752,
+            "peak_process_rss_bytes": 522682368,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 2000,
+            "validation_bits": 2.9944150006437247,
+            "elapsed_seconds": 221.92984241701197,
+            "peak_process_rss_bytes": 525058048,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 2500,
+            "validation_bits": 2.965442765658171,
+            "elapsed_seconds": 280.0127688749926,
+            "peak_process_rss_bytes": 526041088,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 3000,
+            "validation_bits": 2.946277706976623,
+            "elapsed_seconds": 344.05447245796677,
+            "peak_process_rss_bytes": 526450688,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 3500,
+            "validation_bits": 2.935043375640095,
+            "elapsed_seconds": 407.9293654579669,
+            "peak_process_rss_bytes": 526827520,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 4000,
+            "validation_bits": 2.917309174992521,
+            "elapsed_seconds": 472.42042912496254,
+            "peak_process_rss_bytes": 527171584,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          }
+        ],
+        "best_sha256": "13b38ce3cd17fb3e17a7c5b8e34e31a98273a8565609a3ab254815a058894efd",
+        "elapsed_seconds": 472.4513159999624
+      }
+    },
+    {
+      "id": "large-seed43",
+      "size": "large",
+      "seed": 43,
+      "summary": {
+        "seed": 43,
+        "config": {
+          "vocab_size": 13,
+          "pad_id": 0,
+          "d_model": 256,
+          "n_layers": 4,
+          "n_heads": 4,
+          "d_ff": 704,
+          "context_length": 256,
+          "dropout": 0.0,
+          "rope_base": 10000.0,
+          "qk_norm": false,
+          "attention_gate": false,
+          "attention_only": false,
+          "tie_embeddings": false,
+          "auxiliary_horizons": []
+        },
+        "parameters": 3220224,
+        "history": [
+          {
+            "step": 500,
+            "validation_bits": 3.0280790567062614,
+            "elapsed_seconds": 64.95072508300655,
+            "peak_process_rss_bytes": 540475392,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 1000,
+            "validation_bits": 3.0227316592620204,
+            "elapsed_seconds": 129.2990436659893,
+            "peak_process_rss_bytes": 540819456,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 1500,
+            "validation_bits": 3.019866621779128,
+            "elapsed_seconds": 194.50145337497815,
+            "peak_process_rss_bytes": 541163520,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 2000,
+            "validation_bits": 3.012510961422931,
+            "elapsed_seconds": 253.30185879091732,
+            "peak_process_rss_bytes": 541523968,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 2500,
+            "validation_bits": 2.9936690903891012,
+            "elapsed_seconds": 298.44681662495714,
+            "peak_process_rss_bytes": 541868032,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 3000,
+            "validation_bits": 2.960533956220377,
+            "elapsed_seconds": 356.21177979093045,
+            "peak_process_rss_bytes": 542212096,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 3500,
+            "validation_bits": 2.936845861310294,
+            "elapsed_seconds": 416.6618071659468,
+            "peak_process_rss_bytes": 542572544,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          },
+          {
+            "step": 4000,
+            "validation_bits": 2.923561093691143,
+            "elapsed_seconds": 476.9950388330035,
+            "peak_process_rss_bytes": 542932992,
+            "mps_allocated_bytes": 52015616,
+            "mps_driver_allocated_bytes": 1287356416
+          }
+        ],
+        "best_sha256": "ce583e48be82d2173a40e56a1416078134310f0b872329eb33f73f9838059f4d",
+        "elapsed_seconds": 477.026633249945
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "run": "compact-seed42",
+      "dataset": "cycle_null-key0",
+      "files": {
+        "abstractions/compact-seed42/cycle_null-key0/decisions.json": "c9c78c8a5892e695789507ef9ab4415369a1fb5e2493ab1fb3215937d6a582ea",
+        "abstractions/compact-seed42/cycle_null-key0/forecast.npz": "d944c5bc58dcf2ece774a85392a390336f493f7a889efcf9b044a092597cf6dc",
+        "abstractions/compact-seed42/cycle_null-key0/frozen_predictions.npz": "b846b70bf328d1bc684299e43e3ecc48a9fd9bf9e20148d7778eb596a9a8ff3d",
+        "abstractions/compact-seed42/cycle_null-key0/residual.npz": "75b1ae02e4750580b3a3576022add8858844ef464a1996d39ea4e6c90c84a244"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "cycle_null-key1",
+      "files": {
+        "abstractions/compact-seed42/cycle_null-key1/decisions.json": "6c4de470ad36e522436eddf88c6f6ad9fcb77c0e45786843a6dc31af37e57dca",
+        "abstractions/compact-seed42/cycle_null-key1/forecast.npz": "6d301fc4177dbeae5abbecf9e373d6243f38e2560f5d77f801e9faa745bd8591",
+        "abstractions/compact-seed42/cycle_null-key1/frozen_predictions.npz": "94c2a883575ec1c8b6e5869679825c9623bbdad90592361487d24b0dc447df6c",
+        "abstractions/compact-seed42/cycle_null-key1/residual.npz": "0850b4b5e3cd5a0c7e5a71056ce7768001612c025d2abdc5ecb24060289e3342"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "cycle_null-key8",
+      "files": {
+        "abstractions/compact-seed42/cycle_null-key8/decisions.json": "a2fff64aa0c483cfd0980c33ed180be1954473cccbf1a51e639fc8f404446fdc",
+        "abstractions/compact-seed42/cycle_null-key8/forecast.npz": "014efe795844a20d2301b2675b28406bef669fbdf28d8b58eddda2bd272df90e",
+        "abstractions/compact-seed42/cycle_null-key8/frozen_predictions.npz": "e11171a4c51ca0990956ff5f6b109feff197fc61ea28c8ee101455b2e5b45518",
+        "abstractions/compact-seed42/cycle_null-key8/residual.npz": "63487bd43446b1df0f66f2d55ddfe4787e30b94276bfe48daa0cb3d8cd0caa59"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "cycle_null-key9",
+      "files": {
+        "abstractions/compact-seed42/cycle_null-key9/decisions.json": "290af47d835085d10dcd6f7e44944d8644ad69662648f6f54ea515d1d2b68300",
+        "abstractions/compact-seed42/cycle_null-key9/forecast.npz": "c9060fd8f6e7df0cce62061e41b4f9a5b4860ba96c68bdca23b3cd8367e8ee5c",
+        "abstractions/compact-seed42/cycle_null-key9/frozen_predictions.npz": "16a8357f33d98a39a9905725270dda17501097a681845df5b37ea27e87bef64b",
+        "abstractions/compact-seed42/cycle_null-key9/residual.npz": "e5db156bbb9ed5760a9e0f1c7a3cf25d96c9f66344df5cc0aa5b9ddebde3d25f"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "branch_null-key0",
+      "files": {
+        "abstractions/compact-seed42/branch_null-key0/decisions.json": "7d5162a9996db84d485ee235ba413486344dbacb7594891e9195e953e9375a82",
+        "abstractions/compact-seed42/branch_null-key0/forecast.npz": "ea487e325b28eb054ee955e5a0ad8784996fce6177e426a4ef6d04411063bcdd",
+        "abstractions/compact-seed42/branch_null-key0/frozen_predictions.npz": "0823e242cbe55fb11eca7c9cf54a6de28a39afc9d8c75f008b94a7ae709191ef",
+        "abstractions/compact-seed42/branch_null-key0/residual.npz": "f43cf6d623e652a1bab15e434435d26f371e96b41fb30208dbb61ab2ff007865"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "branch_null-key1",
+      "files": {
+        "abstractions/compact-seed42/branch_null-key1/decisions.json": "1a8ef5de2383a6ad7f9444f58b81c16de75dd3f7d790753f4ee7a0cced87ef81",
+        "abstractions/compact-seed42/branch_null-key1/forecast.npz": "1a74c48d2cbe4e70245fc20efab43e52c753443d6f3d94e32b01c25e444c0d4e",
+        "abstractions/compact-seed42/branch_null-key1/frozen_predictions.npz": "7bb15f90e75f304a733c91c60277e5a91656478a2fd0bff14d833fff216f6d8a",
+        "abstractions/compact-seed42/branch_null-key1/residual.npz": "d0399109cf5f6d19b107d9ea366702e89e60f1d1d93f768f1d48161a45e0f593"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "branch_null-key8",
+      "files": {
+        "abstractions/compact-seed42/branch_null-key8/decisions.json": "d1f9b2052e401614e3d907ac2e7e39f79bea5f9795c8af0862f86f8063767954",
+        "abstractions/compact-seed42/branch_null-key8/forecast.npz": "a36f723f3bd82e9d9ad8f411f67fabb2804af803a0b94c3e520917219b84e5ac",
+        "abstractions/compact-seed42/branch_null-key8/frozen_predictions.npz": "78d0a42fd3415e446ab7373d2618b6441302e01f37e863bfe40a80899502d334",
+        "abstractions/compact-seed42/branch_null-key8/residual.npz": "75043fe479d2f03c414a6cf6398fe5d3afe8837b435c6b88428a805b74dcbef8"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "branch_null-key9",
+      "files": {
+        "abstractions/compact-seed42/branch_null-key9/decisions.json": "cd5ecf6823b010f929db35f3983e8a963168557c3fad44096c8e948f0875fc9c",
+        "abstractions/compact-seed42/branch_null-key9/forecast.npz": "4d3e8a613f3e6728d43cabaae22510684d955b3d7e8c97d26c1bee860bd1c009",
+        "abstractions/compact-seed42/branch_null-key9/frozen_predictions.npz": "6e1ed719e012cc2a69b71d46a09d37d37db23e7585df532939b90c830af941eb",
+        "abstractions/compact-seed42/branch_null-key9/residual.npz": "585df6cc8b312e83cd3876fd1d975d1422f5f4dc401025829a0fcb53bff0d5b5"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "copy_lag-key0",
+      "files": {
+        "abstractions/compact-seed42/copy_lag-key0/decisions.json": "e19e5676598fe23d1b1d4bd13029c100da51040dea5c04449cb21af1a042836a",
+        "abstractions/compact-seed42/copy_lag-key0/forecast.npz": "0a9361f72e3d14fbd17c5fed1e9c1b7ce16d6c59d8bbd02cceb86d6755d64034",
+        "abstractions/compact-seed42/copy_lag-key0/frozen_predictions.npz": "3e42f840a5723db9cba865291ac9b16c973426c4671de023f86dbcda7e200dba",
+        "abstractions/compact-seed42/copy_lag-key0/residual.npz": "8fbc7d6878d49f110509af631a822c4639850f653785437661ff30b8620cc1b1"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "copy_lag-key1",
+      "files": {
+        "abstractions/compact-seed42/copy_lag-key1/decisions.json": "89c3369a9b5a611e7822067a0a0cabd498c73f899372a2720702c42ddab6ec35",
+        "abstractions/compact-seed42/copy_lag-key1/forecast.npz": "50959528c3c441fd4e7780f9f9fa8d461de5c8fe8c61537c6fd4fdc4b0e5ec4b",
+        "abstractions/compact-seed42/copy_lag-key1/frozen_predictions.npz": "80551e5dfce672ed18a172093616777ca94247226f4f5cdf953c341d3ba0d280",
+        "abstractions/compact-seed42/copy_lag-key1/residual.npz": "a626898ecf58529ce44b84b6b1214e7d9212ee735068f49c740a9bb92c9e822c"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "copy_lag-key8",
+      "files": {
+        "abstractions/compact-seed42/copy_lag-key8/decisions.json": "9908715a727b06e39b1e63b1258f1f8d9a882218df2b74734e5434922fbfd60a",
+        "abstractions/compact-seed42/copy_lag-key8/forecast.npz": "6e491ac839df088f63972bd1b1a93f683fa599bd3921d9d5d3501829b3ef2560",
+        "abstractions/compact-seed42/copy_lag-key8/frozen_predictions.npz": "64d5847dbf0ca380723d8eccca86b81627a043fd2e9bd3ad0d26d14610a7bf3d",
+        "abstractions/compact-seed42/copy_lag-key8/residual.npz": "6da94b027afa531124128475cc8ea9b7830f425f212d24b542736d23ff2f6e0e"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "copy_lag-key9",
+      "files": {
+        "abstractions/compact-seed42/copy_lag-key9/decisions.json": "48924cbe1cc837686f9b586f623e7e31a04b3ce3a0a3a2490d6aa2ddfb908fbf",
+        "abstractions/compact-seed42/copy_lag-key9/forecast.npz": "2e4c0ef8f6a71fe4a91fe2b2bbea8efe59b118e462d1ec555d69587125de7078",
+        "abstractions/compact-seed42/copy_lag-key9/frozen_predictions.npz": "7515608b204e89593d1f047517d30228564ac6d93e8c259e16c79cf6e502e0b6",
+        "abstractions/compact-seed42/copy_lag-key9/residual.npz": "928b1f53285b30019379423ccb6d9beaa7b35c431c4e5de088d3b38e26e61949"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "iid-key0",
+      "files": {
+        "abstractions/compact-seed42/iid-key0/decisions.json": "a78942635dbc6c11f773a4c8818907ec409e47f8cdeffa24b321eaf3a0a7d08f",
+        "abstractions/compact-seed42/iid-key0/forecast.npz": "1f43c24e9217864a04642cfbd54909046d00103114e108f43870b4dc025a04c3",
+        "abstractions/compact-seed42/iid-key0/frozen_predictions.npz": "91ebeb2ac2ea52bf20125e85fe42b98c82452336ee07c42c0a710ddc91cae220",
+        "abstractions/compact-seed42/iid-key0/residual.npz": "0df4a42076496b186cfdc6fb1602320ca65d893449e1c2b0ef758b7081f7e244"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "iid-key1",
+      "files": {
+        "abstractions/compact-seed42/iid-key1/decisions.json": "aaa9c4ab8ac5dce75c100112aa724c258b8f59727949eed0d1615e276c9e6f92",
+        "abstractions/compact-seed42/iid-key1/forecast.npz": "073f7078000ab9a85021fd515b27f83fe3f027773f0f0ae00712c70585448561",
+        "abstractions/compact-seed42/iid-key1/frozen_predictions.npz": "b9a338bc39ab2b5655cc9aed09f6ac2513f3cc477b1fc463870cfb3a63eedc4a",
+        "abstractions/compact-seed42/iid-key1/residual.npz": "ea954f41719ca6879239d49f73e3e79a9738d2302240d45e39476489d8cddd11"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "iid-key8",
+      "files": {
+        "abstractions/compact-seed42/iid-key8/decisions.json": "b1e72e4358105b08dd51a09b66ae27377633c9b60ec5a4a52ca0c930a147727f",
+        "abstractions/compact-seed42/iid-key8/forecast.npz": "d92a52d4ef42cce9b00927a491ba0a4fab93d03f3b73c0da48958f83f1bcfdaa",
+        "abstractions/compact-seed42/iid-key8/frozen_predictions.npz": "da30d9ef97af8151267f956d09e0f46bab20c9f5f77e8fd307b899e3329b56f5",
+        "abstractions/compact-seed42/iid-key8/residual.npz": "1d2875aafffef8c2b932a20247452385438069c7cb9cadcf7231ccbf70c8e82d"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "iid-key9",
+      "files": {
+        "abstractions/compact-seed42/iid-key9/decisions.json": "5cfc4990b5356344a5e938f45b2384c37aa5158752b7f178275e7ba26a3295b8",
+        "abstractions/compact-seed42/iid-key9/forecast.npz": "39264bff43a3616d249745e1d128ede73f9df98015754bac1d9cec71d89ccb2c",
+        "abstractions/compact-seed42/iid-key9/frozen_predictions.npz": "5d9355af97b077775d670d6303e8e3acf403c5899257d51b92c16f2c3ceb696f",
+        "abstractions/compact-seed42/iid-key9/residual.npz": "47448dbc94bec9038ab415a423cec84238fa778c2191387e6e090748d54396be"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "rrxor-key0",
+      "files": {
+        "abstractions/compact-seed42/rrxor-key0/decisions.json": "b76d380fdb0517bf62d2a83f61eb8ed2f6f2c50f6843a83775da0650ab500dfc",
+        "abstractions/compact-seed42/rrxor-key0/forecast.npz": "d66723f0993b9777efdc752b4636e8341d71f815491f581f07c2d1e82fb8f4fc",
+        "abstractions/compact-seed42/rrxor-key0/frozen_predictions.npz": "777a3534b1dd71255b5f600277675aefcc926dc2a63226d8250f7f76958d9797",
+        "abstractions/compact-seed42/rrxor-key0/residual.npz": "c686bb6eaa8d4df4abf086d9cb24a34ca72fee84d3c0739c21121e6039c2cb20"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "rrxor-key1",
+      "files": {
+        "abstractions/compact-seed42/rrxor-key1/decisions.json": "f765d4e11b93de0cb4335838441b0b3677fbbd1db47f6df94ca4a6effb36777f",
+        "abstractions/compact-seed42/rrxor-key1/forecast.npz": "579222bc5905a46395dca40d4282ba4d446f6f1e1f1c850d6e8d2547bdc69b98",
+        "abstractions/compact-seed42/rrxor-key1/frozen_predictions.npz": "ecaa69a5d1489cfbab4caca93f85f074c2916a8a450d587524da60d9e9a046cc",
+        "abstractions/compact-seed42/rrxor-key1/residual.npz": "bbc7a19d49b9a5bd08b85c448ca0c298bacd6221bc6353e17428693d607186dc"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "rrxor-key2",
+      "files": {
+        "abstractions/compact-seed42/rrxor-key2/decisions.json": "b942e32215f25dd0abe473c9b7d1a772f1e873108fa467c710bc85f8853a9310",
+        "abstractions/compact-seed42/rrxor-key2/forecast.npz": "29fc6128e78476c0f06d74d05623b86a151b3328f1b157fe7e406712f8c8d500",
+        "abstractions/compact-seed42/rrxor-key2/frozen_predictions.npz": "517c29bf197dae24ce5fb7a19c822afa8ba72558fb35a8e917f5b9f8e9325264",
+        "abstractions/compact-seed42/rrxor-key2/residual.npz": "abf1c479178944de37eef987f7c75a4bf4c7adaa2333825dc4e3702fbdc72b3e"
+      }
+    },
+    {
+      "run": "compact-seed42",
+      "dataset": "rrxor-key3",
+      "files": {
+        "abstractions/compact-seed42/rrxor-key3/decisions.json": "4c57decf4163260cb1b46a23ae384bd8d6d53a0e1a2cdb0f477db2437c6fd8bb",
+        "abstractions/compact-seed42/rrxor-key3/forecast.npz": "c17e2b8d82e982f592163ee96d3eeeee87351a3e4fa3bf59cfb4f410cc9bc12d",
+        "abstractions/compact-seed42/rrxor-key3/frozen_predictions.npz": "4a93f572eaec8d842f6430f2db76eb2ec555be6108cb242f6cdb7f28a1e1e8c5",
+        "abstractions/compact-seed42/rrxor-key3/residual.npz": "4ebf6c7e5daf1e9cdbf6a1f43c008b378d6e3e17486e2040844d1ab6acd8d5b7"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "cycle_null-key0",
+      "files": {
+        "abstractions/compact-seed43/cycle_null-key0/decisions.json": "3ed1f6b9669282a28ab6b1dfb344eaff0027191f699a38c9f92e665d36f66729",
+        "abstractions/compact-seed43/cycle_null-key0/forecast.npz": "861c9b1569b151b7d093e4cf7044a17ba3337550ac79a4ed5470e352d2c776de",
+        "abstractions/compact-seed43/cycle_null-key0/frozen_predictions.npz": "734492e0345f4298dda1f69a1f76fb416aef28fcd362f4b0da1682a22bf60d94",
+        "abstractions/compact-seed43/cycle_null-key0/residual.npz": "b5c9ec0e1a4e50970d60d326310b5fea45e47da0d31568a4dfdc498c5dcd6222"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "cycle_null-key1",
+      "files": {
+        "abstractions/compact-seed43/cycle_null-key1/decisions.json": "d1371efc013b02c0856424fd24c74c122b770dfc1e5a032665614ff2c2a0053f",
+        "abstractions/compact-seed43/cycle_null-key1/forecast.npz": "8267529dcf882b05caf87859c0dcbc796845ed99f09852aa2753b55cfa5d254a",
+        "abstractions/compact-seed43/cycle_null-key1/frozen_predictions.npz": "b7f4a15b75353442dce67f066882b37422157eb9a628fabc7f864770f04879ee",
+        "abstractions/compact-seed43/cycle_null-key1/residual.npz": "e8e32af47373141e47ee2c25541ea1abc1eb678eff23027e8ba7dca15e3db9c4"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "cycle_null-key8",
+      "files": {
+        "abstractions/compact-seed43/cycle_null-key8/decisions.json": "bdbb29781dbde0ff70cf4510c3ef659b97371f72aee5c1148a77aa02d5282825",
+        "abstractions/compact-seed43/cycle_null-key8/forecast.npz": "fc8097ab56960f6ff00825023deef255362b49f1b4ae1f3c0fcb00c700993537",
+        "abstractions/compact-seed43/cycle_null-key8/frozen_predictions.npz": "9e8d55bab40af306daf437e87d96c3464e4947f6be339b2e4972bc8eaee429ba",
+        "abstractions/compact-seed43/cycle_null-key8/residual.npz": "4b3b753df4624be62bf6b52b8c56a4ce089660ca5cedeacc7c1b0945ad4c3565"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "cycle_null-key9",
+      "files": {
+        "abstractions/compact-seed43/cycle_null-key9/decisions.json": "45c4cd7d27f8af3ca1d4790c02d6d4173c25878d4ab23e588655aee1260e49a2",
+        "abstractions/compact-seed43/cycle_null-key9/forecast.npz": "76f9d8f1bfc2467eee9488569d7fc1b70cd7e8bf465bb7abfa337dfce94f0cca",
+        "abstractions/compact-seed43/cycle_null-key9/frozen_predictions.npz": "b3d173879a2502e5650f5d53ebb575baf1161f0295767c8168fd22e49977eedc",
+        "abstractions/compact-seed43/cycle_null-key9/residual.npz": "c26412cb8bc1a8780b7e275aa9ef31ebc88e837e693e29aa1c8c20595c64978b"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "branch_null-key0",
+      "files": {
+        "abstractions/compact-seed43/branch_null-key0/decisions.json": "ff96cabe9b3e8692c1a0f006bd65cd3b8138f3385c6654976230c7e710c3c6ef",
+        "abstractions/compact-seed43/branch_null-key0/forecast.npz": "d3881e67b982d1296ae6614b072d5d75157ace911370ea08f20581527c24a57d",
+        "abstractions/compact-seed43/branch_null-key0/frozen_predictions.npz": "8231e5dac6d1ebdd4a276d9affa0ab741db4f6e46c2b2d9caebd6d405f773ffb",
+        "abstractions/compact-seed43/branch_null-key0/residual.npz": "e8edfd35e314736503e03f69a8348a89f6c3273ea49d40fbf5e09d28951de58e"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "branch_null-key1",
+      "files": {
+        "abstractions/compact-seed43/branch_null-key1/decisions.json": "49ff1196f60058d6ca099ade25027b76a8d6dd9a69f5ffc5b8661f64b69d606f",
+        "abstractions/compact-seed43/branch_null-key1/forecast.npz": "b016506806d649b1f283c483f5c3e668e68ff09a866ce39121cbc4cb8b81d1e4",
+        "abstractions/compact-seed43/branch_null-key1/frozen_predictions.npz": "297192f6b9a115c9caf37cd319d38dd3f3d5ab1a4b1272c4cbadab4cee1792bd",
+        "abstractions/compact-seed43/branch_null-key1/residual.npz": "a49b4a3efe7707cf572eb8f90fd6eed505656f3e0315c8d7f04fd3b350991cf5"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "branch_null-key8",
+      "files": {
+        "abstractions/compact-seed43/branch_null-key8/decisions.json": "8adf14ee8eff0f804322cfba4d0a82d362a14581a797c85963dd9f408c9af9cf",
+        "abstractions/compact-seed43/branch_null-key8/forecast.npz": "857875643dbd5ca79ffd4ffc30a14bd34779a43447f8c9856266955fe66d94ae",
+        "abstractions/compact-seed43/branch_null-key8/frozen_predictions.npz": "8ae814792b7c9cd0e5fe5a31be455827101bad547883f4e14b608abaec439294",
+        "abstractions/compact-seed43/branch_null-key8/residual.npz": "e874ad09f982bd4a4db6e46cae0c4fa3bbc9c9541fb4d0d2c2149380de041293"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "branch_null-key9",
+      "files": {
+        "abstractions/compact-seed43/branch_null-key9/decisions.json": "4600067dffa0cbdb8433ae7f790a418c0e8a8efb2870e5c25c177ffeadd40ef5",
+        "abstractions/compact-seed43/branch_null-key9/forecast.npz": "8c0add72835967c4943d2aa726eab307bf5076f5d48c96ce0e632d72aa7fa6cf",
+        "abstractions/compact-seed43/branch_null-key9/frozen_predictions.npz": "2a6b18b4f6d44707eb165082dacc5047653e4614fc9251eaa9aa62a23ff0d6d0",
+        "abstractions/compact-seed43/branch_null-key9/residual.npz": "9f9b55460080647031ff9bb46c066a82967b0eea463d2a479bb3e228af80728c"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "copy_lag-key0",
+      "files": {
+        "abstractions/compact-seed43/copy_lag-key0/decisions.json": "8613bd4b43f11e84230028f0feffc2961f1bda1439ee668dab5976feebef4adf",
+        "abstractions/compact-seed43/copy_lag-key0/forecast.npz": "1708720f66e10d0493655aa28f274de27df34a6d4f7845212828b0ab3d908f5a",
+        "abstractions/compact-seed43/copy_lag-key0/frozen_predictions.npz": "c4760b9b801f2da8094848ec116f85df567910e3b7efc50d4ae3473e562ed882",
+        "abstractions/compact-seed43/copy_lag-key0/residual.npz": "59aed65adaac63ec09c4f1a82a5a5b6eda7d185997b34722311a5a9056b90082"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "copy_lag-key1",
+      "files": {
+        "abstractions/compact-seed43/copy_lag-key1/decisions.json": "276642d3b1b3a7016efcdc659cc9b6d4909cad9009668f71c077af061c86b8bf",
+        "abstractions/compact-seed43/copy_lag-key1/forecast.npz": "e187a59e90838cb0c65cddfc986e8cfb53047f5012a6ffc2575d5ee556d8ed2c",
+        "abstractions/compact-seed43/copy_lag-key1/frozen_predictions.npz": "e3e105f2930f596335ba014df47eff5944bd350190e1e3d7ee3d7f6314f40d66",
+        "abstractions/compact-seed43/copy_lag-key1/residual.npz": "98061aba5e46e2eb92c62f6fe2c2189fffe33f88a257835f7a0d8d84759960a5"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "copy_lag-key8",
+      "files": {
+        "abstractions/compact-seed43/copy_lag-key8/decisions.json": "c2a96479a33bef4449e8bdd93a5f246d67387a17b70bbcc91547bd62a7348479",
+        "abstractions/compact-seed43/copy_lag-key8/forecast.npz": "96da1c844b6b2a4e5f9ace9d7edf4bcc2cd8b6c198ca901a9edef3288a2227ba",
+        "abstractions/compact-seed43/copy_lag-key8/frozen_predictions.npz": "432f279e9d3937965af00b85b06a3f697b39bb0654141a20c56956bca10ca48c",
+        "abstractions/compact-seed43/copy_lag-key8/residual.npz": "737d48a3d9d936f652e5b09e6da38771e64a988bb77792b9bec067aeeefb42c7"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "copy_lag-key9",
+      "files": {
+        "abstractions/compact-seed43/copy_lag-key9/decisions.json": "af17317405ba89b1919f20e0f28afa2be16ac8563a18f78d2958b33d50df7993",
+        "abstractions/compact-seed43/copy_lag-key9/forecast.npz": "bd33af73440500d5eab5128a8577f0a2ca69057e0cf8c8062d1bd07ffcbce26d",
+        "abstractions/compact-seed43/copy_lag-key9/frozen_predictions.npz": "e12e08ae7fe73ef86a5212819d739ef267bee5de0d6f9ecd4fc95d9dd609d562",
+        "abstractions/compact-seed43/copy_lag-key9/residual.npz": "6e1f51cabc27cd8b3f90383fa7f06814aa58ae63148724f36f8c479ec3859d40"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "iid-key0",
+      "files": {
+        "abstractions/compact-seed43/iid-key0/decisions.json": "e7279383f6469337cf9ed93a630ead7c8d31c2d12d7ad70b20b8112faf9f04ab",
+        "abstractions/compact-seed43/iid-key0/forecast.npz": "d45756f851d7ed2a6b4dc753be03a65b067b5ac2afd8324025e497c72a7bbc1b",
+        "abstractions/compact-seed43/iid-key0/frozen_predictions.npz": "aae70c24732a1d7687362ac2b66cec35e3f19b1d454ed28f55f120d2ce88e92a",
+        "abstractions/compact-seed43/iid-key0/residual.npz": "453eeb687e35098913ce1451f172d900476c92333241c70dc835fabde1b5ba74"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "iid-key1",
+      "files": {
+        "abstractions/compact-seed43/iid-key1/decisions.json": "ceea14a90eea63856466585a40d7ce3ef33b9f1f589d24f24947c63fb7789216",
+        "abstractions/compact-seed43/iid-key1/forecast.npz": "b0b91cab7348fd1e4e3a3d8a2ba5d1d8f533267d79ecd3bd3d80f4dd1544ad5a",
+        "abstractions/compact-seed43/iid-key1/frozen_predictions.npz": "de7280f5242c15ce0f7e8783e358924b0cc24a0b5a448232be96dc44907bd03f",
+        "abstractions/compact-seed43/iid-key1/residual.npz": "9960e3b79ba574224abaf81a17efe50f10f45c5539eaf1980b1f83b55b2933b6"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "iid-key8",
+      "files": {
+        "abstractions/compact-seed43/iid-key8/decisions.json": "a4a767777c4a1781f668c165c9d994170d7dc665c3b31d9d4add234ec9c7ec76",
+        "abstractions/compact-seed43/iid-key8/forecast.npz": "98dd9e47852e768e3b28adae898185b83a568fd843f4770f06fe74c4dc74dbdc",
+        "abstractions/compact-seed43/iid-key8/frozen_predictions.npz": "a1561d6dc01af7049fbf0f15f5880f2bb7109d8eec6fd7e2f0812009571463e4",
+        "abstractions/compact-seed43/iid-key8/residual.npz": "25a1598da86c5c62526679a3caa6ce36c32d97204dc8a22363331405c725d357"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "iid-key9",
+      "files": {
+        "abstractions/compact-seed43/iid-key9/decisions.json": "305214112da4475d18f32ce2edda0f9aa2680dc96677748f9cc145609a7492ad",
+        "abstractions/compact-seed43/iid-key9/forecast.npz": "f67d9a2ad0293045714362a7ced3b60a17a0f35bdf04b03a4961749a16a3cb27",
+        "abstractions/compact-seed43/iid-key9/frozen_predictions.npz": "31f079cbadb83dd1c3faa1c35231dd29bb2c857a9e78232bc24d090265dab6b7",
+        "abstractions/compact-seed43/iid-key9/residual.npz": "196e91bee5679b0e1a4afa1ab1643acd585efd4c2b3b0e8c13b0967f5050cd8c"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "rrxor-key0",
+      "files": {
+        "abstractions/compact-seed43/rrxor-key0/decisions.json": "a56fa9529e32eb25d1d8c49050e5e2fe88ad38faa93264e38913214f80096625",
+        "abstractions/compact-seed43/rrxor-key0/forecast.npz": "badd02cd12a08ad8c194f403475de70fac0aa74477b3628b235ce141fa41744e",
+        "abstractions/compact-seed43/rrxor-key0/frozen_predictions.npz": "15e9b45eaf21859f6de5fb13a60a094fff6b2635082555eb34f4d0b27f148a00",
+        "abstractions/compact-seed43/rrxor-key0/residual.npz": "1e53aab206cfb6695d67dd93a470ef6017cf9cdb3632443edaf5bf728c26e6bf"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "rrxor-key1",
+      "files": {
+        "abstractions/compact-seed43/rrxor-key1/decisions.json": "c74baedfc8bc74101eb73214a01375c01d6f53a4f4b4c96a82370f55e81dd969",
+        "abstractions/compact-seed43/rrxor-key1/forecast.npz": "741f50937b61129a39ed4d242b29f13121b06a99ca2cb76ea5388747433774fd",
+        "abstractions/compact-seed43/rrxor-key1/frozen_predictions.npz": "d03a20ec6c84add013ea3b74c08e9a09b1811a5e1e54609bb529ccadffcacb97",
+        "abstractions/compact-seed43/rrxor-key1/residual.npz": "c7add27cdb05dd87aa5e58629b5d00844a518c5ef07ca4d3c8c3627c48eafdd4"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "rrxor-key2",
+      "files": {
+        "abstractions/compact-seed43/rrxor-key2/decisions.json": "61f40b06446e18e1f3f1a8790adf76b2de710836d30a147ab476cf38e2106117",
+        "abstractions/compact-seed43/rrxor-key2/forecast.npz": "2363e6a2290fe9a40e10b588fb14b8af7c850b55976a0a8cc82e7a13e0f049e7",
+        "abstractions/compact-seed43/rrxor-key2/frozen_predictions.npz": "5bb7762a4d22b10d7256eee2ca4a37b54741097001d19bc5e4e03763249d87b1",
+        "abstractions/compact-seed43/rrxor-key2/residual.npz": "aae8f2addd434424fd722b95b903190cab95e995e9f6ac04141029a9db9cf108"
+      }
+    },
+    {
+      "run": "compact-seed43",
+      "dataset": "rrxor-key3",
+      "files": {
+        "abstractions/compact-seed43/rrxor-key3/decisions.json": "95cae4ef2ce43ec1cc1bf0c7a82b00ccbbf40dd74db84765f01ef223661fd933",
+        "abstractions/compact-seed43/rrxor-key3/forecast.npz": "f00aa001de00dbf60c04c0ce99000a1ba095fd0c59530a12851f029ddd2df522",
+        "abstractions/compact-seed43/rrxor-key3/frozen_predictions.npz": "439e0501012d2fe7d5e88ecad153b5976a2620d7e2d75a7d0505afe623a95a12",
+        "abstractions/compact-seed43/rrxor-key3/residual.npz": "d2ab3ee5b9dcef7d78e742aff79bf73d6f39bbc30b8b612dd8dd13b66a5ac5fb"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "cycle_null-key0",
+      "files": {
+        "abstractions/large-seed42/cycle_null-key0/decisions.json": "dfea32965d9b700be5c8bbbdfa218314c77b6c63ca3878ad6c2d520ee767847e",
+        "abstractions/large-seed42/cycle_null-key0/forecast.npz": "45753b7a517626e4c9ef58ecfb30aae84b611fc1760f187dca4ce6baaff2198c",
+        "abstractions/large-seed42/cycle_null-key0/frozen_predictions.npz": "b00508b7aebcc2ec16ea44545dc9dbbeb1bf808fffc04a67cf24c5d250da2d36",
+        "abstractions/large-seed42/cycle_null-key0/residual.npz": "155d8f0ea7f1ae6c39d8c7bb69b3f1b09b0fcfaaef6aeb5c32a14295b47988eb"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "cycle_null-key1",
+      "files": {
+        "abstractions/large-seed42/cycle_null-key1/decisions.json": "30862ec0b0d402047438850c0486015984e56dc8210605e4fce4fc522d5754ec",
+        "abstractions/large-seed42/cycle_null-key1/forecast.npz": "24ccaa9d778929013fb064da9aeaca7349781cfbb24333ba245cf39792fc6ff4",
+        "abstractions/large-seed42/cycle_null-key1/frozen_predictions.npz": "585d419485b6eac8f89e96c85e99dbba6730987fbc40272b342c47b4ad651454",
+        "abstractions/large-seed42/cycle_null-key1/residual.npz": "5de349c984de24aa4ac6688daf5a4f9598f1ecddc85af96096458884ad0ce36a"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "cycle_null-key8",
+      "files": {
+        "abstractions/large-seed42/cycle_null-key8/decisions.json": "19b1c35a432740f3efd636b547e5ab7fb1f52243de9c3c1ff885accda8609be4",
+        "abstractions/large-seed42/cycle_null-key8/forecast.npz": "67e5676a1333fcd9949a5040ef5b757f9f2f3a1339c418b948b4997e97786b40",
+        "abstractions/large-seed42/cycle_null-key8/frozen_predictions.npz": "c8baf82d88433547ef6f3f3df53f8ff5cc5d572ce26300fd93c733b41448cb73",
+        "abstractions/large-seed42/cycle_null-key8/residual.npz": "6318e07011cab8347ee4adba81e2f8260821dfe6b744c9626e8bab1c2bc48b56"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "cycle_null-key9",
+      "files": {
+        "abstractions/large-seed42/cycle_null-key9/decisions.json": "eb4b5eac5d944f4b8dd9350a3728f5b0e179c0313bdd2dfc97783ab9aa277494",
+        "abstractions/large-seed42/cycle_null-key9/forecast.npz": "0e42d21699e227203322681d79cc9cd78c79eccb20ddb406ad4167a4372fc133",
+        "abstractions/large-seed42/cycle_null-key9/frozen_predictions.npz": "e212405b433996a92cc50533152f185b81bedf5f1ef7577a0b53f6695d2c4efb",
+        "abstractions/large-seed42/cycle_null-key9/residual.npz": "5368136f510379744c0ea22a115732aa31a49ab4392cafd9ee7ec56b5009186e"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "branch_null-key0",
+      "files": {
+        "abstractions/large-seed42/branch_null-key0/decisions.json": "580b27c047a4b6d96ba7d7600e8fe5951f58b95ed7ee145b74ad1b7fcd32d899",
+        "abstractions/large-seed42/branch_null-key0/forecast.npz": "0189a037aeaa8a93d51e3b7757656bc696449faee5f94c96dd7aead3dd234541",
+        "abstractions/large-seed42/branch_null-key0/frozen_predictions.npz": "b5b98520b61a5ee14f699fb441b396f7a8c1567bded65d86153def107187c016",
+        "abstractions/large-seed42/branch_null-key0/residual.npz": "34dae6cbbe023423f929a8cf49c8dbb9d5fe92e1925e18d1b1a931c31a095ff2"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "branch_null-key1",
+      "files": {
+        "abstractions/large-seed42/branch_null-key1/decisions.json": "0bbaa06236286e71decf2b91128808ea0f1bb4e910091f34cc7388c1657c1f16",
+        "abstractions/large-seed42/branch_null-key1/forecast.npz": "6e1bead16b534308b491adb29245ae8df7bd0c05bd9cc15a61dc233a4ab2550f",
+        "abstractions/large-seed42/branch_null-key1/frozen_predictions.npz": "bb8d8ad0988964b81790b97769de7aa8249c39da8d9b704cfbeb5e4827ebfc3d",
+        "abstractions/large-seed42/branch_null-key1/residual.npz": "c21763618bc719e00577be2167f9693e168cea82b86c571c4acfdb83111f711a"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "branch_null-key8",
+      "files": {
+        "abstractions/large-seed42/branch_null-key8/decisions.json": "75939b169ad7ee422bf4ba02d9ecfe35285201507d09508734bb3fe6eade257f",
+        "abstractions/large-seed42/branch_null-key8/forecast.npz": "b9701d0900be0e4806de3e868ce2849e979990781180911d24db94dee70a0c8d",
+        "abstractions/large-seed42/branch_null-key8/frozen_predictions.npz": "6edc71a4529c1fb873e1f4287b2da3ff7da637eb0688092574e6b9891fe1e48b",
+        "abstractions/large-seed42/branch_null-key8/residual.npz": "f8f0e9fe888cee965fb2f9376ca5c352880128903ed19c3a94a8384f6dd7b5a5"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "branch_null-key9",
+      "files": {
+        "abstractions/large-seed42/branch_null-key9/decisions.json": "08a385a0f32dc2ef64512744e15693e45df5b9d16a65517c064a19686c7722fd",
+        "abstractions/large-seed42/branch_null-key9/forecast.npz": "8c975f1d278c0d1a686e45fc0051d565f119b812cd4f8944a1ac06cc50d7d3a2",
+        "abstractions/large-seed42/branch_null-key9/frozen_predictions.npz": "26c93b76ba18adce46ba1cd5a78821046600cf9025979b30942ad48008a5e69a",
+        "abstractions/large-seed42/branch_null-key9/residual.npz": "75c8c0a8b8a24634266fe8f61b99014b8adc524e1a3d908aec0faa1cc3cbb902"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "copy_lag-key0",
+      "files": {
+        "abstractions/large-seed42/copy_lag-key0/decisions.json": "92dbf0c34d81cdf64a286ba7dbe6cfb578b4b853b1c766ba25b5077fe2982bb1",
+        "abstractions/large-seed42/copy_lag-key0/forecast.npz": "f54b0f118faf26e969e3dea217709588e42b18310b549c1fee2802489dcb64d0",
+        "abstractions/large-seed42/copy_lag-key0/frozen_predictions.npz": "54cb0b1e8325c39915034771b20fde2011d9ec38eaa106f76deba68eacb0003f",
+        "abstractions/large-seed42/copy_lag-key0/residual.npz": "06394ec261bf44a0323c998a26d8eb15e7586c3ed65d1defc4350a886e4dd74d"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "copy_lag-key1",
+      "files": {
+        "abstractions/large-seed42/copy_lag-key1/decisions.json": "38d98a211774f6f850fe497b86221cce3115da823ca687ee38eb2b9088697173",
+        "abstractions/large-seed42/copy_lag-key1/forecast.npz": "40868c49690259fa24979707c0f43867355701947a3965646651c26e05fcc495",
+        "abstractions/large-seed42/copy_lag-key1/frozen_predictions.npz": "21dd6a9255feac4c35ea8d9cec7d9c64368bff84e252ed305f2961ecdc5a87a4",
+        "abstractions/large-seed42/copy_lag-key1/residual.npz": "dcaac25502151b495447f28b9e67bdbeae183e0894faf5196c61403e5bb0a1e7"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "copy_lag-key8",
+      "files": {
+        "abstractions/large-seed42/copy_lag-key8/decisions.json": "bced17324a9a8892b63aca402db57690651d055dc0c6aa631ab5fb36616470a8",
+        "abstractions/large-seed42/copy_lag-key8/forecast.npz": "5e51478b92f24c3e4084bd1606614ee55e73886eb2fed5ae6396a9dd0e6ead50",
+        "abstractions/large-seed42/copy_lag-key8/frozen_predictions.npz": "8ec857a8bc9e69093d117c833e14320b96e0fbf94a17a90fab742af3596774e9",
+        "abstractions/large-seed42/copy_lag-key8/residual.npz": "65d46428f224326b258ab2466172b94ab5e1a04f5d43b5481d2c5baa6f55de90"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "copy_lag-key9",
+      "files": {
+        "abstractions/large-seed42/copy_lag-key9/decisions.json": "fd3f1a5c5665834e53d4dd6ad933d01fdcab38a44c89442e2ba3e404da86c491",
+        "abstractions/large-seed42/copy_lag-key9/forecast.npz": "3e395fbfa0b86e8451ed51c1493e7c75dddd4fb7c8d7feb48b96126361ae2375",
+        "abstractions/large-seed42/copy_lag-key9/frozen_predictions.npz": "c9f6119762de8c7b31001940372037d171f797caf870b2d2cd26691db2bf4c57",
+        "abstractions/large-seed42/copy_lag-key9/residual.npz": "536a283028b5f33cd1b16ac92e413f03c3e0f5fc2515d6bc75f79533fddd380d"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "iid-key0",
+      "files": {
+        "abstractions/large-seed42/iid-key0/decisions.json": "e8e8eb287fd40d7f4217a8cdba716864d85c7e853bf3dadf5e7e2da77785d9f0",
+        "abstractions/large-seed42/iid-key0/forecast.npz": "b1c14d847a0da67298f0770f7f2cfc3e4711c67432448aad8de4f42e568d6a45",
+        "abstractions/large-seed42/iid-key0/frozen_predictions.npz": "e114e962e7c50f64fee7e4a7dcfc6ccae007576070680a17cd2a77fb381c0fbd",
+        "abstractions/large-seed42/iid-key0/residual.npz": "d98e6b625ab1ed58b1f06680d8b891792d46aa2c38e7ba194e1a5d976c0281c4"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "iid-key1",
+      "files": {
+        "abstractions/large-seed42/iid-key1/decisions.json": "74c13b30b134b7df5d0b1122412712ef211729fe46d2daedb6cf6c11a5928259",
+        "abstractions/large-seed42/iid-key1/forecast.npz": "acb62ebbe8d3d82078eea7af326c84b7a9be23943e459c14928c44abd70404f3",
+        "abstractions/large-seed42/iid-key1/frozen_predictions.npz": "10641aae1ac0b11ee669e0c25fb15e536a86c425deedfe814fb292af2179d21e",
+        "abstractions/large-seed42/iid-key1/residual.npz": "852350f063d2294438920187ef86bbd9afa47de2f453cc24d68140396679d30d"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "iid-key8",
+      "files": {
+        "abstractions/large-seed42/iid-key8/decisions.json": "fa4cc2f03441fd53ec98b89ab46a601d14b82473011d246b70e05279b8cad69b",
+        "abstractions/large-seed42/iid-key8/forecast.npz": "135754f2413a4f131072529d1cd91de6e9a198f9719b83738796ee14cfc7dab9",
+        "abstractions/large-seed42/iid-key8/frozen_predictions.npz": "23e2299c95c5089b9dd0807390c29be166ea0714ab0260ed2d53cf286dffe26e",
+        "abstractions/large-seed42/iid-key8/residual.npz": "7085edff71a5d1add8c739c6ce153da7684d073c6c89b3b4057b374b60970fea"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "iid-key9",
+      "files": {
+        "abstractions/large-seed42/iid-key9/decisions.json": "e81323b2349931c4b837dfd42b270f6d22065344d6c116227aed149efc22bf70",
+        "abstractions/large-seed42/iid-key9/forecast.npz": "aff60012c77fae338c93fcc8852af7f4f5adfde07703d94c24c549f717d8f0c8",
+        "abstractions/large-seed42/iid-key9/frozen_predictions.npz": "b3122d90214ea0992e52c7ebef4f3e228638f6fd458ad51e161e701dd244cda1",
+        "abstractions/large-seed42/iid-key9/residual.npz": "c0efd37796f15bd266c258ae1ff5fc7250c4363e7ceef71ed1a566833eefa47b"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "rrxor-key0",
+      "files": {
+        "abstractions/large-seed42/rrxor-key0/decisions.json": "845053db3db0fefbc5e3d0bb8ba139796102f96c5953ffd432529971a78c6493",
+        "abstractions/large-seed42/rrxor-key0/forecast.npz": "20b9a1e8f51f1cd4c41e3f0457e89c3e1b90f81352a46fc8028eed6160deeff9",
+        "abstractions/large-seed42/rrxor-key0/frozen_predictions.npz": "8c02fcf4cd243a283b0a8a59d609fae9f3cce07a9deda99f96c1f57cfafd8f67",
+        "abstractions/large-seed42/rrxor-key0/residual.npz": "87463a6c95434d42a9c7cbb128bb9707ce148cb4ca7dc07ecad6f0d69f320120"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "rrxor-key1",
+      "files": {
+        "abstractions/large-seed42/rrxor-key1/decisions.json": "3b42342a63539e480a82879df6b8a2ff531823b701012621c72ab6fb106c9a4e",
+        "abstractions/large-seed42/rrxor-key1/forecast.npz": "0e3b96e7412ecc72be22518ae844ff8afa0e960eb2c0d5d6c09403875917be5b",
+        "abstractions/large-seed42/rrxor-key1/frozen_predictions.npz": "2d9b83defc3e10ba0bebb8b4e810d6cbb7cfbfdccb3db502c9d6c6ec374a2227",
+        "abstractions/large-seed42/rrxor-key1/residual.npz": "f71685747f0c47549be2f8f12087e3d2865ad20b6f5f6a5aaaf6c596f8cc276e"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "rrxor-key2",
+      "files": {
+        "abstractions/large-seed42/rrxor-key2/decisions.json": "88d06240e7940e86134553e1cbcbb0bb4e3a541bc7a05814cc392fb76f0cc982",
+        "abstractions/large-seed42/rrxor-key2/forecast.npz": "9f968e4a665bde217203a1f1bfa659e5d2943433b37defcd08da2b862c95fbc3",
+        "abstractions/large-seed42/rrxor-key2/frozen_predictions.npz": "6c785be454316373098189b2093f0d1e43834305cf10ba0ef4415cf3f22f67d8",
+        "abstractions/large-seed42/rrxor-key2/residual.npz": "efdeff9a7f428cc1e540aabe080d59ba05bf47aeee6bedea2a997e940c334b9a"
+      }
+    },
+    {
+      "run": "large-seed42",
+      "dataset": "rrxor-key3",
+      "files": {
+        "abstractions/large-seed42/rrxor-key3/decisions.json": "bfb722b60a0b0668a0c4bca07a1c5c49698340ceac64bf96f106eb041bc9a83c",
+        "abstractions/large-seed42/rrxor-key3/forecast.npz": "b82c1bea6f6629755e27ef44c71aa0c0262b11f67e6ce5d94453af41578e5f35",
+        "abstractions/large-seed42/rrxor-key3/frozen_predictions.npz": "25507c2b9cf5b235472e2347d4bf3f5ef1c8544130a8b46d2c71b895add66425",
+        "abstractions/large-seed42/rrxor-key3/residual.npz": "e561306efbc6fcc7fe0aece3ac7defc980b7d4fe674dcf7183210180c835826a"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "cycle_null-key0",
+      "files": {
+        "abstractions/large-seed43/cycle_null-key0/decisions.json": "18bb097a931d691f83977ff3b806569cdce3a7c14b2c3fbbc6c3ba856166c66c",
+        "abstractions/large-seed43/cycle_null-key0/forecast.npz": "b76f5435219222f19ecc5e432c236fe893e9e8eeffe70799d1a6915284c06132",
+        "abstractions/large-seed43/cycle_null-key0/frozen_predictions.npz": "3d9f43c01290a1bd5b7e7ae7c604c37a6b02722ad3d219eb5b85193d4e694092",
+        "abstractions/large-seed43/cycle_null-key0/residual.npz": "7cb68b86d1358970eb9dfe0fa9670dd4ca13348cfbbb799e67a72ae4607f6473"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "cycle_null-key1",
+      "files": {
+        "abstractions/large-seed43/cycle_null-key1/decisions.json": "3d4384190d4be5989b5b29c85708931d3c514f0a678a9af948d0e7b2b6f2ddf6",
+        "abstractions/large-seed43/cycle_null-key1/forecast.npz": "ccb9d7875f759ece84cc1f122e573f22575f5fe16d4dd1cc18f9468cbecd6b3d",
+        "abstractions/large-seed43/cycle_null-key1/frozen_predictions.npz": "20e8d8c4c74e034ade7862ee255096aa38370624cd1d6bf12e3bf5599ee08c47",
+        "abstractions/large-seed43/cycle_null-key1/residual.npz": "36a2c29a116b32c4da15f19df17d336741a7e9b11bd5dc0d83021a519fd68343"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "cycle_null-key8",
+      "files": {
+        "abstractions/large-seed43/cycle_null-key8/decisions.json": "acf67c8433a4ab5160c9e6cfc2d60c9ce71e72daa02f086cb30161a971563f77",
+        "abstractions/large-seed43/cycle_null-key8/forecast.npz": "f89159cca4e848159a0f39e51178c6986f9a6de529b90ae4022f109da215a7ee",
+        "abstractions/large-seed43/cycle_null-key8/frozen_predictions.npz": "f3b9c71bece7566503a925de3f721f8cdaac004fc987b184671841368c8bf36d",
+        "abstractions/large-seed43/cycle_null-key8/residual.npz": "fcf4e45979127ebf02e895b1fbabb1aee543500312390bc6852253ab912fdd61"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "cycle_null-key9",
+      "files": {
+        "abstractions/large-seed43/cycle_null-key9/decisions.json": "996c0a809583652ddf7cfb44530b6de32021a4cdd779c4bf13e3c4b9191bcaec",
+        "abstractions/large-seed43/cycle_null-key9/forecast.npz": "40b633c7930c70537190d637a2d0166a8587487e732588ea161e9b7de313aaff",
+        "abstractions/large-seed43/cycle_null-key9/frozen_predictions.npz": "c96e6818ace15e9b677d55b8e535f546b840206f224bc1e91f312581287c0196",
+        "abstractions/large-seed43/cycle_null-key9/residual.npz": "ab5e346d6be3eafcc144de7a3cdc215b2d48fc07f3849c2f66be3a0280ab3f8d"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "branch_null-key0",
+      "files": {
+        "abstractions/large-seed43/branch_null-key0/decisions.json": "5cae461802ce5865aab43e844ecb55a791ae828991ff40d6077798d86b814716",
+        "abstractions/large-seed43/branch_null-key0/forecast.npz": "22350f89012397ba5d6f059abdd080a86761ee72131cdea050e2a8d3f5d263ff",
+        "abstractions/large-seed43/branch_null-key0/frozen_predictions.npz": "0135c6385418a84dc377e8959b6637c936d18eefb0d481dfb3b98b7051318ea9",
+        "abstractions/large-seed43/branch_null-key0/residual.npz": "33e1da00d9aee8b4537351ef04e301d7b9fc5a94b78bb95f7a9c7fbf9144b60d"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "branch_null-key1",
+      "files": {
+        "abstractions/large-seed43/branch_null-key1/decisions.json": "b1c31875ffd81409ce1dfa09ac0a09be4c1ae368d273987796f57c53537bea3b",
+        "abstractions/large-seed43/branch_null-key1/forecast.npz": "f81779b127bba40c7545e5df0f029c51866cb267fa9ea2bdfce9444be5bd2460",
+        "abstractions/large-seed43/branch_null-key1/frozen_predictions.npz": "1229afc952400064d3db0ae5ad8c16d524b400db360ef839ca5ad3021fff14d9",
+        "abstractions/large-seed43/branch_null-key1/residual.npz": "d17778198d34c48b4fb5f7d0c2404b5e2256390b22a74596ba38104df486c061"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "branch_null-key8",
+      "files": {
+        "abstractions/large-seed43/branch_null-key8/decisions.json": "93d6aad2eb19ffcb7e5fbd4269fd19cca255b049a1dfd6a7778ad2a8d7ac08c7",
+        "abstractions/large-seed43/branch_null-key8/forecast.npz": "5669143ca74fc4565bc1282bb898428c1c5116357d20a788faea2e8a10f74749",
+        "abstractions/large-seed43/branch_null-key8/frozen_predictions.npz": "c72e915169eac4795b0f49fac37bd876be2a64f8a192fc9cfecb7a756c2b0990",
+        "abstractions/large-seed43/branch_null-key8/residual.npz": "0726323abb5cb9745e7ae6e2da5fce2be240b349f8918f7a0f0db2d11b7dd78f"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "branch_null-key9",
+      "files": {
+        "abstractions/large-seed43/branch_null-key9/decisions.json": "9a8270545b757375c7a55169adc394d3f120f4f899b5e028a9e331e1f23eac3a",
+        "abstractions/large-seed43/branch_null-key9/forecast.npz": "a91e0169fb09c3aafaa8909444e86f1a56482bcdbbafb6065db6728853811526",
+        "abstractions/large-seed43/branch_null-key9/frozen_predictions.npz": "2a63c0b107ad16b64655a4982b1d2b4ac280fa8adbbe8a25bf16e5436812e204",
+        "abstractions/large-seed43/branch_null-key9/residual.npz": "e12eac8111a40cf0c9d588862af7e45c0f2cb5573e088779f7c2f5595dc229ed"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "copy_lag-key0",
+      "files": {
+        "abstractions/large-seed43/copy_lag-key0/decisions.json": "a59c40d5d3b84369877c50fefcb5bdaf453295a865bb12e1fcf4d50ab525b758",
+        "abstractions/large-seed43/copy_lag-key0/forecast.npz": "f70f77e3ca9dadd0cb0db41fe5de08c75567e7275d9dcb6cb7515f7be597442d",
+        "abstractions/large-seed43/copy_lag-key0/frozen_predictions.npz": "6a46c5e295eb74dd6e7a9c2e84f6db9dba00c44f3ca30485dc1b4e2e88487051",
+        "abstractions/large-seed43/copy_lag-key0/residual.npz": "65b33c077b6d3d97374d69dbc06f44c69bcf5088c797de27691c4ddbb9a6a26e"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "copy_lag-key1",
+      "files": {
+        "abstractions/large-seed43/copy_lag-key1/decisions.json": "e75636fe2c3c5a173f5fb81fd63fff1753fb750068a24ab7def575c5102400f9",
+        "abstractions/large-seed43/copy_lag-key1/forecast.npz": "2a79da3c9d80fe3ba6a9419f91b943178a5d7d21975997e23a3061d27e20a0c8",
+        "abstractions/large-seed43/copy_lag-key1/frozen_predictions.npz": "36fde9eeeb80604563a56a336ce0dfb1e4a5e0ed24f1ab9def69b04ad90ea1a8",
+        "abstractions/large-seed43/copy_lag-key1/residual.npz": "8ee55f6241aac64a8040a12be86787fc0b772c55e57abde2ac4e6d1acef881c5"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "copy_lag-key8",
+      "files": {
+        "abstractions/large-seed43/copy_lag-key8/decisions.json": "70348bdc0a27ca1690e450d01a78ebf1d94151706bb38c183a76565dab7e1a6b",
+        "abstractions/large-seed43/copy_lag-key8/forecast.npz": "3b09981a29d4cf42a82c68a173ab4f057d82f63e08790294d4e84200c62d3661",
+        "abstractions/large-seed43/copy_lag-key8/frozen_predictions.npz": "16ee913457250e45e02aef713eecf31da097acacf5e5155426d67a235336478e",
+        "abstractions/large-seed43/copy_lag-key8/residual.npz": "678fb156b8beea503e28e27b543b5b2ea018ec558e4ac525e4dab4949cca312c"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "copy_lag-key9",
+      "files": {
+        "abstractions/large-seed43/copy_lag-key9/decisions.json": "52aaa759796f10f796ed2fb53b70c3a459f63022893376a0b9bf9d8b8a204ed9",
+        "abstractions/large-seed43/copy_lag-key9/forecast.npz": "b57dc3a282e9b752385b7021ff2508d84a4fdcb824539bf21371741531015198",
+        "abstractions/large-seed43/copy_lag-key9/frozen_predictions.npz": "3db1e85d54211f1f0bc1cdb0e0c2a8f8ec955fa6abf006b3f444ae944552b76e",
+        "abstractions/large-seed43/copy_lag-key9/residual.npz": "11d1176d8359b6b783ce51205a00829b3f5d95dc9a9b0ad877cd572ce70dd0f6"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "iid-key0",
+      "files": {
+        "abstractions/large-seed43/iid-key0/decisions.json": "04c06f948f8cc50cd6abbd08d4cd818887e553ebeb44119ecb7e7bff0e82e7c3",
+        "abstractions/large-seed43/iid-key0/forecast.npz": "9951933ff12739356460a0588d2c8972c1cae39513220bcea4c879839b2faa93",
+        "abstractions/large-seed43/iid-key0/frozen_predictions.npz": "f2da50ea7013878b014e2f156c32e0ec5b436efe372354cb2f6bfd5b3612b491",
+        "abstractions/large-seed43/iid-key0/residual.npz": "52e6c1b22093c2dd1d101804967f770d836bfc83ffc998944737c13d8dfc7e02"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "iid-key1",
+      "files": {
+        "abstractions/large-seed43/iid-key1/decisions.json": "0e2b3349ec22a9bb52e27405ab117e7bf31df9f1f8e2375fcadf11f2848e46ee",
+        "abstractions/large-seed43/iid-key1/forecast.npz": "691bc102777b0423b80529a9fe1b874b945267b0ec5e1bb59ae1277d9710ff21",
+        "abstractions/large-seed43/iid-key1/frozen_predictions.npz": "ee2cb397bb7d6789c3e91998573455a7abc9fce597dd85199e5fcf8a426dafc6",
+        "abstractions/large-seed43/iid-key1/residual.npz": "26d9f3cb186b1332c7622f40a13eaf4f7fe1344234719718c2ceeac4b29b6df8"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "iid-key8",
+      "files": {
+        "abstractions/large-seed43/iid-key8/decisions.json": "123076dfd73d944b596c47dc36dcea944a4877a3d8e7171b19121818109680a9",
+        "abstractions/large-seed43/iid-key8/forecast.npz": "e80388d79380b89925afb413ec85f34709ccb20594002231fadef70ac2d84137",
+        "abstractions/large-seed43/iid-key8/frozen_predictions.npz": "9a24d93e36fe5a76726221c6a918f3e08e17c5299252e18d40e31caa8dcfeaf1",
+        "abstractions/large-seed43/iid-key8/residual.npz": "2c579e0a45a71c07c105c67780801a02d2b5ef27938ccc6326096acd933f470e"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "iid-key9",
+      "files": {
+        "abstractions/large-seed43/iid-key9/decisions.json": "106b4279e9a43783da0b79735f7153320b85cf865e4fffe5c298643d5de722e8",
+        "abstractions/large-seed43/iid-key9/forecast.npz": "34a163d75072762929515980eae808b88e0d7c6ec547bc2e6e5a14cf0cdb7aa9",
+        "abstractions/large-seed43/iid-key9/frozen_predictions.npz": "90cc782ba8e622b90ed397b6ac348955b5e7c409490f774b0b0e80cce3894731",
+        "abstractions/large-seed43/iid-key9/residual.npz": "94c4fbfbe1148a0ebaecdda890609b38d173022ac18b13b0150d0cf982b2a65a"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "rrxor-key0",
+      "files": {
+        "abstractions/large-seed43/rrxor-key0/decisions.json": "a177a33b5af05aa8af422b7b5df93a557a535c8ab7e16ab90f7b4b983b7cb4d6",
+        "abstractions/large-seed43/rrxor-key0/forecast.npz": "b782e9703d6d221ba07a75be87b7ed358ced9a8923eb18249b6929d71c688cb1",
+        "abstractions/large-seed43/rrxor-key0/frozen_predictions.npz": "51756f33b8b1fe233fbcc7c210da98a0c06452b0edcf84864ee2f9d60507f7e3",
+        "abstractions/large-seed43/rrxor-key0/residual.npz": "aff989fb7c48d7e1a9747431a01cbdfa7e79e5ecf801f2cfdacf2305f485517d"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "rrxor-key1",
+      "files": {
+        "abstractions/large-seed43/rrxor-key1/decisions.json": "296097fa00f294fbc95780d7c03bac9dc0c85f775e07bc8a82bf89026695ba98",
+        "abstractions/large-seed43/rrxor-key1/forecast.npz": "59f602877f5e76f884c38126cf851cbefa68bf01c1fd927321cc8c6cf4fa0741",
+        "abstractions/large-seed43/rrxor-key1/frozen_predictions.npz": "7e55962aef068e2666fe89631e69d81ea5b7bf695a7cd077fe4604a9218f4268",
+        "abstractions/large-seed43/rrxor-key1/residual.npz": "c7618957fdfa9ca207c2f6c80503ec6429686faf2285544f0fa384e695bde046"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "rrxor-key2",
+      "files": {
+        "abstractions/large-seed43/rrxor-key2/decisions.json": "6ab4b28c490d60448c09a4a01168ba96eb2c145ad32d5efd7435bac0ad2f2605",
+        "abstractions/large-seed43/rrxor-key2/forecast.npz": "68ffa342e1719b5115fbb48b005b544e0f41d8ad650659bbc9c05ac26aaa2903",
+        "abstractions/large-seed43/rrxor-key2/frozen_predictions.npz": "754fae61bb9ca97f031abb0802f944f6f6df4c41ad206185b4bf2317947c68cc",
+        "abstractions/large-seed43/rrxor-key2/residual.npz": "a2eb72b866d5b3ed2b84228a9627548a097e90783ebb682aefd010ed8e714a9a"
+      }
+    },
+    {
+      "run": "large-seed43",
+      "dataset": "rrxor-key3",
+      "files": {
+        "abstractions/large-seed43/rrxor-key3/decisions.json": "ea19dd66f1504b92824d15f60afbf6d9064bb0c8b9669769bbe4047dfcc4df19",
+        "abstractions/large-seed43/rrxor-key3/forecast.npz": "defad613f80faf34ea39b5ea5ee51b6cce80d410428cc048f285096686ef8198",
+        "abstractions/large-seed43/rrxor-key3/frozen_predictions.npz": "564a01318155aa7965e9586c9aff4f88de5f399b7570b48efcf9e1d7f809be2b",
+        "abstractions/large-seed43/rrxor-key3/residual.npz": "dc57cf15e5fb18bed913efbe3de7522f4025daace1473fd8aa4235b4a417bee9"
+      }
+    }
+  ],
+  "truth_opened": false,
+  "data_manifest_sha256": "7b0a55c6e0fd982bd4e9fa32ea198a385d8f1cfae3f63622e609a7c3dcee2feb",
+  "elapsed_seconds": 1319.3687948749866
+}

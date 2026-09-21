@@ -1,0 +1,71 @@
+{
+  "state": "completed",
+  "elapsed_seconds": 3277.17863650003,
+  "jobs": {
+    "blind-recovery": {
+      "state": "completed",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "voynich.blind_recovery",
+        "run",
+        "--config",
+        "configs/exp0008_blind.json",
+        "--data-root",
+        "data/processed/exp0008-blind",
+        "--output-root",
+        "outputs/EXP-0008",
+        "--device",
+        "mps"
+      ],
+      "max_seconds": 10860,
+      "started_elapsed_seconds": 0.0005229590460658073,
+      "peak_rss_bytes": 549847040,
+      "pid": 76378,
+      "returncode": 0,
+      "finished_elapsed_seconds": 1322.051753167063
+    },
+    "causal-mapping": {
+      "state": "completed",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "voynich.causal_mapping",
+        "--output-root",
+        "outputs/EXP-0009",
+        "--device",
+        "mps",
+        "--max-seconds",
+        "7200"
+      ],
+      "max_seconds": 7260,
+      "started_elapsed_seconds": 0.0015594169963151217,
+      "peak_rss_bytes": 528351232,
+      "pid": 76379,
+      "returncode": 0,
+      "finished_elapsed_seconds": 246.37919200002216
+    },
+    "long-context": {
+      "state": "completed",
+      "command": [
+        ".venv/bin/python",
+        "scripts/run_long_context.py",
+        "run",
+        "--config",
+        "configs/exp0010.json",
+        "--output-root",
+        "outputs/EXP-0010/campaign",
+        "--data",
+        "data/processed/zl3b",
+        "--device",
+        "mps"
+      ],
+      "max_seconds": 10860,
+      "started_elapsed_seconds": 0.0026096670189872384,
+      "peak_rss_bytes": 814874624,
+      "pid": 76380,
+      "returncode": 0,
+      "finished_elapsed_seconds": 3277.1750018750317
+    }
+  }
+}

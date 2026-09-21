@@ -43,3 +43,12 @@ Historical HYP-001 through HYP-006 remain unresolved; the synthetic generator wa
 - **Exploratory candidate for HYP-003:** layout boundaries or recency-weighted symbol statistics may account for part of the distant-order effect. Current interventions confound these factors. A future test should independently perturb definite spaces, line boundaries and recency while matching changed positions/content. This is a new proposal, not supporting evidence for a historical mechanism.
 
 Results: [EXP-0005](../experiments/EXP-0005-results.md), [EXP-0006](../experiments/EXP-0006-results.md), [EXP-0007](../experiments/EXP-0007-results.md). All historical HYP-001 through HYP-006 remain unresolved; no signal/filler assignment or translation has been inferred for Voynich.
+
+## Updated status after CAMPAIGN-0001
+
+- **M-001 / M-004:** EXP-0008 establishes label-free fitting/selection before truth diagnostics. Some familiar-key synthetic partitions improve; no unfamiliar cycle/branch key passes the stronger criterion, and omitted RRXOR fails. Copy-label success concerns mainly the next source symbol. Prediction-only clustering generally matches or beats residual clustering. No general state/transition recovery or manuscript application is justified yet.
+- **M-003:** EXP-0009's discovery-selected earlier interventions pass synthetic future horizons2/4 in all trained seeds; untrained and manuscript cases fail. This is stronger known-process causal calibration. The patches replace broad component vectors, not state-only variables, and do not show a shared historical mechanism.
+- **M-002 / HYP-003:** EXP-0010 finds no registered longer-context improvement under matched exposure. Extra context helps trained2048models relative to their own truncation, but not relative to separately trained256controls. Removing locus-boundary identity hurts overall with mixed glyph-only effects. This concerns transcription information, not established physical-line resets or historical syntax.
+- **Limits:** the longer-prefix subgroup spans only4pages/2leaves; development pages have been repeatedly consulted. All new synthetic diagnostic pools are now exposed. Future adaptive work needs fresh keys/families/contexts. Historical HYP-001 through HYP-006 remain unresolved.
+
+Results: [EXP-0008](../experiments/EXP-0008-results.md), [EXP-0009](../experiments/EXP-0009-results.md), [EXP-0010](../experiments/EXP-0010-results.md).
