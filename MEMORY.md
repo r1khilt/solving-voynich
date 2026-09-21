@@ -36,7 +36,7 @@ Reported on 2026-09-20; not verified account balances:
 - User is willing to help with downloads and additional resources.
 - No API credentials or paid-run spending schedule established; local compute and EXP-0001 limits are recorded below.
 
-Local implementation inventory: arm64 Mac, 64 GiB memory, 18 logical CPUs; sandboxed PyTorch reports no available accelerator. Python 3.12.13 / PyTorch 2.14.0 / NumPy 2.5.3 installed in ignored `.venv`, dependency resolution tracked in `uv.lock`. No paid research API used. EXP-0001 bounds the initial local CPU pilots.
+Local implementation inventory: arm64 Mac, 64 GiB memory, 18 logical CPUs; user identifies it as M5 Pro. MPS is available outside the sandbox and tensor execution verified. A bounded reference-size synthetic benchmark measured 0.01947 s/step on MPS versus 0.06590 on CPU; use approved outside-sandbox runs for GPU access. Python 3.12.13 / PyTorch 2.14.0 / NumPy 2.5.3 installed in ignored `.venv`, dependency resolution tracked in `uv.lock`. No paid research API used.
 
 The user's reference to an AI model solving Navier–Stokes is motivation, not verified evidence in this project. No conclusion about that claim has been drawn and no independent verification has been performed.
 
@@ -53,4 +53,4 @@ The user's reference to an AI model solving Navier–Stokes is motivation, not v
 
 ## Next state
 
-The requested targeted review, data acquisition, architecture and runnable pipeline are complete, with bounded EXP-0001 validation. Next research candidates: a separately registered multi-seed ablation comparison, synthetic known-generator calibration, and prespecified causal behaviors. Continue to review both Voynich-specific precedents and the underlying methods before attempts. No full sweep or semantic/cipher-recovery experiment has run.
+The user now authorizes continued ambitious experiments and mechanistic analysis. EXP-0002 registers six configurations × three seeds, at most 2,000 updates each, with MPS, frozen validation and an unscored test split. Follow with separately specified causal context/head tests and synthetic known-generator calibration. Review both Voynich-specific precedents and underlying methods before attempts; record negative results and do not infer historical meanings from a trained predictor alone.

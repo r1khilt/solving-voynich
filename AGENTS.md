@@ -3,7 +3,7 @@
 ## Scope and continuity
 
 1. Read `MEMORY.md`, the latest entries in `NOTEBOOK.md`, and the relevant knowledge/research documents before substantive work.
-2. **Active research and implementation are authorized.** The user has explicitly requested prior-work research, related cipher/method research, manuscript acquisition, and design/implementation of an interpretable Voynich-only model. Local tests and bounded pilot runs needed to validate this work are within scope. Keep expensive training and paid API use bounded by concrete cost/resource estimates; no open-ended spending. The earlier preparation-only instruction is superseded.
+2. **Active research and experimentation are authorized.** The user has explicitly requested continued ambitious experiments and mechanistic interpretation in addition to prior-work research, data acquisition and implementation. Register bounded local training, controls and causal tests without asking repeatedly. Keep expensive training and paid API use bounded by concrete cost/resource estimates; no open-ended spending. The earlier preparation-only instruction is superseded.
 3. The long-term objective is actual decipherment, not merely Voynich-like generation or another descriptive statistical report. The charter is a source of hypotheses, not mandatory methodology or established truth.
 4. Use the user's latest instructions to resolve scope. Be ambitious about questions and strict about evidence.
 

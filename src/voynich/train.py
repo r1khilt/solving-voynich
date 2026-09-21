@@ -38,6 +38,10 @@ def train(config_path, data_dir, run_dir, *, device="auto", steps=None, seed=Non
         raise ValueError("invalid optimizer configuration")
     if cfg["warmup_steps"] < 0 or cfg["auxiliary_weight"] < 0 or cfg["patience"] < 1:
         raise ValueError("invalid schedule or auxiliary objective")
+    snapshot_steps = cfg.get("snapshot_steps", [])
+    if any(not isinstance(step, int) or isinstance(step, bool) or step <= 0
+           or step % cfg["eval_interval"] for step in snapshot_steps):
+        raise ValueError("snapshot_steps must be positive evaluation-interval multiples")
     device = resolve_device(device)
     torch.manual_seed(cfg["seed"])
     sampler = torch.Generator().manual_seed(cfg["seed"] + 1)
@@ -175,6 +179,8 @@ def train(config_path, data_dir, run_dir, *, device="auto", steps=None, seed=Non
             else:
                 stale += 1
             checkpoint(run_dir / "last.pt", step)
+            if step in snapshot_steps:
+                checkpoint(run_dir / f"step-{step:06d}.pt", step)
             write_json(run_dir / "history.json", history)
             if stale >= cfg["patience"]:
                 stop_reason = "validation_patience"

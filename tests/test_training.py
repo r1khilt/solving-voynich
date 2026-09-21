@@ -480,3 +480,21 @@ def test_training_accepts_explicit_preparation_manifest(corpus, tmp_path):
     summary = training.train(config, root, tmp_path / "run", device="cpu", threads=1,
                              preparation_manifest=explicit)
     assert summary["completed_steps"] == 2
+
+
+def test_requested_intermediate_snapshots_retain_correct_steps(corpus, tmp_path):
+    root, _ = corpus
+    config = training_config(tmp_path / "config.json", steps=2, snapshot_steps=[1, 2])
+    run = tmp_path / "snapshots"
+    training.train(config, root, run, device="cpu", threads=1)
+    for step in [1, 2]:
+        _, payload = training.load_checkpoint(run / f"step-{step:06d}.pt")
+        assert payload["step"] == step
+        assert payload["best_checkpoint"]["step"] <= step
+
+
+def test_snapshot_steps_must_align_with_evaluation(corpus, tmp_path):
+    root, _ = corpus
+    config = training_config(tmp_path / "config.json", eval_interval=2, snapshot_steps=[1])
+    with pytest.raises(ValueError, match="snapshot_steps"):
+        training.train(config, root, tmp_path / "bad", device="cpu", threads=1)
