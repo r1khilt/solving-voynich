@@ -1,0 +1,15 @@
+# Precision audit and the exact object being measured
+
+This record supplements the frozen JSPACE-0001 registration without changing its inputs or directions after fitting began.
+
+The adapter expands each transformer-block matrix by MLX dequantization using the stored bfloat16 scale/bias arrays, then casts the result to float32. Consequently the block matrices are **bfloat16-reconstructed quantized values evaluated in float32**, not the original unquantized weights and not an assertion of bitwise equivalence to every native quantized kernel. Numerical qualification compares interventions/derivatives against this same fixed computational model.
+
+The selected head rows follow the same dequantize-then-cast convention. A head-only follow-up audit, using the ten country token forms and four seed51025 random input vectors, found that reconstructing with float32 scale/bias arithmetic yields slightly different rows. Relative row-matrix difference was0.0014017244; minimum corresponding-row cosine was0.9999988079. The registered rows differed from native quantized-head outputs by at most0.00496224 on this diagnostic; float32-scale reconstruction reduced that to1.43e-6. Specifying only the dequantization output dtype did not remove the intermediate rounding in this check.
+
+The claim for the registered fit is therefore **exact selected-row transport for the declared reconstructed target vectors**, up to the qualified float32 numerical tolerances. It is not an exact-real-arithmetic derivative of the model's final logits or a bitwise reconstruction of the native quantized output head. Final RMS normalization and softmax derivatives are not included in that target either. Both transported and raw-direction intervention conditions use the same declared target vectors.
+
+The audit is small and does not certify an end-to-end bound on causal answers. A tiny head-row difference can be amplified downstream or flip a near-tied output. Preserve these differences as an explicit limitation rather than relabeling the run after results. A targeted follow-up will measure transport of the head-row correction on32 preselected calibration articles (indices0,16,...,496), only the ten country forms, allnine source layers. This is a sensitivity audit, not replacement fitting, and cannot change the primary directions or layer-selection rule. Additional local budget five minutes for derivative calls; if the cap is reached, report incomplete sensitivity coverage.
+
+The M5 reduced-precision matrix default is a separate issue. It was disabled before the qualified run with `MLX_ENABLE_TF32=0`, following [MLX's numerical precision documentation](https://ml-explore.github.io/mlx/build/html/usage/precision.html). Dense expansion alone did not fix it. The registered numerical gates were passed only after the precision policy was corrected.
+
+Raw head-only measurements are retained under ignored `outputs/JSPACE-0001/head-row*-audit.json`; compact copies belong in the engineering result record. No task answer was used to choose the precision policy or dictionary rounding convention.

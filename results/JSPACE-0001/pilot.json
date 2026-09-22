@@ -1,0 +1,1556 @@
+{
+  "passed": true,
+  "family_accuracy": {
+    "indirect_fact": 0.875,
+    "anchored_alias": 0.8125,
+    "surface_copy": 1.0
+  },
+  "relation_accuracy": {
+    "capital": 1.0,
+    "currency": 0.75,
+    "capital_continent": 0.75,
+    "language": 0.875
+  },
+  "seconds": 38.66089874994941,
+  "rows": [
+    {
+      "id": "indirect_fact/pair-05/t0/p0/capital/d0",
+      "family": "indirect_fact",
+      "relation": "capital",
+      "prompt_group": "d4364fb71f94a5945d0ce7dc47165eda39fdbe1e0872cc1fe6f67f6f91d29110",
+      "pair_id": "pair-05",
+      "answer": "Berlin",
+      "accepted": [
+        "Berlin"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        94409
+      ],
+      "prompt_tokens": 35,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p0/capital/d1",
+      "family": "indirect_fact",
+      "relation": "capital",
+      "prompt_group": "b0335ee193f0df0805676712e48eb9e909fcffefbcc92b9f8d1c398488c4cec9",
+      "pair_id": "pair-05",
+      "answer": "Cairo",
+      "accepted": [
+        "Cairo"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        34,
+        25549
+      ],
+      "prompt_tokens": 37,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p1/capital/d0",
+      "family": "indirect_fact",
+      "relation": "capital",
+      "prompt_group": "da348000a8d104832301fbcc029e5287b9ea1b22b79106848179c51f7d69fb30",
+      "pair_id": "pair-05",
+      "answer": "Berlin",
+      "accepted": [
+        "Berlin"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        94409
+      ],
+      "prompt_tokens": 34,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p1/capital/d1",
+      "family": "indirect_fact",
+      "relation": "capital",
+      "prompt_group": "922613df1315e470f5ea4d553bafbd3171d1ad5eb36a1274ccb76f0cb4f80e82",
+      "pair_id": "pair-05",
+      "answer": "Cairo",
+      "accepted": [
+        "Cairo"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        34,
+        25549
+      ],
+      "prompt_tokens": 36,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p0/capital/d0",
+      "family": "anchored_alias",
+      "relation": "capital",
+      "prompt_group": "44bf9c5e3878dde295b1b65b5b037994c44b09debc0a3051a25c56b25424e16e",
+      "pair_id": "pair-05",
+      "answer": "Berlin",
+      "accepted": [
+        "Berlin"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        94409
+      ],
+      "prompt_tokens": 81,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p0/capital/d1",
+      "family": "anchored_alias",
+      "relation": "capital",
+      "prompt_group": "31d06d9c5baa2c7072e6d7ada4933394d8498a4620d0129a857c1e8cc4cd2c07",
+      "pair_id": "pair-05",
+      "answer": "Cairo",
+      "accepted": [
+        "Cairo"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        34,
+        25549
+      ],
+      "prompt_tokens": 81,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p1/capital/d0",
+      "family": "anchored_alias",
+      "relation": "capital",
+      "prompt_group": "99994ed814c093ca9114aa0b5f67fb4e519a8bc74796dc11913ef79d6f37e40d",
+      "pair_id": "pair-05",
+      "answer": "Berlin",
+      "accepted": [
+        "Berlin"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        94409
+      ],
+      "prompt_tokens": 80,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p1/capital/d1",
+      "family": "anchored_alias",
+      "relation": "capital",
+      "prompt_group": "ccc65982751de575f70f52e05cdaed7f61c5e7afbe7160a632db71db278287d3",
+      "pair_id": "pair-05",
+      "answer": "Cairo",
+      "accepted": [
+        "Cairo"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        34,
+        25549
+      ],
+      "prompt_tokens": 80,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-05/t0/p0/capital/d0",
+      "family": "surface_copy",
+      "relation": "capital",
+      "prompt_group": "83b353a3dc025c0cb0efca868a1715ea9b7c3fc92f458a44efc098d9c236c175",
+      "pair_id": "pair-05",
+      "answer": "marble",
+      "accepted": [
+        "marble"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        5612,
+        891
+      ],
+      "prompt_tokens": 40,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-05/t0/p0/capital/d1",
+      "family": "surface_copy",
+      "relation": "capital",
+      "prompt_group": "b028b7bff75d3e360daf4fae42f627a6bdcbedceb9792ae8db057d47c8ddc475",
+      "pair_id": "pair-05",
+      "answer": "marble",
+      "accepted": [
+        "marble"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        5612,
+        891
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p0/currency/d0",
+      "family": "indirect_fact",
+      "relation": "currency",
+      "prompt_group": "26a78baa59ae051891bb899d19c700a3f9f77613ce63ff94e3c3427c88956b6d",
+      "pair_id": "pair-05",
+      "answer": "Euro",
+      "accepted": [
+        "euro",
+        "EUR"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        97427
+      ],
+      "prompt_tokens": 43,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p0/currency/d1",
+      "family": "indirect_fact",
+      "relation": "currency",
+      "prompt_group": "b5ca1a2a2eb0efbd790faeb3053ff6ad34c9cce0b55dd551fccb92fc0374e9c9",
+      "pair_id": "pair-05",
+      "answer": "Egyptian pound",
+      "accepted": [
+        "pound",
+        "EGP"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        85667,
+        1103,
+        30023
+      ],
+      "prompt_tokens": 45,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p1/currency/d0",
+      "family": "indirect_fact",
+      "relation": "currency",
+      "prompt_group": "1f83af95f0de95a049ef08c2fcfdef3f149641971d2fa2f62150c9e36ee92469",
+      "pair_id": "pair-05",
+      "answer": "EUR",
+      "accepted": [
+        "euro",
+        "EUR"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        54738
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p1/currency/d1",
+      "family": "indirect_fact",
+      "relation": "currency",
+      "prompt_group": "408e5f158535b4507fcfe9601bc01ef3f197c54fc245a7631232de2ba7c67751",
+      "pair_id": "pair-05",
+      "answer": "EGP",
+      "accepted": [
+        "pound",
+        "EGP"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        9376,
+        47
+      ],
+      "prompt_tokens": 44,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p0/currency/d0",
+      "family": "anchored_alias",
+      "relation": "currency",
+      "prompt_group": "3631618f644a07e2b2336d0964fa56789cfe4b81d482b26f38bbd19e10863c9c",
+      "pair_id": "pair-05",
+      "answer": "Euro",
+      "accepted": [
+        "euro",
+        "EUR"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        97427
+      ],
+      "prompt_tokens": 89,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p0/currency/d1",
+      "family": "anchored_alias",
+      "relation": "currency",
+      "prompt_group": "28d4fcf7356e33864fc5fd531b3d18a6ffc3d74e1fadcfd4029efe94a58df038",
+      "pair_id": "pair-05",
+      "answer": "Egyptian Pound",
+      "accepted": [
+        "pound",
+        "EGP"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        85667,
+        1103,
+        78252
+      ],
+      "prompt_tokens": 89,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p1/currency/d0",
+      "family": "anchored_alias",
+      "relation": "currency",
+      "prompt_group": "a24e2a716c29f0398bc11d85c2ad0d75a53f25701eadd35f1b8379410226fe95",
+      "pair_id": "pair-05",
+      "answer": "Euro",
+      "accepted": [
+        "euro",
+        "EUR"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        97427
+      ],
+      "prompt_tokens": 88,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p1/currency/d1",
+      "family": "anchored_alias",
+      "relation": "currency",
+      "prompt_group": "84589a6d78adc15f4d1c9fa5192dc72b12d60d7392a2224a665872426ec2f13a",
+      "pair_id": "pair-05",
+      "answer": "EGP",
+      "accepted": [
+        "pound",
+        "EGP"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        9376,
+        47
+      ],
+      "prompt_tokens": 88,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-05/t0/p0/currency/d0",
+      "family": "surface_copy",
+      "relation": "currency",
+      "prompt_group": "0d6bc98442fc63f7526992f08b7302d88a3afff12bce39dce1145eb774e0ea00",
+      "pair_id": "pair-05",
+      "answer": "amber",
+      "accepted": [
+        "amber"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        15221
+      ],
+      "prompt_tokens": 40,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-05/t0/p0/currency/d1",
+      "family": "surface_copy",
+      "relation": "currency",
+      "prompt_group": "1fabce4554c26ed31b26512820455ae43181ac4069ebfdd6994daf7353de7cef",
+      "pair_id": "pair-05",
+      "answer": "amber",
+      "accepted": [
+        "amber"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        15221
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p0/capital_continent/d0",
+      "family": "indirect_fact",
+      "relation": "capital_continent",
+      "prompt_group": "53b87464b2184be076eb7077432de3acc462be4145f615907e1baea020079c5f",
+      "pair_id": "pair-05",
+      "answer": "Europe",
+      "accepted": [
+        "Europe"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        30780
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p0/capital_continent/d1",
+      "family": "indirect_fact",
+      "relation": "capital_continent",
+      "prompt_group": "7d4870b9d9db76c4f79ce4656f3e3febb817af435ba33d5f83b26e9fd021c61c",
+      "pair_id": "pair-05",
+      "answer": "Africa",
+      "accepted": [
+        "Africa"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 44,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p1/capital_continent/d0",
+      "family": "indirect_fact",
+      "relation": "capital_continent",
+      "prompt_group": "f14886c864cb82ffe65352547f9f167903e3df47af2115a32a01eb8aa8d6b632",
+      "pair_id": "pair-05",
+      "answer": "Europe",
+      "accepted": [
+        "Europe"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        30780
+      ],
+      "prompt_tokens": 41,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p1/capital_continent/d1",
+      "family": "indirect_fact",
+      "relation": "capital_continent",
+      "prompt_group": "7b70b52be9c6291ff39a8c528f4232e3b897f9944398bdd5da2cf60f72f940f7",
+      "pair_id": "pair-05",
+      "answer": "Africa",
+      "accepted": [
+        "Africa"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 43,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p0/capital_continent/d0",
+      "family": "anchored_alias",
+      "relation": "capital_continent",
+      "prompt_group": "123a5919e55fe7cddd23c5832a5d13a706e201b4f442da2783ee7747b4962ef3",
+      "pair_id": "pair-05",
+      "answer": "Africa",
+      "accepted": [
+        "Europe"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 88,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p0/capital_continent/d1",
+      "family": "anchored_alias",
+      "relation": "capital_continent",
+      "prompt_group": "11a5b07c670434e4f221a997c4cba618a04c4ae84d52258680b8ae00369579bd",
+      "pair_id": "pair-05",
+      "answer": "Africa",
+      "accepted": [
+        "Africa"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 88,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p1/capital_continent/d0",
+      "family": "anchored_alias",
+      "relation": "capital_continent",
+      "prompt_group": "9717b5235a8eb62234879c7837aed7e47b8b8fb2ebd9af8e9a88b3373571afaa",
+      "pair_id": "pair-05",
+      "answer": "Africa",
+      "accepted": [
+        "Europe"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 87,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p1/capital_continent/d1",
+      "family": "anchored_alias",
+      "relation": "capital_continent",
+      "prompt_group": "381ed833cab2e00dde7e8a0bb3e84b0b49bd6676427b4105adbcca2ce943df00",
+      "pair_id": "pair-05",
+      "answer": "Africa",
+      "accepted": [
+        "Africa"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 87,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-05/t0/p0/capital_continent/d0",
+      "family": "surface_copy",
+      "relation": "capital_continent",
+      "prompt_group": "0878574cafeed61a21cabc43540cb803ef1762234f921fc4795a76dfe5e6861a",
+      "pair_id": "pair-05",
+      "answer": "ribbon",
+      "accepted": [
+        "ribbon"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        54580
+      ],
+      "prompt_tokens": 40,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-05/t0/p0/capital_continent/d1",
+      "family": "surface_copy",
+      "relation": "capital_continent",
+      "prompt_group": "8398fd7415fde4f223ed2d5fd9772190b593a26b8c22806883b78efe7db546f2",
+      "pair_id": "pair-05",
+      "answer": "ribbon",
+      "accepted": [
+        "ribbon"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        54580
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p0/language/d0",
+      "family": "indirect_fact",
+      "relation": "language",
+      "prompt_group": "a4ad1cd11bc3e63ee38c1811f58b8e626cc670a50798501dd54461064b18b3bd",
+      "pair_id": "pair-05",
+      "answer": "German",
+      "accepted": [
+        "German"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        32079
+      ],
+      "prompt_tokens": 37,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p0/language/d1",
+      "family": "indirect_fact",
+      "relation": "language",
+      "prompt_group": "497ecdb72cd3c768cbfdd8e3178f9be0c94ab487b1c6a619e255ef29eb205d55",
+      "pair_id": "pair-05",
+      "answer": "Arabic",
+      "accepted": [
+        "Arabic"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        6953,
+        68291
+      ],
+      "prompt_tokens": 39,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p1/language/d0",
+      "family": "indirect_fact",
+      "relation": "language",
+      "prompt_group": "e1aae922db2ec0141cad3cefcdf5af4852cf15e9abea088294eb95f92b4005c9",
+      "pair_id": "pair-05",
+      "answer": "German",
+      "accepted": [
+        "German"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        32079
+      ],
+      "prompt_tokens": 36,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-05/t0/p1/language/d1",
+      "family": "indirect_fact",
+      "relation": "language",
+      "prompt_group": "3da97f8fe23c22544023812b2c3d6dba325af8c52156471fa0701541dea6249e",
+      "pair_id": "pair-05",
+      "answer": "Modern Standard Arabic",
+      "accepted": [
+        "Arabic"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        48452,
+        11766,
+        34117
+      ],
+      "prompt_tokens": 38,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p0/language/d0",
+      "family": "anchored_alias",
+      "relation": "language",
+      "prompt_group": "9af011b8c6263f914d851d919a03d2aa44d75827b288b7a743ced3946c68e33c",
+      "pair_id": "pair-05",
+      "answer": "German",
+      "accepted": [
+        "German"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        32079
+      ],
+      "prompt_tokens": 83,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p0/language/d1",
+      "family": "anchored_alias",
+      "relation": "language",
+      "prompt_group": "a11b81a3a13ed6f7b5b3efe9a74a781d2d44bb6b26d07d33a3b8e6df9b9abe07",
+      "pair_id": "pair-05",
+      "answer": "Arabic",
+      "accepted": [
+        "Arabic"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        6953,
+        68291
+      ],
+      "prompt_tokens": 83,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p1/language/d0",
+      "family": "anchored_alias",
+      "relation": "language",
+      "prompt_group": "2cd997a4fa94af2939f3bf20fbdcbcf49db3416e1ee2e96b169ddd3701668fdc",
+      "pair_id": "pair-05",
+      "answer": "German",
+      "accepted": [
+        "German"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        32079
+      ],
+      "prompt_tokens": 82,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-05/t0/p1/language/d1",
+      "family": "anchored_alias",
+      "relation": "language",
+      "prompt_group": "7f1c162d193304ea7cd73f8e2f6bbc523cc1935108a83af7da3b242d0a94855c",
+      "pair_id": "pair-05",
+      "answer": "Arabic",
+      "accepted": [
+        "Arabic"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        6953,
+        68291
+      ],
+      "prompt_tokens": 82,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-05/t0/p0/language/d0",
+      "family": "surface_copy",
+      "relation": "language",
+      "prompt_group": "0878574cafeed61a21cabc43540cb803ef1762234f921fc4795a76dfe5e6861a",
+      "pair_id": "pair-05",
+      "answer": "ribbon",
+      "accepted": [
+        "ribbon"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        54580
+      ],
+      "prompt_tokens": 40,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-05/t0/p0/language/d1",
+      "family": "surface_copy",
+      "relation": "language",
+      "prompt_group": "8398fd7415fde4f223ed2d5fd9772190b593a26b8c22806883b78efe7db546f2",
+      "pair_id": "pair-05",
+      "answer": "ribbon",
+      "accepted": [
+        "ribbon"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        54580
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p0/capital/d0",
+      "family": "indirect_fact",
+      "relation": "capital",
+      "prompt_group": "050660ec55a51b9170cea57a31b757a22cb915259c8f7c88f51659ec8138ac2b",
+      "pair_id": "pair-07",
+      "answer": "Beijing",
+      "accepted": [
+        "Beijing"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        3430,
+        23649
+      ],
+      "prompt_tokens": 39,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p0/capital/d1",
+      "family": "indirect_fact",
+      "relation": "capital",
+      "prompt_group": "b0335ee193f0df0805676712e48eb9e909fcffefbcc92b9f8d1c398488c4cec9",
+      "pair_id": "pair-07",
+      "answer": "Cairo",
+      "accepted": [
+        "Cairo"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        34,
+        25549
+      ],
+      "prompt_tokens": 37,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p1/capital/d0",
+      "family": "indirect_fact",
+      "relation": "capital",
+      "prompt_group": "4d6e0886e648c2537b3baa6cefd05e017625ed995a9a7bef13e4c4a4e9777a77",
+      "pair_id": "pair-07",
+      "answer": "Beijing",
+      "accepted": [
+        "Beijing"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        3430,
+        23649
+      ],
+      "prompt_tokens": 38,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p1/capital/d1",
+      "family": "indirect_fact",
+      "relation": "capital",
+      "prompt_group": "922613df1315e470f5ea4d553bafbd3171d1ad5eb36a1274ccb76f0cb4f80e82",
+      "pair_id": "pair-07",
+      "answer": "Cairo",
+      "accepted": [
+        "Cairo"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        34,
+        25549
+      ],
+      "prompt_tokens": 36,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p0/capital/d0",
+      "family": "anchored_alias",
+      "relation": "capital",
+      "prompt_group": "dd1d9298690dd372eaa7f9d354f4871cd22e29204de36bf8691147999c87e218",
+      "pair_id": "pair-07",
+      "answer": "Beijing",
+      "accepted": [
+        "Beijing"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        3430,
+        23649
+      ],
+      "prompt_tokens": 85,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p0/capital/d1",
+      "family": "anchored_alias",
+      "relation": "capital",
+      "prompt_group": "85ace98bccc7de2fbf6afd48dc7485f7f6c9f3a505c07b64f2e42bd0606742c7",
+      "pair_id": "pair-07",
+      "answer": "Cairo",
+      "accepted": [
+        "Cairo"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        34,
+        25549
+      ],
+      "prompt_tokens": 85,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p1/capital/d0",
+      "family": "anchored_alias",
+      "relation": "capital",
+      "prompt_group": "d954c393ac508f80da7d2bbacabc0f747da8c6efd9baa982946da36e4d2b4450",
+      "pair_id": "pair-07",
+      "answer": "Beijing",
+      "accepted": [
+        "Beijing"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        3430,
+        23649
+      ],
+      "prompt_tokens": 84,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p1/capital/d1",
+      "family": "anchored_alias",
+      "relation": "capital",
+      "prompt_group": "525dfcb1650abcd7cf3526cf11920733d0d63b546558101d904e12ab04ff58da",
+      "pair_id": "pair-07",
+      "answer": "Cairo",
+      "accepted": [
+        "Cairo"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        34,
+        25549
+      ],
+      "prompt_tokens": 84,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-07/t0/p0/capital/d0",
+      "family": "surface_copy",
+      "relation": "capital",
+      "prompt_group": "e682a34ca0a43eebc3ac541273305e40b9e83bef8b08c8cdaf7e7e45315da898",
+      "pair_id": "pair-07",
+      "answer": "marble",
+      "accepted": [
+        "marble"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        5612,
+        891
+      ],
+      "prompt_tokens": 44,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-07/t0/p0/capital/d1",
+      "family": "surface_copy",
+      "relation": "capital",
+      "prompt_group": "b028b7bff75d3e360daf4fae42f627a6bdcbedceb9792ae8db057d47c8ddc475",
+      "pair_id": "pair-07",
+      "answer": "marble",
+      "accepted": [
+        "marble"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        5612,
+        891
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p0/currency/d0",
+      "family": "indirect_fact",
+      "relation": "currency",
+      "prompt_group": "ccb313c1835092b814b4d76f8c3f8e7cb3f9429994a6a0271ccea429095d34dd",
+      "pair_id": "pair-07",
+      "answer": "Yuan",
+      "accepted": [
+        "yuan",
+        "renminbi",
+        "RMB",
+        "CNY"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        56,
+        10386
+      ],
+      "prompt_tokens": 47,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p0/currency/d1",
+      "family": "indirect_fact",
+      "relation": "currency",
+      "prompt_group": "b5ca1a2a2eb0efbd790faeb3053ff6ad34c9cce0b55dd551fccb92fc0374e9c9",
+      "pair_id": "pair-07",
+      "answer": "Egyptian pound",
+      "accepted": [
+        "pound",
+        "EGP"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        85667,
+        1103,
+        30023
+      ],
+      "prompt_tokens": 45,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p1/currency/d0",
+      "family": "indirect_fact",
+      "relation": "currency",
+      "prompt_group": "bc582963d296321f186d9daef4b90be7d0e2d809c884cea4c34dfcf69748f643",
+      "pair_id": "pair-07",
+      "answer": "Yuan",
+      "accepted": [
+        "yuan",
+        "renminbi",
+        "RMB",
+        "CNY"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        56,
+        10386
+      ],
+      "prompt_tokens": 46,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p1/currency/d1",
+      "family": "indirect_fact",
+      "relation": "currency",
+      "prompt_group": "408e5f158535b4507fcfe9601bc01ef3f197c54fc245a7631232de2ba7c67751",
+      "pair_id": "pair-07",
+      "answer": "EGP",
+      "accepted": [
+        "pound",
+        "EGP"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        9376,
+        47
+      ],
+      "prompt_tokens": 44,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p0/currency/d0",
+      "family": "anchored_alias",
+      "relation": "currency",
+      "prompt_group": "9b4bf654ef5b2a8041907858aae596594aa021016593817267f61b28bbfb5cbb",
+      "pair_id": "pair-07",
+      "answer": "USD",
+      "accepted": [
+        "yuan",
+        "renminbi",
+        "RMB",
+        "CNY"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        26749
+      ],
+      "prompt_tokens": 93,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p0/currency/d1",
+      "family": "anchored_alias",
+      "relation": "currency",
+      "prompt_group": "3b968d5f9eaf59aa3e3d7a40fd48bf8441fe280be42fac8319c308f0e0cc8162",
+      "pair_id": "pair-07",
+      "answer": "EGP",
+      "accepted": [
+        "pound",
+        "EGP"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        9376,
+        47
+      ],
+      "prompt_tokens": 93,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p1/currency/d0",
+      "family": "anchored_alias",
+      "relation": "currency",
+      "prompt_group": "f8e56157712b0f079ae35c81c2f2f441a7f33cb064ab2fe3b988cb6941ad26e0",
+      "pair_id": "pair-07",
+      "answer": "Yuan",
+      "accepted": [
+        "yuan",
+        "renminbi",
+        "RMB",
+        "CNY"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        56,
+        10386
+      ],
+      "prompt_tokens": 92,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p1/currency/d1",
+      "family": "anchored_alias",
+      "relation": "currency",
+      "prompt_group": "82e6af063c62ddb890c57d23c905f2680936d5736f60a3f5df532d7561ee9b19",
+      "pair_id": "pair-07",
+      "answer": "EGP",
+      "accepted": [
+        "pound",
+        "EGP"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        9376,
+        47
+      ],
+      "prompt_tokens": 92,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-07/t0/p0/currency/d0",
+      "family": "surface_copy",
+      "relation": "currency",
+      "prompt_group": "89d656038a671cd2e2589ee69743b94b9e92d280934f00dd5d9c6f6c1ecc6a36",
+      "pair_id": "pair-07",
+      "answer": "lantern",
+      "accepted": [
+        "lantern"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        10715,
+        4160
+      ],
+      "prompt_tokens": 44,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-07/t0/p0/currency/d1",
+      "family": "surface_copy",
+      "relation": "currency",
+      "prompt_group": "c817bb4dfb973fbba5f7483d4476e1bac8692245b29f248ea355404c8194ede4",
+      "pair_id": "pair-07",
+      "answer": "lantern",
+      "accepted": [
+        "lantern"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        10715,
+        4160
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p0/capital_continent/d0",
+      "family": "indirect_fact",
+      "relation": "capital_continent",
+      "prompt_group": "10f6abc42a5b30c1970b58856aa38fe7c161ec81634d08109bb4b22f543eb03c",
+      "pair_id": "pair-07",
+      "answer": "Asia",
+      "accepted": [
+        "Asia"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        38463
+      ],
+      "prompt_tokens": 46,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p0/capital_continent/d1",
+      "family": "indirect_fact",
+      "relation": "capital_continent",
+      "prompt_group": "7d4870b9d9db76c4f79ce4656f3e3febb817af435ba33d5f83b26e9fd021c61c",
+      "pair_id": "pair-07",
+      "answer": "Africa",
+      "accepted": [
+        "Africa"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 44,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p1/capital_continent/d0",
+      "family": "indirect_fact",
+      "relation": "capital_continent",
+      "prompt_group": "08bf9394bd6fd4c740b2889807127b402cd67d35094261ee13fa3a3cb2aef9cd",
+      "pair_id": "pair-07",
+      "answer": "Asia",
+      "accepted": [
+        "Asia"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        38463
+      ],
+      "prompt_tokens": 45,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p1/capital_continent/d1",
+      "family": "indirect_fact",
+      "relation": "capital_continent",
+      "prompt_group": "7b70b52be9c6291ff39a8c528f4232e3b897f9944398bdd5da2cf60f72f940f7",
+      "pair_id": "pair-07",
+      "answer": "Africa",
+      "accepted": [
+        "Africa"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 43,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p0/capital_continent/d0",
+      "family": "anchored_alias",
+      "relation": "capital_continent",
+      "prompt_group": "c717e03ae20bf2bb2bd3c96c6d8e542ad122968e282db78183b7c9631ab88d49",
+      "pair_id": "pair-07",
+      "answer": "Africa",
+      "accepted": [
+        "Asia"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 92,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p0/capital_continent/d1",
+      "family": "anchored_alias",
+      "relation": "capital_continent",
+      "prompt_group": "c3324ce87fcb0b016c0df499fe5696fcc6ce4cab680c555076bb3ffdb596c391",
+      "pair_id": "pair-07",
+      "answer": "Africa",
+      "accepted": [
+        "Africa"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 92,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p1/capital_continent/d0",
+      "family": "anchored_alias",
+      "relation": "capital_continent",
+      "prompt_group": "49fd5527098f17348a44e5862cd8b964fef182c309bf70a15ba6d32d582aaeb8",
+      "pair_id": "pair-07",
+      "answer": "Africa",
+      "accepted": [
+        "Asia"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 91,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p1/capital_continent/d1",
+      "family": "anchored_alias",
+      "relation": "capital_continent",
+      "prompt_group": "5fefd95d645bec53c84d2f401d4f9040f3ebeff6314794d1d348ff3bc03f79b3",
+      "pair_id": "pair-07",
+      "answer": "Africa",
+      "accepted": [
+        "Africa"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        73591
+      ],
+      "prompt_tokens": 91,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-07/t0/p0/capital_continent/d0",
+      "family": "surface_copy",
+      "relation": "capital_continent",
+      "prompt_group": "3ce74fab0fbc27a886f0e754c12a600c8efca5cc2f7b045ede1cce1a6728ab4f",
+      "pair_id": "pair-07",
+      "answer": "cobalt",
+      "accepted": [
+        "cobalt"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        85556,
+        3145
+      ],
+      "prompt_tokens": 45,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-07/t0/p0/capital_continent/d1",
+      "family": "surface_copy",
+      "relation": "capital_continent",
+      "prompt_group": "5fb82e0825fc94ceeb9e0bfff675a63ade7b1e7e2dcc2121ad070f1bb2559e25",
+      "pair_id": "pair-07",
+      "answer": "cobalt",
+      "accepted": [
+        "cobalt"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        85556,
+        3145
+      ],
+      "prompt_tokens": 43,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p0/language/d0",
+      "family": "indirect_fact",
+      "relation": "language",
+      "prompt_group": "bf3398b2a8a60465c812d15c2ded9dac35b81c55d991597a52e3f2b50d83d23f",
+      "pair_id": "pair-07",
+      "answer": "Mandarin.",
+      "accepted": [
+        "Mandarin",
+        "Mandarin Chinese",
+        "Chinese",
+        "Putonghua",
+        "Standard Chinese"
+      ],
+      "correct": true,
+      "strict_correct": false,
+      "generated_tokens": [
+        44,
+        437,
+        42740,
+        13
+      ],
+      "prompt_tokens": 41,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p0/language/d1",
+      "family": "indirect_fact",
+      "relation": "language",
+      "prompt_group": "497ecdb72cd3c768cbfdd8e3178f9be0c94ab487b1c6a619e255ef29eb205d55",
+      "pair_id": "pair-07",
+      "answer": "Arabic",
+      "accepted": [
+        "Arabic"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        6953,
+        68291
+      ],
+      "prompt_tokens": 39,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p1/language/d0",
+      "family": "indirect_fact",
+      "relation": "language",
+      "prompt_group": "2e14e6f924549b74ea8c61fd8480a9d02ef2025103a86922730cf72a65374bf6",
+      "pair_id": "pair-07",
+      "answer": "Mandarin",
+      "accepted": [
+        "Mandarin",
+        "Mandarin Chinese",
+        "Chinese",
+        "Putonghua",
+        "Standard Chinese"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        44,
+        437,
+        42740
+      ],
+      "prompt_tokens": 40,
+      "truncated": false
+    },
+    {
+      "id": "indirect_fact/pair-07/t0/p1/language/d1",
+      "family": "indirect_fact",
+      "relation": "language",
+      "prompt_group": "3da97f8fe23c22544023812b2c3d6dba325af8c52156471fa0701541dea6249e",
+      "pair_id": "pair-07",
+      "answer": "Modern Standard Arabic",
+      "accepted": [
+        "Arabic"
+      ],
+      "correct": false,
+      "strict_correct": false,
+      "generated_tokens": [
+        48452,
+        11766,
+        34117
+      ],
+      "prompt_tokens": 38,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p0/language/d0",
+      "family": "anchored_alias",
+      "relation": "language",
+      "prompt_group": "b14d416b1752b81fab18f35f996ee81837065a5fe14524886546f6082017b1a4",
+      "pair_id": "pair-07",
+      "answer": "Mandarin Chinese",
+      "accepted": [
+        "Mandarin",
+        "Mandarin Chinese",
+        "Chinese",
+        "Putonghua",
+        "Standard Chinese"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        44,
+        437,
+        42740,
+        8453
+      ],
+      "prompt_tokens": 87,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p0/language/d1",
+      "family": "anchored_alias",
+      "relation": "language",
+      "prompt_group": "22c6da2e6544f0c6357b773e236038953f0afb3e8e0136f0ba1fdfb7dd529464",
+      "pair_id": "pair-07",
+      "answer": "Arabic",
+      "accepted": [
+        "Arabic"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        6953,
+        68291
+      ],
+      "prompt_tokens": 87,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p1/language/d0",
+      "family": "anchored_alias",
+      "relation": "language",
+      "prompt_group": "481d2fbecb5f5ffc413422fa20909d3cc356c23e4c73f922f91db12901fedbcf",
+      "pair_id": "pair-07",
+      "answer": "Mandarin Chinese",
+      "accepted": [
+        "Mandarin",
+        "Mandarin Chinese",
+        "Chinese",
+        "Putonghua",
+        "Standard Chinese"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        44,
+        437,
+        42740,
+        8453
+      ],
+      "prompt_tokens": 86,
+      "truncated": false
+    },
+    {
+      "id": "anchored_alias/pair-07/t0/p1/language/d1",
+      "family": "anchored_alias",
+      "relation": "language",
+      "prompt_group": "d8bd92f90f9c8fd49fe0afde456c24fab5b43524bef690b9849fb88d97313fcd",
+      "pair_id": "pair-07",
+      "answer": "Arabic",
+      "accepted": [
+        "Arabic"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        6953,
+        68291
+      ],
+      "prompt_tokens": 86,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-07/t0/p0/language/d0",
+      "family": "surface_copy",
+      "relation": "language",
+      "prompt_group": "0767804047fa8ee0967086d9c30d0ff1824c7eea68e6be4585674983b4fbf0b0",
+      "pair_id": "pair-07",
+      "answer": "violet",
+      "accepted": [
+        "violet"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        85,
+        30912
+      ],
+      "prompt_tokens": 44,
+      "truncated": false
+    },
+    {
+      "id": "surface_copy/pair-07/t0/p0/language/d1",
+      "family": "surface_copy",
+      "relation": "language",
+      "prompt_group": "d44bb8e05ea943965a5c145c5c8661533231ed347b3df550334c5fcb41d24fe6",
+      "pair_id": "pair-07",
+      "answer": "violet",
+      "accepted": [
+        "violet"
+      ],
+      "correct": true,
+      "strict_correct": true,
+      "generated_tokens": [
+        85,
+        30912
+      ],
+      "prompt_tokens": 42,
+      "truncated": false
+    }
+  ],
+  "inputs_sha256": "cf79b15ebc014a8876ad528b95c54b008786e66ce3420fe9e9c0d4888c038198",
+  "unique_prompts": 69
+}
