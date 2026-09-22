@@ -1,0 +1,205 @@
+{
+  "status": "Input audit only; no model outputs or causal outcomes inspected",
+  "summaries": [
+    {
+      "split": "final",
+      "family": "indirect_fact",
+      "records": 96,
+      "unique_rendered_prompts": 64,
+      "prompt_multiplicities": {
+        "2": 32,
+        "1": 32
+      },
+      "unordered_country_pairs": 3,
+      "source_tokens_min_median_max": [
+        36,
+        43.0,
+        50
+      ],
+      "unequal_length_donor_fraction": 1.0,
+      "absolute_length_difference_mean_max": [
+        2.0,
+        3
+      ]
+    },
+    {
+      "split": "final",
+      "family": "anchored_alias",
+      "records": 96,
+      "unique_rendered_prompts": 96,
+      "prompt_multiplicities": {
+        "1": 96
+      },
+      "unordered_country_pairs": 3,
+      "source_tokens_min_median_max": [
+        82,
+        88.5,
+        94
+      ],
+      "unequal_length_donor_fraction": 0.0,
+      "absolute_length_difference_mean_max": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "split": "final",
+      "family": "surface_copy",
+      "records": 48,
+      "unique_rendered_prompts": 33,
+      "prompt_multiplicities": {
+        "1": 19,
+        "2": 13,
+        "3": 1
+      },
+      "unordered_country_pairs": 3,
+      "source_tokens_min_median_max": [
+        40,
+        43.0,
+        47
+      ],
+      "unequal_length_donor_fraction": 1.0,
+      "absolute_length_difference_mean_max": [
+        2.0,
+        3
+      ]
+    },
+    {
+      "split": "development",
+      "family": "indirect_fact",
+      "records": 48,
+      "unique_rendered_prompts": 32,
+      "prompt_multiplicities": {
+        "1": 16,
+        "2": 16
+      },
+      "unordered_country_pairs": 3,
+      "source_tokens_min_median_max": [
+        35,
+        42.5,
+        49
+      ],
+      "unequal_length_donor_fraction": 1.0,
+      "absolute_length_difference_mean_max": [
+        5.0,
+        6
+      ]
+    },
+    {
+      "split": "development",
+      "family": "anchored_alias",
+      "records": 48,
+      "unique_rendered_prompts": 48,
+      "prompt_multiplicities": {
+        "1": 48
+      },
+      "unordered_country_pairs": 3,
+      "source_tokens_min_median_max": [
+        83,
+        88.0,
+        92
+      ],
+      "unequal_length_donor_fraction": 0.0,
+      "absolute_length_difference_mean_max": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "split": "development",
+      "family": "surface_copy",
+      "records": 24,
+      "unique_rendered_prompts": 17,
+      "prompt_multiplicities": {
+        "1": 13,
+        "3": 3,
+        "2": 1
+      },
+      "unordered_country_pairs": 3,
+      "source_tokens_min_median_max": [
+        40,
+        42.5,
+        47
+      ],
+      "unequal_length_donor_fraction": 1.0,
+      "absolute_length_difference_mean_max": [
+        5.0,
+        6
+      ]
+    },
+    {
+      "split": "pilot",
+      "family": "indirect_fact",
+      "records": 32,
+      "unique_rendered_prompts": 24,
+      "prompt_multiplicities": {
+        "1": 16,
+        "2": 8
+      },
+      "unordered_country_pairs": 2,
+      "source_tokens_min_median_max": [
+        34,
+        41.0,
+        47
+      ],
+      "unequal_length_donor_fraction": 1.0,
+      "absolute_length_difference_mean_max": [
+        2.0,
+        2
+      ]
+    },
+    {
+      "split": "pilot",
+      "family": "anchored_alias",
+      "records": 32,
+      "unique_rendered_prompts": 32,
+      "prompt_multiplicities": {
+        "1": 32
+      },
+      "unordered_country_pairs": 2,
+      "source_tokens_min_median_max": [
+        80,
+        87.0,
+        93
+      ],
+      "unequal_length_donor_fraction": 0.0,
+      "absolute_length_difference_mean_max": [
+        0.0,
+        0
+      ]
+    },
+    {
+      "split": "pilot",
+      "family": "surface_copy",
+      "records": 16,
+      "unique_rendered_prompts": 13,
+      "prompt_multiplicities": {
+        "1": 10,
+        "2": 3
+      },
+      "unordered_country_pairs": 2,
+      "source_tokens_min_median_max": [
+        40,
+        42.0,
+        45
+      ],
+      "unequal_length_donor_fraction": 1.0,
+      "absolute_length_difference_mean_max": [
+        2.0,
+        2
+      ]
+    }
+  ],
+  "pilot_rendering_exact_matches": 69,
+  "pilot_inputs_sha256": "5af9dcceff25e4dc398d4941af113fbe7367103d6f3c36f5bbbb253a98170f07",
+  "rows_sha256": "32a09e700de7bf5d1d72ced088a21e554d2df9a6f7d1e14102d4b799af1a6e48",
+  "script_sha256": "56c4e4393cb4c8d5a4f03573d462c8663de0b41c4f9c351ff48c2b8a1febd5eb",
+  "inputs_sha256": "cf79b15ebc014a8876ad528b95c54b008786e66ce3420fe9e9c0d4888c038198",
+  "limitations": [
+    "Rows sharing countries, facts, templates, and reverse directions are dependent; record counts are not independent sample sizes.",
+    "Different prompt lengths can change positional and attention context. Last-prefix edits do not isolate a position-invariant concept.",
+    "Cross-query neuron differences can transfer a mixture of country, landmark, and length effects; matched random edits alone cannot distinguish these.",
+    "Repeated copy prompts retain their registered record weights. No primary denominator or acceptance rule is changed after this audit.",
+    "A prompt-disjoint paraphrase holdout does not provide new world facts, languages, or independent training seeds."
+  ]
+}
