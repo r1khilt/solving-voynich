@@ -1,0 +1,98 @@
+{
+  "phase": "complete",
+  "stages": [
+    {
+      "name": "lens_analysis",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/outputs/JSPACE-0001/venv/bin/python",
+        "-m",
+        "voynich.workspace.lens_analysis"
+      ],
+      "seconds": 10.046487292042002,
+      "exit_code": 0,
+      "log_sha256": "a36bf5699d77e357f027c87fc666236b7d8eeb6133b4f2c6670c978e6e6595bc"
+    },
+    {
+      "name": "precision_audit",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/outputs/JSPACE-0001/venv/bin/python",
+        "-m",
+        "voynich.workspace.precision_audit"
+      ],
+      "seconds": 165.1836246669991,
+      "exit_code": 0,
+      "log_sha256": "773ac49399b2f1e9eb2a1f9cc748da5c5bdc7daba53b7b59d20197c7b4a0094a"
+    },
+    {
+      "name": "causal_qualification",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/outputs/JSPACE-0001/venv/bin/python",
+        "-m",
+        "voynich.workspace.causal_campaign",
+        "freeze"
+      ],
+      "seconds": 10.87567441596184,
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "development",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/outputs/JSPACE-0001/venv/bin/python",
+        "-m",
+        "voynich.workspace.causal_campaign",
+        "development"
+      ],
+      "seconds": 2417.577844375046,
+      "exit_code": 0,
+      "log_sha256": "59d6ddd6c64615ae22bb7fe69614e12110d42f64d4f24199a30592d96abd0a27"
+    },
+    {
+      "name": "final",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/outputs/JSPACE-0001/venv/bin/python",
+        "-m",
+        "voynich.workspace.causal_campaign",
+        "final"
+      ],
+      "seconds": 622.7127821249887,
+      "exit_code": 0,
+      "log_sha256": "e438491776222d1e6d5239a7f07454174f8fe3af331d06777d1c26e21a2e1873"
+    },
+    {
+      "name": "causal_analysis",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/outputs/JSPACE-0001/venv/bin/python",
+        "-m",
+        "voynich.workspace.causal_analysis"
+      ],
+      "seconds": 0.5709558749804273,
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "neurons",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/outputs/JSPACE-0001/venv/bin/python",
+        "-m",
+        "voynich.workspace.neuron_campaign"
+      ],
+      "seconds": 1249.8244159580208,
+      "exit_code": 0,
+      "log_sha256": "f06ccaeb97af004338f61e27460cece23cac27f67239a195733d6f2770d87e8f"
+    },
+    {
+      "name": "neuron_analysis",
+      "command": [
+        "/Users/rikhil/coding/solving-voynich/outputs/JSPACE-0001/venv/bin/python",
+        "-m",
+        "voynich.workspace.neuron_analysis"
+      ],
+      "seconds": 0.8444435420678928,
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "manifest_sha256": "bfc3896ef3069c76a80a7c4acb12189a25076569bfc4b33f022da2991e1932f1",
+  "updated_utc": "2026-09-22T03:56:36.667921+00:00"
+}

@@ -1,0 +1,34 @@
+{
+  "source_sha256": {
+    "src/voynich/workspace/__init__.py": "4be874a09948ada599b4434687358bbfc40e0e980f232396bb636b3d4b06ae24",
+    "src/voynich/workspace/campaign.py": "8d61eb422eaff755e300d90bb6279e6c31b5b757029086515a6a64130bf9cfe1",
+    "src/voynich/workspace/causal_backend.py": "a59524331e392a897c653f5d0be872d33faef292778967ca3641e12aea62a3f3",
+    "src/voynich/workspace/causal_campaign.py": "fdf778836b5055cf5d7c67332d3bbfde6df4f4f86c5ea251294781dc3fabaec3",
+    "src/voynich/workspace/geometry.py": "8c8c74301cc9f2d8578c01d96dd14c0da0e308b2d20bd1b561e5a42aca725daf",
+    "src/voynich/workspace/mlx_backend.py": "26614b922180bb61f972aa824698cbcd139ce5e9f052f605b9efe216bf202ae4",
+    "src/voynich/workspace/tasks.py": "9756f6b77165f1397c727906c9508494bea3dcbac88a9e78222323521e1db563",
+    "src/voynich/workspace/neuron_campaign.py": "8dcd78b2337cf6509c778b73971c042e0a7a9fc67bfa34c6a4137a64b3c4acbd",
+    "docs/experiments/NEURON-0001.md": "d7e87945da8ae04463741adb2f6cc19e339393af1ceb7a198ad77f8b95160acf"
+  },
+  "source_revision": "e39f2aef04864e431d2b52ba9a8f62a6c6ad5a85",
+  "jspace_inputs_sha256": "cf79b15ebc014a8876ad528b95c54b008786e66ce3420fe9e9c0d4888c038198",
+  "config_sha256": "7e1af621369735a5a419c7381d4f5997696be10f55f56945fdabc37bba6acd30",
+  "qualification_sha256": "6203dad3dab99954ec358dfe1e4d071fef6864b784c4b2a5d79f9d4c1a5e66b2",
+  "layers": [
+    7,
+    15,
+    23,
+    31
+  ],
+  "counts": [
+    16,
+    64,
+    256
+  ],
+  "primary": [
+    23,
+    64
+  ],
+  "cap_seconds": 2700,
+  "precision": "MLX_ENABLE_TF32=0; cached quantized values expanded to float32 in all transformer blocks"
+}

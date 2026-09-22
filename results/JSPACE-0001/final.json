@@ -1,0 +1,2228 @@
+{
+  "complete": true,
+  "split": "final",
+  "observation_count": 1440,
+  "summary": {
+    "27": {
+      "swap": {
+        "counterfactual": {
+          "successes": 17,
+          "count": 151,
+          "rate": 0.11258278145695365
+        },
+        "counterfactual_all": {
+          "successes": 29,
+          "count": 192,
+          "rate": 0.15104166666666666
+        },
+        "counterfactual_both_clean_correct": {
+          "successes": 17,
+          "count": 112,
+          "rate": 0.15178571428571427
+        },
+        "copy_preserved": {
+          "successes": 48,
+          "count": 48,
+          "rate": 1.0
+        },
+        "original_semantic_retained": {
+          "successes": 130,
+          "count": 151,
+          "rate": 0.8609271523178808
+        },
+        "baseline_semantic": {
+          "successes": 151,
+          "count": 192,
+          "rate": 0.7864583333333334
+        },
+        "invalid_count": 0,
+        "by_family": {
+          "anchored_alias": {
+            "counterfactual": {
+              "successes": 12,
+              "count": 71,
+              "rate": 0.16901408450704225
+            },
+            "counterfactual_all": {
+              "successes": 23,
+              "count": 96,
+              "rate": 0.23958333333333334
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 12,
+              "count": 48,
+              "rate": 0.25
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 56,
+              "count": 71,
+              "rate": 0.7887323943661971
+            },
+            "baseline_semantic": {
+              "successes": 71,
+              "count": 96,
+              "rate": 0.7395833333333334
+            },
+            "invalid_count": 0
+          },
+          "indirect_fact": {
+            "counterfactual": {
+              "successes": 5,
+              "count": 80,
+              "rate": 0.0625
+            },
+            "counterfactual_all": {
+              "successes": 6,
+              "count": 96,
+              "rate": 0.0625
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 5,
+              "count": 64,
+              "rate": 0.078125
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 74,
+              "count": 80,
+              "rate": 0.925
+            },
+            "baseline_semantic": {
+              "successes": 80,
+              "count": 96,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "surface_copy": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "copy_preserved": {
+              "successes": 48,
+              "count": 48,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "baseline_semantic": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_relation": {
+          "capital": {
+            "counterfactual": {
+              "successes": 5,
+              "count": 40,
+              "rate": 0.125
+            },
+            "counterfactual_all": {
+              "successes": 5,
+              "count": 48,
+              "rate": 0.10416666666666667
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 5,
+              "count": 32,
+              "rate": 0.15625
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 35,
+              "count": 40,
+              "rate": 0.875
+            },
+            "baseline_semantic": {
+              "successes": 40,
+              "count": 48,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "capital_continent": {
+            "counterfactual": {
+              "successes": 1,
+              "count": 38,
+              "rate": 0.02631578947368421
+            },
+            "counterfactual_all": {
+              "successes": 7,
+              "count": 48,
+              "rate": 0.14583333333333334
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 1,
+              "count": 30,
+              "rate": 0.03333333333333333
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 35,
+              "count": 38,
+              "rate": 0.9210526315789473
+            },
+            "baseline_semantic": {
+              "successes": 38,
+              "count": 48,
+              "rate": 0.7916666666666666
+            },
+            "invalid_count": 0
+          },
+          "currency": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 32,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 5,
+              "count": 48,
+              "rate": 0.10416666666666667
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 16,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 31,
+              "count": 32,
+              "rate": 0.96875
+            },
+            "baseline_semantic": {
+              "successes": 32,
+              "count": 48,
+              "rate": 0.6666666666666666
+            },
+            "invalid_count": 0
+          },
+          "language": {
+            "counterfactual": {
+              "successes": 11,
+              "count": 41,
+              "rate": 0.2682926829268293
+            },
+            "counterfactual_all": {
+              "successes": 12,
+              "count": 48,
+              "rate": 0.25
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 11,
+              "count": 34,
+              "rate": 0.3235294117647059
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 29,
+              "count": 41,
+              "rate": 0.7073170731707317
+            },
+            "baseline_semantic": {
+              "successes": 41,
+              "count": 48,
+              "rate": 0.8541666666666666
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_pair_id": {
+          "pair-00": {
+            "counterfactual": {
+              "successes": 7,
+              "count": 58,
+              "rate": 0.1206896551724138
+            },
+            "counterfactual_all": {
+              "successes": 11,
+              "count": 64,
+              "rate": 0.171875
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 7,
+              "count": 52,
+              "rate": 0.1346153846153846
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 51,
+              "count": 58,
+              "rate": 0.8793103448275862
+            },
+            "baseline_semantic": {
+              "successes": 58,
+              "count": 64,
+              "rate": 0.90625
+            },
+            "invalid_count": 0
+          },
+          "pair-02": {
+            "counterfactual": {
+              "successes": 10,
+              "count": 50,
+              "rate": 0.2
+            },
+            "counterfactual_all": {
+              "successes": 17,
+              "count": 64,
+              "rate": 0.265625
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 10,
+              "count": 36,
+              "rate": 0.2777777777777778
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 40,
+              "count": 50,
+              "rate": 0.8
+            },
+            "baseline_semantic": {
+              "successes": 50,
+              "count": 64,
+              "rate": 0.78125
+            },
+            "invalid_count": 0
+          },
+          "pair-06": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 43,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 1,
+              "count": 64,
+              "rate": 0.015625
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 24,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 39,
+              "count": 43,
+              "rate": 0.9069767441860465
+            },
+            "baseline_semantic": {
+              "successes": 43,
+              "count": 64,
+              "rate": 0.671875
+            },
+            "invalid_count": 0
+          }
+        }
+      },
+      "random": {
+        "counterfactual": {
+          "successes": 0,
+          "count": 151,
+          "rate": 0.0
+        },
+        "counterfactual_all": {
+          "successes": 7,
+          "count": 192,
+          "rate": 0.036458333333333336
+        },
+        "counterfactual_both_clean_correct": {
+          "successes": 0,
+          "count": 112,
+          "rate": 0.0
+        },
+        "copy_preserved": {
+          "successes": 48,
+          "count": 48,
+          "rate": 1.0
+        },
+        "original_semantic_retained": {
+          "successes": 150,
+          "count": 151,
+          "rate": 0.9933774834437086
+        },
+        "baseline_semantic": {
+          "successes": 151,
+          "count": 192,
+          "rate": 0.7864583333333334
+        },
+        "invalid_count": 0,
+        "by_family": {
+          "anchored_alias": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 71,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 7,
+              "count": 96,
+              "rate": 0.07291666666666667
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 48,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 70,
+              "count": 71,
+              "rate": 0.9859154929577465
+            },
+            "baseline_semantic": {
+              "successes": 71,
+              "count": 96,
+              "rate": 0.7395833333333334
+            },
+            "invalid_count": 0
+          },
+          "indirect_fact": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 80,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 96,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 64,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 80,
+              "count": 80,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 80,
+              "count": 96,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "surface_copy": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "copy_preserved": {
+              "successes": 48,
+              "count": 48,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "baseline_semantic": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_relation": {
+          "capital": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 40,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 48,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 32,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 40,
+              "count": 40,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 40,
+              "count": 48,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "capital_continent": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 38,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 4,
+              "count": 48,
+              "rate": 0.08333333333333333
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 30,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 38,
+              "count": 38,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 38,
+              "count": 48,
+              "rate": 0.7916666666666666
+            },
+            "invalid_count": 0
+          },
+          "currency": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 32,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 2,
+              "count": 48,
+              "rate": 0.041666666666666664
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 16,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 31,
+              "count": 32,
+              "rate": 0.96875
+            },
+            "baseline_semantic": {
+              "successes": 32,
+              "count": 48,
+              "rate": 0.6666666666666666
+            },
+            "invalid_count": 0
+          },
+          "language": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 41,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 1,
+              "count": 48,
+              "rate": 0.020833333333333332
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 34,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 41,
+              "count": 41,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 41,
+              "count": 48,
+              "rate": 0.8541666666666666
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_pair_id": {
+          "pair-00": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 58,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 2,
+              "count": 64,
+              "rate": 0.03125
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 52,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 58,
+              "count": 58,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 58,
+              "count": 64,
+              "rate": 0.90625
+            },
+            "invalid_count": 0
+          },
+          "pair-02": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 50,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 5,
+              "count": 64,
+              "rate": 0.078125
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 36,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 50,
+              "count": 50,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 50,
+              "count": 64,
+              "rate": 0.78125
+            },
+            "invalid_count": 0
+          },
+          "pair-06": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 43,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 64,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 24,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 42,
+              "count": 43,
+              "rate": 0.9767441860465116
+            },
+            "baseline_semantic": {
+              "successes": 43,
+              "count": 64,
+              "rate": 0.671875
+            },
+            "invalid_count": 0
+          }
+        }
+      },
+      "orthogonal": {
+        "counterfactual": {
+          "successes": 0,
+          "count": 151,
+          "rate": 0.0
+        },
+        "counterfactual_all": {
+          "successes": 7,
+          "count": 192,
+          "rate": 0.036458333333333336
+        },
+        "counterfactual_both_clean_correct": {
+          "successes": 0,
+          "count": 112,
+          "rate": 0.0
+        },
+        "copy_preserved": {
+          "successes": 48,
+          "count": 48,
+          "rate": 1.0
+        },
+        "original_semantic_retained": {
+          "successes": 150,
+          "count": 151,
+          "rate": 0.9933774834437086
+        },
+        "baseline_semantic": {
+          "successes": 151,
+          "count": 192,
+          "rate": 0.7864583333333334
+        },
+        "invalid_count": 0,
+        "by_family": {
+          "anchored_alias": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 71,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 7,
+              "count": 96,
+              "rate": 0.07291666666666667
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 48,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 70,
+              "count": 71,
+              "rate": 0.9859154929577465
+            },
+            "baseline_semantic": {
+              "successes": 71,
+              "count": 96,
+              "rate": 0.7395833333333334
+            },
+            "invalid_count": 0
+          },
+          "indirect_fact": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 80,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 96,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 64,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 80,
+              "count": 80,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 80,
+              "count": 96,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "surface_copy": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "copy_preserved": {
+              "successes": 48,
+              "count": 48,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "baseline_semantic": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_relation": {
+          "capital": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 40,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 48,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 32,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 40,
+              "count": 40,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 40,
+              "count": 48,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "capital_continent": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 38,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 4,
+              "count": 48,
+              "rate": 0.08333333333333333
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 30,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 38,
+              "count": 38,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 38,
+              "count": 48,
+              "rate": 0.7916666666666666
+            },
+            "invalid_count": 0
+          },
+          "currency": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 32,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 2,
+              "count": 48,
+              "rate": 0.041666666666666664
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 16,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 31,
+              "count": 32,
+              "rate": 0.96875
+            },
+            "baseline_semantic": {
+              "successes": 32,
+              "count": 48,
+              "rate": 0.6666666666666666
+            },
+            "invalid_count": 0
+          },
+          "language": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 41,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 1,
+              "count": 48,
+              "rate": 0.020833333333333332
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 34,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 41,
+              "count": 41,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 41,
+              "count": 48,
+              "rate": 0.8541666666666666
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_pair_id": {
+          "pair-00": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 58,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 2,
+              "count": 64,
+              "rate": 0.03125
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 52,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 58,
+              "count": 58,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 58,
+              "count": 64,
+              "rate": 0.90625
+            },
+            "invalid_count": 0
+          },
+          "pair-02": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 50,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 5,
+              "count": 64,
+              "rate": 0.078125
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 36,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 50,
+              "count": 50,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 50,
+              "count": 64,
+              "rate": 0.78125
+            },
+            "invalid_count": 0
+          },
+          "pair-06": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 43,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 64,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 24,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 42,
+              "count": 43,
+              "rate": 0.9767441860465116
+            },
+            "baseline_semantic": {
+              "successes": 43,
+              "count": 64,
+              "rate": 0.671875
+            },
+            "invalid_count": 0
+          }
+        }
+      },
+      "raw_swap": {
+        "counterfactual": {
+          "successes": 5,
+          "count": 151,
+          "rate": 0.033112582781456956
+        },
+        "counterfactual_all": {
+          "successes": 13,
+          "count": 192,
+          "rate": 0.06770833333333333
+        },
+        "counterfactual_both_clean_correct": {
+          "successes": 5,
+          "count": 112,
+          "rate": 0.044642857142857144
+        },
+        "copy_preserved": {
+          "successes": 48,
+          "count": 48,
+          "rate": 1.0
+        },
+        "original_semantic_retained": {
+          "successes": 140,
+          "count": 151,
+          "rate": 0.9271523178807947
+        },
+        "baseline_semantic": {
+          "successes": 151,
+          "count": 192,
+          "rate": 0.7864583333333334
+        },
+        "invalid_count": 0,
+        "by_family": {
+          "anchored_alias": {
+            "counterfactual": {
+              "successes": 4,
+              "count": 71,
+              "rate": 0.056338028169014086
+            },
+            "counterfactual_all": {
+              "successes": 12,
+              "count": 96,
+              "rate": 0.125
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 4,
+              "count": 48,
+              "rate": 0.08333333333333333
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 62,
+              "count": 71,
+              "rate": 0.8732394366197183
+            },
+            "baseline_semantic": {
+              "successes": 71,
+              "count": 96,
+              "rate": 0.7395833333333334
+            },
+            "invalid_count": 0
+          },
+          "indirect_fact": {
+            "counterfactual": {
+              "successes": 1,
+              "count": 80,
+              "rate": 0.0125
+            },
+            "counterfactual_all": {
+              "successes": 1,
+              "count": 96,
+              "rate": 0.010416666666666666
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 1,
+              "count": 64,
+              "rate": 0.015625
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 78,
+              "count": 80,
+              "rate": 0.975
+            },
+            "baseline_semantic": {
+              "successes": 80,
+              "count": 96,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "surface_copy": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "copy_preserved": {
+              "successes": 48,
+              "count": 48,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "baseline_semantic": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_relation": {
+          "capital": {
+            "counterfactual": {
+              "successes": 1,
+              "count": 40,
+              "rate": 0.025
+            },
+            "counterfactual_all": {
+              "successes": 1,
+              "count": 48,
+              "rate": 0.020833333333333332
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 1,
+              "count": 32,
+              "rate": 0.03125
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 39,
+              "count": 40,
+              "rate": 0.975
+            },
+            "baseline_semantic": {
+              "successes": 40,
+              "count": 48,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "capital_continent": {
+            "counterfactual": {
+              "successes": 1,
+              "count": 38,
+              "rate": 0.02631578947368421
+            },
+            "counterfactual_all": {
+              "successes": 5,
+              "count": 48,
+              "rate": 0.10416666666666667
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 1,
+              "count": 30,
+              "rate": 0.03333333333333333
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 35,
+              "count": 38,
+              "rate": 0.9210526315789473
+            },
+            "baseline_semantic": {
+              "successes": 38,
+              "count": 48,
+              "rate": 0.7916666666666666
+            },
+            "invalid_count": 0
+          },
+          "currency": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 32,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 3,
+              "count": 48,
+              "rate": 0.0625
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 16,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 29,
+              "count": 32,
+              "rate": 0.90625
+            },
+            "baseline_semantic": {
+              "successes": 32,
+              "count": 48,
+              "rate": 0.6666666666666666
+            },
+            "invalid_count": 0
+          },
+          "language": {
+            "counterfactual": {
+              "successes": 3,
+              "count": 41,
+              "rate": 0.07317073170731707
+            },
+            "counterfactual_all": {
+              "successes": 4,
+              "count": 48,
+              "rate": 0.08333333333333333
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 3,
+              "count": 34,
+              "rate": 0.08823529411764706
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 37,
+              "count": 41,
+              "rate": 0.9024390243902439
+            },
+            "baseline_semantic": {
+              "successes": 41,
+              "count": 48,
+              "rate": 0.8541666666666666
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_pair_id": {
+          "pair-00": {
+            "counterfactual": {
+              "successes": 1,
+              "count": 58,
+              "rate": 0.017241379310344827
+            },
+            "counterfactual_all": {
+              "successes": 3,
+              "count": 64,
+              "rate": 0.046875
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 1,
+              "count": 52,
+              "rate": 0.019230769230769232
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 57,
+              "count": 58,
+              "rate": 0.9827586206896551
+            },
+            "baseline_semantic": {
+              "successes": 58,
+              "count": 64,
+              "rate": 0.90625
+            },
+            "invalid_count": 0
+          },
+          "pair-02": {
+            "counterfactual": {
+              "successes": 4,
+              "count": 50,
+              "rate": 0.08
+            },
+            "counterfactual_all": {
+              "successes": 9,
+              "count": 64,
+              "rate": 0.140625
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 4,
+              "count": 36,
+              "rate": 0.1111111111111111
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 46,
+              "count": 50,
+              "rate": 0.92
+            },
+            "baseline_semantic": {
+              "successes": 50,
+              "count": 64,
+              "rate": 0.78125
+            },
+            "invalid_count": 0
+          },
+          "pair-06": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 43,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 1,
+              "count": 64,
+              "rate": 0.015625
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 24,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 37,
+              "count": 43,
+              "rate": 0.8604651162790697
+            },
+            "baseline_semantic": {
+              "successes": 43,
+              "count": 64,
+              "rate": 0.671875
+            },
+            "invalid_count": 0
+          }
+        }
+      },
+      "donor": {
+        "counterfactual": {
+          "successes": 65,
+          "count": 151,
+          "rate": 0.4304635761589404
+        },
+        "counterfactual_all": {
+          "successes": 95,
+          "count": 192,
+          "rate": 0.4947916666666667
+        },
+        "counterfactual_both_clean_correct": {
+          "successes": 64,
+          "count": 112,
+          "rate": 0.5714285714285714
+        },
+        "copy_preserved": {
+          "successes": 48,
+          "count": 48,
+          "rate": 1.0
+        },
+        "original_semantic_retained": {
+          "successes": 68,
+          "count": 151,
+          "rate": 0.4503311258278146
+        },
+        "baseline_semantic": {
+          "successes": 151,
+          "count": 192,
+          "rate": 0.7864583333333334
+        },
+        "invalid_count": 0,
+        "by_family": {
+          "anchored_alias": {
+            "counterfactual": {
+              "successes": 28,
+              "count": 71,
+              "rate": 0.39436619718309857
+            },
+            "counterfactual_all": {
+              "successes": 48,
+              "count": 96,
+              "rate": 0.5
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 27,
+              "count": 48,
+              "rate": 0.5625
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 27,
+              "count": 71,
+              "rate": 0.38028169014084506
+            },
+            "baseline_semantic": {
+              "successes": 71,
+              "count": 96,
+              "rate": 0.7395833333333334
+            },
+            "invalid_count": 0
+          },
+          "indirect_fact": {
+            "counterfactual": {
+              "successes": 37,
+              "count": 80,
+              "rate": 0.4625
+            },
+            "counterfactual_all": {
+              "successes": 47,
+              "count": 96,
+              "rate": 0.4895833333333333
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 37,
+              "count": 64,
+              "rate": 0.578125
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 41,
+              "count": 80,
+              "rate": 0.5125
+            },
+            "baseline_semantic": {
+              "successes": 80,
+              "count": 96,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "surface_copy": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "copy_preserved": {
+              "successes": 48,
+              "count": 48,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "baseline_semantic": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_relation": {
+          "capital": {
+            "counterfactual": {
+              "successes": 20,
+              "count": 40,
+              "rate": 0.5
+            },
+            "counterfactual_all": {
+              "successes": 28,
+              "count": 48,
+              "rate": 0.5833333333333334
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 19,
+              "count": 32,
+              "rate": 0.59375
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 17,
+              "count": 40,
+              "rate": 0.425
+            },
+            "baseline_semantic": {
+              "successes": 40,
+              "count": 48,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "capital_continent": {
+            "counterfactual": {
+              "successes": 16,
+              "count": 38,
+              "rate": 0.42105263157894735
+            },
+            "counterfactual_all": {
+              "successes": 23,
+              "count": 48,
+              "rate": 0.4791666666666667
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 16,
+              "count": 30,
+              "rate": 0.5333333333333333
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 15,
+              "count": 38,
+              "rate": 0.39473684210526316
+            },
+            "baseline_semantic": {
+              "successes": 38,
+              "count": 48,
+              "rate": 0.7916666666666666
+            },
+            "invalid_count": 0
+          },
+          "currency": {
+            "counterfactual": {
+              "successes": 8,
+              "count": 32,
+              "rate": 0.25
+            },
+            "counterfactual_all": {
+              "successes": 19,
+              "count": 48,
+              "rate": 0.3958333333333333
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 8,
+              "count": 16,
+              "rate": 0.5
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 18,
+              "count": 32,
+              "rate": 0.5625
+            },
+            "baseline_semantic": {
+              "successes": 32,
+              "count": 48,
+              "rate": 0.6666666666666666
+            },
+            "invalid_count": 0
+          },
+          "language": {
+            "counterfactual": {
+              "successes": 21,
+              "count": 41,
+              "rate": 0.5121951219512195
+            },
+            "counterfactual_all": {
+              "successes": 25,
+              "count": 48,
+              "rate": 0.5208333333333334
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 21,
+              "count": 34,
+              "rate": 0.6176470588235294
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 18,
+              "count": 41,
+              "rate": 0.43902439024390244
+            },
+            "baseline_semantic": {
+              "successes": 41,
+              "count": 48,
+              "rate": 0.8541666666666666
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_pair_id": {
+          "pair-00": {
+            "counterfactual": {
+              "successes": 34,
+              "count": 58,
+              "rate": 0.5862068965517241
+            },
+            "counterfactual_all": {
+              "successes": 39,
+              "count": 64,
+              "rate": 0.609375
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 34,
+              "count": 52,
+              "rate": 0.6538461538461539
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 19,
+              "count": 58,
+              "rate": 0.3275862068965517
+            },
+            "baseline_semantic": {
+              "successes": 58,
+              "count": 64,
+              "rate": 0.90625
+            },
+            "invalid_count": 0
+          },
+          "pair-02": {
+            "counterfactual": {
+              "successes": 20,
+              "count": 50,
+              "rate": 0.4
+            },
+            "counterfactual_all": {
+              "successes": 33,
+              "count": 64,
+              "rate": 0.515625
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 20,
+              "count": 36,
+              "rate": 0.5555555555555556
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 28,
+              "count": 50,
+              "rate": 0.56
+            },
+            "baseline_semantic": {
+              "successes": 50,
+              "count": 64,
+              "rate": 0.78125
+            },
+            "invalid_count": 0
+          },
+          "pair-06": {
+            "counterfactual": {
+              "successes": 11,
+              "count": 43,
+              "rate": 0.2558139534883721
+            },
+            "counterfactual_all": {
+              "successes": 23,
+              "count": 64,
+              "rate": 0.359375
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 10,
+              "count": 24,
+              "rate": 0.4166666666666667
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 21,
+              "count": 43,
+              "rate": 0.4883720930232558
+            },
+            "baseline_semantic": {
+              "successes": 43,
+              "count": 64,
+              "rate": 0.671875
+            },
+            "invalid_count": 0
+          }
+        }
+      },
+      "identity": {
+        "counterfactual": {
+          "successes": 0,
+          "count": 151,
+          "rate": 0.0
+        },
+        "counterfactual_all": {
+          "successes": 7,
+          "count": 192,
+          "rate": 0.036458333333333336
+        },
+        "counterfactual_both_clean_correct": {
+          "successes": 0,
+          "count": 112,
+          "rate": 0.0
+        },
+        "copy_preserved": {
+          "successes": 48,
+          "count": 48,
+          "rate": 1.0
+        },
+        "original_semantic_retained": {
+          "successes": 151,
+          "count": 151,
+          "rate": 1.0
+        },
+        "baseline_semantic": {
+          "successes": 151,
+          "count": 192,
+          "rate": 0.7864583333333334
+        },
+        "invalid_count": 0,
+        "by_family": {
+          "anchored_alias": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 71,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 7,
+              "count": 96,
+              "rate": 0.07291666666666667
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 48,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 71,
+              "count": 71,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 71,
+              "count": 96,
+              "rate": 0.7395833333333334
+            },
+            "invalid_count": 0
+          },
+          "indirect_fact": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 80,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 96,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 64,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "original_semantic_retained": {
+              "successes": 80,
+              "count": 80,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 80,
+              "count": 96,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "surface_copy": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "copy_preserved": {
+              "successes": 48,
+              "count": 48,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "baseline_semantic": {
+              "successes": 0,
+              "count": 0,
+              "rate": null
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_relation": {
+          "capital": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 40,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 48,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 32,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 40,
+              "count": 40,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 40,
+              "count": 48,
+              "rate": 0.8333333333333334
+            },
+            "invalid_count": 0
+          },
+          "capital_continent": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 38,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 4,
+              "count": 48,
+              "rate": 0.08333333333333333
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 30,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 38,
+              "count": 38,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 38,
+              "count": 48,
+              "rate": 0.7916666666666666
+            },
+            "invalid_count": 0
+          },
+          "currency": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 32,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 2,
+              "count": 48,
+              "rate": 0.041666666666666664
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 16,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 32,
+              "count": 32,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 32,
+              "count": 48,
+              "rate": 0.6666666666666666
+            },
+            "invalid_count": 0
+          },
+          "language": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 41,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 1,
+              "count": 48,
+              "rate": 0.020833333333333332
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 34,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 12,
+              "count": 12,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 41,
+              "count": 41,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 41,
+              "count": 48,
+              "rate": 0.8541666666666666
+            },
+            "invalid_count": 0
+          }
+        },
+        "by_pair_id": {
+          "pair-00": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 58,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 2,
+              "count": 64,
+              "rate": 0.03125
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 52,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 58,
+              "count": 58,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 58,
+              "count": 64,
+              "rate": 0.90625
+            },
+            "invalid_count": 0
+          },
+          "pair-02": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 50,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 5,
+              "count": 64,
+              "rate": 0.078125
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 36,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 50,
+              "count": 50,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 50,
+              "count": 64,
+              "rate": 0.78125
+            },
+            "invalid_count": 0
+          },
+          "pair-06": {
+            "counterfactual": {
+              "successes": 0,
+              "count": 43,
+              "rate": 0.0
+            },
+            "counterfactual_all": {
+              "successes": 0,
+              "count": 64,
+              "rate": 0.0
+            },
+            "counterfactual_both_clean_correct": {
+              "successes": 0,
+              "count": 24,
+              "rate": 0.0
+            },
+            "copy_preserved": {
+              "successes": 16,
+              "count": 16,
+              "rate": 1.0
+            },
+            "original_semantic_retained": {
+              "successes": 43,
+              "count": 43,
+              "rate": 1.0
+            },
+            "baseline_semantic": {
+              "successes": 43,
+              "count": 64,
+              "rate": 0.671875
+            },
+            "invalid_count": 0
+          }
+        }
+      }
+    }
+  },
+  "observations_sha256": "21f0031c2dd561b2149658d872defbe24fffa675c31426c969c534fda8695b6a",
+  "evaluation_inputs_sha256": "4adbce9a85bffc04a10a98be743c1180ee77e2136bb7aab22115732375afecbb",
+  "seconds_this_invocation": 620.2145951669663,
+  "cumulative_evaluation_seconds": 3035.539267416927,
+  "peak_memory_bytes": 28803051608
+}

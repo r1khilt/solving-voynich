@@ -1,6 +1,6 @@
 # What this investigation is trying to establish
 
-Status: active local computation; this document is a checkpoint, not a completed result. Live progress is in `outputs/JSPACE-0001/fit-progress.json` and `outputs/JSPACE-0001/pipeline/state.json`. Both are ignored local files. Refresh those before quoting a completion count.
+**Status: completed; both registered causal hypotheses failed.** See [JSPACE results](../../experiments/JSPACE-0001-results.md) and [neuron results](../../experiments/NEURON-0001-results.md). The original running checkpoint below is retained as history; its pending-state statements are superseded by those reports. Live progress is in `outputs/JSPACE-0001/fit-progress.json` and `outputs/JSPACE-0001/pipeline/state.json`. Both are ignored local files. Refresh those before quoting a completion count.
 
 The earlier small model could produce somewhat better-looking reconstructions while failing to recover executable explanations. It was too weak, and the accepted copy-based explanations too permissive, to support the mechanistic claims we wanted. That failure is recorded, not discarded.
 

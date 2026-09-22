@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    "outputs/JSPACE-0001/derivatives.npy",
+    "outputs/JSPACE-0001/lens.npz",
+    {
+      "directory": "outputs/JSPACE-0001/development-baselines",
+      "verified_arrays": 97
+    },
+    {
+      "directory": "outputs/JSPACE-0001/final-baselines",
+      "verified_arrays": 193
+    },
+    {
+      "directory": "outputs/NEURON-0001/traces",
+      "verified_arrays": 97
+    }
+  ],
+  "pipeline_logs_verified": 8,
+  "charter_sha256": "ba74631f91464449097cd230bc7045cd58876c90b56be1292f723c185d407604"
+}
