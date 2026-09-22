@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "rows": 1080,
+  "max_donor_first_logit_error": 6.198883056640625e-05,
+  "all_donor_first_argmax_matches": 120,
+  "all_donor_rows": 120,
+  "truncations": 20,
+  "archive_sha256": "4a7ebd5b117ed8d30e0d1799d16a4a455d6329cca4c0b32c95fd47d8c12b31e6",
+  "observations_sha256": "2f2ebd4939bf07f057dc8ded662df3ff975ddb148d5e2a0609101bcae3f7e794",
+  "analysis_source_sha256": "175b3d674ff857cb4dba5971d6e62fb99877936830c71f146668f203b99ad4cd",
+  "descriptive_factorial_patterns": {
+    "bit_order": [
+      "last",
+      "earlier",
+      "all"
+    ],
+    "counts": {
+      "23": {
+        "donor": {
+          "011": 15,
+          "001": 1
+        },
+        "swap": {
+          "001": 2,
+          "000": 11,
+          "011": 3
+        }
+      },
+      "27": {
+        "donor": {
+          "101": 10,
+          "011": 2,
+          "111": 2,
+          "001": 2
+        },
+        "swap": {
+          "101": 4,
+          "000": 11,
+          "001": 1
+        }
+      }
+    },
+    "note": "Within-record intervention outcomes. 001 means only combined coverage succeeded; 011 means earlier and combined succeeded; 111 means either alone and combined succeeded. Descriptive, not a new pass criterion."
+  },
+  "full_donor_first_agrees_but_complete_answer_fails": []
+}

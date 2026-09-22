@@ -16,6 +16,10 @@ At block24, the median64-neuron cross-query edit was3.94% of the recipient resid
 
 Baseline competence is a material limit:31/48 semantic records were initially correct, comprising18/24 indirect facts and13/24 anchored aliases. The eligibility filter was frozen and applied consistently, but leaves a small and dependent panel.
 
+## Selection coverage audit
+
+A post-hoc descriptive check finds that the selected64 units at block24 carry a median20.01% of the summed, column-norm-weighted neuron-change energy on selection examples and14.97% on held-out wording. This is not explained residual variance: cross terms can reinforce or cancel. The decline limits selection transfer, but does not alone explain the failure, since the full-MLP cross-query condition also failed. Exact summaries for all registered layers/counts are in `selection-energy-audit.json`.
+
 ## Natural response analysis
 
 The symmetric gate/value decomposition reconstructs measured SwiGLU changes with maximum relative error2.67e-6. Country-change directions vary with the queried fact. The descriptive residual interaction statistic averages0.410 at block24 and0.811 at block36, where zero would mean identical changes across all four queries. MLP-write interaction averages0.499 and0.879 respectively. These values quantify query dependence on this panel; there is no universal threshold for a concept representation.

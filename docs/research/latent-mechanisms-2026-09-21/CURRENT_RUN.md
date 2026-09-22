@@ -1,33 +1,25 @@
-# What this investigation is trying to establish
+# What the larger investigation actually found
 
-**Status: completed; both registered causal hypotheses failed.** See [JSPACE results](../../experiments/JSPACE-0001-results.md) and [neuron results](../../experiments/NEURON-0001-results.md). The original running checkpoint below is retained as history; its pending-state statements are superseded by those reports. Live progress is in `outputs/JSPACE-0001/fit-progress.json` and `outputs/JSPACE-0001/pipeline/state.json`. Both are ignored local files. Refresh those before quoting a completion count.
+**We found a concrete weakness in our intervention method: where we edited the model mattered enormously.** The completed program used an existing eight-billion-parameter model, about3hours42minutes of registered local computation, and12,168 intervention trials. All runs have finished; no model job from this sequence remains active.
 
-The earlier small model could produce somewhat better-looking reconstructions while failing to recover executable explanations. It was too weak, and the accepted copy-based explanations too permissive, to support the mechanistic claims we wanted. That failure is recorded, not discarded.
+The first tests were disappointing. Changing our selected internal country coordinates redirected only17/151 eligible final answers. Changing64 selected neurons using information from a different question redirected0/31. Both failed their preset criteria, and those failures are preserved.
 
-We have moved this method investigation to an existing eight-billion-parameter model that can already answer most of our factual control questions. We are testing whether its internal country representation can be changed in a precise way, and whether that change can be used by several different kinds of question.
+We then tested a specific explanation. Our edits had touched only the final position of the prompt. The model could still access information stored at earlier positions. On a small development subset where both original questions were answered correctly:
 
-| Test | Concrete example | What success would support |
-| --- | --- | --- |
-| Restricted Jacobian-lens intervention | Change the internal France/China coordinates while asking about a landmark, then inspect the resulting capital, currency, language, or continent | These fixed directions exert useful causal control in this model and panel |
-| Neuron transfer across questions | Measure the internal country change between two currency questions; apply selected neuron changes to a capital question | Some country-change information transfers across query functions |
-| Matched controls | Compare random changes of equal size, raw output directions, full donor states, and unchanged execution | A result depends on which internal information was changed, beyond merely disturbing the model |
-| Unrelated copying | Keep an unrelated requested word intact despite the country edit | Limited nuisance preservation; this is not a complete grammar or general-capability test |
+| What we changed at block24 | Answers redirected as intended |
+| --- | ---: |
+| Complete donor state at the final position | 0/16 |
+| Complete donor states at earlier positions | 15/16 |
+| Complete donor states across the prompt | 16/16 |
+| Narrow country-coordinate edit across the prompt | 5/16 |
+| Random edits of matched size across the prompt | 0/16 |
 
-The first job measures32 selected token directions at nine depths over512 distinct articles. It has already exceeded an hour of real computation. This is a deliberately restricted adaptation of the [Jacobian-lens research](https://transformer-circuits.pub/2026/workspace/index.html), not a replication of a full-vocabulary workspace or its consciousness-related claims.
+Copying unrelated words survived12/12 in every condition. At block28, the final-position donor edit became much more effective (12/16), while earlier-position replacement became less effective (4/16). This suggests that useful information is routed toward the answer position as the model processes the question.
 
-The next studies are actually queued, sequentially. They must pass a numerical check on the8B model before causal scoring. The queue stops on execution errors, records negative findings, and has fixed time/memory limits. It does not automatically tune the model until something looks good. No paid API or additional model download is involved.
+**The implication:** an internal representation can be readable without being a reliable control switch. We need to investigate how information moves between positions and components, and whether other routes restore the original answer after an edit. Looking only for a few highly active neurons misses that possibility.
 
-## What is established so far
+The16-case follow-up is exploratory and heavily dependent: it reuses development facts, includes reverse directions and paraphrases, and covers only two eligible country pairs. The model's imperfect codebook competence leaves many cases outside that denominator. Replacing a complete state also changes far more than one concept. The narrower coordinate edit remains unreliable, and no Voynich meaning, encoding rule or translation has been established.
 
-- The factual pilot passed its registered capability gate:28/32 indirect facts,26/32 anchored aliases,16/16 copying records. Some mistakes are answer-format violations; others are incorrect answers. These small rates do not establish general competence.
-- The derivative implementation passed finite-difference and other numerical checks. The cached intervention path passed12 tests on a small model with the same architecture; its actual8B qualification remains pending.
-- Independent input rendering exactly matched the69 unique pilot prompts. The final evaluations contain repeated recipient questions with different intended donors, shared facts, and only three country pairs. We will not treat every row as an independent discovery.
-- Landmark country changes also change prompt length. Codebook country changes preserve length exactly. Separate family results will help assess this confound, but do not fully isolate every cause.
+Validation:740 repository tests passed, four optional checks skipped,23subtests passed;19 separate live architecture checks passed. All scored output labels, identity controls, source hashes and compact archives were checked. Derivative arrays and387 saved baseline/trace arrays passed checksum verification. Scientific figures were visually inspected.
 
-## What is still unknown
-
-We do not yet know whether either registered causal test passes. Similar-looking directions or large neuron changes cannot answer that question. A failed test can reveal a poor intervention method or query-dependent representation, rather than absence of country knowledge.
-
-Even a successful result would concern known modern concepts in a pretrained model. The manuscript has no corresponding verified semantic labels. A useful next decipherment system would still have to recover a constrained encoding process, demonstrate it on known systems, beat nonsemantic alternatives, and predict genuinely excluded manuscript evidence. Internal interpretability can help find or debug that process; it cannot supply a missing historical translation by itself.
-
-Registrations: [JSPACE-0001](../../experiments/JSPACE-0001.md), [evaluation details](../../experiments/JSPACE-0001-evaluation.md), [NEURON-0001](../../experiments/NEURON-0001.md). Detailed derivations and limits: [causal geometry notes](CAUSAL_GEOMETRY_NOTES.md), [numerical precision audit](PRECISION_AUDIT.md).
+Detailed reports: [Jacobian-lens study](../../experiments/JSPACE-0001-results.md), [neuron study](../../experiments/NEURON-0001-results.md), [position-coverage diagnosis](../../experiments/ROUTE-0001-results.md). The next justified question is which attention paths perform this transfer, with confirmation on genuinely new inputs—not another reuse of the consumed final set.
