@@ -1,0 +1,2895 @@
+{
+  "experiment": "JSPACE-0001",
+  "config": {
+    "experiment": "JSPACE-0001",
+    "seed": 51021,
+    "model_snapshot": "/Users/rikhil/.cache/huggingface/hub/models--mlx-community--Qwen3-8B-4bit/snapshots/545dc4251c05440727734bcd94334791f6ab0192",
+    "calibration_file": "outputs/JSPACE-0001/provenance/wikitext2-train.txt",
+    "output": "outputs/JSPACE-0001",
+    "results": "results/JSPACE-0001",
+    "calibration_prompts": 512,
+    "sequence_length": 128,
+    "skip_first": 16,
+    "direction_batch": 4,
+    "layers": [
+      3,
+      7,
+      11,
+      15,
+      19,
+      23,
+      27,
+      31,
+      34
+    ],
+    "words": [
+      "France",
+      "Germany",
+      "Brazil",
+      "Egypt",
+      "China",
+      "country",
+      "capital",
+      "currency",
+      "language",
+      "continent",
+      "banana",
+      "music",
+      "river",
+      "triangle",
+      "science",
+      "tree"
+    ],
+    "fit_seconds_cap": 14400,
+    "evaluation_seconds_cap": 7200,
+    "memory_bytes_cap": 45000000000,
+    "checkpoint_every": 8,
+    "max_generated_tokens": 12,
+    "capability_semantic_min": 0.8,
+    "capability_copy_min": 0.95,
+    "development_conditions": [
+      "swap",
+      "random",
+      "orthogonal",
+      "raw_swap",
+      "donor",
+      "identity"
+    ],
+    "confirm_swap_min": 0.5,
+    "confirm_control_advantage_min": 0.2,
+    "confirm_copy_preserve_min": 0.95,
+    "confirm_relation_min": 0.3
+  },
+  "config_sha256": "7e1af621369735a5a419c7381d4f5997696be10f55f56945fdabc37bba6acd30",
+  "source_revision": "0ed437ed23bf12fcce6e11a4331d7546c6db0058",
+  "source_sha256": {
+    "src/voynich/workspace/__init__.py": "4be874a09948ada599b4434687358bbfc40e0e980f232396bb636b3d4b06ae24",
+    "src/voynich/workspace/campaign.py": "8d61eb422eaff755e300d90bb6279e6c31b5b757029086515a6a64130bf9cfe1",
+    "src/voynich/workspace/geometry.py": "8c8c74301cc9f2d8578c01d96dd14c0da0e308b2d20bd1b561e5a42aca725daf",
+    "src/voynich/workspace/mlx_backend.py": "26614b922180bb61f972aa824698cbcd139ce5e9f052f605b9efe216bf202ae4",
+    "src/voynich/workspace/qualify.py": "40644434b83e01547eb9c34ad9c7633fb9891bfa2c6b4e9d17be8beea641b712",
+    "src/voynich/workspace/tasks.py": "9756f6b77165f1397c727906c9508494bea3dcbac88a9e78222323521e1db563",
+    "configs/jspace0001.json": "58b494e4786ab5bda3bfcc1b3b47fc30da4cee54a6f95c92ffb5b937bf941b96",
+    "docs/experiments/JSPACE-0001.md": "c8e4186e7c1ecd9983b71ada3b5008c9fd7b4a9d90ab004ecd72da5b82971cd3"
+  },
+  "model_sha256": {
+    "added_tokens.json": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680",
+    "config.json": "e5485285fd7e289e76e9cffa112f6dc2e3426519082f7db9b69041589f81a218",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "model.safetensors": "f2d29621aab300336ad645567ff38c42aac755513006ef4e8a579cf7ef5256d8",
+    "model.safetensors.index.json": "3fb25463b4078b1fc27159daa605190029c2e965f533bf0b1b594f96cbfceb8a",
+    "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "corpus_sha256": "9e9fa1ad55b1c2c95b08e37dd8e653f638fac2c6de904b79e813611eefbc985f",
+  "corpus_source": "https://raw.githubusercontent.com/pytorch/examples/main/word_language_model/data/wikitext-2/train.txt",
+  "corpus_license": "CC-BY-SA-3.0 / GFDL; Wikipedia-derived WikiText-2 nonraw training distribution",
+  "corpus_source_pin": "content SHA-256; upstream main commit was not resolved",
+  "model_source": "https://huggingface.co/mlx-community/Qwen3-8B-4bit/tree/545dc4251c05440727734bcd94334791f6ab0192",
+  "model_license": "Apache-2.0",
+  "eligible_articles": 610,
+  "calibration_sha256": "ba6caf73da8ff2eebae00e26a0e61b86721d8512ac5424eb48f90ba7a859f1d3",
+  "calibration_articles": [
+    {
+      "article_id": 84,
+      "title": "Edward Creutz",
+      "start": 2639
+    },
+    {
+      "article_id": 524,
+      "title": "Far Away Places ( Mad Men )",
+      "start": 2392
+    },
+    {
+      "article_id": 401,
+      "title": "Cougar",
+      "start": 5338
+    },
+    {
+      "article_id": 160,
+      "title": "Protein",
+      "start": 2692
+    },
+    {
+      "article_id": 198,
+      "title": "Italian cruiser Aretusa",
+      "start": 342
+    },
+    {
+      "article_id": 292,
+      "title": "Simon Bradstreet",
+      "start": 2357
+    },
+    {
+      "article_id": 120,
+      "title": "Glorious First of June",
+      "start": 6129
+    },
+    {
+      "article_id": 600,
+      "title": "North @-@ Eastern Area Command ( RAAF )",
+      "start": 1607
+    },
+    {
+      "article_id": 576,
+      "title": "The Convict ( 1910 film )",
+      "start": 692
+    },
+    {
+      "article_id": 518,
+      "title": "Allah",
+      "start": 3308
+    },
+    {
+      "article_id": 399,
+      "title": "G.I. Joe : Retaliation",
+      "start": 816
+    },
+    {
+      "article_id": 361,
+      "title": "Jenova Chen",
+      "start": 269
+    },
+    {
+      "article_id": 581,
+      "title": "Winston Tunnel",
+      "start": 77
+    },
+    {
+      "article_id": 448,
+      "title": "Blackburn Firecrest",
+      "start": 910
+    },
+    {
+      "article_id": 267,
+      "title": "Giacomo Meyerbeer",
+      "start": 8808
+    },
+    {
+      "article_id": 317,
+      "title": "Sclerodermatineae",
+      "start": 1057
+    },
+    {
+      "article_id": 315,
+      "title": "The Litigators",
+      "start": 2289
+    },
+    {
+      "article_id": 338,
+      "title": "Chasing Vermeer",
+      "start": 785
+    },
+    {
+      "article_id": 138,
+      "title": "Chris Turner ( American football )",
+      "start": 1118
+    },
+    {
+      "article_id": 299,
+      "title": "Thomas Quiney",
+      "start": 428
+    },
+    {
+      "article_id": 249,
+      "title": "Ontario Highway 36",
+      "start": 380
+    },
+    {
+      "article_id": 438,
+      "title": "Westminster Assembly",
+      "start": 1376
+    },
+    {
+      "article_id": 301,
+      "title": "Ímar mac Arailt",
+      "start": 318
+    },
+    {
+      "article_id": 369,
+      "title": "K @-@ 22 ( Kansas highway )",
+      "start": 291
+    },
+    {
+      "article_id": 80,
+      "title": "Ten Commandments in Catholic theology",
+      "start": 5430
+    },
+    {
+      "article_id": 569,
+      "title": "Islais Creek",
+      "start": 1260
+    },
+    {
+      "article_id": 404,
+      "title": "Haifa",
+      "start": 11687
+    },
+    {
+      "article_id": 65,
+      "title": "Portuguese ironclad Vasco da Gama",
+      "start": 772
+    },
+    {
+      "article_id": 119,
+      "title": "Tiber Oil Field",
+      "start": 410
+    },
+    {
+      "article_id": 166,
+      "title": "Fear of Flying ( The Simpsons )",
+      "start": 1614
+    },
+    {
+      "article_id": 177,
+      "title": "The Family Jewels ( Marina and the Diamonds album )",
+      "start": 2746
+    },
+    {
+      "article_id": 204,
+      "title": "Super Mario Land",
+      "start": 725
+    },
+    {
+      "article_id": 396,
+      "title": "The Boat Race 1999",
+      "start": 182
+    },
+    {
+      "article_id": 595,
+      "title": "Georgian scripts",
+      "start": 3428
+    },
+    {
+      "article_id": 141,
+      "title": "James Nesbitt",
+      "start": 2967
+    },
+    {
+      "article_id": 110,
+      "title": "Lloyd Mathews",
+      "start": 1842
+    },
+    {
+      "article_id": 51,
+      "title": "Grammy Award for Best Concept Music Video",
+      "start": 1068
+    },
+    {
+      "article_id": 181,
+      "title": "Polka Party !",
+      "start": 1766
+    },
+    {
+      "article_id": 49,
+      "title": "Adam Stansfield",
+      "start": 1006
+    },
+    {
+      "article_id": 307,
+      "title": "Lágrimas Cálidas",
+      "start": 85
+    },
+    {
+      "article_id": 426,
+      "title": "The One I Love ( manga )",
+      "start": 199
+    },
+    {
+      "article_id": 282,
+      "title": "Gerard ( archbishop of York )",
+      "start": 1454
+    },
+    {
+      "article_id": 495,
+      "title": "Kir 'Shara",
+      "start": 1695
+    },
+    {
+      "article_id": 298,
+      "title": "Charmbracelet",
+      "start": 2914
+    },
+    {
+      "article_id": 52,
+      "title": "Hadji Ali",
+      "start": 556
+    },
+    {
+      "article_id": 39,
+      "title": "Polish culture during World War II",
+      "start": 702
+    },
+    {
+      "article_id": 466,
+      "title": "1990 Pacific hurricane season",
+      "start": 1576
+    },
+    {
+      "article_id": 268,
+      "title": "Washington State Route 221",
+      "start": 144
+    },
+    {
+      "article_id": 99,
+      "title": "New Year 's Eve ( Up All Night )",
+      "start": 377
+    },
+    {
+      "article_id": 335,
+      "title": "Santa @-@ Fe ( Bob Dylan song )",
+      "start": 1976
+    },
+    {
+      "article_id": 96,
+      "title": "Hurricane Omar ( 2008 )",
+      "start": 416
+    },
+    {
+      "article_id": 584,
+      "title": "Arnhem Oosterbeek War Cemetery",
+      "start": 769
+    },
+    {
+      "article_id": 215,
+      "title": "Illinois ( Sufjan Stevens album )",
+      "start": 2993
+    },
+    {
+      "article_id": 372,
+      "title": "The Actor 's Children",
+      "start": 69
+    },
+    {
+      "article_id": 260,
+      "title": "Lady in the Lake trial",
+      "start": 436
+    },
+    {
+      "article_id": 95,
+      "title": "Why Does It Hurt So Bad",
+      "start": 599
+    },
+    {
+      "article_id": 194,
+      "title": "Exploration of Jupiter",
+      "start": 4191
+    },
+    {
+      "article_id": 42,
+      "title": "Coldrum Long Barrow",
+      "start": 2313
+    },
+    {
+      "article_id": 157,
+      "title": "WASP @-@ 13b",
+      "start": 457
+    },
+    {
+      "article_id": 142,
+      "title": "Crazy in Love",
+      "start": 4775
+    },
+    {
+      "article_id": 594,
+      "title": "Croatian independence referendum , 1991",
+      "start": 1704
+    },
+    {
+      "article_id": 262,
+      "title": "Plum cake",
+      "start": 476
+    },
+    {
+      "article_id": 185,
+      "title": "Greens Ledge Light",
+      "start": 513
+    },
+    {
+      "article_id": 397,
+      "title": "Hoysala literature",
+      "start": 5291
+    },
+    {
+      "article_id": 588,
+      "title": "Varanasi",
+      "start": 10401
+    },
+    {
+      "article_id": 207,
+      "title": "<unk>",
+      "start": 2253
+    },
+    {
+      "article_id": 118,
+      "title": "Sandwich Day",
+      "start": 138
+    },
+    {
+      "article_id": 134,
+      "title": "Mega Man & Bass",
+      "start": 1836
+    },
+    {
+      "article_id": 398,
+      "title": "1939 Pacific hurricane season",
+      "start": 213
+    },
+    {
+      "article_id": 367,
+      "title": "Laborintus II ( 2012 recording )",
+      "start": 635
+    },
+    {
+      "article_id": 456,
+      "title": "Burning of women in England",
+      "start": 2275
+    },
+    {
+      "article_id": 553,
+      "title": "Missouri River",
+      "start": 6072
+    },
+    {
+      "article_id": 45,
+      "title": "West End Girls",
+      "start": 684
+    },
+    {
+      "article_id": 392,
+      "title": "Stanley Price Weir",
+      "start": 1430
+    },
+    {
+      "article_id": 259,
+      "title": "In Bloom",
+      "start": 1176
+    },
+    {
+      "article_id": 599,
+      "title": "7 / 2 ) <unk> the <unk> , which is induced by eliminating this local moment ( J",
+      "start": 298
+    },
+    {
+      "article_id": 331,
+      "title": "Arikamedu",
+      "start": 2767
+    },
+    {
+      "article_id": 169,
+      "title": "Cadmium",
+      "start": 396
+    },
+    {
+      "article_id": 359,
+      "title": "Tropical Storm Abby ( 1964 )",
+      "start": 1097
+    },
+    {
+      "article_id": 624,
+      "title": "Amylostereum",
+      "start": 2702
+    },
+    {
+      "article_id": 613,
+      "title": "Youth on the Prow , and Pleasure at the Helm",
+      "start": 2772
+    },
+    {
+      "article_id": 164,
+      "title": "Lactarius indigo",
+      "start": 2038
+    },
+    {
+      "article_id": 326,
+      "title": "Bassline ( Chris Brown song )",
+      "start": 675
+    },
+    {
+      "article_id": 94,
+      "title": "Not Quite Hollywood : The Wild , Untold Story of Ozploitation !",
+      "start": 1474
+    },
+    {
+      "article_id": 506,
+      "title": "Marshall Applewhite",
+      "start": 5159
+    },
+    {
+      "article_id": 59,
+      "title": "Astraeus hygrometricus",
+      "start": 1210
+    },
+    {
+      "article_id": 516,
+      "title": "2016 Spanish Grand Prix",
+      "start": 421
+    },
+    {
+      "article_id": 209,
+      "title": "Jifna",
+      "start": 686
+    },
+    {
+      "article_id": 64,
+      "title": "Saint Leonard Catholic Church ( Madison , Nebraska )",
+      "start": 4137
+    },
+    {
+      "article_id": 140,
+      "title": "Florida State Road 878",
+      "start": 672
+    },
+    {
+      "article_id": 153,
+      "title": "HMS Marlborough ( 1912 )",
+      "start": 360
+    },
+    {
+      "article_id": 410,
+      "title": "The Dreamscape",
+      "start": 714
+    },
+    {
+      "article_id": 544,
+      "title": "Noisy miner",
+      "start": 848
+    },
+    {
+      "article_id": 191,
+      "title": "Tawny nurse shark",
+      "start": 2132
+    },
+    {
+      "article_id": 25,
+      "title": "Gold dollar",
+      "start": 3686
+    },
+    {
+      "article_id": 151,
+      "title": "Ode to a Nightingale",
+      "start": 3858
+    },
+    {
+      "article_id": 499,
+      "title": "August ( Fringe )",
+      "start": 1284
+    },
+    {
+      "article_id": 353,
+      "title": "Boise National Forest",
+      "start": 1202
+    },
+    {
+      "article_id": 491,
+      "title": "Kakapo",
+      "start": 6452
+    },
+    {
+      "article_id": 395,
+      "title": "2007 Hawaii Bowl",
+      "start": 2457
+    },
+    {
+      "article_id": 580,
+      "title": "Ghost in the Shell : Stand Alone Complex - Solid State Society",
+      "start": 229
+    },
+    {
+      "article_id": 176,
+      "title": "Leg before wicket",
+      "start": 4111
+    },
+    {
+      "article_id": 121,
+      "title": "New York State Route 368",
+      "start": 67
+    },
+    {
+      "article_id": 247,
+      "title": "No result , Pts",
+      "start": 51
+    },
+    {
+      "article_id": 314,
+      "title": "Battle of Romani",
+      "start": 16675
+    },
+    {
+      "article_id": 156,
+      "title": "You Only Live Twice ( film )",
+      "start": 4215
+    },
+    {
+      "article_id": 602,
+      "title": "A4232 road",
+      "start": 6409
+    },
+    {
+      "article_id": 311,
+      "title": "<unk>",
+      "start": 3052
+    },
+    {
+      "article_id": 572,
+      "title": "Barbarian II : The Dungeon of Drax",
+      "start": 2511
+    },
+    {
+      "article_id": 188,
+      "title": "Jane Dudley , Duchess of Northumberland",
+      "start": 1414
+    },
+    {
+      "article_id": 620,
+      "title": "Midge ( Barbie )",
+      "start": 199
+    },
+    {
+      "article_id": 223,
+      "title": "Otra Nota",
+      "start": 64
+    },
+    {
+      "article_id": 50,
+      "title": "Saprang Kalayanamitr",
+      "start": 5461
+    },
+    {
+      "article_id": 224,
+      "title": "St Peulan 's Church , Llanbeulan",
+      "start": 1256
+    },
+    {
+      "article_id": 432,
+      "title": "USS O 'Brien ( DD @-@ 51 )",
+      "start": 1984
+    },
+    {
+      "article_id": 227,
+      "title": "Super Science Stories",
+      "start": 1962
+    },
+    {
+      "article_id": 1,
+      "title": "Tower Building of the Little Rock Arsenal",
+      "start": 4150
+    },
+    {
+      "article_id": 213,
+      "title": "Tintin in the Congo",
+      "start": 2450
+    },
+    {
+      "article_id": 322,
+      "title": "Humpty Dumpty",
+      "start": 2552
+    },
+    {
+      "article_id": 593,
+      "title": "Cyclone Herbie",
+      "start": 255
+    },
+    {
+      "article_id": 418,
+      "title": "Washington State Route 516",
+      "start": 169
+    },
+    {
+      "article_id": 147,
+      "title": "Rebbie Jackson",
+      "start": 2542
+    },
+    {
+      "article_id": 196,
+      "title": "Royal prerogative in the United Kingdom",
+      "start": 2536
+    },
+    {
+      "article_id": 77,
+      "title": "Norman Finkelstein",
+      "start": 3027
+    },
+    {
+      "article_id": 274,
+      "title": "Oribi",
+      "start": 412
+    },
+    {
+      "article_id": 127,
+      "title": "Hellblazer",
+      "start": 2701
+    },
+    {
+      "article_id": 552,
+      "title": "The Clean Tech Revolution",
+      "start": 546
+    },
+    {
+      "article_id": 313,
+      "title": "Black @-@ tailed jackrabbit",
+      "start": 2270
+    },
+    {
+      "article_id": 434,
+      "title": "A Month in the Country ( film )",
+      "start": 1779
+    },
+    {
+      "article_id": 327,
+      "title": "HMS Black Prince ( 1904 )",
+      "start": 1755
+    },
+    {
+      "article_id": 250,
+      "title": "Arizona State Route 67",
+      "start": 155
+    },
+    {
+      "article_id": 85,
+      "title": "<unk> Del Toso",
+      "start": 728
+    },
+    {
+      "article_id": 380,
+      "title": "Mumia Abu @-@ Jamal",
+      "start": 6531
+    },
+    {
+      "article_id": 57,
+      "title": "Mortimer Wheeler",
+      "start": 12083
+    },
+    {
+      "article_id": 454,
+      "title": "Odyssey Number Five",
+      "start": 657
+    },
+    {
+      "article_id": 512,
+      "title": "Liu Kang",
+      "start": 1794
+    },
+    {
+      "article_id": 183,
+      "title": "Zygoballus sexpunctatus",
+      "start": 156
+    },
+    {
+      "article_id": 235,
+      "title": "<unk> / <unk> , Pts",
+      "start": 707
+    },
+    {
+      "article_id": 514,
+      "title": "Hannah Primrose , Countess of Rosebery",
+      "start": 4175
+    },
+    {
+      "article_id": 61,
+      "title": "The Fox , the Wolf and the Husbandman",
+      "start": 579
+    },
+    {
+      "article_id": 180,
+      "title": "Rosemary 's Baby ( 30 Rock )",
+      "start": 844
+    },
+    {
+      "article_id": 92,
+      "title": "Zhou Tong ( archer )",
+      "start": 2274
+    },
+    {
+      "article_id": 40,
+      "title": "Arihant @-@ class submarine",
+      "start": 885
+    },
+    {
+      "article_id": 123,
+      "title": "Tupolev Tu @-@ 12",
+      "start": 27
+    },
+    {
+      "article_id": 116,
+      "title": "Fastra II",
+      "start": 175
+    },
+    {
+      "article_id": 316,
+      "title": "Stanley Green",
+      "start": 301
+    },
+    {
+      "article_id": 468,
+      "title": "Isabella Beeton",
+      "start": 3128
+    },
+    {
+      "article_id": 129,
+      "title": "2010 Haiti earthquake",
+      "start": 2829
+    },
+    {
+      "article_id": 67,
+      "title": "Livin ' the Dream",
+      "start": 279
+    },
+    {
+      "article_id": 139,
+      "title": "Jack and Jill ( nursery rhyme )",
+      "start": 23
+    },
+    {
+      "article_id": 264,
+      "title": "My Boo ( Usher and Alicia Keys song )",
+      "start": 286
+    },
+    {
+      "article_id": 378,
+      "title": "Hoyt Wilhelm",
+      "start": 1457
+    },
+    {
+      "article_id": 583,
+      "title": "<unk>",
+      "start": 3736
+    },
+    {
+      "article_id": 86,
+      "title": "No. 79 Wing RAAF",
+      "start": 183
+    },
+    {
+      "article_id": 178,
+      "title": "1981 Peach Bowl ( January )",
+      "start": 1406
+    },
+    {
+      "article_id": 565,
+      "title": "Condom",
+      "start": 7272
+    },
+    {
+      "article_id": 590,
+      "title": "1973 Atlantic hurricane season",
+      "start": 2482
+    },
+    {
+      "article_id": 360,
+      "title": "7 Independent Company ( Rhodesia )",
+      "start": 1607
+    },
+    {
+      "article_id": 439,
+      "title": "The Goat Puzzle",
+      "start": 912
+    },
+    {
+      "article_id": 585,
+      "title": "Ace Attorney",
+      "start": 3115
+    },
+    {
+      "article_id": 500,
+      "title": "Ghost in the Shell ( 1995 film )",
+      "start": 1179
+    },
+    {
+      "article_id": 312,
+      "title": "Stuart McCall",
+      "start": 7413
+    },
+    {
+      "article_id": 291,
+      "title": "George N. Briggs",
+      "start": 565
+    },
+    {
+      "article_id": 104,
+      "title": "First @-@ move advantage in chess",
+      "start": 8378
+    },
+    {
+      "article_id": 87,
+      "title": "Vitamin D ( Glee )",
+      "start": 471
+    },
+    {
+      "article_id": 498,
+      "title": "Directed acyclic graph",
+      "start": 2739
+    },
+    {
+      "article_id": 334,
+      "title": "Hurricane Felicia ( 2009 )",
+      "start": 2438
+    },
+    {
+      "article_id": 302,
+      "title": "Tessa Noël",
+      "start": 3520
+    },
+    {
+      "article_id": 469,
+      "title": "Martin Keamy",
+      "start": 1546
+    },
+    {
+      "article_id": 319,
+      "title": "The Son Also Draws",
+      "start": 1258
+    },
+    {
+      "article_id": 58,
+      "title": "Species of Allosaurus",
+      "start": 3176
+    },
+    {
+      "article_id": 74,
+      "title": "Galveston , Texas",
+      "start": 8927
+    },
+    {
+      "article_id": 563,
+      "title": "Ælfric of Abingdon",
+      "start": 946
+    },
+    {
+      "article_id": 589,
+      "title": "Toronto Magnetic and Meteorological Observatory",
+      "start": 1252
+    },
+    {
+      "article_id": 619,
+      "title": "Canning Dam",
+      "start": 1276
+    },
+    {
+      "article_id": 551,
+      "title": "Florida Atlantic University",
+      "start": 1045
+    },
+    {
+      "article_id": 403,
+      "title": "Sorraia",
+      "start": 980
+    },
+    {
+      "article_id": 271,
+      "title": "Odaenathus",
+      "start": 5239
+    },
+    {
+      "article_id": 463,
+      "title": "December 1964 South Vietnamese coup",
+      "start": 4618
+    },
+    {
+      "article_id": 557,
+      "title": "The Good Terrorist",
+      "start": 4580
+    },
+    {
+      "article_id": 304,
+      "title": "McAllister Tower Apartments",
+      "start": 1928
+    },
+    {
+      "article_id": 53,
+      "title": "Battle of Tellicherry",
+      "start": 1210
+    },
+    {
+      "article_id": 370,
+      "title": "Tropical Storm Jose ( 2005 )",
+      "start": 434
+    },
+    {
+      "article_id": 490,
+      "title": "Sweet Love ( Chris Brown song )",
+      "start": 45
+    },
+    {
+      "article_id": 444,
+      "title": "History of artificial intelligence",
+      "start": 8958
+    },
+    {
+      "article_id": 17,
+      "title": "Jacqueline Fernandez",
+      "start": 3169
+    },
+    {
+      "article_id": 324,
+      "title": "England national rugby union team",
+      "start": 6897
+    },
+    {
+      "article_id": 170,
+      "title": "14 @.@ 1 years ) , <unk> ( t1 / 2",
+      "start": 4014
+    },
+    {
+      "article_id": 284,
+      "title": "Perfect Dark ( 2010 video game )",
+      "start": 10
+    },
+    {
+      "article_id": 29,
+      "title": "Charles Eaton ( RAAF officer )",
+      "start": 1702
+    },
+    {
+      "article_id": 47,
+      "title": "Christmas 1994 nor 'easter",
+      "start": 1718
+    },
+    {
+      "article_id": 458,
+      "title": "President Evil",
+      "start": 678
+    },
+    {
+      "article_id": 189,
+      "title": "Elgin Cathedral",
+      "start": 3152
+    },
+    {
+      "article_id": 306,
+      "title": "Murder of Tom ap Rhys Pryce",
+      "start": 1276
+    },
+    {
+      "article_id": 570,
+      "title": "Iguanodon",
+      "start": 1543
+    },
+    {
+      "article_id": 341,
+      "title": "Yoko Shimomura",
+      "start": 2060
+    },
+    {
+      "article_id": 112,
+      "title": "Kaimanawa horse",
+      "start": 708
+    },
+    {
+      "article_id": 270,
+      "title": "Battle of Hubbardton",
+      "start": 1436
+    },
+    {
+      "article_id": 377,
+      "title": "Blackwyche",
+      "start": 45
+    },
+    {
+      "article_id": 199,
+      "title": "M @-@ 6 ( Michigan highway )",
+      "start": 696
+    },
+    {
+      "article_id": 431,
+      "title": "Simon de Montfort 's Parliament",
+      "start": 696
+    },
+    {
+      "article_id": 150,
+      "title": "1940 Atlantic hurricane season",
+      "start": 1932
+    },
+    {
+      "article_id": 603,
+      "title": "Development of Fez",
+      "start": 1973
+    },
+    {
+      "article_id": 623,
+      "title": "Perry the <unk>",
+      "start": 2825
+    },
+    {
+      "article_id": 217,
+      "title": "Crash Boom Bang !",
+      "start": 1679
+    },
+    {
+      "article_id": 15,
+      "title": "Nebraska Highway 88",
+      "start": 643
+    },
+    {
+      "article_id": 573,
+      "title": "Van Morrison : Too Late to Stop Now",
+      "start": 101
+    },
+    {
+      "article_id": 318,
+      "title": "SM U @-@ 3 ( Austria @-@ Hungary )",
+      "start": 1101
+    },
+    {
+      "article_id": 173,
+      "title": "The Food Album",
+      "start": 25
+    },
+    {
+      "article_id": 97,
+      "title": "Papal conclave , 1769",
+      "start": 2561
+    },
+    {
+      "article_id": 582,
+      "title": "Wales national rugby union team",
+      "start": 3809
+    },
+    {
+      "article_id": 283,
+      "title": "Something Borrowed ( Torchwood )",
+      "start": 3843
+    },
+    {
+      "article_id": 450,
+      "title": "Hurricane Flossy ( 1956 )",
+      "start": 651
+    },
+    {
+      "article_id": 417,
+      "title": "The Wave ( Miike Snow song )",
+      "start": 381
+    },
+    {
+      "article_id": 71,
+      "title": "Acute myeloid leukemia",
+      "start": 2839
+    },
+    {
+      "article_id": 427,
+      "title": "Hurricane Abby ( 1960 )",
+      "start": 88
+    },
+    {
+      "article_id": 212,
+      "title": "Trials and Tribble @-@ ations",
+      "start": 4192
+    },
+    {
+      "article_id": 79,
+      "title": "The Boat Race 1900",
+      "start": 522
+    },
+    {
+      "article_id": 126,
+      "title": "St Nazaire Raid",
+      "start": 3768
+    },
+    {
+      "article_id": 528,
+      "title": "Le souper de Beaucaire",
+      "start": 0
+    },
+    {
+      "article_id": 244,
+      "title": "No result , Pts",
+      "start": 136
+    },
+    {
+      "article_id": 446,
+      "title": "Languedoc @-@ Roussillon wine",
+      "start": 2305
+    },
+    {
+      "article_id": 172,
+      "title": "Ulysses ( poem )",
+      "start": 2762
+    },
+    {
+      "article_id": 358,
+      "title": "Hoover Dam",
+      "start": 7644
+    },
+    {
+      "article_id": 106,
+      "title": "Lock Haven , Pennsylvania",
+      "start": 5093
+    },
+    {
+      "article_id": 346,
+      "title": "Richard Cresswell",
+      "start": 3690
+    },
+    {
+      "article_id": 333,
+      "title": "Typhoon Imbudo",
+      "start": 2137
+    },
+    {
+      "article_id": 41,
+      "title": "SMS Markgraf",
+      "start": 3054
+    },
+    {
+      "article_id": 440,
+      "title": "Sinclair Sovereign",
+      "start": 1243
+    },
+    {
+      "article_id": 478,
+      "title": "S.R. 819",
+      "start": 1222
+    },
+    {
+      "article_id": 135,
+      "title": "Ohio State Route 319",
+      "start": 297
+    },
+    {
+      "article_id": 356,
+      "title": "Kalyanasundara",
+      "start": 666
+    },
+    {
+      "article_id": 343,
+      "title": "Stay @-@ at @-@ home dad",
+      "start": 2377
+    },
+    {
+      "article_id": 269,
+      "title": "Superman : Escape from Krypton",
+      "start": 1377
+    },
+    {
+      "article_id": 567,
+      "title": "Sang Pencerah",
+      "start": 1133
+    },
+    {
+      "article_id": 23,
+      "title": "SMS Zrínyi",
+      "start": 365
+    },
+    {
+      "article_id": 550,
+      "title": "Skye",
+      "start": 1175
+    },
+    {
+      "article_id": 144,
+      "title": "Berkley Bedell",
+      "start": 1979
+    },
+    {
+      "article_id": 296,
+      "title": "Mogadishu",
+      "start": 12443
+    },
+    {
+      "article_id": 411,
+      "title": "True Blue ( Madonna song )",
+      "start": 2850
+    },
+    {
+      "article_id": 489,
+      "title": "Hurricane Tanya ( 1995 )",
+      "start": 425
+    },
+    {
+      "article_id": 197,
+      "title": "Mount Jackson ( Antarctica )",
+      "start": 842
+    },
+    {
+      "article_id": 329,
+      "title": "God 's Choice",
+      "start": 1646
+    },
+    {
+      "article_id": 577,
+      "title": "Max Mosley",
+      "start": 6510
+    },
+    {
+      "article_id": 407,
+      "title": "Mark Stockwell",
+      "start": 144
+    },
+    {
+      "article_id": 555,
+      "title": "Landing at Anzac Cove",
+      "start": 3147
+    },
+    {
+      "article_id": 368,
+      "title": "Residence of the United States Ambassador to the United Nations",
+      "start": 617
+    },
+    {
+      "article_id": 574,
+      "title": "Music of Chrono Cross",
+      "start": 1649
+    },
+    {
+      "article_id": 146,
+      "title": "Leslie Andrew",
+      "start": 160
+    },
+    {
+      "article_id": 257,
+      "title": "Tropical Storm Domoina",
+      "start": 186
+    },
+    {
+      "article_id": 405,
+      "title": "New York State Route 185",
+      "start": 693
+    },
+    {
+      "article_id": 14,
+      "title": "There 's Got to Be a Way",
+      "start": 123
+    },
+    {
+      "article_id": 31,
+      "title": "WASP @-@ 44",
+      "start": 665
+    },
+    {
+      "article_id": 38,
+      "title": "Michael Jordan",
+      "start": 9835
+    },
+    {
+      "article_id": 200,
+      "title": "Hi , Infidelity",
+      "start": 1335
+    },
+    {
+      "article_id": 190,
+      "title": "St Mary 's Church , <unk> Alderley",
+      "start": 961
+    },
+    {
+      "article_id": 475,
+      "title": "Road to the North Pole",
+      "start": 3048
+    },
+    {
+      "article_id": 277,
+      "title": "First Light ( Rebecca Stead novel )",
+      "start": 1308
+    },
+    {
+      "article_id": 546,
+      "title": "Cell nucleus",
+      "start": 1875
+    },
+    {
+      "article_id": 305,
+      "title": "Karamokho Alfa",
+      "start": 474
+    },
+    {
+      "article_id": 479,
+      "title": "Paranthodon",
+      "start": 731
+    },
+    {
+      "article_id": 601,
+      "title": "Cape lobster",
+      "start": 270
+    },
+    {
+      "article_id": 408,
+      "title": "Dota 2",
+      "start": 3700
+    },
+    {
+      "article_id": 330,
+      "title": "Baltimore mayoral election , 1999",
+      "start": 2386
+    },
+    {
+      "article_id": 542,
+      "title": "Mothers of the Disappeared",
+      "start": 680
+    },
+    {
+      "article_id": 5,
+      "title": "2011 – 12 Columbus Blue Jackets season",
+      "start": 208
+    },
+    {
+      "article_id": 163,
+      "title": "Pattycake ( gorilla )",
+      "start": 953
+    },
+    {
+      "article_id": 91,
+      "title": "Dangerously in Love Tour",
+      "start": 1218
+    },
+    {
+      "article_id": 263,
+      "title": "Kedok Ketawa",
+      "start": 778
+    },
+    {
+      "article_id": 26,
+      "title": "Johnson – Corey – Chaykovsky reaction",
+      "start": 2040
+    },
+    {
+      "article_id": 473,
+      "title": "Flash Gordon Strange Adventure Magazine",
+      "start": 252
+    },
+    {
+      "article_id": 492,
+      "title": "Live & Kicking",
+      "start": 1806
+    },
+    {
+      "article_id": 610,
+      "title": "Key ( basketball )",
+      "start": 175
+    },
+    {
+      "article_id": 509,
+      "title": "Gold Beach",
+      "start": 6501
+    },
+    {
+      "article_id": 445,
+      "title": "Cyclone Graham",
+      "start": 614
+    },
+    {
+      "article_id": 228,
+      "title": "HMS Hostile ( <unk> )",
+      "start": 153
+    },
+    {
+      "article_id": 483,
+      "title": "Old Pine Church",
+      "start": 252
+    },
+    {
+      "article_id": 455,
+      "title": "Amanita muscaria",
+      "start": 2608
+    },
+    {
+      "article_id": 534,
+      "title": "Chagas disease",
+      "start": 2092
+    },
+    {
+      "article_id": 186,
+      "title": "Action of 13 September 1810",
+      "start": 1723
+    },
+    {
+      "article_id": 309,
+      "title": "Jane 's Attack Squadron",
+      "start": 1388
+    },
+    {
+      "article_id": 606,
+      "title": "Irresistible ( The X @-@ Files )",
+      "start": 2158
+    },
+    {
+      "article_id": 288,
+      "title": "Jacob deGrom",
+      "start": 2224
+    },
+    {
+      "article_id": 449,
+      "title": "Magadheera",
+      "start": 1206
+    },
+    {
+      "article_id": 476,
+      "title": "Ed Barrow",
+      "start": 2410
+    },
+    {
+      "article_id": 113,
+      "title": "The Remix ( Lady Gaga album )",
+      "start": 1018
+    },
+    {
+      "article_id": 609,
+      "title": "Partington",
+      "start": 1101
+    },
+    {
+      "article_id": 608,
+      "title": "T. Arthur Cottam",
+      "start": 233
+    },
+    {
+      "article_id": 137,
+      "title": "Hibiscus ( restaurant )",
+      "start": 91
+    },
+    {
+      "article_id": 393,
+      "title": "Chapter 1 ( House of Cards )",
+      "start": 1626
+    },
+    {
+      "article_id": 254,
+      "title": "1981 European Cup Final",
+      "start": 1009
+    },
+    {
+      "article_id": 280,
+      "title": "The Archaeology of Ritual and Magic",
+      "start": 125
+    },
+    {
+      "article_id": 125,
+      "title": "Ireland",
+      "start": 3942
+    },
+    {
+      "article_id": 383,
+      "title": "Last Exit on Brooklyn",
+      "start": 656
+    },
+    {
+      "article_id": 420,
+      "title": "Djedkare Isesi",
+      "start": 566
+    },
+    {
+      "article_id": 88,
+      "title": "Fern Hobbs",
+      "start": 106
+    },
+    {
+      "article_id": 149,
+      "title": "AIL Storm",
+      "start": 1130
+    },
+    {
+      "article_id": 55,
+      "title": "2013 – 14 York City F.C. season",
+      "start": 2736
+    },
+    {
+      "article_id": 285,
+      "title": "First Ostend Raid",
+      "start": 1040
+    },
+    {
+      "article_id": 103,
+      "title": "L.A.M.B.",
+      "start": 1463
+    },
+    {
+      "article_id": 533,
+      "title": "Big Boy ( song )",
+      "start": 705
+    },
+    {
+      "article_id": 344,
+      "title": "Tristan ( horse )",
+      "start": 2857
+    },
+    {
+      "article_id": 384,
+      "title": "Laurence Olivier",
+      "start": 5089
+    },
+    {
+      "article_id": 561,
+      "title": "Bossy ( Lindsay Lohan song )",
+      "start": 511
+    },
+    {
+      "article_id": 437,
+      "title": "New York State Route 38",
+      "start": 1162
+    },
+    {
+      "article_id": 531,
+      "title": "Memory Almost Full",
+      "start": 3526
+    },
+    {
+      "article_id": 3,
+      "title": "Gambia women 's national football team",
+      "start": 605
+    },
+    {
+      "article_id": 258,
+      "title": "Tales of Destiny 2",
+      "start": 4811
+    },
+    {
+      "article_id": 422,
+      "title": "Comair Flight 5191",
+      "start": 11
+    },
+    {
+      "article_id": 152,
+      "title": "Weather buoy",
+      "start": 1579
+    },
+    {
+      "article_id": 354,
+      "title": "Pokiri",
+      "start": 4991
+    },
+    {
+      "article_id": 616,
+      "title": "Temple of Eshmun",
+      "start": 4309
+    },
+    {
+      "article_id": 365,
+      "title": "Portrait of Monsieur Bertin",
+      "start": 374
+    },
+    {
+      "article_id": 615,
+      "title": "The Secret of Monkey Island",
+      "start": 2733
+    },
+    {
+      "article_id": 351,
+      "title": "Species ( film )",
+      "start": 2141
+    },
+    {
+      "article_id": 230,
+      "title": "Somerset County Cricket Club in 2009",
+      "start": 339
+    },
+    {
+      "article_id": 21,
+      "title": "South of Heaven",
+      "start": 2377
+    },
+    {
+      "article_id": 419,
+      "title": "Stefan Wever",
+      "start": 17
+    },
+    {
+      "article_id": 261,
+      "title": "Dover Athletic F.C.",
+      "start": 3012
+    },
+    {
+      "article_id": 355,
+      "title": "2008 Bahrain Grand Prix",
+      "start": 2280
+    },
+    {
+      "article_id": 464,
+      "title": "1998 National League Wild Card tie @-@ breaker game",
+      "start": 563
+    },
+    {
+      "article_id": 229,
+      "title": "Rocky Mountain Horse",
+      "start": 735
+    },
+    {
+      "article_id": 214,
+      "title": "Andrew Johnston ( singer )",
+      "start": 1161
+    },
+    {
+      "article_id": 554,
+      "title": "Monty Can 't Buy Me Love",
+      "start": 396
+    },
+    {
+      "article_id": 484,
+      "title": "God of War video game collections",
+      "start": 883
+    },
+    {
+      "article_id": 101,
+      "title": "Sentence spacing",
+      "start": 3950
+    },
+    {
+      "article_id": 328,
+      "title": "On the Pulse of Morning",
+      "start": 284
+    },
+    {
+      "article_id": 70,
+      "title": "Corn crake",
+      "start": 120
+    },
+    {
+      "article_id": 248,
+      "title": "Texas A & M Singing Cadets",
+      "start": 1137
+    },
+    {
+      "article_id": 457,
+      "title": "Strand , London",
+      "start": 631
+    },
+    {
+      "article_id": 158,
+      "title": "U2 concert in Sarajevo",
+      "start": 4990
+    },
+    {
+      "article_id": 621,
+      "title": "The Tempest ( album )",
+      "start": 401
+    },
+    {
+      "article_id": 480,
+      "title": "History of Bradford City <unk>",
+      "start": 5607
+    },
+    {
+      "article_id": 111,
+      "title": "HMS Boreas ( <unk> )",
+      "start": 1290
+    },
+    {
+      "article_id": 539,
+      "title": "Bodyline",
+      "start": 994
+    },
+    {
+      "article_id": 56,
+      "title": "Antimony",
+      "start": 4656
+    },
+    {
+      "article_id": 471,
+      "title": "Middle Colonies",
+      "start": 2412
+    },
+    {
+      "article_id": 511,
+      "title": "Crosby Garrett Helmet",
+      "start": 2988
+    },
+    {
+      "article_id": 294,
+      "title": "Bob Dylan",
+      "start": 10848
+    },
+    {
+      "article_id": 252,
+      "title": "World War I Memorial ( East Providence , Rhode Island )",
+      "start": 233
+    },
+    {
+      "article_id": 290,
+      "title": "St Caffo 's Church , Llangaffo",
+      "start": 1247
+    },
+    {
+      "article_id": 266,
+      "title": "New Jersey Route 65",
+      "start": 704
+    },
+    {
+      "article_id": 611,
+      "title": "The General in His Labyrinth",
+      "start": 6646
+    },
+    {
+      "article_id": 486,
+      "title": "Mitsuyo Maeda",
+      "start": 4967
+    },
+    {
+      "article_id": 467,
+      "title": "Track and field",
+      "start": 5479
+    },
+    {
+      "article_id": 187,
+      "title": "M @-@ 114 ( Michigan highway )",
+      "start": 530
+    },
+    {
+      "article_id": 517,
+      "title": "Loverboy ( Mariah Carey song )",
+      "start": 3964
+    },
+    {
+      "article_id": 374,
+      "title": "Roxas ( Kingdom Hearts )",
+      "start": 590
+    },
+    {
+      "article_id": 193,
+      "title": "The Amps",
+      "start": 54
+    },
+    {
+      "article_id": 536,
+      "title": "George Calvert , 1st Baron Baltimore",
+      "start": 1184
+    },
+    {
+      "article_id": 175,
+      "title": "Daydream ( Mariah Carey album )",
+      "start": 2499
+    },
+    {
+      "article_id": 394,
+      "title": "Alice in Chains",
+      "start": 29
+    },
+    {
+      "article_id": 253,
+      "title": "Oldham",
+      "start": 3847
+    },
+    {
+      "article_id": 488,
+      "title": "New York State Route 448",
+      "start": 244
+    },
+    {
+      "article_id": 165,
+      "title": "You 're Gonna Love Tomorrow",
+      "start": 509
+    },
+    {
+      "article_id": 366,
+      "title": "Harajuku Lovers Tour",
+      "start": 1575
+    },
+    {
+      "article_id": 201,
+      "title": "Ceratopsia",
+      "start": 1417
+    },
+    {
+      "article_id": 386,
+      "title": "Derfflinger @-@ class battlecruiser",
+      "start": 3964
+    },
+    {
+      "article_id": 453,
+      "title": "Crush ( video game )",
+      "start": 2389
+    },
+    {
+      "article_id": 459,
+      "title": "Dave Sisler",
+      "start": 2503
+    },
+    {
+      "article_id": 363,
+      "title": "Nina Simone",
+      "start": 1913
+    },
+    {
+      "article_id": 540,
+      "title": "Waterfall Gully , South Australia",
+      "start": 1295
+    },
+    {
+      "article_id": 628,
+      "title": "Common starling",
+      "start": 30
+    },
+    {
+      "article_id": 300,
+      "title": "Transit of Venus",
+      "start": 1781
+    },
+    {
+      "article_id": 508,
+      "title": "Journey ( 2012 video game )",
+      "start": 1485
+    },
+    {
+      "article_id": 36,
+      "title": "Forward Intelligence Team",
+      "start": 443
+    },
+    {
+      "article_id": 564,
+      "title": "White Dog ( Gary novel )",
+      "start": 854
+    },
+    {
+      "article_id": 174,
+      "title": "Patriarchal Cathedral of the Holy Ascension of God",
+      "start": 1318
+    },
+    {
+      "article_id": 412,
+      "title": "Invisible rail",
+      "start": 598
+    },
+    {
+      "article_id": 614,
+      "title": "Mozambican War of Independence",
+      "start": 480
+    },
+    {
+      "article_id": 325,
+      "title": "Jeremi Wiśniowiecki",
+      "start": 4429
+    },
+    {
+      "article_id": 493,
+      "title": "Henry Hoʻolulu Pitman",
+      "start": 1301
+    },
+    {
+      "article_id": 143,
+      "title": "Moro River Campaign",
+      "start": 3297
+    },
+    {
+      "article_id": 612,
+      "title": "Copia ( museum )",
+      "start": 2507
+    },
+    {
+      "article_id": 102,
+      "title": "The Crab with the Golden Claws",
+      "start": 2680
+    },
+    {
+      "article_id": 538,
+      "title": "DuMont Television Network",
+      "start": 6425
+    },
+    {
+      "article_id": 155,
+      "title": "Sister Wives",
+      "start": 2341
+    },
+    {
+      "article_id": 286,
+      "title": "Joyful , Joyful",
+      "start": 622
+    },
+    {
+      "article_id": 347,
+      "title": "Berhtwald",
+      "start": 826
+    },
+    {
+      "article_id": 537,
+      "title": "<unk> and development of the Everglades",
+      "start": 6813
+    },
+    {
+      "article_id": 379,
+      "title": "Politics of Croatia",
+      "start": 4360
+    },
+    {
+      "article_id": 273,
+      "title": "Rob Howard",
+      "start": 1285
+    },
+    {
+      "article_id": 33,
+      "title": "Devin Townsend",
+      "start": 6348
+    },
+    {
+      "article_id": 117,
+      "title": "USS Breese ( DD @-@ 122 )",
+      "start": 769
+    },
+    {
+      "article_id": 579,
+      "title": "Corythosaurus",
+      "start": 5706
+    },
+    {
+      "article_id": 373,
+      "title": "The Stolen Eagle",
+      "start": 4014
+    },
+    {
+      "article_id": 93,
+      "title": "Romanian Land Forces",
+      "start": 3082
+    },
+    {
+      "article_id": 605,
+      "title": "Domnall mac Murchada",
+      "start": 948
+    },
+    {
+      "article_id": 184,
+      "title": "1986 Peach Bowl",
+      "start": 3722
+    },
+    {
+      "article_id": 501,
+      "title": "Yo @-@ Yo ( Nicola Roberts song )",
+      "start": 1881
+    },
+    {
+      "article_id": 375,
+      "title": "Back to Tennessee ( song )",
+      "start": 205
+    },
+    {
+      "article_id": 90,
+      "title": "Of Human Feelings",
+      "start": 23
+    },
+    {
+      "article_id": 425,
+      "title": "Independence Day ( India )",
+      "start": 1900
+    },
+    {
+      "article_id": 424,
+      "title": "Adams River ( British Columbia )",
+      "start": 1717
+    },
+    {
+      "article_id": 0,
+      "title": "Valkyria Chronicles III",
+      "start": 382
+    },
+    {
+      "article_id": 381,
+      "title": "Brandon Minor",
+      "start": 2363
+    },
+    {
+      "article_id": 222,
+      "title": "Johnny McNichol",
+      "start": 2417
+    },
+    {
+      "article_id": 462,
+      "title": "Réunion ibis",
+      "start": 5055
+    },
+    {
+      "article_id": 76,
+      "title": "French cruiser Sully",
+      "start": 696
+    },
+    {
+      "article_id": 83,
+      "title": "<unk>",
+      "start": 2107
+    },
+    {
+      "article_id": 308,
+      "title": "Roger Federer",
+      "start": 1525
+    },
+    {
+      "article_id": 275,
+      "title": "Rockstar 101",
+      "start": 1194
+    },
+    {
+      "article_id": 136,
+      "title": "Parliament Act 1911",
+      "start": 2208
+    },
+    {
+      "article_id": 494,
+      "title": "Church of Christ Pantocrator , Nesebar",
+      "start": 481
+    },
+    {
+      "article_id": 502,
+      "title": "Robbie Fowler",
+      "start": 2961
+    },
+    {
+      "article_id": 487,
+      "title": "Kitsune",
+      "start": 93
+    },
+    {
+      "article_id": 81,
+      "title": "Yamaha NS @-@ 10",
+      "start": 1353
+    },
+    {
+      "article_id": 435,
+      "title": "Hydnellum peckii",
+      "start": 889
+    },
+    {
+      "article_id": 592,
+      "title": "Richard Nixon presidential campaign , 1968",
+      "start": 3087
+    },
+    {
+      "article_id": 225,
+      "title": "The Tramp Dentists",
+      "start": 9
+    },
+    {
+      "article_id": 12,
+      "title": "<unk> ; Sv %",
+      "start": 221
+    },
+    {
+      "article_id": 89,
+      "title": "<unk> Stephen",
+      "start": 535
+    },
+    {
+      "article_id": 27,
+      "title": "Treaty of Ciudad Juárez",
+      "start": 968
+    },
+    {
+      "article_id": 586,
+      "title": "Cambodian Campaign",
+      "start": 6037
+    },
+    {
+      "article_id": 400,
+      "title": "Burns ' Heir",
+      "start": 979
+    },
+    {
+      "article_id": 474,
+      "title": "Tropical Storm Olaf ( 1997 )",
+      "start": 665
+    },
+    {
+      "article_id": 154,
+      "title": "766th Independent Infantry Regiment ( North Korea )",
+      "start": 1818
+    },
+    {
+      "article_id": 547,
+      "title": "Until the Whole World Hears",
+      "start": 725
+    },
+    {
+      "article_id": 371,
+      "title": "Norsk Spisevognselskap",
+      "start": 141
+    },
+    {
+      "article_id": 525,
+      "title": "Awakening ( Star Trek : Enterprise )",
+      "start": 1320
+    },
+    {
+      "article_id": 527,
+      "title": "Maryland Route 194",
+      "start": 1121
+    },
+    {
+      "article_id": 376,
+      "title": "M @-@ 108 ( Michigan highway )",
+      "start": 220
+    },
+    {
+      "article_id": 596,
+      "title": "and",
+      "start": 78
+    },
+    {
+      "article_id": 389,
+      "title": "We 'll Always Have Paris ( Star Trek : The Next Generation )",
+      "start": 863
+    },
+    {
+      "article_id": 568,
+      "title": "Underneath ( The X @-@ Files )",
+      "start": 1493
+    },
+    {
+      "article_id": 409,
+      "title": "Don 't Take It <unk> , Babe , It Just Ain 't Your Story",
+      "start": 1744
+    },
+    {
+      "article_id": 241,
+      "title": "No result , Pts",
+      "start": 262
+    },
+    {
+      "article_id": 210,
+      "title": "Ha ' K 'in Xook",
+      "start": 934
+    },
+    {
+      "article_id": 504,
+      "title": "Erving Goffman",
+      "start": 6816
+    },
+    {
+      "article_id": 523,
+      "title": "Miss Meyers",
+      "start": 603
+    },
+    {
+      "article_id": 128,
+      "title": "Curtis Woodhouse",
+      "start": 2588
+    },
+    {
+      "article_id": 320,
+      "title": "Protomycena",
+      "start": 724
+    },
+    {
+      "article_id": 203,
+      "title": "Hope Highway",
+      "start": 370
+    },
+    {
+      "article_id": 447,
+      "title": "Silver Bullet ( roller coaster )",
+      "start": 675
+    },
+    {
+      "article_id": 75,
+      "title": "Sarnia",
+      "start": 2542
+    },
+    {
+      "article_id": 43,
+      "title": "Soviet cruiser Krasnyi Kavkaz",
+      "start": 685
+    },
+    {
+      "article_id": 124,
+      "title": "Civilian Public Service",
+      "start": 947
+    },
+    {
+      "article_id": 60,
+      "title": "Paul Thomas Anderson",
+      "start": 2604
+    },
+    {
+      "article_id": 481,
+      "title": "Aerith Gainsborough",
+      "start": 2407
+    },
+    {
+      "article_id": 357,
+      "title": "SS El Sol",
+      "start": 873
+    },
+    {
+      "article_id": 507,
+      "title": "Arbeideren ( Hamar )",
+      "start": 2329
+    },
+    {
+      "article_id": 4,
+      "title": "Plain maskray",
+      "start": 252
+    },
+    {
+      "article_id": 98,
+      "title": "West Hendford Cricket Ground , Yeovil",
+      "start": 826
+    },
+    {
+      "article_id": 348,
+      "title": "Xenon",
+      "start": 3587
+    },
+    {
+      "article_id": 578,
+      "title": "130th Engineer Brigade ( United States )",
+      "start": 2833
+    },
+    {
+      "article_id": 32,
+      "title": "Elephanta Caves",
+      "start": 2219
+    },
+    {
+      "article_id": 414,
+      "title": "Transportation in Omaha",
+      "start": 3193
+    },
+    {
+      "article_id": 295,
+      "title": "Stephanolepis cirrhifer",
+      "start": 289
+    },
+    {
+      "article_id": 548,
+      "title": "Ceres ( dwarf planet )",
+      "start": 1220
+    },
+    {
+      "article_id": 497,
+      "title": "2nd Battalion 9th Marines",
+      "start": 2518
+    },
+    {
+      "article_id": 545,
+      "title": "Principe Amedeo @-@ class ironclad",
+      "start": 371
+    },
+    {
+      "article_id": 529,
+      "title": "Jin – Song Wars",
+      "start": 4890
+    },
+    {
+      "article_id": 436,
+      "title": "Gregory Helms",
+      "start": 1574
+    },
+    {
+      "article_id": 221,
+      "title": "Marauders ( Star Trek : Enterprise )",
+      "start": 247
+    },
+    {
+      "article_id": 132,
+      "title": "Voyage : Inspired by Jules Verne",
+      "start": 103
+    },
+    {
+      "article_id": 131,
+      "title": "Thom Darden",
+      "start": 390
+    },
+    {
+      "article_id": 558,
+      "title": "Henry of Grosmont , 1st Duke of Lancaster",
+      "start": 1151
+    },
+    {
+      "article_id": 192,
+      "title": "California State Route 243",
+      "start": 509
+    },
+    {
+      "article_id": 226,
+      "title": "Qedarite",
+      "start": 681
+    },
+    {
+      "article_id": 388,
+      "title": "Who Am I ( Casting Crowns song )",
+      "start": 634
+    },
+    {
+      "article_id": 433,
+      "title": "Christine Hakim",
+      "start": 402
+    },
+    {
+      "article_id": 279,
+      "title": "USS Illinois ( BB @-@ 7 )",
+      "start": 319
+    },
+    {
+      "article_id": 100,
+      "title": "World War Z",
+      "start": 2096
+    },
+    {
+      "article_id": 145,
+      "title": "Bart vs. Australia",
+      "start": 1175
+    },
+    {
+      "article_id": 352,
+      "title": "John of Brienne",
+      "start": 3562
+    },
+    {
+      "article_id": 575,
+      "title": "M @-@ 47 ( Michigan highway )",
+      "start": 1094
+    },
+    {
+      "article_id": 598,
+      "title": "Europium",
+      "start": 35
+    },
+    {
+      "article_id": 13,
+      "title": "Gregorian Tower",
+      "start": 1283
+    },
+    {
+      "article_id": 413,
+      "title": "Project Chanology",
+      "start": 10512
+    },
+    {
+      "article_id": 179,
+      "title": "The Magdalen Reading",
+      "start": 1531
+    },
+    {
+      "article_id": 148,
+      "title": "Hugh Foliot",
+      "start": 15
+    },
+    {
+      "article_id": 406,
+      "title": "Fernando Torres",
+      "start": 1044
+    },
+    {
+      "article_id": 162,
+      "title": "Aston Villa F.C.",
+      "start": 2379
+    },
+    {
+      "article_id": 617,
+      "title": "Wilhelm Busch",
+      "start": 3765
+    },
+    {
+      "article_id": 219,
+      "title": "Gertrude Barrows Bennett",
+      "start": 425
+    },
+    {
+      "article_id": 202,
+      "title": "Truth in Numbers ?",
+      "start": 1872
+    },
+    {
+      "article_id": 460,
+      "title": "Cole Hamels",
+      "start": 4064
+    },
+    {
+      "article_id": 430,
+      "title": "Ernie Cooksey",
+      "start": 1292
+    },
+    {
+      "article_id": 78,
+      "title": "Mutinus elegans",
+      "start": 1291
+    },
+    {
+      "article_id": 482,
+      "title": "Forbidden Fruit ( J. Cole song )",
+      "start": 789
+    },
+    {
+      "article_id": 442,
+      "title": "Ouw Peh Tjoa",
+      "start": 869
+    },
+    {
+      "article_id": 520,
+      "title": "Gaboon viper",
+      "start": 2377
+    },
+    {
+      "article_id": 167,
+      "title": "Harold Innis",
+      "start": 3625
+    },
+    {
+      "article_id": 216,
+      "title": "Mycena galericulata",
+      "start": 972
+    },
+    {
+      "article_id": 391,
+      "title": "Tropical Storm Brenda ( 1960 )",
+      "start": 257
+    },
+    {
+      "article_id": 182,
+      "title": "Trees ( poem )",
+      "start": 3633
+    },
+    {
+      "article_id": 297,
+      "title": "The Moth ( Lost )",
+      "start": 1717
+    },
+    {
+      "article_id": 276,
+      "title": "St Mary 's Church , Rhodogeidio",
+      "start": 356
+    },
+    {
+      "article_id": 627,
+      "title": "M @-@ 81 ( Michigan highway )",
+      "start": 677
+    },
+    {
+      "article_id": 591,
+      "title": "2 / 4th Machine Gun Battalion ( Australia )",
+      "start": 3460
+    },
+    {
+      "article_id": 68,
+      "title": "Toniná",
+      "start": 4165
+    },
+    {
+      "article_id": 362,
+      "title": "E. W. Hornung",
+      "start": 2842
+    },
+    {
+      "article_id": 515,
+      "title": "Hurricane Uleki",
+      "start": 732
+    },
+    {
+      "article_id": 107,
+      "title": "Rachel Green",
+      "start": 2569
+    },
+    {
+      "article_id": 382,
+      "title": "Boy @-@ Scoutz ' n the Hood",
+      "start": 2121
+    },
+    {
+      "article_id": 133,
+      "title": "Old Baltimore Pike",
+      "start": 244
+    },
+    {
+      "article_id": 604,
+      "title": "Hugh Walpole",
+      "start": 3401
+    },
+    {
+      "article_id": 168,
+      "title": "Hurricane Lorenzo ( 2007 )",
+      "start": 1318
+    },
+    {
+      "article_id": 205,
+      "title": "Stop ! ! Hibari @-@ kun !",
+      "start": 3752
+    },
+    {
+      "article_id": 521,
+      "title": "The Sixth Extinction",
+      "start": 683
+    },
+    {
+      "article_id": 560,
+      "title": "Galentine 's Day",
+      "start": 1326
+    },
+    {
+      "article_id": 350,
+      "title": "Halo : Uprising",
+      "start": 1312
+    },
+    {
+      "article_id": 429,
+      "title": "James Robert Baker",
+      "start": 2847
+    },
+    {
+      "article_id": 364,
+      "title": "Vistara",
+      "start": 1378
+    },
+    {
+      "article_id": 513,
+      "title": "Inocybe praetervisa",
+      "start": 210
+    },
+    {
+      "article_id": 566,
+      "title": "Sovetsky Soyuz @-@ class battleship",
+      "start": 6994
+    },
+    {
+      "article_id": 510,
+      "title": "Tautiška giesmė",
+      "start": 282
+    },
+    {
+      "article_id": 72,
+      "title": "Love Me Like You",
+      "start": 806
+    },
+    {
+      "article_id": 255,
+      "title": "Carre 's Grammar School",
+      "start": 711
+    },
+    {
+      "article_id": 211,
+      "title": "Tommy Lawton",
+      "start": 2157
+    },
+    {
+      "article_id": 278,
+      "title": "Mexico City Metropolitan Cathedral",
+      "start": 3798
+    },
+    {
+      "article_id": 171,
+      "title": "First Battle of Maryang San",
+      "start": 3653
+    }
+  ],
+  "tasks": {
+    "schema_version": 1,
+    "dataset_version": "workspace-tasks-v1-20260921",
+    "records_sha256": "11a61cf1833ec2c69c19670ce6096fff286867b720879ffb555bef5a24e83e42",
+    "source_date": "2026-09-21",
+    "split_seed": 51021,
+    "surface_seeds": [
+      51021
+    ],
+    "pair_splits": {
+      "pair-05": "pilot",
+      "pair-07": "pilot",
+      "pair-01": "development",
+      "pair-04": "development",
+      "pair-03": "development",
+      "pair-02": "final",
+      "pair-06": "final",
+      "pair-00": "final"
+    },
+    "split_templates": {
+      "pilot": [
+        0
+      ],
+      "development": [
+        1
+      ],
+      "final": [
+        2,
+        3
+      ]
+    },
+    "records": 440,
+    "unique_prompts": 359,
+    "split_counts": {
+      "development": 120,
+      "final": 240,
+      "pilot": 80
+    },
+    "family_counts": {
+      "anchored_alias": 176,
+      "indirect_fact": 176,
+      "surface_copy": 88
+    },
+    "limitations": [
+      "Five familiar countries; concepts are shared across splits.",
+      "Pairs and template families are held out, not concepts or relations.",
+      "Repeated prompts and paraphrases are correlated; group by pair and prompt.",
+      "Four relations do not prove independent internal consumers.",
+      "An absent intermediate string does not prove multi-hop computation.",
+      "Artificial aliases receive explicit landmark anchors in the prompt.",
+      "No manuscript language, symbols, or historical semantics are tested."
+    ]
+  },
+  "dictionary": [
+    {
+      "form": "France",
+      "token_id": 49000
+    },
+    {
+      "form": " France",
+      "token_id": 9625
+    },
+    {
+      "form": "Germany",
+      "token_id": 50170
+    },
+    {
+      "form": " Germany",
+      "token_id": 9856
+    },
+    {
+      "form": "Brazil",
+      "token_id": 67199
+    },
+    {
+      "form": " Brazil",
+      "token_id": 15948
+    },
+    {
+      "form": "Egypt",
+      "token_id": 85667
+    },
+    {
+      "form": " Egypt",
+      "token_id": 14867
+    },
+    {
+      "form": "China",
+      "token_id": 22282
+    },
+    {
+      "form": " China",
+      "token_id": 5616
+    },
+    {
+      "form": "country",
+      "token_id": 11141
+    },
+    {
+      "form": " country",
+      "token_id": 3146
+    },
+    {
+      "form": "capital",
+      "token_id": 65063
+    },
+    {
+      "form": " capital",
+      "token_id": 6722
+    },
+    {
+      "form": "currency",
+      "token_id": 15973
+    },
+    {
+      "form": " currency",
+      "token_id": 11413
+    },
+    {
+      "form": "language",
+      "token_id": 11528
+    },
+    {
+      "form": " language",
+      "token_id": 4128
+    },
+    {
+      "form": "continent",
+      "token_id": 74595
+    },
+    {
+      "form": " continent",
+      "token_id": 31743
+    },
+    {
+      "form": "banana",
+      "token_id": 87747
+    },
+    {
+      "form": " banana",
+      "token_id": 43096
+    },
+    {
+      "form": "music",
+      "token_id": 31161
+    },
+    {
+      "form": " music",
+      "token_id": 4627
+    },
+    {
+      "form": "river",
+      "token_id": 5469
+    },
+    {
+      "form": " river",
+      "token_id": 14796
+    },
+    {
+      "form": "triangle",
+      "token_id": 55114
+    },
+    {
+      "form": " triangle",
+      "token_id": 21495
+    },
+    {
+      "form": "science",
+      "token_id": 39557
+    },
+    {
+      "form": " science",
+      "token_id": 8038
+    },
+    {
+      "form": "tree",
+      "token_id": 9344
+    },
+    {
+      "form": " tree",
+      "token_id": 4916
+    }
+  ],
+  "precision": "existing four-bit values expanded to float32 in transformer blocks; float32 residuals; quantized embedding and output head",
+  "MLX_ENABLE_TF32": "0",
+  "qualification_sha256": "d678f400bd14d66e2ae5873bee4ae9b0626d3caebbbee997cd70dc528d078020",
+  "official_source_sha256": {
+    "official-lens.py": "e231e7d3a6c8e8f7791b53705a34342d0bba376a127a82376eaf6ec30ca11808",
+    "official-fitting.py": "5be8959db8efc34cee41ed677beba84e21ba3c9e3ccb958bdbc1600c86b5e080"
+  },
+  "software": {
+    "shellingham": "1.5.4",
+    "numpy": "2.5.3",
+    "kiwisolver": "1.5.1",
+    "click": "8.5.0",
+    "packaging": "26.3",
+    "mlx": "0.32.2",
+    "protobuf": "7.36.2",
+    "iniconfig": "2.3.0",
+    "fonttools": "4.65.0",
+    "filelock": "4.0.1",
+    "Pygments": "2.21.0",
+    "mlx-lm": "0.31.3",
+    "hf-xet": "1.6.0",
+    "rich": "15.0.0",
+    "huggingface_hub": "1.32.0",
+    "sentencepiece": "0.2.2",
+    "tokenizers": "0.23.2",
+    "httpcore": "1.0.9",
+    "contourpy": "1.4.0",
+    "transformers": "5.17.0",
+    "safetensors": "0.8.0",
+    "tqdm": "4.70.1",
+    "pytest": "9.1.1",
+    "h11": "0.16.0",
+    "mdurl": "0.1.2",
+    "python-dateutil": "2.9.0.post0",
+    "PyYAML": "6.0.3",
+    "fsspec": "2026.9.0",
+    "matplotlib": "3.11.2",
+    "certifi": "2026.7.22",
+    "cycler": "0.12.1",
+    "Jinja2": "3.1.6",
+    "markdown-it-py": "4.2.0",
+    "annotated-doc": "0.0.5",
+    "MarkupSafe": "3.0.3",
+    "mlx-metal": "0.32.2",
+    "pluggy": "1.6.0",
+    "httpx": "0.28.1",
+    "typing_extensions": "4.16.0",
+    "regex": "2026.9.10",
+    "typer": "0.27.2",
+    "pillow": "12.3.0",
+    "anyio": "4.15.1",
+    "pyparsing": "3.3.3",
+    "six": "1.17.0",
+    "scipy": "1.18.1",
+    "idna": "3.20"
+  }
+}

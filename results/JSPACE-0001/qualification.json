@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "temporal_toy": {
+    "max_error": 7.629394538355427e-07,
+    "valid_positions": 4,
+    "expected_transport": "3(A+3B/4), 3I"
+  },
+  "batch_relative_error": 8.271190745290369e-05,
+  "native_max_error": 0.0,
+  "identity_max_error": 0.0,
+  "future_to_past_max_error": 0.0,
+  "finite_differences": [
+    {
+      "layer": 3,
+      "epsilon": 0.03,
+      "expected": 38.352569580078125,
+      "actual": 37.972005208333336,
+      "relative_error": 0.009922786814849293
+    },
+    {
+      "layer": 3,
+      "epsilon": 0.1,
+      "expected": 38.352569580078125,
+      "actual": 38.31787109375,
+      "relative_error": 0.0009047239000681925
+    },
+    {
+      "layer": 3,
+      "epsilon": 0.3,
+      "expected": 38.352569580078125,
+      "actual": 38.399658203125,
+      "relative_error": 0.001227782742133
+    },
+    {
+      "layer": 15,
+      "epsilon": 0.03,
+      "expected": 22.581357955932617,
+      "actual": 22.57080078125,
+      "relative_error": 0.00046751726371901324
+    },
+    {
+      "layer": 15,
+      "epsilon": 0.1,
+      "expected": 22.581357955932617,
+      "actual": 22.59521484375,
+      "relative_error": 0.0006136428041406742
+    },
+    {
+      "layer": 15,
+      "epsilon": 0.3,
+      "expected": 22.581357955932617,
+      "actual": 22.585042317708336,
+      "relative_error": 0.00016315944253257595
+    },
+    {
+      "layer": 31,
+      "epsilon": 0.03,
+      "expected": 5.685140609741211,
+      "actual": 5.6640625,
+      "relative_error": 0.003707579317404151
+    },
+    {
+      "layer": 31,
+      "epsilon": 0.1,
+      "expected": 5.685140609741211,
+      "actual": 5.69580078125,
+      "relative_error": 0.0018750937295241878
+    },
+    {
+      "layer": 31,
+      "epsilon": 0.3,
+      "expected": 5.685140609741211,
+      "actual": 5.690104166666667,
+      "relative_error": 0.000873075490331974
+    }
+  ],
+  "batch_seconds": 2.288533249986358,
+  "peak_memory_bytes": 33959624744,
+  "precision": "dense float32 block projections expanded from cached four-bit values"
+}
