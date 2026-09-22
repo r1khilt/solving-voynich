@@ -6,6 +6,8 @@ The user's J-space reference is [Anthropic's global-workspace research](https://
 - [Failure diagnosis](FAILURE_DIAGNOSIS.md): reproduced WMD-0001 competence, observation dependence, verifier/search bottlenecks, and identifiability problems.
 - [Task design](TASK_DESIGN.md): 440 known-fact/anchored-alias/copy records with disjoint template families and country-pair combinations.
 - [JSPACE-0001 registration](../../experiments/JSPACE-0001.md): local 8B-model restricted-lens campaign with explicit numerical, competence, and causal gates.
+- [Current run](CURRENT_RUN.md): plain-language findings from the completed lens, neuron, route and fresh binding studies.
+- [Routing synthesis](ROUTING_SYNTHESIS.md): what the fresh position/layer interventions establish, why the single-block head patch failed its control, and a sharper next mediator hypothesis.
 
 The investigation has no known historical translations as labels. Successful natural-language interventions could qualify a method; applying it to unknown symbols still requires learned competence, identifiable latent variables, and independent anchors.
 
@@ -31,3 +33,9 @@ After the fit completes, `causal_campaign freeze`, `causal_campaign development`
 `voynich.workspace.pipeline --fit-pid <existing-calibration-PID>` can queue these stages behind an already running calibration. It waits for that process to exit, verifies a complete512-article fit, freezes all current workspace-module hashes, runs bounded children sequentially, and halts on any execution error. It refuses a second launch over an existing queue state. Logs/state stay in ignored `outputs/JSPACE-0001/pipeline`. This is a finite local execution queue, with no scheduled recurrence, API spend, automatic retries, or model changes.
 
 Live architecture checks require explicit Metal access and `VOYNICH_MLX_TEST=1`; ordinary CPU tests intentionally skip them. Passing the tiny random-model checks does not replace the8B numerical gate.
+
+## Completed follow-ups
+
+The original [JSPACE-0001](../../experiments/JSPACE-0001-results.md) and [NEURON-0001](../../experiments/NEURON-0001-results.md) registered claims failed. [ROUTE-0001](../../experiments/ROUTE-0001-results.md) diagnosed position dependence on exposed development records. A fresh [PATH-0001](../../experiments/PATH-0001-results.md) head study was uninformative because its all-head single-block positive control failed. The second fresh study, [PATH-0002](../../experiments/PATH-0002-results.md), found a strong causal control shift from changed value fields at earlier blocks to the answer position at later blocks on explicit two-slot binding tasks. It does not identify a Voynich reading or a complete attention circuit.
+
+PATH run scripts are intentionally one-shot for the registered input panel. Their compact results and independent audits are in `results/PATH-0001/` and `results/PATH-0002/`; rendered token IDs and residual arrays are ignored in `outputs/`. New experimental claims require new task bundles and a separately registered run rather than rerunning exposed confirmation records.
