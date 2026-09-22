@@ -70,6 +70,7 @@ class CausalWorkspace(QwenWorkspace):
         to be monosemantic. Trace includes attention and MLP residual writes.
         """
         from mlx_lm.models.activations import swiglu
+        from mlx.nn import silu
 
         mx = self.mx
         pos = position % len(ids)
@@ -82,18 +83,19 @@ class CausalWorkspace(QwenWorkspace):
                 raise ValueError("Invalid traced intervention")
             edits.setdefault(p["layer"], []).append((p["position"], mx.array(delta)))
         h = self.model.model.embed_tokens(mx.array(ids)[None]).astype(mx.float32)
-        trace = {key: [] for key in ("residual", "attention", "mlp_write", "neurons")}
+        trace = {key: [] for key in ("residual", "attention", "mlp_write", "neurons", "gate_activation", "up_value")}
         for i, layer in enumerate(self.layers):
             attention = layer.self_attn(layer.input_layernorm(h), mask="causal" if len(ids) > 1 else None)
             h = h + attention
             normalized = layer.post_attention_layernorm(h)
-            neurons = swiglu(layer.mlp.gate_proj(normalized), layer.mlp.up_proj(normalized))
+            gate, up = layer.mlp.gate_proj(normalized), layer.mlp.up_proj(normalized)
+            neurons = swiglu(gate, up)
             write = layer.mlp.down_proj(neurons)
             h = h + write
             for p, delta in edits.get(i, ()):
                 h = h.at[0, p].add(delta)
             # Materialize only the selected position, not the whole token grid.
-            selected = (h[0, pos], attention[0, pos], write[0, pos], neurons[0, pos])
+            selected = (h[0, pos], attention[0, pos], write[0, pos], neurons[0, pos], silu(gate[0, pos]), up[0, pos])
             mx.eval(*selected)
             for key, value in zip(trace, selected):
                 trace[key].append(np.array(value))

@@ -22,3 +22,12 @@ MLX_ENABLE_TF32=0 PYTHONPATH=src outputs/JSPACE-0001/venv/bin/python -m voynich.
 The pilot refuses repeat scoring; preparation refuses overwriting frozen inputs. `fit` resumes from the last complete checkpoint with the same input/source hashes and cumulative fit budget. The input manifest's source revision is the preparation base revision; file hashes identify the exact new source, including files not yet committed at preparation time. Actual launch revision is recorded separately in the notebook/run log. Raw derivative arrays and calibration text are ignored; compact reports are versioned.
 
 Precision engineering found that nominal float32 tensors alone were insufficient on the local M5. See [MLX's documented numerical precision policy](https://ml-explore.github.io/mlx/build/html/usage/precision.html). Early failed diagnostics remain in ignored local files; the final qualification is tracked. The expanded matrices contain the cached quantized values, not recovered original high-precision weights.
+
+
+## Sequential follow-up
+
+After the fit completes, `causal_campaign freeze`, `causal_campaign development`, and `causal_campaign final` numerically qualify, select, and confirm the residual edit. Final scoring requires an eligible development layer and cannot be repeated. `neuron_campaign` runs the separately registered [cross-query neuron study](../../experiments/NEURON-0001.md). Modules `lens_analysis`, `precision_audit`, `causal_analysis`, and `neuron_analysis` retain diagnostics separately from primary decisions.
+
+`voynich.workspace.pipeline --fit-pid <existing-calibration-PID>` can queue these stages behind an already running calibration. It waits for that process to exit, verifies a complete512-article fit, freezes all current workspace-module hashes, runs bounded children sequentially, and halts on any execution error. It refuses a second launch over an existing queue state. Logs/state stay in ignored `outputs/JSPACE-0001/pipeline`. This is a finite local execution queue, with no scheduled recurrence, API spend, automatic retries, or model changes.
+
+Live architecture checks require explicit Metal access and `VOYNICH_MLX_TEST=1`; ordinary CPU tests intentionally skip them. Passing the tiny random-model checks does not replace the8B numerical gate.

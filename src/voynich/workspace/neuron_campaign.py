@@ -107,7 +107,7 @@ def decision(summary):
     rate = cross['counterfactual']['rate']
     control = random['counterfactual']['rate']
     advantage = rate-control if rate is not None and control is not None else None
-    relations = {k: v['counterfactual']['rate'] for k, v in cross['by_relation'].items()}
+    relations = {k: v['counterfactual']['rate'] for k, v in cross['by_relation'].items() if k != 'copy'}
     checks = {'cross_query': meets(rate, .5),
               'random_advantage': meets(advantage, .2),
               'copy': meets(cross['copy_preserved']['rate'], .95),
@@ -187,10 +187,12 @@ def run():
         return meta, arrays
 
     column_norms = {}
-    for layer in LAYERS:
+    for layer in range(model.n_layers):
         value = model.mx.sqrt(model.mx.sum(model.layers[layer].mlp.down_proj.weight**2, axis=0))
         model.mx.eval(value)
         column_norms[layer] = np.array(value)
+    norm_path = output / 'down-column-norms.npy'
+    np.save(norm_path, np.stack([column_norms[layer] for layer in range(model.n_layers)]))
     ranks, selections = {}, {}
     for layer in LAYERS:
         changes = [trace(row['donor_prompt'])[1]['neurons'][layer] - trace(row['prompt'])[1]['neurons'][layer] for row in training]
@@ -228,6 +230,11 @@ def run():
     done = {(r['id'], r['layer'], r['count'], r['condition']) for r in rows}
     if len(done) != len(rows):
         raise ValueError('Duplicate neuron observations')
+    settings = [(0, 'identity'), (model.layers[0].mlp.down_proj.weight.shape[1], 'full_mlp_cross_query')]
+    settings += [(count, condition) for count in COUNTS for condition in ('same_query', 'cross_query', 'random_neurons')]
+    expected_keys = {(task['id'], layer, count, condition) for task in evaluation for layer in LAYERS for count, condition in settings}
+    if not done <= expected_keys:
+        raise ValueError('Unknown neuron observations')
     with log_path.open('a') as handle:
         for task in evaluation:
             own, own_trace = trace(task['prompt'])
@@ -276,18 +283,20 @@ def run():
                     if len(rows) % 120 == 0:
                         print(json.dumps({'phase': 'neurons', 'completed': len(rows), 'seconds': prior+time.monotonic()-started}), flush=True)
     expected = len(evaluation)*len(LAYERS)*(2+3*len(COUNTS))
-    if len(rows) != expected:
+    if len(rows) != expected or done != expected_keys:
         raise ValueError('Incomplete neuron observation grid')
     summary = summary_rows(rows)
+    checkpoint('finalizing')
     report = {'summary': summary, 'observations': len(rows), 'unique_traces': len(memory),
               'seconds': prior+time.monotonic()-started, 'inputs_sha256': manifest_hash,
               'observations_sha256': digest(log_path), 'selection_sha256': digest(selection_path),
+              'down_column_norms_sha256': digest(norm_path),
               'peak_memory_bytes': model.mx.get_peak_memory()}
     write_json(result / 'results.json', report)
     result_decision = decision(summary)
     result_decision['results_sha256'] = digest(result / 'results.json')
     write_json(result / 'decision.json', result_decision)
-    checkpoint('complete')
+    write_json(progress_path, {'seconds': prior+time.monotonic()-started, 'phase': 'complete'})
     print(json.dumps(result_decision), flush=True)
 
 

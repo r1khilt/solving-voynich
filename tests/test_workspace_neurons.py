@@ -4,9 +4,10 @@ import numpy as np
 import pytest
 
 from voynich.workspace.neuron_campaign import (
-    ALTERNATE, contribution_ranking, random_neuron_edit, select_tasks, selected_increment,
+    ALTERNATE, contribution_ranking, decision, random_neuron_edit, select_tasks, selected_increment,
 )
 from voynich.workspace.tasks import build_tasks
+from voynich.workspace.neuron_analysis import relative_interaction, swiglu_change
 
 
 def test_neuron_ranking_invariant_to_function_preserving_rescaling():
@@ -60,3 +61,30 @@ def test_cross_query_delta_distinguishes_shared_from_query_specific_encoding():
     assert not np.array_equal(wrong, gated(4., 10.))
     with pytest.raises(ValueError, match='Invalid neuron'):
         selected_increment([1., 2.], [0, 0])
+
+
+def test_swiglu_difference_has_exact_symmetric_gate_value_decomposition():
+    rng = np.random.default_rng(9)
+    g0, u0, g1, u1 = rng.normal(size=(4, 3, 7))
+    gate, value = swiglu_change(g0, u0, g1, u1)
+    np.testing.assert_allclose(gate+value, g1*u1-g0*u0, atol=1e-12)
+    reverse_gate, reverse_value = swiglu_change(g1, u1, g0, u0)
+    np.testing.assert_allclose(reverse_gate, -gate, atol=1e-12)
+    np.testing.assert_allclose(reverse_value, -value, atol=1e-12)
+
+
+def test_query_interaction_zero_for_shared_delta_and_two_for_opposites():
+    same = np.array([[[1., 2.]], [[1., 2.]]])
+    np.testing.assert_allclose(relative_interaction(same), 0)
+    same[1] *= -1
+    np.testing.assert_allclose(relative_interaction(same), 2)
+
+
+def test_neuron_verdict_separates_copy_from_semantic_relation_gates():
+    cross = {'counterfactual': {'rate': .5}, 'copy_preserved': {'rate': 1.},
+             'by_relation': {key: {'counterfactual': {'rate': .5}} for key in ALTERNATE}}
+    cross['by_relation']['copy'] = {'counterfactual': {'rate': None}}
+    summary = {'23': {'64': {'cross_query': cross, 'random_neurons': {'counterfactual': {'rate': .3}}}}}
+    assert decision(summary)['supported']
+    cross['by_relation']['currency']['counterfactual']['rate'] = .2
+    assert not decision(summary)['supported']
