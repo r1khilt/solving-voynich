@@ -15,7 +15,7 @@ import statistics
 import subprocess
 
 
-REVISION = "e6e2aaab2d9413132b38b7da95661e857fd0558f"
+FROZEN_SOURCE_REVISION = "e6e2aaab2d9413132b38b7da95661e857fd0558f"
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0004.md",
     "src/voynich/workspace/teacher4_tasks.py",
@@ -360,14 +360,25 @@ def decision(scores):
 
 
 def check_source(root, artifact):
-    need(artifact.get("source_git_head") == REVISION, "Wrong frozen source revision")
+    launch_revision = artifact.get("source_git_head")
+    need(type(launch_revision) is str and len(launch_revision) == 40,
+         "Missing launch source revision")
+    ancestor = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", FROZEN_SOURCE_REVISION, launch_revision],
+        cwd=root, capture_output=True, timeout=10)
+    need(ancestor.returncode == 0, "Launch revision does not descend from frozen source")
     need(artifact.get("source_worktree_status") == [], "Dirty registered launch source")
     saved = artifact.get("source_sha256")
     need(type(saved) is dict and set(saved) == set(SOURCE_PATHS), "Source hash set differs")
     for path in SOURCE_PATHS:
-        blob = subprocess.run(["git", "show", f"{REVISION}:{path}"], cwd=root,
-                              capture_output=True, check=True, timeout=10).stdout
-        need(saved[path] == digest(blob), f"Source hash mismatch: {path}")
+        frozen_blob = subprocess.run(
+            ["git", "show", f"{FROZEN_SOURCE_REVISION}:{path}"], cwd=root,
+            capture_output=True, check=True, timeout=10).stdout
+        launch_blob = subprocess.run(
+            ["git", "show", f"{launch_revision}:{path}"], cwd=root,
+            capture_output=True, check=True, timeout=10).stdout
+        need(saved[path] == digest(frozen_blob) == digest(launch_blob),
+             f"Source changed after frozen revision: {path}")
     same(artifact.get("config"), CONFIG, "config")
     encoded = json.dumps(CONFIG, sort_keys=True, separators=(",", ":"),
                          allow_nan=False).encode()
@@ -466,7 +477,7 @@ def audit(root):
          "Scientific time cap exceeded")
     need(type(peak) is int and 0 <= peak <= 8*1024**3, "Scientific MPS cap exceeded")
     need(status.get("report") == "report.json"
-         and status.get("source_git_head") == REVISION
+         and status.get("source_git_head") == report.get("source_git_head")
          and status.get("peak_sampled_mps_allocated_bytes") == peak,
          "Final status disagrees")
     suite = expected_suite()
@@ -510,7 +521,9 @@ def audit(root):
     same(report.get("completed_arms"), [[int(rep), arm] for rep in REPLICATES for arm in ARMS],
          "completed_arms")
     return {"experiment": "TEACH-0004", "audit": "pass",
-            "source_git_head": REVISION, "source_hashes_verified": list(SOURCE_PATHS),
+            "source_git_head": report["source_git_head"],
+            "frozen_source_revision": FROZEN_SOURCE_REVISION,
+            "source_hashes_verified": list(SOURCE_PATHS),
             "config_sha256": report["config_sha256"],
             "evaluation_suite_sha256": suite_sha,
             "evaluated_items_per_arm": 3328, "arm_artifact_hashes": hashes,
