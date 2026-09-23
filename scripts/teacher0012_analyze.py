@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FROZEN_SOURCE_REVISION = "92c570ebf17c46c29f362ef3c751944dc6331fa6"
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0012.md",
+    "docs/experiments/TEACH-0012-benchmark-gate-amendment.md",
     "src/voynich/workspace/teacher12_tasks.py",
     "src/voynich/workspace/teacher12_models.py",
     "src/voynich/workspace/teacher12_train.py",

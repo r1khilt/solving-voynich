@@ -40,6 +40,7 @@ GROUP_WIDTHS = {
 MILESTONES = (250, 500, 1000, 2000, 4000)
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0012.md",
+    "docs/experiments/TEACH-0012-benchmark-gate-amendment.md",
     "src/voynich/workspace/teacher12_tasks.py",
     "src/voynich/workspace/teacher12_models.py",
     "src/voynich/workspace/teacher12_train.py",
@@ -252,7 +253,8 @@ def check_benchmark(config, result_dir, provenance):
     if not path.exists():
         raise RuntimeError("Passing TEACH-0012 benchmark required before run")
     report = json.loads(path.read_text())
-    valid = (report.get("status") == "pass" and report.get("config") == asdict(config)
+    serialized_config = json.loads(json.dumps(asdict(config)))
+    valid = (report.get("status") == "pass" and report.get("config") == serialized_config
              and report.get("source_git_head") == provenance["source_git_head"]
              and report.get("source_sha256") == provenance["source_sha256"]
              and report.get("config_sha256") == provenance["config_sha256"]

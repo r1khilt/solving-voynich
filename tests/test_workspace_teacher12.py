@@ -1,5 +1,7 @@
 """CPU-only prelaunch checks for TEACH-0012 raw serialized binding."""
 
+from dataclasses import asdict
+import json
 import random
 
 import torch
@@ -119,6 +121,7 @@ def test_parameter_counts_and_finite_forward_backward():
 
 def test_frozen_config_and_conjunctive_decision_logic():
     Config().validate()
+    assert json.loads(json.dumps(asdict(Config())))["init_seeds"] == [72121, 72131]
     names = evaluation_suite(72311, 1)
 
     def cells(value):

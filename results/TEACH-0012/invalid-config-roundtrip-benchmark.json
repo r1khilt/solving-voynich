@@ -1,0 +1,210 @@
+{
+  "config": {
+    "batch_size": 64,
+    "benchmark_max_seconds": 1800.0,
+    "benchmark_steps": 24,
+    "benchmark_warmup_steps": 4,
+    "eval_groups": 128,
+    "eval_seed": 72311,
+    "init_seeds": [
+      72121,
+      72131
+    ],
+    "learning_rate": 0.0003,
+    "max_artifact_bytes": 4294967296,
+    "max_mps_bytes": 25769803776,
+    "max_seconds": 21600.0,
+    "steps_per_arm": 8000,
+    "train_seeds": [
+      72221,
+      72231
+    ]
+  },
+  "config_sha256": "dfb122ffd3f4d68ab158ac7035ed8c55cf427e5c8c95f034aaae28908040bfa4",
+  "conservative_projected_seconds": 16703.369490802288,
+  "device": "mps",
+  "elapsed_seconds": 22.232223499799147,
+  "experiment": "TEACH-0012",
+  "machine": "arm64",
+  "measured": {
+    "parsed_memory": {
+      "median_timed_step_seconds": 0.03191179153509438,
+      "parameters": 3160576,
+      "timed_step_seconds": [
+        0.031187791842967272,
+        0.032038958044722676,
+        0.031850750092417,
+        0.03197141597047448,
+        0.03197229187935591,
+        0.032625416992232203,
+        0.0305073750205338,
+        0.031145250191912055,
+        0.03185216709971428,
+        0.032795167062431574,
+        0.031241167103871703,
+        0.03053966606967151,
+        0.03165000001899898,
+        0.032703000120818615,
+        0.03290512505918741,
+        0.0312519168946892,
+        0.032101082848384976,
+        0.03220466594211757,
+        0.03203608305193484,
+        0.03135229111649096
+      ],
+      "timed_steps": 20,
+      "warmup_steps": 4
+    },
+    "raw_deep": {
+      "median_timed_step_seconds": 0.25297299993690103,
+      "parameters": 41965568,
+      "timed_step_seconds": [
+        0.24976625014096498,
+        0.25318237487226725,
+        0.2552409169729799,
+        0.2523171668872237,
+        0.28233029204420745,
+        0.256875499850139,
+        0.256330959033221,
+        0.2522509170230478,
+        0.25661999988369644,
+        0.2527636250015348,
+        0.25726224994286895,
+        0.2522954160813242,
+        0.2565617919899523,
+        0.2561157501768321,
+        0.2564732499886304,
+        0.25233154208399355,
+        0.25173695804551244,
+        0.25245254184119403,
+        0.2519142080564052,
+        0.2511539161205292
+      ],
+      "timed_steps": 20,
+      "warmup_steps": 4
+    },
+    "raw_looped": {
+      "median_timed_step_seconds": 0.22123774990905076,
+      "parameters": 14694912,
+      "timed_step_seconds": [
+        0.21743016713298857,
+        0.2168728329706937,
+        0.22367204097099602,
+        0.2183252500835806,
+        0.25777345802634954,
+        0.22323974990285933,
+        0.2235618329141289,
+        0.21806258289143443,
+        0.2208930419292301,
+        0.21779483300633729,
+        0.22193654184229672,
+        0.2188795420806855,
+        0.22125879093073308,
+        0.22121670888736844,
+        0.2219898330513388,
+        0.21880404208786786,
+        0.2215709169395268,
+        0.2228722081054002,
+        0.22037400002591312,
+        0.22227437514811754
+      ],
+      "timed_steps": 20,
+      "warmup_steps": 4
+    },
+    "raw_null": {
+      "median_timed_step_seconds": 0.09842468739952892,
+      "parameters": 14693376,
+      "timed_step_seconds": [
+        0.09195079188793898,
+        0.08999312482774258,
+        0.09257545904256403,
+        0.09101749979890883,
+        0.12044779094867408,
+        0.09991033305414021,
+        0.09823987493291497,
+        0.09897462488152087,
+        0.10046329186297953,
+        0.09812045912258327,
+        0.0985478749498725,
+        0.0995794590562582,
+        0.10242104204371572,
+        0.10082454117946327,
+        0.09830149984918535,
+        0.0970643749460578,
+        0.09797829203307629,
+        0.09925108286552131,
+        0.0986176251899451,
+        0.09601170802488923
+      ],
+      "timed_steps": 20,
+      "warmup_steps": 4
+    },
+    "raw_shallow": {
+      "median_timed_step_seconds": 0.09142650000285357,
+      "parameters": 14693376,
+      "timed_step_seconds": [
+        0.09187383390963078,
+        0.08988066692836583,
+        0.09255599998869002,
+        0.09024025010876358,
+        0.1152764589060098,
+        0.09521862491965294,
+        0.0927205418702215,
+        0.09068395779468119,
+        0.09098283294588327,
+        0.09093150007538497,
+        0.0922576249577105,
+        0.09133837511762977,
+        0.09156804089434445,
+        0.09223875007592142,
+        0.0913740829564631,
+        0.09147891704924405,
+        0.09089637501165271,
+        0.0920069171115756,
+        0.09082529204897583,
+        0.09058512491174042
+      ],
+      "timed_steps": 20,
+      "warmup_steps": 4
+    }
+  },
+  "mode": "benchmark",
+  "numerical_qualification": {
+    "parsed_memory": {
+      "finite_loss_and_gradients": true,
+      "max_recompute_logit_error": 0.0
+    },
+    "raw_deep": {
+      "finite_loss_and_gradients": true,
+      "max_recompute_logit_error": 0.0
+    },
+    "raw_looped": {
+      "finite_loss_and_gradients": true,
+      "max_recompute_logit_error": 0.0
+    },
+    "raw_null": {
+      "finite_loss_and_gradients": true,
+      "max_recompute_logit_error": 0.0
+    },
+    "raw_shallow": {
+      "finite_loss_and_gradients": true,
+      "max_recompute_logit_error": 0.0
+    }
+  },
+  "peak_sampled_mps_allocated_bytes": 690716672,
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "projected_campaign_seconds": 11135.579660534859,
+  "source_git_head": "e22978df398a2a190e4eb650fdabe283e9026ea7",
+  "source_sha256": {
+    "docs/experiments/TEACH-0012.md": "06f1a493b9e81b9a006398279cd2370d90d46a062b5df0173778cc4b3971d02b",
+    "scripts/teacher0012_analyze.py": "e4ac83152c3ec3ef401ae85806e35aa9b10efefcef22ab5f03912a7687d7c59e",
+    "src/voynich/model.py": "771c4e6f4cb3abdbb3ef7f7101f845ac63f129bdc08de249db190997f63cc629",
+    "src/voynich/workspace/teacher12_models.py": "7330af425e05ce34de778ba9232a8425f3c844caf785976ccd57092bfadd2f8a",
+    "src/voynich/workspace/teacher12_tasks.py": "ac2fe9fb08e2c39852ca326b78126bec509625875ad21caa84fe88829bc4dd45",
+    "src/voynich/workspace/teacher12_train.py": "e1f8e9efb6f484cd508a2cc9933afbb9306118dedd71272a14d039229633740a",
+    "tests/test_workspace_teacher12.py": "9006f7b600fc54a7b44e5c3afd10911af44defb94a02b91fdfe58af7231e5a2e"
+  },
+  "source_worktree_status": [],
+  "status": "pass",
+  "torch_version": "2.14.0"
+}
