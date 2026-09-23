@@ -13,6 +13,7 @@ The user's J-space reference is [Anthropic's global-workspace research](https://
 - [Implementation-readiness audit](RAW_MECHANISM_IMPLEMENTATION_READINESS.md): exact raw/looped hook points, semantic-position reconstruction, numerical gates and audit boundary.
 - [Raw architecture ladder](RAW_BINDING_ARCHITECTURE_LADDER.md): failure-conditioned external-memory, iterative-state, graph-parser, algorithmic-hint and counterfactual-world-state campaigns.
 - [Circuit development program](CIRCUIT_DEVELOPMENT_PROGRAM.md): checkpoint-fixed behavioral, geometric, causal and weight trajectories, with curriculum and sparse-checkpoint confounds explicit.
+- [TEACH-0013 registration](../../experiments/TEACH-0013.md): contingent raw-model recipient transfer, balanced content/binding/order geometry, dynamic path decomposition and checkpoint-fixed development gates.
 
 The investigation has no known historical translations as labels. Successful natural-language interventions could qualify a method; applying it to unknown symbols still requires learned competence, identifiable latent variables, and independent anchors.
 

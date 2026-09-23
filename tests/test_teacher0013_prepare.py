@@ -30,6 +30,10 @@ def test_suite_payload_is_deterministic_and_has_exhaustive_semantic_maps():
                 for layout, episode in zip(layouts, episodes, strict=True):
                     assert len(layout["roles"]) == len(episode["tokens"])
                     assert len(set(layout["labels"])) == len(layout["labels"])
+    assert first["semantic_label_order"] == sorted(first["semantic_label_order"])
+    assert len(first["semantic_label_order"]) == len(set(first["semantic_label_order"]))
+    assert first["generation_stats"]["accepted_discovery"] == 2
+    assert first["generation_stats"]["accepted_confirmation"] == 2
 
 
 def test_stable_payload_contains_no_nonfinite_or_unserializable_values():

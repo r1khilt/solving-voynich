@@ -7,6 +7,7 @@ from voynich.workspace.teacher13_intervene import (
     attention_sites,
     cached_position_patch,
     numerical_reconstruction,
+    ordered_two_site_patch,
     position_patch,
     raw_forward,
     residual_sites,
@@ -74,3 +75,21 @@ def test_full_head_and_subspace_patches_change_only_requested_coordinates():
         assert torch.equal(changed[index, position, 1], head_donor[index, position, 1])
         assert torch.equal(changed[index, position, 3], head_donor[index, position, 3])
         assert torch.count_nonzero(changed[index, position, (0, 2)]) == 0
+
+    label_patch = position_patch(
+        donor, base_layouts, donor_layouts, base_role="query", semantic_label=True)
+    assert torch.equal(label_patch(base), full)
+
+
+def test_identity_two_site_path_reconstructs_the_clean_instrumented_run():
+    torch.manual_seed(31)
+    net = model_for_arm("raw_shallow").eval()
+    group = _group()
+    episodes = group.base
+    result = ordered_two_site_patch(
+        net, episodes, episodes, early_site="blocks.0.resid_post",
+        early_label="queried_f.right", late_site="blocks.2.resid_post",
+        late_label="answer")
+    clean = raw_forward(net, episodes, cache_names=("blocks.2.resid_post",))
+    assert torch.equal(result.propagated_logits, clean.logits)
+    assert torch.equal(result.path_logits, clean.logits)

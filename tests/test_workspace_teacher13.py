@@ -37,12 +37,25 @@ def test_binding_swap_and_recipient_remap_hold_surface_structure_fixed():
         assert all(episode.marker_dropout == 1
                    for episode in group.marker_free_base + group.marker_free_donor)
         assert len({episode.tokens for episode in group.base + group.reordered_base}) == 6
-        assert group.g_content_base.answer != group.g_content_donor.answer
-        assert surface_skeleton(group.g_content_base) == surface_skeleton(group.g_content_donor)
-        assert group.g_content_base.f_rows == group.g_content_donor.f_rows
-        assert len([(row0, row1) for row0, row1 in zip(
-            group.g_content_base.g_rows, group.g_content_donor.g_rows, strict=True)
-            if row0 != row1]) == 2
+        for g_base, g_donor, gb_base, gb_donor in zip(
+                group.g_content_base, group.g_content_donor,
+                group.g_binding_base, group.g_binding_donor, strict=True):
+            assert g_base.answer != g_donor.answer
+            assert surface_skeleton(g_base) == surface_skeleton(g_donor)
+            assert g_base.f_rows == g_donor.f_rows
+            assert len([(row0, row1) for row0, row1 in zip(
+                g_base.g_rows, g_donor.g_rows, strict=True) if row0 != row1]) == 1
+            assert len([(row0, row1) for row0, row1 in zip(
+                gb_base.g_rows, gb_donor.g_rows, strict=True) if row0 != row1]) == 2
+        assert all(base.serialized_rows == marker.serialized_rows
+                   for base, marker in zip(group.base, group.marker_free_base, strict=True))
+        assert all(surface_skeleton(base) == surface_skeleton(reordered)
+                   for base, reordered in zip(group.base, group.reordered_base, strict=True))
+        assert all(base.serialized_rows != reordered.serialized_rows
+                   for base, reordered in zip(group.base, group.reordered_base, strict=True))
+        assert all(formatted.serialized_rows == original.serialized_rows
+                   and len(formatted.tokens) == len(original.tokens)
+                   for formatted, original in zip(group.format_donor, group.donor, strict=True))
         for base, donor, base_answer, recipient_answer in zip(
                 group.base, group.donor, group.base_answers,
                 group.recipient_answers, strict=True):
@@ -55,8 +68,14 @@ def test_binding_swap_and_recipient_remap_hold_surface_structure_fixed():
             changed = [(left0, right0, right1) for (left0, right0), (left1, right1)
                        in zip(base.f_rows, donor.f_rows, strict=True)
                        if right0 != right1 and left0 == left1]
-            assert len(changed) == 2
-            assert {right for _, right in base.f_rows} == {right for _, right in donor.f_rows}
+            assert len(changed) == 1
+        for binding_base, binding_donor in zip(
+                group.binding_base, group.binding_donor, strict=True):
+            binding_changed = [(row0, row1) for row0, row1 in zip(
+                binding_base.f_rows, binding_donor.f_rows, strict=True) if row0 != row1]
+            assert len(binding_changed) == 2
+            assert {right for _, right in binding_base.f_rows} == {
+                right for _, right in binding_donor.f_rows}
 
 
 def test_semantic_layout_exactly_identifies_dynamic_relation_positions():
@@ -65,9 +84,11 @@ def test_semantic_layout_exactly_identifies_dynamic_relation_positions():
         for group in groups:
             for episode in (group.base + group.donor + group.marker_free_base
                             + group.marker_free_donor + group.reordered_base
-                            + group.reordered_donor + (group.format_donor,
-                            group.distractor_donor, group.g_content_base,
-                            group.g_content_donor)):
+                            + group.reordered_donor + group.format_donor
+                            + group.distractor_donor + group.g_content_base
+                            + group.g_content_donor + group.binding_base
+                            + group.binding_donor + group.g_binding_base
+                            + group.g_binding_donor):
                 layout = semantic_layout(episode)
                 assert len(layout.roles) == len(episode.tokens)
                 assert len(layout.labels) == len(episode.tokens)
@@ -84,6 +105,20 @@ def test_semantic_layout_exactly_identifies_dynamic_relation_positions():
                 assert episode.tokens[f_right] == episode.tokens[g_left]
                 assert len(layout.positions("false_path_first.left")) == 2
                 assert len(layout.positions("false_path_terminal.right")) == 2
+
+
+def test_canonical_other_row_labels_follow_logical_left_side_across_f_swap():
+    suite = counterfactual_suite(73135, discovery_groups=1, confirmation_groups=1)
+    for groups in suite.values():
+        for group in groups:
+            base, donor = group.base[0], group.donor[0]
+            left, right = semantic_layout(base), semantic_layout(donor)
+            common = {label for label in left.labels if label.startswith("other_g.")} & {
+                label for label in right.labels if label.startswith("other_g.")}
+            for label in common:
+                if label.endswith(".left"):
+                    assert base.tokens[left.label_position(label)] == \
+                        donor.tokens[right.label_position(label)]
 
 
 def test_task_controls_use_same_inventory_and_exact_oracles():

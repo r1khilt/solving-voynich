@@ -28,9 +28,14 @@ def residual_sites(arm: str) -> tuple[str, ...]:
 
 
 def attention_sites(arm: str, suffix: str = "result") -> tuple[str, ...]:
-    """Per-layer attention sites, including repeated-pass names for the looped model."""
+    """Sequence-first attention sites safe for position patching.
+
+    Post-RoPE q/k, score and pattern caches are head-first and therefore require a
+    different axis-aware intervention API.  Excluding them here prevents silently
+    patching a head index as if it were a token position.
+    """
     if suffix not in ("q_pre_norm", "k_pre_norm", "v", "q_normalized", "k_normalized",
-                      "q", "k", "scores", "pattern", "z", "result", "out"):
+                      "z", "result", "out"):
         raise ValueError(f"Unsupported attention site suffix: {suffix}")
     return tuple(site.removesuffix("resid_post") + "attn." + suffix
                  for site in residual_sites(arm)[1:])
@@ -54,10 +59,12 @@ def load_raw_checkpoint(path: Path | str, *, device: str | torch.device = "cpu"
     return net, checkpoint
 
 
-def _unique_position(layout: SemanticLayout, role: str) -> int:
-    positions = layout.positions(role)
+def _unique_position(layout: SemanticLayout, name: str, *, semantic_label: bool) -> int:
+    positions = ((layout.label_position(name),) if semantic_label
+                 else layout.positions(name))
     if len(positions) != 1:
-        raise ValueError(f"Role {role!r} has {len(positions)} positions, expected one")
+        kind = "Label" if semantic_label else "Role"
+        raise ValueError(f"{kind} {name!r} has {len(positions)} positions, expected one")
     return positions[0]
 
 
@@ -73,7 +80,8 @@ def _validate_basis(basis: Tensor, width: int) -> None:
 def position_patch(donor: Tensor, base_layouts: Iterable[SemanticLayout],
                    donor_layouts: Iterable[SemanticLayout], *, base_role: str,
                    donor_role: str | None = None, heads: tuple[int, ...] | None = None,
-                   basis: Tensor | None = None, component: str = "full"):
+                   basis: Tensor | None = None, component: str = "full",
+                   semantic_label: bool = False):
     """Create a dynamic-position patch for residual or per-head activation tensors.
 
     `component` can transfer the full vector, its projection into `basis`, or its
@@ -83,8 +91,10 @@ def position_patch(donor: Tensor, base_layouts: Iterable[SemanticLayout],
     donor_role = base_role if donor_role is None else donor_role
     if donor.shape[0] != len(bases) or len(bases) != len(donors):
         raise ValueError("Donor batch and semantic layouts must have equal batch size")
-    source_positions = tuple(_unique_position(layout, donor_role) for layout in donors)
-    target_positions = tuple(_unique_position(layout, base_role) for layout in bases)
+    source_positions = tuple(_unique_position(
+        layout, donor_role, semantic_label=semantic_label) for layout in donors)
+    target_positions = tuple(_unique_position(
+        layout, base_role, semantic_label=semantic_label) for layout in bases)
     if component not in ("full", "subspace", "complement"):
         raise ValueError(f"Unknown patch component: {component}")
     if component != "full" and basis is None:
@@ -163,15 +173,44 @@ def score_logits(logits: Tensor, targets: Iterable[int], *, reference: Tensor | 
 def cached_position_patch(net: nn.Module, base: tuple[Episode, ...], donor: tuple[Episode, ...],
                           *, site: str, role: str, donor_role: str | None = None,
                           device: str | torch.device = "cpu", heads=None, basis=None,
-                          component: str = "full"):
+                          component: str = "full", semantic_label: bool = False):
     """Cache one donor site and patch it into dynamic semantic positions of base runs."""
     donor_output = raw_forward(net, donor, device=device, cache_names=(site,))
     layouts_base = tuple(semantic_layout(episode) for episode in base)
     layouts_donor = tuple(semantic_layout(episode) for episode in donor)
     patch = position_patch(
         donor_output.cache[site], layouts_base, layouts_donor, base_role=role,
-        donor_role=donor_role, heads=heads, basis=basis, component=component)
+        donor_role=donor_role, heads=heads, basis=basis, component=component,
+        semantic_label=semantic_label)
     return raw_forward(net, base, device=device, interventions={site: patch})
+
+
+@dataclass(frozen=True)
+class TwoSiteOutput:
+    propagated_logits: Tensor
+    path_logits: Tensor
+    propagated_state: Tensor
+
+
+def ordered_two_site_patch(net: nn.Module, base: tuple[Episode, ...],
+                           donor: tuple[Episode, ...], *, early_site: str,
+                           early_label: str, late_site: str, late_label: str,
+                           device: str | torch.device = "cpu") -> TwoSiteOutput:
+    """Propagate an early donor write, then isolate its later state in a clean base run."""
+    base_layouts = tuple(semantic_layout(episode) for episode in base)
+    donor_layouts = tuple(semantic_layout(episode) for episode in donor)
+    donor_output = raw_forward(net, donor, device=device, cache_names=(early_site,))
+    early = position_patch(
+        donor_output.cache[early_site], base_layouts, donor_layouts,
+        base_role=early_label, semantic_label=True)
+    propagated = raw_forward(
+        net, base, device=device, cache_names=(late_site,),
+        interventions={early_site: early})
+    late = position_patch(
+        propagated.cache[late_site], base_layouts, base_layouts,
+        base_role=late_label, semantic_label=True)
+    isolated = raw_forward(net, base, device=device, interventions={late_site: late})
+    return TwoSiteOutput(propagated.logits, isolated.logits, propagated.cache[late_site])
 
 
 def numerical_reconstruction(net: RawClassifier | LoopedRawClassifier,

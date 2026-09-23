@@ -8,6 +8,8 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import sys
+import tempfile
 
 from voynich.workspace.teacher13_tasks import counterfactual_suite, semantic_layout
 
@@ -17,14 +19,50 @@ SOURCE_PATHS = (
     "docs/experiments/TEACH-0013.md",
     "src/voynich/workspace/teacher13_tasks.py",
     "src/voynich/workspace/teacher13_intervene.py",
+    "src/voynich/workspace/teacher13_score.py",
+    "src/voynich/workspace/teacher13_discovery.py",
+    "src/voynich/workspace/teacher13_geometry.py",
+    "scripts/teacher0013_campaign.py",
+    "scripts/teacher0013_audit.py",
+    "scripts/teacher0013_discovery_audit.py",
     "scripts/teacher0013_prepare.py",
+    "src/voynich/workspace/teacher12_tasks.py",
+    "src/voynich/workspace/teacher12_models.py",
+    "src/voynich/model.py",
+    "docs/experiments/TEACH-0012-audit-hardening-amendment.md",
+    "scripts/teacher0012_analyze.py",
+    "tests/test_teacher0012_analyze.py",
+    "pyproject.toml",
+    "uv.lock",
     "tests/test_workspace_teacher13.py",
     "tests/test_workspace_teacher13_intervene.py",
+    "tests/test_workspace_teacher13_score.py",
+    "tests/test_workspace_teacher13_discovery.py",
+    "tests/test_workspace_teacher13_geometry.py",
+    "tests/test_teacher0013_campaign.py",
+    "tests/test_teacher0013_audit.py",
+    "tests/test_teacher0013_discovery_audit.py",
     "tests/test_teacher0013_prepare.py",
+)
+TEACH12_LAUNCH_SOURCE_PATHS = (
+    "docs/experiments/TEACH-0012.md",
+    "docs/experiments/TEACH-0012-benchmark-gate-amendment.md",
+    "src/voynich/workspace/teacher12_tasks.py",
+    "src/voynich/workspace/teacher12_models.py",
+    "src/voynich/workspace/teacher12_train.py",
+    "scripts/teacher0012_analyze.py",
+    "tests/test_workspace_teacher12.py",
+    "src/voynich/model.py",
+)
+TEACH12_AUDITOR_PATHS = (
+    "docs/experiments/TEACH-0012-audit-hardening-amendment.md",
+    "scripts/teacher0012_analyze.py",
+    "tests/test_teacher0012_analyze.py",
 )
 VARIANTS = (
     "base", "donor", "marker_free_base", "marker_free_donor",
     "reordered_base", "reordered_donor", "g_content_base", "g_content_donor",
+    "binding_base", "binding_donor", "g_binding_base", "g_binding_donor",
     "format_donor", "distractor_donor", "first_hop_base", "first_hop_donor",
     "direct_base", "direct_donor", "copy_control",
 )
@@ -54,10 +92,11 @@ def _episodes(group, name):
 
 def suite_payload(seed=73111, discovery_groups=128, confirmation_groups=128):
     """Materialize logical groups together with exhaustive semantic position maps."""
-    suite = counterfactual_suite(
-        seed, discovery_groups=discovery_groups, confirmation_groups=confirmation_groups)
+    suite, generation_stats = counterfactual_suite(
+        seed, discovery_groups=discovery_groups, confirmation_groups=confirmation_groups,
+        return_stats=True)
     payload = {"experiment": "TEACH-0013", "namespace": "TEACH-0013-v1", "seed": seed,
-               "splits": {}}
+               "generation_stats": generation_stats, "splits": {}}
     for split, groups in suite.items():
         payload["splits"][split] = []
         for group in groups:
@@ -67,6 +106,13 @@ def suite_payload(seed=73111, discovery_groups=128, confirmation_groups=128):
                 for name in VARIANTS
             }
             payload["splits"][split].append(record)
+    payload["semantic_label_order"] = sorted({
+        label
+        for group in payload["splits"]["discovery"]
+        for layouts in group["semantic_layouts"].values()
+        for layout in layouts
+        for label in layout["labels"]
+    })
     return payload
 
 
@@ -93,6 +139,54 @@ def source_provenance():
     return {"source_git_head": revision, "source_sha256": hashes}
 
 
+def git_blob(revision: str, relative: str) -> bytes:
+    return subprocess.run(
+        ["git", "show", f"{revision}:{relative}"], cwd=ROOT, check=True,
+        capture_output=True, timeout=30).stdout
+
+
+def verify_teach12_provenance(report: dict, audit: dict) -> None:
+    """Bind the entry decision to the exact committed trainer and auditor source."""
+    auditor = audit.get("auditor", {})
+    revision, hashes = auditor.get("revision"), auditor.get("sha256")
+    if not isinstance(revision, str) or not isinstance(hashes, dict) \
+            or set(hashes) != set(TEACH12_AUDITOR_PATHS):
+        raise RuntimeError("Malformed or incomplete TEACH-0012 auditor provenance")
+    for relative in TEACH12_AUDITOR_PATHS:
+        if sha_bytes(git_blob(revision, relative)) != hashes[relative]:
+            raise RuntimeError(f"TEACH-0012 auditor source mismatch: {relative}")
+    launch = report.get("source_git_head")
+    launch_hashes = report.get("source_sha256")
+    if audit.get("launch_source_revision") != launch \
+            or not isinstance(launch_hashes, dict) \
+            or set(launch_hashes) != set(TEACH12_LAUNCH_SOURCE_PATHS):
+        raise RuntimeError("TEACH-0012 launch provenance is inconsistent")
+    for relative in TEACH12_LAUNCH_SOURCE_PATHS:
+        if sha_bytes(git_blob(launch, relative)) != launch_hashes[relative]:
+            raise RuntimeError(f"TEACH-0012 launch source mismatch: {relative}")
+    if audit.get("suite_sha256") != report.get("suite_sha256"):
+        raise RuntimeError("TEACH-0012 audit/report suite mismatch")
+
+
+def independently_reaudit_teach12(report_path: Path, expected_audit: dict) -> None:
+    """Recompute the TEACH-0012 audit so checkpoint metadata cannot be substituted."""
+    with tempfile.TemporaryDirectory(prefix="teach0013-entry-") as directory:
+        output = Path(directory) / "audit.json"
+        completed = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/teacher0012_analyze.py"),
+             "--report", str(report_path), "--output", str(output)],
+            cwd=ROOT, capture_output=True, text=True, timeout=1800)
+        if completed.returncode != 0 or not output.is_file():
+            message = completed.stderr.strip() or completed.stdout.strip()
+            raise RuntimeError(f"Independent TEACH-0012 re-audit failed: {message[-1000:]}")
+        fresh = json.loads(output.read_text())
+    for field in ("audit", "experiment", "launch_source_revision", "suite_sha256",
+                  "decision", "verified_prediction_archives", "verified_loss_archives",
+                  "verified_final_checkpoints", "verified_milestone_checkpoints"):
+        if fresh.get(field) != expected_audit.get(field):
+            raise RuntimeError(f"TEACH-0012 re-audit disagrees on {field}")
+
+
 def verify_entry(report_path: Path, audit_path: Path):
     report = json.loads(report_path.read_text())
     audit = json.loads(audit_path.read_text())
@@ -102,6 +196,8 @@ def verify_entry(report_path: Path, audit_path: Path):
         raise RuntimeError("Passing independent TEACH-0012 audit required")
     if report.get("decision") != audit.get("decision"):
         raise RuntimeError("Trainer and independent auditor decisions disagree")
+    verify_teach12_provenance(report, audit)
+    independently_reaudit_teach12(report_path, audit)
     decision = audit["decision"]
     if decision.get("verdict") != "qualified" \
             or decision.get("raw_sequence_binding") != "qualified" \
@@ -140,6 +236,7 @@ def prepare(report_path: Path, audit_path: Path, output_dir: Path, result_dir: P
     manifest = {
         "experiment": "TEACH-0013", "status": "suite_frozen",
         "seed": payload["seed"],
+        "generation_stats": payload["generation_stats"],
         "split_counts": {name: len(groups) for name, groups in payload["splits"].items()},
         "group_ids": {name: [group["group_id"] for group in groups]
                       for name, groups in payload["splits"].items()},

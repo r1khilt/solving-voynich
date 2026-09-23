@@ -68,12 +68,13 @@ Every group contains:
 7. a same-key/different-format rendering and a same-key/different-distractor rendering;
 8. matched first-hop, direct, composed and copy tasks on the same logical symbol inventory.
 
-For each base program, construct five causal donor families while matching sequence length, row
+For each of the three recipient tables, construct five causal donor families while matching sequence length, row
 count, `GAP` pattern, delimiter multiset, answer/query positions and distractor topology wherever
 the logical intervention permits:
 
 - **F-content donor:** change only the queried F value from `k0` to `k1`.
-- **G-content donor:** preserve `F(n)=k0` and change only `G(k0)`.
+- **G-content donor:** preserve `F(n)=k0` and change only `Gj(k0)` to a fresh held-out value,
+  separately for every recipient `j`.
 - **binding donor:** preserve the complete symbol multiset and physical row positions while
   swapping the right sides of two F edges or two G edges.
 - **order donor:** preserve every logical edge but move complete rows to different physical slots.
@@ -84,14 +85,15 @@ The generator rejects a group unless the symbolic oracle verifies every answer; 
 are single-valued; the required answer distinctions hold; no sequence exceeds 128 tokens; and the
 model-visible token sequence plus task/query has only one registered oracle label. The manifest
 stores logical edges, every token occurrence, render ID, semantic labels, expected outputs and
-rejection counts. An independent parser/auditor regenerates the oracle from saved tokens without
-calling the training generator.
+reconciled aggregate rejection counts. Every F-binding, G-content, G-binding, format and
+distractor family contains all three recipients. An independent parser/auditor regenerates the
+oracle from saved tokens without calling the training generator.
 
 ## Semantic positions
 
 Physical token indices vary, so every occurrence receives a generator-derived semantic label used
 only by analysis. Repeated role classes are deterministically subindexed by canonical logical-row
-ID, and markers/gaps are subindexed by physical order, so the labels exhaust every model-visible
+ID; markers inherit that row ID and gaps are subindexed by physical order, so the labels exhaust every model-visible
 position rather than pooling several occurrences:
 
 - queried-F left and right endpoints;
@@ -147,7 +149,9 @@ and second-half-position strata. The strata are fixed from generator metadata.
 
 Select the **earliest** qualifying residual cut. At that cut choose the semantic position with the
 largest minimum exact-group rate across seeds and the four strata; ties use minimum item accuracy,
-then smaller fixed semantic-label index. Freeze this as the primary key site. If no single site
+then smaller fixed semantic-label index. The index is the lexicographic order of all exhaustive
+semantic labels in the frozen discovery manifest and is fixed before inference. Freeze this as
+the primary key site. If no single site
 qualifies, screen ordered two-site paths only: an earlier relation-endpoint write followed by a
 later query or `ANSWER`-position write. Candidate paths are ordered by earlier cut, later cut,
 source semantic-label index and destination index. Patch the earlier donor write, recompute to the
@@ -159,9 +163,12 @@ If neither a single site nor an ordered two-site path qualifies, freeze `NO STAT
 MEDIATOR` before opening confirmation. Later head analysis may describe dynamic routing but cannot
 produce the primary key-mediator label.
 
-G-content, binding, order and format screens do not choose the primary key site. Their full maps
-are saved, and their strongest discovery sites are selected by the same deterministic rule for
-secondary confirmation. This prevents post hoc selection of whatever variable looks clearest.
+G-content, F-binding, G-binding, order, format and distractor screens do not choose the primary key
+site. Their full compact maps are saved. For each secondary family, a candidate must contain every
+registered group and all three recipients in both seeds. Rank complete candidates by maximum
+minimum exact-group rate across seeds, then minimum item rate, then minimum target-probability
+gain, earlier cut and semantic-label index. This descriptive ranking is frozen for secondary
+confirmation and does not borrow the primary F-content support thresholds.
 
 ## Stage C: frozen recipient-specific interchange
 
@@ -351,12 +358,21 @@ alter scientific selection based on exposed aggregates.
 ## Resource ceilings and stop rules
 
 Before checkpoint inference, benchmark 32 discovery groups across all 13 residual cuts and
-semantic positions. Project the complete campaign conservatively at 1.5 times measured runtime.
+semantic positions. Scale Stage B by the preregistered `27/6 = 4.5` ratio between all donor-family
+recipient conditions and the two-render F-content benchmark. Project the complete campaign
+conservatively at 1.5 times measured runtime.
 Proceed only if the projection is at most four accelerator-hours and 300 GB of transient
 activation traffic. Hard ceilings are four accelerator-hours, 24 GiB sampled MPS allocation,
 20 GiB ignored local artifacts and 2 GiB tracked compact artifacts. Stage B has a two-hour
 sub-ceiling; Stages C--E together have a 90-minute sub-ceiling; checkpoint analysis has a
 90-minute sub-ceiling.
+
+For the traffic gate, count every materialized cached residual tensor, donor intervention tensor
+and returned logit tensor once at its actual dtype; project the 32-group count by group and seed
+scale with the same 1.5 factor. This operational counter does not claim to measure ephemeral
+kernel-internal reads and writes, which are instead covered by sampled MPS allocation and elapsed
+time. Record both current allocated and driver allocated memory samples; the 24 GiB hard gate uses
+current tensor allocation.
 
 Stop at a ceiling, nonfinite tensor, source/checkpoint hash mismatch, suite-hash mismatch,
 semantic-label ambiguity or numerical failure. Report `INCOMPLETE` for the affected stage; do not
@@ -374,7 +390,9 @@ Retain SHA-256 hashes for:
 - logical groups, token sequences, render IDs and semantic-position maps;
 - both final and milestone checkpoints;
 - every selected and rejected site, path, head mask and subspace definition;
-- per-item logits, predictions and finite intervention rows for all primary and control cells;
+- compact discovery maps retain per-item target, predicted and base-target logits, predictions,
+  legal-candidate and wrong-destination labels for every screened candidate; after selection,
+  exact full symbol-logit vectors are retained for every frozen primary and control cell;
 - numerical errors, benchmark/runtime/resource logs and RNG states;
 - discovery decision object frozen before confirmation access;
 - final report and independent audit.
