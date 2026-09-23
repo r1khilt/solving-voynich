@@ -22,6 +22,7 @@ from .teacher7_dense_mechanism import _answers, _ids, continue_dense, manual_den
 
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0008.md",
+    "docs/experiments/TEACH-0008-numerical-amendment.md",
     "src/voynich/workspace/teacher8_components.py",
     "src/voynich/workspace/teacher7_dense_mechanism.py",
     "src/voynich/workspace/teacher6_geometry.py",
@@ -71,8 +72,9 @@ def layer_parts(layer, state):
     query = query.view(batch, length, heads, head_width).transpose(1, 2)
     key = key.view(batch, length, heads, head_width).transpose(1, 2)
     value = value.view(batch, length, heads, head_width).transpose(1, 2)
-    attention = F.softmax(query @ key.transpose(-2, -1) / math.sqrt(head_width), dim=-1)
-    head_values = attention @ value
+    head_values = F.scaled_dot_product_attention(
+        query, key, value, dropout_p=0.0, is_causal=False,
+        scale=1 / math.sqrt(head_width))
     concatenated = head_values.transpose(1, 2).reshape(batch, length, width)
     attention_write = F.linear(concatenated, layer.self_attn.out_proj.weight,
                                layer.self_attn.out_proj.bias)

@@ -1,0 +1,2417 @@
+{
+  "artifacts": {
+    "0": {
+      "checkpoint_sha256": "6a6474ade5839bb49954d4b95eef6c3c14a2acaf008868397dda2f6a0394d977",
+      "rows": 384,
+      "rows_sha256": "948e1c3f0be96e56137d3559735bfeb96a9f74fa0c5cc2edecd4becb38d7205a"
+    },
+    "1": {
+      "checkpoint_sha256": "75b6e454ccab71a8bed02cdf4f9db311ed55a3bb2f1080d2a448dfd3620843a8",
+      "rows": 384,
+      "rows_sha256": "273163af162d6c9f65e0b47b748953f4f7d3960028a57843b9c0643ac89b0e9a"
+    }
+  },
+  "config": {
+    "confirmation_groups": 128,
+    "discovery_groups": 128,
+    "g_tables": 3,
+    "max_seconds": 600.0,
+    "random_seed": 68211,
+    "suite_seed": 68111
+  },
+  "config_sha256": "08215de7b2cef4e93279dd4a7489929da6183e84a6619c32bc2a58c76fc9e429",
+  "decision": {
+    "clauses_by_seed": {
+      "0": {
+        "clean_base_at_least_0.95": true,
+        "clean_donor_at_least_0.95": true,
+        "f_positive_at_least_0.95": true,
+        "numerical_errors_below_1e-6": false,
+        "random_advantage_at_least_0.40": true,
+        "selected_groups_at_least_0.60": true,
+        "selected_items_at_least_0.75": true,
+        "selected_non_injection_at_least_0.90": true
+      },
+      "1": {
+        "clean_base_at_least_0.95": true,
+        "clean_donor_at_least_0.95": true,
+        "f_positive_at_least_0.95": true,
+        "numerical_errors_below_1e-6": true,
+        "random_advantage_at_least_0.40": true,
+        "selected_groups_at_least_0.60": true,
+        "selected_items_at_least_0.75": true,
+        "selected_non_injection_at_least_0.90": true
+      }
+    },
+    "head_write": "not_supported"
+  },
+  "discovery_screen": {
+    "0": {
+      "1": {
+        "base_items": {
+          "accuracy": 1.0,
+          "correct": 384,
+          "total": 384,
+          "wilson_95": [
+            0.9900952857583228,
+            1.0
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 128,
+          "wilson_95": [
+            0.0,
+            0.029136956273508416
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 384,
+          "wilson_95": [
+            0.0,
+            0.009904714241677031
+          ]
+        }
+      },
+      "10": {
+        "base_items": {
+          "accuracy": 0.005208333333333333,
+          "correct": 2,
+          "total": 384,
+          "wilson_95": [
+            0.0014294767943998088,
+            0.018788730007259752
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.984375,
+          "correct": 126,
+          "total": 128,
+          "wilson_95": [
+            0.9448190233201829,
+            0.9957045502898559
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.9947916666666666,
+          "correct": 382,
+          "total": 384,
+          "wilson_95": [
+            0.9812112699927402,
+            0.9985705232056001
+          ]
+        }
+      },
+      "11": {
+        "base_items": {
+          "accuracy": 0.0026041666666666665,
+          "correct": 1,
+          "total": 384,
+          "wilson_95": [
+            0.0004598473685753701,
+            0.014601613153092927
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.9921875,
+          "correct": 127,
+          "total": 128,
+          "wilson_95": [
+            0.9570737405611394,
+            0.9986195681071257
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.9973958333333334,
+          "correct": 383,
+          "total": 384,
+          "wilson_95": [
+            0.9853983868469071,
+            0.9995401526314246
+          ]
+        }
+      },
+      "12": {
+        "base_items": {
+          "accuracy": 0.7552083333333334,
+          "correct": 290,
+          "total": 384,
+          "wilson_95": [
+            0.7098149485117263,
+            0.7955461869274177
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.1328125,
+          "correct": 17,
+          "total": 128,
+          "wilson_95": [
+            0.08460228531840389,
+            0.20242016694495388
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.24479166666666666,
+          "correct": 94,
+          "total": 384,
+          "wilson_95": [
+            0.20445381307258223,
+            0.29018505148827367
+          ]
+        }
+      },
+      "13": {
+        "base_items": {
+          "accuracy": 0.7604166666666666,
+          "correct": 292,
+          "total": 384,
+          "wilson_95": [
+            0.7152799973915379,
+            0.8003946306075885
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.125,
+          "correct": 16,
+          "total": 128,
+          "wilson_95": [
+            0.07842644638761664,
+            0.19342627081751468
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.23958333333333334,
+          "correct": 92,
+          "total": 384,
+          "wilson_95": [
+            0.19960536939241139,
+            0.2847200026084621
+          ]
+        }
+      },
+      "14": {
+        "base_items": {
+          "accuracy": 0.005208333333333333,
+          "correct": 2,
+          "total": 384,
+          "wilson_95": [
+            0.0014294767943998088,
+            0.018788730007259752
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.984375,
+          "correct": 126,
+          "total": 128,
+          "wilson_95": [
+            0.9448190233201829,
+            0.9957045502898559
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.9947916666666666,
+          "correct": 382,
+          "total": 384,
+          "wilson_95": [
+            0.9812112699927402,
+            0.9985705232056001
+          ]
+        }
+      },
+      "15": {
+        "base_items": {
+          "accuracy": 0.005208333333333333,
+          "correct": 2,
+          "total": 384,
+          "wilson_95": [
+            0.0014294767943998088,
+            0.018788730007259752
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.984375,
+          "correct": 126,
+          "total": 128,
+          "wilson_95": [
+            0.9448190233201829,
+            0.9957045502898559
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.9947916666666666,
+          "correct": 382,
+          "total": 384,
+          "wilson_95": [
+            0.9812112699927402,
+            0.9985705232056001
+          ]
+        }
+      },
+      "2": {
+        "base_items": {
+          "accuracy": 0.9114583333333334,
+          "correct": 350,
+          "total": 384,
+          "wilson_95": [
+            0.8788183041230202,
+            0.9359476081155997
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0546875,
+          "correct": 7,
+          "total": 128,
+          "wilson_95": [
+            0.026740201381346355,
+            0.10858490029974707
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.08854166666666667,
+          "correct": 34,
+          "total": 384,
+          "wilson_95": [
+            0.06405239188440023,
+            0.12118169587697983
+          ]
+        }
+      },
+      "3": {
+        "base_items": {
+          "accuracy": 0.9088541666666666,
+          "correct": 349,
+          "total": 384,
+          "wilson_95": [
+            0.8758755573368775,
+            0.9337336086217511
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0546875,
+          "correct": 7,
+          "total": 128,
+          "wilson_95": [
+            0.026740201381346355,
+            0.10858490029974707
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.09114583333333333,
+          "correct": 35,
+          "total": 384,
+          "wilson_95": [
+            0.06626639137824887,
+            0.12412444266312243
+          ]
+        }
+      },
+      "4": {
+        "base_items": {
+          "accuracy": 1.0,
+          "correct": 384,
+          "total": 384,
+          "wilson_95": [
+            0.9900952857583228,
+            1.0
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 128,
+          "wilson_95": [
+            0.0,
+            0.029136956273508416
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 384,
+          "wilson_95": [
+            0.0,
+            0.009904714241677031
+          ]
+        }
+      },
+      "5": {
+        "base_items": {
+          "accuracy": 1.0,
+          "correct": 384,
+          "total": 384,
+          "wilson_95": [
+            0.9900952857583228,
+            1.0
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 128,
+          "wilson_95": [
+            0.0,
+            0.029136956273508416
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 384,
+          "wilson_95": [
+            0.0,
+            0.009904714241677031
+          ]
+        }
+      },
+      "6": {
+        "base_items": {
+          "accuracy": 0.90625,
+          "correct": 348,
+          "total": 384,
+          "wilson_95": [
+            0.8729396140163201,
+            0.9315128056623172
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0625,
+          "correct": 8,
+          "total": 128,
+          "wilson_95": [
+            0.03200692569506119,
+            0.11848791104425865
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.09375,
+          "correct": 36,
+          "total": 384,
+          "wilson_95": [
+            0.06848719433768272,
+            0.12706038598367986
+          ]
+        }
+      },
+      "7": {
+        "base_items": {
+          "accuracy": 0.9010416666666666,
+          "correct": 346,
+          "total": 384,
+          "wilson_95": [
+            0.8670871687265536,
+            0.9270517583921012
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0625,
+          "correct": 8,
+          "total": 128,
+          "wilson_95": [
+            0.03200692569506119,
+            0.11848791104425865
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.09895833333333333,
+          "correct": 38,
+          "total": 384,
+          "wilson_95": [
+            0.0729482416078987,
+            0.13291283127344639
+          ]
+        }
+      },
+      "8": {
+        "base_items": {
+          "accuracy": 0.75,
+          "correct": 288,
+          "total": 384,
+          "wilson_95": [
+            0.7043582636350356,
+            0.7906893792441259
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.1328125,
+          "correct": 17,
+          "total": 128,
+          "wilson_95": [
+            0.08460228531840389,
+            0.20242016694495388
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.25,
+          "correct": 96,
+          "total": 384,
+          "wilson_95": [
+            0.20931062075587412,
+            0.29564173636496427
+          ]
+        }
+      },
+      "9": {
+        "base_items": {
+          "accuracy": 0.7604166666666666,
+          "correct": 292,
+          "total": 384,
+          "wilson_95": [
+            0.7152799973915379,
+            0.8003946306075885
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.1171875,
+          "correct": 15,
+          "total": 128,
+          "wilson_95": [
+            0.07231682349355734,
+            0.18436615865334754
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.23958333333333334,
+          "correct": 92,
+          "total": 384,
+          "wilson_95": [
+            0.19960536939241139,
+            0.2847200026084621
+          ]
+        }
+      }
+    },
+    "1": {
+      "1": {
+        "base_items": {
+          "accuracy": 1.0,
+          "correct": 384,
+          "total": 384,
+          "wilson_95": [
+            0.9900952857583228,
+            1.0
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 128,
+          "wilson_95": [
+            0.0,
+            0.029136956273508416
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 384,
+          "wilson_95": [
+            0.0,
+            0.009904714241677031
+          ]
+        }
+      },
+      "10": {
+        "base_items": {
+          "accuracy": 0.0078125,
+          "correct": 3,
+          "total": 384,
+          "wilson_95": [
+            0.0026604410614153827,
+            0.022714512020235444
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.984375,
+          "correct": 126,
+          "total": 128,
+          "wilson_95": [
+            0.9448190233201829,
+            0.9957045502898559
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.9921875,
+          "correct": 381,
+          "total": 384,
+          "wilson_95": [
+            0.9772854879797644,
+            0.9973395589385846
+          ]
+        }
+      },
+      "11": {
+        "base_items": {
+          "accuracy": 0.0026041666666666665,
+          "correct": 1,
+          "total": 384,
+          "wilson_95": [
+            0.0004598473685753701,
+            0.014601613153092927
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.9921875,
+          "correct": 127,
+          "total": 128,
+          "wilson_95": [
+            0.9570737405611394,
+            0.9986195681071257
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.9973958333333334,
+          "correct": 383,
+          "total": 384,
+          "wilson_95": [
+            0.9853983868469071,
+            0.9995401526314246
+          ]
+        }
+      },
+      "12": {
+        "base_items": {
+          "accuracy": 0.7447916666666666,
+          "correct": 286,
+          "total": 384,
+          "wilson_95": [
+            0.6989097695782239,
+            0.785824380740955
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.1484375,
+          "correct": 19,
+          "total": 128,
+          "wilson_95": [
+            0.09713463115350009,
+            0.22022729122631057
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.2552083333333333,
+          "correct": 98,
+          "total": 384,
+          "wilson_95": [
+            0.214175619259045,
+            0.3010902304217759
+          ]
+        }
+      },
+      "13": {
+        "base_items": {
+          "accuracy": 0.7421875,
+          "correct": 285,
+          "total": 384,
+          "wilson_95": [
+            0.6961885425440776,
+            0.78338886149511
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.140625,
+          "correct": 18,
+          "total": 128,
+          "wilson_95": [
+            0.09083969494262253,
+            0.21135249237896167
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.2578125,
+          "correct": 99,
+          "total": 384,
+          "wilson_95": [
+            0.21661113850488992,
+            0.30381145745592225
+          ]
+        }
+      },
+      "14": {
+        "base_items": {
+          "accuracy": 0.005208333333333333,
+          "correct": 2,
+          "total": 384,
+          "wilson_95": [
+            0.0014294767943998088,
+            0.018788730007259752
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.984375,
+          "correct": 126,
+          "total": 128,
+          "wilson_95": [
+            0.9448190233201829,
+            0.9957045502898559
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.9947916666666666,
+          "correct": 382,
+          "total": 384,
+          "wilson_95": [
+            0.9812112699927402,
+            0.9985705232056001
+          ]
+        }
+      },
+      "15": {
+        "base_items": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 384,
+          "wilson_95": [
+            0.0,
+            0.009904714241677031
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 1.0,
+          "correct": 128,
+          "total": 128,
+          "wilson_95": [
+            0.9708630437264916,
+            1.0
+          ]
+        },
+        "donor_items": {
+          "accuracy": 1.0,
+          "correct": 384,
+          "total": 384,
+          "wilson_95": [
+            0.9900952857583228,
+            1.0
+          ]
+        }
+      },
+      "2": {
+        "base_items": {
+          "accuracy": 0.8489583333333334,
+          "correct": 326,
+          "total": 384,
+          "wilson_95": [
+            0.8096968511180509,
+            0.8813071504007788
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0546875,
+          "correct": 7,
+          "total": 128,
+          "wilson_95": [
+            0.026740201381346355,
+            0.10858490029974707
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.15104166666666666,
+          "correct": 58,
+          "total": 384,
+          "wilson_95": [
+            0.11869284959922133,
+            0.1903031488819491
+          ]
+        }
+      },
+      "3": {
+        "base_items": {
+          "accuracy": 0.8645833333333334,
+          "correct": 332,
+          "total": 384,
+          "wilson_95": [
+            0.8267279120709657,
+            0.8952165671278115
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.046875,
+          "correct": 6,
+          "total": 128,
+          "wilson_95": [
+            0.021657844171923776,
+            0.09849752245094322
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.13541666666666666,
+          "correct": 52,
+          "total": 384,
+          "wilson_95": [
+            0.10478343287218851,
+            0.1732720879290343
+          ]
+        }
+      },
+      "4": {
+        "base_items": {
+          "accuracy": 1.0,
+          "correct": 384,
+          "total": 384,
+          "wilson_95": [
+            0.9900952857583228,
+            1.0
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 128,
+          "wilson_95": [
+            0.0,
+            0.029136956273508416
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 384,
+          "wilson_95": [
+            0.0,
+            0.009904714241677031
+          ]
+        }
+      },
+      "5": {
+        "base_items": {
+          "accuracy": 1.0,
+          "correct": 384,
+          "total": 384,
+          "wilson_95": [
+            0.9900952857583228,
+            1.0
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 128,
+          "wilson_95": [
+            0.0,
+            0.029136956273508416
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 384,
+          "wilson_95": [
+            0.0,
+            0.009904714241677031
+          ]
+        }
+      },
+      "6": {
+        "base_items": {
+          "accuracy": 0.7786458333333334,
+          "correct": 299,
+          "total": 384,
+          "wilson_95": [
+            0.7344762777740934,
+            0.8172955741849721
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.109375,
+          "correct": 14,
+          "total": 128,
+          "wilson_95": [
+            0.06627879570700111,
+            0.17523445138167731
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.22135416666666666,
+          "correct": 85,
+          "total": 384,
+          "wilson_95": [
+            0.1827044258150279,
+            0.2655237222259067
+          ]
+        }
+      },
+      "7": {
+        "base_items": {
+          "accuracy": 0.78125,
+          "correct": 300,
+          "total": 384,
+          "wilson_95": [
+            0.7372276610754047,
+            0.8197009371636519
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.109375,
+          "correct": 14,
+          "total": 128,
+          "wilson_95": [
+            0.06627879570700111,
+            0.17523445138167731
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.21875,
+          "correct": 84,
+          "total": 384,
+          "wilson_95": [
+            0.18029906283634803,
+            0.26277233892459523
+          ]
+        }
+      },
+      "8": {
+        "base_items": {
+          "accuracy": 0.8411458333333334,
+          "correct": 323,
+          "total": 384,
+          "wilson_95": [
+            0.8012308650918651,
+            0.8743028975869906
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0859375,
+          "correct": 11,
+          "total": 128,
+          "wilson_95": [
+            0.04866313137138619,
+            0.14734091054261295
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.15885416666666666,
+          "correct": 61,
+          "total": 384,
+          "wilson_95": [
+            0.1256971024130093,
+            0.19876913490813491
+          ]
+        }
+      },
+      "9": {
+        "base_items": {
+          "accuracy": 0.828125,
+          "correct": 318,
+          "total": 384,
+          "wilson_95": [
+            0.7871876193316981,
+            0.8625624119472012
+          ]
+        },
+        "cross_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 256,
+          "total": 256,
+          "wilson_95": [
+            0.9852161435741286,
+            1.0
+          ]
+        },
+        "donor_groups": {
+          "accuracy": 0.0859375,
+          "correct": 11,
+          "total": 128,
+          "wilson_95": [
+            0.04866313137138619,
+            0.14734091054261295
+          ]
+        },
+        "donor_items": {
+          "accuracy": 0.171875,
+          "correct": 66,
+          "total": 384,
+          "wilson_95": [
+            0.13743758805279876,
+            0.21281238066830171
+          ]
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 0.6592229588422924,
+  "experiment": "TEACH-0008",
+  "metrics": {
+    "0": {
+      "dimension_scores": {
+        "1": {
+          "base_items": {
+            "accuracy": 0.9401041666666666,
+            "correct": 361,
+            "total": 384,
+            "wilson_95": [
+              0.911730072655881,
+              0.9597600486626428
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.046875,
+            "correct": 6,
+            "total": 128,
+            "wilson_95": [
+              0.021657844171923776,
+              0.09849752245094322
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.059895833333333336,
+            "correct": 23,
+            "total": 384,
+            "wilson_95": [
+              0.040239951337357166,
+              0.08826992734411895
+            ]
+          }
+        },
+        "11": {
+          "base_items": {
+            "accuracy": 0.028645833333333332,
+            "correct": 11,
+            "total": 384,
+            "wilson_95": [
+              0.016069252583651453,
+              0.05055967073792948
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.9453125,
+            "correct": 121,
+            "total": 128,
+            "wilson_95": [
+              0.8914150997002529,
+              0.9732597986186536
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.9713541666666666,
+            "correct": 373,
+            "total": 384,
+            "wilson_95": [
+              0.9494403292620704,
+              0.9839307474163485
+            ]
+          }
+        },
+        "2": {
+          "base_items": {
+            "accuracy": 0.8333333333333334,
+            "correct": 320,
+            "total": 384,
+            "wilson_95": [
+              0.7927952861250064,
+              0.8672682377138755
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.15625,
+            "correct": 20,
+            "total": 128,
+            "wilson_95": [
+              0.10348354800906658,
+              0.22904810942897047
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.16666666666666666,
+            "correct": 64,
+            "total": 384,
+            "wilson_95": [
+              0.1327317622861245,
+              0.2072047138749935
+            ]
+          }
+        },
+        "4": {
+          "base_items": {
+            "accuracy": 0.5859375,
+            "correct": 225,
+            "total": 384,
+            "wilson_95": [
+              0.536058217092157,
+              0.6341144101475548
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.3125,
+            "correct": 40,
+            "total": 128,
+            "wilson_95": [
+              0.23865530278536204,
+              0.39727105581720357
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.4140625,
+            "correct": 159,
+            "total": 384,
+            "wilson_95": [
+              0.3658855898524451,
+              0.46394178290784305
+            ]
+          }
+        },
+        "8": {
+          "base_items": {
+            "accuracy": 0.049479166666666664,
+            "correct": 19,
+            "total": 384,
+            "wilson_95": [
+              0.03190192889424606,
+              0.075980964667265
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.8984375,
+            "correct": 115,
+            "total": 128,
+            "wilson_95": [
+              0.8339751366963888,
+              0.9396813512731592
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.9505208333333334,
+            "correct": 365,
+            "total": 384,
+            "wilson_95": [
+              0.924019035332735,
+              0.968098071105754
+            ]
+          }
+        }
+      },
+      "numerical_errors": {
+        "base_attention": 5.960464477539062e-07,
+        "base_layer": 9.5367431640625e-07,
+        "donor_attention": 6.444752216339111e-07,
+        "donor_layer": 1.0728836059570312e-06
+      },
+      "rank": 11,
+      "scores": {
+        "all_heads": {
+          "base_items": {
+            "accuracy": 0.015625,
+            "correct": 6,
+            "total": 384,
+            "wilson_95": [
+              0.00718024179306718,
+              0.03366495012855744
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.9765625,
+            "correct": 125,
+            "total": 128,
+            "wilson_95": [
+              0.9333562549485678,
+              0.9919975836032445
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.984375,
+            "correct": 378,
+            "total": 384,
+            "wilson_95": [
+              0.9663350498714426,
+              0.9928197582069328
+            ]
+          }
+        },
+        "clean_base": {
+          "base_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128,
+            "wilson_95": [
+              0.0,
+              0.029136956273508416
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          }
+        },
+        "clean_donor": {
+          "base_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128,
+            "wilson_95": [
+              0.9708630437264916,
+              1.0
+            ]
+          },
+          "donor_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          }
+        },
+        "complement_heads": {
+          "base_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128,
+            "wilson_95": [
+              0.0,
+              0.029136956273508416
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          }
+        },
+        "f_positive": {
+          "base_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128,
+            "wilson_95": [
+              0.9708630437264916,
+              1.0
+            ]
+          },
+          "donor_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          }
+        },
+        "final_state": {
+          "base_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128,
+            "wilson_95": [
+              0.9708630437264916,
+              1.0
+            ]
+          },
+          "donor_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          }
+        },
+        "mlp_only": {
+          "base_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128,
+            "wilson_95": [
+              0.0,
+              0.029136956273508416
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          }
+        },
+        "post_attention": {
+          "base_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128,
+            "wilson_95": [
+              0.9708630437264916,
+              1.0
+            ]
+          },
+          "donor_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          }
+        },
+        "random": {
+          "base_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128,
+            "wilson_95": [
+              0.0,
+              0.029136956273508416
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          }
+        },
+        "selected_heads": {
+          "base_items": {
+            "accuracy": 0.015625,
+            "correct": 6,
+            "total": 384,
+            "wilson_95": [
+              0.00718024179306718,
+              0.03366495012855744
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.9765625,
+            "correct": 125,
+            "total": 128,
+            "wilson_95": [
+              0.9333562549485678,
+              0.9919975836032445
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.984375,
+            "correct": 378,
+            "total": 384,
+            "wilson_95": [
+              0.9663350498714426,
+              0.9928197582069328
+            ]
+          }
+        }
+      },
+      "singular_values": [
+        9.743490219116211,
+        8.367680549621582,
+        8.066019058227539,
+        7.4538350105285645,
+        6.863977909088135,
+        6.151420593261719,
+        4.795988082885742,
+        4.287741184234619,
+        3.7368383407592773,
+        3.4929916858673096,
+        3.0831825733184814,
+        1.9866893080053597e-15
+      ]
+    },
+    "1": {
+      "dimension_scores": {
+        "1": {
+          "base_items": {
+            "accuracy": 0.9375,
+            "correct": 360,
+            "total": 384,
+            "wilson_95": [
+              0.9086895155593778,
+              0.9576438594791546
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0390625,
+            "correct": 5,
+            "total": 128,
+            "wilson_95": [
+              0.016798610797803704,
+              0.08818702076683686
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0625,
+            "correct": 24,
+            "total": 384,
+            "wilson_95": [
+              0.04235614052084531,
+              0.09131048444062208
+            ]
+          }
+        },
+        "11": {
+          "base_items": {
+            "accuracy": 0.020833333333333332,
+            "correct": 8,
+            "total": 384,
+            "wilson_95": [
+              0.010593552545021132,
+              0.04056513193658602
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.953125,
+            "correct": 122,
+            "total": 128,
+            "wilson_95": [
+              0.9015024775490568,
+              0.9783421558280763
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.9791666666666666,
+            "correct": 376,
+            "total": 384,
+            "wilson_95": [
+              0.9594348680634139,
+              0.9894064474549789
+            ]
+          }
+        },
+        "2": {
+          "base_items": {
+            "accuracy": 0.765625,
+            "correct": 294,
+            "total": 384,
+            "wilson_95": [
+              0.7207535934143724,
+              0.8052345271447366
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.1328125,
+            "correct": 17,
+            "total": 128,
+            "wilson_95": [
+              0.08460228531840389,
+              0.20242016694495388
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.234375,
+            "correct": 90,
+            "total": 384,
+            "wilson_95": [
+              0.1947654728552633,
+              0.27924640658562755
+            ]
+          }
+        },
+        "4": {
+          "base_items": {
+            "accuracy": 0.5,
+            "correct": 192,
+            "total": 384,
+            "wilson_95": [
+              0.4502387845765474,
+              0.5497612154234526
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.4296875,
+            "correct": 55,
+            "total": 128,
+            "wilson_95": [
+              0.3472117133263662,
+              0.516260671149596
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.5,
+            "correct": 192,
+            "total": 384,
+            "wilson_95": [
+              0.4502387845765474,
+              0.5497612154234526
+            ]
+          }
+        },
+        "8": {
+          "base_items": {
+            "accuracy": 0.0390625,
+            "correct": 15,
+            "total": 384,
+            "wilson_95": [
+              0.023812988215915102,
+              0.0634429202256309
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.90625,
+            "correct": 116,
+            "total": 128,
+            "wilson_95": [
+              0.8432700274269215,
+              0.945556195600853
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.9609375,
+            "correct": 369,
+            "total": 384,
+            "wilson_95": [
+              0.9365570797743691,
+              0.9761870117840848
+            ]
+          }
+        }
+      },
+      "numerical_errors": {
+        "base_attention": 5.960464477539062e-07,
+        "base_layer": 9.5367431640625e-07,
+        "donor_attention": 5.960464477539062e-07,
+        "donor_layer": 9.5367431640625e-07
+      },
+      "rank": 11,
+      "scores": {
+        "all_heads": {
+          "base_items": {
+            "accuracy": 0.005208333333333333,
+            "correct": 2,
+            "total": 384,
+            "wilson_95": [
+              0.0014294767943998088,
+              0.018788730007259752
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.9921875,
+            "correct": 127,
+            "total": 128,
+            "wilson_95": [
+              0.9570737405611394,
+              0.9986195681071257
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.9947916666666666,
+            "correct": 382,
+            "total": 384,
+            "wilson_95": [
+              0.9812112699927402,
+              0.9985705232056001
+            ]
+          }
+        },
+        "clean_base": {
+          "base_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128,
+            "wilson_95": [
+              0.0,
+              0.029136956273508416
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          }
+        },
+        "clean_donor": {
+          "base_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128,
+            "wilson_95": [
+              0.9708630437264916,
+              1.0
+            ]
+          },
+          "donor_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          }
+        },
+        "complement_heads": {
+          "base_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128,
+            "wilson_95": [
+              0.0,
+              0.029136956273508416
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          }
+        },
+        "f_positive": {
+          "base_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128,
+            "wilson_95": [
+              0.9708630437264916,
+              1.0
+            ]
+          },
+          "donor_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          }
+        },
+        "final_state": {
+          "base_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128,
+            "wilson_95": [
+              0.9708630437264916,
+              1.0
+            ]
+          },
+          "donor_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          }
+        },
+        "mlp_only": {
+          "base_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128,
+            "wilson_95": [
+              0.0,
+              0.029136956273508416
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          }
+        },
+        "post_attention": {
+          "base_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 1.0,
+            "correct": 128,
+            "total": 128,
+            "wilson_95": [
+              0.9708630437264916,
+              1.0
+            ]
+          },
+          "donor_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          }
+        },
+        "random": {
+          "base_items": {
+            "accuracy": 1.0,
+            "correct": 384,
+            "total": 384,
+            "wilson_95": [
+              0.9900952857583228,
+              1.0
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 128,
+            "wilson_95": [
+              0.0,
+              0.029136956273508416
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "total": 384,
+            "wilson_95": [
+              0.0,
+              0.009904714241677031
+            ]
+          }
+        },
+        "selected_heads": {
+          "base_items": {
+            "accuracy": 0.013020833333333334,
+            "correct": 5,
+            "total": 384,
+            "wilson_95": [
+              0.005574200268114409,
+              0.030114245373518957
+            ]
+          },
+          "cross_g_non_injection": {
+            "accuracy": 1.0,
+            "correct": 256,
+            "total": 256,
+            "wilson_95": [
+              0.9852161435741286,
+              1.0
+            ]
+          },
+          "donor_groups": {
+            "accuracy": 0.96875,
+            "correct": 124,
+            "total": 128,
+            "wilson_95": [
+              0.9224023687386392,
+              0.9877817347549466
+            ]
+          },
+          "donor_items": {
+            "accuracy": 0.9869791666666666,
+            "correct": 379,
+            "total": 384,
+            "wilson_95": [
+              0.969885754626481,
+              0.9944257997318855
+            ]
+          }
+        }
+      },
+      "singular_values": [
+        8.841131210327148,
+        7.934933662414551,
+        6.9765944480896,
+        6.538863182067871,
+        6.020207405090332,
+        5.6075053215026855,
+        5.2243499755859375,
+        4.3075642585754395,
+        3.6022748947143555,
+        3.3100547790527344,
+        2.5216124057769775,
+        1.6837276456291251e-15
+      ]
+    }
+  },
+  "selection": {
+    "discovery_qualified": true,
+    "heads": [
+      1,
+      3
+    ],
+    "mask": 10,
+    "minimum_cross_g_non_injection": 1.0,
+    "minimum_group_accuracy": 0.984375,
+    "minimum_item_accuracy": 0.9921875,
+    "size": 2
+  },
+  "source_git_head": "6bffc5ca360099b1963530f366e0b297c33c2f4a",
+  "source_sha256": {
+    "docs/experiments/TEACH-0008.md": "3349caaacd0a6f10a9942226f702e58874ddcd5fd2616468818aa6d37b96d8e5",
+    "src/voynich/workspace/teacher4_models.py": "fbd7b10b8035f2504ba30c9b225802c9bfe5cee0fe1322bdb454471f741a5429",
+    "src/voynich/workspace/teacher5_intervene.py": "d407c28f5b6d4241c6fea8086a400158e1817d35df9c4b4f8a585c3312f110bd",
+    "src/voynich/workspace/teacher6_geometry.py": "903fcb1abf6f00c25f0d3091844a80fff93fb9f0e5ce6839ff9c21caadffd37b",
+    "src/voynich/workspace/teacher7_dense_mechanism.py": "7475557c41ce9016379bcf12d1af51f39e14edc32c45838d9a1713979f4c8aa2",
+    "src/voynich/workspace/teacher8_components.py": "5e310a641d763d93865d76b3ef06458149bb3dd8b6ccccabb0288cb77791ebbb"
+  },
+  "source_worktree_status": [],
+  "status": "complete",
+  "suite_sha256": "875c975ff8245a9bea5d4a668b459dbb6b30f022e58e246ca1b143f18b6635be",
+  "torch_version": "2.14.0"
+}
