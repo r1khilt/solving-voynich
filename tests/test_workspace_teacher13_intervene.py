@@ -6,6 +6,7 @@ from voynich.workspace.teacher12_models import model_for_arm
 from voynich.workspace.teacher13_intervene import (
     attention_sites,
     cached_position_patch,
+    materialized_tensor_counter,
     numerical_reconstruction,
     ordered_two_site_patch,
     position_patch,
@@ -93,3 +94,20 @@ def test_identity_two_site_path_reconstructs_the_clean_instrumented_run():
     clean = raw_forward(net, episodes, cache_names=("blocks.2.resid_post",))
     assert torch.equal(result.propagated_logits, clean.logits)
     assert torch.equal(result.path_logits, clean.logits)
+
+
+def test_materialization_counter_charges_logits_caches_and_intervention_tensor():
+    torch.manual_seed(32)
+    net = model_for_arm("raw_shallow").eval()
+    episodes = _group().base
+    total = {"bytes": 0}
+    with materialized_tensor_counter(
+            lambda value: total.__setitem__("bytes", total["bytes"] + value)):
+        output = raw_forward(net, episodes, cache_names=("blocks.0.resid_post",))
+        layouts = tuple(semantic_layout(episode) for episode in episodes)
+        position_patch(output.cache["blocks.0.resid_post"], layouts, layouts,
+                       base_role="query")
+    expected = (output.logits.numel() * output.logits.element_size()
+                + 2 * output.cache["blocks.0.resid_post"].numel()
+                * output.cache["blocks.0.resid_post"].element_size())
+    assert total["bytes"] == expected

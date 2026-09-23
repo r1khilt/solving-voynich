@@ -197,6 +197,21 @@ Run the following frozen confirmation conditions:
 - wrong-key donor from the next group whose intermediate differs;
 - direct and copy specificity controls.
 
+The cyclic control uses the immediate next group's same-direction source assignment. The wrong-key
+control searches forward in frozen group order and uses the opposite F assignment from the first
+group whose intermediate differs; both deltas are independently rescaled to the true donor-delta
+norm. The wrong-position control uses the nearest nonidentical semantic occurrence, breaking ties
+toward the lower physical index, and is rescaled in the same way. Corruption uses the seeded
+Gaussian control at the frozen mediator; rescue restores the native state at that mediator (the
+late isolated destination for a two-site path) and is scored only where corruption changed the
+clean prediction.
+
+Direct and copy tasks can rename a composed relation occurrence even when they contain the same
+logical row. Their specificity assay therefore freezes the selected residual cut/path but maps the
+selected composed occurrence by logical row identity and endpoint into each task. Exact row
+identity is primary; the copy-task F0/F1 counterpart is the unique same-left F row. Missing or
+ambiguous correspondences invalidate the assay rather than becoming an identity/no-op control.
+
 `RECIPIENT-KEY-TRANSFER-SUPPORTED` requires the fresh-panel competence gate, a discovery-qualified
 site/path, numerical qualification, and all of the following in both seeds on the full confirmation
 panel:
@@ -401,6 +416,8 @@ Retain SHA-256 hashes for:
 - compact discovery maps retain per-item target, predicted and base-target logits, predictions,
   legal-candidate and wrong-destination labels for every screened candidate; after selection,
   exact full symbol-logit vectors are retained for every frozen primary and control cell;
+- the Stage-A competence gate retains per-item paired rows and exact symbol logits even when it
+  fails, so the stop decision can be independently recomputed without model access;
 - numerical errors, benchmark/runtime/resource logs and RNG states;
 - discovery decision object frozen before confirmation access;
 - final report and independent audit.

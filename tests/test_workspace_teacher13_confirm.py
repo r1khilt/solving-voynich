@@ -8,6 +8,9 @@ from voynich.workspace.teacher12_models import model_for_arm
 from voynich.workspace.teacher13_confirm import (
     MediatorSpec,
     bidirectional_sufficiency,
+    corruption_rescue_logits,
+    corruption_rescue_rows,
+    fresh_panel_confirmation_rows,
     identity_error,
     mediator_logits,
     matched_sufficiency_controls,
@@ -16,9 +19,13 @@ from voynich.workspace.teacher13_confirm import (
     nuisance_preservation,
     positive_control_rows,
     summarize_confirmation_rows,
+    summarize_fresh_panel_rows,
+    summarize_rescue_rows,
     task_specificity_rows,
+    wrong_position_logits,
 )
-from voynich.workspace.teacher13_discovery import episode_from_record
+from voynich.workspace.teacher13_discovery import episode_from_record, fresh_panel_scores
+from voynich.workspace.teacher13_intervene import raw_forward
 from voynich.workspace.teacher13_tasks import counterfactual_suite
 
 
@@ -122,11 +129,13 @@ def test_matched_controls_cover_both_directions_conditions_and_recipients():
         model_for_arm("raw_shallow").eval(), groups,
         MediatorSpec(kind="single", site="blocks.0.resid_post", label="query"),
         episode_loader=episode_from_record)
-    assert len(rows) == 2 * 2 * 2 * 3
+    assert len(rows) == 2 * 4 * 2 * 3
     assert {row["condition"] for row in rows} == {
-        "norm_matched_gaussian", "norm_matched_cyclic"}
+        "norm_matched_gaussian", "norm_matched_cyclic",
+        "norm_matched_wrong_position", "norm_matched_wrong_key"}
     assert {row["direction"] for row in rows} == {"forward", "reverse"}
-    for condition in ("norm_matched_gaussian", "norm_matched_cyclic"):
+    for condition in ("norm_matched_gaussian", "norm_matched_cyclic",
+                      "norm_matched_wrong_position", "norm_matched_wrong_key"):
         for direction in ("forward", "reverse"):
             selected = [row for row in rows if row["condition"] == condition
                         and row["direction"] == direction]
@@ -151,12 +160,62 @@ def test_positive_controls_cover_clean_input_replacement_and_final_injection():
 def test_direct_copy_specificity_uses_frozen_same_key_nuisance_variants():
     groups = _groups()
     torch.manual_seed(48)
-    rows = task_specificity_rows(
+    net = model_for_arm("raw_shallow").eval()
+    for spec in (
+            MediatorSpec(kind="single", site="blocks.0.resid_post",
+                         label="queried_f.right"),
+            MediatorSpec(kind="path", early_site="embed",
+                         source_label="queried_f.right",
+                         late_site="blocks.0.resid_post", destination_label="query")):
+        rows = task_specificity_rows(
+            net, groups, spec, episode_loader=episode_from_record)
+        assert len(rows) == 2 * 3
+        assert {row["condition"] for row in rows} == {
+            f"{task}_same_key_{family}" for task in ("direct", "copy")
+            for family in ("format", "order", "distractor")}
+        assert all(row["direction"] == "specificity" for row in rows)
+
+
+def test_retained_fresh_panel_rows_reproduce_existing_clean_gate_scores():
+    groups = _groups()
+    torch.manual_seed(481)
+    net = model_for_arm("raw_shallow").eval()
+    rows = fresh_panel_confirmation_rows(
+        net, groups, episode_loader=episode_from_record, batch_size=5)
+    assert summarize_fresh_panel_rows(rows) == fresh_panel_scores(net, groups)
+    assert all("pair_id" in row and row["direction"] == "stage_a" for row in rows)
+
+
+def test_wrong_position_and_corruption_rescue_run_for_single_and_path_protocols():
+    groups = _groups()
+    base = tuple(episode_from_record(row) for row in groups[0]["base"])
+    donor0 = episode_from_record(groups[0]["donor"][0])
+    donor = (donor0,) * 3
+    torch.manual_seed(49)
+    net = model_for_arm("raw_shallow").eval()
+    for spec in (
+            MediatorSpec(kind="single", site="blocks.0.resid_post", label="query"),
+            MediatorSpec(kind="path", early_site="embed", source_label="queried_f.right",
+                         late_site="blocks.0.resid_post", destination_label="query")):
+        wrong = wrong_position_logits(net, base, donor, spec)
+        corrupted, rescued = corruption_rescue_logits(net, base, donor, spec)
+        assert wrong.shape == corrupted.shape == rescued.shape
+        assert torch.isfinite(wrong).all() and torch.isfinite(corrupted).all()
+        clean = raw_forward(net, base).logits
+        assert torch.allclose(rescued.float(), clean.float(), atol=1e-5, rtol=1e-5)
+
+
+def test_corruption_rescue_rows_are_paired_and_restore_instrumented_native_state():
+    groups = _groups()
+    torch.manual_seed(50)
+    rows = corruption_rescue_rows(
         model_for_arm("raw_shallow").eval(), groups,
         MediatorSpec(kind="single", site="blocks.0.resid_post", label="query"),
         episode_loader=episode_from_record)
-    assert len(rows) == 2 * 3
-    assert {row["condition"] for row in rows} == {
-        f"{task}_same_key_{family}" for task in ("direct", "copy")
-        for family in ("format", "order", "distractor")}
-    assert all(row["direction"] == "specificity" for row in rows)
+    assert len(rows) == 2 * 2 * 3
+    summary = summarize_rescue_rows(rows)
+    assert summary["paired_items"] == 6
+    if summary["changed_cases"]:
+        assert summary["rescue_rate"] == 1.0
+    rescue = [row for row in rows if row["condition"] == "native_state_rescue"]
+    assert all(row["prediction"] == row["clean_prediction"] for row in rescue)

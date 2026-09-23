@@ -1,6 +1,8 @@
 """Position-aware causal interventions for prospective TEACH-0013 analyses."""
 
 from collections.abc import Iterable
+from contextlib import contextmanager
+from contextvars import ContextVar
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -13,6 +15,24 @@ from .teacher13_tasks import SemanticLayout, semantic_layout
 
 
 RAW_ARMS = ("raw_shallow", "raw_looped", "raw_deep", "raw_null")
+_MATERIALIZATION_PROBE = ContextVar("teacher13_materialization_probe", default=None)
+
+
+@contextmanager
+def materialized_tensor_counter(probe):
+    """Count returned and intervention tensors inside one bounded campaign block."""
+    token = _MATERIALIZATION_PROBE.set(probe)
+    try:
+        yield
+    finally:
+        _MATERIALIZATION_PROBE.reset(token)
+
+
+def record_materialized(*tensors: Tensor) -> None:
+    """Charge each explicitly materialized tensor once at its actual dtype."""
+    probe = _MATERIALIZATION_PROBE.get()
+    if probe is not None:
+        probe(sum(tensor.numel() * tensor.element_size() for tensor in tensors))
 
 
 def residual_sites(arm: str) -> tuple[str, ...]:
@@ -88,6 +108,7 @@ def position_patch(donor: Tensor, base_layouts: Iterable[SemanticLayout],
     orthogonal complement.  Subspace operations are restricted to rank-3 residuals.
     """
     bases, donors = tuple(base_layouts), tuple(donor_layouts)
+    record_materialized(donor)
     donor_role = base_role if donor_role is None else donor_role
     if donor.shape[0] != len(bases) or len(bases) != len(donors):
         raise ValueError("Donor batch and semantic layouts must have equal batch size")
@@ -142,7 +163,9 @@ def raw_forward(net: nn.Module, episodes: list[Episode] | tuple[Episode, ...], *
     padded, _ = pad_batch(list(episodes))
     ids = torch.tensor(padded, dtype=torch.long, device=device)
     with torch.inference_mode():
-        return net(ids, cache_names=cache_names, interventions=interventions)
+        output = net(ids, cache_names=cache_names, interventions=interventions)
+    record_materialized(output.logits, *output.cache.values())
+    return output
 
 
 @dataclass(frozen=True)

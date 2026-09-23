@@ -451,16 +451,17 @@ def main():
                         default=ROOT / "results/TEACH-0013/suite-manifest.json")
     parser.add_argument("--discovery", type=Path,
                         default=ROOT / "results/TEACH-0013/discovery-decision.json")
-    parser.add_argument("--output", type=Path,
-                        default=ROOT / "results/TEACH-0013/discovery-audit.json")
+    parser.add_argument("--output", type=Path)
     parser.add_argument("--path-decision", type=Path)
     parser.add_argument("--residual-audit", type=Path,
                         default=ROOT / "results/TEACH-0013/discovery-audit.json")
     args = parser.parse_args()
+    output = args.output or ROOT / "results/TEACH-0013" / (
+        "path-audit.json" if args.path_decision is not None else "discovery-audit.json")
     result = (audit_path(args.manifest, args.discovery, args.residual_audit,
-                         args.path_decision, args.output)
+                         args.path_decision, output)
               if args.path_decision is not None
-              else audit(args.manifest, args.discovery, args.output))
+              else audit(args.manifest, args.discovery, output))
     print(json.dumps(result, indent=2, sort_keys=True))
 
 
