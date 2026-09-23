@@ -1,0 +1,389 @@
+{
+  "artifacts": {
+    "0": {
+      "checkpoint_sha256": "76dd319ccf06a568cd8c75a05ddc85ac98e65f0a7b851dfaf986e6f7be23ad48",
+      "rows": 384,
+      "rows_sha256": "d75124c9489eb4221f7299cce6861fed9435f38a7fbc9a96c33958e0b9ae609e"
+    },
+    "1": {
+      "checkpoint_sha256": "7fe83a3e98057e20c2dd93b5fa5bf9185ebbf0a391d7896e7b793abf0c9636e8",
+      "rows": 384,
+      "rows_sha256": "5d3f4e0a4b880c8a04b8d3b52111d8e6fa0d6df11dc58e4198226a2ff3bca790"
+    }
+  },
+  "config": {
+    "g_tables": 3,
+    "groups": 128,
+    "max_seconds": 600.0,
+    "random_seed": 65211,
+    "suite_seed": 65111
+  },
+  "config_sha256": "42346f1c5dd84acec64c91613bdc1945681432792d70acfebdf28379d889fb65",
+  "decision": {
+    "clauses_by_seed": {
+      "0": {
+        "advantage_over_random_at_least_0.40": true,
+        "attention_only_at_least_0.90": true,
+        "clean_groups_at_least_0.95": true,
+        "copy_drop_at_most_0.05": true,
+        "cross_g_non_injection_at_least_0.90": true,
+        "direct_drop_at_most_0.05": false,
+        "donor_first_groups_at_least_0.80": true,
+        "donor_first_items_at_least_0.90": true,
+        "full_second_positive_at_least_0.80": true,
+        "numerical_error_below_1e-6": true,
+        "probability_delta_at_least_0.40": true,
+        "rescue_at_least_0.95": true,
+        "same_key_at_least_0.90": true,
+        "zero_necessity_drop_at_least_0.30": true
+      },
+      "1": {
+        "advantage_over_random_at_least_0.40": true,
+        "attention_only_at_least_0.90": true,
+        "clean_groups_at_least_0.95": true,
+        "copy_drop_at_most_0.05": true,
+        "cross_g_non_injection_at_least_0.90": true,
+        "direct_drop_at_most_0.05": false,
+        "donor_first_groups_at_least_0.80": true,
+        "donor_first_items_at_least_0.90": true,
+        "full_second_positive_at_least_0.80": true,
+        "numerical_error_below_1e-6": true,
+        "probability_delta_at_least_0.40": true,
+        "rescue_at_least_0.95": true,
+        "same_key_at_least_0.90": true,
+        "zero_necessity_drop_at_least_0.30": true
+      }
+    },
+    "verdict": "not_supported"
+  },
+  "elapsed_seconds": 0.0871966250706464,
+  "experiment": "TEACH-0005",
+  "numerical_max_recompute_error": {
+    "0": 0.0,
+    "1": 0.0
+  },
+  "source_git_head": "2ce656c48d4c832372f972f5337796111c06460b",
+  "source_sha256": {
+    "docs/experiments/TEACH-0005.md": "0ea5803660da44b264cc0a096bb26f18dc83bedfcc0abc75b748b2562c9a5e97",
+    "src/voynich/workspace/teacher4_models.py": "fbd7b10b8035f2504ba30c9b225802c9bfe5cee0fe1322bdb454471f741a5429",
+    "src/voynich/workspace/teacher4_tasks.py": "87eb59afb9c9ac30c85ef473f44e64abb8a2fe940b83d752b2467f6eeb112ee1",
+    "src/voynich/workspace/teacher5_intervene.py": "d407c28f5b6d4241c6fea8086a400158e1817d35df9c4b4f8a585c3312f110bd"
+  },
+  "source_worktree_status": [],
+  "status": "complete",
+  "suite_sha256": "0b5cf22777899bde8a56edf2903ab39f1e0c146b2f560f245216ff8cf66d3e0d",
+  "summaries": {
+    "0": {
+      "attention_only": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_base": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_copy": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_direct": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_donor": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_groups": {
+        "accuracy": 1.0,
+        "correct": 128,
+        "total": 128,
+        "wilson_95": [
+          0.9708630437264916,
+          1.0
+        ]
+      },
+      "copy_accuracy_drop": 0.0,
+      "direct_accuracy_drop": 0.8411458333333334,
+      "donor_first": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "donor_first_cross_g_non_injection": {
+        "accuracy": 1.0,
+        "correct": 256,
+        "total": 256,
+        "wilson_95": [
+          0.9852161435741286,
+          1.0
+        ]
+      },
+      "donor_first_groups": {
+        "accuracy": 1.0,
+        "correct": 128,
+        "total": 128,
+        "wilson_95": [
+          0.9708630437264916,
+          1.0
+        ]
+      },
+      "donor_first_random_advantage": 0.5416666666666667,
+      "donor_target_probability_delta": {
+        "maximum": 0.9999217586718032,
+        "mean": 0.9993662098762336,
+        "minimum": 0.9888536386915803
+      },
+      "full_second": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "patched_copy": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "patched_direct": {
+        "accuracy": 0.15885416666666666,
+        "correct": 61,
+        "total": 384,
+        "wilson_95": [
+          0.1256971024130093,
+          0.19876913490813491
+        ]
+      },
+      "random_first": {
+        "accuracy": 0.4583333333333333,
+        "correct": 176,
+        "total": 384,
+        "wilson_95": [
+          0.4091561800495439,
+          0.5083358794705957
+        ]
+      },
+      "rescue_base_first": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "same_key_first": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "zero_first": {
+        "accuracy": 0.6067708333333334,
+        "correct": 233,
+        "total": 384,
+        "wilson_95": [
+          0.5570883762205244,
+          0.6543382212591174
+        ]
+      },
+      "zero_first_base_accuracy_drop": 0.39322916666666663
+    },
+    "1": {
+      "attention_only": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_base": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_copy": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_direct": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_donor": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "clean_groups": {
+        "accuracy": 1.0,
+        "correct": 128,
+        "total": 128,
+        "wilson_95": [
+          0.9708630437264916,
+          1.0
+        ]
+      },
+      "copy_accuracy_drop": 0.0,
+      "direct_accuracy_drop": 0.765625,
+      "donor_first": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "donor_first_cross_g_non_injection": {
+        "accuracy": 1.0,
+        "correct": 256,
+        "total": 256,
+        "wilson_95": [
+          0.9852161435741286,
+          1.0
+        ]
+      },
+      "donor_first_groups": {
+        "accuracy": 1.0,
+        "correct": 128,
+        "total": 128,
+        "wilson_95": [
+          0.9708630437264916,
+          1.0
+        ]
+      },
+      "donor_first_random_advantage": 0.5208333333333333,
+      "donor_target_probability_delta": {
+        "maximum": 0.9999539241130435,
+        "mean": 0.999757826078886,
+        "minimum": 0.9952811628956724
+      },
+      "full_second": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "patched_copy": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "patched_direct": {
+        "accuracy": 0.234375,
+        "correct": 90,
+        "total": 384,
+        "wilson_95": [
+          0.1947654728552633,
+          0.27924640658562755
+        ]
+      },
+      "random_first": {
+        "accuracy": 0.4791666666666667,
+        "correct": 184,
+        "total": 384,
+        "wilson_95": [
+          0.42965458551131314,
+          0.5290914442487568
+        ]
+      },
+      "rescue_base_first": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "same_key_first": {
+        "accuracy": 1.0,
+        "correct": 384,
+        "total": 384,
+        "wilson_95": [
+          0.9900952857583228,
+          1.0
+        ]
+      },
+      "zero_first": {
+        "accuracy": 0.4609375,
+        "correct": 177,
+        "total": 384,
+        "wilson_95": [
+          0.41171377037295964,
+          0.5109350354271712
+        ]
+      },
+      "zero_first_base_accuracy_drop": 0.5390625
+    }
+  },
+  "teaching_checkpoint_source": "bc3ab6a8cd593eedb7f110c5a017b24ef5261642",
+  "torch_version": "2.14.0"
+}
