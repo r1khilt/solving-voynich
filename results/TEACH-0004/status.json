@@ -1,0 +1,41 @@
+{
+  "decision": {
+    "clauses_by_seed": {
+      "0": {
+        "both_held_composed_at_least_0.85": true,
+        "composed_gain_over_dense_row_at_least_0.15": false,
+        "composed_gain_over_one_read_at_least_0.15": true,
+        "copy_at_least_0.95": true,
+        "crossed_cells_at_least_0.85": true,
+        "direct_holdout_at_least_0.90": true,
+        "direct_pair_at_least_0.80": true,
+        "factorial_at_least_0.65": true,
+        "factorial_gain_over_dense_row_at_least_0.15": false,
+        "factorial_gain_over_one_read_at_least_0.15": true,
+        "first_hop_holdout_at_least_0.90": true,
+        "first_hop_pair_at_least_0.80": true
+      },
+      "1": {
+        "both_held_composed_at_least_0.85": true,
+        "composed_gain_over_dense_row_at_least_0.15": false,
+        "composed_gain_over_one_read_at_least_0.15": true,
+        "copy_at_least_0.95": true,
+        "crossed_cells_at_least_0.85": true,
+        "direct_holdout_at_least_0.90": true,
+        "direct_pair_at_least_0.80": true,
+        "factorial_at_least_0.65": true,
+        "factorial_gain_over_dense_row_at_least_0.15": false,
+        "factorial_gain_over_one_read_at_least_0.15": true,
+        "first_hop_holdout_at_least_0.90": true,
+        "first_hop_pair_at_least_0.80": true
+      }
+    },
+    "two_read_qualified": false,
+    "verdict": "not_qualified"
+  },
+  "experiment": "TEACH-0004",
+  "peak_sampled_mps_allocated_bytes": 14138368,
+  "report": "report.json",
+  "source_git_head": "bc3ab6a8cd593eedb7f110c5a017b24ef5261642",
+  "status": "complete"
+}
