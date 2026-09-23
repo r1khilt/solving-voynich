@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "status": "exploratory_supported",
+  "observed_splits": [
+    "discovery",
+    "confirmation"
+  ],
+  "rows": 432,
+  "capability": {
+    "discovery": {
+      "eligible": 32,
+      "source_copy": 14
+    },
+    "confirmation": {
+      "eligible": 32,
+      "source_copy": 14
+    }
+  },
+  "limitation": "Compact rows cannot independently recompute unsaved intervention logits; numerical maxima come from run."
+}
