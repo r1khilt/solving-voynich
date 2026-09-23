@@ -23,6 +23,7 @@ from .teacher7_dense_mechanism import _answers, _ids, continue_dense, manual_den
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0008.md",
     "docs/experiments/TEACH-0008-numerical-amendment.md",
+    "docs/experiments/TEACH-0008-native-residual-amendment.md",
     "src/voynich/workspace/teacher8_components.py",
     "src/voynich/workspace/teacher7_dense_mechanism.py",
     "src/voynich/workspace/teacher6_geometry.py",
@@ -76,17 +77,22 @@ def layer_parts(layer, state):
         query, key, value, dropout_p=0.0, is_causal=False,
         scale=1 / math.sqrt(head_width))
     concatenated = head_values.transpose(1, 2).reshape(batch, length, width)
-    attention_write = F.linear(concatenated, layer.self_attn.out_proj.weight,
-                               layer.self_attn.out_proj.bias)
+    head_attention = F.linear(concatenated, layer.self_attn.out_proj.weight,
+                              layer.self_attn.out_proj.bias)
+    # Keep the native attention write as the residual-stream baseline.  The
+    # exposed head values reconstruct it within the registered tolerance, but
+    # using the native baseline avoids amplifying sub-ULP kernel-order noise in
+    # the subsequent residual and MLP operations.
+    attention_write = layer._sa_block(normalized, None, None)
     post_attention = state + layer.dropout1(attention_write)
     mlp_write = layer._ff_block(layer.norm2(post_attention))
     post_mlp = post_attention + mlp_write
-    native_attention = layer._sa_block(normalized, None, None)
     native = layer(state)
-    errors = {"attention": float((attention_write - native_attention).abs().max()),
+    errors = {"attention": float((head_attention - attention_write).abs().max()),
               "layer": float((post_mlp - native).abs().max())}
     return {"attention": attention_write, "post_attention": post_attention,
             "mlp": mlp_write, "post_mlp": post_mlp, "heads": head_values,
+            "head_attention": head_attention,
             "errors": errors}
 
 

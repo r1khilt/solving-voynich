@@ -18,8 +18,10 @@ def test_teacher8_explicit_attention_and_layer_match_native():
     with torch.no_grad():
         _, states = manual_dense(net, ids)
         parts = layer_parts(net.transformer.layers[1], states[1])
+        native = net.transformer.layers[1](states[1])
     assert parts["errors"]["attention"] < 1e-6
     assert parts["errors"]["layer"] < 1e-6
+    assert torch.equal(parts["post_mlp"], native)
 
 
 def test_teacher8_all_head_deltas_sum_to_attention_difference_at_query():
@@ -33,7 +35,8 @@ def test_teacher8_all_head_deltas_sum_to_attention_difference_at_query():
         donor = layer_parts(net.transformer.layers[1], donor_states[1])
         delta = selected_head_delta(net.transformer.layers[1], base["heads"], donor["heads"],
                                    [0, 1, 2, 3])
-    assert torch.allclose(base["attention"][:, 5] + delta, donor["attention"][:, 5], atol=1e-6)
+    assert torch.allclose(base["head_attention"][:, 5] + delta,
+                          donor["head_attention"][:, 5], atol=1e-6)
 
 
 def _cell(groups, items, cross):
