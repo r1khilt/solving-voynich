@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "status": "unqualified",
+  "selected_style": "colon",
+  "summary": {
+    "discovery": {
+      "colon": {
+        "eligible": 0,
+        "source_copy": 11,
+        "source_composed_correct": 0,
+        "donor_composed_correct": 0
+      },
+      "arrow": {
+        "eligible": 0,
+        "source_copy": 9,
+        "source_composed_correct": 0,
+        "donor_composed_correct": 0
+      }
+    },
+    "confirmation": {
+      "colon": {
+        "eligible": 0,
+        "source_copy": 5,
+        "source_composed_correct": 0,
+        "donor_composed_correct": 0
+      },
+      "arrow": {
+        "eligible": 0,
+        "source_copy": 6,
+        "source_composed_correct": 0,
+        "donor_composed_correct": 0
+      }
+    }
+  },
+  "wrong_answer_classes": {
+    "discovery": {
+      "colon": {
+        "composed_wrong_alternate": 0,
+        "composed_wrong_other": 48
+      },
+      "arrow": {
+        "composed_wrong_alternate": 0,
+        "composed_wrong_other": 48
+      }
+    },
+    "confirmation": {
+      "colon": {
+        "composed_wrong_alternate": 0,
+        "composed_wrong_other": 48
+      },
+      "arrow": {
+        "composed_wrong_alternate": 0,
+        "composed_wrong_other": 48
+      }
+    }
+  },
+  "limitation": "Prompt style is crossed with bundles, but fixed model, scorer, and answer prefix restrict claim to these two styles."
+}
