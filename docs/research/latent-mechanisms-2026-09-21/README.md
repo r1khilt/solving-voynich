@@ -8,6 +8,11 @@ The user's J-space reference is [Anthropic's global-workspace research](https://
 - [JSPACE-0001 registration](../../experiments/JSPACE-0001.md): local 8B-model restricted-lens campaign with explicit numerical, competence, and causal gates.
 - [Current run](CURRENT_RUN.md): plain-language findings from the completed lens, neuron, route and fresh binding studies.
 - [Routing synthesis](ROUTING_SYNTHESIS.md): what the fresh position/layer interventions establish, why the single-block head patch failed its control, and a sharper next mediator hypothesis.
+- [Raw binding mechanism program](RAW_BINDING_MECHANISM_PROGRAM.md): prospective content-key, binding-ID, order and dynamic-routing tests after raw behavioral qualification.
+- [Token and causal geometry](TOKEN_AND_CAUSAL_GEOMETRY_PROGRAM.md): why raw cosine is insufficient, and how contextual geometry, effect signatures and a synthetic J-lens analogue become falsifiable.
+- [Implementation-readiness audit](RAW_MECHANISM_IMPLEMENTATION_READINESS.md): exact raw/looped hook points, semantic-position reconstruction, numerical gates and audit boundary.
+- [Raw architecture ladder](RAW_BINDING_ARCHITECTURE_LADDER.md): failure-conditioned external-memory, iterative-state, graph-parser, algorithmic-hint and counterfactual-world-state campaigns.
+- [Circuit development program](CIRCUIT_DEVELOPMENT_PROGRAM.md): checkpoint-fixed behavioral, geometric, causal and weight trajectories, with curriculum and sparse-checkpoint confounds explicit.
 
 The investigation has no known historical translations as labels. Successful natural-language interventions could qualify a method; applying it to unknown symbols still requires learned competence, identifiable latent variables, and independent anchors.
 
