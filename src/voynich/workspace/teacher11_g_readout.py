@@ -26,6 +26,7 @@ from .teacher10_answer_readout import (
 
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0011.md",
+    "docs/experiments/TEACH-0011-numerical-amendment.md",
     "src/voynich/workspace/teacher11_g_readout.py",
     "src/voynich/workspace/teacher10_answer_readout.py",
     "src/voynich/workspace/teacher7_dense_mechanism.py",
@@ -102,8 +103,9 @@ def hybrid_query(base, edited, cell):
 
 
 def project_all(layer, head_delta):
-    return F.linear(head_delta.reshape(head_delta.shape[0], -1),
-                    layer.self_attn.out_proj.weight, bias=None)
+    projected = F.linear(head_delta.double().reshape(head_delta.shape[0], -1),
+                         layer.self_attn.out_proj.weight.double(), bias=None)
+    return projected.to(head_delta.dtype)
 
 
 @torch.no_grad()
