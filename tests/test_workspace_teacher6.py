@@ -27,6 +27,15 @@ def test_teacher6_centroid_span_recovers_synthetic_classes():
     assert torch.allclose(projector @ projector, projector, atol=1e-6)
 
 
+def test_teacher6_twelve_centered_centroids_cannot_report_rank_twelve():
+    torch.manual_seed(19)
+    centroids = torch.randn(12, 128, dtype=torch.float32)
+    states = torch.repeat_interleave(centroids, 2, dim=0)
+    labels = torch.repeat_interleave(torch.arange(21, 33), 2)
+    geometry = key_centroid_basis(states, labels)
+    assert geometry["rank"] <= 11
+
+
 def test_teacher6_procrustes_recovers_rotated_states():
     torch.manual_seed(4)
     source = torch.randn(40, 8)

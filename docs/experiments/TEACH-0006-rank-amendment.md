@@ -1,0 +1,9 @@
+# TEACH-0006 numerical-rank pipeline amendment
+
+**Written after an invalid first execution and before any valid TEACH-0006 result.** The first frozen runner completed neural inference but its independent auditor rejected the artifact with `AssertionError: Invalid centroid rank/spectrum`. The report counted rank 12 for twelve globally centered key centroids. This contradicts the preregistration and linear algebra: centering K vectors makes their exact span rank at most K−1, here 11.
+
+The cause was the implementation's float32 SVD cutoff `max(S0 * 1e-8, 1e-10)`. Float32 centering/roundoff left a tiny twelfth singular value above that ad hoc threshold. The invalid report and both row archives are preserved under `results/TEACH-0006/invalid-rank-*`; they are not a scientific result, and the failed audit produced no `audit.json`.
+
+Before rerunning, the only scientific-code change is to center centroids and compute SVD in float64, use the standard scale-aware tolerance `max(shape) * eps(float64) * largest_singular_value`, and enforce the preregistered mathematical ceiling `K−1`. The resulting basis is converted back to the model-state dtype for interventions. No seed, group, checkpoint, split, intervention, control, threshold, outcome clause or other computation changes. The auditor's pre-existing requirement `1 <= rank <= 11` is unchanged. Tests and source hashes are rerun and the amendment is committed before a second execution.
+
+Because the invalid report exposed downstream aggregate behavior, the corrected run is not a pristine first look at those aggregates. It is a transparent pipeline repair whose rank-11 projections differ from the invalid rank-12 projections. The corrected report remains subject to the original confirmation thresholds and independent audit; interpretation must mention this exposure and cannot present the rerun as fully blinded.

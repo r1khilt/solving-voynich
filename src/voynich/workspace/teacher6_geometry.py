@@ -21,6 +21,7 @@ from .teacher5_intervene import _states, build_groups, sha_file, stable_json
 
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0006.md",
+    "docs/experiments/TEACH-0006-rank-amendment.md",
     "src/voynich/workspace/teacher6_geometry.py",
     "src/voynich/workspace/teacher5_intervene.py",
     "src/voynich/workspace/teacher4_models.py",
@@ -79,11 +80,15 @@ def key_centroid_basis(states, labels):
     keys = sorted(set(labels.tolist()))
     mean = states.mean(0)
     centroids = torch.stack([states[labels == key].mean(0) for key in keys])
-    centered = centroids - centroids.mean(0, keepdim=True)
-    _, singular, vh = torch.linalg.svd(centered, full_matrices=False)
-    threshold = max(float(singular[0]) * 1e-8, 1e-10)
-    rank = int((singular > threshold).sum())
-    basis = vh[:rank].T.contiguous()
+    # Center and estimate rank in float64. With K centered centroids the exact
+    # rank is at most K-1; float32 centering left a spurious twelfth singular
+    # value in the invalid first execution documented by the amendment.
+    centered = centroids.double() - centroids.double().mean(0, keepdim=True)
+    _, singular64, vh = torch.linalg.svd(centered, full_matrices=False)
+    tolerance = max(centered.shape) * torch.finfo(centered.dtype).eps * singular64[0]
+    rank = min(int((singular64 > tolerance).sum()), len(keys) - 1)
+    basis = vh[:rank].T.to(states.dtype).contiguous()
+    singular = singular64.to(states.dtype)
     return {"keys": keys, "mean": mean, "centroids": centroids, "basis": basis,
             "singular_values": singular, "rank": rank}
 
