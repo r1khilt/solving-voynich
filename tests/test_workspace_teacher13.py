@@ -135,3 +135,12 @@ def test_task_controls_use_same_inventory_and_exact_oracles():
             assert group.direct_donor.query == group.key_donor
             assert group.copy_control.answer == group.copy_control.query
             assert all(symbolic_oracle(episode) == episode.answer for episode in controls)
+            for original, variants in (
+                    (group.direct_donor, (group.direct_format_donor,
+                                          group.direct_order_donor,
+                                          group.direct_distractor_donor)),
+                    (group.copy_control, (group.copy_format_donor,
+                                          group.copy_order_donor,
+                                          group.copy_distractor_donor))):
+                assert all(episode.answer == original.answer for episode in variants)
+                assert all(symbolic_oracle(episode) == episode.answer for episode in variants)

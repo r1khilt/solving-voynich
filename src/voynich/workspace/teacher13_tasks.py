@@ -184,7 +184,13 @@ class CounterfactualGroup:
     first_hop_donor: Episode
     direct_base: Episode
     direct_donor: Episode
+    direct_format_donor: Episode
+    direct_order_donor: Episode
+    direct_distractor_donor: Episode
     copy_control: Episode
+    copy_format_donor: Episode
+    copy_order_donor: Episode
+    copy_distractor_donor: Episode
     key_base: int
     key_donor: int
     base_answers: tuple[int, int, int]
@@ -432,10 +438,20 @@ def _candidate_group(rng: random.Random) -> CounterfactualGroup | None:
         f1, g_tables[0], distractors, query, rng.randrange(2**63), task="first_hop")
     direct_base = _render(
         f0, g_tables[0], distractors, key_base, rng.randrange(2**63), task="direct")
+    direct_seed = rng.randrange(2**63)
     direct_donor = _render(
-        f1, g_tables[0], distractors, key_donor, rng.randrange(2**63), task="direct")
+        f1, g_tables[0], distractors, key_donor, direct_seed, task="direct")
+    direct_format_donor = _format_only(direct_donor)
+    direct_order_donor = _reorder_only(direct_donor)
+    direct_distractor_donor = _render(
+        f1, g_tables[0], nuisance_distractors, key_donor, direct_seed, task="direct")
+    copy_seed = rng.randrange(2**63)
     copy_control = _render(
-        f0, g_tables[0], distractors, objects[3], rng.randrange(2**63), task="copy")
+        f0, g_tables[0], distractors, objects[3], copy_seed, task="copy")
+    copy_format_donor = _format_only(copy_control)
+    copy_order_donor = _reorder_only(copy_control)
+    copy_distractor_donor = _render(
+        f0, g_tables[0], nuisance_distractors, objects[3], copy_seed, task="copy")
     logical = {
         "f0": f0, "f1": f1, "f_binding": f_binding, "g": g_tables,
         "g_content": g_changed_tables, "g_binding": g_binding_tables,
@@ -448,7 +464,9 @@ def _candidate_group(rng: random.Random) -> CounterfactualGroup | None:
         g_content_base, g_content_donor, binding_base, binding_donor,
         g_binding_base, g_binding_donor, format_donor, distractor_donor,
         first_hop_base, first_hop_donor,
-        direct_base, direct_donor, copy_control, key_base, key_donor,
+        direct_base, direct_donor, direct_format_donor, direct_order_donor,
+        direct_distractor_donor, copy_control, copy_format_donor, copy_order_donor,
+        copy_distractor_donor, key_base, key_donor,
         base_answers, recipient_answers, donor[0].answer, render_seed)
 
 

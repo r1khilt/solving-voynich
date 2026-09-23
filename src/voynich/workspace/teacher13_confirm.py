@@ -10,8 +10,10 @@ from .teacher12_tasks import SYMBOL_START, Episode
 from .teacher13_intervene import (
     cached_position_patch,
     ordered_two_site_patch,
+    position_patch,
     raw_forward,
 )
+from .teacher13_tasks import semantic_layout
 
 
 @dataclass(frozen=True)
@@ -75,6 +77,139 @@ def identity_error(net: nn.Module, episodes: tuple[Episode, ...], spec: Mediator
     return {"maximum_fused_instrumented_logit_error": fused_error,
             "maximum_identity_logit_error": identity, "finite": finite,
             "qualified": finite and fused_error < 1e-6 and identity < 1e-6}
+
+
+def _scaled_noise_intervention(base_activation: torch.Tensor, donor_activation: torch.Tensor,
+                               base_layouts, donor_layouts, *, base_label: str,
+                               donor_label: str, seed: int):
+    if base_activation.ndim != 3 or donor_activation.shape != base_activation.shape:
+        raise ValueError("Random mediator control requires paired residual streams")
+    generator = torch.Generator(device="cpu").manual_seed(seed)
+    noise = torch.randn(base_activation.shape[0], base_activation.shape[-1],
+                        generator=generator, dtype=torch.float32)
+    base_positions = tuple(layout.label_position(base_label) for layout in base_layouts)
+    donor_positions = tuple(layout.label_position(donor_label) for layout in donor_layouts)
+    target_norms = torch.stack([
+        (donor_activation[index, donor].float()
+         - base_activation[index, base].float()).norm()
+        for index, (base, donor) in enumerate(zip(
+            base_positions, donor_positions, strict=True))])
+    noise = noise / noise.norm(dim=-1, keepdim=True).clamp_min(1e-12)
+    noise = noise * target_norms[:, None].cpu()
+
+    def intervene(value: torch.Tensor) -> torch.Tensor:
+        changed = value.clone()
+        local_noise = noise.to(device=value.device, dtype=value.dtype)
+        for index, position in enumerate(base_positions):
+            changed[index, position] = value[index, position] + local_noise[index]
+        return changed
+
+    return intervene
+
+
+def _scaled_donor_intervention(base_activation: torch.Tensor,
+                               true_donor_activation: torch.Tensor,
+                               control_activation: torch.Tensor, base_layouts,
+                               true_layouts, control_layouts, *, base_label: str,
+                               donor_label: str, seed_fallback: int):
+    if any(value.ndim != 3 for value in (
+            base_activation, true_donor_activation, control_activation)) \
+            or any(value.shape[0] != base_activation.shape[0]
+                   or value.shape[-1] != base_activation.shape[-1]
+                   for value in (true_donor_activation, control_activation)):
+        raise ValueError("Matched donor control requires paired residual streams")
+    base_positions = tuple(layout.label_position(base_label) for layout in base_layouts)
+    true_positions = tuple(layout.label_position(donor_label) for layout in true_layouts)
+    control_positions = tuple(layout.label_position(donor_label) for layout in control_layouts)
+    generator = torch.Generator(device="cpu").manual_seed(seed_fallback)
+    fallback = torch.randn(base_activation.shape[0], base_activation.shape[-1],
+                           generator=generator, dtype=torch.float32)
+    deltas = []
+    for index, (base_position, true_position, control_position) in enumerate(zip(
+            base_positions, true_positions, control_positions, strict=True)):
+        base_value = base_activation[index, base_position].float()
+        true_norm = (true_donor_activation[index, true_position].float() - base_value).norm()
+        control_delta = control_activation[index, control_position].float() - base_value
+        control_norm = control_delta.norm()
+        if control_norm <= 1e-12:
+            control_delta = fallback[index]
+            control_norm = control_delta.norm()
+        deltas.append(control_delta / control_norm * true_norm)
+    deltas = torch.stack(deltas)
+
+    def intervene(value: torch.Tensor) -> torch.Tensor:
+        changed = value.clone()
+        local = deltas.to(device=value.device, dtype=value.dtype)
+        for index, position in enumerate(base_positions):
+            changed[index, position] = value[index, position] + local[index]
+        return changed
+
+    return intervene
+
+
+def norm_matched_random_logits(net: nn.Module, base: tuple[Episode, ...],
+                               true_donor: tuple[Episode, ...], spec: MediatorSpec, *,
+                               seed: int = 73211, device="cpu") -> torch.Tensor:
+    """Run a seeded equal-norm Gaussian edit through the identical mediator protocol."""
+    spec.validate()
+    if len(base) != len(true_donor) or not base:
+        raise ValueError("Random-control base and true donor batches must be paired")
+    base_layouts = tuple(semantic_layout(episode) for episode in base)
+    donor_layouts = tuple(semantic_layout(episode) for episode in true_donor)
+    if spec.kind == "single":
+        base_output = raw_forward(net, base, device=device, cache_names=(spec.site,))
+        donor_output = raw_forward(net, true_donor, device=device, cache_names=(spec.site,))
+        random_patch = _scaled_noise_intervention(
+            base_output.cache[spec.site], donor_output.cache[spec.site],
+            base_layouts, donor_layouts, base_label=spec.label,
+            donor_label=spec.label, seed=seed)
+        return raw_forward(
+            net, base, device=device, interventions={spec.site: random_patch}).logits
+
+    base_output = raw_forward(net, base, device=device, cache_names=(spec.early_site,))
+    donor_output = raw_forward(net, true_donor, device=device, cache_names=(spec.early_site,))
+    random_early = _scaled_noise_intervention(
+        base_output.cache[spec.early_site], donor_output.cache[spec.early_site],
+        base_layouts, donor_layouts, base_label=spec.source_label,
+        donor_label=spec.source_label, seed=seed)
+    propagated = raw_forward(
+        net, base, device=device, cache_names=(spec.late_site,),
+        interventions={spec.early_site: random_early})
+    late = position_patch(
+        propagated.cache[spec.late_site], base_layouts, base_layouts,
+        base_role=spec.destination_label, semantic_label=True)
+    return raw_forward(net, base, device=device, interventions={spec.late_site: late}).logits
+
+
+def norm_matched_donor_logits(net: nn.Module, base: tuple[Episode, ...],
+                              true_donor: tuple[Episode, ...],
+                              control_donor: tuple[Episode, ...], spec: MediatorSpec, *,
+                              fallback_seed: int = 73212, device="cpu") -> torch.Tensor:
+    """Rescale a cyclic/wrong-key donor delta to each true donor delta norm."""
+    spec.validate()
+    if not base or len(base) != len(true_donor) or len(base) != len(control_donor):
+        raise ValueError("Matched donor batches must be nonempty and equal length")
+    base_layouts = tuple(semantic_layout(episode) for episode in base)
+    true_layouts = tuple(semantic_layout(episode) for episode in true_donor)
+    control_layouts = tuple(semantic_layout(episode) for episode in control_donor)
+    site = spec.site if spec.kind == "single" else spec.early_site
+    base_output = raw_forward(net, base, device=device, cache_names=(site,))
+    true_output = raw_forward(net, true_donor, device=device, cache_names=(site,))
+    control_output = raw_forward(net, control_donor, device=device, cache_names=(site,))
+    label = spec.label if spec.kind == "single" else spec.source_label
+    control = _scaled_donor_intervention(
+        base_output.cache[site], true_output.cache[site], control_output.cache[site],
+        base_layouts, true_layouts, control_layouts, base_label=label,
+        donor_label=label, seed_fallback=fallback_seed)
+    if spec.kind == "single":
+        return raw_forward(net, base, device=device, interventions={site: control}).logits
+    propagated = raw_forward(
+        net, base, device=device, cache_names=(spec.late_site,),
+        interventions={site: control})
+    late = position_patch(
+        propagated.cache[spec.late_site], base_layouts, base_layouts,
+        base_role=spec.destination_label, semantic_label=True)
+    return raw_forward(net, base, device=device, interventions={spec.late_site: late}).logits
 
 
 def _diagnostic_rows(logits: torch.Tensor, clean_logits: torch.Tensor,
@@ -195,6 +330,113 @@ def nuisance_preservation(net: nn.Module, groups: tuple[dict, ...] | list[dict],
     return _diagnostic_rows(
         edited, clean, base_tuple, metadata=tuple(metadata),
         condition=f"same_key_{family}", direction="preserve")
+
+
+def matched_sufficiency_controls(net: nn.Module, groups: tuple[dict, ...] | list[dict],
+                                 spec: MediatorSpec, *, episode_loader,
+                                 seed: int = 73211, device="cpu") -> list[dict]:
+    """Evaluate Gaussian and cyclic-next-group controls in both transfer directions."""
+    if len(groups) < 2:
+        raise ValueError("Cyclic confirmation control requires at least two groups")
+    rows = []
+    for direction, recipient_name, source_name, target_name in (
+            ("forward", "base", "donor", "recipient_answers"),
+            ("reverse", "donor", "base", "base_answers")):
+        bases, true_donors, cyclic_donors, metadata = [], [], [], []
+        for group_index, group in enumerate(groups):
+            cyclic_group = groups[(group_index + 1) % len(groups)]
+            recipient_episodes = tuple(episode_loader(row) for row in group[recipient_name])
+            source_episodes = tuple(episode_loader(row) for row in group[source_name])
+            cyclic_source = episode_loader(cyclic_group[source_name][0])
+            targets = tuple(group[target_name])
+            for recipient, episode in enumerate(recipient_episodes):
+                bases.append(episode)
+                true_donors.append(source_episodes[0])
+                cyclic_donors.append(cyclic_source)
+                metadata.append({"logical_group_id": group["group_id"],
+                                 "recipient": recipient, "target": targets[recipient],
+                                 "fixed_donor_answer": source_episodes[0].answer})
+        base_tuple, true_tuple = tuple(bases), tuple(true_donors)
+        clean = raw_forward(net, base_tuple, device=device).logits
+        random_logits = norm_matched_random_logits(
+            net, base_tuple, true_tuple, spec, seed=seed, device=device)
+        cyclic_logits = norm_matched_donor_logits(
+            net, base_tuple, true_tuple, tuple(cyclic_donors), spec,
+            fallback_seed=seed + 1, device=device)
+        rows.extend(_diagnostic_rows(
+            random_logits, clean, base_tuple, metadata=tuple(metadata),
+            condition="norm_matched_gaussian", direction=direction))
+        rows.extend(_diagnostic_rows(
+            cyclic_logits, clean, base_tuple, metadata=tuple(metadata),
+            condition="norm_matched_cyclic", direction=direction))
+    return rows
+
+
+def positive_control_rows(net: nn.Module, groups: tuple[dict, ...] | list[dict], *,
+                          episode_loader, final_site: str, device="cpu") -> list[dict]:
+    """Clean/input-F gates and the registered fixed-answer final-state injection."""
+    bases, donors, base_metadata, donor_metadata = [], [], [], []
+    for group in groups:
+        base_rows = tuple(episode_loader(row) for row in group["base"])
+        donor_rows = tuple(episode_loader(row) for row in group["donor"])
+        for recipient, (base, donor) in enumerate(zip(base_rows, donor_rows, strict=True)):
+            bases.append(base)
+            donors.append(donor)
+            base_metadata.append({"logical_group_id": group["group_id"],
+                                  "recipient": recipient, "target": base.answer,
+                                  "fixed_donor_answer": donor_rows[0].answer})
+            donor_metadata.append({"logical_group_id": group["group_id"],
+                                   "recipient": recipient, "target": donor.answer,
+                                   "fixed_donor_answer": donor_rows[0].answer})
+    base_tuple, donor_tuple = tuple(bases), tuple(donors)
+    base_logits = raw_forward(net, base_tuple, device=device).logits
+    donor_logits = raw_forward(net, donor_tuple, device=device).logits
+    rows = _diagnostic_rows(
+        base_logits, base_logits, base_tuple, metadata=tuple(base_metadata),
+        condition="clean_base", direction="clean")
+    rows.extend(_diagnostic_rows(
+        donor_logits, donor_logits, donor_tuple, metadata=tuple(donor_metadata),
+        condition="clean_donor_input_f_replacement", direction="clean"))
+    fixed_donor_tuple = tuple(
+        donor_tuple[offset - offset % 3] for offset in range(len(donor_tuple)))
+    injected = cached_position_patch(
+        net, base_tuple, fixed_donor_tuple, site=final_site, role="answer",
+        device=device, semantic_label=True).logits
+    injection_metadata = tuple({**row, "target": row["fixed_donor_answer"]}
+                               for row in base_metadata)
+    rows.extend(_diagnostic_rows(
+        injected, base_logits, base_tuple, metadata=injection_metadata,
+        condition="final_state_fixed_answer_injection", direction="positive_control"))
+    return rows
+
+
+def task_specificity_rows(net: nn.Module, groups: tuple[dict, ...] | list[dict],
+                          spec: MediatorSpec, *, episode_loader,
+                          device="cpu") -> list[dict]:
+    """Apply same-key nuisances to direct and copy tasks for the registered loss gates."""
+    rows = []
+    for task, base_name in (("direct", "direct_donor"), ("copy", "copy_control")):
+        for family in ("format", "order", "distractor"):
+            donor_name = f"{task}_{family}_donor"
+            bases, donors, metadata = [], [], []
+            for group in groups:
+                base = episode_loader(group[base_name])
+                donor = episode_loader(group[donor_name])
+                if base.answer != donor.answer:
+                    raise ValueError("Task-specific nuisance changed the oracle answer")
+                bases.append(base)
+                donors.append(donor)
+                metadata.append({"logical_group_id": group["group_id"],
+                                 "recipient": 0, "target": base.answer,
+                                 "fixed_donor_answer": donor.answer})
+            base_tuple = tuple(bases)
+            clean = raw_forward(net, base_tuple, device=device).logits
+            edited = mediator_logits(
+                net, base_tuple, tuple(donors), spec, device=device)
+            rows.extend(_diagnostic_rows(
+                edited, clean, base_tuple, metadata=tuple(metadata),
+                condition=f"{task}_same_key_{family}", direction="specificity"))
+    return rows
 
 
 def summarize_confirmation_rows(rows: list[dict], *, direction: str | None = None) -> dict:

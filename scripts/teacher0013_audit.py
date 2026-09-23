@@ -23,6 +23,8 @@ MULTI_VARIANTS = {
 }
 SINGLE_VARIANTS = {
     "first_hop_base", "first_hop_donor", "direct_base", "direct_donor", "copy_control",
+    "direct_format_donor", "direct_order_donor", "direct_distractor_donor",
+    "copy_format_donor", "copy_order_donor", "copy_distractor_donor",
 }
 
 
@@ -331,6 +333,28 @@ def audit_group(group, split):
              != rows_tuple(original["distractor_rows"])
              and skeleton(nuisance) == skeleton(original),
              "Distractor factor is not isolated")
+    for prefix, original_name in (("direct", "direct_donor"), ("copy", "copy_control")):
+        original = group[original_name]
+        formatted, reordered, nuisance = (group[f"{prefix}_format_donor"],
+                                          group[f"{prefix}_order_donor"],
+                                          group[f"{prefix}_distractor_donor"])
+        need(rows_tuple(formatted["serialized_rows"])
+             == rows_tuple(original["serialized_rows"])
+             and gap_signature(formatted) == gap_signature(original)
+             and marker_signature(formatted)
+             == tuple(rotation[style] for style in marker_signature(original)),
+             f"{prefix} format control is not isolated")
+        expected_order = rows_tuple(original["serialized_rows"])[1:] \
+            + rows_tuple(original["serialized_rows"])[:1]
+        need(rows_tuple(reordered["serialized_rows"]) == expected_order
+             and skeleton(reordered) == skeleton(original),
+             f"{prefix} order control is not isolated")
+        need(rows_tuple(nuisance["f_rows"]) == rows_tuple(original["f_rows"])
+             and rows_tuple(nuisance["g_rows"]) == rows_tuple(original["g_rows"])
+             and rows_tuple(nuisance["distractor_rows"])
+             != rows_tuple(original["distractor_rows"])
+             and skeleton(nuisance) == skeleton(original),
+             f"{prefix} distractor control is not isolated")
 
     for left_layout, right_layout, left_episode, right_episode in zip(
             group["semantic_layouts"]["base"], group["semantic_layouts"]["donor"],

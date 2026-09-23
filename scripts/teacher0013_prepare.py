@@ -66,7 +66,9 @@ VARIANTS = (
     "reordered_base", "reordered_donor", "g_content_base", "g_content_donor",
     "binding_base", "binding_donor", "g_binding_base", "g_binding_donor",
     "format_donor", "distractor_donor", "first_hop_base", "first_hop_donor",
-    "direct_base", "direct_donor", "copy_control",
+    "direct_base", "direct_donor", "direct_format_donor", "direct_order_donor",
+    "direct_distractor_donor", "copy_control", "copy_format_donor",
+    "copy_order_donor", "copy_distractor_donor",
 )
 
 
