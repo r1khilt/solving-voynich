@@ -1,10 +1,25 @@
 import torch
 
+from voynich.workspace.teacher4_models import DenseRows
+from voynich.workspace.teacher5_intervene import build_groups
+from voynich.workspace.teacher7_dense_mechanism import _ids, manual_dense
 from voynich.workspace.teacher10_answer_readout import (
     cyclic_recipient,
+    layer_parts_with_weights,
     repeat_g0,
     select_heads,
 )
+
+
+def test_teacher10_native_weight_heads_reconstruct_attention_and_layer():
+    torch.manual_seed(47)
+    net = DenseRows().eval()
+    groups = build_groups(70111, 2)
+    with torch.no_grad():
+        _, states = manual_dense(net, _ids(groups, "base"))
+        parts = layer_parts_with_weights(net.transformer.layers[2], states[2])
+    assert parts["errors"]["attention"] < 1e-6
+    assert parts["errors"]["layer"] < 1e-6
 
 
 def _cell(groups, items):

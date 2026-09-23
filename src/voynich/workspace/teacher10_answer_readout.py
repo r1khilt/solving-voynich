@@ -10,16 +10,18 @@ import subprocess
 import time
 
 import torch
+import torch.nn.functional as F
 
 from .teacher2_train import write_json
 from .teacher4_models import DenseRows
 from .teacher5_intervene import build_groups, sha_file, stable_json
 from .teacher7_dense_mechanism import _answers, _ids, continue_dense, manual_dense, score
-from .teacher8_components import layer_parts, selected_head_delta
+from .teacher8_components import selected_head_delta
 
 
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0010.md",
+    "docs/experiments/TEACH-0010-numerical-amendment.md",
     "src/voynich/workspace/teacher10_answer_readout.py",
     "src/voynich/workspace/teacher8_components.py",
     "src/voynich/workspace/teacher7_dense_mechanism.py",
@@ -57,6 +59,34 @@ def source_provenance(config):
             "config_sha256": hashlib.sha256(stable_json(asdict(config)).encode()).hexdigest()}
 
 
+def layer_parts_with_weights(layer, state):
+    """Expose heads using the weights returned by native MultiheadAttention."""
+    normalized = layer.norm1(state)
+    attention_write, weights = layer.self_attn(
+        normalized, normalized, normalized, need_weights=True,
+        average_attn_weights=False)
+    width, heads = normalized.shape[-1], layer.self_attn.num_heads
+    head_width = width // heads
+    projected = F.linear(normalized, layer.self_attn.in_proj_weight,
+                         layer.self_attn.in_proj_bias)
+    value = projected.chunk(3, dim=-1)[2]
+    batch, length, _ = value.shape
+    value = value.view(batch, length, heads, head_width).transpose(1, 2)
+    head_values = weights @ value
+    concatenated = head_values.transpose(1, 2).reshape(batch, length, width)
+    reconstructed = F.linear(concatenated, layer.self_attn.out_proj.weight,
+                             layer.self_attn.out_proj.bias)
+    post_attention = state + layer.dropout1(attention_write)
+    mlp_write = layer._ff_block(layer.norm2(post_attention))
+    post_mlp = post_attention + mlp_write
+    native = layer(state)
+    errors = {"attention": float((reconstructed - attention_write).abs().max()),
+              "layer": float((post_mlp - native).abs().max())}
+    return {"attention": attention_write, "post_attention": post_attention,
+            "mlp": mlp_write, "post_mlp": post_mlp, "heads": head_values,
+            "weights": weights, "errors": errors}
+
+
 @torch.no_grad()
 def prepare(net, groups, config):
     base_ids = _ids(groups, "base")
@@ -67,8 +97,9 @@ def prepare(net, groups, config):
     edited_cut2[:, 5] = donor_states[2][:, 5].repeat_interleave(config.g_tables, dim=0)
     layer = net.transformer.layers[2]
     return {"base_ids": base_ids, "base_states": base_states, "donor_states": donor_states,
-            "edited_cut2": edited_cut2, "base_parts": layer_parts(layer, base_states[2]),
-            "edited_parts": layer_parts(layer, edited_cut2)}
+            "edited_cut2": edited_cut2,
+            "base_parts": layer_parts_with_weights(layer, base_states[2]),
+            "edited_parts": layer_parts_with_weights(layer, edited_cut2)}
 
 
 def run_from_attention(net, prepared, query_attention):
