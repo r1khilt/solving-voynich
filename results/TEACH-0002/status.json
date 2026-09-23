@@ -1,0 +1,40 @@
+{
+  "decision": {
+    "clauses_by_replicate": {
+      "0": {
+        "both_holdout_composed_at_least_0.85": false,
+        "composed_gain_vs_baseline_at_least_0.20": false,
+        "composed_gain_vs_null_at_least_0.40": true,
+        "copy_at_least_0.95": true,
+        "crossed_holdout_composed_each_at_least_0.85": false,
+        "direct_paired_exact_at_least_0.80": false,
+        "direct_train_and_holdout_at_least_0.90": false,
+        "factorial_exact_at_least_0.65": false,
+        "factorial_gain_vs_baseline_at_least_0.20": false,
+        "first_hop_holdout_at_least_0.90": false,
+        "first_hop_paired_exact_at_least_0.80": false,
+        "null_factorial_at_most_0.10": true
+      },
+      "1": {
+        "both_holdout_composed_at_least_0.85": false,
+        "composed_gain_vs_baseline_at_least_0.20": false,
+        "composed_gain_vs_null_at_least_0.40": false,
+        "copy_at_least_0.95": true,
+        "crossed_holdout_composed_each_at_least_0.85": false,
+        "direct_paired_exact_at_least_0.80": false,
+        "direct_train_and_holdout_at_least_0.90": false,
+        "factorial_exact_at_least_0.65": false,
+        "factorial_gain_vs_baseline_at_least_0.20": false,
+        "first_hop_holdout_at_least_0.90": false,
+        "first_hop_paired_exact_at_least_0.80": false,
+        "null_factorial_at_most_0.10": true
+      }
+    },
+    "verdict": "not_qualified"
+  },
+  "experiment": "TEACH-0002",
+  "peak_sampled_mps_allocated_bytes": 10703360,
+  "report": "report.json",
+  "source_git_head": "a514a36a3e00fee1c0b8c99fe085f053f414a126",
+  "status": "complete"
+}
