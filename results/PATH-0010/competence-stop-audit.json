@@ -1,0 +1,105 @@
+{
+  "audit_scope": "CPU-only independent review of PATH-0010 baseline stop; no intervention or model forward pass",
+  "passed": true,
+  "registered_gate": {
+    "eligible_binding_min": 24,
+    "source_copy_min": 14
+  },
+  "observed": {
+    "baseline_records": 48,
+    "binding_eligible": 32,
+    "source_copy_correct": 12,
+    "source_copy_total": 16,
+    "copy_failures": [
+      {
+        "id": "path10/1/0/copy",
+        "expected": "ladder",
+        "source_text": "Copy",
+        "donor_text": "Copy"
+      },
+      {
+        "id": "path10/1/1/copy",
+        "expected": "ladder",
+        "source_text": "Copy",
+        "donor_text": "Copy"
+      },
+      {
+        "id": "path10/2/0/copy",
+        "expected": "wallet",
+        "source_text": "Copy",
+        "donor_text": "Wallet"
+      },
+      {
+        "id": "path10/4/0/copy",
+        "expected": "puzzle",
+        "source_text": "Puzzle: \"Ivoran\" and \"Jem",
+        "donor_text": "puzzle"
+      }
+    ],
+    "by_bundle": {
+      "0": {
+        "binding_eligible": 4,
+        "source_copy_correct": 2,
+        "source_copy_total": 2
+      },
+      "1": {
+        "binding_eligible": 4,
+        "source_copy_correct": 0,
+        "source_copy_total": 2
+      },
+      "2": {
+        "binding_eligible": 4,
+        "source_copy_correct": 1,
+        "source_copy_total": 2
+      },
+      "3": {
+        "binding_eligible": 4,
+        "source_copy_correct": 2,
+        "source_copy_total": 2
+      },
+      "4": {
+        "binding_eligible": 4,
+        "source_copy_correct": 1,
+        "source_copy_total": 2
+      },
+      "5": {
+        "binding_eligible": 4,
+        "source_copy_correct": 2,
+        "source_copy_total": 2
+      },
+      "6": {
+        "binding_eligible": 4,
+        "source_copy_correct": 2,
+        "source_copy_total": 2
+      },
+      "7": {
+        "binding_eligible": 4,
+        "source_copy_correct": 2,
+        "source_copy_total": 2
+      }
+    },
+    "intervention_rows": 0
+  },
+  "provenance": {
+    "source_revision": "15b1ace103785cd496db8574884c4496125a4936",
+    "source_hashes_verified": 13,
+    "source_worktree_status": [],
+    "task_hash_verified": true,
+    "rendered_input_hash_verified": true,
+    "changed_position_hash_verified": true,
+    "model_input_hash_verified": true,
+    "baseline_array_files_verified": 48
+  },
+  "numerical": {
+    "recorded_clean_write_capture_max_abs_logit_error": 0.0,
+    "archived_baseline_arrays_finite": true,
+    "independent_forward_recomputation": false
+  },
+  "decision": {
+    "recorded": "inconclusive",
+    "verified": "inconclusive",
+    "reason": "source-copy competence 12/16 is below preregistered 14/16; binding competence 32/32 passed"
+  },
+  "interpretation": "The fixed direct-lookup copy prompts failed on four source-side records, concentrated in bundles 1, 2 and 4. This is task-format or lexical sensitivity under the fixed baseline, not evidence for or against the proposed four-block attention mediation. No intervention grid was run.",
+  "limitation": "Saved hashes and finite logits verify archive integrity, but clean-write capture equality at 0.0 cannot be recomputed independently without a model forward pass."
+}
