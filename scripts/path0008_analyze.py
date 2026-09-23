@@ -1,7 +1,9 @@
 """Independent compact audit of PATH-0008; never reruns the 8B model."""
 
+import hashlib
 import json
 from pathlib import Path
+import subprocess
 
 import numpy as np
 
@@ -14,10 +16,80 @@ RAW = Path('outputs/PATH-0008')
 LAYERS = (28, 29, 30, 31)
 CONDITIONS = ('upstream', 'selected_one', 'selected_four', 'random_four_norm',
               'mismatch_four_norm', 'all_heads', 'full_window', 'all_cut', 'reverse_four')
+LAUNCH_SNAPSHOTS = {
+    'docs/experiments/PATH-0008.md': ROOT/'launch-source/PATH-0008.md',
+    'src/voynich/workspace/path8_campaign.py': ROOT/'launch-source/path8_campaign.py',
+}
+ALLOWED_LAUNCH_AMENDMENTS = {
+    'docs/experiments/PATH-0008.md': (
+        ("The direct lookup and answer rules are exactly PATH-0006's renderer; source/donor",
+         "The direct lookup and answer rules are exactly PATH-0006's renderer with greedy generation capped at12 tokens; source/donor"),
+        ('and first expected answer tokens must differ.',
+         'and expected source/donor answer words must differ.'),
+        ('Seed510101. One local run, hard cap',
+         "Seed510101. The discovery screen has at most32 upstream-success records ×128 single-head prefills =4,096 screen interventions, followed by at most48 confirmation records ×9 generation conditions plus numerical checks. PATH-0001's 2,048 head interventions took ~17 minutes and PATH-0006's 432 multi-block conditions ~4 minutes, so roughly30–60 minutes is a planning estimate, not a measured PATH-0008 runtime. One local run, hard cap"),
+    ),
+    'src/voynich/workspace/path8_campaign.py': (
+        ("    def finish(status, reason=None, **extra):\n        decision =",
+         "    def finish(status, reason=None, **extra):\n"
+         "        write_json(result/'qualification.json', {\n"
+         "            'observed_control_maxima': controls,\n"
+         "            'all_confirmation_controls_executed': 'all_cut_source' in controls,\n"
+         "            'tolerance': TOLERANCE,\n"
+         "        })\n"
+         "        decision ="),
+        ("if __name__ == '__main__':\n    run()\n",
+         "if __name__ == '__main__':\n"
+         "    try:\n"
+         "        run()\n"
+         "    except Exception as error:\n"
+         "        failure = Path('results/PATH-0008/failure.json')\n"
+         "        failure.parent.mkdir(parents=True, exist_ok=True)\n"
+         "        if not failure.exists():\n"
+         "            write_json(failure, {'status': 'incomplete_or_uninformative',\n"
+         "                                 'error_type': type(error).__name__, 'message': str(error)})\n"
+         "        raise\n"),
+    ),
+}
 
 
 def read(path):
     return json.loads(path.read_text())
+
+
+def committed_blob(revision, path):
+    return subprocess.check_output(['git', 'show', f'{revision}:{path}'])
+
+
+def committed_digest(revision, path):
+    """Hash a source blob in the recorded base commit, not today's worktree."""
+    return hashlib.sha256(committed_blob(revision, path)).hexdigest()
+
+
+def verified_launch_source(revision, path, expected_digest):
+    """Allow only the two exact pre-launch amendments recorded as snapshots."""
+    if path not in LAUNCH_SNAPSHOTS:
+        if committed_digest(revision, path) != expected_digest:
+            raise AssertionError(f'Base-commit source hash mismatch: {path}')
+        return 'base_commit'
+    snapshot = LAUNCH_SNAPSHOTS[path].read_bytes()
+    if hashlib.sha256(snapshot).hexdigest() != expected_digest:
+        raise AssertionError(f'Launch-snapshot hash mismatch: {path}')
+    expected_text = committed_blob(revision, path).decode('utf-8')
+    for before, after in ALLOWED_LAUNCH_AMENDMENTS[path]:
+        if expected_text.count(before) != 1:
+            raise AssertionError(f'Base-commit amendment anchor mismatch: {path}')
+        expected_text = expected_text.replace(before, after, 1)
+    if snapshot != expected_text.encode('utf-8'):
+        raise AssertionError(f'Launch snapshot has unregistered changes: {path}')
+    return 'hash_matched_launch_amendment'
+
+
+def frozen_tasks(expected_digest):
+    tasks = {split: path8_tasks(split) for split in ('discovery', 'confirmation')}
+    if canonical_digest(tasks) != expected_digest:
+        raise AssertionError('Current task generator differs from the frozen task manifest')
+    return tasks
 
 
 def _selection(screen, success):
@@ -59,14 +131,16 @@ def _bootstrap(rows, success, control):
 
 def audit():
     inputs = read(ROOT/'inputs.json')
-    tasks = {split: path8_tasks(split) for split in ('discovery', 'confirmation')}
-    assert inputs['tasks_sha256'] == canonical_digest(tasks)
+    tasks = frozen_tasks(inputs['tasks_sha256'])
     assert inputs['rendered_inputs_sha256'] == digest(RAW/'rendered-inputs.json')
     assert inputs['model_input_sha256'] == digest('results/JSPACE-0001/inputs.json')
     assert inputs['seed'] == 510101 and inputs['head_layers'] == list(LAYERS)
     assert inputs['cap_seconds'] == 5400 and inputs['memory_bytes_cap'] == 45_000_000_000
-    for path, expected in inputs['source_sha256'].items():
-        assert digest(path) == expected, path
+    assert set(LAUNCH_SNAPSHOTS).issubset(inputs['source_sha256'])
+    source_provenance = {
+        path: verified_launch_source(inputs['source_revision'], path, expected)
+        for path, expected in inputs['source_sha256'].items()
+    }
     rendered = read(RAW/'rendered-inputs.json')
     positions = {}
     for split in tasks:
@@ -229,6 +303,11 @@ def audit():
         assert all(value < .002 for value in decision['controls'].values())
     report = {'passed': True, 'status': decision['status'], 'capability': capabilities,
               'confirmation_rows': len(read(rows_path)) if rows_path.exists() else 0,
+              'source_provenance': {
+                  'source_revision': inputs['source_revision'],
+                  'source_revision_role': 'base commit before two pre-launch amendments',
+                  'checks': source_provenance,
+              },
               'limitation': 'Saved intervention logits cannot be recomputed without the model.'}
     write_json(ROOT/'audit.json', report)
     return report

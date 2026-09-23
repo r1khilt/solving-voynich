@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "status": "exploratory_failed",
+  "capability": {
+    "discovery": {
+      "eligible": 32,
+      "source_copy": 14
+    },
+    "confirmation": {
+      "eligible": 32,
+      "source_copy": 16
+    }
+  },
+  "confirmation_rows": 432,
+  "source_provenance": {
+    "source_revision": "627be7960d8f5319fb4e96e80274028ab05710d8",
+    "source_revision_role": "base commit before two pre-launch amendments",
+    "checks": {
+      "src/voynich/workspace/path8_tasks.py": "base_commit",
+      "src/voynich/workspace/path8_backend.py": "base_commit",
+      "src/voynich/workspace/path8_campaign.py": "hash_matched_launch_amendment",
+      "src/voynich/workspace/path6_tasks.py": "base_commit",
+      "src/voynich/workspace/path6_campaign.py": "base_commit",
+      "src/voynich/workspace/path3_backend.py": "base_commit",
+      "src/voynich/workspace/attention_route_backend.py": "base_commit",
+      "src/voynich/workspace/route_backend.py": "base_commit",
+      "docs/experiments/PATH-0008.md": "hash_matched_launch_amendment"
+    }
+  },
+  "limitation": "Saved intervention logits cannot be recomputed without the model."
+}

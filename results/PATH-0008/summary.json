@@ -1,0 +1,55 @@
+{
+  "eligible": 32,
+  "upstream_success": 32,
+  "source_copy": 16,
+  "selected_layer": 29,
+  "selected_heads": [
+    11,
+    6,
+    12,
+    7
+  ],
+  "reductions": {
+    "upstream": 0,
+    "selected_one": 1,
+    "selected_four": 7,
+    "random_four_norm": 0,
+    "mismatch_four_norm": 1,
+    "all_heads": 8,
+    "full_window": 20,
+    "all_cut": 32,
+    "reverse_four": 32
+  },
+  "full_source_answers": {
+    "upstream": 0,
+    "selected_one": 1,
+    "selected_four": 7,
+    "random_four_norm": 0,
+    "mismatch_four_norm": 0,
+    "all_heads": 6,
+    "full_window": 20,
+    "all_cut": 32,
+    "reverse_four": 32
+  },
+  "copy_preserved": {
+    "upstream": 16,
+    "selected_one": 16,
+    "selected_four": 16,
+    "random_four_norm": 16,
+    "mismatch_four_norm": 16,
+    "all_heads": 16,
+    "full_window": 16,
+    "all_cut": 16,
+    "reverse_four": 16
+  },
+  "selected_minus_random_bundle_bootstrap": {
+    "resamples": 10000,
+    "lower_95": 0.125,
+    "upper_95": 0.3125
+  },
+  "selected_minus_mismatch_bundle_bootstrap": {
+    "resamples": 10000,
+    "lower_95": 0.03125,
+    "upper_95": 0.3125
+  }
+}
