@@ -19,7 +19,7 @@ def test_teacher9_qkv_and_source_contributions_reconstruct_heads():
         parts = qkv_parts(net.transformer.layers[1], states[1])
     assert parts["head_reconstruction_error"] < 1e-6
     assert torch.allclose(parts["contributions"].sum(2), parts["head_query"],
-                          atol=1e-7, rtol=0)
+                          atol=1e-6, rtol=0)
 
 
 def test_teacher9_hybrid_endpoints_match_base_and_donor():

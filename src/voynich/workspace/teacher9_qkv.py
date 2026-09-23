@@ -5,7 +5,6 @@ from dataclasses import asdict, dataclass
 import gzip
 import hashlib
 import json
-import math
 from pathlib import Path
 import subprocess
 import time
@@ -22,6 +21,7 @@ from .teacher8_components import layer_parts
 
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0009.md",
+    "docs/experiments/TEACH-0009-numerical-amendment.md",
     "src/voynich/workspace/teacher9_qkv.py",
     "src/voynich/workspace/teacher8_components.py",
     "src/voynich/workspace/teacher7_dense_mechanism.py",
@@ -73,27 +73,30 @@ def qkv_parts(layer, state, query_slot=5):
     query = query.view(batch, length, heads, head_width).transpose(1, 2)
     key = key.view(batch, length, heads, head_width).transpose(1, 2)
     value = value.view(batch, length, heads, head_width).transpose(1, 2)
-    scores = (query[:, :, query_slot].unsqueeze(-2) @ key.transpose(-2, -1)).squeeze(-2)
-    scores = scores / math.sqrt(head_width)
-    attention = scores.softmax(dim=-1)
+    head_values, attention_all = torch._scaled_dot_product_attention_math(
+        query, key, value, None, 0.0, False, None)
+    attention = attention_all[:, :, query_slot]
     contributions = attention[..., None] * value
-    head_query = contributions.sum(dim=2)
+    head_query = head_values[:, :, query_slot]
     reference = layer_parts(layer, state)["heads"][:, :, query_slot]
-    return {"query": query[:, :, query_slot], "key": key, "value": value,
+    return {"query": query[:, :, query_slot], "query_all": query,
+            "key": key, "value": value,
             "attention": attention, "contributions": contributions,
             "head_query": head_query,
             "head_reconstruction_error": float((head_query - reference).abs().max())}
 
 
 def hybrid_query(base, donor, cell):
-    query = donor["query"] if cell[0] == "D" else base["query"]
+    query = base["query_all"].clone()
+    if cell[0] == "D":
+        query[:, :, 5] = donor["query"]
     key = donor["key"] if cell[1] == "D" else base["key"]
     value = donor["value"] if cell[2] == "D" else base["value"]
-    scores = (query.unsqueeze(-2) @ key.transpose(-2, -1)).squeeze(-2)
-    scores = scores / math.sqrt(query.shape[-1])
-    attention = scores.softmax(dim=-1)
+    head_values, attention_all = torch._scaled_dot_product_attention_math(
+        query, key, value, None, 0.0, False, None)
+    attention = attention_all[:, :, 5]
     contributions = attention[..., None] * value
-    return contributions.sum(dim=2), attention, contributions
+    return head_values[:, :, 5], attention, contributions
 
 
 def project_selected(layer, head_delta, selected=SELECTED_HEADS):
