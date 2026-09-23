@@ -1,0 +1,2672 @@
+{
+  "status": "exploratory_exposed",
+  "source_sha256": {
+    "docs/experiments/PATH-0009.md": "acb628ed12b305802b135dd50345976e897b178a06b5bf4f82030fd287bcbfaa",
+    "scripts/path0009_candidate_logits.py": "a2ca2ec2211aa0ca29e4d90f56e5623acb4e8a75e08e08562c697ccb1411853c",
+    "results/PATH-0007/inputs.json": "90dee119f77148e86aea9f820c5cd1d171d4a66e20c7df0203b2220b6b3452aa"
+  },
+  "tokenizer_snapshot": "/Users/rikhil/.cache/huggingface/hub/models--mlx-community--Qwen3-8B-4bit/snapshots/545dc4251c05440727734bcd94334791f6ab0192",
+  "missing_single_token_variant": [],
+  "rows": [
+    {
+      "id": "path7/discovery/0/colon/0/0",
+      "split": "discovery",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "pear",
+      "alternative": "fork",
+      "expected_token_ids": [
+        8015,
+        37690
+      ],
+      "alternative_token_ids": [
+        22435,
+        44738
+      ],
+      "margin": 2.912192757615645,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "f096dc22c5164e9cf522dee1cb2cdef69abeeef51a3bdbb251cd84dc1b2727b8"
+    },
+    {
+      "id": "path7/discovery/0/colon/0/1",
+      "split": "discovery",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "fork",
+      "alternative": "pear",
+      "expected_token_ids": [
+        22435,
+        44738
+      ],
+      "alternative_token_ids": [
+        8015,
+        37690
+      ],
+      "margin": 7.9276216307648495,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "fabfc317ee17f525061a1a769e411506ce49c295a09f68a44635490444287449"
+    },
+    {
+      "id": "path7/discovery/0/colon/1/0",
+      "split": "discovery",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "fork",
+      "alternative": "pear",
+      "expected_token_ids": [
+        22435,
+        44738
+      ],
+      "alternative_token_ids": [
+        8015,
+        37690
+      ],
+      "margin": -0.8124713398291821,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "ab5a68302cd05ec26fb3d8792d8f727f9f3fda00431444fe47e87b683c024bf0"
+    },
+    {
+      "id": "path7/discovery/0/colon/1/1",
+      "split": "discovery",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "pear",
+      "alternative": "fork",
+      "expected_token_ids": [
+        8015,
+        37690
+      ],
+      "alternative_token_ids": [
+        22435,
+        44738
+      ],
+      "margin": 1.83141474752206,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "fedd76bbf3f0b29cbd5edb5e3faaae4961977fdd11d0d28bf53f7a51fc2c5e5f"
+    },
+    {
+      "id": "path7/discovery/0/arrow/0/0",
+      "split": "discovery",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "pear",
+      "alternative": "fork",
+      "expected_token_ids": [
+        8015,
+        37690
+      ],
+      "alternative_token_ids": [
+        22435,
+        44738
+      ],
+      "margin": 0.9704207733008232,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "9d3f33c71b37de5800848427fbf3e20d1e3ee9fcd9d4fb01c48a1f447b48538b"
+    },
+    {
+      "id": "path7/discovery/0/arrow/0/1",
+      "split": "discovery",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "fork",
+      "alternative": "pear",
+      "expected_token_ids": [
+        22435,
+        44738
+      ],
+      "alternative_token_ids": [
+        8015,
+        37690
+      ],
+      "margin": 2.9130210431988672,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "7fdeb9a64b4ec54b8ebfba82e4760cd33f02038760287c13ca58f0d2c10c2730"
+    },
+    {
+      "id": "path7/discovery/0/arrow/1/0",
+      "split": "discovery",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "fork",
+      "alternative": "pear",
+      "expected_token_ids": [
+        22435,
+        44738
+      ],
+      "alternative_token_ids": [
+        8015,
+        37690
+      ],
+      "margin": 0.14965804850617914,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "a65d5c560dad0a0d2946c9707108e73475efdd23d17440cf62d658e92b6bcda2"
+    },
+    {
+      "id": "path7/discovery/0/arrow/1/1",
+      "split": "discovery",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "pear",
+      "alternative": "fork",
+      "expected_token_ids": [
+        8015,
+        37690
+      ],
+      "alternative_token_ids": [
+        22435,
+        44738
+      ],
+      "margin": 1.3368975963279999,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "f7f63668d1f428ebdfffc99ae619bcddcbbc0b92973ac27b50ee4ded3ed83ae2"
+    },
+    {
+      "id": "path7/discovery/1/colon/0/0",
+      "split": "discovery",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "bell",
+      "alternative": "chair",
+      "expected_token_ids": [
+        17250,
+        28419
+      ],
+      "alternative_token_ids": [
+        10496,
+        34196
+      ],
+      "margin": 2.930376982717206,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "c51ed956716d4dc68cf376b4e6f88a8f893a80e4e7c0dc3c6c7fbd8649526fdb"
+    },
+    {
+      "id": "path7/discovery/1/colon/0/1",
+      "split": "discovery",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "chair",
+      "alternative": "bell",
+      "expected_token_ids": [
+        10496,
+        34196
+      ],
+      "alternative_token_ids": [
+        17250,
+        28419
+      ],
+      "margin": 1.5267542922541093,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "d55614399e01e2ae0067d012c4eee2fa4b09174f6ff9814aedf3d2d3667cdcbf"
+    },
+    {
+      "id": "path7/discovery/1/colon/1/0",
+      "split": "discovery",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "chair",
+      "alternative": "bell",
+      "expected_token_ids": [
+        10496,
+        34196
+      ],
+      "alternative_token_ids": [
+        17250,
+        28419
+      ],
+      "margin": 4.083577886243136,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "b8b56b0bb2b771b582bb454e3828ceab3a7660ac875404e0189237af397d0537"
+    },
+    {
+      "id": "path7/discovery/1/colon/1/1",
+      "split": "discovery",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "bell",
+      "alternative": "chair",
+      "expected_token_ids": [
+        17250,
+        28419
+      ],
+      "alternative_token_ids": [
+        10496,
+        34196
+      ],
+      "margin": -0.4398893547148557,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "b5d72f6f35aa689fbb7f2920fd25b6ecd1eb29993ade7f3df80b168d6dafe9a8"
+    },
+    {
+      "id": "path7/discovery/1/arrow/0/0",
+      "split": "discovery",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "bell",
+      "alternative": "chair",
+      "expected_token_ids": [
+        17250,
+        28419
+      ],
+      "alternative_token_ids": [
+        10496,
+        34196
+      ],
+      "margin": 7.95860071236492,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "c28ff007fa966d0d810f16dd52b4f01935a2660bda686ef7fcbd8aa97fc2c882"
+    },
+    {
+      "id": "path7/discovery/1/arrow/0/1",
+      "split": "discovery",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "chair",
+      "alternative": "bell",
+      "expected_token_ids": [
+        10496,
+        34196
+      ],
+      "alternative_token_ids": [
+        17250,
+        28419
+      ],
+      "margin": 0.7859185329023024,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "8756562b8c6cff013a8c9e01031a301196d17f1f9dd999bb96e7a4c885e5bee0"
+    },
+    {
+      "id": "path7/discovery/1/arrow/1/0",
+      "split": "discovery",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "chair",
+      "alternative": "bell",
+      "expected_token_ids": [
+        10496,
+        34196
+      ],
+      "alternative_token_ids": [
+        17250,
+        28419
+      ],
+      "margin": 2.5108607089172432,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "f2e70419cf27b77140a256d7e54f67d39885fec368ed87cd6deecab6a7bd4186"
+    },
+    {
+      "id": "path7/discovery/1/arrow/1/1",
+      "split": "discovery",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "bell",
+      "alternative": "chair",
+      "expected_token_ids": [
+        17250,
+        28419
+      ],
+      "alternative_token_ids": [
+        10496,
+        34196
+      ],
+      "margin": 0.3363192444722021,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "9e745a033b01413ea14c5df65a4f3e01dfeac593919330c7b87b1d84e0fdbdda"
+    },
+    {
+      "id": "path7/discovery/2/colon/0/0",
+      "split": "discovery",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "book",
+      "alternative": "spoon",
+      "expected_token_ids": [
+        2190,
+        2311
+      ],
+      "alternative_token_ids": [
+        45505
+      ],
+      "margin": 7.137183733632648,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "e953584e9f80dfb4926bb302814a61e7303a04b1261c3d4e7ffd47f94281f576"
+    },
+    {
+      "id": "path7/discovery/2/colon/0/1",
+      "split": "discovery",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "spoon",
+      "alternative": "book",
+      "expected_token_ids": [
+        45505
+      ],
+      "alternative_token_ids": [
+        2190,
+        2311
+      ],
+      "margin": -5.0694060695697365,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "30e849e3f4408caffdda3807ed5f9802ec76547a0f6763e60f9162260556a6dc"
+    },
+    {
+      "id": "path7/discovery/2/colon/1/0",
+      "split": "discovery",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "spoon",
+      "alternative": "book",
+      "expected_token_ids": [
+        45505
+      ],
+      "alternative_token_ids": [
+        2190,
+        2311
+      ],
+      "margin": -4.621347869577923,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "11a209d55cb05496169c10ee7dcfde33f860e0bec37588aec5d16c0a423d4758"
+    },
+    {
+      "id": "path7/discovery/2/colon/1/1",
+      "split": "discovery",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "book",
+      "alternative": "spoon",
+      "expected_token_ids": [
+        2190,
+        2311
+      ],
+      "alternative_token_ids": [
+        45505
+      ],
+      "margin": 8.098542923325434,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "9f863a2041f04743ac0d0707d6895f2a45104ec28ebaec074aba297689db84be"
+    },
+    {
+      "id": "path7/discovery/2/arrow/0/0",
+      "split": "discovery",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "book",
+      "alternative": "spoon",
+      "expected_token_ids": [
+        2190,
+        2311
+      ],
+      "alternative_token_ids": [
+        45505
+      ],
+      "margin": 13.144139739182064,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "d54b16341a00e15ae3336c6aee28be52e7b15e5aac836585b2a02798c89c2374"
+    },
+    {
+      "id": "path7/discovery/2/arrow/0/1",
+      "split": "discovery",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "spoon",
+      "alternative": "book",
+      "expected_token_ids": [
+        45505
+      ],
+      "alternative_token_ids": [
+        2190,
+        2311
+      ],
+      "margin": -3.0976174122993445,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "dab4aaa33116c9a5b2c290b5cf64021166eaf4ff4ac91c3fd77e32f94804a347"
+    },
+    {
+      "id": "path7/discovery/2/arrow/1/0",
+      "split": "discovery",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "spoon",
+      "alternative": "book",
+      "expected_token_ids": [
+        45505
+      ],
+      "alternative_token_ids": [
+        2190,
+        2311
+      ],
+      "margin": -2.574738679673902,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "79d9325e844004364e166c2de5beee18f51bedfd922abb536f746daf55290b08"
+    },
+    {
+      "id": "path7/discovery/2/arrow/1/1",
+      "split": "discovery",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "book",
+      "alternative": "spoon",
+      "expected_token_ids": [
+        2190,
+        2311
+      ],
+      "alternative_token_ids": [
+        45505
+      ],
+      "margin": 10.456898688559942,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "be71c6c319abed4dbb61325d6590e87dfe9235d71ebcb86c79b2f41810d1ca62"
+    },
+    {
+      "id": "path7/discovery/3/colon/0/0",
+      "split": "discovery",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "wheel",
+      "alternative": "crown",
+      "expected_token_ids": [
+        13284,
+        38590
+      ],
+      "alternative_token_ids": [
+        26533
+      ],
+      "margin": 5.744220000623066,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "8acabb8f11267813a53532d3538e890e8a21a6e8a3a2b9d00bb4a474c5d94502"
+    },
+    {
+      "id": "path7/discovery/3/colon/0/1",
+      "split": "discovery",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "crown",
+      "alternative": "wheel",
+      "expected_token_ids": [
+        26533
+      ],
+      "alternative_token_ids": [
+        13284,
+        38590
+      ],
+      "margin": -3.0972324546339456,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "b85e84f639c3540d8dd4552e23772453d674fd8f97102b354be2495ac8c5575b"
+    },
+    {
+      "id": "path7/discovery/3/colon/1/0",
+      "split": "discovery",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "crown",
+      "alternative": "wheel",
+      "expected_token_ids": [
+        26533
+      ],
+      "alternative_token_ids": [
+        13284,
+        38590
+      ],
+      "margin": -3.473003439646039,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "4fb88541501796780faa66346d772c2ede06d9e91565d47baa06a7da3fa0068b"
+    },
+    {
+      "id": "path7/discovery/3/colon/1/1",
+      "split": "discovery",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "wheel",
+      "alternative": "crown",
+      "expected_token_ids": [
+        13284,
+        38590
+      ],
+      "alternative_token_ids": [
+        26533
+      ],
+      "margin": 3.477201837947675,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "e995afe3688dc61ed2b1367e31774c7f0d14da7ce2da540d6747c4e7c03109b4"
+    },
+    {
+      "id": "path7/discovery/3/arrow/0/0",
+      "split": "discovery",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "wheel",
+      "alternative": "crown",
+      "expected_token_ids": [
+        13284,
+        38590
+      ],
+      "alternative_token_ids": [
+        26533
+      ],
+      "margin": 5.805326987342112,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "50df0f6c03187977cf37dbd79c61980b7a01168436f2b251ee43d09fd408a625"
+    },
+    {
+      "id": "path7/discovery/3/arrow/0/1",
+      "split": "discovery",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "crown",
+      "alternative": "wheel",
+      "expected_token_ids": [
+        26533
+      ],
+      "alternative_token_ids": [
+        13284,
+        38590
+      ],
+      "margin": -2.8354471924259377,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "4dc9f922c0bc0dd715f338cc4c1af51ef2624c599585d1f23487f7bdcdb9692d"
+    },
+    {
+      "id": "path7/discovery/3/arrow/1/0",
+      "split": "discovery",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "crown",
+      "alternative": "wheel",
+      "expected_token_ids": [
+        26533
+      ],
+      "alternative_token_ids": [
+        13284,
+        38590
+      ],
+      "margin": -3.567454714379566,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "1c8b603816a509c48edc3d8d7c04c460ba7fd1a7395ea17c278d1cb8c8941407"
+    },
+    {
+      "id": "path7/discovery/3/arrow/1/1",
+      "split": "discovery",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "wheel",
+      "alternative": "crown",
+      "expected_token_ids": [
+        13284,
+        38590
+      ],
+      "alternative_token_ids": [
+        26533
+      ],
+      "margin": 3.3939445349608466,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "b7bd01f8675542252ab7fa0fe73cfeb7933116ace28c64a55093793694708a53"
+    },
+    {
+      "id": "path7/discovery/4/colon/0/0",
+      "split": "discovery",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "lamp",
+      "alternative": "plate",
+      "expected_token_ids": [
+        27962,
+        94757
+      ],
+      "alternative_token_ids": [
+        1750,
+        11968
+      ],
+      "margin": -0.3414627644896999,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "e66752e18bc6908564fbd3090fac5fb66d41785067d32e424878a346eb29972c"
+    },
+    {
+      "id": "path7/discovery/4/colon/0/1",
+      "split": "discovery",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "plate",
+      "alternative": "lamp",
+      "expected_token_ids": [
+        1750,
+        11968
+      ],
+      "alternative_token_ids": [
+        27962,
+        94757
+      ],
+      "margin": 1.0109137840213775,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "a39c339b0ef39feb40dd79e707b1f545e2a7a01c027acde9a5873adfb09ae518"
+    },
+    {
+      "id": "path7/discovery/4/colon/1/0",
+      "split": "discovery",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "plate",
+      "alternative": "lamp",
+      "expected_token_ids": [
+        1750,
+        11968
+      ],
+      "alternative_token_ids": [
+        27962,
+        94757
+      ],
+      "margin": 0.3437282274428606,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "d49bb99858ab34a9d87fd0c2b4cf593381cff994aa8db8a389c9a49c9f083d56"
+    },
+    {
+      "id": "path7/discovery/4/colon/1/1",
+      "split": "discovery",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "lamp",
+      "alternative": "plate",
+      "expected_token_ids": [
+        27962,
+        94757
+      ],
+      "alternative_token_ids": [
+        1750,
+        11968
+      ],
+      "margin": -0.39459378288361124,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "974a3869461a37108bae301bd8da2a3438a00495e7adf53f09cb41084a7f160a"
+    },
+    {
+      "id": "path7/discovery/4/arrow/0/0",
+      "split": "discovery",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "lamp",
+      "alternative": "plate",
+      "expected_token_ids": [
+        27962,
+        94757
+      ],
+      "alternative_token_ids": [
+        1750,
+        11968
+      ],
+      "margin": -1.0063944822833792,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "8a80ef59e1f6b91c72e157a8e65c563fe869dd2e29d13465c603cdb4ab4ca444"
+    },
+    {
+      "id": "path7/discovery/4/arrow/0/1",
+      "split": "discovery",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "plate",
+      "alternative": "lamp",
+      "expected_token_ids": [
+        1750,
+        11968
+      ],
+      "alternative_token_ids": [
+        27962,
+        94757
+      ],
+      "margin": 1.4601302994659382,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "9911b854cc5de80d8302c37fd5b7f63175aa98058ca89e7b238e13b6579ae3c4"
+    },
+    {
+      "id": "path7/discovery/4/arrow/1/0",
+      "split": "discovery",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "plate",
+      "alternative": "lamp",
+      "expected_token_ids": [
+        1750,
+        11968
+      ],
+      "alternative_token_ids": [
+        27962,
+        94757
+      ],
+      "margin": 0.5297481414312153,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "28e1280256cd0aa61799c70b9e2e820d0a869135f1d23be3b28253470205a951"
+    },
+    {
+      "id": "path7/discovery/4/arrow/1/1",
+      "split": "discovery",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "lamp",
+      "alternative": "plate",
+      "expected_token_ids": [
+        27962,
+        94757
+      ],
+      "alternative_token_ids": [
+        1750,
+        11968
+      ],
+      "margin": -0.7365124572990784,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "26707ee24dd9ffcd71a5b6c638fc559b8d658d2d1c58ce63a6e84dc58edce2a2"
+    },
+    {
+      "id": "path7/discovery/5/colon/0/0",
+      "split": "discovery",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "clock",
+      "alternative": "cup",
+      "expected_token_ids": [
+        8866,
+        20666
+      ],
+      "alternative_token_ids": [
+        10525,
+        36665
+      ],
+      "margin": 11.206741970002156,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "d45f27544351a549d7e9156357c3fc9eab0bef024961e48021f60c210bb6aabd"
+    },
+    {
+      "id": "path7/discovery/5/colon/0/1",
+      "split": "discovery",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "cup",
+      "alternative": "clock",
+      "expected_token_ids": [
+        10525,
+        36665
+      ],
+      "alternative_token_ids": [
+        8866,
+        20666
+      ],
+      "margin": -1.1607817908585059,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "7d8d054f844b24baec2c290aee68c6015d1b58982e67a8c8e5cf02f86f5bd3e3"
+    },
+    {
+      "id": "path7/discovery/5/colon/1/0",
+      "split": "discovery",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "cup",
+      "alternative": "clock",
+      "expected_token_ids": [
+        10525,
+        36665
+      ],
+      "alternative_token_ids": [
+        8866,
+        20666
+      ],
+      "margin": -2.1056121446652156,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "5ea39ba41a66c1b76fa92886220e149b3bfa0e0be34cf658701e0f71fe2b9532"
+    },
+    {
+      "id": "path7/discovery/5/colon/1/1",
+      "split": "discovery",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "clock",
+      "alternative": "cup",
+      "expected_token_ids": [
+        8866,
+        20666
+      ],
+      "alternative_token_ids": [
+        10525,
+        36665
+      ],
+      "margin": 4.46423091518714,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "e30decd1705d7fed2f6beae1237763ab32c0bb8112a317861fbf5a70c8e44e20"
+    },
+    {
+      "id": "path7/discovery/5/arrow/0/0",
+      "split": "discovery",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "clock",
+      "alternative": "cup",
+      "expected_token_ids": [
+        8866,
+        20666
+      ],
+      "alternative_token_ids": [
+        10525,
+        36665
+      ],
+      "margin": 10.137517787482379,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "fe8ebb2e1732187fbe95fb53a906ee90ff7df630b8e728d18d280325716d1365"
+    },
+    {
+      "id": "path7/discovery/5/arrow/0/1",
+      "split": "discovery",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "cup",
+      "alternative": "clock",
+      "expected_token_ids": [
+        10525,
+        36665
+      ],
+      "alternative_token_ids": [
+        8866,
+        20666
+      ],
+      "margin": -2.4195861088005017,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "5d1600e0cc0e072733a8305386da7adf02dc08322511e8ddaf8b71d7252bb441"
+    },
+    {
+      "id": "path7/discovery/5/arrow/1/0",
+      "split": "discovery",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "cup",
+      "alternative": "clock",
+      "expected_token_ids": [
+        10525,
+        36665
+      ],
+      "alternative_token_ids": [
+        8866,
+        20666
+      ],
+      "margin": -2.386063258890104,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "cc8eabc0be3c7e991512a88253577c81547bb0a414a2a0f44a823ff8981c6dc5"
+    },
+    {
+      "id": "path7/discovery/5/arrow/1/1",
+      "split": "discovery",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "clock",
+      "alternative": "cup",
+      "expected_token_ids": [
+        8866,
+        20666
+      ],
+      "alternative_token_ids": [
+        10525,
+        36665
+      ],
+      "margin": 4.19914326187802,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "1bcfe3278cd2ed01945d5916f98d89b48766fc2843f7f4ca31348c72c4f2e9bd"
+    },
+    {
+      "id": "path7/confirmation/0/colon/0/0",
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "ring",
+      "alternative": "stone",
+      "expected_token_ids": [
+        10058,
+        12640
+      ],
+      "alternative_token_ids": [
+        9798,
+        10812
+      ],
+      "margin": -2.8980664958731577,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "403f740095f8157abb7cc22725b767cc27ca7fefab953af450cef69a51f8e676"
+    },
+    {
+      "id": "path7/confirmation/0/colon/0/1",
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "stone",
+      "alternative": "ring",
+      "expected_token_ids": [
+        9798,
+        10812
+      ],
+      "alternative_token_ids": [
+        10058,
+        12640
+      ],
+      "margin": 2.55471318112275,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "4231485844fe6d38389d9d4c890e0e9416c6452cda7be5aaad1d755e296c0698"
+    },
+    {
+      "id": "path7/confirmation/0/colon/1/0",
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "stone",
+      "alternative": "ring",
+      "expected_token_ids": [
+        9798,
+        10812
+      ],
+      "alternative_token_ids": [
+        10058,
+        12640
+      ],
+      "margin": 5.879097014105977,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "14f2cce5cff4595e92f0b90527e595134b5abf4e639a49af07217c2f51bb6bd5"
+    },
+    {
+      "id": "path7/confirmation/0/colon/1/1",
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "ring",
+      "alternative": "stone",
+      "expected_token_ids": [
+        10058,
+        12640
+      ],
+      "alternative_token_ids": [
+        9798,
+        10812
+      ],
+      "margin": -2.508837436113793,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "82daf51896bb64b5649ebec1c42ecfc95734d5d9694d9f0c8180c8cb69a1a6ba"
+    },
+    {
+      "id": "path7/confirmation/0/arrow/0/0",
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "ring",
+      "alternative": "stone",
+      "expected_token_ids": [
+        10058,
+        12640
+      ],
+      "alternative_token_ids": [
+        9798,
+        10812
+      ],
+      "margin": -1.7113605481168417,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "a6b860bdc34ac64eb8b7089ab08ef9f0aee61c1f95595c76459b1bbe95ed93f2"
+    },
+    {
+      "id": "path7/confirmation/0/arrow/0/1",
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "stone",
+      "alternative": "ring",
+      "expected_token_ids": [
+        9798,
+        10812
+      ],
+      "alternative_token_ids": [
+        10058,
+        12640
+      ],
+      "margin": 2.73720159665352,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "0ef9726c3081e593bc96c77b61b0cd5efaf24df3bd4894ca91f139fc1ba55bb8"
+    },
+    {
+      "id": "path7/confirmation/0/arrow/1/0",
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "stone",
+      "alternative": "ring",
+      "expected_token_ids": [
+        9798,
+        10812
+      ],
+      "alternative_token_ids": [
+        10058,
+        12640
+      ],
+      "margin": 6.453038475730234,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "1c4eef6d64648b71e6c7f6ad92fbd2921bfc5ca0f296960fec7d99eacaa488b7"
+    },
+    {
+      "id": "path7/confirmation/0/arrow/1/1",
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "ring",
+      "alternative": "stone",
+      "expected_token_ids": [
+        10058,
+        12640
+      ],
+      "alternative_token_ids": [
+        9798,
+        10812
+      ],
+      "margin": -2.6749723288403917,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "ce022604ca4a503d7c2dd0b419c2a6daf2da37fe47b3403f1613b02920501ac5"
+    },
+    {
+      "id": "path7/confirmation/1/colon/0/0",
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "fish",
+      "alternative": "table",
+      "expected_token_ids": [
+        7640,
+        18170
+      ],
+      "alternative_token_ids": [
+        1965,
+        2005
+      ],
+      "margin": -2.555903984361022,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "9548102adab6bcb2bc8fc36caf6a15124ebd3dabec14e793c1725f39759b33b4"
+    },
+    {
+      "id": "path7/confirmation/1/colon/0/1",
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "table",
+      "alternative": "fish",
+      "expected_token_ids": [
+        1965,
+        2005
+      ],
+      "alternative_token_ids": [
+        7640,
+        18170
+      ],
+      "margin": 1.4750311261616744,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "99ed57b7f2db98279b581f6f63b434806dc87f16bf226f4f4889f9f783071912"
+    },
+    {
+      "id": "path7/confirmation/1/colon/1/0",
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "table",
+      "alternative": "fish",
+      "expected_token_ids": [
+        1965,
+        2005
+      ],
+      "alternative_token_ids": [
+        7640,
+        18170
+      ],
+      "margin": 5.404143229472081,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "ae40def61df6afdb0b8ebd85c201db47c268055e4482a292906ee3e4421c7dee"
+    },
+    {
+      "id": "path7/confirmation/1/colon/1/1",
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "fish",
+      "alternative": "table",
+      "expected_token_ids": [
+        7640,
+        18170
+      ],
+      "alternative_token_ids": [
+        1965,
+        2005
+      ],
+      "margin": 2.9381491732604434,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "4885f301713c36a1640ab094524440455f9c4ce1c8d1563a3906671df103d712"
+    },
+    {
+      "id": "path7/confirmation/1/arrow/0/0",
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "fish",
+      "alternative": "table",
+      "expected_token_ids": [
+        7640,
+        18170
+      ],
+      "alternative_token_ids": [
+        1965,
+        2005
+      ],
+      "margin": -1.5425464620489677,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "836660d77eca0450bf2ec0d2aa380e7a3a8dcc2abf4dc92202a5b7a37eb2215d"
+    },
+    {
+      "id": "path7/confirmation/1/arrow/0/1",
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "table",
+      "alternative": "fish",
+      "expected_token_ids": [
+        1965,
+        2005
+      ],
+      "alternative_token_ids": [
+        7640,
+        18170
+      ],
+      "margin": 1.9206300343704275,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "11cb37db06a09363e639163ceb226331feb675672c5cc983b36257cbe9890454"
+    },
+    {
+      "id": "path7/confirmation/1/arrow/1/0",
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "table",
+      "alternative": "fish",
+      "expected_token_ids": [
+        1965,
+        2005
+      ],
+      "alternative_token_ids": [
+        7640,
+        18170
+      ],
+      "margin": 2.4753301570287114,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "73883a08c8a455770c00a000baf3a3db7a3493920fe10856f92fa4159f2e7a0c"
+    },
+    {
+      "id": "path7/confirmation/1/arrow/1/1",
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "fish",
+      "alternative": "table",
+      "expected_token_ids": [
+        7640,
+        18170
+      ],
+      "alternative_token_ids": [
+        1965,
+        2005
+      ],
+      "margin": 2.765304690021823,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "81340365b4ffe0a718dc5b8709c240f6a202134cff3b72afd0a446c7a1cffabe"
+    },
+    {
+      "id": "path7/confirmation/2/colon/0/0",
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "door",
+      "alternative": "apple",
+      "expected_token_ids": [
+        6006,
+        10787
+      ],
+      "alternative_token_ids": [
+        22377,
+        23268
+      ],
+      "margin": -1.630891513347807,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "392a5115be92ce6222554d72699a517a504d304ca175e40ac75a3fe3441ce848"
+    },
+    {
+      "id": "path7/confirmation/2/colon/0/1",
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "apple",
+      "alternative": "door",
+      "expected_token_ids": [
+        22377,
+        23268
+      ],
+      "alternative_token_ids": [
+        6006,
+        10787
+      ],
+      "margin": 3.510607017888981,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "2a79a8c2534371e987648325692885178cfa6e97b293d01d5dd428f5982ed9a4"
+    },
+    {
+      "id": "path7/confirmation/2/colon/1/0",
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "apple",
+      "alternative": "door",
+      "expected_token_ids": [
+        22377,
+        23268
+      ],
+      "alternative_token_ids": [
+        6006,
+        10787
+      ],
+      "margin": 4.549586619255907,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "d70ccbab0196f5093f922639f5af59e8977fbdda645bf3557f612e96229cc499"
+    },
+    {
+      "id": "path7/confirmation/2/colon/1/1",
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "door",
+      "alternative": "apple",
+      "expected_token_ids": [
+        6006,
+        10787
+      ],
+      "alternative_token_ids": [
+        22377,
+        23268
+      ],
+      "margin": 2.884522951789492,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "8aeac7c8a80414ebc78c3b344784bd762b9ef8bb10bc025eedde06f88071243b"
+    },
+    {
+      "id": "path7/confirmation/2/arrow/0/0",
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "door",
+      "alternative": "apple",
+      "expected_token_ids": [
+        6006,
+        10787
+      ],
+      "alternative_token_ids": [
+        22377,
+        23268
+      ],
+      "margin": -1.9525827248687504,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "ad50c59fdfb7e499c58f1eda0d5d69e851f332c93c4527de89f0ab80d20df1b2"
+    },
+    {
+      "id": "path7/confirmation/2/arrow/0/1",
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "apple",
+      "alternative": "door",
+      "expected_token_ids": [
+        22377,
+        23268
+      ],
+      "alternative_token_ids": [
+        6006,
+        10787
+      ],
+      "margin": 4.374165225922555,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "7c113db361e1b5269929e8e6e2bf7cf5043cdbf35deb90e751d8967a036c40a5"
+    },
+    {
+      "id": "path7/confirmation/2/arrow/1/0",
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "apple",
+      "alternative": "door",
+      "expected_token_ids": [
+        22377,
+        23268
+      ],
+      "alternative_token_ids": [
+        6006,
+        10787
+      ],
+      "margin": 5.511299872334515,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "f529caf9be7283ff012386f04e5fcbd8a67a2a722a131cb24b2fbce026487d1d"
+    },
+    {
+      "id": "path7/confirmation/2/arrow/1/1",
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "door",
+      "alternative": "apple",
+      "expected_token_ids": [
+        6006,
+        10787
+      ],
+      "alternative_token_ids": [
+        22377,
+        23268
+      ],
+      "margin": 4.200487206204082,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "42e6f277f3d0f20e2e6aaa45581e694781b7305da4a6a7809cd3ecd011f1fb8b"
+    },
+    {
+      "id": "path7/confirmation/3/colon/0/0",
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "hat",
+      "alternative": "key",
+      "expected_token_ids": [
+        8896,
+        9198
+      ],
+      "alternative_token_ids": [
+        792,
+        1376
+      ],
+      "margin": 14.452566838336594,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "e6ec627e66d3d9acd26c4c9987ce32653fde04f64d28ba1962f3304ec394064c"
+    },
+    {
+      "id": "path7/confirmation/3/colon/0/1",
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "key",
+      "alternative": "hat",
+      "expected_token_ids": [
+        792,
+        1376
+      ],
+      "alternative_token_ids": [
+        8896,
+        9198
+      ],
+      "margin": 1.6602795091640719,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "a86ce5a048a837b941f80cb7d6ba558e48e16ce287693ac55bcac8c5749613d0"
+    },
+    {
+      "id": "path7/confirmation/3/colon/1/0",
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "key",
+      "alternative": "hat",
+      "expected_token_ids": [
+        792,
+        1376
+      ],
+      "alternative_token_ids": [
+        8896,
+        9198
+      ],
+      "margin": 0.7860363095822986,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "bb7ecc07390f6c8bee8b6de87e8d086390ef20a7c30cf7b4b6a5ebc41e89e78d"
+    },
+    {
+      "id": "path7/confirmation/3/colon/1/1",
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "hat",
+      "alternative": "key",
+      "expected_token_ids": [
+        8896,
+        9198
+      ],
+      "alternative_token_ids": [
+        792,
+        1376
+      ],
+      "margin": 0.06386799954377231,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "cc05f4c3f70aaa6c197d9b05326a323cc508b78e3098d39fafef9cc8e1c67d46"
+    },
+    {
+      "id": "path7/confirmation/3/arrow/0/0",
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "hat",
+      "alternative": "key",
+      "expected_token_ids": [
+        8896,
+        9198
+      ],
+      "alternative_token_ids": [
+        792,
+        1376
+      ],
+      "margin": 4.0492035225647935,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "34b103902825e016b15761daa662e2da80d5947ce1d3bbe12f9878b4cd4304d9"
+    },
+    {
+      "id": "path7/confirmation/3/arrow/0/1",
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "key",
+      "alternative": "hat",
+      "expected_token_ids": [
+        792,
+        1376
+      ],
+      "alternative_token_ids": [
+        8896,
+        9198
+      ],
+      "margin": 1.9847927941972934,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "2571a248eacd416c996c7a940fa63167e0245f3772d19f045c4b72f39f92431a"
+    },
+    {
+      "id": "path7/confirmation/3/arrow/1/0",
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "key",
+      "alternative": "hat",
+      "expected_token_ids": [
+        792,
+        1376
+      ],
+      "alternative_token_ids": [
+        8896,
+        9198
+      ],
+      "margin": 3.018206961902626,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "40ed71e44bbfca61d1b23d8911d94c58fba17b6274e099ee8ebee88017720bc6"
+    },
+    {
+      "id": "path7/confirmation/3/arrow/1/1",
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "hat",
+      "alternative": "key",
+      "expected_token_ids": [
+        8896,
+        9198
+      ],
+      "alternative_token_ids": [
+        792,
+        1376
+      ],
+      "margin": -1.2900778057496716,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "747c772d2e33dd0ecc88d43dd37c3b52b8716d23109b735caa5c1c500d23515a"
+    },
+    {
+      "id": "path7/confirmation/4/colon/0/0",
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "bag",
+      "alternative": "boot",
+      "expected_token_ids": [
+        8968,
+        21250
+      ],
+      "alternative_token_ids": [
+        4619,
+        10459
+      ],
+      "margin": 4.077909626089297,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "04e3f04627e2549d87e10ea60c1a292edd299e440e3af52a981d34a2a4bd780d"
+    },
+    {
+      "id": "path7/confirmation/4/colon/0/1",
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "boot",
+      "alternative": "bag",
+      "expected_token_ids": [
+        4619,
+        10459
+      ],
+      "alternative_token_ids": [
+        8968,
+        21250
+      ],
+      "margin": -0.939357192586173,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "5593c1008f3c670e6460bb55db44af4305253bed8aebed5c063aff705578fe2b"
+    },
+    {
+      "id": "path7/confirmation/4/colon/1/0",
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "boot",
+      "alternative": "bag",
+      "expected_token_ids": [
+        4619,
+        10459
+      ],
+      "alternative_token_ids": [
+        8968,
+        21250
+      ],
+      "margin": -0.9430582189817436,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "87e4cd32758427d45bb876320ecd40d6736392f1fc6067c06baf248ce0f7d94a"
+    },
+    {
+      "id": "path7/confirmation/4/colon/1/1",
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "bag",
+      "alternative": "boot",
+      "expected_token_ids": [
+        8968,
+        21250
+      ],
+      "alternative_token_ids": [
+        4619,
+        10459
+      ],
+      "margin": 6.399479686261655,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "0ae92dae42190a545c602fcc26f409887fbfcf6f247f515ac69b3a8a2c69afbe"
+    },
+    {
+      "id": "path7/confirmation/4/arrow/0/0",
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "bag",
+      "alternative": "boot",
+      "expected_token_ids": [
+        8968,
+        21250
+      ],
+      "alternative_token_ids": [
+        4619,
+        10459
+      ],
+      "margin": 4.276808405800589,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "c982d088afab7d6dd37d3b300112b44da19647721bc696a128fadc35e93f9df0"
+    },
+    {
+      "id": "path7/confirmation/4/arrow/0/1",
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "boot",
+      "alternative": "bag",
+      "expected_token_ids": [
+        4619,
+        10459
+      ],
+      "alternative_token_ids": [
+        8968,
+        21250
+      ],
+      "margin": -2.8244523692108245,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "fdd342b3fa04a81ce26cdf4751cd380bcd453238603a57ec146379b67cc38b7a"
+    },
+    {
+      "id": "path7/confirmation/4/arrow/1/0",
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "boot",
+      "alternative": "bag",
+      "expected_token_ids": [
+        4619,
+        10459
+      ],
+      "alternative_token_ids": [
+        8968,
+        21250
+      ],
+      "margin": -1.9631077843200553,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "b69fec17ab32340354fe72a6968255c0183ad2f225f579f11e9ed8fff53e53f4"
+    },
+    {
+      "id": "path7/confirmation/4/arrow/1/1",
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "bag",
+      "alternative": "boot",
+      "expected_token_ids": [
+        8968,
+        21250
+      ],
+      "alternative_token_ids": [
+        4619,
+        10459
+      ],
+      "margin": 3.9967829554024816,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "1ecedff81785d39a2af7598daf4de401516a3f73559b78ea73f2162519ec6720"
+    },
+    {
+      "id": "path7/confirmation/5/colon/0/0",
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "nest",
+      "alternative": "flag",
+      "expected_token_ids": [
+        21414,
+        22791
+      ],
+      "alternative_token_ids": [
+        5181,
+        9903
+      ],
+      "margin": 13.374211125410186,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "d39d63b133fe47da484ec6c1b45795f3ed9fd11a4827d4f58db46bc06d4a52cc"
+    },
+    {
+      "id": "path7/confirmation/5/colon/0/1",
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "flag",
+      "alternative": "nest",
+      "expected_token_ids": [
+        5181,
+        9903
+      ],
+      "alternative_token_ids": [
+        21414,
+        22791
+      ],
+      "margin": 1.14690281973302,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "9cadf00abd4f798267d0d0e60ce840bc4861b82afa0aebf744f82a7587584889"
+    },
+    {
+      "id": "path7/confirmation/5/colon/1/0",
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "flag",
+      "alternative": "nest",
+      "expected_token_ids": [
+        5181,
+        9903
+      ],
+      "alternative_token_ids": [
+        21414,
+        22791
+      ],
+      "margin": -7.0711107454863065,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "d356745748ec57613349cbf7677773d8363ecc9569629b3e6ea485b3f9127827"
+    },
+    {
+      "id": "path7/confirmation/5/colon/1/1",
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "nest",
+      "alternative": "flag",
+      "expected_token_ids": [
+        21414,
+        22791
+      ],
+      "alternative_token_ids": [
+        5181,
+        9903
+      ],
+      "margin": 5.235239323066286,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "5e554ce7839f4fe45081cbf6725620b63a992bd1f96f47218a7986bf25e5dbfc"
+    },
+    {
+      "id": "path7/confirmation/5/arrow/0/0",
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 0,
+      "expected": "nest",
+      "alternative": "flag",
+      "expected_token_ids": [
+        21414,
+        22791
+      ],
+      "alternative_token_ids": [
+        5181,
+        9903
+      ],
+      "margin": 14.093095321907763,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "e427f2b44f3e6e865f4afc1777158d780bddb4611396407d275c2bb46a85995b"
+    },
+    {
+      "id": "path7/confirmation/5/arrow/0/1",
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 0,
+      "query_slot": 1,
+      "expected": "flag",
+      "alternative": "nest",
+      "expected_token_ids": [
+        5181,
+        9903
+      ],
+      "alternative_token_ids": [
+        21414,
+        22791
+      ],
+      "margin": 5.273983662087023,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "d084fc73fc3cdaea87a13b4d8493388efbd1e156db08c55b953a93dde9964de9"
+    },
+    {
+      "id": "path7/confirmation/5/arrow/1/0",
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 0,
+      "expected": "flag",
+      "alternative": "nest",
+      "expected_token_ids": [
+        5181,
+        9903
+      ],
+      "alternative_token_ids": [
+        21414,
+        22791
+      ],
+      "margin": -6.077108587415152,
+      "expected_preferred": false,
+      "generated_object_token": false,
+      "array_sha256": "f107d47ddf42c7e3b38339832815148bf9729c3104b7011e5a803a5599368d2a"
+    },
+    {
+      "id": "path7/confirmation/5/arrow/1/1",
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 1,
+      "query_slot": 1,
+      "expected": "nest",
+      "alternative": "flag",
+      "expected_token_ids": [
+        21414,
+        22791
+      ],
+      "alternative_token_ids": [
+        5181,
+        9903
+      ],
+      "margin": 6.361134578536793,
+      "expected_preferred": true,
+      "generated_object_token": false,
+      "array_sha256": "ea89681f710d7e239cf163cfad0a1dbea1eb14d8cc8c55a8463a8fa83b641df5"
+    }
+  ],
+  "query_pairs": [
+    {
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -1.7113605481168417,
+        2.73720159665352
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        6.453038475730234,
+        -2.6749723288403917
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -2.8980664958731577,
+        2.55471318112275
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        5.879097014105977,
+        -2.508837436113793
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -1.5425464620489677,
+        1.9206300343704275
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": true,
+      "query_margins": [
+        2.4753301570287114,
+        2.765304690021823
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -2.555903984361022,
+        1.4750311261616744
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": true,
+      "query_margins": [
+        5.404143229472081,
+        2.9381491732604434
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -1.9525827248687504,
+        4.374165225922555
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": true,
+      "query_margins": [
+        5.511299872334515,
+        4.200487206204082
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -1.630891513347807,
+        3.510607017888981
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": true,
+      "query_margins": [
+        4.549586619255907,
+        2.884522951789492
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": true,
+      "query_margins": [
+        4.0492035225647935,
+        1.9847927941972934
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        3.018206961902626,
+        -1.2900778057496716
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": true,
+      "query_margins": [
+        14.452566838336594,
+        1.6602795091640719
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": true,
+      "query_margins": [
+        0.7860363095822986,
+        0.06386799954377231
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        4.276808405800589,
+        -2.8244523692108245
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -1.9631077843200553,
+        3.9967829554024816
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        4.077909626089297,
+        -0.939357192586173
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -0.9430582189817436,
+        6.399479686261655
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": true,
+      "query_margins": [
+        14.093095321907763,
+        5.273983662087023
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -6.077108587415152,
+        6.361134578536793
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": true,
+      "query_margins": [
+        13.374211125410186,
+        1.14690281973302
+      ]
+    },
+    {
+      "split": "confirmation",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -7.0711107454863065,
+        5.235239323066286
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": true,
+      "query_margins": [
+        0.9704207733008232,
+        2.9130210431988672
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 0,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": true,
+      "query_margins": [
+        0.14965804850617914,
+        1.3368975963279999
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": true,
+      "query_margins": [
+        2.912192757615645,
+        7.9276216307648495
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 0,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -0.8124713398291821,
+        1.83141474752206
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": true,
+      "query_margins": [
+        7.95860071236492,
+        0.7859185329023024
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 1,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": true,
+      "query_margins": [
+        2.5108607089172432,
+        0.3363192444722021
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": true,
+      "query_margins": [
+        2.930376982717206,
+        1.5267542922541093
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 1,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        4.083577886243136,
+        -0.4398893547148557
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        13.144139739182064,
+        -3.0976174122993445
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 2,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -2.574738679673902,
+        10.456898688559942
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        7.137183733632648,
+        -5.0694060695697365
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 2,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -4.621347869577923,
+        8.098542923325434
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        5.805326987342112,
+        -2.8354471924259377
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 3,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -3.567454714379566,
+        3.3939445349608466
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        5.744220000623066,
+        -3.0972324546339456
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 3,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -3.473003439646039,
+        3.477201837947675
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -1.0063944822833792,
+        1.4601302994659382
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 4,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        0.5297481414312153,
+        -0.7365124572990784
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -0.3414627644896999,
+        1.0109137840213775
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 4,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        0.3437282274428606,
+        -0.39459378288361124
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        10.137517787482379,
+        -2.4195861088005017
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 5,
+      "style": "arrow",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -2.386063258890104,
+        4.19914326187802
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 0,
+      "both_expected_preferred": false,
+      "query_margins": [
+        11.206741970002156,
+        -1.1607817908585059
+      ]
+    },
+    {
+      "split": "discovery",
+      "bundle": 5,
+      "style": "colon",
+      "orientation": 1,
+      "both_expected_preferred": false,
+      "query_margins": [
+        -2.1056121446652156,
+        4.46423091518714
+      ]
+    }
+  ],
+  "summary": {
+    "discovery": {
+      "colon": {
+        "query_count": 24,
+        "query_expected_preferred": 14,
+        "paired_query_count": 12,
+        "paired_reversals": 2,
+        "generated_object_first": 0
+      },
+      "arrow": {
+        "query_count": 24,
+        "query_expected_preferred": 16,
+        "paired_query_count": 12,
+        "paired_reversals": 4,
+        "generated_object_first": 0
+      }
+    },
+    "confirmation": {
+      "colon": {
+        "query_count": 24,
+        "query_expected_preferred": 17,
+        "paired_query_count": 12,
+        "paired_reversals": 5,
+        "generated_object_first": 0
+      },
+      "arrow": {
+        "query_count": 24,
+        "query_expected_preferred": 16,
+        "paired_query_count": 12,
+        "paired_reversals": 4,
+        "generated_object_first": 0
+      }
+    }
+  }
+}
