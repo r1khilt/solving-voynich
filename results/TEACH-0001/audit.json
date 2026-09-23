@@ -1,0 +1,76 @@
+{
+  "audit": "pass",
+  "checkpoint_summary": {
+    "null": {
+      "last_100_loss": 1.6032836496829987,
+      "parameters": 664704,
+      "sha256": "8dd36e4cc4c238beea9e88b21f21b5cff67fc7797df4f100530a519c63a9220f"
+    },
+    "primary": {
+      "last_100_loss": 0.6387149322032929,
+      "parameters": 664704,
+      "sha256": "8c6ecf495336dd5a6cc79282d4f6b67b255605b88d1c7fd3eb6ede1e22be8f60"
+    }
+  },
+  "decision": {
+    "clauses": {
+      "both_heldout_composed_at_least_0.90": false,
+      "crossed_heldout_composed_each_at_least_0.90": false,
+      "direct_and_copy_each_at_least_0.95": false,
+      "factorial_exact_quartets_at_least_0.70": false,
+      "null_both_heldout_at_most_0.25": false,
+      "primary_minus_null_at_least_0.60": false
+    },
+    "verdict": "not_qualified"
+  },
+  "distinct_training_family_counts": {
+    "F": 607,
+    "G": 623
+  },
+  "evaluation_duplicate_token_counts": {
+    "composed_holdout_holdout": 2,
+    "composed_holdout_train": 0,
+    "composed_train_holdout": 0,
+    "composed_train_train": 0,
+    "copy": 0,
+    "direct": 0,
+    "factorial": 2
+  },
+  "experiment": "TEACH-0001",
+  "limitations": [
+    "No per-example predictions or logits were saved, so checkpoint outputs cannot be independently rescored without model inference.",
+    "Training stream is reconstructed from frozen source and seeds, not compared with per-step saved prompt hashes.",
+    "Wilson intervals treat generated episodes as iid; repeated episodes/families make them descriptive."
+  ],
+  "source_git_head": "1d66cffad9827200ccaf6fcd5d17667f0d6b9f1b",
+  "theoretical_null_uniform_composed_two_choice_direct_loss": 1.594238515287874,
+  "theoretical_primary_two_choice_mixture_loss": 0.6238324625039507,
+  "training_episode_count": 320000,
+  "training_target_counts": {
+    "null": {
+      "24": 40096,
+      "25": 39974,
+      "26": 39683,
+      "27": 39748,
+      "28": 39803,
+      "29": 40392,
+      "30": 39890,
+      "31": 40414
+    },
+    "primary": {
+      "24": 40669,
+      "25": 41392,
+      "26": 38570,
+      "27": 38933,
+      "28": 38601,
+      "29": 41112,
+      "30": 39734,
+      "31": 40989
+    }
+  },
+  "training_task_counts": {
+    "composed": 223846,
+    "copy": 32016,
+    "direct": 64138
+  }
+}
