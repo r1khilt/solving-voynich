@@ -24,6 +24,10 @@ THRESHOLDS = {
     "non_injection": .90, "mean_probability_gain": .35,
 }
 STRATA = ("all", "marked", "marker_free", "first_half", "second_half")
+STAGE_B_SECONDS = 7200.0
+CAMPAIGN_SECONDS = 14400.0
+MAX_CURRENT_BYTES = 24 * 1024**3
+MAX_TRAFFIC_BYTES = 300 * 1024**3
 
 
 class AuditError(ValueError):
@@ -44,7 +48,8 @@ def file_digest(path: Path) -> str:
 
 
 def load_rows(path: Path):
-    return json.loads(gzip.decompress(path.read_bytes()))
+    with gzip.open(path, "rt") as source:
+        return [json.loads(line) for line in source if line.strip()]
 
 
 def effect(rows):
@@ -172,6 +177,61 @@ def secondary_selection(rows, labels, expected_groups, family):
             "candidates": table, "selection": selection}
 
 
+def path_selection(rows, labels, expected_groups, destinations=("query", "answer")):
+    label_index = {label: index for index, label in enumerate(labels)}
+    destination_index = {label: index for index, label in enumerate(destinations)}
+    cells = defaultdict(list)
+    for row in rows:
+        need(row["early_cut_index"] < row["late_cut_index"], "Unordered path cuts")
+        key = (row["replicate"], row["early_cut_index"], row["source_label"],
+               row["late_cut_index"], row["destination_label"])
+        cells[key].append(row)
+    candidates = sorted({key[1:] for key in cells}, key=lambda row: (
+        row[0], row[2], label_index[row[1]], destination_index[row[3]]))
+    table, qualified = {}, []
+    for early, source, late, destination in candidates:
+        by_seed = {}
+        for replicate in (0, 1):
+            key = (replicate, early, source, late, destination)
+            need(key in cells, "Missing path seed cell")
+            by_seed[str(replicate)] = {
+                name: effect(selected) if (selected := stratum(cells[key], name)) else None
+                for name in STRATA}
+        complete = all(
+            metrics["all"] is not None and metrics["all"]["groups"] == 2 * expected_groups
+            and metrics["marked"] is not None and metrics["marked"]["groups"] == expected_groups
+            and metrics["marker_free"] is not None
+            and metrics["marker_free"]["groups"] == expected_groups
+            for metrics in by_seed.values())
+        qualifies = complete and all(
+            value is not None
+            and value["item_accuracy"] >= THRESHOLDS["item_accuracy"]
+            and value["group_accuracy"] >= THRESHOLDS["group_accuracy"]
+            and value["non_injection"] >= THRESHOLDS["non_injection"]
+            and value["mean_probability_gain"] >= THRESHOLDS["mean_probability_gain"]
+            for metrics in by_seed.values() for value in metrics.values())
+        entry = {"early_cut_index": early, "source_label": source,
+                 "late_cut_index": late, "destination_label": destination,
+                 "qualified": qualifies, "by_seed": by_seed}
+        table[f"{early}:{source}->{late}:{destination}"] = entry
+        if qualifies:
+            qualified.append(entry)
+    if qualified:
+        chosen = sorted(qualified, key=lambda row: (
+            row["early_cut_index"], row["late_cut_index"],
+            label_index[row["source_label"]],
+            destination_index[row["destination_label"]]))[0]
+        selection = {key: value for key, value in chosen.items() if key != "by_seed"}
+    else:
+        selection = None
+    return {"thresholds": THRESHOLDS, "strata": list(STRATA),
+            "expected_groups_per_render": expected_groups,
+            "semantic_label_order": list(labels),
+            "destination_order": list(destinations),
+            "ordering_rule": "earlier_cut_then_later_cut_then_source_then_destination",
+            "candidates": table, "selection": selection}
+
+
 def validate_row(row, *, family, replicate, labels, group_ids, sites):
     required = {"family", "replicate", "cut_index", "site", "semantic_label",
                 "group_id", "logical_group_id", "recipient", "render_stratum",
@@ -227,6 +287,7 @@ def audit(manifest_path: Path, discovery_path: Path, output_path: Path):
         need(qualification["qualified"] is True
              and qualification["finite"] is True
              and qualification["maximum_identity_logit_error"] < 1e-6
+             and qualification["maximum_fused_instrumented_logit_error"] < 1e-6
              and qualification["maximum_probability_normalization_error"] <= 1e-6
              and set(qualification["identity_errors"]) == set(sites),
              f"Numerical qualification failed for replicate {replicate}")
@@ -265,6 +326,125 @@ def audit(manifest_path: Path, discovery_path: Path, output_path: Path):
     return result
 
 
+def audit_path(manifest_path: Path, residual_path: Path, residual_audit_path: Path,
+               path_path: Path, output_path: Path):
+    manifest = json.loads(manifest_path.read_text())
+    residual = json.loads(residual_path.read_text())
+    residual_audit = json.loads(residual_audit_path.read_text())
+    report = json.loads(path_path.read_text())
+    need(residual.get("status") == "stage_b_residual_complete_path_pending"
+         and residual_audit.get("audit") == "pass"
+         and residual_audit.get("discovery_decision_sha256") == file_digest(residual_path),
+         "Path audit lacks a valid residual prerequisite")
+    need(report.get("residual_decision_sha256") == file_digest(residual_path)
+         and report.get("residual_audit_sha256") == file_digest(residual_audit_path),
+         "Path report prerequisite hashes mismatch")
+    benchmark_path = path_path.parent / "path-benchmark.json"
+    benchmark = json.loads(benchmark_path.read_text())
+    need(report.get("path_benchmark_sha256") == file_digest(benchmark_path)
+         and benchmark.get("status") == "pass" and benchmark.get("groups") == 8,
+         "Path benchmark hash/status mismatch")
+    scale = manifest["split_counts"]["discovery"] / benchmark["groups"] * 2 * 1.5
+    projection = {
+        "scale": scale,
+        "conservative_projected_path_seconds": benchmark["elapsed_seconds"] * scale,
+        "projected_path_materialized_bytes": int(
+            benchmark["measured_materialized_bytes"] * scale),
+        "remaining_stage_b_seconds": STAGE_B_SECONDS - residual["elapsed_seconds"],
+        "remaining_campaign_seconds": CAMPAIGN_SECONDS - residual["elapsed_seconds"],
+        "stage_b_pass": benchmark["elapsed_seconds"] * scale
+        <= STAGE_B_SECONDS - residual["elapsed_seconds"],
+        "campaign_pass": benchmark["elapsed_seconds"] * scale
+        <= CAMPAIGN_SECONDS - residual["elapsed_seconds"],
+        "traffic_pass": int(benchmark["measured_materialized_bytes"] * scale)
+        + residual["materialized_activation_bytes"] <= MAX_TRAFFIC_BYTES,
+    }
+    need(benchmark.get("projection") == projection
+         and benchmark.get("peak_sampled_current_allocated_bytes", MAX_CURRENT_BYTES + 1)
+         <= MAX_CURRENT_BYTES, "Path benchmark decision does not recompute")
+    labels = tuple(residual["residual_selection"]["semantic_label_order"])
+    group_ids = set(manifest["group_ids"]["discovery"])
+    sites = tuple(["embed"] + [f"blocks.{index}.resid_post" for index in range(12)])
+    rows_all, verified = [], {}
+    required = {"family", "replicate", "early_cut_index", "early_site", "source_label",
+                "late_cut_index", "late_site", "destination_label", "group_id",
+                "logical_group_id", "recipient", "render_stratum", "position_stratum",
+                "target", "prediction", "base_prediction", "base_answer",
+                "base_correct", "preserves_base_prediction", "preserves_base_answer",
+                "fixed_donor_answer", "candidate_member", "wrong_destination",
+                "target_probability", "base_target_probability", "target_logit",
+                "base_target_logit", "prediction_logit"}
+    for replicate in ("0", "1"):
+        metadata = report["artifacts"][replicate]
+        path = ROOT / metadata["path"]
+        need(path.is_file() and path.stat().st_size == metadata["bytes"]
+             and file_digest(path) == metadata["sha256"], "Path row artifact mismatch")
+        rows = load_rows(path)
+        need(len(rows) == metadata["rows"], "Path row count mismatch")
+        for row in rows:
+            need(set(row) == required and row["family"] == "f_content_path"
+                 and row["replicate"] == int(replicate), "Path row fields changed")
+            need(0 <= row["early_cut_index"] < row["late_cut_index"] < len(sites)
+                 and row["early_site"] == sites[row["early_cut_index"]]
+                 and row["late_site"] == sites[row["late_cut_index"]],
+                 "Path row cut/site mismatch")
+            need(row["source_label"] in labels
+                 and row["destination_label"] in ("query", "answer")
+                 and row["logical_group_id"] in group_ids
+                 and row["group_id"].startswith(row["logical_group_id"] + ":"),
+                 "Path row identity mismatch")
+            need(row["base_correct"] == (row["base_prediction"] == row["base_answer"])
+                 and row["preserves_base_prediction"]
+                 == (row["prediction"] == row["base_prediction"])
+                 and row["preserves_base_answer"]
+                 == (row["prediction"] == row["base_answer"]),
+                 "Path base-preservation flags disagree")
+            for name in ("target_probability", "base_target_probability"):
+                need(type(row[name]) in (int, float) and math.isfinite(row[name])
+                     and 0 <= row[name] <= 1, "Bad path probability")
+            for name in ("target_logit", "base_target_logit", "prediction_logit"):
+                need(type(row[name]) in (int, float) and math.isfinite(row[name]),
+                     "Bad path logit")
+        rows_all.extend(rows)
+        verified[replicate] = metadata["sha256"]
+    selected = path_selection(
+        rows_all, labels, manifest["split_counts"]["discovery"])
+    need(selected == report["path_selection"], "Two-site path selection does not recompute")
+    numerical = report.get("path_numerical_qualification", {})
+    if selected["selection"]:
+        need(set(numerical) == {"0", "1"}, "Missing selected-path numerical seeds")
+        numerical_pass = True
+        for replicate, row in numerical.items():
+            need(set(row["by_render"]) == {"marked", "marker_free"}
+                 and row["finite"] is True
+                 and row["maximum_logit_error"] == max(
+                     value for render in row["by_render"].values()
+                     for value in render.values())
+                 and row["qualified"] == (row["maximum_logit_error"] < 1e-6),
+                 f"Bad selected-path numerical record seed {replicate}")
+            numerical_pass = numerical_pass and row["qualified"]
+    else:
+        need(numerical == {}, "No-path outcome has numerical records")
+        numerical_pass = True
+    expected_status = ("stage_b_path_numerical_inconclusive" if selected["selection"]
+                       and not numerical_pass else "stage_b_path_complete"
+                       if selected["selection"] else
+                       "stage_b_no_static_or_two_site_mediator")
+    need(report.get("status") == expected_status, "Path status disagrees with selection")
+    need(report["cumulative_stage_b_seconds"]
+         == residual["elapsed_seconds"] + report["elapsed_seconds"]
+         and report["cumulative_stage_b_materialized_bytes"]
+         == residual["materialized_activation_bytes"]
+         + report["materialized_activation_bytes"],
+         "Cumulative Stage-B resources do not reconcile")
+    result = {"audit": "pass", "experiment": "TEACH-0013", "scope": "path_discovery",
+              "status": expected_status, "path_decision_sha256": file_digest(path_path),
+              "verified_row_archives": verified, "selection": selected["selection"]}
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path,
@@ -273,8 +453,15 @@ def main():
                         default=ROOT / "results/TEACH-0013/discovery-decision.json")
     parser.add_argument("--output", type=Path,
                         default=ROOT / "results/TEACH-0013/discovery-audit.json")
+    parser.add_argument("--path-decision", type=Path)
+    parser.add_argument("--residual-audit", type=Path,
+                        default=ROOT / "results/TEACH-0013/discovery-audit.json")
     args = parser.parse_args()
-    print(json.dumps(audit(args.manifest, args.discovery, args.output), indent=2, sort_keys=True))
+    result = (audit_path(args.manifest, args.discovery, args.residual_audit,
+                         args.path_decision, args.output)
+              if args.path_decision is not None
+              else audit(args.manifest, args.discovery, args.output))
+    print(json.dumps(result, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":

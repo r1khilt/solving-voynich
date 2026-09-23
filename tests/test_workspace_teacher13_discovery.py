@@ -11,6 +11,8 @@ from voynich.workspace.teacher13_discovery import (
     residual_numerical_qualification,
     residual_screen,
     screen_conditions,
+    two_site_identity_qualification,
+    two_site_path_screen,
 )
 from voynich.workspace.teacher13_tasks import counterfactual_suite
 
@@ -79,6 +81,37 @@ def test_residual_identity_numerical_gate_covers_every_requested_cut():
     result = residual_numerical_qualification(
         model_for_arm("raw_shallow").eval(), records,
         sites=("embed", "blocks.0.resid_post"))
-    assert result["qualified"]
     assert set(result["identity_errors"]) == {"embed", "blocks.0.resid_post"}
     assert result["maximum_identity_logit_error"] < 1e-6
+    assert result["qualified"] == (
+        result["maximum_fused_instrumented_logit_error"] < 1e-6)
+
+
+def test_two_site_path_screen_keeps_full_recipient_and_render_denominators():
+    records = _records()
+    torch.manual_seed(33)
+    rows = two_site_path_screen(
+        model_for_arm("raw_shallow").eval(), records, replicate=0,
+        sites=("embed", "blocks.0.resid_post"),
+        source_labels=("queried_f.right",), destination_labels=("query",))
+    assert len(rows) == 2 * 3
+    assert {(row["render_stratum"], row["recipient"]) for row in rows} == {
+        (render, recipient) for render in ("marked", "marker_free")
+        for recipient in range(3)}
+    assert all(row["early_cut_index"] == 0 and row["late_cut_index"] == 1
+               and row["source_label"] == "queried_f.right"
+               and row["destination_label"] == "query" for row in rows)
+
+
+def test_two_site_self_donor_is_numerically_identity():
+    records = _records()
+    torch.manual_seed(34)
+    result = two_site_identity_qualification(
+        model_for_arm("raw_shallow").eval(), records,
+        early_site="embed", source_label="queried_f.right",
+        late_site="blocks.0.resid_post", destination_label="query")
+    assert all(row["maximum_propagated_logit_error"] < 1e-6
+               and row["maximum_path_logit_error"] < 1e-6
+               for row in result["by_render"].values())
+    assert result["qualified"] == (result["maximum_logit_error"] < 1e-6)
+    assert result["materialized_bytes"] > 0

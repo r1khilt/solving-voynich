@@ -7,6 +7,7 @@ from pathlib import Path
 from voynich.workspace.teacher13_score import (
     rank_secondary_residual_sites,
     select_residual_site,
+    select_two_site_path,
 )
 
 
@@ -62,3 +63,18 @@ def test_independent_secondary_ranking_matches_registered_implementation():
     labels = ["answer", "query"]
     expected = rank_secondary_residual_sites(rows, tuple(labels), expected_groups=8)
     assert auditor.secondary_selection(rows, labels, 8, "g_content") == normalized(expected)
+
+
+def test_independent_path_selection_matches_registered_implementation():
+    rows = []
+    for replicate in (0, 1):
+        candidate = _rows(
+            family="f_content_path", replicate=replicate, cut=0,
+            label="queried_f.right")
+        for row in candidate:
+            row.update({"early_cut_index": 0, "source_label": "queried_f.right",
+                        "late_cut_index": 2, "destination_label": "query"})
+        rows.extend(candidate)
+    labels = ["queried_f.right"]
+    expected = select_two_site_path(rows, tuple(labels), expected_groups_per_render=4)
+    assert auditor.path_selection(rows, labels, 4) == normalized(expected)

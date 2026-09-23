@@ -159,6 +159,13 @@ later cut, then patch or retain the propagated later write according to the save
 Select the earliest path meeting the same thresholds. No paths with more than two sites are
 eligible in the primary registration.
 
+Because this conditional grid is much larger than the single-site grid, first benchmark the full
+registered path grid on the first eight discovery groups and seed0. Scale measured time and
+materialized traffic by group count, both seeds and the same 1.5 factor. Run the complete path grid
+only if that projection fits the unused portion of the two-hour Stage-B ceiling, the four-hour
+campaign ceiling and the cumulative 300 GB traffic ceiling. The path benchmark may stop the search;
+it may not reduce endpoints, cuts, recipients or render strata.
+
 If neither a single site nor an ordered two-site path qualifies, freeze `NO STATIC/TWO-SITE
 MEDIATOR` before opening confirmation. Later head analysis may describe dynamic routing but cannot
 produce the primary key-mediator label.
@@ -342,6 +349,7 @@ Before scoring scientific gates, require in every seed and relevant condition:
 
 - identity residual replacement reproduces native logits with maximum absolute error below
   `1e-6`;
+- fused and fully instrumented forward paths differ in logits by less than `1e-6`;
 - manual attention-head reconstruction and summed source contributions differ from native head
   results by less than `1e-6`;
 - the full projected source delta matches the complete attention delta below `1e-6`;

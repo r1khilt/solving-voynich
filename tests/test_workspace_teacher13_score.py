@@ -8,6 +8,7 @@ from voynich.workspace.teacher13_score import (
     rank_secondary_residual_sites,
     recipient_transfer_decision,
     select_residual_site,
+    select_two_site_path,
 )
 
 
@@ -90,6 +91,26 @@ def test_secondary_ranking_maximizes_worst_seed_before_using_earlier_cut():
         rows, ("query", "answer"), expected_groups=20)
     assert result["selection"]["cut_index"] == 2
     assert result["selection"]["semantic_label"] == "answer"
+
+
+def test_two_site_selection_uses_registered_path_order_not_largest_effect():
+    rows = []
+    for replicate in (0, 1):
+        early = _site_rows(replicate=replicate, cut=0, label="queried_f.right", gain=.4)
+        later = _site_rows(replicate=replicate, cut=0, label="matched_g.right", gain=.8)
+        for row in early:
+            row.update({"early_cut_index": 0, "source_label": "queried_f.right",
+                        "late_cut_index": 3, "destination_label": "query"})
+        for row in later:
+            row.update({"early_cut_index": 1, "source_label": "matched_g.right",
+                        "late_cut_index": 2, "destination_label": "answer"})
+        rows.extend(early + later)
+    result = select_two_site_path(
+        rows, ("queried_f.right", "matched_g.right"), expected_groups_per_render=10)
+    assert result["selection"] == {
+        "early_cut_index": 0, "source_label": "queried_f.right",
+        "late_cut_index": 3, "destination_label": "query", "qualified": True,
+    }
 
 
 def test_stage_a_and_stage_c_decisions_are_conjunctive_across_seeds():

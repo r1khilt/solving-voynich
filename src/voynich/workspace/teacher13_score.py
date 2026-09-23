@@ -201,6 +201,59 @@ def rank_secondary_residual_sites(rows: list[dict], semantic_label_order: tuple[
             "candidates": table, "selection": selection}
 
 
+def select_two_site_path(rows: list[dict], semantic_label_order: tuple[str, ...], *,
+                         expected_groups_per_render: int = 128,
+                         destination_order: tuple[str, ...] = ("query", "answer")) -> dict:
+    """Select the first fully qualifying registered early-to-late residual path."""
+    if not rows:
+        raise ValueError("No two-site path rows")
+    label_index = {name: index for index, name in enumerate(semantic_label_order)}
+    destination_index = {name: index for index, name in enumerate(destination_order)}
+    cells = defaultdict(list)
+    for row in rows:
+        source, destination = row["source_label"], row["destination_label"]
+        if source not in label_index or destination not in destination_index:
+            raise ValueError("Unregistered path endpoint label")
+        if row["early_cut_index"] >= row["late_cut_index"]:
+            raise ValueError("Path cuts are not ordered")
+        key = (row["replicate"], row["early_cut_index"], source,
+               row["late_cut_index"], destination)
+        cells[key].append(row)
+    candidates = sorted({key[1:] for key in cells}, key=lambda row: (
+        row[0], row[2], label_index[row[1]], destination_index[row[3]]))
+    table, qualified = {}, []
+    for early_cut, source, late_cut, destination in candidates:
+        by_seed = {}
+        for replicate in (0, 1):
+            key = (replicate, early_cut, source, late_cut, destination)
+            if key not in cells:
+                raise ValueError(f"Missing path seed cell: {key}")
+            by_seed[str(replicate)] = candidate_metrics(cells[key])
+        is_qualified = all(metrics_qualify(
+            seed, expected_groups_per_render=expected_groups_per_render)
+            for seed in by_seed.values())
+        entry = {"early_cut_index": early_cut, "source_label": source,
+                 "late_cut_index": late_cut, "destination_label": destination,
+                 "qualified": is_qualified, "by_seed": by_seed}
+        key = f"{early_cut}:{source}->{late_cut}:{destination}"
+        table[key] = entry
+        if is_qualified:
+            qualified.append(entry)
+    if qualified:
+        selected = sorted(qualified, key=lambda row: (
+            row["early_cut_index"], row["late_cut_index"],
+            label_index[row["source_label"]], destination_index[row["destination_label"]]))[0]
+        selection = {key: value for key, value in selected.items() if key != "by_seed"}
+    else:
+        selection = None
+    return {"thresholds": DISCOVERY_THRESHOLDS, "strata": DISCOVERY_STRATA,
+            "expected_groups_per_render": expected_groups_per_render,
+            "semantic_label_order": semantic_label_order,
+            "destination_order": destination_order,
+            "ordering_rule": "earlier_cut_then_later_cut_then_source_then_destination",
+            "candidates": table, "selection": selection}
+
+
 def fresh_panel_decision(scores: dict) -> dict:
     """Conjunctive Stage-A confirmation competence gate for both raw-deep seeds."""
     required = {

@@ -14,12 +14,19 @@ import torch
 from voynich.workspace.teacher13_discovery import (
     fresh_panel_scores,
     load_suite,
+    relation_endpoint_labels,
     residual_numerical_qualification,
     residual_screen,
     screen_conditions,
+    two_site_identity_qualification,
+    two_site_path_screen,
 )
 from voynich.workspace.teacher13_intervene import load_raw_checkpoint
-from voynich.workspace.teacher13_score import rank_secondary_residual_sites, select_residual_site
+from voynich.workspace.teacher13_score import (
+    rank_secondary_residual_sites,
+    select_residual_site,
+    select_two_site_path,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -114,6 +121,24 @@ def benchmark_projection(elapsed_seconds: float, *, benchmark_groups: int,
             "traffic_pass": projected_bytes <= MAX_TRAFFIC_BYTES}
 
 
+def conditional_path_projection(elapsed_seconds: float, materialized_bytes: int, *,
+                                benchmark_groups: int, discovery_groups: int,
+                                residual_seconds: float, residual_bytes: int) -> dict:
+    if min(elapsed_seconds, benchmark_groups, discovery_groups) <= 0 \
+            or min(materialized_bytes, residual_seconds, residual_bytes) < 0:
+        raise ValueError("Conditional path projection inputs are invalid")
+    scale = discovery_groups / benchmark_groups * 2 * 1.5
+    seconds = elapsed_seconds * scale
+    traffic = int(materialized_bytes * scale)
+    return {"scale": scale, "conservative_projected_path_seconds": seconds,
+            "projected_path_materialized_bytes": traffic,
+            "remaining_stage_b_seconds": STAGE_B_SECONDS - residual_seconds,
+            "remaining_campaign_seconds": CAMPAIGN_SECONDS - residual_seconds,
+            "stage_b_pass": seconds <= STAGE_B_SECONDS - residual_seconds,
+            "campaign_pass": seconds <= CAMPAIGN_SECONDS - residual_seconds,
+            "traffic_pass": traffic + residual_bytes <= MAX_TRAFFIC_BYTES}
+
+
 def tree_bytes(path: Path) -> int:
     return sum(item.stat().st_size for item in path.rglob("*") if item.is_file()) \
         if path.exists() else 0
@@ -206,9 +231,216 @@ def benchmark(result_dir: Path, output_dir: Path, device: str):
 
 
 def _write_rows(path: Path, rows: list[dict]) -> str:
-    raw = stable_json(rows)
-    path.write_bytes(gzip.compress(raw, compresslevel=9, mtime=0))
+    with path.open("wb") as raw:
+        with gzip.GzipFile(filename="", fileobj=raw, mode="wb", compresslevel=9,
+                           mtime=0) as compressed:
+            for row in rows:
+                compressed.write(stable_json(row) + b"\n")
     return sha_file(path)
+
+
+def _read_rows(path: Path) -> list[dict]:
+    with gzip.open(path, "rt") as source:
+        return [json.loads(line) for line in source if line.strip()]
+
+
+def load_path_prerequisites(result_dir: Path, manifest: dict, provenance: dict):
+    decision_path = result_dir / "discovery-decision.json"
+    audit_path = result_dir / "discovery-audit.json"
+    decision, audit = json.loads(decision_path.read_text()), json.loads(audit_path.read_text())
+    if decision.get("status") != "stage_b_residual_complete_path_pending" \
+            or decision.get("residual_selection", {}).get("selection") is not None:
+        raise RuntimeError("Two-site search is allowed only after no residual site qualifies")
+    if audit.get("audit") != "pass" or audit.get("scope") != "residual_discovery" \
+            or audit.get("discovery_decision_sha256") != sha_file(decision_path):
+        raise RuntimeError("Passing matching independent residual-discovery audit required")
+    if decision.get("suite_gzip_sha256") != manifest["suite_gzip_sha256"] \
+            or decision.get("campaign_source_sha256") != provenance["campaign_source_sha256"]:
+        raise RuntimeError("Residual decision provenance mismatch")
+    return decision, decision_path, audit_path
+
+
+def path_benchmark(result_dir: Path, output_dir: Path, device: str):
+    report_path = result_dir / "path-benchmark.json"
+    if report_path.exists():
+        raise FileExistsError("No automatic TEACH-0013 path benchmark overwrite")
+    manifest, suite, provenance = load_frozen(result_dir, output_dir)
+    residual, decision_path, audit_path = load_path_prerequisites(
+        result_dir, manifest, provenance)
+    groups = suite["splits"]["discovery"][:8]
+    net, metadata = load_raw_checkpoint(checkpoint_path(manifest, "0"), device=device)
+    if metadata["arm"] != "raw_deep" or metadata["step"] != 8000:
+        raise RuntimeError("Path benchmark requires the final raw-deep checkpoint")
+    peak, traffic = {"current": 0, "driver": 0}, {"bytes": 0}
+
+    def probe():
+        if device == "mps":
+            peak["current"] = max(peak["current"], int(torch.mps.current_allocated_memory()))
+            peak["driver"] = max(peak["driver"], int(torch.mps.driver_allocated_memory()))
+
+    def count_traffic(value):
+        traffic["bytes"] += int(value)
+
+    if device == "mps":
+        torch.mps.synchronize()
+        probe()
+    start = time.monotonic()
+    rows = two_site_path_screen(
+        net, groups, replicate=0, device=device,
+        source_labels=relation_endpoint_labels(suite["semantic_label_order"]),
+        resource_probe=probe, traffic_probe=count_traffic)
+    if device == "mps":
+        torch.mps.synchronize()
+        probe()
+    elapsed = time.monotonic() - start
+    projection = conditional_path_projection(
+        elapsed, traffic["bytes"], benchmark_groups=len(groups),
+        discovery_groups=len(suite["splits"]["discovery"]),
+        residual_seconds=residual["elapsed_seconds"],
+        residual_bytes=residual["materialized_activation_bytes"])
+    passed = (projection["stage_b_pass"] and projection["campaign_pass"]
+              and projection["traffic_pass"] and peak["current"] <= MAX_CURRENT_BYTES)
+    report = {
+        "experiment": "TEACH-0013", "mode": "path_benchmark",
+        "status": "pass" if passed else "stop", "groups": len(groups),
+        "rows_generated": len(rows), "elapsed_seconds": elapsed,
+        "projection": projection,
+        "measured_materialized_bytes": traffic["bytes"],
+        "peak_sampled_current_allocated_bytes": peak["current"],
+        "peak_sampled_driver_allocated_bytes": peak["driver"],
+        "residual_decision_sha256": sha_file(decision_path),
+        "residual_audit_sha256": sha_file(audit_path),
+        "suite_gzip_sha256": manifest["suite_gzip_sha256"], **provenance,
+    }
+    report_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+    return report
+
+
+def validate_path_benchmark(report: dict, residual: dict, manifest: dict,
+                            provenance: dict) -> None:
+    expected = conditional_path_projection(
+        report["elapsed_seconds"], report["measured_materialized_bytes"],
+        benchmark_groups=report["groups"],
+        discovery_groups=manifest["split_counts"]["discovery"],
+        residual_seconds=residual["elapsed_seconds"],
+        residual_bytes=residual["materialized_activation_bytes"])
+    passed = (expected["stage_b_pass"] and expected["campaign_pass"]
+              and expected["traffic_pass"]
+              and report["peak_sampled_current_allocated_bytes"] <= MAX_CURRENT_BYTES)
+    if report.get("groups") != 8 or report.get("projection") != expected \
+            or report.get("status") != ("pass" if passed else "stop") \
+            or report.get("suite_gzip_sha256") != manifest["suite_gzip_sha256"] \
+            or report.get("campaign_source_sha256") != provenance["campaign_source_sha256"]:
+        raise RuntimeError("Conditional path benchmark does not recompute")
+
+
+def path_discovery(result_dir: Path, output_dir: Path, device: str):
+    report_path = result_dir / "path-decision.json"
+    if report_path.exists():
+        raise FileExistsError("No automatic TEACH-0013 path discovery overwrite")
+    manifest, suite, provenance = load_frozen(result_dir, output_dir)
+    residual, decision_path, audit_path = load_path_prerequisites(
+        result_dir, manifest, provenance)
+    benchmark_path = result_dir / "path-benchmark.json"
+    benchmark = json.loads(benchmark_path.read_text())
+    validate_path_benchmark(benchmark, residual, manifest, provenance)
+    if benchmark.get("status") != "pass" \
+            or benchmark.get("residual_decision_sha256") != sha_file(decision_path) \
+            or benchmark.get("residual_audit_sha256") != sha_file(audit_path) \
+            or benchmark.get("campaign_source_sha256") != provenance["campaign_source_sha256"]:
+        raise RuntimeError("Passing matching path benchmark required")
+    groups = suite["splits"]["discovery"]
+    artifacts = {}
+    start = time.monotonic()
+    peak, traffic = {"current": 0, "driver": 0}, {"bytes": 0}
+    remaining = STAGE_B_SECONDS - residual["elapsed_seconds"]
+
+    def probe():
+        if device == "mps":
+            peak["current"] = max(peak["current"], int(torch.mps.current_allocated_memory()))
+            peak["driver"] = max(peak["driver"], int(torch.mps.driver_allocated_memory()))
+        if time.monotonic() - start > remaining:
+            raise RuntimeError("TEACH-0013 conditional path wall-time ceiling exceeded")
+        if peak["current"] > MAX_CURRENT_BYTES:
+            raise RuntimeError("TEACH-0013 path sampled MPS allocation ceiling exceeded")
+        if traffic["bytes"] + residual["materialized_activation_bytes"] > MAX_TRAFFIC_BYTES:
+            raise RuntimeError("TEACH-0013 cumulative Stage-B traffic ceiling exceeded")
+
+    def count_traffic(value):
+        traffic["bytes"] += int(value)
+
+    for replicate in ("0", "1"):
+        net, metadata = load_raw_checkpoint(checkpoint_path(manifest, replicate), device=device)
+        if metadata["arm"] != "raw_deep" or metadata["step"] != 8000:
+            raise RuntimeError("Path discovery requires final raw-deep checkpoints")
+        rows = two_site_path_screen(
+            net, groups, replicate=int(replicate), device=device,
+            source_labels=relation_endpoint_labels(suite["semantic_label_order"]),
+            resource_probe=probe, traffic_probe=count_traffic)
+        path = result_dir / f"path-rows-rep{replicate}.jsonl.gz"
+        artifacts[replicate] = {"path": str(path.relative_to(ROOT)),
+                                "sha256": _write_rows(path, rows),
+                                "rows": len(rows), "bytes": path.stat().st_size}
+        probe()
+        if tree_bytes(result_dir) > MAX_RESULT_BYTES:
+            raise RuntimeError("TEACH-0013 path tracked-artifact ceiling exceeded")
+        if device == "mps":
+            torch.mps.synchronize()
+            del net
+            torch.mps.empty_cache()
+    rows_all = [row for replicate in ("0", "1")
+                for row in _read_rows(ROOT / artifacts[replicate]["path"])]
+    selection = select_two_site_path(
+        rows_all, tuple(suite["semantic_label_order"]),
+        expected_groups_per_render=len(groups))
+    del rows_all
+    path_numerical = {}
+    if selection["selection"]:
+        selected = selection["selection"]
+        raw_sites = tuple(["embed"] + [f"blocks.{index}.resid_post" for index in range(12)])
+        for replicate in ("0", "1"):
+            net, _ = load_raw_checkpoint(checkpoint_path(manifest, replicate), device=device)
+            path_numerical[replicate] = two_site_identity_qualification(
+                net, groups, early_site=raw_sites[selected["early_cut_index"]],
+                source_label=selected["source_label"],
+                late_site=raw_sites[selected["late_cut_index"]],
+                destination_label=selected["destination_label"], device=device)
+            count_traffic(path_numerical[replicate]["materialized_bytes"])
+            probe()
+            if device == "mps":
+                torch.mps.synchronize()
+                del net
+                torch.mps.empty_cache()
+    elapsed = time.monotonic() - start
+    output_bytes, result_bytes = tree_bytes(output_dir), tree_bytes(result_dir)
+    if output_bytes > MAX_OUTPUT_BYTES or result_bytes > MAX_RESULT_BYTES \
+            or elapsed > remaining:
+        raise RuntimeError("TEACH-0013 conditional path resource ceiling exceeded")
+    numerical_pass = (not selection["selection"] or all(
+        row["qualified"] for row in path_numerical.values()))
+    status = ("stage_b_path_numerical_inconclusive" if selection["selection"]
+              and not numerical_pass else "stage_b_path_complete" if selection["selection"]
+              else "stage_b_no_static_or_two_site_mediator")
+    report = {
+        "experiment": "TEACH-0013", "mode": "path_discovery", "status": status,
+        "suite_gzip_sha256": manifest["suite_gzip_sha256"],
+        "residual_decision_sha256": sha_file(decision_path),
+        "residual_audit_sha256": sha_file(audit_path),
+        "path_benchmark_sha256": sha_file(benchmark_path),
+        "path_selection": selection, "path_numerical_qualification": path_numerical,
+        "artifacts": artifacts,
+        "elapsed_seconds": elapsed,
+        "cumulative_stage_b_seconds": residual["elapsed_seconds"] + elapsed,
+        "materialized_activation_bytes": traffic["bytes"],
+        "cumulative_stage_b_materialized_bytes": (
+            residual["materialized_activation_bytes"] + traffic["bytes"]),
+        "peak_sampled_current_allocated_bytes": peak["current"],
+        "peak_sampled_driver_allocated_bytes": peak["driver"],
+        "ignored_output_bytes": output_bytes, "tracked_result_bytes": result_bytes,
+        **provenance,
+    }
+    report_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+    return report
 
 
 def discovery(result_dir: Path, output_dir: Path, device: str):
@@ -222,8 +454,7 @@ def discovery(result_dir: Path, output_dir: Path, device: str):
     if benchmark_report.get("status") != "pass":
         raise RuntimeError("Passing matching TEACH-0013 benchmark required")
     groups = suite["splits"]["discovery"]
-    primary_rows, clean, artifacts, numerical = [], {}, {}, {}
-    secondary_rows = {family: [] for family in SECONDARY_FAMILIES}
+    clean, artifacts, numerical = {}, {}, {}
     start = time.monotonic()
     peak = {"current": 0, "driver": 0}
     traffic = {"bytes": 0}
@@ -256,29 +487,30 @@ def discovery(result_dir: Path, output_dir: Path, device: str):
                 net, groups, replicate=int(replicate), device=device,
                 labels=suite["semantic_label_order"], resource_probe=probe,
                 traffic_probe=count_traffic, family=family)
-            path = result_dir / f"discovery-rows-rep{replicate}-{family}.json.gz"
+            path = result_dir / f"discovery-rows-rep{replicate}-{family}.jsonl.gz"
             artifacts[replicate][family] = {
                 "path": str(path.relative_to(ROOT)), "sha256": _write_rows(path, rows),
                 "rows": len(rows), "bytes": path.stat().st_size}
-            if family == "f_content":
-                primary_rows.extend(rows)
-            else:
-                secondary_rows[family].extend(rows)
             probe()
         if device == "mps":
             torch.mps.synchronize()
             probe()
             del net
             torch.mps.empty_cache()
+    primary_rows = [row for replicate in ("0", "1")
+                    for row in _read_rows(ROOT / artifacts[replicate]["f_content"]["path"])]
     selection = select_residual_site(
         primary_rows, tuple(suite["semantic_label_order"]),
         expected_groups_per_render=len(groups))
-    secondary_selection = {
-        family: rank_secondary_residual_sites(
-            rows, tuple(suite["semantic_label_order"]),
+    del primary_rows
+    secondary_selection = {}
+    for family in SECONDARY_FAMILIES:
+        family_rows = [row for replicate in ("0", "1")
+                       for row in _read_rows(ROOT / artifacts[replicate][family]["path"])]
+        secondary_selection[family] = rank_secondary_residual_sites(
+            family_rows, tuple(suite["semantic_label_order"]),
             expected_groups=len(groups) * len(screen_conditions(family)))
-        for family, rows in secondary_rows.items()
-    }
+        del family_rows
     output_bytes, result_bytes = tree_bytes(output_dir), tree_bytes(result_dir)
     if output_bytes > MAX_OUTPUT_BYTES or result_bytes > MAX_RESULT_BYTES:
         raise RuntimeError("TEACH-0013 artifact ceiling exceeded")
@@ -308,16 +540,17 @@ def discovery(result_dir: Path, output_dir: Path, device: str):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("mode", choices=("benchmark", "discovery"))
+    parser.add_argument("mode", choices=(
+        "benchmark", "discovery", "path-benchmark", "path-discovery"))
     parser.add_argument("--result-dir", type=Path,
                         default=ROOT / "results/TEACH-0013")
     parser.add_argument("--output-dir", type=Path,
                         default=ROOT / "outputs/TEACH-0013")
     parser.add_argument("--device", choices=("mps", "cpu"), default="mps")
     args = parser.parse_args()
-    result = (benchmark(args.result_dir, args.output_dir, args.device)
-              if args.mode == "benchmark"
-              else discovery(args.result_dir, args.output_dir, args.device))
+    runners = {"benchmark": benchmark, "discovery": discovery,
+               "path-benchmark": path_benchmark, "path-discovery": path_discovery}
+    result = runners[args.mode](args.result_dir, args.output_dir, args.device)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

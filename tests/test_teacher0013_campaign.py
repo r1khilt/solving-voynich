@@ -1,8 +1,6 @@
 """Static resource and archive checks for the TEACH-0013 campaign runner."""
 
-import gzip
 import importlib.util
-import json
 from pathlib import Path
 
 
@@ -31,7 +29,18 @@ def test_row_archive_is_deterministic_and_roundtrips(tmp_path):
     left, right = tmp_path / "left.json.gz", tmp_path / "right.json.gz"
     assert campaign._write_rows(left, rows) == campaign._write_rows(right, rows)
     assert left.read_bytes() == right.read_bytes()
-    assert json.loads(gzip.decompress(left.read_bytes())) == rows
+    assert campaign._read_rows(left) == rows
+
+
+def test_conditional_path_projection_charges_remaining_stage_b_budget():
+    projection = campaign.conditional_path_projection(
+        10, 1000, benchmark_groups=8, discovery_groups=128,
+        residual_seconds=1000, residual_bytes=2000)
+    assert projection["scale"] == 48
+    assert projection["conservative_projected_path_seconds"] == 480
+    assert projection["projected_path_materialized_bytes"] == 48_000
+    assert projection["remaining_stage_b_seconds"] == 6200
+    assert projection["stage_b_pass"] and projection["campaign_pass"]
 
 
 def test_benchmark_decision_is_recomputed_before_discovery():

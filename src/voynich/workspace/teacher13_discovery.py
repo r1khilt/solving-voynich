@@ -3,13 +3,19 @@
 from collections.abc import Iterable
 import gzip
 import json
+import math
 from pathlib import Path
 
 import torch
 from torch import nn
 
 from .teacher12_tasks import SYMBOL_START, Episode
-from .teacher13_intervene import position_patch, raw_forward, residual_sites
+from .teacher13_intervene import (
+    ordered_two_site_patch,
+    position_patch,
+    raw_forward,
+    residual_sites,
+)
 from .teacher13_tasks import SemanticLayout, semantic_layout
 
 
@@ -178,10 +184,12 @@ def residual_numerical_qualification(net: nn.Module, groups: list[dict], *, devi
         "raw_deep" if len(net.core.blocks) == 12 else "raw_shallow")
     sites = tuple(residual_sites(arm) if sites is None else sites)
     episodes = tuple(_variant(groups[0], "base"))
+    fused = raw_forward(net, episodes, device=device)
     native = raw_forward(net, episodes, device=device, cache_names=sites)
-    if not torch.isfinite(native.logits).all() \
+    if not torch.isfinite(fused.logits).all() or not torch.isfinite(native.logits).all() \
             or any(not torch.isfinite(value).all() for value in native.cache.values()):
         raise FloatingPointError("Nonfinite native residual qualification tensor")
+    fused_error = float((fused.logits.float() - native.logits.float()).abs().max().item())
     probability = native.logits[:, SYMBOL_START:].float().softmax(-1)
     normalized_error = float((probability.sum(-1) - 1).abs().max().item())
     errors = {}
@@ -194,9 +202,11 @@ def residual_numerical_qualification(net: nn.Module, groups: list[dict], *, devi
         errors[site] = float((replay.logits.float() - native.logits.float()).abs().max().item())
     maximum = max(errors.values(), default=0.0)
     return {"identity_errors": errors, "maximum_identity_logit_error": maximum,
+            "maximum_fused_instrumented_logit_error": fused_error,
             "maximum_probability_normalization_error": normalized_error,
             "finite": True,
-            "qualified": maximum < 1e-6 and normalized_error <= 1e-6}
+            "qualified": maximum < 1e-6 and fused_error < 1e-6
+            and normalized_error <= 1e-6}
 
 
 def _has_label(layout: SemanticLayout, label: str) -> bool:
@@ -334,3 +344,208 @@ def residual_screen(net: nn.Module, groups: list[dict], *, replicate: int,
                     logit_sink(batch_metadata, symbol_logits.detach().cpu(),
                                clean_logits.detach().cpu())
     return rows
+
+
+def relation_endpoint_labels(labels: Iterable[str]) -> tuple[str, ...]:
+    """Registered logical-row endpoints eligible as early path sources."""
+    prefixes = ("queried_f.", "matched_g.", "other_f.", "other_g.",
+                "false_path_first.", "false_path_terminal.",
+                "distractor_first.", "distractor_second.")
+    return tuple(label for label in labels
+                 if label.startswith(prefixes) and label.endswith((".left", ".right")))
+
+
+def two_site_path_screen(net: nn.Module, groups: list[dict], *, replicate: int,
+                         device="cpu", sites: Iterable[str] | None = None,
+                         source_labels: Iterable[str] | None = None,
+                         destination_labels: Iterable[str] = ("query", "answer"),
+                         resource_probe=None, traffic_probe=None) -> list[dict]:
+    """Screen ordered early-source to later-query/answer residual paths.
+
+    The early donor state is propagated natively through the recipient program.  Only
+    its later destination state is then inserted into an otherwise clean base run.
+    """
+    if not groups:
+        raise ValueError("Path discovery group list is empty")
+    arm = "raw_looped" if net.__class__.__name__ == "LoopedRawClassifier" else (
+        "raw_deep" if len(net.core.blocks) == 12 else "raw_shallow")
+    sites = tuple(residual_sites(arm) if sites is None else sites)
+    if len(sites) < 2:
+        raise ValueError("Two-site screen requires at least two ordered residual cuts")
+    all_labels = tuple(sorted({label for group in groups
+                               for name in ("base", "donor", "marker_free_base",
+                                            "marker_free_donor")
+                               for episode in _variant(group, name)
+                               for label in semantic_layout(episode).labels}))
+    sources = (relation_endpoint_labels(all_labels) if source_labels is None
+               else tuple(source_labels))
+    destinations = tuple(destination_labels)
+    if not sources or not destinations:
+        raise ValueError("Path source and destination label sets must be nonempty")
+    rows = []
+    for render, base_name, donor_name, fixed_donor, target_mode in screen_conditions("f_content"):
+        bases, donors, metadata = _screen_batch(
+            groups, base_name, donor_name, fixed_donor=fixed_donor,
+            target_mode=target_mode)
+        base_layouts = tuple(semantic_layout(episode) for episode in bases)
+        donor_layouts = tuple(semantic_layout(episode) for episode in donors)
+        base_output = raw_forward(net, bases, device=device, cache_names=sites)
+        donor_output = raw_forward(net, donors, device=device, cache_names=sites[:-1])
+        if traffic_probe is not None:
+            traffic_probe(sum(value.numel() * value.element_size()
+                              for value in base_output.cache.values())
+                          + sum(value.numel() * value.element_size()
+                                for value in donor_output.cache.values())
+                          + base_output.logits.numel() * base_output.logits.element_size()
+                          + donor_output.logits.numel() * donor_output.logits.element_size())
+        if resource_probe is not None:
+            resource_probe()
+        clean_logits = base_output.logits[:, SYMBOL_START:].float()
+        if not torch.isfinite(clean_logits).all():
+            raise FloatingPointError("Nonfinite clean logits in path screen")
+        clean_probabilities = clean_logits.softmax(-1)
+        for early_cut, early_site in enumerate(sites[:-1]):
+            later_sites = sites[early_cut + 1:]
+            for source in sources:
+                # Incomplete semantic endpoints can never meet the full-denominator gate.
+                if not all(_has_label(base_layout, source) and _has_label(donor_layout, source)
+                           for base_layout, donor_layout in zip(
+                               base_layouts, donor_layouts, strict=True)):
+                    continue
+                early_patch = position_patch(
+                    donor_output.cache[early_site], base_layouts, donor_layouts,
+                    base_role=source, semantic_label=True)
+                propagated = raw_forward(
+                    net, bases, device=device, cache_names=later_sites,
+                    interventions={early_site: early_patch})
+                if not torch.isfinite(propagated.logits).all() \
+                        or any(not torch.isfinite(value).all()
+                               for value in propagated.cache.values()):
+                    raise FloatingPointError("Nonfinite propagated path tensor")
+                if traffic_probe is not None:
+                    traffic_probe(sum(value.numel() * value.element_size()
+                                      for value in propagated.cache.values())
+                                  + propagated.logits.numel() * propagated.logits.element_size()
+                                  + donor_output.cache[early_site].numel()
+                                  * donor_output.cache[early_site].element_size())
+                if resource_probe is not None:
+                    resource_probe()
+                for late_cut, late_site in enumerate(later_sites, start=early_cut + 1):
+                    for destination in destinations:
+                        if not all(_has_label(layout, destination) for layout in base_layouts):
+                            continue
+                        late_patch = position_patch(
+                            propagated.cache[late_site], base_layouts, base_layouts,
+                            base_role=destination, semantic_label=True)
+                        isolated = raw_forward(
+                            net, bases, device=device, interventions={late_site: late_patch})
+                        symbol_logits = isolated.logits[:, SYMBOL_START:].float()
+                        if not torch.isfinite(symbol_logits).all():
+                            raise FloatingPointError("Nonfinite isolated path logits")
+                        probabilities = symbol_logits.softmax(-1)
+                        if not torch.allclose(
+                                probabilities.sum(-1),
+                                torch.ones(len(bases), device=probabilities.device),
+                                atol=1e-6, rtol=1e-6):
+                            raise FloatingPointError("Path probabilities are not normalized")
+                        if traffic_probe is not None:
+                            traffic_probe(propagated.cache[late_site].numel()
+                                          * propagated.cache[late_site].element_size()
+                                          + isolated.logits.numel()
+                                          * isolated.logits.element_size())
+                        for index, (episode, item) in enumerate(zip(
+                                bases, metadata, strict=True)):
+                            target, recipient = item["target"], item["recipient"]
+                            target_index = target - SYMBOL_START
+                            prediction = int(
+                                symbol_logits[index].argmax().item() + SYMBOL_START)
+                            base_prediction = int(
+                                clean_logits[index].argmax().item() + SYMBOL_START)
+                            candidates = ({episode.query} | {right for _, right in episode.rows})
+                            other_targets = {candidate["target"] for candidate in metadata
+                                             if candidate["group_id"] == item["group_id"]
+                                             and candidate["recipient"] != recipient}
+                            if prediction == target:
+                                destination_kind = "target"
+                            elif prediction == episode.answer:
+                                destination_kind = "base_answer"
+                            elif prediction == item["fixed_donor_answer"]:
+                                destination_kind = "fixed_donor_answer"
+                            elif prediction in other_targets:
+                                destination_kind = "other_recipient_target"
+                            elif prediction in candidates:
+                                destination_kind = "other_legal_candidate"
+                            else:
+                                destination_kind = "outside_legal_candidates"
+                            source_position = base_layouts[index].label_position(source)
+                            rows.append({
+                                "family": "f_content_path", "replicate": replicate,
+                                "early_cut_index": early_cut, "early_site": early_site,
+                                "source_label": source, "late_cut_index": late_cut,
+                                "late_site": late_site, "destination_label": destination,
+                                "group_id": f"{item['group_id']}:{render}",
+                                "logical_group_id": item["group_id"],
+                                "recipient": recipient, "render_stratum": render,
+                                "position_stratum": ("first_half" if source_position <
+                                                     (len(episode.tokens) - 3) / 2
+                                                     else "second_half"),
+                                "target": target, "prediction": prediction,
+                                "base_prediction": base_prediction,
+                                "base_answer": episode.answer,
+                                "base_correct": base_prediction == episode.answer,
+                                "preserves_base_prediction": prediction == base_prediction,
+                                "preserves_base_answer": prediction == episode.answer,
+                                "fixed_donor_answer": item["fixed_donor_answer"],
+                                "candidate_member": prediction in candidates,
+                                "wrong_destination": destination_kind,
+                                "target_probability": float(
+                                    probabilities[index, target_index].item()),
+                                "base_target_probability": float(
+                                    clean_probabilities[index, target_index].item()),
+                                "target_logit": float(
+                                    symbol_logits[index, target_index].item()),
+                                "base_target_logit": float(
+                                    clean_logits[index, target_index].item()),
+                                "prediction_logit": float(symbol_logits[
+                                    index, prediction - SYMBOL_START].item()),
+                            })
+                        if resource_probe is not None:
+                            resource_probe()
+    return rows
+
+
+def two_site_identity_qualification(net: nn.Module, groups: list[dict], *,
+                                    early_site: str, source_label: str,
+                                    late_site: str, destination_label: str,
+                                    device="cpu", batch_size=64) -> dict:
+    """Require the selected two-site route to be an exact identity with self donors."""
+    errors = {}
+    materialized = 0
+    for render, name in (("marked", "base"), ("marker_free", "marker_free_base")):
+        episodes = tuple(episode for group in groups for episode in _variant(group, name))
+        maximum_propagated, maximum_path = 0.0, 0.0
+        maximum_fused = 0.0
+        for offset in range(0, len(episodes), batch_size):
+            chunk = episodes[offset:offset + batch_size]
+            fused = raw_forward(net, chunk, device=device).logits
+            native = raw_forward(
+                net, chunk, device=device, cache_names=(early_site, late_site)).logits
+            output = ordered_two_site_patch(
+                net, chunk, chunk, early_site=early_site, early_label=source_label,
+                late_site=late_site, late_label=destination_label, device=device)
+            maximum_fused = max(maximum_fused, float(
+                (fused.float() - native.float()).abs().max().item()))
+            maximum_propagated = max(maximum_propagated, float(
+                (output.propagated_logits.float() - native.float()).abs().max().item()))
+            maximum_path = max(maximum_path, float(
+                (output.path_logits.float() - native.float()).abs().max().item()))
+            materialized += sum(tensor.numel() * tensor.element_size() for tensor in (
+                fused, native, output.propagated_logits, output.path_logits,
+                output.propagated_state))
+        errors[render] = {"maximum_propagated_logit_error": maximum_propagated,
+                          "maximum_path_logit_error": maximum_path,
+                          "maximum_fused_instrumented_logit_error": maximum_fused}
+    maximum = max(value for row in errors.values() for value in row.values())
+    return {"by_render": errors, "maximum_logit_error": maximum,
+            "materialized_bytes": materialized, "finite": math.isfinite(maximum),
+            "qualified": math.isfinite(maximum) and maximum < 1e-6}
