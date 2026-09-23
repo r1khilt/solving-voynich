@@ -26,6 +26,11 @@ SOURCE_PATHS = (
     "tests/test_workspace_teacher12.py",
     "src/voynich/model.py",
 )
+AUDITOR_PATHS = (
+    "docs/experiments/TEACH-0012-audit-hardening-amendment.md",
+    "scripts/teacher0012_analyze.py",
+    "tests/test_teacher0012_analyze.py",
+)
 ARMS = ("parsed_memory", "raw_shallow", "raw_looped", "raw_deep", "raw_null")
 PARAMETERS = {
     "parsed_memory": 3_160_576,
@@ -335,6 +340,90 @@ def score(rows, name):
     return result
 
 
+def rate(rows):
+    total = len(rows)
+    correct = sum(row["prediction"] == row["answer"] for row in rows)
+    return {"correct": correct, "total": total, "accuracy": correct / total,
+            "wilson_95": wilson(correct, total)}
+
+
+def semantic_positions(row):
+    """Reconstruct relation endpoint positions without trusting trainer metadata."""
+    tokens = row["tokens"]
+    serialized = row["serialized_rows"]
+    ordinary = [index for index, token in enumerate(tokens[:-3]) if token >= SYMBOL_START]
+    need(len(ordinary) == 2 * len(serialized), "Serialized endpoint count mismatch")
+    for index, relation in enumerate(serialized):
+        observed = [tokens[ordinary[2 * index]], tokens[ordinary[2 * index + 1]]]
+        need(observed == relation, "Serialized endpoint order mismatch")
+    if row["task"] == "copy":
+        return None
+    sources = [index for index, (_, right) in enumerate(serialized)
+               if right == row["answer"]]
+    need(len(sources) == 1, "Answer source row is not unique")
+    source = sources[0]
+    right_position = ordinary[2 * source + 1]
+    return {"answer_row_index": source,
+            "query_to_answer_source_distance": len(tokens) - 2 - right_position}
+
+
+def stratified(rows, key):
+    buckets = {}
+    for row in rows:
+        value = key(row)
+        if value is not None:
+            buckets.setdefault(str(value), []).append(row)
+    return {name: rate(items) for name, items in sorted(
+        buckets.items(), key=lambda pair: (float(pair[0]), pair[0]))}
+
+
+def registered_diagnostics(rows):
+    enriched = []
+    destinations = {name: 0 for name in (
+        "f_value", "g_value", "distractor_value", "query", "other_symbol")}
+    for row in rows:
+        positions = semantic_positions(row)
+        copy = dict(row)
+        copy.update(positions or {})
+        enriched.append(copy)
+        if row["prediction"] == row["answer"]:
+            continue
+        prediction = row["prediction"]
+        if prediction in {right for _, right in row["f_rows"]}:
+            destination = "f_value"
+        elif prediction in {right for _, right in row["g_rows"]}:
+            destination = "g_value"
+        elif prediction in {right for _, right in row["distractor_rows"]}:
+            destination = "distractor_value"
+        elif prediction == row["query"]:
+            destination = "query"
+        else:
+            destination = "other_symbol"
+        destinations[destination] += 1
+    return {
+        "overall": rate(enriched),
+        "by_length": stratified(enriched, lambda row: row["length"]),
+        "by_distractor_chains": stratified(
+            enriched, lambda row: row["distractor_chains"]),
+        "by_marker_dropout": stratified(
+            enriched, lambda row: f'{row["marker_dropout"]:.2f}'),
+        "by_answer_row_index": stratified(
+            enriched, lambda row: row.get("answer_row_index")),
+        "by_query_to_answer_source_distance": stratified(
+            enriched, lambda row: row.get("query_to_answer_source_distance")),
+        "wrong_answer_destinations": destinations,
+    }
+
+
+def loss_history(losses):
+    need(len(losses) == 8000, "Loss history requires exactly 8,000 updates")
+    return [
+        {"step": step, "last_100_loss": sum(losses[step - 100:step]) / 100,
+         "loss": losses[step - 1]}
+        for step in range(250, 8001, 250)
+    ]
+
+
 def decide(scores):
     clauses = {"primary": {}, "positive": {}, "null": {}}
     for rep in ("0", "1"):
@@ -436,6 +525,22 @@ def verify_provenance(report, benchmark):
          "Benchmark/run source mismatch")
 
 
+def auditor_provenance():
+    head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True,
+                          text=True, check=True, timeout=10).stdout.strip()
+    status = subprocess.run(["git", "status", "--porcelain", "--", *AUDITOR_PATHS],
+                            cwd=ROOT, capture_output=True, text=True, check=True,
+                            timeout=10).stdout.splitlines()
+    need(status == [], "Commit auditor and auditor tests before reading the report")
+    hashes = {}
+    for path in AUDITOR_PATHS:
+        current = file_digest(ROOT / path)
+        need(digest(git_blob(head, path)) == current,
+             f"Current auditor blob is not committed: {path}")
+        hashes[path] = current
+    return {"revision": head, "sha256": hashes}
+
+
 def normalized_episode(ep):
     return {key: list(value) if key == "tokens" else [list(row) for row in value]
             if key in ("f_rows", "g_rows", "distractor_rows", "serialized_rows") else value
@@ -443,27 +548,46 @@ def normalized_episode(ep):
 
 
 def audit(report_path, output_path):
+    audit_source = auditor_provenance()
     report = json.loads(report_path.read_text())
     result_dir = report_path.parent
-    benchmark = json.loads((result_dir / "benchmark.json").read_text())
+    benchmark_path = result_dir / "benchmark.json"
+    benchmark = json.loads(benchmark_path.read_text())
+    status = json.loads((result_dir / "status.json").read_text())
     need(report.get("experiment") == "TEACH-0012" and report.get("status") == "complete",
          "Campaign is not complete")
     same(report["config"], CONFIG, "config")
+    config_raw = json.dumps(CONFIG, sort_keys=True, separators=(",", ":")).encode()
+    need(report["config_sha256"] == digest(config_raw), "Config hash mismatch")
     need(benchmark.get("status") == "pass", "Benchmark did not pass")
     same(benchmark["config"], CONFIG, "benchmark.config")
     verify_provenance(report, benchmark)
+    need(report["benchmark_sha256"] == file_digest(benchmark_path),
+         "Benchmark file hash mismatch")
+    same(report["benchmark_projection_seconds"], benchmark["conservative_projected_seconds"],
+         "benchmark_projection_seconds")
+    need(benchmark["conservative_projected_seconds"] <= CONFIG["max_seconds"],
+         "Benchmark projection exceeded campaign ceiling")
+    need(benchmark["peak_sampled_mps_allocated_bytes"] <= CONFIG["max_mps_bytes"],
+         "Benchmark sampled memory exceeded ceiling")
     need(set(benchmark["measured"]) == set(ARMS), "Missing benchmark arms")
     for arm in ARMS:
         need(benchmark["measured"][arm]["parameters"] == PARAMETERS[arm]
              and benchmark["measured"][arm]["timed_steps"] == 20,
              f"Bad benchmark metadata for {arm}")
+        qualification = benchmark["numerical_qualification"][arm]
+        need(qualification["max_recompute_logit_error"] < 1e-6
+             and qualification["finite_loss_and_gradients"] is True,
+             f"Bad numerical benchmark qualification for {arm}")
     suite = expected_suite()
     need(sum(map(len, suite.values())) == 4096, "Wrong suite size")
+    need(report["suite_items"] == 4096, "Reported suite size mismatch")
     suite_payload = {name: [normalized_episode(ep) for ep in episodes]
                      for name, episodes in suite.items()}
     suite_raw = json.dumps(suite_payload, sort_keys=True, separators=(",", ":")).encode()
     need(digest(suite_raw) == report["suite_sha256"], "Suite hash mismatch")
     rescored = {"0": {}, "1": {}}
+    diagnostics = {"0": {}, "1": {}}
     for rep in ("0", "1"):
         need(set(report["scores"][rep]) == set(ARMS), f"Missing score arms rep{rep}")
         for arm in ARMS:
@@ -473,8 +597,10 @@ def audit(report_path, output_path):
             rows_by_name = json.loads(gzip.decompress(prediction_path.read_bytes()))
             need(set(rows_by_name) == set(suite), f"Prediction cells differ rep{rep} {arm}")
             rescored[rep][arm] = {}
+            combined_rows = []
             for name, expected in suite.items():
                 rows = rows_by_name[name]
+                combined_rows.extend(rows)
                 need(len(rows) == len(expected), f"{rep}/{arm}/{name}: row count")
                 for index, (row, episode) in enumerate(zip(rows, expected, strict=True)):
                     normalized = normalized_episode(episode)
@@ -498,6 +624,7 @@ def audit(report_path, output_path):
                     need(row["candidate_member"] == (row["prediction"] in candidates),
                          f"{rep}/{arm}/{name}/{index}: candidate flag mismatch")
                 rescored[rep][arm][name] = score(rows, name)
+            diagnostics[rep][arm] = registered_diagnostics(combined_rows)
             same(report["scores"][rep][arm], rescored[rep][arm], f"scores.{rep}.{arm}")
             training = report["training"][rep][arm]
             need(training["parameters"] == PARAMETERS[arm]
@@ -509,6 +636,7 @@ def audit(report_path, output_path):
             need(len(losses) == 8000 and all(type(x) in (int, float) and math.isfinite(x)
                                              for x in losses),
                  f"Bad losses rep{rep} {arm}")
+            same(training["history"], loss_history(losses), f"history.{rep}.{arm}")
             final = training["final_checkpoint"]
             checkpoint = ROOT / final["path"]
             need(checkpoint.is_file() and checkpoint.stat().st_size == final["bytes"]
@@ -520,12 +648,26 @@ def audit(report_path, output_path):
                  f"Milestones mismatch rep{rep} {arm}")
             for milestone in training["milestones"].values():
                 path = ROOT / milestone["path"]
-                need(path.is_file() and file_digest(path) == milestone["sha256"],
+                need(path.is_file() and path.stat().st_size == milestone["bytes"]
+                     and file_digest(path) == milestone["sha256"],
                      f"Milestone checkpoint mismatch rep{rep} {arm}")
     expected_decision = decide(rescored)
     same(report["decision"], expected_decision, "decision")
+    need(report["elapsed_seconds"] <= CONFIG["max_seconds"],
+         "Completed campaign exceeded wall-time ceiling")
+    need(report["peak_sampled_mps_allocated_bytes"] <= CONFIG["max_mps_bytes"],
+         "Completed campaign exceeded sampled-memory ceiling")
+    output_dir = ROOT / "outputs/TEACH-0012"
+    actual_artifact_bytes = sum(path.stat().st_size for path in output_dir.rglob("*")
+                                if path.is_file())
+    need(report["artifact_bytes"] == actual_artifact_bytes
+         and actual_artifact_bytes <= CONFIG["max_artifact_bytes"],
+         "Checkpoint artifact size mismatch or ceiling exceeded")
+    need(status.get("status") == "complete", "Status file is not complete")
+    same(status["decision"], expected_decision, "status.decision")
     audit_report = {
         "audit": "pass", "experiment": "TEACH-0012",
+        "auditor": audit_source,
         "frozen_source_revision": FROZEN_SOURCE_REVISION,
         "launch_source_revision": report["source_git_head"],
         "suite_sha256": report["suite_sha256"],
@@ -534,6 +676,7 @@ def audit(report_path, output_path):
         "verified_loss_archives": 10,
         "verified_final_checkpoints": 10,
         "verified_milestone_checkpoints": 10,
+        "registered_diagnostics": diagnostics,
     }
     output_path.write_text(json.dumps(audit_report, indent=2, sort_keys=True) + "\n")
     return audit_report
