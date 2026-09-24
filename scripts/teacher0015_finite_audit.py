@@ -5,6 +5,8 @@ not evaluate a trained checkpoint, aggregate a split or issue a mechanism
 label; those require a separately registered runner and numerical replay.
 """
 
+import hashlib
+import json
 import math
 
 import torch
@@ -16,6 +18,44 @@ WIDTH = 512
 VOCAB_SIZE = 2064
 VECTOR_TOLERANCE = 2e-3
 LOGIT_TOLERANCE = 2e-3
+
+
+def audit_control_permutations(
+        groups: list[dict]) -> tuple[tuple[int, ...], tuple[int, ...]]:
+    if len(groups) != 128:
+        raise ValueError("Finite-audit control grid must have 128 groups")
+    if (len({group["group_id"] for group in groups}) != 128 or
+            len({group["split"] for group in groups}) != 1):
+        raise ValueError("Finite-audit donor split differs")
+    valid_shifts = set()
+    for shift in range(1, 128):
+        pairs = zip(groups, groups[shift:] + groups[:shift], strict=True)
+        if all(target["key1"] != donor["key1"] for target, donor in pairs):
+            valid_shifts.add(shift)
+    if len(valid_shifts) < 2:
+        raise ValueError("Finite-audit global wrong-key permutations unavailable")
+    deranged_shift = min(valid_shifts)
+    token = json.dumps(["TEACH-0015-wrong", groups[0]["split"],
+                        [group["group_id"] for group in groups]], sort_keys=True,
+                       separators=(",", ":")).encode()
+    start = int(hashlib.sha256(token).hexdigest(), 16) % 127
+    ordered = list(range(1, 128))
+    ordered = ordered[start:] + ordered[:start]
+    wrong_shift = next((shift for shift in ordered if
+                        shift in valid_shifts and shift != deranged_shift), None)
+    if wrong_shift is None:
+        raise ValueError("Finite-audit distinct global donor unavailable")
+    return (
+        tuple((index + wrong_shift) % 128 for index in range(128)),
+        tuple((index + deranged_shift) % 128 for index in range(128)),
+    )
+
+
+def audit_control_indices(groups: list[dict], index: int) -> tuple[int, int]:
+    if not 0 <= index < len(groups):
+        raise ValueError("Finite-audit donor index outside grid")
+    wrong, deranged = audit_control_permutations(groups)
+    return wrong[index], deranged[index]
 
 
 def _cell(group: dict, f: int, g: int, distractor: int,
@@ -37,11 +77,16 @@ def _vector(value: object) -> torch.Tensor:
     return torch.tensor(value, dtype=torch.float64)
 
 
-def _logits(row: dict, name: str, prediction: int | None) -> list[float] | None:
+def _logits(row: dict, name: str, prediction: int | None,
+            *, full_logits: bool) -> list[float] | None:
     values = row.get(f"{name}_logits")
     if prediction is None:
         if values is not None:
             raise ValueError("Unrequested finite-audit logits present")
+        return None
+    if not full_logits:
+        if values is not None:
+            raise ValueError("Unselected finite-audit full logits present")
         return None
     if (not isinstance(values, list) or len(values) != VOCAB_SIZE or
             any(type(value) not in (int, float) or not math.isfinite(value)
@@ -70,7 +115,8 @@ def _scaled(base: torch.Tensor, source: torch.Tensor,
 def audit_surface(group: dict, rows: list[dict], *, distractor: int,
                   marked: bool, order: int,
                   wrong_group: dict | None = None,
-                  deranged_group: dict | None = None) -> dict:
+                  deranged_group: dict | None = None,
+                  full_logits: bool = True) -> dict:
     audit_group(group, group["split"])
     for other in (wrong_group, deranged_group):
         if other is not None:
@@ -126,7 +172,7 @@ def audit_surface(group: dict, rows: list[dict], *, distractor: int,
                     raise ValueError("Unrequested finite-audit control prediction")
             elif type(prediction) is not int or not 16 <= prediction < VOCAB_SIZE:
                 raise ValueError("Finite-audit ordinary prediction invalid")
-            _logits(row, name, prediction)
+            _logits(row, name, prediction, full_logits=full_logits)
         vectors = row.get("replacement_vectors")
         if not isinstance(vectors, dict) or set(vectors) != {
                 "base_native", "target_native", "donor_native",
@@ -191,11 +237,13 @@ def audit_surface(group: dict, rows: list[dict], *, distractor: int,
                 not 0 <= identity <= LOGIT_TOLERANCE or
                 not 0 <= final_error <= LOGIT_TOLERANCE):
             raise ValueError("Finite-audit identity/final donor control differs")
-        actual_final = max(abs(a - b) for a, b in zip(
-            row["final_donor_logits"], row["donor_logits"], strict=True))
-        if (abs(actual_final - final_error) > LOGIT_TOLERANCE or
-                row["final_donor_prediction"] != row["donor_prediction"]):
+        if row["final_donor_prediction"] != row["donor_prediction"]:
             raise ValueError("Finite-audit final donor logits differ")
+        if full_logits:
+            actual_final = max(abs(a - b) for a, b in zip(
+                row["final_donor_logits"], row["donor_logits"], strict=True))
+            if abs(actual_final - final_error) > LOGIT_TOLERANCE:
+                raise ValueError("Finite-audit final donor error differs")
         max_identity = max(max_identity, identity)
         max_final = max(max_final, final_error)
     return {"audit": "pass", "scope": "single_three_recipient_surface_math",

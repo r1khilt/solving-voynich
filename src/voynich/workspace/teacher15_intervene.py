@@ -219,3 +219,176 @@ def evaluate_surface(model: CandidateEdgeWorkspace, group: TransferGroup,
                                 if deranged_logits is not None else None),
         })
     return rows
+
+
+@torch.no_grad()
+def evaluate_surface_batched(
+        model: CandidateEdgeWorkspace, group: TransferGroup, *,
+        distractor: int, marked: bool, order: int, device: str,
+        wrong_donor: Episode | None = None,
+        deranged_donor: Episode | None = None,
+        full_logits: bool = True) -> list[dict]:
+    """The same finite grid as ``evaluate_surface`` with grouped forwards.
+
+    Source captures, six clean F/G cells, and each three-recipient patch are
+    batched separately. Each output retains the same identities and tensors as
+    the single-example reference, including actual replacement vectors.
+    """
+    if not isinstance(model, CandidateEdgeWorkspace) or model.oracle_rows:
+        raise ValueError("TEACH-0015 requires a raw candidate-edge model")
+    if distractor not in (0, 1) or type(marked) is not bool or order not in (0, 1):
+        raise ValueError("Invalid TEACH-0015 surface coordinates")
+    donor_episode = _cell(group, 1, 0, distractor, marked, order)
+    nuisance_episode = _cell(group, 1, 0, distractor, not marked, order)
+    sources = [donor_episode, nuisance_episode]
+    if wrong_donor is not None:
+        sources.append(wrong_donor)
+    if deranged_donor is not None:
+        sources.append(deranged_donor)
+    if any(episode.task != "composed" or episode.hops != 2
+           for episode in sources):
+        raise ValueError("Two-hop composed donor episodes required")
+    model.eval()
+    source_out = model(padded_tokens(sources, device), capture=True)
+    source_states = source_out.cache["query.1"].detach()
+    source_final = source_out.cache["query.2"].detach()
+    donor_state = source_states[0:1]
+    nuisance_state = source_states[1:2]
+    wrong_index = 2 if wrong_donor is not None else None
+    deranged_index = (2 + int(wrong_donor is not None)
+                      if deranged_donor is not None else None)
+    bases = [_cell(group, 0, g, distractor, marked, order)
+             for g in (0, 1, 2)]
+    targets = [_cell(group, 1, g, distractor, marked, order)
+               for g in (0, 1, 2)]
+    clean = model(padded_tokens(bases + targets, device), capture=True)
+    base_states = clean.cache["query.1"][:3].detach()
+    target_states = clean.cache["query.1"][3:].detach()
+    donor_repeat = donor_state.expand(3, -1)
+    nuisance_repeat = nuisance_state.expand(3, -1)
+    final_repeat = source_final[0:1].expand(3, -1)
+    delta = donor_repeat - base_states
+
+    def apply(episodes: list[Episode], site: str,
+              replacement: torch.Tensor) -> torch.Tensor:
+        return model(padded_tokens(episodes, device),
+                     interventions={site: replacement}).logits.detach()
+
+    identity = apply(bases, "query.1", base_states)
+    transferred = apply(bases, "query.1", donor_repeat)
+    same_key = apply(bases, "query.1", nuisance_repeat)
+    reverse = apply(targets, "query.1", base_states)
+    final_donor = apply(bases, "query.2", final_repeat)
+    random_rows = []
+    for g in (0, 1, 2):
+        generator = torch.Generator(device="cpu")
+        generator.manual_seed(int(group.group_id[:16], 16) ^
+                              (g << 16) ^ (distractor << 8) ^
+                              (int(marked) << 4) ^ order)
+        random_delta = torch.randn((1, delta.shape[1]),
+                                   generator=generator).to(
+                                       device=device, dtype=delta.dtype)
+        random_delta *= delta[g:g + 1].norm() / random_delta.norm().clamp_min(
+            1e-12)
+        random_rows.append(base_states[g:g + 1] + random_delta)
+    random_states = torch.cat(random_rows)
+    random_logits = apply(bases, "query.1", random_states)
+
+    def matched_source(index: int | None) -> tuple[torch.Tensor | None,
+                                                   torch.Tensor | None]:
+        if index is None:
+            return None, None
+        source = source_states[index:index + 1]
+        raw_delta = source.expand(3, -1) - base_states
+        sizes = raw_delta.norm(dim=1, keepdim=True).clamp_min(1e-12)
+        states = base_states + raw_delta * delta.norm(
+            dim=1, keepdim=True) / sizes
+        return source, states
+
+    wrong_source, wrong_states = matched_source(wrong_index)
+    deranged_source, deranged_states = matched_source(deranged_index)
+    wrong_logits = (apply(bases, "query.1", wrong_states)
+                    if wrong_states is not None else None)
+    deranged_logits = (apply(bases, "query.1", deranged_states)
+                       if deranged_states is not None else None)
+
+    def prediction(logits: torch.Tensor, index: int) -> int:
+        return int(logits[index, SYMBOL_START:].argmax().item()) + SYMBOL_START
+
+    def vector(value: torch.Tensor, index: int) -> list[float]:
+        return value[index].float().cpu().tolist()
+
+    def logit(value: torch.Tensor, index: int) -> list[float] | None:
+        return value[index].float().cpu().tolist() if full_logits else None
+
+    rows = []
+    for g in (0, 1, 2):
+        base_logits = clean.logits[g:g + 1]
+        target_logits = clean.logits[g + 3:g + 4]
+        donor_logits = source_out.logits[0:1]
+        identity_error = (identity[g] - clean.logits[g]).abs().max()
+        final_error = (final_donor[g] - source_out.logits[0]).abs().max()
+        row = {
+            "group_id": group.group_id, "g": g, "distractor": distractor,
+            "marked": marked, "order": order,
+            "base_render_id": bases[g].render_id,
+            "target_render_id": targets[g].render_id,
+            "donor_render_id": donor_episode.render_id,
+            "same_key_donor_render_id": nuisance_episode.render_id,
+            "wrong_donor_render_id": (wrong_donor.render_id
+                                      if wrong_donor is not None else None),
+            "deranged_donor_render_id": (deranged_donor.render_id
+                                         if deranged_donor is not None else None),
+            "base_answer": bases[g].answer,
+            "target_answer": targets[g].answer,
+            "fixed_donor_answer": donor_episode.answer,
+            "base_prediction": prediction(base_logits, 0),
+            "target_prediction": prediction(target_logits, 0),
+            "donor_prediction": prediction(donor_logits, 0),
+            "transfer_prediction": prediction(transferred, g),
+            "same_key_prediction": prediction(same_key, g),
+            "reverse_prediction": prediction(reverse, g),
+            "final_donor_prediction": prediction(final_donor, g),
+            "random_prediction": prediction(random_logits, g),
+            "wrong_key_prediction": (prediction(wrong_logits, g)
+                                     if wrong_logits is not None else None),
+            "deranged_prediction": (prediction(deranged_logits, g)
+                                    if deranged_logits is not None else None),
+            "identity_max_abs_logit_error": float(identity_error.item()),
+            "final_donor_max_abs_logit_error": float(final_error.item()),
+            "donor_delta_norm": float(delta[g].norm().item()),
+            "replacement_vectors": {
+                "base_native": vector(base_states, g),
+                "target_native": vector(target_states, g),
+                "donor_native": vector(donor_state, 0),
+                "same_key_native": vector(nuisance_state, 0),
+                "reverse_base": vector(base_states, g),
+                "final_donor": vector(source_final, 0),
+                "random": vector(random_states, g),
+                "wrong_key": (vector(wrong_states, g)
+                              if wrong_states is not None else None),
+                "wrong_source_native": (vector(wrong_source, 0)
+                                        if wrong_source is not None else None),
+                "deranged": (vector(deranged_states, g)
+                             if deranged_states is not None else None),
+                "deranged_source_native": (vector(deranged_source, 0)
+                                           if deranged_source is not None else None),
+            },
+            "base_logits": logit(clean.logits, g),
+            "target_logits": logit(clean.logits, g + 3),
+            "donor_logits": logit(source_out.logits, 0),
+            "transfer_logits": logit(transferred, g),
+            "same_key_logits": logit(same_key, g),
+            "reverse_logits": logit(reverse, g),
+            "final_donor_logits": logit(final_donor, g),
+            "random_logits": logit(random_logits, g),
+            "wrong_key_logits": (logit(wrong_logits, g)
+                                 if wrong_logits is not None else None),
+            "deranged_logits": (logit(deranged_logits, g)
+                                if deranged_logits is not None else None),
+        }
+        if not full_logits:
+            row = {key: value for key, value in row.items()
+                   if not key.endswith("_logits")}
+        rows.append(row)
+    return rows

@@ -5,7 +5,7 @@ import torch
 
 from voynich.workspace.teacher14_train import Config, new_model
 from voynich.workspace.teacher15_intervene import (
-    capture, evaluate_surface, patch, recipient_vjp,
+    capture, evaluate_surface, evaluate_surface_batched, patch, recipient_vjp,
 )
 from voynich.workspace.teacher15_tasks import generate_split
 
@@ -87,3 +87,34 @@ def test_recipient_vjp_matches_finite_patch_difference():
                     minus[0, base]) / (2 * epsilon))
     derivative = float((gradient * direction).sum().item())
     assert abs(finite - derivative) < 0.02
+
+
+def test_batched_surface_matches_single_episode_finite_interventions():
+    group, other, third = generate_split("discovery", 3)
+    model, _ = new_model(Config(), "latent_rows_answer", 0, "cpu")
+    def donor(source):
+        return next(cell.episode for cell in source.cells if (
+            cell.f, cell.g, cell.distractor, cell.marked,
+            cell.order, cell.task) == (1, 0, 0, True, 0, "composed"))
+    inputs = {"distractor": 0, "marked": True, "order": 0,
+              "device": "cpu", "wrong_donor": donor(other),
+              "deranged_donor": donor(third)}
+    sequential = evaluate_surface(model, group, **inputs)
+    batched = evaluate_surface_batched(model, group, **inputs)
+    compact = evaluate_surface_batched(model, group, **inputs,
+                                       full_logits=False)
+    for expected, actual in zip(sequential, batched, strict=True):
+        assert expected["base_render_id"] == actual["base_render_id"]
+        assert expected["target_answer"] == actual["target_answer"]
+        for name in ("base", "target", "donor", "transfer", "same_key",
+                     "reverse", "final_donor", "random", "wrong_key",
+                     "deranged"):
+            assert expected[f"{name}_prediction"] == actual[f"{name}_prediction"]
+            assert actual[f"{name}_logits"] == pytest.approx(
+                expected[f"{name}_logits"], abs=1e-5)
+        for name, vector in expected["replacement_vectors"].items():
+            assert actual["replacement_vectors"][name] == pytest.approx(
+                vector, abs=1e-5)
+    for full, reduced in zip(batched, compact, strict=True):
+        assert reduced == {key: value for key, value in full.items()
+                           if not key.endswith("_logits")}
