@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-24 UTC (HERBAL-CONTROL-0001 historical-image control failed its pilot gate; no decipherment).
+Last updated: 2026-09-24 UTC (HERBAL-CONTROL-0002 fresh-chapter three-way control registered; source acquisition incomplete; no decipherment).
 
 ## Current state
+
+- **HERBAL-CONTROL-0002 registered, no image scores:** The next visual control freezes six new historical chapter identities across BnF Latin 6823, BL Egerton 747 and Casanatense 459; 18 crops and an unlabeled three-way bijective assignment are planned, with raw pairwise retrieval, an exact 518,400-relabel null and conjunctive pass gate specified before scoring. Ten of 17 distinct public source JPEGs were acquired and SHA-inventoried; Commons returned HTTP429 before the other seven, so the panel is incomplete. Matching code has passed a synthetic recovery control and a no-signal control, but neither is historical evidence. Do not substitute fewer/easier images or score Voynich f35v. See `docs/experiments/HERBAL-CONTROL-0002.md`, `data/manifests/herbal_control_0002_sources.json`, NOTEBOOK NB-121.
 
 - **HERBAL-CONTROL-0001 fixed image baseline FAIL:** Nine SHA-pinned drawing crops from three named Tractatus de Herbis chapters across BnF Latin 6823, BL Egerton 747 and Casanatense 459 tested Apple Vision revision-2 feature prints on18 cross-manuscript retrievals. Correct13/18 and exact within-manuscript chapter-label permutation p6/216=0.02778, but registered gate needed≥14/18 and every ordered manuscript direction≥2/3; Casanatense→Egerton was1/3. Independent all-input/matrix/score/decision audit passed. Four errors involve ivy. Do not use this generic method to infer f35v's name; no f35v model query or Voynich word score. Yale f35v imagery was inspected, while its test transcription remains unopened; future f35v text confirmation is no longer image-blind. Next image method needs new chapter holdout, potentially part-aware or cycle-consistent matching. Read `docs/experiments/HERBAL-CONTROL-0001-results.md`, NOTEBOOK NB-119--120.
 
