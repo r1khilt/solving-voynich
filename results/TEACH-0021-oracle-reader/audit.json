@@ -1,0 +1,279 @@
+{
+  "audit": "pass",
+  "rows_sha256": "451fe7315c21c0aaf86115e8777caf0573bf0fd1f2039f25c47fee5582ceef91",
+  "scope": "exposed_development_only",
+  "scores": {
+    "0": {
+      "composed_confirm_confirm": {
+        "address": {
+          "0": {
+            "clean_correct_hits": 95,
+            "clean_wrong_hits": 27,
+            "hits": 122
+          },
+          "1": {
+            "clean_correct_hits": 97,
+            "clean_wrong_hits": 2,
+            "hits": 99
+          }
+        },
+        "clean_correct": 97,
+        "conditions": {
+          "clean": {
+            "correct": 97,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "gold_both": {
+            "correct": 127,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 30
+          },
+          "gold_first": {
+            "correct": 123,
+            "damage_clean_correct": 1,
+            "rescue_clean_wrong": 27
+          },
+          "gold_last": {
+            "correct": 127,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 30
+          },
+          "identity": {
+            "correct": 97,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "wrong_both": {
+            "correct": 0,
+            "damage_clean_correct": 97,
+            "rescue_clean_wrong": 0
+          }
+        },
+        "items": 128
+      },
+      "direct_confirm": {
+        "address": {
+          "0": {
+            "clean_correct_hits": 116,
+            "clean_wrong_hits": 4,
+            "hits": 120
+          }
+        },
+        "clean_correct": 119,
+        "conditions": {
+          "clean": {
+            "correct": 119,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "gold_both": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 9
+          },
+          "gold_first": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 9
+          },
+          "gold_last": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 9
+          },
+          "identity": {
+            "correct": 119,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "wrong_both": {
+            "correct": 0,
+            "damage_clean_correct": 119,
+            "rescue_clean_wrong": 0
+          }
+        },
+        "items": 128
+      },
+      "first_hop_confirm": {
+        "address": {
+          "0": {
+            "clean_correct_hits": 116,
+            "clean_wrong_hits": 6,
+            "hits": 122
+          }
+        },
+        "clean_correct": 118,
+        "conditions": {
+          "clean": {
+            "correct": 118,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "gold_both": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 10
+          },
+          "gold_first": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 10
+          },
+          "gold_last": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 10
+          },
+          "identity": {
+            "correct": 118,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "wrong_both": {
+            "correct": 0,
+            "damage_clean_correct": 118,
+            "rescue_clean_wrong": 0
+          }
+        },
+        "items": 128
+      }
+    },
+    "1": {
+      "composed_confirm_confirm": {
+        "address": {
+          "0": {
+            "clean_correct_hits": 99,
+            "clean_wrong_hits": 24,
+            "hits": 123
+          },
+          "1": {
+            "clean_correct_hits": 100,
+            "clean_wrong_hits": 0,
+            "hits": 100
+          }
+        },
+        "clean_correct": 100,
+        "conditions": {
+          "clean": {
+            "correct": 100,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "gold_both": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 28
+          },
+          "gold_first": {
+            "correct": 121,
+            "damage_clean_correct": 1,
+            "rescue_clean_wrong": 22
+          },
+          "gold_last": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 28
+          },
+          "identity": {
+            "correct": 100,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "wrong_both": {
+            "correct": 0,
+            "damage_clean_correct": 100,
+            "rescue_clean_wrong": 0
+          }
+        },
+        "items": 128
+      },
+      "direct_confirm": {
+        "address": {
+          "0": {
+            "clean_correct_hits": 108,
+            "clean_wrong_hits": 7,
+            "hits": 115
+          }
+        },
+        "clean_correct": 110,
+        "conditions": {
+          "clean": {
+            "correct": 110,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "gold_both": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 18
+          },
+          "gold_first": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 18
+          },
+          "gold_last": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 18
+          },
+          "identity": {
+            "correct": 110,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "wrong_both": {
+            "correct": 0,
+            "damage_clean_correct": 110,
+            "rescue_clean_wrong": 0
+          }
+        },
+        "items": 128
+      },
+      "first_hop_confirm": {
+        "address": {
+          "0": {
+            "clean_correct_hits": 113,
+            "clean_wrong_hits": 7,
+            "hits": 120
+          }
+        },
+        "clean_correct": 113,
+        "conditions": {
+          "clean": {
+            "correct": 113,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "gold_both": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 15
+          },
+          "gold_first": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 15
+          },
+          "gold_last": {
+            "correct": 128,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 15
+          },
+          "identity": {
+            "correct": 113,
+            "damage_clean_correct": 0,
+            "rescue_clean_wrong": 0
+          },
+          "wrong_both": {
+            "correct": 0,
+            "damage_clean_correct": 113,
+            "rescue_clean_wrong": 0
+          }
+        },
+        "items": 128
+      }
+    }
+  }
+}
