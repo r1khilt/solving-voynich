@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 import math
 from collections.abc import Iterable
+import random
 
 import torch
 from torch import Tensor
@@ -25,7 +26,16 @@ class OrthogonalFactorGeometry:
     raw: dict[str, Tensor]
     forward: dict[str, Tensor]
     reverse: dict[str, Tensor]
+    forward_eigenvalues: dict[str, Tensor]
+    reverse_eigenvalues: dict[str, Tensor]
     raw_principal_angles: dict[str, Tensor]
+
+
+@dataclass(frozen=True)
+class DerangedBlockedBasis:
+    basis: Tensor
+    eigenvalues: Tensor
+    donor_blocks: tuple
 
 
 def _as_matrix(states: Tensor) -> Tensor:
@@ -165,7 +175,8 @@ def principal_angles(left: Tensor, right: Tensor) -> Tensor:
 
 
 def orthogonal_factor_geometry(content: Tensor, binding: Tensor,
-                               order: Tensor) -> OrthogonalFactorGeometry:
+                               order: Tensor, *, eigenvalues: dict[str, Tensor] | None = None
+                               ) -> OrthogonalFactorGeometry:
     """Orthogonalize in registered forward order and diagnostic reverse order."""
     raw = {"content": content.double(), "binding": binding.double(),
            "order": order.double()}
@@ -173,20 +184,40 @@ def orthogonal_factor_geometry(content: Tensor, binding: Tensor,
     if len(widths) != 1 or any(basis.ndim != 2 for basis in raw.values()):
         raise ValueError("Factor bases must be width-by-rank matrices")
 
+    spectra = ({name: torch.ones(basis.shape[1], dtype=torch.double)
+                for name, basis in raw.items()} if eigenvalues is None else {
+                    name: eigenvalues[name].double()[:basis.shape[1]].clamp_min(0)
+                    for name, basis in raw.items()})
+    if set(spectra) != set(raw) or any(
+            values.ndim != 1 or len(values) != raw[name].shape[1]
+            for name, values in spectra.items()):
+        raise ValueError("Factor spectra must match the raw basis ranks")
+
     def sequential(names):
         assigned = torch.empty(next(iter(widths)), 0, dtype=torch.double)
-        result = {}
+        result, result_spectra = {}, {}
         for name in names:
-            result[name] = orthogonalize_basis(raw[name], assigned)
+            weighted = raw[name] * spectra[name].sqrt().unsqueeze(0)
+            remainder = weighted - assigned @ (assigned.T @ weighted) \
+                if assigned.shape[1] else weighted
+            if remainder.shape[1] == 0:
+                result[name] = remainder
+                result_spectra[name] = torch.empty(0, dtype=torch.double)
+            else:
+                u, singular, _ = torch.linalg.svd(remainder, full_matrices=False)
+                keep = singular > 1e-8 * max(float(singular[0]), 1.0)
+                result[name] = u[:, keep]
+                result_spectra[name] = singular[keep].square()
             assigned = torch.cat((assigned, result[name]), dim=1)
-        return result
+        return result, result_spectra
 
     pairs = (("content", "binding"), ("content", "order"), ("binding", "order"))
     angles = {f"{left}:{right}": principal_angles(raw[left], raw[right])
               for left, right in pairs}
+    forward, forward_spectra = sequential(("content", "binding", "order"))
+    reverse, reverse_spectra = sequential(("order", "binding", "content"))
     return OrthogonalFactorGeometry(
-        raw, sequential(("content", "binding", "order")),
-        sequential(("order", "binding", "content")), angles)
+        raw, forward, reverse, forward_spectra, reverse_spectra, angles)
 
 
 def haar_random_bases(width: int, rank: int, count: int, *, seed: int,
@@ -217,15 +248,84 @@ def haar_random_bases(width: int, rank: int, count: int, *, seed: int,
     return tuple(results)
 
 
+def deranged_blocked_bases(states: Tensor, factor, nuisance, blocks, *,
+                           count: int, seed: int, maximum_rank: int = 64
+                           ) -> tuple[DerangedBlockedBasis, ...]:
+    """Fit null bases after deranging donor states across logical groups.
+
+    Base rows stay in their registered blocks while every donor row is borrowed from
+    a different block in the same nuisance cell. This preserves state marginals and
+    the complete design while destroying the true within-group correspondence.
+    """
+    states = _as_matrix(states)
+    factor, nuisance, blocks = tuple(factor), tuple(nuisance), tuple(blocks)
+    if count <= 0 or maximum_rank <= 0 or any(
+            len(labels) != states.shape[0] for labels in (factor, nuisance, blocks)):
+        raise ValueError("Invalid deranged blocked-basis request")
+    levels = tuple(sorted(set(factor), key=repr))
+    if len(levels) != 2:
+        raise ValueError("Deranged blocked bases require a binary factor")
+    block_levels = tuple(sorted(set(blocks), key=repr))
+    nuisance_levels = tuple(sorted(set(nuisance), key=repr))
+    if len(block_levels) < 2:
+        raise ValueError("Deranged controls require at least two logical blocks")
+    cell_index = {}
+    for row, labels in enumerate(zip(blocks, nuisance, factor, strict=True)):
+        if labels in cell_index:
+            raise ValueError("Deranged design cells must contain exactly one state")
+        cell_index[labels] = row
+    if len(cell_index) != len(block_levels) * len(nuisance_levels) * 2:
+        raise ValueError("Deranged design is not a complete block-by-nuisance factorial")
+    rng = random.Random(seed)
+    results = []
+    for _ in range(count):
+        donor_order = list(block_levels)
+        for right in range(len(donor_order) - 1, 0, -1):
+            left = rng.randrange(right)
+            donor_order[left], donor_order[right] = donor_order[right], donor_order[left]
+        if any(left == right for left, right in zip(
+                block_levels, donor_order, strict=True)):
+            raise AssertionError("Sattolo derangement retained a donor block")
+        deranged = states.clone()
+        donor_level = levels[1]
+        for base_block, donor_block in zip(block_levels, donor_order, strict=True):
+            for nuisance_cell in nuisance_levels:
+                deranged[cell_index[(base_block, nuisance_cell, donor_level)]] = \
+                    states[cell_index[(donor_block, nuisance_cell, donor_level)]]
+        geometry = blocked_contrast_geometry(
+            deranged, factor, nuisance, blocks, maximum_rank=maximum_rank)
+        results.append(DerangedBlockedBasis(
+            geometry.basis, geometry.eigenvalues, tuple(donor_order)))
+    return tuple(results)
+
+
+def orthonormal_union(*bases: Tensor, tolerance: float = 1e-8) -> Tensor:
+    """Return the orthonormal span of already frozen component bases."""
+    if not bases or any(basis.ndim != 2 for basis in bases):
+        raise ValueError("At least one matrix basis is required")
+    widths = {basis.shape[0] for basis in bases}
+    if len(widths) != 1:
+        raise ValueError("Component bases must share an ambient width")
+    joined = torch.cat(tuple(basis.double() for basis in bases), dim=1)
+    if joined.shape[1] == 0:
+        return joined
+    u, singular, _ = torch.linalg.svd(joined, full_matrices=False)
+    keep = singular > tolerance * max(float(singular[0]), 1.0)
+    return u[:, keep]
+
+
 def select_causal_rank(measurements: Iterable[dict], *, full_probability_gain: float,
                        minimum_item_accuracy: float, minimum_group_accuracy: float,
                        effect_fraction: float = .95,
+                       minimum_spectral_gap: float | None = None,
                        candidate_ranks=(1, 2, 4, 8, 16, 32, 64)) -> dict:
     """Freeze the smallest registered rank recovering the full finite effect."""
     if not math.isfinite(full_probability_gain) or full_probability_gain <= 0:
         raise ValueError("Full-state probability gain must be finite and positive")
     if not 0 < effect_fraction <= 1:
         raise ValueError("Effect fraction must lie in (0, 1]")
+    if minimum_spectral_gap is not None and not 0 <= minimum_spectral_gap <= 1:
+        raise ValueError("Minimum spectral gap must lie in [0, 1]")
     allowed = tuple(candidate_ranks)
     if not allowed or any(type(rank) is not int or rank <= 0 for rank in allowed) \
             or tuple(sorted(set(allowed))) != allowed:
@@ -238,9 +338,13 @@ def select_causal_rank(measurements: Iterable[dict], *, full_probability_gain: f
         for name in ("item_accuracy", "group_accuracy", "mean_probability_gain"):
             if name not in row or not math.isfinite(row[name]):
                 raise ValueError(f"Nonfinite or missing rank measurement: {name}")
+        spectral_pass = (minimum_spectral_gap is None
+                         or (math.isfinite(row.get("spectral_boundary_gap", math.nan))
+                             and row["spectral_boundary_gap"] >= minimum_spectral_gap))
         qualified = (row["mean_probability_gain"] >= effect_fraction * full_probability_gain
                      and row["item_accuracy"] >= minimum_item_accuracy
-                     and row["group_accuracy"] >= minimum_group_accuracy)
+                     and row["group_accuracy"] >= minimum_group_accuracy
+                     and spectral_pass)
         table[rank] = {**row, "qualified": qualified,
                        "effect_fraction": row["mean_probability_gain"]
                        / full_probability_gain}
@@ -249,6 +353,7 @@ def select_causal_rank(measurements: Iterable[dict], *, full_probability_gain: f
     return {"candidate_ranks": list(allowed), "effect_fraction_threshold": effect_fraction,
             "minimum_item_accuracy": minimum_item_accuracy,
             "minimum_group_accuracy": minimum_group_accuracy,
+            "minimum_spectral_gap": minimum_spectral_gap,
             "full_probability_gain": full_probability_gain,
             "measurements": {str(rank): table[rank] for rank in sorted(table)},
             "selection": None if selection is None else selection["rank"]}
@@ -259,6 +364,7 @@ def select_joint_causal_rank(measurements_by_seed: dict[str, Iterable[dict]], *,
                              minimum_item_accuracy: float,
                              minimum_group_accuracy: float,
                              effect_fraction: float = .95,
+                             minimum_spectral_gap: float | None = None,
                              candidate_ranks=(1, 2, 4, 8, 16, 32, 64)) -> dict:
     """Choose one smallest rank satisfying the finite-effect rule in every seed."""
     if set(measurements_by_seed) != set(full_probability_gain_by_seed) \
@@ -268,7 +374,8 @@ def select_joint_causal_rank(measurements_by_seed: dict[str, Iterable[dict]], *,
         rows, full_probability_gain=full_probability_gain_by_seed[seed],
         minimum_item_accuracy=minimum_item_accuracy,
         minimum_group_accuracy=minimum_group_accuracy,
-        effect_fraction=effect_fraction, candidate_ranks=candidate_ranks)
+        effect_fraction=effect_fraction, minimum_spectral_gap=minimum_spectral_gap,
+        candidate_ranks=candidate_ranks)
         for seed, rows in measurements_by_seed.items()}
     common = [rank for rank in candidate_ranks
               if all(str(rank) in result["measurements"]

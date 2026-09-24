@@ -49,6 +49,18 @@ def test_rank_measurements_excludes_full_reference():
     assert [row["rank"] for row in rows] == [1, 2]
 
 
+def test_joint_rank_decision_rejects_a_behavioral_pass_inside_degenerate_block():
+    summaries = {
+        "0": _summary((.81, .61, .96), (.9, .8, .99)),
+        "1": _summary((.82, .62, .97), (.91, .81, .99)),
+    }
+    spectra = {seed: torch.tensor([1.0, .99]) for seed in summaries}
+    result = campaign.joint_rank_decision(summaries, "content", spectra)
+    assert result["selection"] == 2
+    assert not result["by_seed"]["0"]["measurements"]["1"]["qualified"]
+    assert result["by_seed"]["0"]["measurements"]["1"]["spectral_boundary_gap"] < .05
+
+
 def test_independent_auditor_reproduces_joint_rank_selection():
     summaries = {
         "0": _summary((.81, .61, .96), (.9, .8, .99)),

@@ -4,12 +4,13 @@ from dataclasses import asdict
 
 import torch
 
-from voynich.workspace.teacher12_models import model_for_arm
+from voynich.workspace.teacher12_models import WIDTH, model_for_arm
 from voynich.workspace.teacher13_confirm import (
     MediatorSpec,
     bidirectional_sufficiency,
     corruption_rescue_logits,
     corruption_rescue_rows,
+    cross_task_mediator_logits,
     fresh_panel_confirmation_rows,
     identity_error,
     mediator_logits,
@@ -174,6 +175,26 @@ def test_direct_copy_specificity_uses_frozen_same_key_nuisance_variants():
             f"{task}_same_key_{family}" for task in ("direct", "copy")
             for family in ("format", "order", "distractor")}
         assert all(row["direction"] == "specificity" for row in rows)
+
+
+def test_cross_task_subspace_patch_full_width_matches_full_cross_task_edit():
+    groups = _groups()
+    group = groups[0]
+    base = (episode_from_record(group["first_hop_base"]),)
+    donor = (episode_from_record(group["first_hop_donor"]),)
+    reference = (episode_from_record(group["donor"][0]),)
+    torch.manual_seed(481)
+    net = model_for_arm("raw_shallow").eval()
+    for spec in (
+            MediatorSpec(kind="single", site="blocks.0.resid_post",
+                         label="queried_f.right"),
+            MediatorSpec(kind="path", early_site="embed",
+                         source_label="queried_f.right",
+                         late_site="blocks.0.resid_post", destination_label="query")):
+        expected = cross_task_mediator_logits(net, base, donor, reference, spec)
+        actual = cross_task_mediator_logits(
+            net, base, donor, reference, spec, basis=torch.eye(WIDTH))
+        assert torch.allclose(actual.float(), expected.float(), atol=1e-6, rtol=1e-6)
 
 
 def test_retained_fresh_panel_rows_reproduce_existing_clean_gate_scores():

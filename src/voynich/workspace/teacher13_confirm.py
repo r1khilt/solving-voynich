@@ -87,11 +87,16 @@ def _corresponding_position(reference: Episode, target: Episode, label: str) -> 
 
 
 def _indexed_position_patch(donor: torch.Tensor, base_positions: tuple[int, ...],
-                            donor_positions: tuple[int, ...]):
+                            donor_positions: tuple[int, ...], *, basis=None,
+                            component="full"):
     if donor.ndim != 3 or donor.shape[0] != len(base_positions) \
             or len(base_positions) != len(donor_positions):
         raise ValueError("Indexed mediator positions and donor batch are incompatible")
     record_materialized(donor)
+    if component not in ("full", "subspace", "complement"):
+        raise ValueError("Unknown indexed-patch component")
+    if component != "full" and basis is None:
+        raise ValueError("Indexed subspace patch requires a basis")
 
     def intervene(value: torch.Tensor) -> torch.Tensor:
         if value.ndim != 3 or value.shape[0] != donor.shape[0] \
@@ -101,7 +106,23 @@ def _indexed_position_patch(donor: torch.Tensor, base_positions: tuple[int, ...]
         local = donor.to(device=value.device, dtype=value.dtype)
         for index, (base_position, donor_position) in enumerate(zip(
                 base_positions, donor_positions, strict=True)):
-            changed[index, base_position] = local[index, donor_position]
+            donor_value, base_value = local[index, donor_position], value[index, base_position]
+            if basis is None or component == "full":
+                changed[index, base_position] = donor_value
+                continue
+            local_basis = basis.to(device=value.device, dtype=value.dtype)
+            if local_basis.ndim != 2 or local_basis.shape[0] != value.shape[-1] \
+                    or local_basis.shape[1] == 0:
+                raise ValueError("Indexed subspace basis has incompatible shape")
+            gram = local_basis.T @ local_basis
+            if not torch.allclose(gram, torch.eye(
+                    local_basis.shape[1], device=gram.device, dtype=gram.dtype),
+                    atol=1e-5, rtol=1e-5):
+                raise ValueError("Indexed subspace basis is not orthonormal")
+            delta = donor_value - base_value
+            projected = (delta @ local_basis) @ local_basis.T
+            changed[index, base_position] = base_value + (
+                projected if component == "subspace" else delta - projected)
         return changed
 
     return intervene
@@ -109,7 +130,8 @@ def _indexed_position_patch(donor: torch.Tensor, base_positions: tuple[int, ...]
 
 def cross_task_mediator_logits(net: nn.Module, base: tuple[Episode, ...],
                                donor: tuple[Episode, ...], references: tuple[Episode, ...],
-                               spec: MediatorSpec, *, device="cpu") -> torch.Tensor:
+                               spec: MediatorSpec, *, basis=None, component="full",
+                               device="cpu") -> torch.Tensor:
     """Apply a frozen mediator through logical-row correspondence across task roles."""
     spec.validate()
     if not base or len(base) != len(donor) or len(base) != len(references):
@@ -122,7 +144,9 @@ def cross_task_mediator_logits(net: nn.Module, base: tuple[Episode, ...],
                             for reference, episode in zip(references, donor, strict=True))
     donor_output = raw_forward(net, donor, device=device, cache_names=(site,))
     early = _indexed_position_patch(
-        donor_output.cache[site], base_positions, donor_positions)
+        donor_output.cache[site], base_positions, donor_positions,
+        basis=basis if spec.kind == "single" else None,
+        component=component if spec.kind == "single" else "full")
     if spec.kind == "single":
         return raw_forward(net, base, device=device, interventions={site: early}).logits
     base_layouts = tuple(semantic_layout(episode) for episode in base)
@@ -131,7 +155,8 @@ def cross_task_mediator_logits(net: nn.Module, base: tuple[Episode, ...],
         interventions={site: early})
     late = position_patch(
         propagated.cache[spec.late_site], base_layouts, base_layouts,
-        base_role=spec.destination_label, semantic_label=True)
+        base_role=spec.destination_label, basis=basis, component=component,
+        semantic_label=True)
     return raw_forward(net, base, device=device,
                        interventions={spec.late_site: late}).logits
 
@@ -442,6 +467,11 @@ def _diagnostic_rows(logits: torch.Tensor, clean_logits: torch.Tensor,
             "base_target_logit": float(clean_logits[index, target_index].item()),
             "prediction_logit": float(logits[index, prediction - SYMBOL_START].item()),
             **({"pair_id": item["pair_id"]} if "pair_id" in item else {}),
+            **({"item_id": item["item_id"]} if "item_id" in item else {}),
+            **({"base_render_id": item["base_render_id"]}
+               if "base_render_id" in item else {}),
+            **({"donor_render_id": item["donor_render_id"]}
+               if "donor_render_id" in item else {}),
         })
     return rows
 

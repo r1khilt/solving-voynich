@@ -6,6 +6,7 @@ from dataclasses import asdict
 import importlib.util
 import json
 from pathlib import Path
+import random
 import time
 
 import torch
@@ -38,6 +39,7 @@ MAX_TRAFFIC_BYTES = 300 * 1024**3
 MAX_OUTPUT_BYTES = 20 * 1024**3
 MAX_RESULT_BYTES = 2 * 1024**3
 CANDIDATE_RANKS = (1, 2, 4, 8, 16, 32, 64)
+MINIMUM_SPECTRAL_GAP = .05
 FACTOR_THRESHOLDS = {
     "content": (.80, .60),
     "binding": (.75, .55),
@@ -86,7 +88,7 @@ def geometry_payload(panels, fitted) -> dict:
                 "participation_ratio": value.participation_ratio}
 
     return {
-        "format": "TEACH-0013-factor-geometry-v1",
+        "format": "TEACH-0013-factor-geometry-v2",
         "panels": {name: {"states": panel.states, "factor": panel.factor,
                            "nuisance": panel.nuisance, "blocks": panel.blocks,
                            "metadata": panel.metadata}
@@ -97,19 +99,37 @@ def geometry_payload(panels, fitted) -> dict:
             "raw": fitted.orthogonal.raw,
             "forward": fitted.orthogonal.forward,
             "reverse": fitted.orthogonal.reverse,
+            "forward_eigenvalues": fitted.orthogonal.forward_eigenvalues,
+            "reverse_eigenvalues": fitted.orthogonal.reverse_eigenvalues,
             "raw_principal_angles": fitted.orthogonal.raw_principal_angles,
         },
     }
 
 
-def rank_measurements(summary: dict) -> list[dict]:
-    return [{"rank": int(rank), "item_accuracy": cell["item_accuracy"],
+def spectral_boundary_gap(spectrum: torch.Tensor, rank: int) -> float:
+    """Relative residual-variance drop after a candidate prefix boundary."""
+    spectrum = spectrum.double()
+    if rank <= 0 or rank > len(spectrum):
+        raise ValueError("Rank lies outside residualized factor spectrum")
+    if rank == len(spectrum):
+        return 1.0
+    current, following = float(spectrum[rank - 1]), float(spectrum[rank])
+    return max(0.0, min(1.0, (current - following) / max(current, 1e-12)))
+
+
+def rank_measurements(summary: dict, spectrum: torch.Tensor | None = None) -> list[dict]:
+    rows = [{"rank": int(rank), "item_accuracy": cell["item_accuracy"],
              "group_accuracy": cell["group_accuracy"],
              "mean_probability_gain": cell["mean_probability_gain"]}
             for rank, cell in summary.items() if rank != "full"]
+    if spectrum is not None:
+        for row in rows:
+            row["spectral_boundary_gap"] = spectral_boundary_gap(spectrum, row["rank"])
+    return rows
 
 
-def joint_rank_decision(summaries: dict[str, dict], factor: str) -> dict:
+def joint_rank_decision(summaries: dict[str, dict], factor: str,
+                        spectra: dict[str, torch.Tensor] | None = None) -> dict:
     full = {seed: rows["full"]["mean_probability_gain"]
             for seed, rows in summaries.items()}
     if any(not torch.isfinite(torch.tensor(value)).item() or value <= 0
@@ -118,9 +138,11 @@ def joint_rank_decision(summaries: dict[str, dict], factor: str) -> dict:
                 "full_probability_gain_by_seed": full}
     item, group = FACTOR_THRESHOLDS[factor]
     return select_joint_causal_rank(
-        {seed: rank_measurements(rows) for seed, rows in summaries.items()},
+        {seed: rank_measurements(rows, None if spectra is None else spectra[seed])
+         for seed, rows in summaries.items()},
         full_probability_gain_by_seed=full,
         minimum_item_accuracy=item, minimum_group_accuracy=group,
+        minimum_spectral_gap=None if spectra is None else MINIMUM_SPECTRAL_GAP,
         candidate_ranks=CANDIDATE_RANKS)
 
 
@@ -138,9 +160,56 @@ def cross_seed_geometry(seed_payloads: dict) -> dict:
         result[factor] = {
             "linear_cka": linear_cka(left_panel.states, right_panel.states),
             "principal_angles": principal_angles(left_basis, right_basis),
+            "aligned_principal_angles": principal_angles(
+                mapping.rotation.T @ left_basis, right_basis),
             "seed0_to_seed1": asdict(mapping),
             "seed1_to_seed0": asdict(reverse),
         }
+
+    factors = ("content", "binding", "order")
+
+    def shared_map(right_block_map=None):
+        left_rows, right_rows, means = [], [], {}
+        for factor in factors:
+            left_panel = seed_payloads["0"]["panels"][factor]
+            right_panel = seed_payloads["1"]["panels"][factor]
+            right_states = right_panel.states
+            if right_block_map is not None:
+                lookup = {(block, nuisance, level): index for index, (
+                    block, nuisance, level) in enumerate(zip(
+                        right_panel.blocks, right_panel.nuisance,
+                        right_panel.factor, strict=True))}
+                indices = [lookup[(right_block_map[block], nuisance, level)]
+                           for block, nuisance, level in zip(
+                               left_panel.blocks, left_panel.nuisance,
+                               left_panel.factor, strict=True)]
+                right_states = right_states[indices]
+            left_mean, right_mean = left_panel.states.mean(0), right_states.mean(0)
+            scale = len(left_panel.states) ** .5
+            left_rows.append((left_panel.states - left_mean) / scale)
+            right_rows.append((right_states - right_mean) / scale)
+            means[factor] = {"seed0": left_mean, "seed1": right_mean}
+        left, right = torch.cat(left_rows), torch.cat(right_rows)
+        mapping = orthogonal_procrustes(left, right)
+        return {"rotation": mapping.rotation, "normalized_residual": mapping.normalized_residual,
+                "factor_means": means,
+                "aligned_principal_angles": {factor: principal_angles(
+                    mapping.rotation.T
+                    @ seed_payloads["0"]["fitted"].orthogonal.forward[factor],
+                    seed_payloads["1"]["fitted"].orthogonal.forward[factor])
+                    for factor in factors}}
+
+    blocks = sorted(set(seed_payloads["0"]["panels"]["content"].blocks))
+    rng = random.Random(73341)
+    donors = list(blocks)
+    for right in range(len(donors) - 1, 0, -1):
+        left = rng.randrange(right)
+        donors[left], donors[right] = donors[right], donors[left]
+    block_map = dict(zip(blocks, donors, strict=True))
+    result["shared"] = shared_map()
+    result["shared_deranged_control"] = {
+        **shared_map(block_map), "seed": 73341,
+        "donor_blocks": tuple(donors)}
     return result
 
 
@@ -235,11 +304,13 @@ def discovery(result_dir: Path, output_dir: Path, device: str) -> dict:
             selections[factor] = {"selection": None, "reason": "empty_orthogonal_basis"}
         else:
             selections[factor] = joint_rank_decision(
-                {seed: summaries[seed][factor] for seed in ("0", "1")}, factor)
+                {seed: summaries[seed][factor] for seed in ("0", "1")}, factor,
+                {seed: seed_payloads[seed]["fitted"].orthogonal.forward_eigenvalues[factor]
+                 for seed in ("0", "1")})
     alignment = cross_seed_geometry(seed_payloads)
     alignment_path = output_dir / "subspace-cross-seed.pt"
     artifacts["cross_seed"] = tensor_artifact(
-        alignment_path, {"format": "TEACH-0013-cross-seed-geometry-v1",
+        alignment_path, {"format": "TEACH-0013-cross-seed-geometry-v2",
                          "alignment": alignment}, stage_c)
     elapsed = time.monotonic() - start
     output_bytes, result_bytes = stage_c.tree_bytes(output_dir), stage_c.tree_bytes(result_dir)

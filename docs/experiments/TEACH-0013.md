@@ -263,14 +263,34 @@ assignments across marked, marker-free, format-swapped and distractor-swapped su
 forward basis assigns shared variance in the preregistered order content, binding, order; a reverse
 order is saved as a diagnostic of that convention.
 
+Residualized binding/order directions are re-ranked by the eigenvalues of their projected
+contrast covariance, rather than by an arbitrary basis-column or unweighted SVD order. A
+behaviorally qualifying rank boundary must also have at least a five-percent relative drop to the
+next residualized eigenvalue in both seeds; otherwise selection advances to the next registered
+rank. This prevents a prefix from cutting through an unresolved degenerate block.
+
 Confirmation tests content alone, binding alone, order alone, content+binding, all three, the
-orthogonal complement, 32 Haar-random matched-rank subspaces, shuffled-label contrasts and
+orthogonal complement, 32 Haar-random matched-rank subspaces, deranged-pair contrasts and
 equal-energy off-subspace ablations. It also reports rank, participation ratio, explained
 contrast covariance, principal angles and discovery-fitted cross-seed Procrustes transfer.
 Every rank-screen row has an exact full-vocabulary logit record, and a separate no-model auditor
 must reconstruct the blocked covariances, eigenspaces, both orthogonalization orders, finite-effect
 summaries, joint two-seed rank choices, cross-seed geometry and exact-logit hashes before the ranks
 can be used on confirmation.
+
+Each deranged-pair control keeps every base state in its discovery group but replaces every donor
+state with a different logical group's donor under the same nuisance cell; the exact fixed-point-
+free permutation is retained. This is used instead of a binary sign shuffle, whose contrast outer
+product can leave a covariance subspace unchanged. Equal-energy controls inject a deterministic
+complement direction scaled per item to the norm of the selected donor edit. Binding rank and
+confirmation assays reuse one unchanged G0 donor across all three recipient G tables, matching the
+answer-injection test used for content.
+
+Cross-seed geometry reports factor-local maps only as diagnostics. The primary discovery map is
+one shared orthogonal rotation fit to the equal-weighted union of centered content, binding and
+order panels. A second shared map uses a fixed seed-73341 logical-group derangement. Confirmation
+must establish finite causal transport under the shared map and beat the deranged map; CKA or
+principal angles alone cannot support cross-seed alignment.
 
 `CONTENT-SUBSPACE-SUPPORTED` requires, in both seeds:
 

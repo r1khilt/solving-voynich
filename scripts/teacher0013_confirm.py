@@ -234,12 +234,15 @@ class LogitCapture:
             "logical_group_ids": tuple(row["logical_group_id"] for row in metadata),
             "recipients": tuple(row["recipient"] for row in metadata),
             "targets": tuple(row["target"] for row in metadata),
+            "item_ids": tuple(row.get(
+                "item_id", f"{condition}:{direction}:{row['logical_group_id']}:{row['recipient']}")
+                for row in metadata),
             "edited_symbol_logits": logits.contiguous(),
             "clean_symbol_logits": clean_logits.contiguous(),
         })
 
     def write(self, path: Path) -> dict:
-        payload = {"format": "TEACH-0013-symbol-logits-v1", "records": self.records}
+        payload = {"format": "TEACH-0013-symbol-logits-v2", "records": self.records}
         torch.save(payload, path)
         return {"path": str(path.relative_to(ROOT)), "sha256": sha_file(path),
                 "bytes": path.stat().st_size, "records": len(self.records),

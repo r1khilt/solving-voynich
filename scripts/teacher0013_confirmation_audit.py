@@ -90,7 +90,8 @@ def verify_logit_archive(metadata: dict, rows: list[dict]) -> dict:
     need(path.is_file() and path.stat().st_size == metadata["bytes"]
          and file_digest(path) == metadata["sha256"], "Exact-logit artifact mismatch")
     payload = torch.load(path, map_location="cpu", weights_only=True)
-    need(payload.get("format") == "TEACH-0013-symbol-logits-v1"
+    need(payload.get("format") in ("TEACH-0013-symbol-logits-v1",
+                                   "TEACH-0013-symbol-logits-v2")
          and isinstance(payload.get("records"), list), "Unknown exact-logit format")
     records = payload["records"]
     need(len(records) == metadata["records"], "Exact-logit record count mismatch")
@@ -100,9 +101,10 @@ def verify_logit_archive(metadata: dict, rows: list[dict]) -> dict:
     offsets = defaultdict(int)
     checked = 0
     for record in records:
-        need(set(record) == {"condition", "direction", "logical_group_ids",
-                             "recipients", "targets", "edited_symbol_logits",
-                             "clean_symbol_logits"}, "Exact-logit record fields changed")
+        required = {"condition", "direction", "logical_group_ids", "recipients", "targets",
+                    "edited_symbol_logits", "clean_symbol_logits"}
+        need(set(record) in (required, required | {"item_ids"}),
+             "Exact-logit record fields changed")
         key = (record["condition"], record["direction"])
         edited, clean = record["edited_symbol_logits"], record["clean_symbol_logits"]
         need(isinstance(edited, torch.Tensor) and isinstance(clean, torch.Tensor)
@@ -118,6 +120,11 @@ def verify_logit_archive(metadata: dict, rows: list[dict]) -> dict:
              and tuple(row["recipient"] for row in selected) == tuple(record["recipients"])
              and tuple(row["target"] for row in selected) == tuple(record["targets"]),
              "Exact-logit metadata does not align with compact rows")
+        if "item_ids" in record:
+            need(tuple(row.get("item_id", f"{row['condition']}:{row['direction']}:"
+                                          f"{row['logical_group_id']}:{row['recipient']}")
+                       for row in selected) == tuple(record["item_ids"]),
+                 "Exact-logit item IDs do not align with compact rows")
         probability = edited.softmax(-1)
         clean_probability = clean.softmax(-1)
         need(torch.allclose(probability.sum(-1), torch.ones(count), atol=1e-6, rtol=1e-6)
@@ -127,6 +134,10 @@ def verify_logit_archive(metadata: dict, rows: list[dict]) -> dict:
         predictions = edited.argmax(-1) + SYMBOL_START
         clean_predictions = clean.argmax(-1) + SYMBOL_START
         for index, row in enumerate(selected):
+            need(SYMBOL_START <= row["target"] < SYMBOL_START + edited.shape[1]
+                 and SYMBOL_START <= row["prediction"] < SYMBOL_START + edited.shape[1]
+                 and SYMBOL_START <= row["clean_prediction"] < SYMBOL_START + edited.shape[1],
+                 "Compact symbol is outside exact-logit vocabulary")
             target_index = row["target"] - SYMBOL_START
             prediction_index = int(predictions[index].item()) - SYMBOL_START
             need(int(predictions[index].item()) == row["prediction"]

@@ -7,9 +7,11 @@ import torch
 from voynich.workspace.teacher13_geometry import (
     balanced_contrast_geometry,
     blocked_contrast_geometry,
+    deranged_blocked_bases,
     haar_random_bases,
     linear_cka,
     orthogonal_factor_geometry,
+    orthonormal_union,
     orthogonal_procrustes,
     orthogonalize_basis,
     principal_angles,
@@ -139,3 +141,37 @@ def test_joint_rank_selection_requires_the_same_rank_to_pass_both_seeds():
     assert result["selection"] == 2
     assert result["by_seed"]["0"]["selection"] == 1
     assert result["by_seed"]["1"]["selection"] == 2
+
+
+def test_deranged_blocked_bases_are_deterministic_complete_design_nulls():
+    rows, factor, nuisance, blocks = [], [], [], []
+    for block in range(8):
+        direction = torch.randn(5)
+        for nuisance_cell in range(4):
+            offset = torch.randn(5)
+            for level, sign in ((0, -1.), (1, 1.)):
+                rows.append(offset + sign * direction)
+                factor.append(level)
+                nuisance.append(nuisance_cell)
+                blocks.append(block)
+    left = deranged_blocked_bases(
+        torch.stack(rows), factor, nuisance, blocks, count=4, seed=991)
+    right = deranged_blocked_bases(
+        torch.stack(rows), factor, nuisance, blocks, count=4, seed=991)
+    assert len(left) == 4 and all(
+        item.basis.shape[0] == 5 and item.basis.shape[1] > 0 for item in left)
+    assert all(torch.equal(a.basis, b.basis) and torch.equal(a.eigenvalues, b.eigenvalues)
+               and a.donor_blocks == b.donor_blocks
+               for a, b in zip(left, right, strict=True))
+    assert all(all(index != donor for index, donor in enumerate(item.donor_blocks))
+               for item in left)
+
+
+def test_orthonormal_union_deduplicates_overlapping_component_directions():
+    first = torch.eye(5, dtype=torch.double)[:, :2]
+    second = torch.eye(5, dtype=torch.double)[:, 1:4]
+    union = orthonormal_union(first, second)
+    assert union.shape == (5, 4)
+    assert torch.allclose(union.T @ union, torch.eye(4, dtype=torch.double))
+    expected = torch.eye(5, dtype=torch.double)[:, :4]
+    assert torch.allclose(union @ union.T, expected @ expected.T)
