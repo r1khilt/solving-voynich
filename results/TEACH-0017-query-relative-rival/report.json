@@ -1,0 +1,65 @@
+{
+  "archives": {
+    "confirmation": {
+      "bytes": 585436,
+      "sha256": "806ff25fbb8172f43380b165abd81ff39dd0eb89fa782905ea5cd2f45808adf2"
+    },
+    "discovery": {
+      "bytes": 585039,
+      "sha256": "c58a97b00f5b3f6b6aa7db1bffbbb544eec83d77226236da7697e7f2cb48ba02"
+    }
+  },
+  "experiment": "TEACH-0017-query-relative-counterexample",
+  "neural_model_loaded": false,
+  "source_git_head": "96dcd1b9371e51106b6ab7a7f41b6e7618326ebc",
+  "source_sha256": {
+    "docs/experiments/TEACH-0017-cross-context-design.md": "cb3787e9c404c8a3923407037153605f9ce3ff2b7d66c3c3b7f586deda3e12c1",
+    "docs/experiments/TEACH-0017-query-relative-counterexample.md": "bebe25ec10e83c407b9ccb9a196cbc571a15c3955ca367a3035e028a7ae6a819",
+    "scripts/teacher0017_query_relative.py": "a063bceb2bb6145e6635dc9d3f68aa2284bc704c815c8c02aa49ef6cde2b9152",
+    "scripts/teacher0017_query_relative_audit.py": "e7a1ca5b93a93c0f6ecbdb46b4323c7cd8a55ab941415f248e35381b9e707fca",
+    "tests/test_teacher0017_query_relative.py": "120b91685b39c467724a29a2daf812ce2c4e6114f5cf8040929a9bf7627d873c"
+  },
+  "state_definition": "first_hop_key_minus_query_mod_2048",
+  "status": "symbolic_visible_only",
+  "suite_audit_sha256": "87ff902f763d3da5840e4293748b3af653595669f021f9dc32cb1f294b54448c",
+  "suite_file_sha256": {
+    "confirmation": "87ba8d67abd8e3af618116b2e024a99f53276b5943361d4e3d48e882154480aa",
+    "discovery": "617d16f5966cf56cf696fedc5ac0dca9e5dc094f90915d41f79f3351c682ce73"
+  },
+  "summaries": {
+    "confirmation": {
+      "attempts": 9216,
+      "same_query_attempts": 9216,
+      "shifted_rank_offdiag_attempts": 4464,
+      "shifted_rank_offdiag_hits": {
+        "distinct": 0,
+        "final_donor": 0,
+        "identity": 4464,
+        "random": 5,
+        "rank": 0,
+        "reverse": 4464,
+        "same_key": 4464,
+        "transfer": 4464,
+        "wrong_key": 0
+      },
+      "surfaces": 1024
+    },
+    "discovery": {
+      "attempts": 9216,
+      "same_query_attempts": 9216,
+      "shifted_rank_offdiag_attempts": 4128,
+      "shifted_rank_offdiag_hits": {
+        "distinct": 0,
+        "final_donor": 0,
+        "identity": 4128,
+        "random": 3,
+        "rank": 0,
+        "reverse": 4128,
+        "same_key": 4128,
+        "transfer": 4128,
+        "wrong_key": 0
+      },
+      "surfaces": 1024
+    }
+  }
+}

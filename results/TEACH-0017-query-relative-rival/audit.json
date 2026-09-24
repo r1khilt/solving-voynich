@@ -1,0 +1,42 @@
+{
+  "audit": "pass",
+  "numerical_neural_replay": "not_applicable_symbolic_oracle",
+  "report_sha256": "7df8d6952a13804696448f86ae121ac76f5d07816389502702e5f3f199dd951f",
+  "scope": "visible_query_relative_counterexample",
+  "summaries": {
+    "confirmation": {
+      "attempts": 9216,
+      "same_query_attempts": 9216,
+      "shifted_rank_offdiag_attempts": 4464,
+      "shifted_rank_offdiag_hits": {
+        "distinct": 0,
+        "final_donor": 0,
+        "identity": 4464,
+        "random": 5,
+        "rank": 0,
+        "reverse": 4464,
+        "same_key": 4464,
+        "transfer": 4464,
+        "wrong_key": 0
+      },
+      "surfaces": 1024
+    },
+    "discovery": {
+      "attempts": 9216,
+      "same_query_attempts": 9216,
+      "shifted_rank_offdiag_attempts": 4128,
+      "shifted_rank_offdiag_hits": {
+        "distinct": 0,
+        "final_donor": 0,
+        "identity": 4128,
+        "random": 3,
+        "rank": 0,
+        "reverse": 4128,
+        "same_key": 4128,
+        "transfer": 4128,
+        "wrong_key": 0
+      },
+      "surfaces": 1024
+    }
+  }
+}
