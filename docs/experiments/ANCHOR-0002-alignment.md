@@ -1,0 +1,28 @@
+# ANCHOR-0002: image-first fragment/label alignment audit
+
+**Question.** Can any of the 28 published possible small-plant pair groups be given exact drawing-to-nearby-label coordinates without looking at label strings? This is an exploratory source-data audit, not a decipherment assay or a confirmation test.
+
+## Prior work and reason for the method
+
+[Zandbergen's illustration survey](https://voynich.nu/illustr.html) reports internal plant-part similarities but distinguishes clear examples from tentative ones. [Knowles' list](https://www.voynich.ninja/thread-4067-post-56211.html) joins many small fragments through larger herbal drawing proposals; the list is not independent ground truth. [D'Imperio's manuscript survey](https://media.defense.gov/2021/Jul/13/2002761512/-1/-1/0/VOYNICH_MANUSCRIPT.PDF) explicitly warns that a small drawing's nearby label can be hard to assign. In historical-image machine learning, [Kaoua et al. (2021)](https://arxiv.org/abs/2108.08109) show that illustration retrieval fails in difficult cross-manuscript cases even with modern image features and annotated correspondences. We therefore use page geometry and source number ordering only to **find reviewable candidates**. We do not let an automatic visual score decide botanical identity.
+
+## Inputs and rule
+
+- Base source inventory: `data/manifests/anchor0002_candidates.json`, which pins hashes of Knowles' post, Zandbergen Quire 15/19 descriptions, the train/validation corpus and 28 groups. Raw HTML remains ignored under `data/raw/anchor0002/`.
+- Yale MS 408 IIIF manifest: `data/raw/yale_ms408_iiif_manifest.json`; source [Yale collections manifest](https://collections.library.yale.edu/manifests/2002046). Page images were requested at a 1,600-pixel width. Raw JPEGs and generated PNG review sheets remain ignored. The new manifest records their hashes and regions.
+- Zandbergen Quire 15 page previews: f89r1, f89r2 and f89v2, with exact source URLs and SHA-256 in `data/manifests/anchor0002_label_alignment.json`.
+- Read only page IDs, locus IDs, `Lf` type and numeric editorial comments from the pinned validation JSONL. The script never accesses any `text`, token or glyph field and never opens test JSONL. The editor's `<!N>` markers are not manuscript text.
+
+For each manually inspected f89 row, pair left-to-right source fragment numbers with left-to-right `Lf` locus IDs **only where the counts match**. Require all listed loci to exist, no duplicate loci, and consistency with every existing direct numeric locator. f89r1 has source/label row counts 4/4, 3/3, 3/3. f89v2 has 5/5, 3/3, 4/4; its directly numbered #60 and #61 are the last two predicted row-3 positions. f89r2 has 4/4, 2/2, **6/5**, 4/4. The five-label row 3 is excluded entirely; row 1, 2 and 4 are mapped. These are single-reviewer positional inferences, especially on f89r1 where no direct numbers exist.
+
+`scripts/anchor0002_label_alignment.py` replays the row-count, locus and direct-anchor checks and produces `data/manifests/anchor0002_label_alignment.json`. `scripts/anchor0002_pair_sheets.py` makes 18 manually bounded drawing crops and three nine-pair review sheets from ignored raw scans. `data/manifests/anchor0002_image_review.json` pins every source/crop/sheet hash and rectangle. The generous boxes and sheets are review aids, not machine-rated evidence; some drawing parts overlap or extend outside a crop, so reviewers should consult the original scan. The sheets are grouped according to the prior published candidate list and are **not blinded**.
+
+`scripts/anchor0002_blind_packet.py` additionally packages each of the nine left-side drawings with the published right-side candidate and two alternatives drawn by balanced cyclic shifts of the same nine right-side images. A fixed seed randomizes item and option order. Nine anonymous four-image PNGs and a separate answer key live in ignored `data/raw/anchor0002/blind_review/`; `data/manifests/anchor0002_blind_packet.json` pins their hashes, not the option answers. Its README asks a reviewer to choose 1/2/3, NONE or UNSURE and give a visual reason without using the writing. The alternatives are **shuffled foils, not verified nonmatches or morphology-matched negatives**. This is a first-pass discrimination packet, not a confirmatory statistical test.
+
+## Observed feasibility, not a positive match result
+
+Three groups had direct numbered labels at both ends: 5, 16 and 26. Six more have a f89-side row-position inference and a direct label at the other end: 7, 8, 10, 12, 19 and 23. Thus **nine of 28** proposed groups are now *potentially alignable* on train/validation pages. This does not raise the number of independently confirmed plant duplicates above zero. A single-researcher crop review already shows substantial visual heterogeneity among the proposed pairs; no formal similarity rating, botanical identity assignment, word-form comparison or final-test score has been made. f88 test JSONL remains unopened, but a narrow edge of f88v was visible on the adjacent f89r Yale image; no f88 text was transcribed or scored.
+
+## Next gate
+
+Obtain an image-only rating from a second independent reviewer using the prepared anonymous packet, its source page views, and an explicit “uncertain” option. Add morphology-matched negative decoys if a narrower visual claim is attempted. Freeze the retained image pairs and any text prediction before reading their label strings. Since the nine candidates include already exposed validation f89, their subsequent label test will be exploratory; an independent later holdout is required for a decipherment claim. A failed or low-agreement visual gate means stopping this pair branch rather than optimizing spelling similarity on the same questionable pairs.

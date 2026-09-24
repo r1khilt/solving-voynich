@@ -1,0 +1,372 @@
+{
+  "all_potentially_alignable_group_ids": [
+    5,
+    7,
+    8,
+    10,
+    12,
+    16,
+    19,
+    23,
+    26
+  ],
+  "base_candidate_manifest_sha256": "946b97e04b4d16e2dd70dbd6ec12e4237775981c799fb861b5df048a40e8a91c",
+  "id": "ANCHOR-0002",
+  "image_previews": {
+    "f89r1": {
+      "ignored_raw_path": "data/raw/anchor0002/previews/f089r1.jpg",
+      "sha256": "74ea845dfcd4e429a1dcf8640e6759c399a27ce424ce2bca0c032109bdb4459d",
+      "url": "https://www.voynich.nu/q15/f089r1_crd.jpg"
+    },
+    "f89r2": {
+      "ignored_raw_path": "data/raw/anchor0002/previews/f089r2.jpg",
+      "sha256": "00ff4822bb63fb5a6d5884d86e713f9af090bb3d2c19def19b3de8a42985701a",
+      "url": "https://www.voynich.nu/q15/f089r2_crd.jpg"
+    },
+    "f89v2": {
+      "ignored_raw_path": "data/raw/anchor0002/previews/f089v2.jpg",
+      "sha256": "04bd9b160c3098793520badc2f7cf276cb976d423874f58ccbd9a43d5a796e83",
+      "url": "https://www.voynich.nu/q15/f089v2_crd.jpg"
+    }
+  },
+  "limitations": "No label strings read; no drawing-pair similarity rerating; f89 alignments are single-reviewer positional inferences; test text unopened.",
+  "new_provisional_group_ids": [
+    7,
+    8,
+    10,
+    12,
+    19,
+    23
+  ],
+  "potentially_alignable_groups": [
+    {
+      "members": [
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 240,
+          "lf_locus_id": "f102v1.17",
+          "source_reference": "f102v1[2,2]",
+          "split": "train"
+        },
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 134,
+          "lf_locus_id": "f100v.4",
+          "source_reference": "f100v[1,4]",
+          "split": "train"
+        }
+      ],
+      "source_group": 5
+    },
+    {
+      "members": [
+        {
+          "alignment_method": "single_reviewer_image_row_order",
+          "fragment": 56,
+          "lf_locus_id": "f89v2.13",
+          "source_reference": "f89v2[2,2]",
+          "split": "validation"
+        },
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 119,
+          "lf_locus_id": "f100r.5",
+          "source_reference": "f100r[1,5]",
+          "split": "train"
+        }
+      ],
+      "source_group": 7
+    },
+    {
+      "members": [
+        {
+          "alignment_method": "single_reviewer_image_row_order",
+          "fragment": 52,
+          "lf_locus_id": "f89v2.4",
+          "source_reference": "f89v2[1,3]",
+          "split": "validation"
+        },
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 115,
+          "lf_locus_id": "f100r.1",
+          "source_reference": "f100r[1,1]",
+          "split": "train"
+        }
+      ],
+      "source_group": 8
+    },
+    {
+      "members": [
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 98,
+          "lf_locus_id": "f99v.5",
+          "source_reference": "f99v[1,4]",
+          "split": "train"
+        },
+        {
+          "alignment_method": "single_reviewer_image_row_order",
+          "fragment": 26,
+          "lf_locus_id": "f89r1.5",
+          "source_reference": "f89r1[1,4]",
+          "split": "validation"
+        }
+      ],
+      "source_group": 10
+    },
+    {
+      "members": [
+        {
+          "alignment_method": "single_reviewer_image_row_order",
+          "fragment": 46,
+          "lf_locus_id": "f89r2.31",
+          "source_reference": "f89r2[4,1]",
+          "split": "validation"
+        },
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 110,
+          "lf_locus_id": "f99v.27",
+          "source_reference": "f99v[3,2]",
+          "split": "train"
+        }
+      ],
+      "source_group": 12
+    },
+    {
+      "members": [
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 102,
+          "lf_locus_id": "f99v.9",
+          "source_reference": "f99v[1,8]",
+          "split": "train"
+        },
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 131,
+          "lf_locus_id": "f100v.1",
+          "source_reference": "f100v[1,1]",
+          "split": "train"
+        }
+      ],
+      "source_group": 16
+    },
+    {
+      "members": [
+        {
+          "alignment_method": "single_reviewer_image_row_order",
+          "fragment": 54,
+          "lf_locus_id": "f89v2.6",
+          "source_reference": "f89v2[1,5]",
+          "split": "validation"
+        },
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 241,
+          "lf_locus_id": "f102v1.18",
+          "source_reference": "f102v1[2,3]",
+          "split": "train"
+        }
+      ],
+      "source_group": 19
+    },
+    {
+      "members": [
+        {
+          "alignment_method": "single_reviewer_image_row_order",
+          "fragment": 53,
+          "lf_locus_id": "f89v2.5",
+          "source_reference": "f89v2[1,4]",
+          "split": "validation"
+        },
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 233,
+          "lf_locus_id": "f102v2.29",
+          "source_reference": "f102v2[3,5]",
+          "split": "train"
+        }
+      ],
+      "source_group": 23
+    },
+    {
+      "members": [
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 77,
+          "lf_locus_id": "f99r.12",
+          "source_reference": "f99r[2,1]",
+          "split": "train"
+        },
+        {
+          "alignment_method": "direct_editorial_locator",
+          "fragment": 120,
+          "lf_locus_id": "f100r.6",
+          "source_reference": "f100r[2,1]",
+          "split": "train"
+        }
+      ],
+      "source_group": 26
+    }
+  ],
+  "row_alignments": [
+    {
+      "fragment_numbers": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "lf_locus_ids": [
+        "f89r1.2",
+        "f89r1.3",
+        "f89r1.4",
+        "f89r1.5"
+      ],
+      "page": "f89r1",
+      "row": 1
+    },
+    {
+      "fragment_numbers": [
+        27,
+        28,
+        29
+      ],
+      "lf_locus_ids": [
+        "f89r1.12",
+        "f89r1.13",
+        "f89r1.14"
+      ],
+      "page": "f89r1",
+      "row": 2
+    },
+    {
+      "fragment_numbers": [
+        30,
+        31,
+        32
+      ],
+      "lf_locus_ids": [
+        "f89r1.25",
+        "f89r1.26",
+        "f89r1.27"
+      ],
+      "page": "f89r1",
+      "row": 3
+    },
+    {
+      "fragment_numbers": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "lf_locus_ids": [
+        "f89r2.2",
+        "f89r2.3",
+        "f89r2.4",
+        "f89r2.5"
+      ],
+      "page": "f89r2",
+      "row": 1
+    },
+    {
+      "fragment_numbers": [
+        37,
+        38
+      ],
+      "lf_locus_ids": [
+        "f89r2.10",
+        "f89r2.11"
+      ],
+      "page": "f89r2",
+      "row": 2
+    },
+    {
+      "fragment_numbers": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "lf_locus_ids": [
+        "f89r2.31",
+        "f89r2.32",
+        "f89r2.33",
+        "f89r2.34"
+      ],
+      "page": "f89r2",
+      "row": 4
+    },
+    {
+      "fragment_numbers": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "lf_locus_ids": [
+        "f89v2.2",
+        "f89v2.3",
+        "f89v2.4",
+        "f89v2.5",
+        "f89v2.6"
+      ],
+      "page": "f89v2",
+      "row": 1
+    },
+    {
+      "fragment_numbers": [
+        55,
+        56,
+        57
+      ],
+      "lf_locus_ids": [
+        "f89v2.12",
+        "f89v2.13",
+        "f89v2.14"
+      ],
+      "page": "f89v2",
+      "row": 2
+    },
+    {
+      "fragment_numbers": [
+        58,
+        59,
+        60,
+        61
+      ],
+      "lf_locus_ids": [
+        "f89v2.24",
+        "f89v2.25",
+        "f89v2.27",
+        "f89v2.28"
+      ],
+      "page": "f89v2",
+      "row": 3
+    }
+  ],
+  "source_files": {
+    "knowles": {
+      "ignored_raw_path": "data/raw/anchor0002/knowles.html",
+      "sha256": "e745974055d9860241329efc3b7b0f5bb6f14114eb25bbc1f74b93bafbb4a578",
+      "url": "https://www.voynich.ninja/thread-4067-post-56211.html"
+    },
+    "q15": {
+      "ignored_raw_path": "data/raw/anchor0002/q15.html",
+      "sha256": "25a8bb0083a2c6c09913910c52d03a699091c100294f8fe3c604e3846253f3a7",
+      "url": "https://www.voynich.nu/q15/index.html"
+    },
+    "q19": {
+      "ignored_raw_path": "data/raw/anchor0002/q19.html",
+      "sha256": "119fe32a005723833ec07a313fd87e1cd044a1f685ddd4fdd199e573c1dff1fb",
+      "url": "https://www.voynich.nu/q19/index.html"
+    }
+  },
+  "status": "label-geometry-feasibility-only",
+  "unaligned_f89r2_row3_reason": "six numbered fragments, five Lf loci",
+  "validation_corpus_sha256": "9bee4149f26fc49b49e4a826b73598dfb79a1e785731c15a1763489315a2efd3"
+}
