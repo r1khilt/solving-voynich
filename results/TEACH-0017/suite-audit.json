@@ -1,0 +1,71 @@
+{
+  "audit": "pass",
+  "confirmation": {
+    "audit": "pass",
+    "cross_distractor_pairs": 1024,
+    "episodes": 8448,
+    "graphs_sha256": "bb839ab1c94ac8c0cbfde7d0f7d0c162b0e66a6ca12fb96b7ac5643641bdf0f2",
+    "groups": 128,
+    "groups_sha256": "a10545467745511d9a8e4c6e3935453735751dfa156208c1c15c114fb7d28d39",
+    "logical_sha256": "214b384216d9ddedd8926e62ed4979067aad3585a467699a4d5ed5aa46baaa0d",
+    "manifest_sha256": "8be702aefda81e24f61bcb8b96542e07e19fb3c815932e0fb143a4ed80bd55ef",
+    "offdiag_attempts": 6144,
+    "relative_rank_null_offdiag_hits": 1680,
+    "relative_rank_null_shifted_hits": 0,
+    "renders_sha256": "a258e6a536659f08f36561cdb53d881c5b44d2100fc678872ea48eff5269e287",
+    "seed": 87121,
+    "shifted_rank_fraction": 0.7265625,
+    "shifted_rank_offdiag_attempts": 4464,
+    "shifted_rank_pairs": 744,
+    "split": "confirmation",
+    "stages_sha256": "52e123b9e3fe9af5409359c8eb56d485a3969c34fffde2a870c4598473f30dc7"
+  },
+  "discovery": {
+    "audit": "pass",
+    "cross_distractor_pairs": 1024,
+    "episodes": 8448,
+    "graphs_sha256": "e457cb1c00d6d23ebc607f6cfea6575b78ff2250468044025f92048bdc27b9db",
+    "groups": 128,
+    "groups_sha256": "1239b63a5653d14d39cb9f54bd9ce2bc2350fe975c344f9ca7c1210849a981d9",
+    "logical_sha256": "e00dbe6a5182439b0eeb8cde8e95eb92be7666b32cb91f4a1119f1835293bacb",
+    "manifest_sha256": "1984a91a308bb6d290e6ce2334a20db3830c6fe18fc040fe45c235e81dec5a3e",
+    "offdiag_attempts": 6144,
+    "relative_rank_null_offdiag_hits": 2016,
+    "relative_rank_null_shifted_hits": 0,
+    "renders_sha256": "19e4160c729cb0ae4e1b809f49d40f3a24a7d69a5e366396da3868e01f2d1119",
+    "seed": 87111,
+    "shifted_rank_fraction": 0.671875,
+    "shifted_rank_offdiag_attempts": 4128,
+    "shifted_rank_pairs": 688,
+    "split": "discovery",
+    "stages_sha256": "62ae26bf19c30e7c1a3780685a0dab6f667ffcf3505116034c88e760e06c0d34"
+  },
+  "prior_manifest_sha256": {
+    "TEACH-0014": [
+      "09930778461abea7618db8d31eb9aa82c610be0e05ca4d87493a7ff9834c98af",
+      "f4c47f734810e6e7997c69d72af33cb433a16d5a9fa7240b4ffc8b1c6e8e50a6",
+      "6af176d376921caccc0d40641002b94a462b42670fc4794f5b354457d17fa827"
+    ],
+    "TEACH-0015": [
+      "ff044ec42ceaaea180a4cde43bbb1bd0dd73dc0c4f53c476876855831402261c",
+      "941cce744278d677655d01ef71f4dfa4943352e7e477ce66efcbd5233c4db975"
+    ],
+    "TEACH-0016": [
+      "57e95bf3c56083055f896be005dc5da05eb764021ad0817a784ff46c0cb82139",
+      "102e3d902dd36882d0901b5d51ba09bbb09af5bf5422e3e2cc90fbb1359ea55f"
+    ]
+  },
+  "scope": "fresh_cross_distractor_visible_suite",
+  "source_git_head": "293029a71e5ae574a3835dc5d453c62802c9ab76",
+  "source_sha256": {
+    "docs/experiments/TEACH-0017-cross-context-design.md": "cb3787e9c404c8a3923407037153605f9ce3ff2b7d66c3c3b7f586deda3e12c1",
+    "scripts/teacher0017_prepare.py": "c5512396d2423c590406b10cc938643cf41f6a1f79a12d15a5ac8fb47615f159",
+    "scripts/teacher0017_suite_audit.py": "7b16755911058c779ae2ab16cfcb7fb2bbc84860b75d1ef4f3642b21b92badab",
+    "src/voynich/workspace/teacher17_tasks.py": "e695c18de727d072c3e9f1aa8f1d1bc5f7b129f3b8b6d35447f52c95d4b6771a",
+    "tests/test_teacher0017_suite.py": "ab5a603cdc600d3fb4771b2bf2b8dd6cd6766ad0715f6b0c8e7f55fb01d4e36a"
+  },
+  "suite_file_sha256": {
+    "confirmation": "87ba8d67abd8e3af618116b2e024a99f53276b5943361d4e3d48e882154480aa",
+    "discovery": "617d16f5966cf56cf696fedc5ac0dca9e5dc094f90915d41f79f3351c682ce73"
+  }
+}
