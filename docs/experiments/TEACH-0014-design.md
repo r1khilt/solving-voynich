@@ -1,6 +1,6 @@
 # TEACH-0014 design review: latent edge workspace
 
-**Status: post-TEACH-0012 design, not yet a preregistered launch.** This document fixes the scientific question, interfaces, comparison logic and acceptance criteria to guide implementation. Exact code-level configuration, seed schedule, suite hashes, resource projection and independent auditor must be frozen in a subsequent registration **before** any TEACH-0014 model training or confirmation inspection. TEACH-0012's exposed suite is never reused as fresh confirmation.
+**Status: post-TEACH-0012 design with a generator draft, not yet a preregistered launch.** This document fixes the scientific question, interfaces, comparison logic and acceptance criteria to guide implementation. `teacher14_tasks.py` currently supplies fresh graph generation, visible grammar parsing, logical partitions, aliases and three/four-hop cases; it is not the sealed confirmation suite. Exact code-level configuration, seed schedule, suite hashes, resource projection and independent auditor must be frozen in a subsequent registration **before** any TEACH-0014 model training or confirmation inspection. TEACH-0012's exposed suite is never reused as fresh confirmation.
 
 ## Why this experiment exists
 
@@ -37,12 +37,13 @@ The architecture will expose hooks for address-only, value-only, full-slot, firs
 
 ## Frozen comparison logic for implementation
 
-The implementation registration should contain these eight arms, each with two fixed seeds and identical logical episode exposure. All code-level adjustments must precede the source freeze or be preserved as explicit amendments.
+The implementation registration should contain these nine arms, each with two fixed seeds and identical logical episode exposure. All code-level adjustments must precede the source freeze or be preserved as explicit amendments.
 
 | Arm | Difference | What it tests |
 | --- | --- | --- |
 | `oracle_rows_workspace` | Exact row spans from the public strip-and-pair grammar supplied to the same K/V reader | Executor and optimization positive control; no learned parsing claim |
 | `latent_rows_answer` | Raw parser, K/V memory, recurrent reader, answer loss only | Main answer-only raw claim |
+| `latent_rows_edge_aux` | Same raw model plus permutation-matched synthetic edge reconstruction loss | Whether final-answer supervision is too weak for the parser; explicitly supervised ceiling |
 | `latent_rows_causal` | Same model plus correct matched graph-action/interchange losses | Whether exact interventional supervision helps |
 | `latent_rows_wrong_causal` | Same auxiliary losses with within-cell deranged targets | Generic auxiliary regularization control |
 | `latent_rows_one_read` | Same parser/memory/parameters, only one effective relation read | Need for sequential retrieval |
@@ -50,13 +51,13 @@ The implementation registration should contain these eight arms, each with two f
 | `raw_dense_matched` | Raw Transformer matched as closely as feasible on parameters, updates and measured network evaluations | Whether interface design helps beyond dense compute |
 | `latent_rows_diffuse` | Four absorbing-mask edge-refinement steps before the same reader | Whether diffusion helps under matched evaluations |
 
-The action-conditioned branch is an auxiliary objective comparison, not an automatic world-model claim. The diffusion arm must be compared with a recurrent four-step refiner using identical auxiliary edge labels; if no compute-matched recurrent counterpart fits the eight-arm envelope, report diffusion as descriptive only and do not issue a diffusion advantage label. Parameter counts, measured applications and wall time must all be reported; matching one does not imply matching the others. A shuffled composed-label null can be a separate cheaper validity run if its cost fits the benchmark envelope; it remains mandatory for leakage validation even if it is not one of the eight main arms.
+The action-conditioned branch is an auxiliary objective comparison, not an automatic world-model claim. The diffusion arm must be compared with a recurrent four-step refiner using identical auxiliary edge labels; `latent_rows_edge_aux` can be that comparator only if its refinement has four matched network evaluations. Otherwise report diffusion as descriptive and issue no diffusion advantage label. Parameter counts, measured applications and wall time must all be reported; matching one does not imply matching the others. A shuffled composed-label null can be a separate cheaper validity run if its cost fits the benchmark envelope; it remains mandatory for leakage validation even if it is not one of the nine main arms.
 
 ## Measurements and prospective decision tree
 
 Measure answer behavior first on final checkpoints. The parsed oracle must pass first/direct ≥95%, copy ≥98%, all two-hop crossed cells ≥90%, F/G query exact groups ≥85%, factorial exact groups ≥75%, order/distractor exact groups ≥80%, boundary exact groups ≥70%, marker-free ≥80%, long/eight-distractor ≥80%, three-hop ≥75% and four-hop ≥60% in both seeds. If the oracle fails, issue `EXECUTOR/OPTIMIZATION INCOMPLETE` and do not diagnose the raw parser from downstream answers.
 
-For the answer-only raw arm, require the same absolute two-hop gates in both seeds and at least a 15-point advantage over `raw_dense_matched`, `latent_rows_one_read` and `latent_rows_mean_address` on factorial exact groups and marker-free/long adversarial items. Three-hop and four-hop thresholds are a separate `ALGORITHMIC-EXTRAPOLATION` label; a two-hop pass cannot borrow that label. The null must remain ≤35% jointly held-out composition and ≤10% factorial groups, otherwise the suite is invalid pending leakage investigation. Correct causal supervision must beat deranged causal supervision by 15 points on factorial and marker-free panels before claiming a specific supervision benefit. Auxiliary-supervised success does not convert a failed answer-only arm into unsupervised raw qualification.
+For the answer-only raw arm, require the same absolute two-hop gates in both seeds and at least a 15-point advantage over `raw_dense_matched`, `latent_rows_one_read` and `latent_rows_mean_address` on factorial exact groups and marker-free/long adversarial items. Three-hop and four-hop thresholds are a separate `ALGORITHMIC-EXTRAPOLATION` label; a two-hop pass cannot borrow that label. The null must remain ≤35% jointly held-out composition and ≤10% factorial groups, otherwise the suite is invalid pending leakage investigation. Correct causal supervision must beat deranged causal supervision by 15 points on factorial and marker-free panels before claiming a specific supervision benefit. If edge-aux passes the absolute gates while answer-only fails, label this an `OBJECTIVE BOTTLENECK` only when edge-aux also gains ≥15 points on factorial and marker-free panels in both seeds. Auxiliary-supervised success does not convert a failed answer-only arm into unsupervised raw qualification.
 
 Parser diagnostics use optimal bipartite matching between predicted edge slots and true synthetic rows, with confidence threshold frozen on development. Report edge precision/recall, complete signal-table exactness and a frozen symbolic interpreter applied to predicted discrete edges. A `PARSER-QUALIFIED` label requires both seeds to reach ≥95% signal-edge precision and recall on marked rows, ≥90% on fully marker-free rows, ≥85% complete table exactness on marked, ≥70% marker-free, ≥90% symbolic two-hop item accuracy and ≥85% exact factorial groups. Parser labels diagnose a generated relation task; they are not gold inputs to the answer-only model.
 
