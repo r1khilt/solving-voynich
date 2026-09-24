@@ -15,6 +15,7 @@ import statistics
 import subprocess
 
 from scripts.teacher0014_behavior_audit import ARMS, audit_behavior
+from scripts.teacher0014_parser_audit import audit_parser
 from scripts.teacher0014_suite_audit import audit_manifest
 
 
@@ -26,12 +27,14 @@ PARAMETERS = {
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0014-design.md",
     "docs/experiments/TEACH-0014-benchmark-registration.md",
+    "docs/experiments/TEACH-0014-resource-amendment.md",
     "src/voynich/workspace/teacher14_tasks.py",
     "src/voynich/workspace/teacher14_models.py",
     "src/voynich/workspace/teacher14_objectives.py",
     "src/voynich/workspace/teacher14_train.py",
     "scripts/teacher0014_suite_audit.py",
     "scripts/teacher0014_behavior_audit.py",
+    "scripts/teacher0014_parser_audit.py",
     "scripts/teacher0014_artifact_audit.py",
     "scripts/teacher0014_replay.py",
     "tests/test_workspace_teacher14_tasks.py",
@@ -39,6 +42,7 @@ SOURCE_PATHS = (
     "tests/test_workspace_teacher14_objectives.py",
     "tests/test_teacher0014_suite_audit.py",
     "tests/test_teacher0014_behavior_audit.py",
+    "tests/test_teacher0014_parser_audit.py",
     "tests/test_workspace_teacher14_train.py",
     "tests/test_teacher0014_artifact_audit.py",
     "tests/test_teacher0014_replay.py",
@@ -48,7 +52,7 @@ EXPECTED_CONFIG = {
     "eval_seed": 84311, "steps_per_arm": 6000, "batch_size": 32,
     "causal_groups": 4, "eval_groups": 128, "learning_rate": 3e-4,
     "edge_weight": .2, "causal_weight": .2,
-    "max_seconds": 28800.0, "max_mps_bytes": 12 * 1024**3,
+    "max_seconds": 43200.0, "max_mps_bytes": 12 * 1024**3,
     "max_artifact_bytes": 4 * 1024**3,
     "benchmark_steps": 24, "benchmark_warmup_steps": 4,
     "benchmark_max_seconds": 1800.0,
@@ -260,6 +264,15 @@ def audit_artifacts(result_dir: Path, output_dir: Path,
         raise ValueError("Replay logits artifact hash mismatch")
     replay_archive = json.loads(gzip.decompress(replay_path.read_bytes()))
     replay_samples = _audit_replay_archive(replay_archive, manifest, predictions)
+    parser_path = result_dir / "parser-gates.json.gz"
+    if report.get("parser_gates_sha256") != _sha_file(parser_path):
+        raise ValueError("Parser gate artifact hash mismatch")
+    parser_archive = json.loads(gzip.decompress(parser_path.read_bytes()))
+    parser_decision = audit_parser(manifest, parser_archive)
+    saved_parser_path = result_dir / "parser-audit.json"
+    if (report.get("parser_audit_sha256") != _sha_file(saved_parser_path) or
+            json.loads(saved_parser_path.read_text()) != parser_decision):
+        raise ValueError("Saved parser decision differs from independent audit")
     saved_behavior_path = result_dir / "behavior-audit.json"
     if report.get("behavior_audit_sha256") != _sha_file(saved_behavior_path) or (
             json.loads(saved_behavior_path.read_text()) != behavior):
@@ -307,13 +320,15 @@ def audit_artifacts(result_dir: Path, output_dir: Path,
             _artifact_bytes(result_dir) + _artifact_bytes(output_dir) >
             EXPECTED_CONFIG["max_artifact_bytes"]):
         raise ValueError("Campaign resource cap exceeded")
-    return {"audit": "pass", "scope": "artifact_and_answer_behavior",
+    return {"audit": "pass", "scope": "artifact_answer_behavior_and_parser",
             "manifest_sha256": suite["manifest_sha256"],
             "source_git_head": report["source_git_head"],
             "training_traces": len(ARMS) * 2,
             "checked_steps": len(ARMS) * 2 * EXPECTED_CONFIG["steps_per_arm"],
             "replay_logit_samples": replay_samples,
             "answer_decisions": behavior["decisions"],
+            "answer_only_parser_qualified_both_seeds": parser_decision[
+                "answer_only_parser_qualified_both_seeds"],
             "numerical_checkpoint_replay": "pending"}
 
 

@@ -45,6 +45,20 @@ def _verify_vector(actual: torch.Tensor, expected: list[float],
     return float(error.max().item())
 
 
+def _verify_gate_vector(actual: torch.Tensor, expected: list[float]) -> float:
+    if actual.ndim != 1 or actual.numel() != len(expected):
+        raise ValueError("Replay edge-gate shape mismatch")
+    reference = torch.tensor(expected, dtype=torch.float32)
+    observed = actual.detach().float().cpu()
+    if not bool(torch.isfinite(observed).all().item()):
+        raise ValueError("Nonfinite replayed edge gates")
+    error = (observed - reference).abs()
+    allowance = ABS_TOLERANCE + REL_TOLERANCE * reference.abs()
+    if bool((error > allowance).any().item()):
+        raise ValueError(f"Checkpoint edge-gate replay differs: max error {error.max().item()}")
+    return float(error.max().item()) if len(expected) else 0.0
+
+
 def replay(result_dir: Path, output_dir: Path, root: Path) -> dict:
     artifact = audit_artifacts(result_dir, output_dir, root)
     report = json.loads((result_dir / "report.json").read_text())
@@ -62,8 +76,12 @@ def replay(result_dir: Path, output_dir: Path, root: Path) -> dict:
         (result_dir / "predictions.json.gz").read_bytes()))
     archive = json.loads(gzip.decompress(
         (result_dir / "replay-logits.json.gz").read_bytes()))
+    parser_archive = json.loads(gzip.decompress(
+        (result_dir / "parser-gates.json.gz").read_bytes()))
     max_error = 0.0
+    max_gate_error = 0.0
     count = 0
+    gate_count = 0
     per_run = {}
     with torch.no_grad():
         for arm in sorted(ARMS):
@@ -88,13 +106,23 @@ def replay(result_dir: Path, output_dir: Path, root: Path) -> dict:
                 for name, episodes in suite.items():
                     samples = archive["runs"][arm][str(replicate)][name]
                     selected = [episodes[row["index"]] for row in samples]
-                    logits = model_output(model, arm, selected, "cpu").logits
+                    output = model_output(model, arm, selected, "cpu")
+                    logits = output.logits
                     for index, row in enumerate(samples):
                         prediction = predictions["runs"][arm][str(replicate)][
                             "panels"][name][row["index"]]["prediction"]
                         error = _verify_vector(logits[index], row["logits"], prediction)
                         run_error = max(run_error, error)
                         run_count += 1
+                        if arm in parser_archive["runs"]:
+                            gate_row = parser_archive["runs"][arm][
+                                str(replicate)][name][row["index"]]
+                            actual = output.auxiliary["edge_gate_logits"][index][
+                                output.auxiliary["candidate_mask"][index]]
+                            gate_error = _verify_gate_vector(
+                                actual, gate_row["logits"])
+                            max_gate_error = max(max_gate_error, gate_error)
+                            gate_count += 1
                 per_run[arm][str(replicate)] = {
                     "samples": run_count, "max_abs_logit_error": run_error}
                 max_error = max(max_error, run_error)
@@ -102,10 +130,12 @@ def replay(result_dir: Path, output_dir: Path, root: Path) -> dict:
                 del model, optimizer, saved
     if count != artifact["replay_logit_samples"] or not math.isfinite(max_error):
         raise ValueError("Numerical replay sample count or error invalid")
-    return {"audit": "pass", "scope": "sampled_checkpoint_logit_replay",
+    return {"audit": "pass", "scope": "sampled_checkpoint_logit_and_gate_replay",
             "source_git_head": report["source_git_head"],
             "manifest_sha256": artifact["manifest_sha256"],
             "samples": count, "max_abs_logit_error": max_error,
+            "gate_samples": gate_count,
+            "max_abs_gate_error": max_gate_error,
             "absolute_tolerance": ABS_TOLERANCE,
             "relative_tolerance": REL_TOLERANCE,
             "per_run": per_run}

@@ -10,7 +10,7 @@ import pytest
 import torch
 
 from scripts.teacher0014_artifact_audit import ARMS, _audit_replay_archive
-from scripts.teacher0014_replay import _verify_vector
+from scripts.teacher0014_replay import _verify_gate_vector, _verify_vector
 from scripts import teacher0014_replay as replay_module
 from voynich.workspace.teacher14_tasks import RenderSpec, sample_episode
 from voynich.workspace.teacher14_train import (
@@ -30,6 +30,14 @@ def test_replay_vector_requires_full_logits_and_same_answer():
         _verify_vector(changed, expected.tolist(), predicted)
     with pytest.raises(ValueError, match="shape mismatch"):
         _verify_vector(expected[:-1], expected.tolist(), predicted)
+
+
+def test_gate_vector_requires_same_finite_values():
+    assert _verify_gate_vector(torch.tensor([.2, -.3]), [.2, -.3]) < 1e-6
+    with pytest.raises(ValueError, match="edge-gate shape"):
+        _verify_gate_vector(torch.tensor([.2]), [.2, -.3])
+    with pytest.raises(ValueError, match="edge-gate replay differs"):
+        _verify_gate_vector(torch.tensor([.2, .3]), [.2, -.3])
 
 
 def _small_archive():
@@ -81,7 +89,9 @@ def test_checkpoint_replay_reconstructs_logits_from_saved_weights(
     arm = "oracle_rows_workspace"
     config = Config()
     model, optimizer = new_model(config, arm, 0, "cpu")
-    predictions, sampled_logits = _predict_panels(model, arm, suite, "cpu")
+    predictions, sampled_logits, parser_gates = _predict_panels(
+        model, arm, suite, "cpu")
+    assert parser_gates is None
     outputs = tmp_path / "outputs"
     results = tmp_path / "results"
     outputs.mkdir()
@@ -106,6 +116,8 @@ def test_checkpoint_replay_reconstructs_logits_from_saved_weights(
         json.dumps(all_predictions).encode()))
     (results / "replay-logits.json.gz").write_bytes(gzip.compress(
         json.dumps(all_logits).encode()))
+    (results / "parser-gates.json.gz").write_bytes(gzip.compress(
+        json.dumps({"runs": {}}).encode()))
     monkeypatch.setattr(replay_module, "audit_artifacts", lambda *args: {
         "manifest_sha256": artifact_sha, "replay_logit_samples": 6})
     monkeypatch.setattr(replay_module, "SOURCE_PATHS", ())

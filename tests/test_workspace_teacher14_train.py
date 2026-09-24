@@ -79,6 +79,20 @@ def test_mps_fraction_uses_stricter_of_nominal_and_config_cap(monkeypatch):
     assert selected == [12 / 50]
 
 
+def test_prediction_archive_keeps_ordered_raw_gate_vectors():
+    episodes, _ = _development_batch()
+    model, _ = campaign.new_model(campaign.Config(),
+                                  "latent_rows_answer", 0, "cpu")
+    predictions, sampled, gates = campaign._predict_panels(
+        model, "latent_rows_answer", {"development": episodes}, "cpu")
+    assert len(predictions["panels"]["development"]) == len(episodes)
+    assert len(sampled["development"]) == len(episodes)
+    assert gates is not None
+    for episode, row in zip(episodes, gates["development"], strict=True):
+        assert row["render_id"] == episode.render_id
+        assert len(row["logits"]) == 2 * len(episode.serialized_rows) - 1
+
+
 def test_resource_cap_counts_checkpoint_and_result_directories(tmp_path):
     result_dir = tmp_path / "results"
     output_dir = tmp_path / "outputs"

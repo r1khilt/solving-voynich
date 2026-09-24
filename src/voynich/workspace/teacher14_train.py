@@ -46,12 +46,14 @@ EXPECTED_PARAMETERS = {
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0014-design.md",
     "docs/experiments/TEACH-0014-benchmark-registration.md",
+    "docs/experiments/TEACH-0014-resource-amendment.md",
     "src/voynich/workspace/teacher14_tasks.py",
     "src/voynich/workspace/teacher14_models.py",
     "src/voynich/workspace/teacher14_objectives.py",
     "src/voynich/workspace/teacher14_train.py",
     "scripts/teacher0014_suite_audit.py",
     "scripts/teacher0014_behavior_audit.py",
+    "scripts/teacher0014_parser_audit.py",
     "scripts/teacher0014_artifact_audit.py",
     "scripts/teacher0014_replay.py",
     "tests/test_workspace_teacher14_tasks.py",
@@ -59,6 +61,7 @@ SOURCE_PATHS = (
     "tests/test_workspace_teacher14_objectives.py",
     "tests/test_teacher0014_suite_audit.py",
     "tests/test_teacher0014_behavior_audit.py",
+    "tests/test_teacher0014_parser_audit.py",
     "tests/test_workspace_teacher14_train.py",
     "tests/test_teacher0014_artifact_audit.py",
     "tests/test_teacher0014_replay.py",
@@ -80,7 +83,7 @@ class Config:
     learning_rate: float = 3e-4
     edge_weight: float = .2
     causal_weight: float = .2
-    max_seconds: float = 8 * 3600.0
+    max_seconds: float = 12 * 3600.0
     max_mps_bytes: int = 12 * 1024**3
     max_artifact_bytes: int = 4 * 1024**3
     benchmark_steps: int = 24
@@ -303,7 +306,7 @@ def benchmark(config: Config, result_dir: Path, output_dir: Path) -> dict:
                        "status": "pass" if conservative <= config.max_seconds
                        else "stop", **resource})
         if report["status"] == "stop":
-            report["reason"] = "Conservative projection exceeds eight-hour cap"
+            report["reason"] = "Conservative projection exceeds twelve-hour cap"
     except Exception as exc:
         report.update({"status": "stop", "reason": f"{type(exc).__name__}: {exc}",
                        "elapsed_seconds": time.monotonic() - start, **resource})
@@ -355,20 +358,32 @@ def _save_checkpoint(model: torch.nn.Module, config: Config, replicate: int,
 
 @torch.no_grad()
 def _predict_panels(model: torch.nn.Module, arm: str, suite: dict,
-                    device: str) -> tuple[dict, dict]:
+                    device: str) -> tuple[dict, dict, dict | None]:
     model.eval()
     panels = {}
     replay = {}
+    gates = {} if arm not in ("oracle_rows_workspace", "raw_dense_matched") else None
     for name, episodes in suite.items():
         rows = []
         replay_rows = []
+        gate_rows = []
         replay_indices = {0, len(episodes) // 2, len(episodes) - 1}
         for offset in range(0, len(episodes), 32):
             chunk = episodes[offset:offset + 32]
-            logits = model_output(model, arm, chunk, device).logits
+            output = model_output(model, arm, chunk, device)
+            logits = output.logits
             guesses = (logits[:, SYMBOL_START:].argmax(dim=-1) + SYMBOL_START).tolist()
             rows.extend({"render_id": episode.render_id, "prediction": guess}
                         for episode, guess in zip(chunk, guesses, strict=True))
+            if gates is not None:
+                gate_logits = output.auxiliary["edge_gate_logits"]
+                candidate_mask = output.auxiliary["candidate_mask"]
+                for episode, values, mask in zip(
+                        chunk, gate_logits, candidate_mask, strict=True):
+                    gate_rows.append({
+                        "render_id": episode.render_id,
+                        "logits": values[mask].float().cpu().tolist(),
+                    })
             for global_index in sorted(replay_indices & set(range(
                     offset, offset + len(chunk)))):
                 local_index = global_index - offset
@@ -379,7 +394,9 @@ def _predict_panels(model: torch.nn.Module, arm: str, suite: dict,
                 })
         panels[name] = rows
         replay[name] = replay_rows
-    return {"panels": panels}, replay
+        if gates is not None:
+            gates[name] = gate_rows
+    return {"panels": panels}, replay, gates
 
 
 def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
@@ -424,11 +441,16 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
     replay_logits = {"experiment": "TEACH-0014",
                      "manifest_sha256": suite_audit["manifest_sha256"],
                      "runs": {}}
+    parser_gates = {"experiment": "TEACH-0014",
+                    "manifest_sha256": suite_audit["manifest_sha256"],
+                    "threshold_logit": 0.0, "runs": {}}
     training = {}
     try:
         for arm in ARMS:
             predictions["runs"][arm] = {}
             replay_logits["runs"][arm] = {}
+            if arm not in ("oracle_rows_workspace", "raw_dense_matched"):
+                parser_gates["runs"][arm] = {}
             training[arm] = {}
             for replicate in (0, 1):
                 model, optimizer = new_model(config, arm, replicate, "mps")
@@ -454,10 +476,12 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
                 raw = json.dumps(losses, separators=(",", ":"),
                                  allow_nan=False).encode()
                 loss_path.write_bytes(gzip.compress(raw, compresslevel=9, mtime=0))
-                predicted, sampled_logits = _predict_panels(
+                predicted, sampled_logits, gate_rows = _predict_panels(
                     model, arm, suite, "mps")
                 predictions["runs"][arm][str(replicate)] = predicted
                 replay_logits["runs"][arm][str(replicate)] = sampled_logits
+                if gate_rows is not None:
+                    parser_gates["runs"][arm][str(replicate)] = gate_rows
                 training[arm][str(replicate)] = {
                     "final_checkpoint": checkpoint,
                     "loss_archive_sha256": _sha_file(loss_path),
@@ -475,17 +499,27 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
         replay_raw = json.dumps(replay_logits, sort_keys=True,
                                 separators=(",", ":"), allow_nan=False).encode()
         replay_path.write_bytes(gzip.compress(replay_raw, compresslevel=9, mtime=0))
+        parser_path = result_dir / "parser-gates.json.gz"
+        parser_raw = json.dumps(parser_gates, sort_keys=True,
+                                separators=(",", ":"), allow_nan=False).encode()
+        parser_path.write_bytes(gzip.compress(parser_raw, compresslevel=9, mtime=0))
         from scripts.teacher0014_behavior_audit import audit_behavior
+        from scripts.teacher0014_parser_audit import audit_parser
 
         behavior = audit_behavior(manifest, predictions)
         behavior_path = result_dir / "behavior-audit.json"
         _write_json(behavior_path, behavior)
+        parser_audit = audit_parser(manifest, parser_gates)
+        parser_audit_path = result_dir / "parser-audit.json"
+        _write_json(parser_audit_path, parser_audit)
         resource_check(config, start, resource, output_dir, result_dir,
                        benchmark=False)
         report = {**status, "status": "complete", "training": training,
                   "predictions_sha256": _sha_file(predictions_path),
                   "replay_logits_sha256": _sha_file(replay_path),
                   "behavior_audit_sha256": _sha_file(behavior_path),
+                  "parser_gates_sha256": _sha_file(parser_path),
+                  "parser_audit_sha256": _sha_file(parser_audit_path),
                   "manifest_file_sha256": _sha_file(manifest_path),
                   "elapsed_seconds": time.monotonic() - start,
                   "artifact_bytes": (_artifact_bytes(output_dir)

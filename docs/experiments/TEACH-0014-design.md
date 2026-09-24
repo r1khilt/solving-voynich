@@ -1,5 +1,11 @@
 # TEACH-0014 design review: latent edge workspace
 
+**Prospective amendment (after resource stop, before neural confirmation):**
+`TEACH-0014-resource-amendment.md` supersedes the eight-hour local-compute
+ceiling below with a twelve-hour ceiling and fixes a direct candidate-occurrence
+parser audit at zero gate logit. All other arms, seeds, exposure and behavioral
+criteria remain as registered. The scientific launch is still closed.
+
 **Status: benchmark-only registration drafted; scientific campaign still closed.** This document fixes the scientific question, interfaces, comparison logic and acceptance criteria to guide implementation. `teacher14_tasks.py` supplies fresh graph generation, visible grammar parsing, logical partitions, aliases and three/four-hop cases. `teacher14_models.py` supplies parser/memory/read interfaces and a matched four-step recurrent/discrete-refinement pair; `teacher0014_suite_audit.py` checks manifest structure and visible oracles without importing the generator. The trainer admits only the source-matched bounded MPS benchmark once all listed files are cleanly committed; `LAUNCH_ADMITTED=False` still blocks the 132,000-update scientific campaign. The exact benchmark-only admission is in `TEACH-0014-benchmark-registration.md`. Seed74111 and the later seed74117 scorer fixture are development-only, not confirmation. A fresh seed84311 suite is structurally audited and frozen by SHA-256 there, but no model has scored it. TEACH-0012's exposed suite is never reused as fresh confirmation.
 
 ## Why this experiment exists
