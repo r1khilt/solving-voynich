@@ -1,0 +1,3469 @@
+{
+  "audit": "pass",
+  "both_seed_linked_answer_margin": false,
+  "both_seed_linked_route_margin": false,
+  "decisions": {
+    "0": {
+      "competent": {
+        "linked_answer": false,
+        "linked_route": false,
+        "oracle_rows_workspace": false,
+        "unlinked_route": true
+      },
+      "linked_answer_minus_baseline": -0.6171875,
+      "linked_route_minus_unlinked_route": -0.875
+    },
+    "1": {
+      "competent": {
+        "linked_answer": false,
+        "linked_route": false,
+        "oracle_rows_workspace": false,
+        "unlinked_route": true
+      },
+      "linked_answer_minus_baseline": -0.578125,
+      "linked_route_minus_unlinked_route": -0.8671875
+    }
+  },
+  "scope": "fresh_confirmation_once",
+  "score_status_sha256": "72cfd75c65af2e4d1e816c96392051d4bbbe0f843e95539f5503d8eb1b1ac716",
+  "scores": {
+    "linked_answer": {
+      "0": {
+        "84411": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "second_target_row_hits": 32
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.234375,
+                "correct": 30,
+                "total": 128
+              },
+              "second_target_row_hits": 27
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1796875,
+                "correct": 23,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1796875,
+                "correct": 92,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.1796875,
+                "correct": 23,
+                "total": 128
+              },
+              "second_target_row_hits": 108
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1171875,
+                "correct": 15,
+                "total": 128
+              },
+              "second_target_row_hits": 26
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1484375,
+                "correct": 19,
+                "total": 128
+              },
+              "second_target_row_hits": 28
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1640625,
+                "correct": 21,
+                "total": 128
+              },
+              "second_target_row_hits": 22
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0859375,
+                "correct": 11,
+                "total": 128
+              },
+              "second_target_row_hits": 18
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1328125,
+                "correct": 17,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.103515625,
+                "correct": 53,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.015625,
+                "correct": 2,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.201171875,
+                "correct": 103,
+                "total": 512
+              },
+              "second_target_row_hits": 80
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.150390625,
+                "correct": 77,
+                "total": 512
+              },
+              "second_target_row_hits": 79
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.140625,
+                "correct": 72,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "second_target_row_hits": 15
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0234375,
+                "correct": 3,
+                "total": 128
+              },
+              "second_target_row_hits": 9
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0234375,
+                "correct": 3,
+                "total": 128
+              },
+              "second_target_row_hits": 8
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 11
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1484375,
+                "correct": 19,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1484375,
+                "correct": 76,
+                "total": 512
+              },
+              "second_target_row_hits": 72
+            }
+          }
+        },
+        "84511": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "second_target_row_hits": 32
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.2578125,
+                "correct": 33,
+                "total": 128
+              },
+              "second_target_row_hits": 27
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 56,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 76
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 14
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 21
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0859375,
+                "correct": 11,
+                "total": 128
+              },
+              "second_target_row_hits": 17
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1484375,
+                "correct": 19,
+                "total": 128
+              },
+              "second_target_row_hits": 20
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1328125,
+                "correct": 17,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.134765625,
+                "correct": 69,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.203125,
+                "correct": 104,
+                "total": 512
+              },
+              "second_target_row_hits": 91
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.162109375,
+                "correct": 83,
+                "total": 512
+              },
+              "second_target_row_hits": 91
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1015625,
+                "correct": 13,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.11328125,
+                "correct": 58,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.015625,
+                "correct": 2,
+                "total": 128
+              },
+              "second_target_row_hits": 17
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0234375,
+                "correct": 3,
+                "total": 128
+              },
+              "second_target_row_hits": 9
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "second_target_row_hits": 12
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 17
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1328125,
+                "correct": 17,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1328125,
+                "correct": 68,
+                "total": 512
+              },
+              "second_target_row_hits": 80
+            }
+          }
+        }
+      },
+      "1": {
+        "84411": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0546875,
+                "correct": 7,
+                "total": 128
+              },
+              "second_target_row_hits": 39
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.2265625,
+                "correct": 29,
+                "total": 128
+              },
+              "second_target_row_hits": 21
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1328125,
+                "correct": 17,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1328125,
+                "correct": 68,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.1328125,
+                "correct": 17,
+                "total": 128
+              },
+              "second_target_row_hits": 68
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1640625,
+                "correct": 21,
+                "total": 128
+              },
+              "second_target_row_hits": 19
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 19
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 18
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0859375,
+                "correct": 11,
+                "total": 128
+              },
+              "second_target_row_hits": 24
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.111328125,
+                "correct": 57,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.185546875,
+                "correct": 95,
+                "total": 512
+              },
+              "second_target_row_hits": 94
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.171875,
+                "correct": 88,
+                "total": 512
+              },
+              "second_target_row_hits": 95
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.125,
+                "correct": 64,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 14
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0546875,
+                "correct": 7,
+                "total": 128
+              },
+              "second_target_row_hits": 11
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0234375,
+                "correct": 3,
+                "total": 128
+              },
+              "second_target_row_hits": 8
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0703125,
+                "correct": 9,
+                "total": 128
+              },
+              "second_target_row_hits": 12
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1640625,
+                "correct": 21,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1640625,
+                "correct": 84,
+                "total": 512
+              },
+              "second_target_row_hits": 76
+            }
+          }
+        },
+        "84511": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "second_target_row_hits": 33
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.2578125,
+                "correct": 33,
+                "total": 128
+              },
+              "second_target_row_hits": 22
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 56,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 84
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 19
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.140625,
+                "correct": 18,
+                "total": 128
+              },
+              "second_target_row_hits": 22
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 26
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 16
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.140625,
+                "correct": 72,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.232421875,
+                "correct": 119,
+                "total": 512
+              },
+              "second_target_row_hits": 113
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.140625,
+                "correct": 72,
+                "total": 512
+              },
+              "second_target_row_hits": 94
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1171875,
+                "correct": 15,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.11328125,
+                "correct": 58,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 18
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "second_target_row_hits": 17
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.015625,
+                "correct": 2,
+                "total": 128
+              },
+              "second_target_row_hits": 7
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.078125,
+                "correct": 10,
+                "total": 128
+              },
+              "second_target_row_hits": 11
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.2109375,
+                "correct": 27,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.2109375,
+                "correct": 108,
+                "total": 512
+              },
+              "second_target_row_hits": 80
+            }
+          }
+        }
+      }
+    },
+    "linked_route": {
+      "0": {
+        "84411": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 32
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.234375,
+                "correct": 30,
+                "total": 128
+              },
+              "second_target_row_hits": 27
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1953125,
+                "correct": 25,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1953125,
+                "correct": 100,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.1953125,
+                "correct": 25,
+                "total": 128
+              },
+              "second_target_row_hits": 112
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1171875,
+                "correct": 15,
+                "total": 128
+              },
+              "second_target_row_hits": 26
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.15625,
+                "correct": 20,
+                "total": 128
+              },
+              "second_target_row_hits": 27
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1953125,
+                "correct": 25,
+                "total": 128
+              },
+              "second_target_row_hits": 21
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0859375,
+                "correct": 11,
+                "total": 128
+              },
+              "second_target_row_hits": 19
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.140625,
+                "correct": 18,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 56,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0234375,
+                "correct": 3,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.20703125,
+                "correct": 106,
+                "total": 512
+              },
+              "second_target_row_hits": 82
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.154296875,
+                "correct": 79,
+                "total": 512
+              },
+              "second_target_row_hits": 79
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.140625,
+                "correct": 72,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "second_target_row_hits": 15
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.015625,
+                "correct": 2,
+                "total": 128
+              },
+              "second_target_row_hits": 9
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 8
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 11
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.15625,
+                "correct": 20,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.15625,
+                "correct": 80,
+                "total": 512
+              },
+              "second_target_row_hits": 76
+            }
+          }
+        },
+        "84511": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 32
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.2578125,
+                "correct": 33,
+                "total": 128
+              },
+              "second_target_row_hits": 27
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1015625,
+                "correct": 13,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1015625,
+                "correct": 52,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.1015625,
+                "correct": 13,
+                "total": 128
+              },
+              "second_target_row_hits": 76
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 14
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1328125,
+                "correct": 17,
+                "total": 128
+              },
+              "second_target_row_hits": 21
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.09375,
+                "correct": 12,
+                "total": 128
+              },
+              "second_target_row_hits": 17
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1484375,
+                "correct": 19,
+                "total": 128
+              },
+              "second_target_row_hits": 20
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1328125,
+                "correct": 17,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.13671875,
+                "correct": 70,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.205078125,
+                "correct": 105,
+                "total": 512
+              },
+              "second_target_row_hits": 91
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1640625,
+                "correct": 84,
+                "total": 512
+              },
+              "second_target_row_hits": 95
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1015625,
+                "correct": 13,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.119140625,
+                "correct": 61,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0234375,
+                "correct": 3,
+                "total": 128
+              },
+              "second_target_row_hits": 17
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0390625,
+                "correct": 5,
+                "total": 128
+              },
+              "second_target_row_hits": 9
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "second_target_row_hits": 11
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "second_target_row_hits": 18
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1328125,
+                "correct": 17,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1328125,
+                "correct": 68,
+                "total": 512
+              },
+              "second_target_row_hits": 80
+            }
+          }
+        }
+      },
+      "1": {
+        "84411": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0546875,
+                "correct": 7,
+                "total": 128
+              },
+              "second_target_row_hits": 39
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.2265625,
+                "correct": 29,
+                "total": 128
+              },
+              "second_target_row_hits": 23
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.125,
+                "correct": 64,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 76
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.171875,
+                "correct": 22,
+                "total": 128
+              },
+              "second_target_row_hits": 18
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 21
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 17
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0859375,
+                "correct": 11,
+                "total": 128
+              },
+              "second_target_row_hits": 25
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1171875,
+                "correct": 15,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.111328125,
+                "correct": 57,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1875,
+                "correct": 96,
+                "total": 512
+              },
+              "second_target_row_hits": 97
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.169921875,
+                "correct": 87,
+                "total": 512
+              },
+              "second_target_row_hits": 98
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1171875,
+                "correct": 15,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.125,
+                "correct": 64,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "second_target_row_hits": 14
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0546875,
+                "correct": 7,
+                "total": 128
+              },
+              "second_target_row_hits": 9
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "second_target_row_hits": 8
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0703125,
+                "correct": 9,
+                "total": 128
+              },
+              "second_target_row_hits": 11
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.1796875,
+                "correct": 23,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.1796875,
+                "correct": 92,
+                "total": 512
+              },
+              "second_target_row_hits": 76
+            }
+          }
+        },
+        "84511": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.046875,
+                "correct": 6,
+                "total": 128
+              },
+              "second_target_row_hits": 35
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.2578125,
+                "correct": 33,
+                "total": 128
+              },
+              "second_target_row_hits": 23
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 56,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 84
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 20
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.1484375,
+                "correct": 19,
+                "total": 128
+              },
+              "second_target_row_hits": 22
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 27
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 19
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.109375,
+                "correct": 14,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.142578125,
+                "correct": 73,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.03125,
+                "correct": 4,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.228515625,
+                "correct": 117,
+                "total": 512
+              },
+              "second_target_row_hits": 112
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.142578125,
+                "correct": 73,
+                "total": 512
+              },
+              "second_target_row_hits": 96
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.125,
+                "correct": 16,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.0,
+                "correct": 0,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.115234375,
+                "correct": 59,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.046875,
+                "correct": 6,
+                "total": 128
+              },
+              "second_target_row_hits": 18
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0234375,
+                "correct": 3,
+                "total": 128
+              },
+              "second_target_row_hits": 17
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.0234375,
+                "correct": 3,
+                "total": 128
+              },
+              "second_target_row_hits": 7
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.09375,
+                "correct": 12,
+                "total": 128
+              },
+              "second_target_row_hits": 11
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.203125,
+                "correct": 26,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.203125,
+                "correct": 104,
+                "total": 512
+              },
+              "second_target_row_hits": 80
+            }
+          }
+        }
+      }
+    },
+    "oracle_rows_workspace": {
+      "0": {
+        "84411": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 120,
+              "items": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "second_target_row_hits": 96
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 122,
+              "items": {
+                "accuracy": 0.78125,
+                "correct": 100,
+                "total": 128
+              },
+              "second_target_row_hits": 100
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 496,
+              "groups": {
+                "accuracy": 0.8359375,
+                "correct": 107,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.8359375,
+                "correct": 428,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.8359375,
+                "correct": 107,
+                "total": 128
+              },
+              "second_target_row_hits": 432
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 125,
+              "items": {
+                "accuracy": 0.7578125,
+                "correct": 97,
+                "total": 128
+              },
+              "second_target_row_hits": 97
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 119,
+              "items": {
+                "accuracy": 0.765625,
+                "correct": 98,
+                "total": 128
+              },
+              "second_target_row_hits": 98
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 122,
+              "items": {
+                "accuracy": 0.71875,
+                "correct": 92,
+                "total": 128
+              },
+              "second_target_row_hits": 92
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 124,
+              "items": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "second_target_row_hits": 96
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 123,
+              "items": {
+                "accuracy": 0.9609375,
+                "correct": 123,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 499,
+              "groups": {
+                "accuracy": 0.8203125,
+                "correct": 105,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.951171875,
+                "correct": 487,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 488,
+              "groups": {
+                "accuracy": 0.59375,
+                "correct": 76,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.806640625,
+                "correct": 413,
+                "total": 512
+              },
+              "second_target_row_hits": 415
+            },
+            "factorial": {
+              "first_target_row_hits": 492,
+              "groups": {
+                "accuracy": 0.5703125,
+                "correct": 73,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.75390625,
+                "correct": 386,
+                "total": 512
+              },
+              "second_target_row_hits": 390
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 122,
+              "items": {
+                "accuracy": 0.9375,
+                "correct": 120,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 489,
+              "groups": {
+                "accuracy": 0.703125,
+                "correct": 90,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.916015625,
+                "correct": 469,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 118,
+              "items": {
+                "accuracy": 0.5625,
+                "correct": 72,
+                "total": 128
+              },
+              "second_target_row_hits": 89
+            },
+            "hop_4": {
+              "first_target_row_hits": 118,
+              "items": {
+                "accuracy": 0.34375,
+                "correct": 44,
+                "total": 128
+              },
+              "second_target_row_hits": 88
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 114,
+              "items": {
+                "accuracy": 0.21875,
+                "correct": 28,
+                "total": 128
+              },
+              "second_target_row_hits": 68
+            },
+            "long_ood": {
+              "first_target_row_hits": 114,
+              "items": {
+                "accuracy": 0.6171875,
+                "correct": 79,
+                "total": 128
+              },
+              "second_target_row_hits": 80
+            },
+            "order_groups": {
+              "first_target_row_hits": 468,
+              "groups": {
+                "accuracy": 0.734375,
+                "correct": 94,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.734375,
+                "correct": 376,
+                "total": 512
+              },
+              "second_target_row_hits": 376
+            }
+          }
+        },
+        "84511": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 124,
+              "items": {
+                "accuracy": 0.8046875,
+                "correct": 103,
+                "total": 128
+              },
+              "second_target_row_hits": 104
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 125,
+              "items": {
+                "accuracy": 0.78125,
+                "correct": 100,
+                "total": 128
+              },
+              "second_target_row_hits": 99
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 504,
+              "groups": {
+                "accuracy": 0.7890625,
+                "correct": 101,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.7890625,
+                "correct": 404,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.7890625,
+                "correct": 101,
+                "total": 128
+              },
+              "second_target_row_hits": 408
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 124,
+              "items": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "second_target_row_hits": 94
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 124,
+              "items": {
+                "accuracy": 0.7890625,
+                "correct": 101,
+                "total": 128
+              },
+              "second_target_row_hits": 104
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 125,
+              "items": {
+                "accuracy": 0.7734375,
+                "correct": 99,
+                "total": 128
+              },
+              "second_target_row_hits": 99
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 118,
+              "items": {
+                "accuracy": 0.6875,
+                "correct": 88,
+                "total": 128
+              },
+              "second_target_row_hits": 89
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 122,
+              "items": {
+                "accuracy": 0.9375,
+                "correct": 120,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 492,
+              "groups": {
+                "accuracy": 0.8046875,
+                "correct": 103,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.9453125,
+                "correct": 484,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 496,
+              "groups": {
+                "accuracy": 0.5234375,
+                "correct": 67,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.783203125,
+                "correct": 401,
+                "total": 512
+              },
+              "second_target_row_hits": 402
+            },
+            "factorial": {
+              "first_target_row_hits": 496,
+              "groups": {
+                "accuracy": 0.6015625,
+                "correct": 77,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.775390625,
+                "correct": 397,
+                "total": 512
+              },
+              "second_target_row_hits": 397
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 117,
+              "items": {
+                "accuracy": 0.8984375,
+                "correct": 115,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 489,
+              "groups": {
+                "accuracy": 0.75,
+                "correct": 96,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.931640625,
+                "correct": 477,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 112,
+              "items": {
+                "accuracy": 0.5546875,
+                "correct": 71,
+                "total": 128
+              },
+              "second_target_row_hits": 85
+            },
+            "hop_4": {
+              "first_target_row_hits": 119,
+              "items": {
+                "accuracy": 0.28125,
+                "correct": 36,
+                "total": 128
+              },
+              "second_target_row_hits": 78
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 109,
+              "items": {
+                "accuracy": 0.1796875,
+                "correct": 23,
+                "total": 128
+              },
+              "second_target_row_hits": 71
+            },
+            "long_ood": {
+              "first_target_row_hits": 119,
+              "items": {
+                "accuracy": 0.703125,
+                "correct": 90,
+                "total": 128
+              },
+              "second_target_row_hits": 90
+            },
+            "order_groups": {
+              "first_target_row_hits": 476,
+              "groups": {
+                "accuracy": 0.7578125,
+                "correct": 97,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.7578125,
+                "correct": 388,
+                "total": 512
+              },
+              "second_target_row_hits": 388
+            }
+          }
+        }
+      },
+      "1": {
+        "84411": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 118,
+              "items": {
+                "accuracy": 0.75,
+                "correct": 96,
+                "total": 128
+              },
+              "second_target_row_hits": 96
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 117,
+              "items": {
+                "accuracy": 0.7265625,
+                "correct": 93,
+                "total": 128
+              },
+              "second_target_row_hits": 94
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 484,
+              "groups": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.7421875,
+                "correct": 380,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "second_target_row_hits": 380
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 119,
+              "items": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "second_target_row_hits": 97
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 121,
+              "items": {
+                "accuracy": 0.7578125,
+                "correct": 97,
+                "total": 128
+              },
+              "second_target_row_hits": 96
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 122,
+              "items": {
+                "accuracy": 0.703125,
+                "correct": 90,
+                "total": 128
+              },
+              "second_target_row_hits": 90
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 119,
+              "items": {
+                "accuracy": 0.7578125,
+                "correct": 97,
+                "total": 128
+              },
+              "second_target_row_hits": 98
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 121,
+              "items": {
+                "accuracy": 0.9375,
+                "correct": 120,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 487,
+              "groups": {
+                "accuracy": 0.71875,
+                "correct": 92,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.9140625,
+                "correct": 468,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 487,
+              "groups": {
+                "accuracy": 0.5625,
+                "correct": 72,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.755859375,
+                "correct": 387,
+                "total": 512
+              },
+              "second_target_row_hits": 387
+            },
+            "factorial": {
+              "first_target_row_hits": 484,
+              "groups": {
+                "accuracy": 0.4609375,
+                "correct": 59,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.697265625,
+                "correct": 357,
+                "total": 512
+              },
+              "second_target_row_hits": 359
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 119,
+              "items": {
+                "accuracy": 0.9140625,
+                "correct": 117,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 488,
+              "groups": {
+                "accuracy": 0.671875,
+                "correct": 86,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.90625,
+                "correct": 464,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 117,
+              "items": {
+                "accuracy": 0.53125,
+                "correct": 68,
+                "total": 128
+              },
+              "second_target_row_hits": 86
+            },
+            "hop_4": {
+              "first_target_row_hits": 112,
+              "items": {
+                "accuracy": 0.2734375,
+                "correct": 35,
+                "total": 128
+              },
+              "second_target_row_hits": 78
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 106,
+              "items": {
+                "accuracy": 0.203125,
+                "correct": 26,
+                "total": 128
+              },
+              "second_target_row_hits": 57
+            },
+            "long_ood": {
+              "first_target_row_hits": 118,
+              "items": {
+                "accuracy": 0.6171875,
+                "correct": 79,
+                "total": 128
+              },
+              "second_target_row_hits": 80
+            },
+            "order_groups": {
+              "first_target_row_hits": 484,
+              "groups": {
+                "accuracy": 0.71875,
+                "correct": 92,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.71875,
+                "correct": 368,
+                "total": 512
+              },
+              "second_target_row_hits": 368
+            }
+          }
+        },
+        "84511": {
+          "competent": false,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 122,
+              "items": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "second_target_row_hits": 95
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 123,
+              "items": {
+                "accuracy": 0.71875,
+                "correct": 92,
+                "total": 128
+              },
+              "second_target_row_hits": 90
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 492,
+              "groups": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.7421875,
+                "correct": 380,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.7421875,
+                "correct": 95,
+                "total": 128
+              },
+              "second_target_row_hits": 380
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 122,
+              "items": {
+                "accuracy": 0.6875,
+                "correct": 88,
+                "total": 128
+              },
+              "second_target_row_hits": 88
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 120,
+              "items": {
+                "accuracy": 0.7109375,
+                "correct": 91,
+                "total": 128
+              },
+              "second_target_row_hits": 91
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 123,
+              "items": {
+                "accuracy": 0.7109375,
+                "correct": 91,
+                "total": 128
+              },
+              "second_target_row_hits": 91
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 124,
+              "items": {
+                "accuracy": 0.7578125,
+                "correct": 97,
+                "total": 128
+              },
+              "second_target_row_hits": 98
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 123,
+              "items": {
+                "accuracy": 0.9453125,
+                "correct": 121,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 482,
+              "groups": {
+                "accuracy": 0.6640625,
+                "correct": 85,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.90625,
+                "correct": 464,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 488,
+              "groups": {
+                "accuracy": 0.546875,
+                "correct": 70,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.7734375,
+                "correct": 396,
+                "total": 512
+              },
+              "second_target_row_hits": 397
+            },
+            "factorial": {
+              "first_target_row_hits": 480,
+              "groups": {
+                "accuracy": 0.4453125,
+                "correct": 57,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.72265625,
+                "correct": 370,
+                "total": 512
+              },
+              "second_target_row_hits": 370
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 123,
+              "items": {
+                "accuracy": 0.8984375,
+                "correct": 115,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 481,
+              "groups": {
+                "accuracy": 0.703125,
+                "correct": 90,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.91015625,
+                "correct": 466,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 119,
+              "items": {
+                "accuracy": 0.5078125,
+                "correct": 65,
+                "total": 128
+              },
+              "second_target_row_hits": 79
+            },
+            "hop_4": {
+              "first_target_row_hits": 110,
+              "items": {
+                "accuracy": 0.3515625,
+                "correct": 45,
+                "total": 128
+              },
+              "second_target_row_hits": 69
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 110,
+              "items": {
+                "accuracy": 0.2421875,
+                "correct": 31,
+                "total": 128
+              },
+              "second_target_row_hits": 57
+            },
+            "long_ood": {
+              "first_target_row_hits": 111,
+              "items": {
+                "accuracy": 0.5859375,
+                "correct": 75,
+                "total": 128
+              },
+              "second_target_row_hits": 73
+            },
+            "order_groups": {
+              "first_target_row_hits": 476,
+              "groups": {
+                "accuracy": 0.7265625,
+                "correct": 93,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.7265625,
+                "correct": 372,
+                "total": 512
+              },
+              "second_target_row_hits": 372
+            }
+          }
+        }
+      }
+    },
+    "unlinked_route": {
+      "0": {
+        "84411": {
+          "competent": true,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 1.0,
+                "correct": 512,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 512
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 510,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 511
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9765625,
+                "correct": 125,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.98828125,
+                "correct": 506,
+                "total": 512
+              },
+              "second_target_row_hits": 506
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9765625,
+                "correct": 125,
+                "total": 128
+              },
+              "second_target_row_hits": 126
+            },
+            "hop_4": {
+              "first_target_row_hits": 127,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.96875,
+                "correct": 124,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.984375,
+                "correct": 126,
+                "total": 128
+              },
+              "second_target_row_hits": 126
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 508,
+                "total": 512
+              },
+              "second_target_row_hits": 508
+            }
+          }
+        },
+        "84511": {
+          "competent": true,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 508,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 508
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 127,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 511,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 511,
+              "groups": {
+                "accuracy": 0.96875,
+                "correct": 124,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 508,
+                "total": 512
+              },
+              "second_target_row_hits": 508
+            },
+            "factorial": {
+              "first_target_row_hits": 508,
+              "groups": {
+                "accuracy": 0.984375,
+                "correct": 126,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.98828125,
+                "correct": 506,
+                "total": 512
+              },
+              "second_target_row_hits": 506
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 511,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.984375,
+                "correct": 126,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.984375,
+                "correct": 126,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 127,
+              "items": {
+                "accuracy": 0.9453125,
+                "correct": 121,
+                "total": 128
+              },
+              "second_target_row_hits": 124
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "order_groups": {
+              "first_target_row_hits": 504,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 508,
+                "total": 512
+              },
+              "second_target_row_hits": 508
+            }
+          }
+        }
+      },
+      "1": {
+        "84411": {
+          "competent": true,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 1.0,
+                "correct": 512,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 512
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 127,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 511
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9765625,
+                "correct": 125,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.98828125,
+                "correct": 506,
+                "total": 512
+              },
+              "second_target_row_hits": 506
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 1.0,
+                "correct": 512,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "hop_4": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9453125,
+                "correct": 121,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 127,
+              "items": {
+                "accuracy": 0.9453125,
+                "correct": 121,
+                "total": 128
+              },
+              "second_target_row_hits": 123
+            },
+            "long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.984375,
+                "correct": 126,
+                "total": 128
+              },
+              "second_target_row_hits": 126
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 1.0,
+                "correct": 512,
+                "total": 512
+              },
+              "second_target_row_hits": 512
+            }
+          }
+        },
+        "84511": {
+          "competent": true,
+          "panels": {
+            "alias_inner": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "alias_terminal": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "boundary_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 508,
+                "total": 512
+              },
+              "marker_free": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 508
+            },
+            "composed_confirm_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "composed_confirm_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.984375,
+                "correct": 126,
+                "total": 128
+              },
+              "second_target_row_hits": 126
+            },
+            "composed_train_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "composed_train_train": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 128
+            },
+            "copy_confirm": {
+              "first_target_row_hits": 0,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "direct_query_groups": {
+              "first_target_row_hits": 511,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "distractor_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.984375,
+                "correct": 126,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.99609375,
+                "correct": 510,
+                "total": 512
+              },
+              "second_target_row_hits": 510
+            },
+            "factorial": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.96875,
+                "correct": 124,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.984375,
+                "correct": 504,
+                "total": 512
+              },
+              "second_target_row_hits": 504
+            },
+            "first_hop_confirm": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 1.0,
+                "correct": 128,
+                "total": 128
+              },
+              "second_target_row_hits": 0
+            },
+            "first_hop_query_groups": {
+              "first_target_row_hits": 511,
+              "groups": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.998046875,
+                "correct": 511,
+                "total": 512
+              },
+              "second_target_row_hits": 0
+            },
+            "hop_3": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "hop_4": {
+              "first_target_row_hits": 127,
+              "items": {
+                "accuracy": 0.9609375,
+                "correct": 123,
+                "total": 128
+              },
+              "second_target_row_hits": 125
+            },
+            "hop_4_long_ood": {
+              "first_target_row_hits": 128,
+              "items": {
+                "accuracy": 0.921875,
+                "correct": 118,
+                "total": 128
+              },
+              "second_target_row_hits": 120
+            },
+            "long_ood": {
+              "first_target_row_hits": 127,
+              "items": {
+                "accuracy": 0.9921875,
+                "correct": 127,
+                "total": 128
+              },
+              "second_target_row_hits": 127
+            },
+            "order_groups": {
+              "first_target_row_hits": 512,
+              "groups": {
+                "accuracy": 0.9765625,
+                "correct": 125,
+                "total": 128
+              },
+              "items": {
+                "accuracy": 0.9765625,
+                "correct": 500,
+                "total": 512
+              },
+              "second_target_row_hits": 500
+            }
+          }
+        }
+      }
+    }
+  },
+  "trace": {
+    "linked_answer": {
+      "0": {
+        "final_answer_loss": 2.1885266304016113,
+        "initial_answer_loss": 5.350014686584473,
+        "steps": 6000
+      },
+      "1": {
+        "final_answer_loss": 2.4585301876068115,
+        "initial_answer_loss": 5.3368730545043945,
+        "steps": 6000
+      }
+    },
+    "linked_route": {
+      "0": {
+        "final_answer_loss": 2.1788265705108643,
+        "initial_answer_loss": 5.350014686584473,
+        "steps": 6000
+      },
+      "1": {
+        "final_answer_loss": 2.444333553314209,
+        "initial_answer_loss": 5.3368730545043945,
+        "steps": 6000
+      }
+    },
+    "unlinked_route": {
+      "0": {
+        "final_answer_loss": 0.0012681097723543644,
+        "initial_answer_loss": 6.388989448547363,
+        "steps": 6000
+      },
+      "1": {
+        "final_answer_loss": 0.0010077225742861629,
+        "initial_answer_loss": 6.880836486816406,
+        "steps": 6000
+      }
+    }
+  }
+}

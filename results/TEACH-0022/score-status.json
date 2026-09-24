@@ -1,0 +1,111 @@
+{
+  "archives": {
+    "linked_answer": {
+      "0/84411": {
+        "bytes": 1303890,
+        "sha256": "cd3fb53623bc30bfc19813988c1c55cd630323592e67fd90c5bf01c23ea900e0"
+      },
+      "0/84511": {
+        "bytes": 1304238,
+        "sha256": "f3d34e48d3ee96fd7fb8cc1130a3fc681c930841333f0a62925db01df1288b96"
+      },
+      "1/84411": {
+        "bytes": 1304100,
+        "sha256": "3bea7132b1dac0417fa7c3b38a9e9ab8646a26bc46fa205c3abd9c02b59beabc"
+      },
+      "1/84511": {
+        "bytes": 1304024,
+        "sha256": "6eb1dbb4dce545fb48d8bd695ea0f0c3ec4992b643a8346c84aa1c033622e44c"
+      }
+    },
+    "linked_route": {
+      "0/84411": {
+        "bytes": 1303839,
+        "sha256": "e7e09b22bcd60f3e9cebfa1d0003f9ac883acf677c9aa0160bdc46fcfe8a5068"
+      },
+      "0/84511": {
+        "bytes": 1303824,
+        "sha256": "35174387a54c1d40bde5e7e116ebbdfb7b771563d41b0ae0cfa42c396cae3a1b"
+      },
+      "1/84411": {
+        "bytes": 1303941,
+        "sha256": "d09af96df997677fd178d73899e8e5c1d2407efb73bd3236babfce83d915b64f"
+      },
+      "1/84511": {
+        "bytes": 1303647,
+        "sha256": "21488c18d122e0f5eb4f341ca5e081195fe43d1ab25900c2ad3342206ba0f0db"
+      }
+    },
+    "oracle_rows_workspace": {
+      "0/84411": {
+        "bytes": 1298880,
+        "sha256": "2d813ba4e5c736ffed3a6a71c3a6c6520fcdc4f73a7dafdc5dfbb12f8a04c10b"
+      },
+      "0/84511": {
+        "bytes": 1299396,
+        "sha256": "7fce55d221263b0ae32e27dd3655f16b53ca5ef25abe93653a1d9b6db188e3c2"
+      },
+      "1/84411": {
+        "bytes": 1298874,
+        "sha256": "b03c04fdbb78aec076662e69c24518e7d56181c2b7f95c91e19430ac665a24de"
+      },
+      "1/84511": {
+        "bytes": 1299179,
+        "sha256": "ad5bf2fddea3c9ff43d42fadc0391bff20a9fc6ffa6c9313f77aacb983def604"
+      }
+    },
+    "unlinked_route": {
+      "0/84411": {
+        "bytes": 1291761,
+        "sha256": "cace6b8f6816ca7ccc5e8e95b0204f857f938c57baf379a8867f32d25716460d"
+      },
+      "0/84511": {
+        "bytes": 1292348,
+        "sha256": "7f757383548ca9b0ea9f1b3964ae1e9a07fdf03045fe191bf9624e156ce55fc8"
+      },
+      "1/84411": {
+        "bytes": 1292530,
+        "sha256": "ab15a3336307f5cdd3ad04a489aec7ff1d7d316632cb8e77a6fb8ef945d16fd6"
+      },
+      "1/84511": {
+        "bytes": 1293518,
+        "sha256": "69680c4e3c0c59851a95ede9cbb18b29ca5921ae4db164c8a92af56e13be9803"
+      }
+    }
+  },
+  "artifact_bytes": 653501931,
+  "elapsed_seconds": 756.0439242499997,
+  "experiment": "TEACH-0022",
+  "peak_sampled_mps_bytes": 100081920,
+  "progress": {
+    "arm": "linked_route",
+    "replicate": 1,
+    "seed": 84511
+  },
+  "sampled_mps_bytes": 0,
+  "scope": "fresh_84411_84511_once",
+  "source_head": "0ebd25a0a52c30cfa143b186090358fe81b5cabd",
+  "source_sha256": {
+    "docs/experiments/TEACH-0022-linked-reader.md": "cb5a4b16d21c2efa45f9b15a85eb6c8d987aab0abe2e1a3de0a2130d037ca0e8",
+    "scripts/teacher0014_artifact_audit.py": "f28f80cf1709b0e7fafe2f6f5f9d21956e7079a23175ef76b2b904955a357bfb",
+    "scripts/teacher0014_behavior_audit.py": "5b02ec858fb83b67b2b3a14ad419285525b13a8e20485fec08728a8cbece71a8",
+    "scripts/teacher0014_suite_audit.py": "5212b244f30d8e9a3aa66c8c8c0710fc6337faf6813f71324bcf5933df31a9c8",
+    "scripts/teacher0020_dev_run.py": "790e2ffeb3bea3c6379762c9ef9cb95b1f3aa17ae98859fdb855fd56e15e795c",
+    "scripts/teacher0022_audit.py": "6428c75873e8b95b22eb15bde123167c78d43060ad1bab2cfc1157a7497aa0d0",
+    "scripts/teacher0022_replay.py": "a197cbc9ba2813fba729f406cca99b1a9ae5e35180c9426e48bf70735d04b750",
+    "scripts/teacher0022_score.py": "826050b130db8739beb6851df66bd09002575813a5048d001311c5e438ed7937",
+    "scripts/teacher0022_suite.py": "71f31758b083c19360bac7548e56d00eaba0feb530a19b5ca4fb81601552129c",
+    "scripts/teacher0022_suite_audit.py": "3d34ff4428652ae8468013ca90e2858bd6cb289b8b2bed3d2c85bf2f5e81e4f7",
+    "scripts/teacher0022_train.py": "f119633dbc82bea83ec0b56c3afa2c24d0161a98977b9c03ca42e310e97b23d9",
+    "src/voynich/workspace/teacher14_models.py": "826315c68e7d33b790376d94a7ae1e0eaea1a22bb64d9b5ef58b50adf966db51",
+    "src/voynich/workspace/teacher14_objectives.py": "c24fd048246d6e909141e2dd8af4d242932a8596d66b989ef1155b18b4eb5878",
+    "src/voynich/workspace/teacher14_tasks.py": "13ebd25a575843c3da87ca8df95eab371be61836e1407c6a80a908e3c96c03fd",
+    "src/voynich/workspace/teacher14_train.py": "ffad4fc6be5b87bc00e54e70d4ef5c0cb9bc875301e9a8b77661e813a2b0e9b8",
+    "src/voynich/workspace/teacher22_models.py": "5f56010ef86c0e4913f123f469ae0349b830a79cd1e15bdad4417224f630ca79",
+    "tests/test_teacher0022_campaign.py": "3c39877b789d1448f48b56555ba7cc45d7556a630446278003d46d562c169089",
+    "tests/test_teacher0022_models.py": "48861bd10c56eaea6039980ac63076e163c220cf354d258e28e2b1b1006e7c47"
+  },
+  "status": "complete",
+  "suite_audit_sha256": "e581a98fcf0ce354b369a3a1c6954f1afabdb348ae0139e0237287e462d5d65f",
+  "training_status_sha256": "bf3140b8cca04286bd13b527d9cf42805edc35038e703d7089c0777275450f14"
+}
