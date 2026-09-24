@@ -33,6 +33,9 @@ campaign = _load("teacher0013_subspace_campaign_test_dependency",
                  "scripts/teacher0013_subspace_campaign.py")
 audit = _load("teacher0013_subspace_audit_test_dependency",
               "scripts/teacher0013_subspace_audit.py")
+confirmation_audit = _load(
+    "teacher0013_subspace_confirmation_audit_parity_dependency",
+    "scripts/teacher0013_subspace_confirmation_audit.py")
 prepare = _load("teacher0013_prepare_test_dependency", "scripts/teacher0013_prepare.py")
 
 
@@ -91,6 +94,12 @@ def test_stage_d_confirmation_seed_smoke_covers_primary_controls_and_specificity
     assert decision["status"] == "candidate_decisions_pending_independent_artifact_audit"
     assert set(decision["candidate_labels"]) == {
         "content", "cross_seed_content", "binding", "order"}
+    audit_controls = {
+        seed: {"binding_specificity_errors": [],
+               "physical_order_records": controls["physical_order_oracles"]}
+        for seed in ("0", "1")}
+    assert confirmation_audit.recompute_decisions(
+        {"0": rows, "1": rows}, audit_controls, discovery) == decision
 
 
 def test_cross_seed_content_transport_runs_both_directions_with_exact_identity():
