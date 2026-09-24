@@ -37,8 +37,20 @@ def close(a: float, b: float) -> bool:
 
 
 def main() -> None:
-    result_path = ROOT / "results/EXP-0029/results.json"
+    result_path = ROOT / "results/EXP-0029/rows.json"
+    compact_path = ROOT / "results/EXP-0029/results.json"
     result = json.loads(result_path.read_text())
+    compact = json.loads(compact_path.read_text())
+    assert compact["raw_archive_sha256"] == digest(result_path)
+    assert compact["experiment"] == result["experiment"]
+    assert compact["decision"] == result["decision"]
+    assert compact["source_sha256"] == result["source_sha256"]
+    assert compact["validation"]["observed"] == result["validation"]["observed"]
+    assert compact["calibration"] == result["calibration"]
+    assert compact["null"] == result["null"]
+    assert compact["validation"]["selection"] == result["validation"]["selection"]
+    assert compact["validation"]["leaf_bootstrap_95_gain"] == result["validation"]["leaf_bootstrap_95_gain"]
+    assert "pairs" not in compact["validation"]
     assert result["experiment"] == "EXP-0029" and result["status"] == "complete"
     assert digest(ROOT / "src/voynich/locus_association.py") == result["source_sha256"]
     train_path = ROOT / "data/processed/zl3b/train.jsonl"
@@ -92,12 +104,29 @@ def main() -> None:
     rows = result["validation"]["pairs"]
     assert len(rows) == len(expected) == result["validation"]["observed"]["n"]
     assert dict(sorted(stats.items())) == result["validation"]["selection"]
-    assert len({r["leaf"] for r in rows}) == 10
+    # f73 has only label/circular loci in this source and no eligible P0 pair.
+    assert len({r["leaf"] for r in rows}) == 9
+    assert {r["leaf"] for r in rows} == {p["leaf_id"] for p in validation
+                                            if any(locus["locus_type"] == "P0" for locus in p["loci"])}
     assert {(r["page"], r["locus_id"], r["slot"]) for r in rows} == set(expected)
     for row in rows:
         key = (row["page"], row["locus_id"], row["slot"])
         assert (row["leaf"], row["target"], row["negative"], row["context"]) == expected[key]
         assert math.isfinite(row["form_margin"]) and math.isfinite(row["full_margin"])
+    leaf_totals = defaultdict(lambda: {"pairs": 0, "form_bits_sum": 0.0,
+                                      "full_bits_sum": 0.0, "form_correct_sum": 0.0,
+                                      "full_correct_sum": 0.0})
+    for row in rows:
+        leaf = leaf_totals[row["leaf"]]
+        leaf["pairs"] += 1
+        for name in ("form", "full"):
+            margin = row[f"{name}_margin"]
+            leaf[f"{name}_bits_sum"] += logloss(margin)
+            leaf[f"{name}_correct_sum"] += (margin > 0) + 0.5 * (margin == 0)
+    assert set(compact["validation"]["per_leaf"]) == set(leaf_totals)
+    for leaf_id, metrics in leaf_totals.items():
+        for key, value in metrics.items():
+            assert close(value, compact["validation"]["per_leaf"][leaf_id][key])
     form_losses = [logloss(r["form_margin"]) for r in rows]
     full_losses = [logloss(r["full_margin"]) for r in rows]
     observed = result["validation"]["observed"]
@@ -129,7 +158,8 @@ def main() -> None:
     assert result["decision"] == ("locus_association_support" if passed
                                   else "no_support_under_registered_controls")
     print(json.dumps({"audit": "pass", "pairs": len(rows), "leaves": len(leaves),
-                      "decision": result["decision"], "result_sha256": digest(result_path)}, indent=2))
+                      "decision": result["decision"], "raw_sha256": digest(result_path),
+                      "compact_sha256": digest(compact_path)}, indent=2))
 
 
 if __name__ == "__main__":
