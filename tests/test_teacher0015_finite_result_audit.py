@@ -39,7 +39,7 @@ def test_perfect_recipient_transfer_scores_full_denominators():
                     "final_donor_prediction": 24,
                 })
     result = score_rows(rows, ["synthetic", 0])
-    assert result["candidate_reusable_key_state_pending_replay"]
+    assert result["candidate_portable_state_pending_replay"]
     scores = result["scores"]
     assert scores["transfer"]["total"] == 3072
     assert scores["triples"]["total"] == 1024
@@ -51,7 +51,7 @@ def test_perfect_recipient_transfer_scores_full_denominators():
     for row in bad:
         row["transfer_prediction"] = row["fixed_donor_answer"]
     assert not score_rows(bad, ["synthetic", 1])[
-        "candidate_reusable_key_state_pending_replay"]
+        "candidate_portable_state_pending_replay"]
     with pytest.raises(ValueError, match="denominator"):
         score_rows(rows[:-1], ["synthetic", 2])
 

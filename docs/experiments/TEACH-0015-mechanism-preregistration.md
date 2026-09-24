@@ -228,3 +228,16 @@ identity/final-donor controls. Random-weight CPU tests pass. This does **not**
 admit the full mechanism assay: donor-pair selection, complete split-scale
 runner, finite MPS benchmark, aggregate decision audit and sampled trained
 checkpoint replay must still be frozen separately before confirmation.
+
+**Prospective row-slot confound correction, still before primary outcomes:**
+the frozen TEACH-0015 generator changes the G outputs while retaining the
+G key-to-row-slot permutation for a given surface. An intervention that carries
+the physical slot of `G(k1)` could pass the three-recipient behavior criteria
+without representing `k1` as a symbol. Direct examination of the visible
+frozen manifests found same-slot placement in all1,024 discovery and all1,024
+confirmation surfaces. Thus the earlier `REUSABLE-KEY-STATE-SUPPORTED` wording
+is too strong for this assay by itself. The implemented full-state decision is
+now `PORTABLE-INTERMEDIATE-STATE-SUPPORTED` with the **same** original numeric
+criteria. A separate cross-order donor/recipient test is required for a
+key-specific interpretation. This is a prospective correction of the claim,
+not an outcome-dependent threshold change.

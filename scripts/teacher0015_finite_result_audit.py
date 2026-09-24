@@ -210,7 +210,7 @@ def score_rows(rows: list[dict], identity: object) -> dict:
     return {"scores": scores, "per_surface": per_surface,
             "per_group_counts": per_group_counts,
             "control_margins": margins,
-            "candidate_reusable_key_state_pending_replay": qualified}
+            "candidate_portable_state_pending_replay": qualified}
 
 
 def _screen_predictions(screen_dir: Path, arm: str, rep: str,
@@ -338,7 +338,7 @@ def audit_finite(primary_dir: Path, suite_dir: Path, screen_dir: Path,
             "scores": results,
             "candidate_arms_pending_checkpoint_replay": [
                 arm for arm in arms if all(results[arm][rep]["confirmation"][
-                    "candidate_reusable_key_state_pending_replay"]
+                    "candidate_portable_state_pending_replay"]
                     for rep in ("0", "1"))],
             "sampled_checkpoint_replay": "pending"}
 

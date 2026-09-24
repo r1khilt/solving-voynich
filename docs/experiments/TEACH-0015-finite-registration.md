@@ -14,6 +14,17 @@ outputs `G0(k1),G1(k1),G2(k1)` when inserted after the first read into
 wrong explanation for changed-G recipients. This is a synthetic relational
 program with public labels; passing it does not decipher a manuscript.
 
+**Prospective interpretation correction, before trained outcomes:** the G0/G1/G2
+tables keep the same key-to-row-slot order under every common surface seed.
+All1,024 surfaces in each frozen split place the `G_j(k1)` row in the same
+physical slot across all three G tables. Therefore even a three-recipient
+transfer could pass by carrying a G-row pointer rather than the symbol `k1`.
+The registered full-state thresholds remain unchanged, but their strongest
+permitted label is `PORTABLE-INTERMEDIATE-STATE-SUPPORTED`, meaning a state
+that controls the tested recipients. They do **not** identify a symbol-key
+code or Anthropic-style J-space. A separately preregistered cross-order assay
+must break row-slot alignment before a key-specific interpretation is tested.
+
 ## Entry, population and fixed pairing
 
 Require complete TEACH-0014 v3 no-model artifact and sampled checkpoint/gate
@@ -92,7 +103,8 @@ The fixed confirmation criteria retain the original preregistration:
   denominator, in both seeds.
 
 The independent auditor applies these in conjunction after finite numerical
-replay; a preliminary no-model result is only a candidate. Report all rates,
+replay; a preliminary no-model result is only a candidate portable-state
+label. Report all rates,
 per-surface/group counts and4,000-resample logical-group bootstrap intervals
 without adapting thresholds to the observations. Same-key, final-donor and
 clean competence are controls; a positive final-donor answer injection is not

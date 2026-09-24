@@ -1,0 +1,185 @@
+{
+  "all_behavioral_thresholds_pass": true,
+  "experiment": "TEACH-0015-row-pointer-counterexample",
+  "manifest_sha256": {
+    "confirmation": "941cce744278d677655d01ef71f4dfa4943352e7e477ce66efcbd5233c4db975",
+    "discovery": "ff044ec42ceaaea180a4cde43bbb1bd0dd73dc0c4f53c476876855831402261c"
+  },
+  "scope": "constructed_visible_row_pointer_no_neural_model",
+  "source_sha256": {
+    "registration": "9d1198253cafe249cc9f87a115459b9265db509682b44d039da87950cfeab924",
+    "script": "f18ad1a97e4d7d413be47f4de7b301af22003c1cd3c7ccb5cb0f4e8cd44eed03"
+  },
+  "splits": {
+    "confirmation": {
+      "control_margins": {
+        "deranged": 0.9287109375,
+        "random": 0.939453125,
+        "wrong_key": 0.927734375
+      },
+      "passes_behavioral_thresholds_only": true,
+      "prediction_sha256": "4a923a71e4e27bfe9d35c5160cc5027aaf0b985419adf536ae1b4a2a699d59d4",
+      "same_slot_surfaces": 1024,
+      "scores": {
+        "base_clean": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "changed_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 2048,
+          "total": 2048
+        },
+        "deranged": {
+          "accuracy": 0.0712890625,
+          "correct": 219,
+          "total": 3072
+        },
+        "final_donor": {
+          "accuracy": 0.3333333333333333,
+          "correct": 1024,
+          "total": 3072
+        },
+        "marked": {
+          "accuracy": 1.0,
+          "correct": 1536,
+          "total": 1536
+        },
+        "marker_free": {
+          "accuracy": 1.0,
+          "correct": 1536,
+          "total": 1536
+        },
+        "random": {
+          "accuracy": 0.060546875,
+          "correct": 186,
+          "total": 3072
+        },
+        "reverse_eligible": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "reverse_full": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "same_key": {
+          "accuracy": 0.06640625,
+          "correct": 204,
+          "total": 3072
+        },
+        "target_clean": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "transfer": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "triples": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "wrong_key": {
+          "accuracy": 0.072265625,
+          "correct": 222,
+          "total": 3072
+        }
+      },
+      "total_surfaces": 1024
+    },
+    "discovery": {
+      "control_margins": {
+        "deranged": 0.9404296875,
+        "random": 0.9368489583333334,
+        "wrong_key": 0.94140625
+      },
+      "passes_behavioral_thresholds_only": true,
+      "prediction_sha256": "c327ade96ac05e85aee67e6775c57da2449729c918dd1f13615fb3117791b291",
+      "same_slot_surfaces": 1024,
+      "scores": {
+        "base_clean": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "changed_g_non_injection": {
+          "accuracy": 1.0,
+          "correct": 2048,
+          "total": 2048
+        },
+        "deranged": {
+          "accuracy": 0.0595703125,
+          "correct": 183,
+          "total": 3072
+        },
+        "final_donor": {
+          "accuracy": 0.3333333333333333,
+          "correct": 1024,
+          "total": 3072
+        },
+        "marked": {
+          "accuracy": 1.0,
+          "correct": 1536,
+          "total": 1536
+        },
+        "marker_free": {
+          "accuracy": 1.0,
+          "correct": 1536,
+          "total": 1536
+        },
+        "random": {
+          "accuracy": 0.06315104166666667,
+          "correct": 194,
+          "total": 3072
+        },
+        "reverse_eligible": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "reverse_full": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "same_key": {
+          "accuracy": 0.060546875,
+          "correct": 186,
+          "total": 3072
+        },
+        "target_clean": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "transfer": {
+          "accuracy": 1.0,
+          "correct": 3072,
+          "total": 3072
+        },
+        "triples": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "wrong_key": {
+          "accuracy": 0.05859375,
+          "correct": 180,
+          "total": 3072
+        }
+      },
+      "total_surfaces": 1024
+    }
+  },
+  "suite_file_sha256": {
+    "confirmation": "cc35fef8e0b64cdd0188e2c0dcc8be7da402863affc6d19dd076f977c4bcba69",
+    "discovery": "3714fbc66df69cc53716837e63edcbf0eb72f9cb85aa2aff1aff1438c8d7870e"
+  }
+}

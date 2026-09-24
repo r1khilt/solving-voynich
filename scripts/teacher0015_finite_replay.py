@@ -135,7 +135,7 @@ def replay(primary_dir: Path, suite_dir: Path, screen_dir: Path,
             "absolute_tolerance": ABS_TOLERANCE,
             "relative_tolerance": REL_TOLERANCE,
             "per_run": per_run,
-            "reusable_key_state_supported_arms": audited[
+            "portable_state_supported_arms": audited[
                 "candidate_arms_pending_checkpoint_replay"]}
 
 
