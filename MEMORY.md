@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-24 UTC (ANCHOR-0002 image-first label geometry audit; no decipherment).
+Last updated: 2026-09-24 UTC (HERBAL-CONTROL-0001 historical-image known-answer assay registered; no decipherment).
 
 ## Current state
+
+- **HERBAL-CONTROL-0001 pre-score source freeze:** Nine image-only crops from three known Tractatus de Herbis chapter categories across BnF Latin 6823, BL Egerton 747 and Casanatense 459 are SHA-pinned in `data/manifests/herbal_control_0001_images.json`. The fixed Apple Vision revision-2 assay asks whether 18 cross-manuscript retrievals can recognize the same named chapter against two decoys, with exact label-permutation and strict pilot gates. This calibrates a visual method before any Voynich image ranking; it does not identify a Voynich plant. Yale f35v imagery was inspected, but its test transcription remains unopened; any future f35v text test is no longer image-blind. Read `docs/experiments/HERBAL-CONTROL-0001.md`, NOTEBOOK NB-119.
 
 - **ANCHOR-0002 image-first feasibility expanded, identity still unverified:** Zandbergen Quire15 f89 drawing-row counts align with IVTFF `Lf` locus counts on f89r1 and f89v2, and on f89r2 rows1/2/4; f89r2 row3 has6 drawings/5 labels and is excluded. Two direct #60/#61 markers confirm the f89v2 ordering. Six provisional positional mappings raise *potentially label-alignable* Knowles groups from3 to9/28: 5,7,8,10,12,16,19,23,26. High-resolution Yale views, 18 crop/review assets and a nine-item anonymous image-choice packet are locally ignored and SHA-pinned in `data/manifests/anchor0002_label_alignment.json`, `anchor0002_image_review.json` and `anchor0002_blind_packet.json`. No image pair has independent duplicate status, no label strings were read, and no new text score was run; visually heterogeneous pairs make an independent image-only rating with shuffled foils the next gate. Read `docs/experiments/ANCHOR-0002-alignment.md`, NOTEBOOK NB-118.
 
