@@ -46,6 +46,21 @@ def canonical(value: object) -> str:
                                      separators=(",", ":")).encode()).hexdigest()
 
 
+def episode_from_json(value: dict) -> Episode:
+    """Restore tuple-typed fields required by the frozen model input path."""
+    return Episode(**{**value,
+                      "tokens": tuple(value["tokens"]),
+                      "signal_paths": tuple(tuple(path) for path in value[
+                          "signal_paths"]),
+                      "distractor_paths": tuple(tuple(path) for path in value[
+                          "distractor_paths"]),
+                      "serialized_rows": tuple(tuple(row) for row in value[
+                          "serialized_rows"]),
+                      "row_positions": tuple(tuple(row) for row in value[
+                          "row_positions"]),
+                      "stage_partitions": tuple(value["stage_partitions"])})
+
+
 def _write(path: Path, value: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
@@ -201,7 +216,7 @@ def run(root: Path, primary_dir: Path, output_dir: Path,
     if not torch.backends.mps.is_available():
         raise RuntimeError("MPS required for TEACH-0020")
     fraction, recommended = _set_mps_cap(Config())
-    panels = {name: [Episode(**item) for item in episodes]
+    panels = {name: [episode_from_json(item) for item in episodes]
               for name, episodes in manifest["panels"].items()}
     start = time.monotonic()
     status = {"experiment": "TEACH-0020", "status": "running",
@@ -260,4 +275,4 @@ if __name__ == "__main__":
     run(root, root / "results/TEACH-0014-v3",
         root / "outputs/TEACH-0014-v3",
         root / "outputs/TEACH-0016/teach14-74111.json",
-        root / "results/TEACH-0020-interrupted-dev")
+        root / "results/TEACH-0020-interrupted-dev-v2")

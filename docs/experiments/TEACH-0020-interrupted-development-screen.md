@@ -7,6 +7,17 @@ report. This screen uses **only the previously exposed seed-74111
 development suite**, not the reserved seed-84311 final predictions. It
 does not relabel or repair the interrupted primary campaign.
 
+**Prospective execution correction before any prediction:** Source-frozen
+attempt1 in `results/TEACH-0020-interrupted-dev/` stopped in its first
+input batch: JSON deserialization left `Episode.tokens` as a list, whereas
+the frozen `padded_tokens` function concatenates a tuple. Its status is
+`stopped`, no `rows-*` file or model prediction was written, and no score
+was inspected. The corrected loader restores all tuple-typed Episode
+fields; a round-trip input test covers this path. Run the corrected source
+once in the separate `results/TEACH-0020-interrupted-dev-v2/` namespace.
+The original failed status remains preserved. All seeds, panels, checkpoints,
+outcome metrics and resource caps below are unchanged.
+
 ## Question and inputs
 
 Do the six complete TEACH-0014 arm pairs show a clean gap between the

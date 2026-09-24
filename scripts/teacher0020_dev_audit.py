@@ -202,6 +202,6 @@ if __name__ == "__main__":
     result = audit(root, root / "results/TEACH-0014-v3",
                    root / "outputs/TEACH-0014-v3",
                    root / "outputs/TEACH-0016/teach14-74111.json",
-                   root / "results/TEACH-0020-interrupted-dev")
-    path = root / "results/TEACH-0020-interrupted-dev/audit.json"
+                   root / "results/TEACH-0020-interrupted-dev-v2")
+    path = root / "results/TEACH-0020-interrupted-dev-v2/audit.json"
     path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")

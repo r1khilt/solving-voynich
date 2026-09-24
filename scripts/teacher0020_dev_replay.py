@@ -9,7 +9,7 @@ import time
 import torch
 
 from scripts.teacher0020_dev_audit import audit, sha
-from voynich.workspace.teacher14_tasks import Episode
+from scripts.teacher0020_dev_run import episode_from_json
 from voynich.workspace.teacher14_train import Config, model_output, new_model
 
 
@@ -69,7 +69,8 @@ def replay(root: Path, primary_dir: Path, output_dir: Path,
                 for name in PANELS:
                     source = manifest["panels"][name]
                     indices = [0, len(source) // 2, len(source) - 1]
-                    episodes = [Episode(**source[index]) for index in indices]
+                    episodes = [episode_from_json(source[index])
+                                for index in indices]
                     output = model_output(model, arm, episodes, "cpu")
                     samples = archived["samples"][name]
                     for local, (index, sample) in enumerate(zip(
@@ -101,6 +102,6 @@ if __name__ == "__main__":
     result = replay(root, root / "results/TEACH-0014-v3",
                     root / "outputs/TEACH-0014-v3",
                     root / "outputs/TEACH-0016/teach14-74111.json",
-                    root / "results/TEACH-0020-interrupted-dev")
-    (root / "results/TEACH-0020-interrupted-dev/replay-audit.json").write_text(
+                    root / "results/TEACH-0020-interrupted-dev-v2")
+    (root / "results/TEACH-0020-interrupted-dev-v2/replay-audit.json").write_text(
         json.dumps(result, indent=2, sort_keys=True) + "\n")
