@@ -1,0 +1,80 @@
+{
+  "admitted": true,
+  "artifact_bytes": 0,
+  "conservative_projected_seconds": 3419.373831136152,
+  "elapsed_seconds": 4.412176290999923,
+  "experiment": "TEACH-0015-finite",
+  "finite_git_head": "91f4c2477a8de248c41d1e80c710fefa9b9ea5e4",
+  "finite_source_sha256": {
+    "docs/experiments/TEACH-0015-finite-registration.md": "f003ce6bef6044c020f644f2dd324d0abc77f694a3aaadcb60b23a36b0b8064f",
+    "scripts/teacher0015_finite_audit.py": "f36e49ab5de0596cbe6a5a91ab94bfd59daa64db96b3727956e4cffc39c1c2bb",
+    "scripts/teacher0015_finite_replay.py": "487ea33e0746c92d5219e11cc78c98841c9fa5b09126add0a8b2d75e78389962",
+    "scripts/teacher0015_finite_result_audit.py": "711f04eb18e7405f8f52d8e45d1fb2aacb5716327fdbb0541cd93843c06d5b2f",
+    "scripts/teacher0015_finite_run.py": "8a79f1b2f78260bca6e28ba972554f860e9010daaec7f9939586bae15a51de49",
+    "src/voynich/workspace/teacher15_intervene.py": "6efc75cac0d06b4b7c3c41fe53625cfb5c52b50b8fdb617ff898cf0620fb0f2d",
+    "src/voynich/workspace/teacher15_pairs.py": "9c95815c8be24814ed7b81c93a0c88806f6f1a6681881df060c283c7710a9ef0",
+    "tests/test_teacher0015_finite_audit.py": "d8b5f906348b5079ba13c263d987490b319c13679c44f73964e532377c4cbb79",
+    "tests/test_teacher0015_finite_replay.py": "c904a5fc81470201e0bacfa349f4cf5c40560ae260c3bf6ec1852f5c7da4bc5a",
+    "tests/test_teacher0015_finite_result_audit.py": "2620b924cf8516a11588c03264fdb91430f54c521feaeda680865b71cb579934",
+    "tests/test_teacher0015_intervene.py": "6fdf04beb827e12936573878681a1f24f9e48f95f7a00d2fae90037a4993b3ee"
+  },
+  "manifest_sha256": {
+    "confirmation": "941cce744278d677655d01ef71f4dfa4943352e7e477ce66efcbd5233c4db975",
+    "discovery": "ff044ec42ceaaea180a4cde43bbb1bd0dd73dc0c4f53c476876855831402261c"
+  },
+  "max_artifact_bytes": 2147483648,
+  "max_mps_bytes": 12884901888,
+  "max_seconds": 7200,
+  "peak_sampled_mps_allocated_bytes": 100081920,
+  "sampled_mps_allocated_bytes": 100081920,
+  "slowest_type_median_seconds": 0.14506016699851898,
+  "suite_file_sha256": {
+    "confirmation": "cc35fef8e0b64cdd0188e2c0dcc8be7da402863affc6d19dd076f977c4bcba69",
+    "discovery": "3714fbc66df69cc53716837e63edcbf0eb72f9cb85aa2aff1aff1438c8d7870e"
+  },
+  "timed_surfaces": 24,
+  "timings_seconds": {
+    "0": [
+      0.14811220900082844,
+      0.12448987499919895,
+      0.1384562500006723
+    ],
+    "1": [
+      0.14203058299972326,
+      0.1324038330003532,
+      0.12301433300126519
+    ],
+    "2": [
+      0.13327949999984412,
+      0.13943320799990033,
+      0.14063924999936717
+    ],
+    "3": [
+      0.12524870800007193,
+      0.11676341699967452,
+      0.11822724999910861
+    ],
+    "4": [
+      0.14358904199980316,
+      0.13729225000133738,
+      0.13495645799957856
+    ],
+    "5": [
+      0.13143124999987776,
+      0.1337861249994603,
+      0.13349791600012395
+    ],
+    "6": [
+      0.12016791700079921,
+      0.11707554199892911,
+      0.1174196669999219
+    ],
+    "7": [
+      0.14631133399961982,
+      0.13915195899971877,
+      0.14506016699851898
+    ]
+  },
+  "warmup_surfaces": 8,
+  "worst_case_surfaces": 12288
+}
