@@ -3,7 +3,7 @@
 This is source under design, not a frozen campaign or a manuscript model.
 """
 
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 import hashlib
 import json
 import random
@@ -44,8 +44,8 @@ class RenderSpec:
     def validate(self) -> None:
         if not 0.0 <= self.marker_dropout <= 1.0:
             raise ValueError("marker_dropout must be in [0,1]")
-        if not 0 <= self.max_gaps <= 2:
-            raise ValueError("max_gaps must be in [0,2]")
+        if not 0 <= self.max_gaps <= 3:
+            raise ValueError("max_gaps must be in [0,3]")
         if not self.styles or any(style not in ("prefix", "infix", "suffix")
                                   for style in self.styles):
             raise ValueError("Unknown or empty row style set")
@@ -296,11 +296,249 @@ def sample_episode(rng: random.Random, *, signal_hops: int, task: str,
             query = rng.choice(signals)[0]
         else:
             raise ValueError("Unknown task")
-        episode = make_episode(signals, distractor_paths, task=task, query=query,
-                               rng=rng, spec=spec, alias_mode=alias_mode)
+        try:
+            episode = make_episode(signals, distractor_paths, task=task, query=query,
+                                   rng=rng, spec=spec, alias_mode=alias_mode)
+        except ValueError as exc:
+            if "exceeds context" not in str(exc):
+                raise
+            continue
         if stage_partitions is not None and episode.stage_partitions != stage_partitions:
             continue
         if graph_partition is not None and episode.graph_partition != graph_partition:
             continue
         return episode
     raise RuntimeError("Could not sample requested family partitions")
+
+
+def rerender(episode: Episode, rng: random.Random, spec: RenderSpec, *,
+             task: str | None = None, query: int | None = None) -> Episode:
+    return make_episode(
+        episode.signal_paths, episode.distractor_paths,
+        task=episode.task if task is None else task,
+        query=episode.query if query is None else query,
+        rng=rng, spec=spec, alias_mode=episode.alias_mode)
+
+
+def _fresh_distractors(rng: random.Random,
+                       signals: tuple[tuple[int, ...], ...],
+                       count: int) -> tuple[tuple[int, ...], ...]:
+    used = {symbol for path in signals for symbol in path}
+    available = tuple(symbol for symbol in range(SYMBOL_START, VOCAB_SIZE)
+                      if symbol not in used)
+    values = rng.sample(available, 3 * count)
+    return tuple(tuple(values[index:index + 3])
+                 for index in range(0, len(values), 3))
+
+
+def _query_groups(rng: random.Random, task: str, size: int,
+                  spec: RenderSpec) -> list[Episode]:
+    episodes = []
+    for _ in range(size):
+        base = sample_episode(
+            rng, signal_hops=2, task=task, distractors=4, spec=spec,
+            stage_partitions=("confirm", "confirm"))
+        endpoint = 0 if task == "first_hop" else 1
+        for path in base.signal_paths:
+            episodes.append(rerender(
+                base, random.Random(rng.randrange(2**63)), spec,
+                query=path[endpoint]))
+    return episodes
+
+
+def _factorial(rng: random.Random, size: int,
+               spec: RenderSpec) -> list[Episode]:
+    """F swap and independent G remap; all four table families are confirm."""
+    episodes = []
+    attempts = 0
+    max_attempts = 30_000 * size
+    while len(episodes) < 4 * size:
+        attempts += 1
+        if attempts > max_attempts:
+            raise RuntimeError("Could not fill TEACH-0014 factorial panel")
+        f0, distractors = _paths(rng, 2, 4, "none")
+        f1_list = list(f0)
+        f1_list[0] = (f0[1][0], *f0[0][1:])
+        f1_list[1] = (f0[0][0], *f0[1][1:])
+        f1 = tuple(f1_list)
+        first0 = tuple((path[0], path[1]) for path in f0)
+        first1 = tuple((path[0], path[1]) for path in f1)
+        second0 = tuple((path[1], path[2]) for path in f0)
+        if any(family_partition(kind, rows) != "confirm" for kind, rows in (
+                ("stage-0", first0), ("stage-0", first1),
+                ("stage-1", second0))):
+            continue
+        used = {symbol for path in f0 + distractors for symbol in path}
+        available = tuple(symbol for symbol in range(SYMBOL_START, VOCAB_SIZE)
+                          if symbol not in used)
+        objects = rng.sample(available, 4)
+        g0 = tuple((path[0], path[1], objects[index])
+                   for index, path in enumerate(f0))
+        g1 = tuple((path[0], path[1], objects[index])
+                   for index, path in enumerate(f1))
+        second1 = tuple((path[1], path[2]) for path in g0)
+        if family_partition("stage-1", second1) != "confirm":
+            continue
+        query = f0[0][0]
+        quartet = [
+            make_episode(paths, distractors, task="composed", query=query,
+                         rng=random.Random(rng.randrange(2**63)), spec=spec)
+            for paths in (f0, f1, g0, g1)
+        ]
+        if len({episode.answer for episode in quartet}) != 4:
+            raise RuntimeError("Factorial answers are not four-way distinct")
+        if any(ep.stage_partitions != ("confirm", "confirm") for ep in quartet):
+            raise RuntimeError("Factorial family partition drift")
+        episodes.extend(quartet)
+    return episodes
+
+
+def _rerender_groups(rng: random.Random, size: int,
+                     spec: RenderSpec) -> list[Episode]:
+    episodes = []
+    for _ in range(size):
+        base = sample_episode(
+            rng, signal_hops=2, task="composed", distractors=4, spec=spec,
+            stage_partitions=("confirm", "confirm"))
+        episodes.extend(rerender(
+            base, random.Random(rng.randrange(2**63)), spec) for _ in range(4))
+    return episodes
+
+
+def _boundary_groups(rng: random.Random, size: int) -> list[Episode]:
+    episodes = []
+    specs = (
+        RenderSpec(0.0, 0, ("prefix",)),
+        RenderSpec(.25, 2, ("prefix", "infix", "suffix")),
+        RenderSpec(.5, 2, ("prefix", "infix", "suffix")),
+        RenderSpec(1.0, 2, ("prefix", "infix", "suffix")),
+    )
+    for _ in range(size):
+        base = sample_episode(
+            rng, signal_hops=2, task="composed", distractors=4, spec=specs[0],
+            stage_partitions=("confirm", "confirm"))
+        episodes.extend(rerender(
+            base, random.Random(rng.randrange(2**63)), spec) for spec in specs)
+    return episodes
+
+
+def _distractor_groups(rng: random.Random, size: int,
+                       spec: RenderSpec) -> list[Episode]:
+    episodes = []
+    for _ in range(size):
+        base = sample_episode(
+            rng, signal_hops=2, task="composed", distractors=0, spec=spec,
+            stage_partitions=("confirm", "confirm"))
+        for count in (0, 1, 4, 8):
+            distractors = _fresh_distractors(rng, base.signal_paths, count)
+            episodes.append(make_episode(
+                base.signal_paths, distractors, task="composed", query=base.query,
+                rng=random.Random(rng.randrange(2**63)), spec=spec))
+    return episodes
+
+
+def evaluation_suite(seed: int, size: int = 128) -> dict[str, list[Episode]]:
+    """Fresh grouped behavior suite; no TEACH-0012 family or render IDs are reused."""
+    if size <= 0:
+        raise ValueError("Positive group count required")
+    rng = random.Random(seed)
+    hard = RenderSpec(.25, 2, ("prefix", "infix", "suffix"))
+    suite: dict[str, list[Episode]] = {}
+    for f_partition, g_partition in (
+            ("train", "train"), ("confirm", "train"),
+            ("train", "confirm"), ("confirm", "confirm")):
+        key = f"composed_{f_partition}_{g_partition}"
+        suite[key] = [
+            sample_episode(
+                rng, signal_hops=2, task="composed", distractors=4, spec=hard,
+                stage_partitions=(f_partition, g_partition))
+            for _ in range(size)
+        ]
+    for task in ("first_hop", "direct", "copy"):
+        suite[f"{task}_confirm"] = [
+            sample_episode(
+                rng, signal_hops=2, task=task, distractors=4, spec=hard,
+                stage_partitions=("confirm", "confirm"))
+            for _ in range(size)
+        ]
+    suite["first_hop_query_groups"] = _query_groups(rng, "first_hop", size, hard)
+    suite["direct_query_groups"] = _query_groups(rng, "direct", size, hard)
+    suite["factorial"] = _factorial(rng, size, hard)
+    suite["order_groups"] = _rerender_groups(rng, size, hard)
+    suite["boundary_groups"] = _boundary_groups(rng, size)
+    suite["distractor_groups"] = _distractor_groups(rng, size, hard)
+    suite["long_ood"] = [
+        sample_episode(
+            rng, signal_hops=2, task="composed", distractors=8,
+            spec=RenderSpec(0.0, 3, ("prefix", "infix", "suffix")),
+            stage_partitions=("confirm", "confirm"))
+        for _ in range(size)
+    ]
+    for alias_mode in ("terminal", "inner"):
+        suite[f"alias_{alias_mode}"] = [
+            sample_episode(
+                rng, signal_hops=2, task="composed", distractors=4, spec=hard,
+                stage_partitions=("confirm", "confirm"), alias_mode=alias_mode)
+            for _ in range(size)
+        ]
+    for hops in (3, 4):
+        suite[f"hop_{hops}"] = [
+            sample_episode(
+                rng, signal_hops=hops, task="composed", distractors=4, spec=hard,
+                graph_partition="confirm")
+            for _ in range(size)
+        ]
+    suite["hop_4_long_ood"] = [
+        sample_episode(
+            rng, signal_hops=4, task="composed", distractors=8,
+            spec=RenderSpec(0.0, 3, ("prefix", "infix", "suffix")),
+            graph_partition="confirm")
+        for _ in range(size)
+    ]
+    return suite
+
+
+def training_batch(seed: int, batch_size: int, *, step: int,
+                   null_composed: bool = False
+                   ) -> tuple[list[Episode], list[int]]:
+    """Fixed-from-step-zero task mix; each arm gets the same logical episodes."""
+    if batch_size <= 0 or not 0 <= step < 6000:
+        raise ValueError("Invalid TEACH-0014 training batch or step")
+    rng = random.Random(seed)
+    null_rng = random.Random(seed ^ 0x14C0FFEE)
+    episodes: list[Episode] = []
+    labels: list[int] = []
+    tasks = ("first_hop", "direct", "composed", "copy")
+    weights = (.20, .20, .50, .10)
+    for _ in range(batch_size):
+        task = rng.choices(tasks, weights=weights, k=1)[0]
+        distractors = rng.randint(0, 6)
+        spec = RenderSpec(
+            marker_dropout=rng.choice((0.0, .25, .5, 1.0)),
+            max_gaps=rng.randint(0, 2),
+            styles=("prefix", "infix", "suffix"))
+        episode = sample_episode(
+            rng, signal_hops=2, task=task, distractors=distractors,
+            spec=spec, stage_partitions=("train", "train"))
+        label = episode.answer
+        if null_composed and task == "composed":
+            label = null_rng.choice(tuple(path[-1] for path in episode.signal_paths))
+        episodes.append(episode)
+        labels.append(label)
+    return episodes, labels
+
+
+def suite_manifest(suite: dict[str, list[Episode]], *, seed: int,
+                   group_count: int) -> dict:
+    """Stable, model-free evidence for a later independent suite audit."""
+    if group_count <= 0:
+        raise ValueError("Positive group count required")
+    panels = {name: [asdict(episode) for episode in episodes]
+              for name, episodes in suite.items()}
+    return {
+        "experiment": "TEACH-0014",
+        "split_namespace": SPLIT_NAMESPACE,
+        "seed": seed,
+        "group_count": group_count,
+        "panels": json.loads(json.dumps(panels)),
+    }

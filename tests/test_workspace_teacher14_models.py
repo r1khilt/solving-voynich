@@ -140,3 +140,19 @@ def test_mean_address_control_does_not_receive_query_in_parser():
         after = model(other, capture=True)
     torch.testing.assert_close(before.cache["read.0.attention"],
                                after.cache["read.0.attention"], rtol=0, atol=0)
+
+
+def test_four_hop_eight_distractor_case_uses_all_63_candidates():
+    rng = random.Random(140119)
+    episode = sample_episode(
+        rng, signal_hops=4, task="composed", distractors=8,
+        spec=RenderSpec(0.0, 3, ("prefix", "infix", "suffix")),
+        graph_partition="confirm")
+    ids = _batch([episode])
+    torch.manual_seed(19)
+    model = CandidateEdgeWorkspace().eval()
+    with torch.no_grad():
+        output = model(ids, capture=True)
+    assert output.cache["edge_gate_logits"].shape == (1, 63)
+    assert all(f"read.{step}.attention" in output.cache for step in range(4))
+    assert torch.isfinite(output.logits).all()

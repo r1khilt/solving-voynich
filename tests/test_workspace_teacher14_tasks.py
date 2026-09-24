@@ -6,8 +6,8 @@ import pytest
 
 from voynich.workspace.teacher14_tasks import (
     ANSWER, BOS, COMPOSE, EDGE, GAP, HOP3, HOP4, SYMBOL_START,
-    RenderSpec, make_episode, rows_oracle, sample_episode, strip_pair_rows,
-    visible_oracle,
+    RenderSpec, evaluation_suite, make_episode, rows_oracle, sample_episode, strip_pair_rows,
+    training_batch, visible_oracle,
 )
 
 
@@ -87,3 +87,40 @@ def test_alias_metadata_and_signal_uniqueness_are_enforced():
         bad_signals = (signal_paths[0], (19, 20, 18), *signal_paths[2:])
         make_episode(bad_signals, (), task="composed", query=16,
                      rng=random.Random(1), spec=spec)
+
+
+def test_fresh_suite_has_complete_factorial_and_long_hop_panels():
+    suite = evaluation_suite(74111, size=2)
+    assert len(suite) == 19
+    assert sum(len(panel) for panel in suite.values()) == 74
+    assert all(visible_oracle(item.tokens) == item.answer
+               for panel in suite.values() for item in panel)
+    for index in range(0, len(suite["factorial"]), 4):
+        group = suite["factorial"][index:index + 4]
+        assert len({item.answer for item in group}) == 4
+        assert all(item.stage_partitions == ("confirm", "confirm")
+                   for item in group)
+    for name in ("order_groups", "boundary_groups"):
+        for index in range(0, len(suite[name]), 4):
+            group = suite[name][index:index + 4]
+            assert len({item.graph_id for item in group}) == 1
+            assert len({item.answer for item in group}) == 1
+    assert all(item.graph_partition == "confirm" and len(item.rows) == 32
+               for item in suite["hop_4_long_ood"])
+
+
+def test_training_stream_is_arm_matched_and_null_changes_only_labels():
+    episodes, labels = training_batch(74444, 64, step=0)
+    null_episodes, null_labels = training_batch(
+        74444, 64, step=0, null_composed=True)
+    assert [item.render_id for item in episodes] == [
+        item.render_id for item in null_episodes]
+    assert all(item.stage_partitions == ("train", "train") for item in episodes)
+    assert {item.task for item in episodes} == {
+        "first_hop", "direct", "composed", "copy"}
+    assert all(label == item.answer for label, item in zip(labels, episodes, strict=True))
+    assert all(label == item.answer for label, item in zip(
+        null_labels, null_episodes, strict=True) if item.task != "composed")
+    assert any(a != b for a, b in zip(labels, null_labels, strict=True))
+    assert [item.render_id for item in training_batch(74444, 64, step=0)[0]] == [
+        item.render_id for item in episodes]
