@@ -29,6 +29,19 @@ The registered linked-answer margin over the baseline was **−61.72 and −57.8
 
 The **unlinked-route** arm improved confirm-confirm by33/128 and39/128 exact answers (25.78 and30.47 points) relative to the original baseline, with paired rescue33/damage0 and rescue40/damage1 on the confirmation panel. It met all registered absolute copy/one-hop/direct/factorial competence gates in both model seeds. Across harder panels it scored125–127/128 on three-hop,123–126/128 on four-hop and118–121/128 on long four-hop OOD, versus substantially weaker baseline; these are still draws from this synthetic generator. The development suite showed the same broad pattern: unlinked-route127/128 and128/128 confirm-confirm,125/128 exact factorial groups in both seeds; linked arms15–22/128 confirm-confirm and0/128 exact factorial groups.
 
+### Exploratory post hoc read-mass diagnostic
+
+After the confirmatory result was audited, a separate CPU checkpoint readout on the **already exposed development seed84411** quantified the first/second target attention probabilities, read-value norms and update norms for all128 confirm-confirm items in every arm/seed. Its script `scripts/teacher0022_posthoc_geometry.py` binds the original suite/checkpoint/audit hashes and reproduces the independently audited exact answers and row-hit counts before saving `results/TEACH-0022/posthoc-geometry.json`. This is descriptive follow-up, not a new preregistered confirmation, and it has no separate independent geometry replay.
+
+| Arm | First target-row mean mass, seeds0/1 | Second target-row mean mass, seeds0/1 | First read value mean norm, seeds0/1 | First learned update mean norm, seeds0/1 |
+| --- | --- | --- | --- | --- |
+| Original answer-only | .4247 / .4491 | .7580 / .7407 | .6889 / .7033 | .6645 / .6873 |
+| Unlinked + route labels | **.7481 / .6662** | **.9920 / 1.0000** | 1.2111 / 1.0956 | 2.3497 / 1.7164 |
+| Linked answer-only | .0676 / .0675 | .0736 / .0730 | .2057 / .2053 | .3425 / .3362 |
+| Linked + route labels | .0678 / .0677 | .0740 / .0733 | .2061 / .2057 | .3486 / .3428 |
+
+Uniform mass over16 visible rows is.0625. The linked model's first-row argmax was128/128, yet even after training it placed only~.068 mass on that row: its weighted value remained close to a mixture. The successful route-supervised unlinked model gave the true first row~.67–.75 mass and the true second row virtually all mass. In the linked arms, the learned update scale decreased from its initialized0.1 to~.074; despite the “direct carry” interface, the update's observed norm exceeded the carried value's norm. These observations sharpen the diagnosis that first-row **rank** and effective value transport are different, but they do not isolate which tied/identity/scaled component prevented optimization. Attention mass is a measurement, not a causal intervention; the independent TEACH-0024/25 hard-first patches provide the causal evidence for mixture effects in the original reader.
+
 ## Meaning and limits
 
 The two decisive observations are (1) the original model can be made to execute these public-row graph queries almost perfectly under explicit **row-route supervision**, and (2) the proposed linked architecture is not a viable replacement under the matched training stream and budget. The first is evidence that the visible graph task has a trainable routing bottleneck; it is not evidence that answer-only learning spontaneously discovers the same route. The row target is computed from a public synthetic mapping and known answer. No analogous supervision exists for the Voynich manuscript. The architecture contrast includes parameter/interface differences, so it diagnoses this particular linked design, not all direct-value or hard-read approaches. Perfect or near-perfect accuracy on this generator also cannot identify a unique internal circuit or show what the manuscript encodes.
