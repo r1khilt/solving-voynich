@@ -1,6 +1,7 @@
 # TEACH-0014 prospective local-compute amendment
 
-**Status:** scientific launch remains closed. This amendment follows the
+**Status:** answer/parser scientific launch is admitted only after a clean,
+source-matched new benchmark passes. This amendment follows the
 source-matched benchmark stop recorded in NOTEBOOK NB-TEACH-61. It changes the
 local wall-time ceiling from 8 to **12 hours** without changing the 11 arms,
 two seeds, 6,000 updates per arm and seed, model architecture, answer labels,
@@ -18,15 +19,24 @@ about 2.30 hours beyond that conservative projection, but neither a short
 benchmark nor sampled allocation proves sustained thermal throughput or peak
 physical-memory safety. A 4 GiB combined artifact cap remains unchanged.
 
-The new benchmark must run from a clean committed version of *all* source and
-audit files in `SOURCE_PATHS`, including this amendment, in a new local result
-directory `results/TEACH-0014-v2` and checkpoint directory
-`outputs/TEACH-0014-v2`. The old result directory is read-only historical
-evidence. The new 24-update-per-arm MPS backward benchmark must pass its own
-12-hour projection gate before scientific training. The scientific run must
-still be explicitly admitted in source after the parser and artifact checks
-are tested; a passing benchmark alone does not open it. No paid API, cloud GPU
+Each amended benchmark must run from a clean committed version of *all* source
+and audit files in `SOURCE_PATHS`, including this amendment, in a fresh result
+and checkpoint directory. The original stopped result and first amended v2
+benchmark are read-only historical evidence. The final 24-update-per-arm MPS
+backward benchmark under `results/TEACH-0014-v3` must pass its own
+12-hour projection gate before scientific training. Source admission is fixed
+in `LAUNCH_ADMITTED=True` after parser and artifact checks passed independent
+fixtures; `check_benchmark` still rejects changed source, a failed projection
+or a missing benchmark. No paid API, cloud GPU
 or external spend is authorized by this amendment.
+
+The first amended benchmark from source `a03d0fb` passed the independent
+resource audit in45.696 seconds: 21,115.2893s raw training projection,
+33,472.9339s (9.29804h) conservative, and456,139,776 sampled MPS bytes.
+Its SHA-256 is `b7231e4b8ae226860b82702c55085fa5c6ab1cbafebd31573b271d360d1f6394`.
+It is preserved in the v2 directory. The final launch-admitted source differs,
+so a second source-matched amended benchmark must run in the new **v3** result
+and output directories before training. Source matching forbids reusing v2.
 
 The parser archive freezes the **zero-logit threshold** before model outcomes.
 Candidate slots are known adjacent ordinary-symbol occurrence pairs, so each

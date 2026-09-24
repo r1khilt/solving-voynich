@@ -144,9 +144,9 @@ def replay(result_dir: Path, output_dir: Path, root: Path) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--result-dir", type=Path,
-                        default=Path("results/TEACH-0014"))
+                        default=Path("results/TEACH-0014-v3"))
     parser.add_argument("--output-dir", type=Path,
-                        default=Path("outputs/TEACH-0014"))
+                        default=Path("outputs/TEACH-0014-v3"))
     parser.add_argument("--root", type=Path, default=Path.cwd())
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()

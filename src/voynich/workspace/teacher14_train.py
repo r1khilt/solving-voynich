@@ -1,8 +1,7 @@
-"""Bounded TEACH-0014 trainer draft; campaign admission remains closed.
+"""Bounded TEACH-0014 trainer for the answer/parser campaign.
 
-The benchmark and run interfaces are implemented to make cost measurable and
-artifacts auditable. Scientific launch requires a frozen full outcome auditor,
-source registration and an explicit resource amendment if the benchmark stops.
+The scientific run still requires a passing source-matched MPS benchmark.
+Mechanism labels require separate interventions after behavior qualification.
 """
 
 import argparse
@@ -67,7 +66,7 @@ SOURCE_PATHS = (
     "tests/test_teacher0014_replay.py",
 )
 BENCHMARK_ADMITTED = True
-LAUNCH_ADMITTED = False
+LAUNCH_ADMITTED = True
 EXPECTED_SUITE_SHA256 = "6af176d376921caccc0d40641002b94a462b42670fc4794f5b354457d17fa827"
 
 
@@ -400,10 +399,10 @@ def _predict_panels(model: torch.nn.Module, arm: str, suite: dict,
 
 
 def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
-    """Scientific run remains closed until the complete auditor is frozen."""
+    """Train only after the clean-source, resource and frozen-suite gates pass."""
     config.validate()
     if not LAUNCH_ADMITTED:
-        raise RuntimeError("TEACH-0014 launch closed: full outcome auditor pending")
+        raise RuntimeError("TEACH-0014 launch admission closed")
     if not torch.backends.mps.is_available():
         raise RuntimeError("MPS required for the TEACH-0014 campaign")
     provenance = source_provenance(config)
@@ -539,9 +538,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("mode", choices=("benchmark", "run"))
     parser.add_argument("--result-dir", type=Path,
-                        default=Path("results/TEACH-0014"))
+                        default=Path("results/TEACH-0014-v3"))
     parser.add_argument("--output-dir", type=Path,
-                        default=Path("outputs/TEACH-0014"))
+                        default=Path("outputs/TEACH-0014-v3"))
     args = parser.parse_args()
     if args.mode == "benchmark":
         result = benchmark(Config(), args.result_dir, args.output_dir)

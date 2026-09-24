@@ -54,15 +54,15 @@ def test_draft_branches_compute_finite_gradients_without_weight_update(monkeypat
         records["latent_rows_wrong_causal"]["causal_input_sha256"])
 
 
-def test_campaign_remains_closed_and_benchmark_has_explicit_gate(
+def test_campaign_requires_source_matched_benchmark_and_mps(
         tmp_path, monkeypatch):
     config = campaign.Config()
-    assert not campaign.LAUNCH_ADMITTED
+    assert campaign.LAUNCH_ADMITTED
     assert campaign.BENCHMARK_ADMITTED
     monkeypatch.setattr(campaign, "BENCHMARK_ADMITTED", False)
     with pytest.raises(RuntimeError, match="benchmark admission closed"):
         campaign.benchmark(config, tmp_path / "results", tmp_path / "outputs")
-    with pytest.raises(RuntimeError, match="launch closed"):
+    with pytest.raises(RuntimeError, match="MPS required"):
         campaign.run(config, tmp_path / "results", tmp_path / "outputs")
     assert not (tmp_path / "results").exists()
 
