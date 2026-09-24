@@ -109,3 +109,12 @@ for TEACH-0015's fresh assay and competence gate.
 This diagnosis is about a known synthetic grammar. Even a clean rescue only
 licenses a better architectural test on known ciphers/unknown boundaries,
 not a Voynich segmentation or historical interpretation.
+
+`src/voynich/workspace/teacher14_diagnose.py` now implements the five
+candidate-gate conditions and physical true-edge attention readouts without
+loading any trained checkpoint. Random-weight CPU fixtures verify the native
+identity, row/candidate indexing, deterministic count-matched random mask and
+strong gold-mask suppression. It remains an **interface qualification**:
+trained-checkpoint execution, finite resource estimate, complete result
+archive and independent no-model decision audit must be separately frozen
+and run after the TEACH-0014 primary artifact/replay gates.
