@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-24 UTC (ANCHOR-0001 image-to-text lexical transfer fails; no decipherment).
+Last updated: 2026-09-24 UTC (ZODIAC-0001 fixed ordinal spelling transfer at chance; no decipherment).
 
 ## Current state
+
+- **ZODIAC-0001 fixed-position label transfer FAIL:** On four f72 30-label zodiac diagrams vs two f73 diagrams, train-only 2–3-character IDF-cosine yields 55 eligible validation labels with mean same-index rank fraction0.5022 vs exact 900 whole-diagram rotation null mean0.5, p0.4811; f73r/v means0.4532/0.5530. Independent all-score/hash/decision audit passed. This only weakens the fixed IVTFF-order spelling proxy, not ordinal diagrams or opaque historical abbreviations. f72/f73 are adjacent single leaves and validation is exploratory/exposed; no reading. Read `docs/experiments/ZODIAC-0001-results.md`, NOTEBOOK NB-115--116. Image-only plant-pair feasibility audit found only3 of28 public proposed small-fragment groups have unambiguous numeric label locators at both ends on usable train/validation; reproducible label-free inventory in `data/manifests/anchor0002_candidates.json`. Next external anchor needs manual image/label adjudication or a historically anchored catalogue, not more tuned string metrics on these pages.
 
 - **ANCHOR-0001 first external image/text anchor FAIL:** Five source-published pharmaceutical-fragment ↔ herbal-page visual correspondences were fixed before lexical scoring. Their labels' same-source-page spelling rank fractions were1.0/1.0/0.786 on three train-side pairs and0.222/0.167 on two validation-side pairs; mean0.6349 vs registered≥0.75, exact within-page assignment p0.3694 vs≤0.05, exact word recurrence0/5. Independent all-row/hash/1,440-assignment audit passed. No plaintext or plant name recovered. This narrow approximate spelling-transfer prediction failed on a small three-source-page panel; next use a larger image-only-rated label↔label panel before looking at text. During earlier split triage, f70v1/f70v2 test text was inadvertently printed, though no model or score used it; exclude f70 from any future pristine final-text claim. Read `docs/experiments/ANCHOR-0001-results.md`, NOTEBOOK NB-113--114.
 
