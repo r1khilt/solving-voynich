@@ -885,7 +885,7 @@ def summarize_confirmation_rows(rows: list[dict], *, direction: str | None = Non
     for row in selected:
         key = row["group_id"]
         grouped.setdefault(key, []).append(row)
-    if any({row["recipient"] for row in group} != {0, 1, 2}
+    if any(len(group) != 3 or {row["recipient"] for row in group} != {0, 1, 2}
            for group in grouped.values()):
         raise ValueError("Confirmation rows do not form complete three-recipient groups")
     correct = sum(row["prediction"] == row["target"] for row in selected)

@@ -65,7 +65,7 @@ def test_stage_d_confirmation_seed_smoke_covers_primary_controls_and_specificity
     audit.verify_rank_grid(rank_rows, "content", discovery_groups)
     discovery = {"rank_selections": {
         "content": {"selection": 1}, "binding": {"selection": None},
-        "order": {"selection": None}}}
+        "order": {"selection": 1}}}
     monkeypatch.setattr(confirm, "CONTROL_COUNT", 1)
     rows, controls = confirm.run_seed(
         net, confirmation_groups, spec, discovery, geometry, "0",
@@ -73,8 +73,69 @@ def test_stage_d_confirmation_seed_smoke_covers_primary_controls_and_specificity
     conditions = {row["condition"] for row in rows}
     assert {"content_selected_marked", "content_complement_marked",
             "content_haar_00_marked", "content_deranged_00_marked",
-            "content_equal_energy_00_marked", "content_mean_ablation",
-            "content_equal_norm_corruption", "content_native_restoration",
+            "content_equal_energy_00_marked", "content_mean_ablation_f0",
+            "content_mean_ablation_f1", "content_equal_norm_corruption_f0",
+            "content_equal_norm_corruption_f1", "content_native_restoration_f0",
+            "content_native_restoration_f1",
             "content_first_hop", "content_direct", "content_copy"} <= conditions
     assert len(controls["content"]["haar"]) == 1
     assert len(controls["content"]["deranged"]) == 1
+    assert len(controls["physical_order_oracles"]) == 24
+    shortcut = confirm.score_order_shortcut(
+        rows, controls["physical_order_oracles"], "order")
+    assert shortcut["oracle_kind"] == "f_slot"
+    assert shortcut["overall"]["registered_items"] == 24
+    assert shortcut["overall"]["eligible_items"] <= 24
+    decision = confirm.decide_confirmation(
+        {"0": rows, "1": rows}, {"0": controls, "1": controls}, discovery)
+    assert decision["status"] == "candidate_decisions_pending_independent_artifact_audit"
+    assert set(decision["candidate_labels"]) == {
+        "content", "cross_seed_content", "binding", "order"}
+
+
+def test_cross_seed_content_transport_runs_both_directions_with_exact_identity():
+    suite = counterfactual_suite(74431, discovery_groups=2, confirmation_groups=1)
+    discovery_groups = [asdict(group) for group in suite["discovery"]]
+    confirmation_groups = [asdict(group) for group in suite["confirmation"]]
+    spec = MediatorSpec(kind="single", site="blocks.0.resid_post", label="query")
+    torch.manual_seed(81)
+    source = model_for_arm("raw_shallow").eval()
+    torch.manual_seed(82)
+    target = model_for_arm("raw_shallow").eval()
+    panel = factor_state_panel(
+        source, discovery_groups, spec, factor_name="content",
+        episode_loader=episode_from_record, batch_size=8)
+    basis = fit_registered_factor_geometries(panel, panel, panel).content.basis[:, :1]
+    width = basis.shape[0]
+    rows = confirm.cross_seed_content_rows(
+        source, target, confirmation_groups, spec, basis, torch.eye(width),
+        lambda *args: None, source_seed="0", target_seed="1", map_name="shared",
+        device="cpu")
+    assert len(rows) == 6
+    assert {row["condition"] for row in rows} == {"content_cross_seed_shared_marked"}
+    assert {row["direction"] for row in rows} == {
+        "0_to_1_forward", "0_to_1_reverse"}
+    assert len({row["item_id"] for row in rows}) == len(rows)
+
+
+def test_physical_order_overall_group_coverage_keeps_assay_cells_separate():
+    records, rows = [], []
+    for cell in ("marked_f0", "format_f0"):
+        condition = f"physical_order_order_{cell}"
+        for recipient in range(3):
+            item_id = f"{cell}:{recipient}"
+            records.append({
+                "component": "order", "condition": condition,
+                "logical_group_id": "g0", "recipient": recipient,
+                "item_id": item_id, "oracle_valid": True,
+                "oracle_target": 20 + recipient, "oracle_kind": "f_slot",
+                "oracle_semantic_collision": False,
+                "oracle_structurally_valid": True, "surface": cell,
+                "assignment": "f0",
+            })
+            rows.append({"condition": condition, "item_id": item_id,
+                         "prediction": 20 + recipient})
+    score = confirm.score_order_shortcut(rows, records, "order")["overall"]
+    assert score["registered_groups"] == 2
+    assert score["eligible_groups"] == 2
+    assert score["group_accuracy"] == 1.0

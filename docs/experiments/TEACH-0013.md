@@ -292,6 +292,15 @@ order panels. A second shared map uses a fixed seed-73341 logical-group derangem
 must establish finite causal transport under the shared map and beat the deranged map; CKA or
 principal angles alone cannot support cross-seed alignment.
 
+The finite cross-seed assay transports only the source model's discovery-selected content-delta
+component into the target model's native confirmation base state. Seed 0 to seed 1 uses the shared
+rotation and seed 1 to seed 0 uses its transpose; neither direction refits a map or basis on
+confirmation. `CROSS-SEED-CAUSAL-TRANSPORT-SUPPORTED` is a separate strengthening label and
+requires, for both F directions in both model directions on marked confirmation items, at least
+80% recipient targets, 60% exact groups, 90% changed-recipient non-injection, and a 35-point item
+advantage over the identically applied discovery-fitted deranged map. Failure of this label does
+not erase a within-seed content result.
+
 `CONTENT-SUBSPACE-SUPPORTED` requires, in both seeds:
 
 - content-only recipient transfer at least 80% items and 60% exact groups;
@@ -304,9 +313,22 @@ principal angles alone cannot support cross-seed alignment.
 - direct first-hop key readout remains consistent with the same content edit while copy changes by
   no more than five points.
 
+For the last clause, frozen before confirmation access, `consistent` means at least 80% edited
+target accuracy separately for first-hop and direct tasks; the copy clause uses clean-minus-edited
+accuracy and must be at most five points. Necessity is evaluated separately for F0 and F1. The
+equal-norm component corruption must reduce clean accuracy by at least 30 points, native-state
+restoration must recover at least 95%, and the independently audited exact restored logits must
+match clean logits to maximum absolute error below `1e-6`.
+
 `BINDING-SUBSPACE-SUPPORTED` requires binding-only re-pairing to produce the oracle result on at
 least 75% items and 55% exact groups, a 35-point advantage over order-only, shuffled and random
 controls, and at least 90% content preservation on matched direct/first-hop readouts.
+
+The order-only comparison applies the selected order basis to the identical marked binding donor
+episodes. Binding first-hop confirmation follows the re-paired F edge; direct confirmation keeps
+the original G content. Both tasks must reach 90% in both edit directions. A missing or ambiguous
+logical-row correspondence makes binding confirmation inconclusive rather than becoming an
+identity control.
 
 `ORDER-SHORTCUT-SUPPORTED` is a diagnostic label when the order component changes outputs according
 to physical occurrence on at least 75% of adversarial re-renderings while the binding component
@@ -319,6 +341,23 @@ renderings have the same semantic answer. It may freeze a candidate rank only wh
 edit has positive target-probability gain in both seeds; otherwise it records no order rank. It
 cannot issue `ORDER-SHORTCUT-SUPPORTED`. That label requires the separate confirmation
 physical-occurrence oracle above, frozen before confirmation access.
+
+The physical-occurrence oracle is generated without model outputs. For a matched-G mediator it
+reads the value occupying the original matched-G physical row slot. For every other registered
+intermediate-key mediator it reads the right endpoint occupying the original queried-F slot and
+follows that key through the frozen G table. A coherent two-slot oracle is retained as a diagnostic
+but never substituted after seeing results. Structurally undefined cells and targets equal to the
+semantic answer are recorded explicitly. To prevent a small eligible subset from supporting a
+claim, both eligible item coverage and complete three-recipient eligible-group coverage must be at
+least 50%; otherwise the result is `INCONCLUSIVE: PHYSICAL-ORDER COVERAGE`. Accuracy thresholds are
+then evaluated only on the prospectively eligible adversarial cells.
+
+All exact confirmation logits are sharded immediately. The control artifact retains the actual
+base, donor and replacement endpoint tensors for equal-energy, corruption/restoration,
+cross-seed and physical-order edits, in addition to every selected, Haar and deranged basis. The
+confirmation runner may emit only audit-pending candidate labels. A committed independent
+no-model auditor must reconstruct the suite grid, oracle, controls, decisions, exact logits,
+resource accounting and hashes before any Stage-D support label is final.
 
 Static embedding neighbors, raw cosine, centered/whitened cosine, CKA, RSA, linear probes and
 task-conditioned Jacobian/J-lens frames are secondary diagnostics. Any J-lens frame uses

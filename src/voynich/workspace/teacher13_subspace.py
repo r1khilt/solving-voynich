@@ -189,8 +189,8 @@ def mean_ablation_states(states: Tensor, mean: Tensor, basis: Tensor) -> Tensor:
     if states.ndim != 2 or mean.ndim != 1 or basis.ndim != 2 \
             or states.shape[1] != mean.shape[0] or basis.shape[0] != mean.shape[0]:
         raise ValueError("Mean-ablation geometry has incompatible shapes")
-    local_states, local_mean = states.double(), mean.double()
-    local_basis = basis.double()
+    local_states, local_mean = states.detach().cpu().double(), mean.detach().cpu().double()
+    local_basis = basis.detach().cpu().double()
     centered = local_states - local_mean
     return (local_states - (centered @ local_basis) @ local_basis.T).to(states.dtype)
 
@@ -201,8 +201,9 @@ def equal_energy_offspace_states(base: Tensor, donor: Tensor, basis: Tensor, *,
     if base.shape != donor.shape or base.ndim != 2 or basis.ndim != 2 \
             or basis.shape[0] != base.shape[1] or basis.shape[1] == 0:
         raise ValueError("Equal-energy state geometry has incompatible shapes")
-    local_basis = basis.double()
-    delta = donor.double() - base.double()
+    local_base, local_donor = base.detach().cpu().double(), donor.detach().cpu().double()
+    local_basis = basis.detach().cpu().double()
+    delta = local_donor - local_base
     selected = (delta @ local_basis) @ local_basis.T
     generator = torch.Generator(device="cpu").manual_seed(seed)
     noise = torch.randn(base.shape, generator=generator, dtype=torch.double)
@@ -211,7 +212,7 @@ def equal_energy_offspace_states(base: Tensor, donor: Tensor, basis: Tensor, *,
     if (noise_norm <= 1e-12).any():
         raise ValueError("Degenerate equal-energy complement draw")
     scaled = noise / noise_norm * selected.norm(dim=1, keepdim=True)
-    return (base.double() + scaled).to(base.dtype)
+    return (local_base + scaled).to(base.dtype)
 
 
 def equal_norm_component_corruption_states(states: Tensor, mean: Tensor, basis: Tensor, *,
@@ -220,7 +221,8 @@ def equal_norm_component_corruption_states(states: Tensor, mean: Tensor, basis: 
     if states.ndim != 2 or mean.ndim != 1 or basis.ndim != 2 \
             or states.shape[1] != mean.shape[0] or basis.shape[0] != mean.shape[0]:
         raise ValueError("Component-corruption geometry has incompatible shapes")
-    local, center, local_basis = states.double(), mean.double(), basis.double()
+    local = states.detach().cpu().double()
+    center, local_basis = mean.detach().cpu().double(), basis.detach().cpu().double()
     centered = local - center
     selected = (centered @ local_basis) @ local_basis.T
     complement = centered - selected
@@ -516,7 +518,7 @@ def factor_equal_energy_rows(net: nn.Module, groups: tuple[dict, ...] | list[dic
                              spec: MediatorSpec, basis: Tensor, *, factor_name: str,
                              condition_prefix: str, episode_loader, seed: int,
                              surfaces: tuple[str, ...] | None = None, device="cpu",
-                             logit_sink=None) -> list[dict]:
+                             logit_sink=None, control_sink=None) -> list[dict]:
     """Replace selected donor deltas by deterministic equal-norm complement edits."""
     rows = []
     for batch_index, (surface, direction, bases, donors, metadata) in enumerate(
@@ -527,6 +529,15 @@ def factor_equal_energy_rows(net: nn.Module, groups: tuple[dict, ...] | list[dic
         pairs = mediator_state_pairs(net, bases, donors, spec, device=device)
         controlled = equal_energy_offspace_states(
             pairs.base, pairs.donor, basis, seed=seed + batch_index)
+        if control_sink is not None:
+            control_sink({
+                "condition": f"{condition_prefix}_{surface}",
+                "direction": direction, "seed": seed + batch_index,
+                "item_ids": tuple(row["item_id"] for row in metadata),
+                "base_states": pairs.base.detach().cpu(),
+                "donor_states": pairs.donor.detach().cpu(),
+                "replacement_states": controlled.detach().cpu(),
+            })
         edited = mediator_endpoint_logits(net, bases, spec, controlled, device=device)
         rows.extend(diagnostic_rows(
             edited, clean, bases, metadata=metadata,

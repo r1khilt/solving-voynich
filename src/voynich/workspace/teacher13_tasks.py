@@ -61,6 +61,84 @@ class SemanticLayout:
         return positions[0]
 
 
+@dataclass(frozen=True)
+class PhysicalShortcutPrediction:
+    """One frozen physical-slot prediction and its scoring eligibility.
+
+    ``structurally_valid`` says the requested shortcut is defined by the two
+    renderings.  ``adversarially_eligible`` additionally requires its target to
+    differ from the logical answer.  Confirmation accuracy must use the latter
+    as its denominator; a coincidentally correct shortcut is recorded as a
+    collision and is never counted as shortcut evidence.
+    """
+
+    target: int | None
+    structurally_valid: bool
+    semantic_collision: bool
+    adversarially_eligible: bool
+    invalid_reason: str | None
+
+
+@dataclass(frozen=True)
+class PhysicalOrderShortcutOracle:
+    """Predeclared shortcut targets induced by a complete-row reorder.
+
+    The F-slot oracle reads the right endpoint now occupying the original
+    queried-F slot and, only when that endpoint is a G key, follows the frozen G
+    table once.  The G-slot oracle reads the right endpoint now occupying the
+    original matched-G slot.  The joint oracle is defined only when those two
+    occupying rows form a coherent edge pair.  All three are reported; the
+    registered primary kind is selected separately from the frozen mediator.
+    """
+
+    logical_id: str
+    original_render_id: str
+    reordered_render_id: str
+    semantic_target: int
+    queried_f_slot: int
+    matched_g_slot: int
+    queried_f_original_row: tuple[int, int]
+    matched_g_original_row: tuple[int, int]
+    queried_f_slot_occupant: tuple[int, int]
+    matched_g_slot_occupant: tuple[int, int]
+    f_slot: PhysicalShortcutPrediction
+    g_slot: PhysicalShortcutPrediction
+    joint: PhysicalShortcutPrediction
+    target_agreements: tuple[str, ...]
+
+    def prediction(self, kind: str) -> PhysicalShortcutPrediction:
+        if kind not in ("f_slot", "g_slot", "joint"):
+            raise ValueError(f"Unknown physical-order oracle kind: {kind}")
+        return getattr(self, kind)
+
+    def compact_fields(self, kind: str) -> dict:
+        """Flatten one frozen oracle family into JSON-safe confirmation fields.
+
+        ``oracle_valid`` is the scoring-denominator flag: the target is both
+        structurally defined and different from the semantic answer.  The two
+        constituent flags remain explicit so an auditor can reproduce it.
+        """
+        prediction = self.prediction(kind)
+        return {
+            "oracle_kind": kind,
+            "oracle_target": prediction.target,
+            "oracle_valid": prediction.adversarially_eligible,
+            "oracle_structurally_valid": prediction.structurally_valid,
+            "oracle_semantic_collision": prediction.semantic_collision,
+            "oracle_invalid_reason": (
+                "semantic_target_collision" if prediction.semantic_collision
+                else prediction.invalid_reason),
+            "physical_f_slot_index": self.queried_f_slot,
+            "physical_g_slot_index": self.matched_g_slot,
+            "physical_f_slot_key": self.queried_f_slot_occupant[1],
+            "physical_g_slot_key": self.matched_g_slot_occupant[0],
+            "physical_g_slot_value": self.matched_g_slot_occupant[1],
+            "physical_slots_compose": (
+                self.queried_f_slot_occupant[1]
+                == self.matched_g_slot_occupant[0]),
+        }
+
+
 def _relation_role(episode: Episode, row: tuple[int, int]) -> str:
     queried_f = next((candidate for candidate in episode.f_rows
                       if candidate[0] == episode.query), None)
@@ -158,6 +236,161 @@ def semantic_layout(episode: Episode) -> SemanticLayout:
     if len(set(labels)) != len(labels):
         raise ValueError("Semantic labels are not unique")
     return SemanticLayout(tuple(roles), tuple(labels), tuple(rows))
+
+
+def _physical_prediction(target: int | None, semantic_target: int, *,
+                         invalid_reason: str | None = None
+                         ) -> PhysicalShortcutPrediction:
+    valid = target is not None and invalid_reason is None
+    collision = valid and target == semantic_target
+    return PhysicalShortcutPrediction(
+        target, valid, collision, valid and not collision,
+        None if valid else invalid_reason,
+    )
+
+
+def _semantic_row_slot(layout: SemanticLayout, role: str) -> int:
+    positions = layout.positions(f"{role}.left")
+    if len(positions) != 1:
+        raise ValueError(f"Expected one {role!r} left endpoint, found {len(positions)}")
+    slot = layout.row_indices[positions[0]]
+    if slot < 0:
+        raise ValueError(f"Semantic role {role!r} is not assigned to a row")
+    return slot
+
+
+def physical_order_shortcut_oracle(
+        original: Episode, reordered: Episode) -> PhysicalOrderShortcutOracle:
+    """Compute frozen F-slot, G-slot and coherent-pair shortcut predictions.
+
+    This function only accepts the exact complete-row cyclic reorder produced by
+    :func:`_reorder_only`.  It does not inspect model outputs.  A target equal to
+    the unchanged symbolic answer is retained as a semantic collision but is
+    excluded from the adversarial shortcut denominator.
+    """
+    graph_fields = ("logical_id", "task", "query", "answer", "f_rows", "g_rows",
+                    "distractor_rows")
+    if any(getattr(original, name) != getattr(reordered, name) for name in graph_fields):
+        raise ValueError("Physical-order oracle requires two renderings of one graph")
+    if original.task != "composed":
+        raise ValueError("Physical-order shortcut oracle is registered for composed items")
+    if surface_skeleton(original) != surface_skeleton(reordered):
+        raise ValueError("Physical-order pair does not preserve the serialized surface")
+    expected_rows = original.serialized_rows[1:] + original.serialized_rows[:1]
+    if reordered.serialized_rows != expected_rows:
+        raise ValueError("Physical-order donor is not the registered one-slot cyclic reorder")
+
+    layout = semantic_layout(original)
+    queried_f_slot = _semantic_row_slot(layout, "queried_f")
+    matched_g_slot = _semantic_row_slot(layout, "matched_g")
+    queried_f_original = original.serialized_rows[queried_f_slot]
+    matched_g_original = original.serialized_rows[matched_g_slot]
+    f_occupant = reordered.serialized_rows[queried_f_slot]
+    g_occupant = reordered.serialized_rows[matched_g_slot]
+
+    g_mapping = dict(original.g_rows)
+    if len(g_mapping) != len(original.g_rows):
+        raise ValueError("Physical-order oracle requires a functional G table")
+    f_key = f_occupant[1]
+    if f_key in g_mapping:
+        f_prediction = _physical_prediction(g_mapping[f_key], original.answer)
+    else:
+        f_prediction = _physical_prediction(
+            None, original.answer, invalid_reason="queried_f_slot_rhs_is_not_a_g_key")
+    g_prediction = _physical_prediction(g_occupant[1], original.answer)
+    if f_key == g_occupant[0]:
+        joint_prediction = _physical_prediction(g_occupant[1], original.answer)
+    else:
+        joint_prediction = _physical_prediction(
+            None, original.answer, invalid_reason="physical_slot_rows_do_not_compose")
+
+    predictions = {
+        "f_slot": f_prediction, "g_slot": g_prediction, "joint": joint_prediction,
+    }
+    agreements = tuple(
+        f"{left}={right}"
+        for index, left in enumerate(predictions)
+        for right in tuple(predictions)[index + 1:]
+        if predictions[left].structurally_valid
+        and predictions[right].structurally_valid
+        and predictions[left].target == predictions[right].target
+    )
+    return PhysicalOrderShortcutOracle(
+        original.logical_id, original.render_id, reordered.render_id, original.answer,
+        queried_f_slot, matched_g_slot, queried_f_original, matched_g_original,
+        f_occupant, g_occupant, f_prediction, g_prediction, joint_prediction,
+        agreements,
+    )
+
+
+def registered_physical_order_oracle_kind(*, mediator_kind: str,
+                                          label: str | None = None,
+                                          source_label: str | None = None) -> str:
+    """Freeze the primary shortcut family from the mediator, before predictions.
+
+    A single site uses its selected label; a path uses its early source label.
+    A selected matched-G occurrence receives the G-slot oracle.  Every other
+    occurrence receives the F-slot oracle because TEACH-0013's primary mediator
+    transports an intermediate key.  The joint oracle is always reported as a
+    stricter coherence diagnostic and is never substituted after outcomes are
+    observed.
+    """
+    if mediator_kind == "single":
+        if not label or source_label is not None:
+            raise ValueError("Single-site oracle selection requires only label")
+        frozen_label = label
+    elif mediator_kind == "path":
+        if not source_label or label is not None:
+            raise ValueError("Path oracle selection requires only source_label")
+        frozen_label = source_label
+    else:
+        raise ValueError(f"Unknown mediator kind: {mediator_kind}")
+    return "g_slot" if frozen_label.startswith("matched_g.") else "f_slot"
+
+
+def physical_order_shortcut_denominators(
+        oracles: tuple[PhysicalOrderShortcutOracle, ...] | list[PhysicalOrderShortcutOracle],
+        *, kind: str, group_ids: tuple[str, ...] | list[str] | None = None) -> dict:
+    """Return the exact prospective item and optional three-recipient denominators.
+
+    Item accuracy divides by ``adversarially_eligible_items``.  When group IDs
+    are supplied, group accuracy divides by ``adversarially_eligible_groups``:
+    groups containing exactly three items and no invalid or semantic-collision
+    cell.  Partial groups are rejected rather than silently changing the unit.
+    """
+    rows = tuple(oracles)
+    if not rows:
+        raise ValueError("Physical-order denominator requires at least one item")
+    predictions = tuple(oracle.prediction(kind) for oracle in rows)
+    result = {
+        "kind": kind,
+        "all_items": len(rows),
+        "structurally_valid_items": sum(row.structurally_valid for row in predictions),
+        "semantic_collision_items": sum(row.semantic_collision for row in predictions),
+        "adversarially_eligible_items": sum(
+            row.adversarially_eligible for row in predictions),
+        "item_denominator_rule": (
+            "structurally_valid_and_target_differs_from_semantic_answer"),
+    }
+    if group_ids is None:
+        return result
+    keys = tuple(group_ids)
+    if len(keys) != len(rows):
+        raise ValueError("Group IDs and physical-order items have unequal lengths")
+    grouped: dict[str, list[PhysicalShortcutPrediction]] = {}
+    for key, prediction in zip(keys, predictions, strict=True):
+        grouped.setdefault(key, []).append(prediction)
+    if any(len(group) != 3 for group in grouped.values()):
+        raise ValueError("Every physical-order group must contain exactly three recipients")
+    result.update({
+        "all_groups": len(grouped),
+        "adversarially_eligible_groups": sum(
+            all(row.adversarially_eligible for row in group)
+            for group in grouped.values()),
+        "group_denominator_rule": (
+            "exactly_three_recipients_and_every_item_adversarially_eligible"),
+    })
+    return result
 
 
 @dataclass(frozen=True)

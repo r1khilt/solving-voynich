@@ -1185,3 +1185,60 @@ Resource use (if applicable):
 - **Nulls/alignment:** The prior label-null idea was replaced by32 fixed-point-free donor-group derangements within each nuisance cell; exact permutations are retained. One shared orthogonal seed0→seed1 map is fit to an equal-factor weighted union of centered content/binding/order panels, with a seed73341 group-deranged map as its primary control. Factor-local maps remain descriptive. Auditing checks optimal Procrustes objective/orthogonality rather than demanding one arbitrary SVD rotation in a degenerate space.
 - **Confirmation core:** Added a sealed confirmation runner that, conditional on audited Stage D discovery and a selected content rank, executes every selected factor over all registered surfaces and both directions; factor complements; C+B and C+B+O unions;32 matched-rank Haar bases;32 deranged-pair bases;32 deterministic per-item equal-energy complement edits; mean ablation; equal-norm component corruption; native restoration; and content first-hop/direct/copy specificity. Exact float32 logits stream immediately to hashed shards, and the exact selected/control tensors and derangements are retained. Live Stage-C--E time, campaign time, materialized traffic, MPS allocation and artifact ceilings remain enforced.
 - **Validation/boundary:** A one-group random-model end-to-end smoke covers primary, complement, all three control families, necessity/restoration and specificity. Repository validation is913 tests plus23 subtests passing,8 skipped; changed-file Ruff and whitespace checks pass. This is still prospective infrastructure, not a mechanism result. The runner deliberately reports only `stage_d_confirmation_core_complete`; it cannot issue a support label until finite cross-seed causal transport, the frozen physical-slot order oracle and a separate no-model confirmation auditor are implemented. TEACH-0012 remained healthy at replicate1 `raw_looped` step7,500/8,000,10,395.95s elapsed; no partial confirmation metric was inspected.
+## 2026-09-23 — NB-TEACH-48: Stage-D finite transport, physical oracle and fail-closed confirmation audit
+
+**Question.** Can the TEACH-0013 discovery-frozen content/binding/order geometry be promoted from
+descriptive geometry to a confirmation protocol that tests finite cross-seed causality, rejects
+physical-order shortcuts, retains every material control, and cannot issue support from an
+incomplete or internally inconsistent artifact set?
+
+**Actions and exact design.** Extended `scripts/teacher0013_subspace_confirm.py` without opening
+confirmation outputs. The runner now verifies geometry hashes; holds both final raw-deep seeds for
+finite content-delta transport; applies the one shared discovery Procrustes rotation for seed0 to
+seed1 and its transpose for seed1 to seed0; and applies the independently frozen group-deranged
+map through the identical marked, bidirectional assay. It retains source base/donor, target base and
+replacement endpoint tensors. Cross-seed thresholds were frozen prospectively at 80% items, 60%
+exact groups, 90% changed-recipient non-injection and a 35-point advantage over the deranged map.
+
+Added a generator-only physical-order oracle with three predeclared readings: queried-F slot,
+matched-G slot and coherent joint slots. The primary kind is chosen only from the frozen mediator
+(matched-G source selects G-slot; every other intermediate-key source selects F-slot). Structural
+invalidity and semantic-target collisions are explicit. The confirmation assay covers marked,
+marker-free, format and distractor surfaces, both F assignments and every recipient. A shortcut
+claim additionally requires at least 50% eligible item coverage and 50% eligible complete-group
+coverage, preventing a small valid subset from passing. Overall groups are keyed by assay cell plus
+logical group; an adversarial review caught and fixed an earlier version that collapsed eight cells
+into 24-row pseudo-groups.
+
+Split content necessity into F0 and F1 cells. Equal-norm corruption must reduce clean accuracy by
+30 points; native restoration must recover 95% and independently match exact clean logits below
+`1e-6`. First-hop/direct content consistency is frozen at 80%, with copy loss at most five points.
+Binding confirmation now includes an order-basis edit on the identical binding episodes plus
+bidirectional first-hop re-pairing and direct-content preservation at 90%; ambiguous cross-task
+correspondence is retained as an inconclusive error rather than an identity edit. Order support is
+forbidden unless binding was actually measured and failed, not merely absent.
+
+Added `scripts/teacher0013_subspace_confirmation_audit.py`, which imports no model or experiment
+scorer. It reconstructs the exact registered row union, independently regenerates the physical
+oracle, selected/Haar/deranged controls and frozen equal-energy seed schedule, checks retained
+base/donor/replacement tensors, exact float32 sharded logits, clean-logit reuse, hashes, ranks,
+resource accounting and candidate decisions. Extra rows, duplicate recipients and missing cells
+fail closed. Final labels exist only in the audit output after every capability and the exact native
+restoration gate passes. The runner records only audit-pending candidate labels.
+
+**Implementation correction.** CPU tests exposed no device issue, but adversarial inspection found
+that explicit state arithmetic mixed MPS endpoint tensors with CPU-frozen bases. Mean ablation,
+equal-energy corruption, finite cross-seed transport and physical-order projection now move state
+arithmetic to CPU double precision before endpoint insertion. This also makes the retained tensors
+exactly regenerable by the no-model auditor.
+
+**Validation.** The full repository suite passed 927 tests, 8 skips and 23 subtests with
+`PYTHONPATH=.:src .venv/bin/pytest -q`; changed-file Ruff and `git diff --check` passed. Focused
+regressions separately protect exact three-recipient grouping and assay-cell-aware physical group
+coverage. No neural confirmation was run and no support, decipherment or Voynich-semantic claim is
+made.
+
+**Live campaign state.** TEACH-0012 remained sealed during this work. The last inspected status was
+replicate 1, `raw_deep`, step 7000/8000, elapsed 12,784.38 seconds, recent-100 loss 5.78883, latest
+loss 6.06754 and peak sampled MPS allocation 686,391,296 bytes. No partial prediction archive or
+checkpoint was opened.
