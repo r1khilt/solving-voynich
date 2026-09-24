@@ -2,6 +2,7 @@
 
 from dataclasses import dataclass
 import math
+from collections.abc import Iterable
 
 import torch
 from torch import Tensor
@@ -15,6 +16,16 @@ class ContrastGeometry:
     factor_levels: tuple
     nuisance_cells: tuple
     participation_ratio: float
+
+
+@dataclass(frozen=True)
+class OrthogonalFactorGeometry:
+    """Raw and order-dependent orthogonalized content/binding/order bases."""
+
+    raw: dict[str, Tensor]
+    forward: dict[str, Tensor]
+    reverse: dict[str, Tensor]
+    raw_principal_angles: dict[str, Tensor]
 
 
 def _as_matrix(states: Tensor) -> Tensor:
@@ -73,6 +84,57 @@ def balanced_contrast_geometry(states: Tensor, factor, nuisance, *,
                             participation_ratio(eigenvalues))
 
 
+def blocked_contrast_geometry(states: Tensor, factor, nuisance, blocks, *,
+                              maximum_rank: int | None = None,
+                              tolerance: float = 1e-10) -> ContrastGeometry:
+    """Estimate covariance over within-block factorial contrasts.
+
+    Each block must contain every factor-by-nuisance cell. Marginalizing nuisance
+    within a block and then pooling its centered factor contrasts preserves
+    heterogeneous causal directions that a single global binary mean would collapse.
+    """
+    states = _as_matrix(states)
+    factor, nuisance, blocks = tuple(factor), tuple(nuisance), tuple(blocks)
+    if any(len(labels) != states.shape[0] for labels in (factor, nuisance, blocks)):
+        raise ValueError("Labels, blocks and states must have equal sample count")
+    factors = tuple(sorted(set(factor), key=repr))
+    nuisances = tuple(sorted(set(nuisance), key=repr))
+    block_levels = tuple(sorted(set(blocks), key=repr))
+    if len(factors) < 2 or not nuisances or not block_levels:
+        raise ValueError("Need factors, nuisance cells and blocks")
+    contrast_rows, means = [], []
+    for block in block_levels:
+        marginalized = []
+        for factor_level in factors:
+            cell_means = []
+            for nuisance_cell in nuisances:
+                selected = [index for index, labels in enumerate(zip(
+                    factor, nuisance, blocks, strict=True))
+                            if labels == (factor_level, nuisance_cell, block)]
+                if not selected:
+                    raise ValueError("Blocked factorial design is not complete")
+                cell_means.append(states[selected].mean(0))
+            marginalized.append(torch.stack(cell_means).mean(0))
+        marginalized = torch.stack(marginalized)
+        block_mean = marginalized.mean(0)
+        means.append(block_mean)
+        contrast_rows.extend(marginalized - block_mean)
+    contrasts = torch.stack(contrast_rows)
+    covariance = contrasts.T @ contrasts / contrasts.shape[0]
+    eigenvalues, eigenvectors = torch.linalg.eigh(covariance)
+    order = eigenvalues.argsort(descending=True)
+    eigenvalues, eigenvectors = eigenvalues[order], eigenvectors[:, order]
+    scale = max(float(eigenvalues[0].abs()), 1.0)
+    rank = int((eigenvalues > tolerance * scale).sum())
+    if maximum_rank is not None:
+        if maximum_rank <= 0:
+            raise ValueError("maximum_rank must be positive")
+        rank = min(rank, maximum_rank)
+    return ContrastGeometry(
+        torch.stack(means).mean(0), eigenvectors[:, :rank], eigenvalues,
+        factors, nuisances, participation_ratio(eigenvalues))
+
+
 def orthogonalize_basis(basis: Tensor, against: Tensor, *, tolerance=1e-8) -> Tensor:
     """Remove an already assigned subspace and return an orthonormal remainder."""
     basis, against = basis.double(), against.double()
@@ -100,6 +162,121 @@ def principal_angles(left: Tensor, right: Tensor) -> Tensor:
         return torch.empty(0, dtype=torch.double)
     singular = torch.linalg.svdvals(left.T @ right).clamp(0, 1)
     return singular.acos()
+
+
+def orthogonal_factor_geometry(content: Tensor, binding: Tensor,
+                               order: Tensor) -> OrthogonalFactorGeometry:
+    """Orthogonalize in registered forward order and diagnostic reverse order."""
+    raw = {"content": content.double(), "binding": binding.double(),
+           "order": order.double()}
+    widths = {basis.shape[0] for basis in raw.values() if basis.ndim == 2}
+    if len(widths) != 1 or any(basis.ndim != 2 for basis in raw.values()):
+        raise ValueError("Factor bases must be width-by-rank matrices")
+
+    def sequential(names):
+        assigned = torch.empty(next(iter(widths)), 0, dtype=torch.double)
+        result = {}
+        for name in names:
+            result[name] = orthogonalize_basis(raw[name], assigned)
+            assigned = torch.cat((assigned, result[name]), dim=1)
+        return result
+
+    pairs = (("content", "binding"), ("content", "order"), ("binding", "order"))
+    angles = {f"{left}:{right}": principal_angles(raw[left], raw[right])
+              for left, right in pairs}
+    return OrthogonalFactorGeometry(
+        raw, sequential(("content", "binding", "order")),
+        sequential(("order", "binding", "content")), angles)
+
+
+def haar_random_bases(width: int, rank: int, count: int, *, seed: int,
+                      orthogonal_to: Tensor | None = None) -> tuple[Tensor, ...]:
+    """Generate deterministic Haar-random matched-rank controls."""
+    if width <= 0 or rank <= 0 or count <= 0 or rank > width:
+        raise ValueError("Invalid Haar basis dimensions")
+    projector = None
+    available = width
+    if orthogonal_to is not None:
+        orthogonal_to = orthogonal_to.double()
+        if orthogonal_to.ndim != 2 or orthogonal_to.shape[0] != width:
+            raise ValueError("Orthogonal exclusion basis has the wrong width")
+        projector = torch.eye(width, dtype=torch.double) \
+            - orthogonal_to @ orthogonal_to.T
+        available = width - orthogonal_to.shape[1]
+        if rank > available:
+            raise ValueError("Requested random rank exceeds orthogonal complement")
+    generator = torch.Generator(device="cpu").manual_seed(seed)
+    results = []
+    for _ in range(count):
+        sample = torch.randn(width, rank, generator=generator, dtype=torch.double)
+        if projector is not None:
+            sample = projector @ sample
+        q, r = torch.linalg.qr(sample, mode="reduced")
+        signs = torch.where(torch.diag(r) < 0, -1.0, 1.0)
+        results.append(q * signs)
+    return tuple(results)
+
+
+def select_causal_rank(measurements: Iterable[dict], *, full_probability_gain: float,
+                       minimum_item_accuracy: float, minimum_group_accuracy: float,
+                       effect_fraction: float = .95,
+                       candidate_ranks=(1, 2, 4, 8, 16, 32, 64)) -> dict:
+    """Freeze the smallest registered rank recovering the full finite effect."""
+    if not math.isfinite(full_probability_gain) or full_probability_gain <= 0:
+        raise ValueError("Full-state probability gain must be finite and positive")
+    if not 0 < effect_fraction <= 1:
+        raise ValueError("Effect fraction must lie in (0, 1]")
+    allowed = tuple(candidate_ranks)
+    if not allowed or any(type(rank) is not int or rank <= 0 for rank in allowed) \
+            or tuple(sorted(set(allowed))) != allowed:
+        raise ValueError("Candidate ranks must be sorted unique positive integers")
+    table = {}
+    for row in measurements:
+        rank = row.get("rank")
+        if rank not in allowed or rank in table:
+            raise ValueError("Rank measurements must uniquely cover registered candidates")
+        for name in ("item_accuracy", "group_accuracy", "mean_probability_gain"):
+            if name not in row or not math.isfinite(row[name]):
+                raise ValueError(f"Nonfinite or missing rank measurement: {name}")
+        qualified = (row["mean_probability_gain"] >= effect_fraction * full_probability_gain
+                     and row["item_accuracy"] >= minimum_item_accuracy
+                     and row["group_accuracy"] >= minimum_group_accuracy)
+        table[rank] = {**row, "qualified": qualified,
+                       "effect_fraction": row["mean_probability_gain"]
+                       / full_probability_gain}
+    selection = next((table[rank] for rank in allowed
+                      if rank in table and table[rank]["qualified"]), None)
+    return {"candidate_ranks": list(allowed), "effect_fraction_threshold": effect_fraction,
+            "minimum_item_accuracy": minimum_item_accuracy,
+            "minimum_group_accuracy": minimum_group_accuracy,
+            "full_probability_gain": full_probability_gain,
+            "measurements": {str(rank): table[rank] for rank in sorted(table)},
+            "selection": None if selection is None else selection["rank"]}
+
+
+def select_joint_causal_rank(measurements_by_seed: dict[str, Iterable[dict]], *,
+                             full_probability_gain_by_seed: dict[str, float],
+                             minimum_item_accuracy: float,
+                             minimum_group_accuracy: float,
+                             effect_fraction: float = .95,
+                             candidate_ranks=(1, 2, 4, 8, 16, 32, 64)) -> dict:
+    """Choose one smallest rank satisfying the finite-effect rule in every seed."""
+    if set(measurements_by_seed) != set(full_probability_gain_by_seed) \
+            or not measurements_by_seed:
+        raise ValueError("Joint rank selection requires matching nonempty seed maps")
+    by_seed = {seed: select_causal_rank(
+        rows, full_probability_gain=full_probability_gain_by_seed[seed],
+        minimum_item_accuracy=minimum_item_accuracy,
+        minimum_group_accuracy=minimum_group_accuracy,
+        effect_fraction=effect_fraction, candidate_ranks=candidate_ranks)
+        for seed, rows in measurements_by_seed.items()}
+    common = [rank for rank in candidate_ranks
+              if all(str(rank) in result["measurements"]
+                     and result["measurements"][str(rank)]["qualified"]
+                     for result in by_seed.values())]
+    return {"candidate_ranks": list(candidate_ranks), "by_seed": by_seed,
+            "selection": common[0] if common else None,
+            "rule": "smallest_rank_qualified_in_every_seed"}
 
 
 @dataclass(frozen=True)

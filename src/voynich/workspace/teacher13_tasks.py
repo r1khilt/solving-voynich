@@ -176,10 +176,26 @@ class CounterfactualGroup:
     g_content_donor: tuple[Episode, Episode, Episode]
     binding_base: tuple[Episode, Episode, Episode]
     binding_donor: tuple[Episode, Episode, Episode]
+    binding_marker_free_base: tuple[Episode, Episode, Episode]
+    binding_marker_free_donor: tuple[Episode, Episode, Episode]
+    binding_reordered_base: tuple[Episode, Episode, Episode]
+    binding_reordered_donor: tuple[Episode, Episode, Episode]
+    binding_format_base: tuple[Episode, Episode, Episode]
+    binding_format_donor: tuple[Episode, Episode, Episode]
+    binding_distractor_base: tuple[Episode, Episode, Episode]
+    binding_distractor_donor: tuple[Episode, Episode, Episode]
     g_binding_base: tuple[Episode, Episode, Episode]
     g_binding_donor: tuple[Episode, Episode, Episode]
+    format_base: tuple[Episode, Episode, Episode]
     format_donor: tuple[Episode, Episode, Episode]
+    distractor_base: tuple[Episode, Episode, Episode]
     distractor_donor: tuple[Episode, Episode, Episode]
+    marker_free_reordered_base: tuple[Episode, Episode, Episode]
+    marker_free_reordered_donor: tuple[Episode, Episode, Episode]
+    format_reordered_base: tuple[Episode, Episode, Episode]
+    format_reordered_donor: tuple[Episode, Episode, Episode]
+    distractor_reordered_base: tuple[Episode, Episode, Episode]
+    distractor_reordered_donor: tuple[Episode, Episode, Episode]
     first_hop_base: Episode
     first_hop_donor: Episode
     direct_base: Episode
@@ -424,14 +440,41 @@ def _candidate_group(rng: random.Random) -> CounterfactualGroup | None:
                          for rows in g_tables)
     binding_donor = tuple(_render(f_binding, rows, distractors, query, render_seed)
                           for rows in g_tables)
+    binding_marker_free_base = tuple(_render(
+        f0, rows, distractors, query, render_seed, spec=MARKER_FREE_SPEC)
+        for rows in g_tables)
+    binding_marker_free_donor = tuple(_render(
+        f_binding, rows, distractors, query, render_seed, spec=MARKER_FREE_SPEC)
+        for rows in g_tables)
+    binding_reordered_base = tuple(_reorder_only(episode) for episode in binding_base)
+    binding_reordered_donor = tuple(_reorder_only(episode) for episode in binding_donor)
+    binding_format_base = tuple(_format_only(episode) for episode in binding_base)
+    binding_format_donor = tuple(_format_only(episode) for episode in binding_donor)
+    binding_distractor_base = tuple(_render(
+        f0, rows, nuisance_distractors, query, render_seed) for rows in g_tables)
+    binding_distractor_donor = tuple(_render(
+        f_binding, rows, nuisance_distractors, query, render_seed) for rows in g_tables)
     g_binding_base = tuple(_render(f0, rows, distractors, query, render_seed)
                            for rows in g_tables)
     g_binding_donor = tuple(_render(f0, rows, distractors, query, render_seed)
                             for rows in g_binding_tables)
 
+    format_base = tuple(_format_only(episode) for episode in base)
     format_donor = tuple(_format_only(episode) for episode in donor)
+    distractor_base = tuple(_render(
+        f0, rows, nuisance_distractors, query, render_seed) for rows in g_tables)
     distractor_donor = tuple(_render(
         f1, rows, nuisance_distractors, query, render_seed) for rows in g_tables)
+    marker_free_reordered_base = tuple(
+        _reorder_only(episode) for episode in marker_free_base)
+    marker_free_reordered_donor = tuple(
+        _reorder_only(episode) for episode in marker_free_donor)
+    format_reordered_base = tuple(_reorder_only(episode) for episode in format_base)
+    format_reordered_donor = tuple(_reorder_only(episode) for episode in format_donor)
+    distractor_reordered_base = tuple(
+        _reorder_only(episode) for episode in distractor_base)
+    distractor_reordered_donor = tuple(
+        _reorder_only(episode) for episode in distractor_donor)
     first_hop_base = _render(
         f0, g_tables[0], distractors, query, rng.randrange(2**63), task="first_hop")
     first_hop_donor = _render(
@@ -462,7 +505,15 @@ def _candidate_group(rng: random.Random) -> CounterfactualGroup | None:
         _digest([SPLIT_NAMESPACE, logical]), _partition(logical), base, donor,
         marker_free_base, marker_free_donor, reordered_base, reordered_donor,
         g_content_base, g_content_donor, binding_base, binding_donor,
-        g_binding_base, g_binding_donor, format_donor, distractor_donor,
+        binding_marker_free_base, binding_marker_free_donor,
+        binding_reordered_base, binding_reordered_donor,
+        binding_format_base, binding_format_donor,
+        binding_distractor_base, binding_distractor_donor,
+        g_binding_base, g_binding_donor, format_base, format_donor,
+        distractor_base, distractor_donor,
+        marker_free_reordered_base, marker_free_reordered_donor,
+        format_reordered_base, format_reordered_donor,
+        distractor_reordered_base, distractor_reordered_donor,
         first_hop_base, first_hop_donor,
         direct_base, direct_donor, direct_format_donor, direct_order_donor,
         direct_distractor_donor, copy_control, copy_format_donor, copy_order_donor,

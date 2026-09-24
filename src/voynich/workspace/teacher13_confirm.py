@@ -446,6 +446,15 @@ def _diagnostic_rows(logits: torch.Tensor, clean_logits: torch.Tensor,
     return rows
 
 
+def diagnostic_rows(logits: torch.Tensor, clean_logits: torch.Tensor,
+                    bases: tuple[Episode, ...], *, metadata: tuple[dict, ...],
+                    condition: str, direction: str, logit_sink=None) -> list[dict]:
+    """Public compact-row constructor shared by frozen post-discovery analyses."""
+    return _diagnostic_rows(
+        logits, clean_logits, bases, metadata=metadata, condition=condition,
+        direction=direction, logit_sink=logit_sink)
+
+
 def fresh_panel_confirmation_rows(net: nn.Module,
                                   groups: tuple[dict, ...] | list[dict], *,
                                   episode_loader, device="cpu", logit_sink=None,
@@ -479,9 +488,11 @@ def fresh_panel_confirmation_rows(net: nn.Module,
                     group_id, recipient, pair_id)
                 add(f"stage_a_reordered_{assignment}", order_episode,
                     group_id, recipient, pair_id)
-        for recipient, row in enumerate(group["distractor_donor"]):
-            add("stage_a_distractor_f1", episode_loader(row), group_id, recipient,
-                f"{group_id}:f1:{recipient}")
+        for assignment, name in (("f0", "distractor_base"),
+                                 ("f1", "distractor_donor")):
+            for recipient, row in enumerate(group[name]):
+                add(f"stage_a_distractor_{assignment}", episode_loader(row),
+                    group_id, recipient, f"{group_id}:{assignment}:{recipient}")
         for assignment, name in (("f0", "first_hop_base"),
                                  ("f1", "first_hop_donor")):
             add(f"stage_a_first_hop_{assignment}", episode_loader(group[name]),
@@ -515,7 +526,8 @@ def summarize_fresh_panel_rows(rows: list[dict]) -> dict:
         "stage_a_marked_f0", "stage_a_marked_f1",
         "stage_a_marker_free_f0", "stage_a_marker_free_f1",
         "stage_a_reordered_f0", "stage_a_reordered_f1",
-        "stage_a_distractor_f1", "stage_a_first_hop_f0", "stage_a_first_hop_f1",
+        "stage_a_distractor_f0", "stage_a_distractor_f1",
+        "stage_a_first_hop_f0", "stage_a_first_hop_f1",
         "stage_a_direct_f0", "stage_a_direct_f1", "stage_a_copy",
     }
     if set(by_condition) != required:
@@ -556,7 +568,7 @@ def summarize_fresh_panel_rows(rows: list[dict]) -> dict:
         "order_pairs": paired(marked, (
             "stage_a_reordered_f0", "stage_a_reordered_f1")),
         "distractor_pairs": paired(
-            ("stage_a_marked_f1",), ("stage_a_distractor_f1",)),
+            marked, ("stage_a_distractor_f0", "stage_a_distractor_f1")),
         "first_hop": accuracy(("stage_a_first_hop_f0", "stage_a_first_hop_f1")),
         "direct": accuracy(("stage_a_direct_f0", "stage_a_direct_f1")),
         "copy": accuracy(("stage_a_copy",)),

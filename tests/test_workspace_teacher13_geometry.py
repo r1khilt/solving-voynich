@@ -6,10 +6,15 @@ import torch
 
 from voynich.workspace.teacher13_geometry import (
     balanced_contrast_geometry,
+    blocked_contrast_geometry,
+    haar_random_bases,
     linear_cka,
+    orthogonal_factor_geometry,
     orthogonal_procrustes,
     orthogonalize_basis,
     principal_angles,
+    select_causal_rank,
+    select_joint_causal_rank,
 )
 
 
@@ -55,3 +60,82 @@ def test_linear_cka_is_rotation_scale_invariant_but_not_causal_evidence():
     assert linear_cka(left, 3 * left @ q) > .999999
     assert 0 <= linear_cka(left, torch.randn(40, 6)) <= 1
     assert math.isnan(linear_cka(torch.ones(4, 2), torch.ones(4, 2)))
+
+
+def test_blocked_contrasts_preserve_heterogeneous_within_group_directions():
+    rows, factor, nuisance, blocks = [], [], [], []
+    directions = (torch.tensor([1., 0., 0., 0.]),
+                  torch.tensor([0., 1., 0., 0.]),
+                  torch.tensor([1., 1., 0., 0.]))
+    for block, direction in enumerate(directions):
+        for level in (-1., 1.):
+            for position in (-2., 2.):
+                rows.append(level * direction + torch.tensor([0., 0., position, 0.]))
+                factor.append(level)
+                nuisance.append(position)
+                blocks.append(block)
+    result = blocked_contrast_geometry(
+        torch.stack(rows), factor, nuisance, blocks, maximum_rank=4)
+    assert result.basis.shape == (4, 2)
+    expected = torch.eye(4, dtype=torch.double)[:, :2]
+    assert torch.allclose(principal_angles(result.basis, expected),
+                          torch.zeros(2, dtype=torch.double), atol=1e-7)
+
+
+def test_registered_orthogonalization_and_haar_controls_are_deterministic():
+    content = torch.eye(6, dtype=torch.double)[:, :2]
+    binding = torch.eye(6, dtype=torch.double)[:, 1:4]
+    order = torch.eye(6, dtype=torch.double)[:, 3:5]
+    result = orthogonal_factor_geometry(content, binding, order)
+    assert result.forward["content"].shape[1] == 2
+    assert result.forward["binding"].shape[1] == 2
+    assert result.forward["order"].shape[1] == 1
+    assert result.reverse["content"].shape[1] == 1
+    assert torch.allclose(
+        result.forward["content"].T @ result.forward["binding"],
+        torch.zeros(2, 2, dtype=torch.double), atol=1e-8)
+    left = haar_random_bases(6, 2, 32, seed=73221, orthogonal_to=content)
+    right = haar_random_bases(6, 2, 32, seed=73221, orthogonal_to=content)
+    assert len(left) == 32 and all(torch.equal(a, b) for a, b in zip(left, right, strict=True))
+    assert all(torch.allclose(content.T @ basis, torch.zeros(2, 2, dtype=torch.double),
+                              atol=1e-8) for basis in left)
+
+
+def test_causal_rank_selection_takes_smallest_registered_finite_effect_match():
+    measurements = [
+        {"rank": 1, "item_accuracy": .7, "group_accuracy": .5,
+         "mean_probability_gain": .7},
+        {"rank": 2, "item_accuracy": .81, "group_accuracy": .61,
+         "mean_probability_gain": .94},
+        {"rank": 4, "item_accuracy": .9, "group_accuracy": .8,
+         "mean_probability_gain": .96},
+    ]
+    result = select_causal_rank(
+        measurements, full_probability_gain=1.0,
+        minimum_item_accuracy=.8, minimum_group_accuracy=.6)
+    assert result["selection"] == 4
+    assert not result["measurements"]["2"]["qualified"]
+    assert result["measurements"]["4"]["qualified"]
+
+
+def test_joint_rank_selection_requires_the_same_rank_to_pass_both_seeds():
+    seed0 = [
+        {"rank": 1, "item_accuracy": .81, "group_accuracy": .61,
+         "mean_probability_gain": .96},
+        {"rank": 2, "item_accuracy": .9, "group_accuracy": .8,
+         "mean_probability_gain": .98},
+    ]
+    seed1 = [
+        {"rank": 1, "item_accuracy": .7, "group_accuracy": .5,
+         "mean_probability_gain": .96},
+        {"rank": 2, "item_accuracy": .85, "group_accuracy": .7,
+         "mean_probability_gain": .97},
+    ]
+    result = select_joint_causal_rank(
+        {"0": seed0, "1": seed1},
+        full_probability_gain_by_seed={"0": 1.0, "1": 1.0},
+        minimum_item_accuracy=.8, minimum_group_accuracy=.6,
+        candidate_ranks=(1, 2))
+    assert result["selection"] == 2
+    assert result["by_seed"]["0"]["selection"] == 1
+    assert result["by_seed"]["1"]["selection"] == 2

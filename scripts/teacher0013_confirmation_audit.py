@@ -159,7 +159,8 @@ def fresh_scores(rows: list[dict]) -> dict:
         "stage_a_marked_f0", "stage_a_marked_f1",
         "stage_a_marker_free_f0", "stage_a_marker_free_f1",
         "stage_a_reordered_f0", "stage_a_reordered_f1",
-        "stage_a_distractor_f1", "stage_a_first_hop_f0", "stage_a_first_hop_f1",
+        "stage_a_distractor_f0", "stage_a_distractor_f1",
+        "stage_a_first_hop_f0", "stage_a_first_hop_f1",
         "stage_a_direct_f0", "stage_a_direct_f1", "stage_a_copy",
     }
     need(set(by_condition) == required, "Stage-A conditions are incomplete")
@@ -198,7 +199,7 @@ def fresh_scores(rows: list[dict]) -> dict:
         "order_pairs": pairs(marked, (
             "stage_a_reordered_f0", "stage_a_reordered_f1")),
         "distractor_pairs": pairs(
-            ("stage_a_marked_f1",), ("stage_a_distractor_f1",)),
+            marked, ("stage_a_distractor_f0", "stage_a_distractor_f1")),
         "first_hop": accuracy(("stage_a_first_hop_f0", "stage_a_first_hop_f1")),
         "direct": accuracy(("stage_a_direct_f0", "stage_a_direct_f1")),
         "copy": accuracy(("stage_a_copy",)),
@@ -442,7 +443,7 @@ def audit(manifest_path: Path, report_path: Path, output_path: Path) -> dict:
         need(row_path.is_file() and row_path.stat().st_size == row_meta["bytes"]
              and file_digest(row_path) == row_meta["sha256"], "Stage-A row artifact mismatch")
         rows = load_rows(row_path)
-        need(len(rows) == row_meta["rows"] == 26 * len(group_ids),
+        need(len(rows) == row_meta["rows"] == 29 * len(group_ids),
              "Stage-A row count mismatch")
         for row in rows:
             validate_row(row, group_ids, stage_a=True)

@@ -101,10 +101,12 @@ def fresh_panel_scores(net: nn.Module, groups: list[dict], *, device="cpu") -> d
         direct.extend((_variant(group, "direct_base")[0],
                        _variant(group, "direct_donor")[0]))
         copy.extend(_variant(group, "copy_control"))
-        distractor_pairs.extend(
-            episode for pair in zip(_variant(group, "donor"),
-                                    _variant(group, "distractor_donor"), strict=True)
-            for episode in pair)
+        for original_name, nuisance_name in (
+                ("base", "distractor_base"), ("donor", "distractor_donor")):
+            distractor_pairs.extend(
+                episode for pair in zip(_variant(group, original_name),
+                                        _variant(group, nuisance_name), strict=True)
+                for episode in pair)
 
     base_flags = _correct(net, base, device=device)
     donor_flags = _correct(net, donor, device=device)

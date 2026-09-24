@@ -84,11 +84,21 @@ def test_semantic_layout_exactly_identifies_dynamic_relation_positions():
         for group in groups:
             for episode in (group.base + group.donor + group.marker_free_base
                             + group.marker_free_donor + group.reordered_base
-                            + group.reordered_donor + group.format_donor
+                            + group.reordered_donor + group.format_base
+                            + group.format_donor + group.distractor_base
                             + group.distractor_donor + group.g_content_base
                             + group.g_content_donor + group.binding_base
-                            + group.binding_donor + group.g_binding_base
-                            + group.g_binding_donor):
+                            + group.binding_donor + group.binding_marker_free_base
+                            + group.binding_marker_free_donor
+                            + group.binding_reordered_base + group.binding_reordered_donor
+                            + group.binding_format_base + group.binding_format_donor
+                            + group.binding_distractor_base + group.binding_distractor_donor
+                            + group.g_binding_base + group.g_binding_donor
+                            + group.marker_free_reordered_base
+                            + group.marker_free_reordered_donor
+                            + group.format_reordered_base + group.format_reordered_donor
+                            + group.distractor_reordered_base
+                            + group.distractor_reordered_donor):
                 layout = semantic_layout(episode)
                 assert len(layout.roles) == len(episode.tokens)
                 assert len(layout.labels) == len(episode.tokens)

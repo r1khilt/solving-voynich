@@ -19,7 +19,14 @@ MULTI_VARIANTS = {
     "base", "donor", "marker_free_base", "marker_free_donor",
     "reordered_base", "reordered_donor", "g_content_base", "g_content_donor",
     "binding_base", "binding_donor", "g_binding_base", "g_binding_donor",
-    "format_donor", "distractor_donor",
+    "binding_marker_free_base", "binding_marker_free_donor",
+    "binding_reordered_base", "binding_reordered_donor",
+    "binding_format_base", "binding_format_donor",
+    "binding_distractor_base", "binding_distractor_donor",
+    "format_base", "format_donor", "distractor_base", "distractor_donor",
+    "marker_free_reordered_base", "marker_free_reordered_donor",
+    "format_reordered_base", "format_reordered_donor",
+    "distractor_reordered_base", "distractor_reordered_donor",
 }
 SINGLE_VARIANTS = {
     "first_hop_base", "first_hop_donor", "direct_base", "direct_donor", "copy_control",
@@ -319,20 +326,65 @@ def audit_group(group, split):
              "Donor order factor changed physical slot structure")
 
     rotation = {"prefix": "infix", "infix": "suffix", "suffix": "prefix"}
-    for original, format_donor, nuisance in zip(
-            donor, group["format_donor"], group["distractor_donor"], strict=True):
-        need(rows_tuple(format_donor["serialized_rows"])
-             == rows_tuple(original["serialized_rows"])
-             and gap_signature(format_donor) == gap_signature(original)
-             and marker_signature(format_donor)
-             == tuple(rotation[style] for style in marker_signature(original)),
-             "Format factor changed content, order, gaps, or used wrong rotation")
-        need(rows_tuple(nuisance["f_rows"]) == rows_tuple(original["f_rows"])
-             and rows_tuple(nuisance["g_rows"]) == rows_tuple(original["g_rows"])
-             and rows_tuple(nuisance["distractor_rows"])
-             != rows_tuple(original["distractor_rows"])
-             and skeleton(nuisance) == skeleton(original),
-             "Distractor factor is not isolated")
+    for original_name, format_name, nuisance_name in (
+            ("base", "format_base", "distractor_base"),
+            ("donor", "format_donor", "distractor_donor")):
+        for original, formatted, nuisance in zip(
+                group[original_name], group[format_name], group[nuisance_name], strict=True):
+            need(rows_tuple(formatted["serialized_rows"])
+                 == rows_tuple(original["serialized_rows"])
+                 and gap_signature(formatted) == gap_signature(original)
+                 and marker_signature(formatted)
+                 == tuple(rotation[style] for style in marker_signature(original)),
+                 "Format factor changed content, order, gaps, or used wrong rotation")
+            need(rows_tuple(nuisance["f_rows"]) == rows_tuple(original["f_rows"])
+                 and rows_tuple(nuisance["g_rows"]) == rows_tuple(original["g_rows"])
+                 and rows_tuple(nuisance["distractor_rows"])
+                 != rows_tuple(original["distractor_rows"])
+                 and skeleton(nuisance) == skeleton(original),
+                 "Distractor factor is not isolated")
+    for original_name, marker_name, order_name, format_name, nuisance_name in (
+            ("binding_base", "binding_marker_free_base", "binding_reordered_base",
+             "binding_format_base", "binding_distractor_base"),
+            ("binding_donor", "binding_marker_free_donor", "binding_reordered_donor",
+             "binding_format_donor", "binding_distractor_donor")):
+        for original, marker_free, reordered, formatted, nuisance in zip(
+                group[original_name], group[marker_name], group[order_name],
+                group[format_name], group[nuisance_name], strict=True):
+            need(rows_tuple(marker_free["serialized_rows"])
+                 == rows_tuple(original["serialized_rows"])
+                 and all(style == "none" for style in marker_signature(marker_free)),
+                 "Binding marker-free nuisance changed logical rows")
+            need(rows_tuple(reordered["serialized_rows"])
+                 == rows_tuple(original["serialized_rows"])[1:]
+                 + rows_tuple(original["serialized_rows"])[:1]
+                 and skeleton(reordered) == skeleton(original),
+                 "Binding order nuisance is not isolated")
+            need(rows_tuple(formatted["serialized_rows"])
+                 == rows_tuple(original["serialized_rows"])
+                 and marker_signature(formatted)
+                 == tuple(rotation[style] for style in marker_signature(original)),
+                 "Binding format nuisance is not isolated")
+            need(rows_tuple(nuisance["f_rows"]) == rows_tuple(original["f_rows"])
+                 and rows_tuple(nuisance["g_rows"]) == rows_tuple(original["g_rows"])
+                 and rows_tuple(nuisance["distractor_rows"])
+                 != rows_tuple(original["distractor_rows"])
+                 and skeleton(nuisance) == skeleton(original),
+                 "Binding distractor nuisance is not isolated")
+    for original_name, reordered_name in (
+            ("marker_free_base", "marker_free_reordered_base"),
+            ("marker_free_donor", "marker_free_reordered_donor"),
+            ("format_base", "format_reordered_base"),
+            ("format_donor", "format_reordered_donor"),
+            ("distractor_base", "distractor_reordered_base"),
+            ("distractor_donor", "distractor_reordered_donor")):
+        for original, reordered in zip(
+                group[original_name], group[reordered_name], strict=True):
+            need(rows_tuple(reordered["serialized_rows"])
+                 == rows_tuple(original["serialized_rows"])[1:]
+                 + rows_tuple(original["serialized_rows"])[:1]
+                 and skeleton(reordered) == skeleton(original),
+                 "Crossed order nuisance is not isolated")
     for prefix, original_name in (("direct", "direct_donor"), ("copy", "copy_control")):
         original = group[original_name]
         formatted, reordered, nuisance = (group[f"{prefix}_format_donor"],

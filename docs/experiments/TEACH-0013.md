@@ -253,10 +253,24 @@ and passes the variable-specific exact threshold. Orthogonalize in the fixed ord
 binding, order; report the unorthogonalized overlap and repeat a diagnostic reverse order so basis
 dependence is visible. No gradient-optimized rotation on confirmation is allowed.
 
+The implemented estimator is a blocked factorial covariance, not a single global difference of
+means. Within every logical group it forms both factor levels in every nuisance cell, averages
+over nuisance cells, centers the factor levels inside that group, and pools those contrasts across
+groups. This preserves heterogeneous directions that can cancel under a global binary mean. The
+content and binding panels each balance marked, marker-free, reordered, format-swapped and
+distractor-swapped surfaces across all three recipients. The order panel balances both key
+assignments across marked, marker-free, format-swapped and distractor-swapped surfaces. The
+forward basis assigns shared variance in the preregistered order content, binding, order; a reverse
+order is saved as a diagnostic of that convention.
+
 Confirmation tests content alone, binding alone, order alone, content+binding, all three, the
 orthogonal complement, 32 Haar-random matched-rank subspaces, shuffled-label contrasts and
 equal-energy off-subspace ablations. It also reports rank, participation ratio, explained
 contrast covariance, principal angles and discovery-fitted cross-seed Procrustes transfer.
+Every rank-screen row has an exact full-vocabulary logit record, and a separate no-model auditor
+must reconstruct the blocked covariances, eigenspaces, both orthogonalization orders, finite-effect
+summaries, joint two-seed rank choices, cross-seed geometry and exact-logit hashes before the ranks
+can be used on confirmation.
 
 `CONTENT-SUBSPACE-SUPPORTED` requires, in both seeds:
 
@@ -279,6 +293,12 @@ to physical occurrence on at least 75% of adversarial re-renderings while the bi
 fails its gate. If order-only effects stay at or below 20% and logical binding survives
 re-rendering, report `ORDER COMPONENT NOT CAUSALLY SUFFICIENT`; do not infer that order information
 is absent.
+
+The discovery order-rank screen is only an invariance/preservation screen because its paired
+renderings have the same semantic answer. It may freeze a candidate rank only when the full-state
+edit has positive target-probability gain in both seeds; otherwise it records no order rank. It
+cannot issue `ORDER-SHORTCUT-SUPPORTED`. That label requires the separate confirmation
+physical-occurrence oracle above, frozen before confirmation access.
 
 Static embedding neighbors, raw cosine, centered/whitened cosine, CKA, RSA, linear probes and
 task-conditioned Jacobian/J-lens frames are secondary diagnostics. Any J-lens frame uses
