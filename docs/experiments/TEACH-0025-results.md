@@ -1,0 +1,28 @@
+# TEACH-0025: fresh native hard-first repair replicated
+
+**Registered decision: fresh-replicated on this synthetic generator.** The four-cell decision and controls were frozen in [TEACH-0025-fresh-native-hard-read.md](TEACH-0025-fresh-native-hard-read.md) before these suites were drawn or trained interventions were run. Source commit `f3f26039ebfefe7d86a591d80360b96171a2a483` included the runner, no-generator suite auditor, independent all-row scorer, fixed-item CPU replay and tests. The original TEACH-0014 v3 public-row reader checkpoints remained frozen and received no new training or route labels.
+
+## Inputs and validation
+
+The unchanged TEACH-0014 generator produced two new 19-panel manifests once, seeds84611 and84621 with128 groups each. Raw suite file SHA-256 values were `acdfb47d53e535fbf9acc2501b323c07263bf455c51d8aaaba2f529a1e857db4` and `617f03195b8032e003f096e93b579fdeedba35d732e3d5df2de6491252fceca9`. The independent no-generator audit passed structural checks and zero exact graph/logical/render overlap against exposed74111, reserved ID-only84311, TEACH-0022 seeds84411/84511, and between the two new suites. Neither reserved84311 nor the other 18 new panels was scored by this assay.
+
+Both original public-row model checkpoints were fixed by the TEACH-0024 SHA-256 records. In every one of the four suite/model cells, all128 confirm-confirm items were scored under clean, identity, native hard-first, native hard-second, native hard-both, gold-first, gold-last and deterministic wrong-first conditions. The source-frozen CPU run completed in1.807s; raw rows SHA-256 `a92ac6e2cf2844dd6726f4c6b2f5278c8709e12ddafcf367d915d3af71d497c1`. The independent no-model auditor rederived every visible path, attention probability and paired score and returned `pass` (audit SHA-256 `fddd5b2d7adc3658230c3af1b4e2a6d5402e14c312656a788a6ecc63a88eba24`). Separate CPU checkpoint replay checked all eight conditions at indices0/64/127 in each cell, **96 complete logits vectors** and both native attention vectors; it returned `pass` with maximum absolute logit error0.0 (SHA-256 `ef93def419065ebaf244922d121224958b1a782eeb2df643577434281e0e2704`). The full repository suite had passed1,044 tests,8 skipped and23 subtests before source freeze; changed-file Ruff and diff hygiene passed. No paid service was used, and the new files totaled far below100MiB.
+
+## Primary paired result
+
+All counts are exact answers out of128 items. `Rescued` counts clean errors made right by native hard-first; `damaged` counts clean-right items made wrong. Each cell needed at least **13 net additional answers** plus the frozen controls.
+
+| Fresh suite | Model seed | Clean | Native hard-first | Rescued / damaged | Net gain | Gold-first | Gold-last | Wrong-first | Gate |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 84611 | 0 | 97 | 118 | 23 / 2 | **+21** | 124 | 127 | 2 | Pass |
+| 84611 | 1 | 85 | 112 | 31 / 4 | **+27** | 123 | 128 | 6 | Pass |
+| 84621 | 0 | 96 | 121 | 25 / 0 | **+25** | 125 | 128 | 3 | Pass |
+| 84621 | 1 | 95 | 113 | 21 / 3 | **+18** | 122 | 128 | 0 | Pass |
+
+Across the four cells, native hard-first raised exact accuracy from **373/512 (72.85%) to464/512 (90.63%)** by rescuing100/139 clean errors while damaging9/373 clean-correct cases, net+91/512. Identity reproduced clean predictions and logits within the registered1e-5 threshold. Hard-second alone stayed at clean in all four cells; the `hard_both` condition stayed at or below clean because it uses the *old clean-run second argmax*, not a new second selection after the first patch. Gold-last solved511/512; the wrong-first control solved11/512. These controls show the answer is sensitive to the selected first value and that the final value path can usually express the correct answer, while leaving some residual failure unexplained.
+
+First-row native attention argmax matched the visible target on122,116,124,118 of128 items across the four cells; second-row hits were98,85,96,95. On **clean errors with first-row argmax already correct**, the denominators were26,35,28,27 and native hard-first rescued23,31,25,21 respectively: **100/116** pooled. First-target mean attention mass by cell was0.428,0.423,0.419,0.422 despite those high top-rank counts; second-target mass was0.775,0.667,0.749,0.743. The registered independent audit reports mass and normalized entropy separately by clean-correct versus clean-wrong items in each cell. The aggregate attention-hit/mass arithmetic is descriptive from the source-bound raw rows; the causal evidence is the paired intervention with identity, gold and wrong-value controls.
+
+## What it changes—and what it does not
+
+The exposed-development TEACH-0024 rescue was not a one-panel fluke: with weights, intervention, thresholds and data generator fixed, the model's own top first-row value repaired most eligible errors on two freshly drawn graph suites and in both trained seeds. The strongest supported claim is **first-read value mixing causally contributes to second-hop failure in this synthetic public-row model**. It does not establish that the correct first row is always selected, that hard selection is the best deployable architecture, or that a unique key neuron/J-space direction has been identified. The old model still needs a supplied row parser and a synthetic task marker; the manuscript has neither known row edges nor route labels. TEACH-0022 separately showed that extra row-route labels can make this synthetic model competent, while one proposed linked interface failed. Neither result specifies a constrained decipherment of real Voynich text.

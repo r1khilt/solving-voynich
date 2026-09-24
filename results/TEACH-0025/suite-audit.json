@@ -1,0 +1,46 @@
+{
+  "audit": "pass",
+  "entries": {
+    "outputs/TEACH-0016/teach14-74111.json": {
+      "canonical_sha256": "09930778461abea7618db8d31eb9aa82c610be0e05ca4d87493a7ff9834c98af",
+      "file_sha256": "dfc0288735a7a2bec41e724c936cf934801760a128307c859ab81df3e42a28cb"
+    },
+    "outputs/TEACH-0022/suite-84411.json": {
+      "canonical_sha256": "2d5d6df4bb997e266dd801b9024fa37a2526c455ee1aeabf5b557290d3c2d858",
+      "file_sha256": "87dbf9d3c1b982b9d0230c022bba1097a5743c168ca05d49221c6ebb770723f2"
+    },
+    "outputs/TEACH-0022/suite-84511.json": {
+      "canonical_sha256": "7ea0349e3458bf3e2c22968f6c28ed9d1de957242e2115ea49bfd8afea656ba5",
+      "file_sha256": "5249aa43f5b2c4dc1f1af6f37ec478d5aa8c1192e63bd45a359d9529c5adc228"
+    },
+    "outputs/TEACH-0025/suite-84611.json": {
+      "canonical_sha256": "1d1015ff649bbfb027b621a4e920d555117e09b5081f11c7224ecfbbce2fae0f",
+      "file_sha256": "acdfb47d53e535fbf9acc2501b323c07263bf455c51d8aaaba2f529a1e857db4"
+    },
+    "outputs/TEACH-0025/suite-84621.json": {
+      "canonical_sha256": "e3c00906157639b0f84408361293ee4dfa4fa758784a5c1ec7afd3823b068360",
+      "file_sha256": "617f03195b8032e003f096e93b579fdeedba35d732e3d5df2de6491252fceca9"
+    },
+    "results/TEACH-0014-v3/suite.json": {
+      "canonical_sha256": "6af176d376921caccc0d40641002b94a462b42670fc4794f5b354457d17fa827",
+      "file_sha256": "9f76e73d8e7ffd2eff5023e106de8fe14378fcb915eee594a43b8d606f243b09"
+    }
+  },
+  "exact_graph_logical_render_overlap": 0,
+  "seeds": [
+    84611,
+    84621
+  ],
+  "source_head": "f3f26039ebfefe7d86a591d80360b96171a2a483",
+  "source_sha256": {
+    "docs/experiments/TEACH-0025-fresh-native-hard-read.md": "849da2ad1dde8bfff9341cc6efa03ae27f3e8e0df7a3bf9d96cd2b9e8e218c4c",
+    "scripts/teacher0024_soft_read_audit.py": "250f6938890fda0cf54fc01590b4df30f93690203512fb8fb1831795fce7d6bd",
+    "scripts/teacher0024_soft_read_run.py": "8d5b44909ee188290fe3b736270d9dca15e95a233acc33f9b334643a925d39df",
+    "scripts/teacher0025_fresh_hard_read.py": "2ab75a11b49aee27a55be8701c876702e7dbd6227c94b8ce134f97116f5c9ba5",
+    "scripts/teacher0025_fresh_hard_read_audit.py": "89c7c41f861e17eac3a6748ae0074e347c1f92a818ffbea53d1c2fb4815a8a2e",
+    "scripts/teacher0025_fresh_hard_read_replay.py": "e227fc1fed7b3d509b0a99fea29d19cc4d01aefe5c6e56472b95ab8dad1960e2",
+    "src/voynich/workspace/teacher14_models.py": "826315c68e7d33b790376d94a7ae1e0eaea1a22bb64d9b5ef58b50adf966db51",
+    "src/voynich/workspace/teacher14_tasks.py": "13ebd25a575843c3da87ca8df95eab371be61836e1407c6a80a908e3c96c03fd",
+    "tests/test_teacher0025_fresh_hard_read.py": "a4d775a970d9570a6e6e86da3f6eac60b1675ce661a445eca6d381a5d4a436e5"
+  }
+}
