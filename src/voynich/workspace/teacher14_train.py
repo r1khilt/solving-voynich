@@ -45,6 +45,7 @@ EXPECTED_PARAMETERS = {
 }
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0014-design.md",
+    "docs/experiments/TEACH-0014-benchmark-registration.md",
     "src/voynich/workspace/teacher14_tasks.py",
     "src/voynich/workspace/teacher14_models.py",
     "src/voynich/workspace/teacher14_objectives.py",
@@ -52,6 +53,7 @@ SOURCE_PATHS = (
     "scripts/teacher0014_suite_audit.py",
     "scripts/teacher0014_behavior_audit.py",
     "scripts/teacher0014_artifact_audit.py",
+    "scripts/teacher0014_replay.py",
     "tests/test_workspace_teacher14_tasks.py",
     "tests/test_workspace_teacher14_models.py",
     "tests/test_workspace_teacher14_objectives.py",
@@ -59,8 +61,11 @@ SOURCE_PATHS = (
     "tests/test_teacher0014_behavior_audit.py",
     "tests/test_workspace_teacher14_train.py",
     "tests/test_teacher0014_artifact_audit.py",
+    "tests/test_teacher0014_replay.py",
 )
+BENCHMARK_ADMITTED = True
 LAUNCH_ADMITTED = False
+EXPECTED_SUITE_SHA256 = "6af176d376921caccc0d40641002b94a462b42670fc4794f5b354457d17fa827"
 
 
 @dataclass(frozen=True)
@@ -150,6 +155,15 @@ def resource_check(config: Config, start: float, resource: dict,
         raise ResourceStop("TEACH-0014 artifact ceiling exceeded 4 GiB")
 
 
+def _set_mps_cap(config: Config) -> tuple[float, int]:
+    recommended = torch.mps.recommended_max_memory()
+    if recommended <= 0:
+        raise RuntimeError("Mac GPU memory recommendation unavailable")
+    fraction = min(.40, config.max_mps_bytes / recommended)
+    torch.mps.set_per_process_memory_fraction(fraction)
+    return fraction, recommended
+
+
 def new_model(config: Config, arm: str, replicate: int,
               device: str) -> tuple[torch.nn.Module, torch.optim.Optimizer]:
     if arm not in ARMS or replicate not in (0, 1):
@@ -233,21 +247,23 @@ def one_update(model: torch.nn.Module, optimizer: torch.optim.Optimizer,
 
 def benchmark(config: Config, result_dir: Path, output_dir: Path) -> dict:
     config.validate()
-    if not LAUNCH_ADMITTED:
-        raise RuntimeError("TEACH-0014 benchmark closed: full outcome auditor pending")
+    if not BENCHMARK_ADMITTED:
+        raise RuntimeError("TEACH-0014 benchmark admission closed")
     if not torch.backends.mps.is_available():
         raise RuntimeError("MPS required for the TEACH-0014 benchmark")
     provenance = source_provenance(config)
     path = result_dir / "benchmark.json"
     if path.exists():
         raise FileExistsError("No automatic TEACH-0014 benchmark rerun")
-    torch.mps.set_per_process_memory_fraction(.40)
+    mps_fraction, recommended_memory = _set_mps_cap(config)
     start = time.monotonic()
     resource = {"peak_sampled_mps_allocated_bytes": 0}
     report = {"experiment": "TEACH-0014", "mode": "benchmark",
               "status": "running", "config": asdict(config),
               "torch_version": torch.__version__, "platform": platform.platform(),
-              "machine": platform.machine(), "device": "mps", **provenance,
+              "machine": platform.machine(), "device": "mps",
+              "mps_memory_fraction": mps_fraction,
+              "mps_recommended_max_memory": recommended_memory, **provenance,
               **resource}
     _write_json(path, report)
     try:
@@ -339,19 +355,31 @@ def _save_checkpoint(model: torch.nn.Module, config: Config, replicate: int,
 
 @torch.no_grad()
 def _predict_panels(model: torch.nn.Module, arm: str, suite: dict,
-                    device: str) -> dict:
+                    device: str) -> tuple[dict, dict]:
     model.eval()
     panels = {}
+    replay = {}
     for name, episodes in suite.items():
         rows = []
+        replay_rows = []
+        replay_indices = {0, len(episodes) // 2, len(episodes) - 1}
         for offset in range(0, len(episodes), 32):
             chunk = episodes[offset:offset + 32]
-            logits = model_output(model, arm, chunk, device).logits[:, SYMBOL_START:]
-            guesses = (logits.argmax(dim=-1) + SYMBOL_START).tolist()
+            logits = model_output(model, arm, chunk, device).logits
+            guesses = (logits[:, SYMBOL_START:].argmax(dim=-1) + SYMBOL_START).tolist()
             rows.extend({"render_id": episode.render_id, "prediction": guess}
                         for episode, guess in zip(chunk, guesses, strict=True))
+            for global_index in sorted(replay_indices & set(range(
+                    offset, offset + len(chunk)))):
+                local_index = global_index - offset
+                replay_rows.append({
+                    "index": global_index,
+                    "render_id": episodes[global_index].render_id,
+                    "logits": logits[local_index].float().cpu().tolist(),
+                })
         panels[name] = rows
-    return {"panels": panels}
+        replay[name] = replay_rows
+    return {"panels": panels}, replay
 
 
 def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
@@ -366,7 +394,7 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
     report_path = result_dir / "report.json"
     if report_path.exists():
         raise FileExistsError("No automatic TEACH-0014 scientific rerun")
-    torch.mps.set_per_process_memory_fraction(.40)
+    mps_fraction, recommended_memory = _set_mps_cap(config)
     start = time.monotonic()
     resource = {"peak_sampled_mps_allocated_bytes": 0}
     suite = evaluation_suite(config.eval_seed, config.eval_groups)
@@ -375,6 +403,8 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
     from scripts.teacher0014_suite_audit import audit_manifest
 
     suite_audit = audit_manifest(manifest)
+    if suite_audit["manifest_sha256"] != EXPECTED_SUITE_SHA256:
+        raise RuntimeError("Frozen TEACH-0014 confirmation suite hash changed")
     manifest_path = result_dir / "suite.json"
     _write_json(manifest_path, manifest)
     status_path = result_dir / "status.json"
@@ -383,16 +413,22 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
               "suite_sha256": suite_audit["manifest_sha256"],
               "benchmark_sha256": _sha_file(result_dir / "benchmark.json"),
               "benchmark_projection_seconds": gate["conservative_projected_seconds"],
+              "mps_memory_fraction": mps_fraction,
+              "mps_recommended_max_memory": recommended_memory,
               "torch_version": torch.__version__, "platform": platform.platform(),
               **provenance, **resource}
     _write_json(status_path, status)
     predictions = {"experiment": "TEACH-0014",
                    "manifest_sha256": suite_audit["manifest_sha256"],
                    "runs": {}}
+    replay_logits = {"experiment": "TEACH-0014",
+                     "manifest_sha256": suite_audit["manifest_sha256"],
+                     "runs": {}}
     training = {}
     try:
         for arm in ARMS:
             predictions["runs"][arm] = {}
+            replay_logits["runs"][arm] = {}
             training[arm] = {}
             for replicate in (0, 1):
                 model, optimizer = new_model(config, arm, replicate, "mps")
@@ -418,8 +454,10 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
                 raw = json.dumps(losses, separators=(",", ":"),
                                  allow_nan=False).encode()
                 loss_path.write_bytes(gzip.compress(raw, compresslevel=9, mtime=0))
-                predictions["runs"][arm][str(replicate)] = _predict_panels(
+                predicted, sampled_logits = _predict_panels(
                     model, arm, suite, "mps")
+                predictions["runs"][arm][str(replicate)] = predicted
+                replay_logits["runs"][arm][str(replicate)] = sampled_logits
                 training[arm][str(replicate)] = {
                     "final_checkpoint": checkpoint,
                     "loss_archive_sha256": _sha_file(loss_path),
@@ -433,6 +471,10 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
         raw = json.dumps(predictions, sort_keys=True, separators=(",", ":"),
                          allow_nan=False).encode()
         predictions_path.write_bytes(gzip.compress(raw, compresslevel=9, mtime=0))
+        replay_path = result_dir / "replay-logits.json.gz"
+        replay_raw = json.dumps(replay_logits, sort_keys=True,
+                                separators=(",", ":"), allow_nan=False).encode()
+        replay_path.write_bytes(gzip.compress(replay_raw, compresslevel=9, mtime=0))
         from scripts.teacher0014_behavior_audit import audit_behavior
 
         behavior = audit_behavior(manifest, predictions)
@@ -442,6 +484,7 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
                        benchmark=False)
         report = {**status, "status": "complete", "training": training,
                   "predictions_sha256": _sha_file(predictions_path),
+                  "replay_logits_sha256": _sha_file(replay_path),
                   "behavior_audit_sha256": _sha_file(behavior_path),
                   "manifest_file_sha256": _sha_file(manifest_path),
                   "elapsed_seconds": time.monotonic() - start,

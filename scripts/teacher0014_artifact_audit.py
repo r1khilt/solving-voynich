@@ -25,6 +25,7 @@ PARAMETERS = {
 }
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0014-design.md",
+    "docs/experiments/TEACH-0014-benchmark-registration.md",
     "src/voynich/workspace/teacher14_tasks.py",
     "src/voynich/workspace/teacher14_models.py",
     "src/voynich/workspace/teacher14_objectives.py",
@@ -32,6 +33,7 @@ SOURCE_PATHS = (
     "scripts/teacher0014_suite_audit.py",
     "scripts/teacher0014_behavior_audit.py",
     "scripts/teacher0014_artifact_audit.py",
+    "scripts/teacher0014_replay.py",
     "tests/test_workspace_teacher14_tasks.py",
     "tests/test_workspace_teacher14_models.py",
     "tests/test_workspace_teacher14_objectives.py",
@@ -39,6 +41,7 @@ SOURCE_PATHS = (
     "tests/test_teacher0014_behavior_audit.py",
     "tests/test_workspace_teacher14_train.py",
     "tests/test_teacher0014_artifact_audit.py",
+    "tests/test_teacher0014_replay.py",
 )
 EXPECTED_CONFIG = {
     "init_seeds": [84121, 84131], "train_seeds": [84221, 84231],
@@ -50,6 +53,7 @@ EXPECTED_CONFIG = {
     "benchmark_steps": 24, "benchmark_warmup_steps": 4,
     "benchmark_max_seconds": 1800.0,
 }
+EXPECTED_SUITE_SHA256 = "6af176d376921caccc0d40641002b94a462b42670fc4794f5b354457d17fa827"
 
 
 def _canonical_sha(value: object) -> str:
@@ -163,6 +167,58 @@ def _audit_benchmark(benchmark: dict, report: dict) -> None:
     if benchmark.get("peak_sampled_mps_allocated_bytes", math.inf) > (
             EXPECTED_CONFIG["max_mps_bytes"]):
         raise ValueError("Benchmark MPS allocation exceeded bound")
+    _audit_mps_fraction(benchmark)
+
+
+def _audit_mps_fraction(record: dict) -> None:
+    recommended = record.get("mps_recommended_max_memory")
+    fraction = record.get("mps_memory_fraction")
+    if (type(recommended) is not int or recommended <= 0 or
+            type(fraction) not in (int, float) or not math.isfinite(fraction) or
+            not 0 < fraction <= .40 or
+            fraction * recommended > EXPECTED_CONFIG["max_mps_bytes"] + 1):
+        raise ValueError("Mac GPU memory fraction exceeds registered cap")
+
+
+def _audit_replay_archive(archive: dict, manifest: dict,
+                          predictions: dict) -> int:
+    if archive.get("experiment") != "TEACH-0014" or (
+            archive.get("manifest_sha256") != predictions.get("manifest_sha256")):
+        raise ValueError("Replay archive suite identity mismatch")
+    runs = archive.get("runs")
+    if not isinstance(runs, dict) or set(runs) != ARMS:
+        raise ValueError("Replay archive arm set incomplete")
+    total = 0
+    for arm, replicates in runs.items():
+        if not isinstance(replicates, dict) or set(replicates) != {"0", "1"}:
+            raise ValueError(f"{arm}: replay replicate set incomplete")
+        for rep, panels in replicates.items():
+            if not isinstance(panels, dict) or set(panels) != set(manifest["panels"]):
+                raise ValueError(f"{arm}/{rep}: replay panel set incomplete")
+            for name, rows in panels.items():
+                episodes = manifest["panels"][name]
+                indices = sorted({0, len(episodes) // 2, len(episodes) - 1})
+                if not isinstance(rows, list) or len(rows) != len(indices):
+                    raise ValueError(f"{arm}/{rep}/{name}: replay sample count")
+                for row, index in zip(rows, indices, strict=True):
+                    if (not isinstance(row, dict) or
+                            set(row) != {"index", "render_id", "logits"} or
+                            type(row["index"]) is not int or
+                            row["index"] != index or
+                            row["render_id"] != episodes[index]["render_id"]):
+                        raise ValueError(f"{arm}/{rep}/{name}: replay sample identity")
+                    logits = row["logits"]
+                    if (not isinstance(logits, list) or len(logits) != 2064 or
+                            any(type(value) not in (int, float) or
+                                not math.isfinite(value) for value in logits)):
+                        raise ValueError(f"{arm}/{rep}/{name}: invalid replay logits")
+                    prediction = 16 + max(range(2048),
+                                          key=lambda offset: logits[16 + offset])
+                    if prediction != predictions["runs"][arm][rep]["panels"][name][
+                            index]["prediction"]:
+                        raise ValueError(f"{arm}/{rep}/{name}: logit/prediction mismatch")
+                    total += 1
+    return total
 
 
 def audit_artifacts(result_dir: Path, output_dir: Path,
@@ -179,6 +235,7 @@ def audit_artifacts(result_dir: Path, output_dir: Path,
     if report.get("config_sha256") != _canonical_sha(EXPECTED_CONFIG) or (
             report.get("source_worktree_status") != []):
         raise ValueError("Campaign source/config not clean and frozen")
+    _audit_mps_fraction(report)
     _committed_sources(root, report.get("source_git_head"),
                        report.get("source_sha256"))
     if report.get("benchmark_sha256") != _sha_file(benchmark_path):
@@ -189,6 +246,7 @@ def audit_artifacts(result_dir: Path, output_dir: Path,
     suite = audit_manifest(manifest)
     if (manifest.get("seed") != EXPECTED_CONFIG["eval_seed"] or
             manifest.get("group_count") != EXPECTED_CONFIG["eval_groups"] or
+            suite["manifest_sha256"] != EXPECTED_SUITE_SHA256 or
             report.get("suite_sha256") != suite["manifest_sha256"] or
             report.get("manifest_file_sha256") != _sha_file(manifest_path)):
         raise ValueError("Suite identity or structure mismatch")
@@ -197,6 +255,11 @@ def audit_artifacts(result_dir: Path, output_dir: Path,
         raise ValueError("Prediction artifact hash mismatch")
     predictions = json.loads(gzip.decompress(pred_path.read_bytes()))
     behavior = audit_behavior(manifest, predictions)
+    replay_path = result_dir / "replay-logits.json.gz"
+    if report.get("replay_logits_sha256") != _sha_file(replay_path):
+        raise ValueError("Replay logits artifact hash mismatch")
+    replay_archive = json.loads(gzip.decompress(replay_path.read_bytes()))
+    replay_samples = _audit_replay_archive(replay_archive, manifest, predictions)
     saved_behavior_path = result_dir / "behavior-audit.json"
     if report.get("behavior_audit_sha256") != _sha_file(saved_behavior_path) or (
             json.loads(saved_behavior_path.read_text()) != behavior):
@@ -249,6 +312,7 @@ def audit_artifacts(result_dir: Path, output_dir: Path,
             "source_git_head": report["source_git_head"],
             "training_traces": len(ARMS) * 2,
             "checked_steps": len(ARMS) * 2 * EXPECTED_CONFIG["steps_per_arm"],
+            "replay_logit_samples": replay_samples,
             "answer_decisions": behavior["decisions"],
             "numerical_checkpoint_replay": "pending"}
 

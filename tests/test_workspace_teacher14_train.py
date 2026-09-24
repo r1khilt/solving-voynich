@@ -54,14 +54,29 @@ def test_draft_branches_compute_finite_gradients_without_weight_update(monkeypat
         records["latent_rows_wrong_causal"]["causal_input_sha256"])
 
 
-def test_benchmark_and_campaign_remain_closed_before_full_auditor(tmp_path):
+def test_campaign_remains_closed_and_benchmark_has_explicit_gate(
+        tmp_path, monkeypatch):
     config = campaign.Config()
     assert not campaign.LAUNCH_ADMITTED
-    with pytest.raises(RuntimeError, match="benchmark closed"):
+    assert campaign.BENCHMARK_ADMITTED
+    monkeypatch.setattr(campaign, "BENCHMARK_ADMITTED", False)
+    with pytest.raises(RuntimeError, match="benchmark admission closed"):
         campaign.benchmark(config, tmp_path / "results", tmp_path / "outputs")
     with pytest.raises(RuntimeError, match="launch closed"):
         campaign.run(config, tmp_path / "results", tmp_path / "outputs")
     assert not (tmp_path / "results").exists()
+
+
+def test_mps_fraction_uses_stricter_of_nominal_and_config_cap(monkeypatch):
+    selected = []
+    monkeypatch.setattr(campaign.torch.mps, "recommended_max_memory",
+                        lambda: 50 * 1024**3)
+    monkeypatch.setattr(campaign.torch.mps, "set_per_process_memory_fraction",
+                        selected.append)
+    fraction, recommended = campaign._set_mps_cap(campaign.Config())
+    assert fraction == 12 / 50
+    assert recommended == 50 * 1024**3
+    assert selected == [12 / 50]
 
 
 def test_resource_cap_counts_checkpoint_and_result_directories(tmp_path):

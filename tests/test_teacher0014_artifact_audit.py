@@ -53,7 +53,9 @@ def _benchmark_fixture():
                  "measured": measured,
                  "projected_training_seconds": projection,
                  "conservative_projected_seconds": projection * 1.5 + 1800,
-                 "peak_sampled_mps_allocated_bytes": 1024}
+                 "peak_sampled_mps_allocated_bytes": 1024,
+                 "mps_recommended_max_memory": 50 * 1024**3,
+                 "mps_memory_fraction": 12 / 50}
     return benchmark, report
 
 
@@ -71,4 +73,8 @@ def test_benchmark_audit_recomputes_cost_and_rejects_tampering():
     bad = deepcopy(benchmark)
     del bad["measured"]["raw_null"]
     with pytest.raises(ValueError, match="arm set"):
+        _audit_benchmark(bad, report)
+    bad = deepcopy(benchmark)
+    bad["mps_memory_fraction"] = .4
+    with pytest.raises(ValueError, match="memory fraction"):
         _audit_benchmark(bad, report)
