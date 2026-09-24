@@ -215,3 +215,16 @@ be committed before confirmation. Failure to qualify stops the confirmatory
 path; exploratory traces can be archived under a distinct label. No TEACH-0014
 or TEACH-0015 result licenses a manuscript decipherment claim without a
 separate constrained decoder and manuscript holdout test.
+
+**Prospective finite-vector qualification, before primary outcomes:**
+`teacher15_intervene.py` now archives the actual 512-component native and
+replacement states for donor, base, target, same-key, reverse, final-donor,
+random, wrong-key and deranged conditions, with full logits in its local
+primitive. `scripts/teacher0015_finite_audit.py` independently checks one
+three-recipient surface: visible-cell identities, the unchanged donor across
+G0/G1/G2, distinct outside-group wrong/deranged donors, norm matching,
+deterministic random vector, exact replacement formulas and numerical
+identity/final-donor controls. Random-weight CPU tests pass. This does **not**
+admit the full mechanism assay: donor-pair selection, complete split-scale
+runner, finite MPS benchmark, aggregate decision audit and sampled trained
+checkpoint replay must still be frozen separately before confirmation.

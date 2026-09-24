@@ -97,7 +97,8 @@ def _cell(group: TransferGroup, f: int, g: int, distractor: int,
 def evaluate_surface(model: CandidateEdgeWorkspace, group: TransferGroup,
                      *, distractor: int, marked: bool, order: int,
                      device: str,
-                     wrong_donor: Episode | None = None) -> list[dict]:
+                     wrong_donor: Episode | None = None,
+                     deranged_donor: Episode | None = None) -> list[dict]:
     """One donor used unchanged against all three G recipients, both directions."""
     if distractor not in (0, 1) or type(marked) is not bool or order not in (0, 1):
         raise ValueError("Invalid TEACH-0015 surface coordinates")
@@ -106,6 +107,8 @@ def evaluate_surface(model: CandidateEdgeWorkspace, group: TransferGroup,
     nuisance_episode = _cell(group, 1, 0, distractor, not marked, order)
     nuisance = capture(model, nuisance_episode, device)
     wrong = capture(model, wrong_donor, device) if wrong_donor is not None else None
+    deranged = (capture(model, deranged_donor, device)
+                if deranged_donor is not None else None)
     rows = []
     for g in (0, 1, 2):
         base_episode = _cell(group, 0, g, distractor, marked, order)
@@ -134,11 +137,22 @@ def evaluate_surface(model: CandidateEdgeWorkspace, group: TransferGroup,
             model, base_episode, base.first_state + random_delta,
             site="query.1", device=device)
         wrong_logits = None
+        wrong_replacement = None
         if wrong is not None:
             wrong_delta = wrong.first_state - base.first_state
             wrong_delta *= delta.norm() / wrong_delta.norm().clamp_min(1e-12)
+            wrong_replacement = base.first_state + wrong_delta
             wrong_logits = patch(
-                model, base_episode, base.first_state + wrong_delta,
+                model, base_episode, wrong_replacement,
+                site="query.1", device=device)
+        deranged_logits = None
+        deranged_replacement = None
+        if deranged is not None:
+            deranged_delta = deranged.first_state - base.first_state
+            deranged_delta *= delta.norm() / deranged_delta.norm().clamp_min(1e-12)
+            deranged_replacement = base.first_state + deranged_delta
+            deranged_logits = patch(
+                model, base_episode, deranged_replacement,
                 site="query.1", device=device)
         rows.append({
             "group_id": group.group_id, "g": g, "distractor": distractor,
@@ -148,6 +162,8 @@ def evaluate_surface(model: CandidateEdgeWorkspace, group: TransferGroup,
             "same_key_donor_render_id": nuisance_episode.render_id,
             "wrong_donor_render_id": (wrong_donor.render_id
                                       if wrong_donor is not None else None),
+            "deranged_donor_render_id": (deranged_donor.render_id
+                                         if deranged_donor is not None else None),
             "target_render_id": target_episode.render_id,
             "base_answer": base_episode.answer,
             "target_answer": target_episode.answer,
@@ -162,11 +178,33 @@ def evaluate_surface(model: CandidateEdgeWorkspace, group: TransferGroup,
             "random_prediction": _predict(random_logits),
             "wrong_key_prediction": (_predict(wrong_logits)
                                      if wrong_logits is not None else None),
+            "deranged_prediction": (_predict(deranged_logits)
+                                    if deranged_logits is not None else None),
             "identity_max_abs_logit_error": float((
                 identity - base.logits).abs().max().item()),
             "final_donor_max_abs_logit_error": float((
                 final_donor - donor.logits).abs().max().item()),
             "donor_delta_norm": float(delta.norm().item()),
+            "replacement_vectors": {
+                "base_native": base.first_state[0].float().cpu().tolist(),
+                "target_native": target.first_state[0].float().cpu().tolist(),
+                "donor_native": donor.first_state[0].float().cpu().tolist(),
+                "same_key_native": nuisance.first_state[0].float().cpu().tolist(),
+                "reverse_base": base.first_state[0].float().cpu().tolist(),
+                "final_donor": donor.final_state[0].float().cpu().tolist(),
+                "random": (base.first_state + random_delta)[0]
+                    .float().cpu().tolist(),
+                "wrong_key": (wrong_replacement[0].float().cpu().tolist()
+                              if wrong_replacement is not None else None),
+                "wrong_source_native": (
+                    wrong.first_state[0].float().cpu().tolist()
+                    if wrong is not None else None),
+                "deranged": (deranged_replacement[0].float().cpu().tolist()
+                             if deranged_replacement is not None else None),
+                "deranged_source_native": (
+                    deranged.first_state[0].float().cpu().tolist()
+                    if deranged is not None else None),
+            },
             "base_logits": base.logits[0].float().cpu().tolist(),
             "target_logits": target.logits[0].float().cpu().tolist(),
             "donor_logits": donor.logits[0].float().cpu().tolist(),
@@ -177,5 +215,7 @@ def evaluate_surface(model: CandidateEdgeWorkspace, group: TransferGroup,
             "random_logits": random_logits[0].float().cpu().tolist(),
             "wrong_key_logits": (wrong_logits[0].float().cpu().tolist()
                                  if wrong_logits is not None else None),
+            "deranged_logits": (deranged_logits[0].float().cpu().tolist()
+                                if deranged_logits is not None else None),
         })
     return rows

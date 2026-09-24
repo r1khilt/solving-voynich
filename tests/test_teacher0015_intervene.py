@@ -11,13 +11,17 @@ from voynich.workspace.teacher15_tasks import generate_split
 
 
 def test_first_read_patch_identity_and_final_answer_control():
-    group, other = generate_split("discovery", 2)
+    group, other, deranged_group = generate_split("discovery", 3)
     model, _ = new_model(Config(), "latent_rows_answer", 0, "cpu")
     wrong_donor = next(cell.episode for cell in other.cells if (
         cell.f, cell.g, cell.distractor, cell.marked, cell.order, cell.task)
         == (1, 0, 0, True, 0, "composed"))
+    deranged_donor = next(cell.episode for cell in deranged_group.cells if (
+        cell.f, cell.g, cell.distractor, cell.marked, cell.order, cell.task)
+        == (1, 0, 0, True, 0, "composed"))
     rows = evaluate_surface(model, group, distractor=0, marked=True,
-                            order=0, device="cpu", wrong_donor=wrong_donor)
+                            order=0, device="cpu", wrong_donor=wrong_donor,
+                            deranged_donor=deranged_donor)
     assert len(rows) == 3
     assert len({row["target_answer"] for row in rows}) == 3
     assert rows[0]["fixed_donor_answer"] == rows[0]["target_answer"]
@@ -31,7 +35,21 @@ def test_first_read_patch_identity_and_final_answer_control():
         assert len(row["transfer_logits"]) == 2064
         assert len(row["same_key_logits"]) == 2064
         assert len(row["wrong_key_logits"]) == 2064
+        assert len(row["deranged_logits"]) == 2064
         assert row["wrong_donor_render_id"] == wrong_donor.render_id
+        assert row["deranged_donor_render_id"] == deranged_donor.render_id
+        vectors = row["replacement_vectors"]
+        assert all(len(value) == 512 for value in vectors.values())
+        base = torch.tensor(vectors["base_native"])
+        donor = torch.tensor(vectors["donor_native"])
+        assert vectors["reverse_base"] == vectors["base_native"]
+        assert abs((donor - base).norm().item() - row["donor_delta_norm"]) < 1e-5
+        for condition in ("random", "wrong_key", "deranged"):
+            assert abs((torch.tensor(vectors[condition]) - base).norm().item()
+                       - row["donor_delta_norm"]) < 1e-4
+    first_donor = rows[0]["replacement_vectors"]["donor_native"]
+    assert all(row["replacement_vectors"]["donor_native"] == first_donor
+               for row in rows)
 
 
 def test_copy_has_no_intermediate_key_hook():
