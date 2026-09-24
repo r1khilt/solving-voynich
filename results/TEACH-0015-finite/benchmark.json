@@ -1,0 +1,80 @@
+{
+  "admitted": true,
+  "artifact_bytes": 3075,
+  "conservative_projected_seconds": 3703.9470151718706,
+  "elapsed_seconds": 4.822593707998749,
+  "experiment": "TEACH-0015-finite",
+  "finite_git_head": "9e81f08f86f0d5a488a5819498858342b0257908",
+  "finite_source_sha256": {
+    "docs/experiments/TEACH-0015-finite-registration.md": "3218c5518fd66e099e9d5dafb132cee2efbcc8b29a24219bfb3f2983b125f528",
+    "scripts/teacher0015_finite_audit.py": "f36e49ab5de0596cbe6a5a91ab94bfd59daa64db96b3727956e4cffc39c1c2bb",
+    "scripts/teacher0015_finite_replay.py": "e151c4780bbc7385789600c76e0ac73d1b9ede6a4ed776c726ea6e8bbf725f03",
+    "scripts/teacher0015_finite_result_audit.py": "da0310e7f96e4aeb4ae002b92c0c4edafe8dfb4d93887fa1add0ec234dadd392",
+    "scripts/teacher0015_finite_run.py": "8a79f1b2f78260bca6e28ba972554f860e9010daaec7f9939586bae15a51de49",
+    "src/voynich/workspace/teacher15_intervene.py": "6efc75cac0d06b4b7c3c41fe53625cfb5c52b50b8fdb617ff898cf0620fb0f2d",
+    "src/voynich/workspace/teacher15_pairs.py": "9c95815c8be24814ed7b81c93a0c88806f6f1a6681881df060c283c7710a9ef0",
+    "tests/test_teacher0015_finite_audit.py": "d8b5f906348b5079ba13c263d987490b319c13679c44f73964e532377c4cbb79",
+    "tests/test_teacher0015_finite_replay.py": "c904a5fc81470201e0bacfa349f4cf5c40560ae260c3bf6ec1852f5c7da4bc5a",
+    "tests/test_teacher0015_finite_result_audit.py": "0bde17262f9d19e7081ea551b9fe1f17af01a2d85ece2c52e075545b41dea807",
+    "tests/test_teacher0015_intervene.py": "6fdf04beb827e12936573878681a1f24f9e48f95f7a00d2fae90037a4993b3ee"
+  },
+  "manifest_sha256": {
+    "confirmation": "941cce744278d677655d01ef71f4dfa4943352e7e477ce66efcbd5233c4db975",
+    "discovery": "ff044ec42ceaaea180a4cde43bbb1bd0dd73dc0c4f53c476876855831402261c"
+  },
+  "max_artifact_bytes": 2147483648,
+  "max_mps_bytes": 12884901888,
+  "max_seconds": 7200,
+  "peak_sampled_mps_allocated_bytes": 100081920,
+  "sampled_mps_allocated_bytes": 100081920,
+  "slowest_type_median_seconds": 0.15829366700018,
+  "suite_file_sha256": {
+    "confirmation": "cc35fef8e0b64cdd0188e2c0dcc8be7da402863affc6d19dd076f977c4bcba69",
+    "discovery": "3714fbc66df69cc53716837e63edcbf0eb72f9cb85aa2aff1aff1438c8d7870e"
+  },
+  "timed_surfaces": 24,
+  "timings_seconds": {
+    "0": [
+      0.15219970799989824,
+      0.16855733300144493,
+      0.15667383400068502
+    ],
+    "1": [
+      0.14127641699997184,
+      0.13121354100076132,
+      0.15389987500020652
+    ],
+    "2": [
+      0.15920166599971708,
+      0.14525404199957848,
+      0.13578554099876783
+    ],
+    "3": [
+      0.1433493330005149,
+      0.1314621250003256,
+      0.1438752909998584
+    ],
+    "4": [
+      0.14086179200057813,
+      0.12979304200052866,
+      0.14459274999899208
+    ],
+    "5": [
+      0.16225833399948897,
+      0.15829366700018,
+      0.15128158399966196
+    ],
+    "6": [
+      0.12986595800066425,
+      0.14801079199969536,
+      0.1344742920009594
+    ],
+    "7": [
+      0.159004625000307,
+      0.14320679099910194,
+      0.13096162500005448
+    ]
+  },
+  "warmup_surfaces": 8,
+  "worst_case_surfaces": 12288
+}

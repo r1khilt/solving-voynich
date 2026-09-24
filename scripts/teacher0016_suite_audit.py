@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 
 from scripts.teacher0015_clean_audit import (
     EXPECTED_EXPOSURES, EXPECTED_MANIFESTS,
@@ -15,6 +16,15 @@ from scripts.teacher0015_suite_audit import (
 
 
 SEEDS = {"discovery": 86111, "confirmation": 86121}
+SOURCE_PATHS = (
+    "docs/experiments/TEACH-0016-cross-order-registration.md",
+    "src/voynich/workspace/teacher16_tasks.py",
+    "src/voynich/workspace/teacher15_tasks.py",
+    "src/voynich/workspace/teacher14_tasks.py",
+    "scripts/teacher0016_prepare.py",
+    "scripts/teacher0016_suite_audit.py",
+    "tests/test_teacher0016_suite.py",
+)
 SURFACES = tuple((d, m, source_order)
                  for d in (0, 1) for m in (True, False)
                  for source_order in (0, 1))
@@ -65,6 +75,8 @@ def audit_manifest(manifest: dict) -> dict:
     all_pairs = 0
     null_hits = 0
     offdiag = 0
+    shifted_null_hits = 0
+    shifted_offdiag = 0
     for group in manifest["groups"]:
         checked = audit_group(group, split)
         if (checked["group_id"] in group_ids or
@@ -92,7 +104,8 @@ def audit_manifest(manifest: dict) -> dict:
                     len(set(recipient_positions)) != 1):
                 raise ValueError("TEACH-0016 within-order row-slot drift")
             all_pairs += 1
-            shifted += int(source_positions[0] != recipient_positions[0])
+            is_shifted = source_positions[0] != recipient_positions[0]
+            shifted += int(is_shifted)
             for a in (0, 1, 2):
                 for b in (0, 1, 2):
                     if a == b:
@@ -102,8 +115,11 @@ def audit_manifest(manifest: dict) -> dict:
                                          recipient_order)
                     predicted = recipient["serialized_rows"][
                         source_positions[a]][1]
-                    null_hits += int(predicted == group[
-                        "recipient_outputs"][b][1])
+                    hit = predicted == group["recipient_outputs"][b][1]
+                    null_hits += int(hit)
+                    if is_shifted:
+                        shifted_offdiag += 1
+                        shifted_null_hits += int(hit)
     if len(renders) != 128 * 66 or all_pairs != 1024 or offdiag != 6144:
         raise ValueError("TEACH-0016 visible episode/pair coverage differs")
     if shifted / all_pairs < .85:
@@ -116,6 +132,8 @@ def audit_manifest(manifest: dict) -> dict:
             "offdiag_attempts": offdiag,
             "visible_row_pointer_offdiag_hits": null_hits,
             "visible_row_pointer_offdiag_total": offdiag,
+            "shifted_offdiag_attempts": shifted_offdiag,
+            "visible_row_pointer_shifted_offdiag_hits": shifted_null_hits,
             "manifest_sha256": _digest(manifest),
             "group_ids_sha256": _digest(sorted(group_ids)),
             "graph_ids_sha256": _digest(sorted(graphs)),
@@ -208,6 +226,32 @@ def main() -> None:
                     for path in args.teach14_manifests)
     result = audit_splits(own["discovery"], own["confirmation"],
                           earlier, primary)
+    root = Path.cwd()
+    dirty = subprocess.run(["git", "status", "--porcelain", "--", *SOURCE_PATHS],
+                           cwd=root, check=True, capture_output=True,
+                           text=True).stdout.strip()
+    if dirty:
+        raise RuntimeError("Commit TEACH-0016 suite/audit sources before audit")
+    head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root,
+                          check=True, capture_output=True,
+                          text=True).stdout.strip()
+    source_hashes = {}
+    for name in SOURCE_PATHS:
+        actual = hashlib.sha256((root / name).read_bytes()).hexdigest()
+        committed = subprocess.run(["git", "show", f"{head}:{name}"],
+                                   cwd=root, check=True,
+                                   capture_output=True).stdout
+        if hashlib.sha256(committed).hexdigest() != actual:
+            raise RuntimeError(f"TEACH-0016 source differs from commit: {name}")
+        source_hashes[name] = actual
+    result["source_git_head"] = head
+    result["source_sha256"] = source_hashes
+    result["suite_file_sha256"] = {
+        split: hashlib.sha256((args.suite_dir / f"{split}.json").read_bytes())
+            .hexdigest() for split in SEEDS}
+    result["prior_file_sha256"] = {
+        str(path): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in args.teach14_manifests}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, sort_keys=True, indent=2) + "\n")
     print(json.dumps({split: {key: value for key, value in result[split].items()
