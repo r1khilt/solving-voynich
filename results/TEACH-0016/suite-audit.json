@@ -1,0 +1,74 @@
+{
+  "audit": "pass",
+  "confirmation": {
+    "audit": "pass",
+    "crossed_order_pairs": 1024,
+    "episodes": 8448,
+    "graph_ids_sha256": "31afdbde8c09246eae0f8ccddc58b5b67ecabe022dbce147186d5cce8bbcaafa",
+    "group_ids_sha256": "91ea7d8df9a66262263092751a65901fd7ef629e5922ab89711d6aea756eca33",
+    "groups": 128,
+    "logical_ids_sha256": "f1e4c63f3ec940c8dccbe198f4a60568afc51cec18f269ce6f51306c8f77b079",
+    "manifest_sha256": "102e3d902dd36882d0901b5d51ba09bbb09af5bf5422e3e2cc90fbb1359ea55f",
+    "offdiag_attempts": 6144,
+    "render_ids_sha256": "fe2b01275a779df711aa34524a10e0bf1bf3d13fb2efcdfe77b8b99a50afaba9",
+    "scope": "fresh_cross_order_visible_suite",
+    "seed": 86121,
+    "shifted_offdiag_attempts": 5652,
+    "shifted_slot_pairs": 942,
+    "split": "confirmation",
+    "stage_families_sha256": "f3a25575309f271e26e506cd6c09a2297cd9f169beb3debda4a55d4872165ba6",
+    "visible_row_pointer_offdiag_hits": 492,
+    "visible_row_pointer_offdiag_total": 6144,
+    "visible_row_pointer_shifted_offdiag_hits": 0
+  },
+  "discovery": {
+    "audit": "pass",
+    "crossed_order_pairs": 1024,
+    "episodes": 8448,
+    "graph_ids_sha256": "e21f61a2639cb06b74ff57d010d1c0c7fcd87a52615dc66483063788dc5f3c69",
+    "group_ids_sha256": "fd091f270bf6a10dd92f83ae8e6cd698e3f02ae105cd7b3d6a78811eb58f724c",
+    "groups": 128,
+    "logical_ids_sha256": "261a7e1b4e4d889656376ff58d1a6ef21c47eb8358bf1899b223248057609a14",
+    "manifest_sha256": "57e95bf3c56083055f896be005dc5da05eb764021ad0817a784ff46c0cb82139",
+    "offdiag_attempts": 6144,
+    "render_ids_sha256": "01ebf8cac64c02a84f797f9f230b8f6c72cac32a86fa23dd92ed97e266daa8b5",
+    "scope": "fresh_cross_order_visible_suite",
+    "seed": 86111,
+    "shifted_offdiag_attempts": 5688,
+    "shifted_slot_pairs": 948,
+    "split": "discovery",
+    "stage_families_sha256": "9c1e44f44502570865c3a6d3501799053ef65069e800192e0cec920fd5e3f417",
+    "visible_row_pointer_offdiag_hits": 456,
+    "visible_row_pointer_offdiag_total": 6144,
+    "visible_row_pointer_shifted_offdiag_hits": 0
+  },
+  "prior_file_sha256": {
+    "outputs/TEACH-0016/teach14-74111.json": "dfc0288735a7a2bec41e724c936cf934801760a128307c859ab81df3e42a28cb",
+    "outputs/TEACH-0016/teach14-74117.json": "ca677961eaa926efabeff0d0a91e47fe1d749283cced06c1567b79932a42fbba",
+    "results/TEACH-0014-v3/suite.json": "9f76e73d8e7ffd2eff5023e106de8fe14378fcb915eee594a43b8d606f243b09"
+  },
+  "scope": "fresh_cross_order_split_and_exposure",
+  "source_git_head": "7e5779a3b28c00bf2dd24a07a2907ae435fa8d83",
+  "source_sha256": {
+    "docs/experiments/TEACH-0016-cross-order-registration.md": "f920d365af4e8380a75b59ee7862e2d311aee0006bc33c6808074a18c79c5da6",
+    "scripts/teacher0016_prepare.py": "60688b1d774919dfce963d86aa48243e8a2d423a725621a97760752bf6f16ce4",
+    "scripts/teacher0016_suite_audit.py": "6c44de6ab25a2da731e48b5b876c1e0cb67b61565107b8a86679a4c01f2afb28",
+    "src/voynich/workspace/teacher14_tasks.py": "13ebd25a575843c3da87ca8df95eab371be61836e1407c6a80a908e3c96c03fd",
+    "src/voynich/workspace/teacher15_tasks.py": "0fe2f3ecb4308d9bd51a658d1c7b19d7cd6506cb0cb29ee718f3b40fab02e7b5",
+    "src/voynich/workspace/teacher16_tasks.py": "347825d00fdea2e0893afde3f3a00e43d5a4ab45bf2e549bee7504ac12f2369b",
+    "tests/test_teacher0016_suite.py": "8380339702b3eb6e5df5b52109b9ea19a070cc3a10da0ffbaa2a450069effec3"
+  },
+  "suite_file_sha256": {
+    "confirmation": "b74cbb61271b2a0a0c3f74e782bc04e042d8ae38f95103ea3c8b4163bfc1f8f3",
+    "discovery": "b9a9aa091b7cdb8940ecbb944566989e68781c8984a75e2394885302e0bbafb5"
+  },
+  "teacher14_exposure_sha256": [
+    "09930778461abea7618db8d31eb9aa82c610be0e05ca4d87493a7ff9834c98af",
+    "f4c47f734810e6e7997c69d72af33cb433a16d5a9fa7240b4ffc8b1c6e8e50a6",
+    "6af176d376921caccc0d40641002b94a462b42670fc4794f5b354457d17fa827"
+  ],
+  "teacher15_exposure_sha256": [
+    "ff044ec42ceaaea180a4cde43bbb1bd0dd73dc0c4f53c476876855831402261c",
+    "941cce744278d677655d01ef71f4dfa4943352e7e477ce66efcbd5233c4db975"
+  ]
+}
