@@ -31,6 +31,29 @@ initialization because the query and tied answer embedding make copy
 an unusually easy control; this should not be interpreted as trained
 reasoning.
 
+The actual first-row **attention probability** makes the distinction
+sharp. On these 128 two-hop development episodes, linked means were
+0.062677 and 0.062675 across seeds; unlinked means were 0.062499 and
+0.062500. There are 16 visible rows, so uniform attention is 0.062500.
+The linked model is ranking the right row first while assigning it
+almost exactly uniform *mass*. The second target-row means were
+0.063525 and 0.063443 linked, also near uniform. This supplemental
+mass check was computed after the registered initialization count
+check and is descriptive.
+
+There is a simple source-based calculation for this behavior. At
+initialization each symbol-coordinate has variance 0.02²; the shared
+512×512 linear map's default weight variance is approximately
+1/(3×512). Hence the expected same-symbol key self-dot is about
+512×0.02²/3 = 0.0683, and the attention's division by √512 makes its
+expected score advantage roughly 0.0030. For 16 otherwise near-equal
+rows, the corresponding softmax mass is
+`exp(0.0030)/(15+exp(0.0030)) ≈ 0.06268`.
+This approximation ignores task-vector cross terms, correlations
+and the learned update; it predicts the observed *first*-read mean
+closely without fitting any data. It explains why an apparently
+perfect argmax can coexist with useless value transport.
+
 A separate, post hoc read of the already audited TEACH-0021 old-reader
 archive reinforces the need to inspect attention **mass**, not only
 argmax. On clean-correct two-hop episodes, mean probability assigned to
