@@ -1,0 +1,941 @@
+{
+  "archives": {
+    "confirmation": {
+      "bytes": 598820,
+      "sha256": "63e75cfd68748f45017437dd23db21be2eebf005f78a0ecca016b289b4a03bbd"
+    },
+    "discovery": {
+      "bytes": 599545,
+      "sha256": "04e86e6d730edeff9fbbd1876d8b33f2e81c20257de33348a05c70cc42b17b11"
+    }
+  },
+  "experiment": "TEACH-0016-relative-rank-counterexample",
+  "manifest_sha256": {
+    "confirmation": "b74cbb61271b2a0a0c3f74e782bc04e042d8ae38f95103ea3c8b4163bfc1f8f3",
+    "discovery": "b9a9aa091b7cdb8940ecbb944566989e68781c8984a75e2394885302e0bbafb5"
+  },
+  "neural_model_loaded": false,
+  "scores": {
+    "confirmation": {
+      "candidate_order_robust_state_pending_replay": true,
+      "control_margins": {
+        "distinct": 0.9554140127388535,
+        "pointer": 1.0,
+        "random": 0.9380750176928521,
+        "wrong_key": 1.0
+      },
+      "full_per_order_source_recipient": {
+        "0,0,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,0,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,0,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,1,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,1,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,1,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,2,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,2,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,2,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,0,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,0,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,0,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,1,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,1,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,1,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,2,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,2,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,2,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        }
+      },
+      "full_per_source_recipient": {
+        "0,0": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "0,1": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "0,2": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "1,0": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "1,1": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "1,2": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "2,0": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "2,1": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "2,2": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        }
+      },
+      "groups": 128,
+      "interpretation": "candidate_pending_replay",
+      "per_order_source_recipient": {
+        "0,0,0": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "0,0,1": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "0,0,2": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "0,1,0": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "0,1,1": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "0,1,2": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "0,2,0": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "0,2,1": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "0,2,2": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "1,0,0": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "1,0,1": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "1,0,2": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "1,1,0": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "1,1,1": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "1,1,2": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "1,2,0": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "1,2,1": {
+          "accuracy": 1.0,
+          "correct": 471,
+          "total": 471
+        },
+        "1,2,2": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "per_source_recipient": {
+        "0,0": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "0,1": {
+          "accuracy": 1.0,
+          "correct": 942,
+          "total": 942
+        },
+        "0,2": {
+          "accuracy": 1.0,
+          "correct": 942,
+          "total": 942
+        },
+        "1,0": {
+          "accuracy": 1.0,
+          "correct": 942,
+          "total": 942
+        },
+        "1,1": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "1,2": {
+          "accuracy": 1.0,
+          "correct": 942,
+          "total": 942
+        },
+        "2,0": {
+          "accuracy": 1.0,
+          "correct": 942,
+          "total": 942
+        },
+        "2,1": {
+          "accuracy": 1.0,
+          "correct": 942,
+          "total": 942
+        },
+        "2,2": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "same_key_positive_control_pass": true,
+      "scores": {
+        "base_clean": {
+          "accuracy": 1.0,
+          "correct": 5652,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5652
+        },
+        "distinct": {
+          "accuracy": 0.044585987261146494,
+          "correct": 252,
+          "group_bootstrap_95": [
+            0.018749025467775467,
+            0.07563025210084033
+          ],
+          "total": 5652
+        },
+        "free": {
+          "accuracy": 1.0,
+          "correct": 2808,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2808
+        },
+        "full_same_key": {
+          "accuracy": 1.0,
+          "correct": 9216,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 9216
+        },
+        "full_transfer": {
+          "accuracy": 1.0,
+          "correct": 9216,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 9216
+        },
+        "non_injection": {
+          "accuracy": 1.0,
+          "correct": 5652,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5652
+        },
+        "pointer": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "group_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "total": 5652
+        },
+        "random": {
+          "accuracy": 0.061924982307147915,
+          "correct": 350,
+          "group_bootstrap_95": [
+            0.055374001452432826,
+            0.06824565184513007
+          ],
+          "total": 5652
+        },
+        "reverse_eligible": {
+          "accuracy": 1.0,
+          "correct": 5652,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5652
+        },
+        "reverse_full": {
+          "accuracy": 1.0,
+          "correct": 5652,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5652
+        },
+        "rich": {
+          "accuracy": 1.0,
+          "correct": 2844,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2844
+        },
+        "same_key": {
+          "accuracy": 1.0,
+          "correct": 5652,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5652
+        },
+        "source_order_0": {
+          "accuracy": 1.0,
+          "correct": 2826,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2826
+        },
+        "source_order_1": {
+          "accuracy": 1.0,
+          "correct": 2826,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2826
+        },
+        "target_clean": {
+          "accuracy": 1.0,
+          "correct": 5652,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5652
+        },
+        "transfer": {
+          "accuracy": 1.0,
+          "correct": 5652,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5652
+        },
+        "triples": {
+          "accuracy": 1.0,
+          "correct": 2826,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2826
+        },
+        "wrong_key": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "group_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "total": 5652
+        }
+      },
+      "shifted_offdiag_attempts": 5652,
+      "shifted_surface_pairs": 942
+    },
+    "discovery": {
+      "candidate_order_robust_state_pending_replay": true,
+      "control_margins": {
+        "distinct": 0.9135021097046414,
+        "pointer": 1.0,
+        "random": 0.9361814345991561,
+        "wrong_key": 1.0
+      },
+      "full_per_order_source_recipient": {
+        "0,0,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,0,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,0,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,1,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,1,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,1,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,2,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,2,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "0,2,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,0,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,0,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,0,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,1,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,1,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,1,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,2,0": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,2,1": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        },
+        "1,2,2": {
+          "accuracy": 1.0,
+          "correct": 512,
+          "total": 512
+        }
+      },
+      "full_per_source_recipient": {
+        "0,0": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "0,1": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "0,2": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "1,0": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "1,1": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "1,2": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "2,0": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "2,1": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        },
+        "2,2": {
+          "accuracy": 1.0,
+          "correct": 1024,
+          "total": 1024
+        }
+      },
+      "groups": 128,
+      "interpretation": "candidate_pending_replay",
+      "per_order_source_recipient": {
+        "0,0,0": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "0,0,1": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "0,0,2": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "0,1,0": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "0,1,1": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "0,1,2": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "0,2,0": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "0,2,1": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "0,2,2": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "1,0,0": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "1,0,1": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "1,0,2": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "1,1,0": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "1,1,1": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "1,1,2": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "1,2,0": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "1,2,1": {
+          "accuracy": 1.0,
+          "correct": 474,
+          "total": 474
+        },
+        "1,2,2": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "per_source_recipient": {
+        "0,0": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "0,1": {
+          "accuracy": 1.0,
+          "correct": 948,
+          "total": 948
+        },
+        "0,2": {
+          "accuracy": 1.0,
+          "correct": 948,
+          "total": 948
+        },
+        "1,0": {
+          "accuracy": 1.0,
+          "correct": 948,
+          "total": 948
+        },
+        "1,1": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        },
+        "1,2": {
+          "accuracy": 1.0,
+          "correct": 948,
+          "total": 948
+        },
+        "2,0": {
+          "accuracy": 1.0,
+          "correct": 948,
+          "total": 948
+        },
+        "2,1": {
+          "accuracy": 1.0,
+          "correct": 948,
+          "total": 948
+        },
+        "2,2": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "same_key_positive_control_pass": true,
+      "scores": {
+        "base_clean": {
+          "accuracy": 1.0,
+          "correct": 5688,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5688
+        },
+        "distinct": {
+          "accuracy": 0.08649789029535865,
+          "correct": 492,
+          "group_bootstrap_95": [
+            0.0502092050209205,
+            0.1276595744680851
+          ],
+          "total": 5688
+        },
+        "free": {
+          "accuracy": 1.0,
+          "correct": 2928,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2928
+        },
+        "full_same_key": {
+          "accuracy": 1.0,
+          "correct": 9216,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 9216
+        },
+        "full_transfer": {
+          "accuracy": 1.0,
+          "correct": 9216,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 9216
+        },
+        "non_injection": {
+          "accuracy": 1.0,
+          "correct": 5688,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5688
+        },
+        "pointer": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "group_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "total": 5688
+        },
+        "random": {
+          "accuracy": 0.06381856540084388,
+          "correct": 363,
+          "group_bootstrap_95": [
+            0.05759764474459311,
+            0.06997275152267596
+          ],
+          "total": 5688
+        },
+        "reverse_eligible": {
+          "accuracy": 1.0,
+          "correct": 5688,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5688
+        },
+        "reverse_full": {
+          "accuracy": 1.0,
+          "correct": 5688,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5688
+        },
+        "rich": {
+          "accuracy": 1.0,
+          "correct": 2760,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2760
+        },
+        "same_key": {
+          "accuracy": 1.0,
+          "correct": 5688,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5688
+        },
+        "source_order_0": {
+          "accuracy": 1.0,
+          "correct": 2844,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2844
+        },
+        "source_order_1": {
+          "accuracy": 1.0,
+          "correct": 2844,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2844
+        },
+        "target_clean": {
+          "accuracy": 1.0,
+          "correct": 5688,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5688
+        },
+        "transfer": {
+          "accuracy": 1.0,
+          "correct": 5688,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 5688
+        },
+        "triples": {
+          "accuracy": 1.0,
+          "correct": 2844,
+          "group_bootstrap_95": [
+            1.0,
+            1.0
+          ],
+          "total": 2844
+        },
+        "wrong_key": {
+          "accuracy": 0.0,
+          "correct": 0,
+          "group_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "total": 5688
+        }
+      },
+      "shifted_offdiag_attempts": 5688,
+      "shifted_surface_pairs": 948
+    }
+  },
+  "source_git_head": "cd0fac97299cd0c936c69b255ea2910fe620bc4d",
+  "source_sha256": {
+    "docs/experiments/TEACH-0016-relative-rank-counterexample.md": "2d491ea5d811b58d382e57c2cdb20808424433d358ba5031d89c62684ce20d25",
+    "scripts/teacher0016_rank_audit.py": "82ca9ff57d758f6703ef874d3482b655bf886433a6d14943cffeac09ecf76219",
+    "scripts/teacher0016_rank_counterexample.py": "0c1f35877d12d08e40af79671945573b799491e5e5802fa8431aec4540637555",
+    "tests/test_teacher0016_rank_counterexample.py": "5daf219d3f5f57544b5e2fb545b80b63451c68f2101c543ec6cc21595220c739"
+  },
+  "state_definition": "ordinal_of_first_hop_key_among_sorted_visible_left_operands",
+  "status": "symbolic_visible_only"
+}
