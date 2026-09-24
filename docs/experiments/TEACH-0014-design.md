@@ -1,0 +1,83 @@
+# TEACH-0014 design review: latent edge workspace
+
+**Status: post-TEACH-0012 design, not yet a preregistered launch.** This document fixes the scientific question, interfaces, comparison logic and acceptance criteria to guide implementation. Exact code-level configuration, seed schedule, suite hashes, resource projection and independent auditor must be frozen in a subsequent registration **before** any TEACH-0014 model training or confirmation inspection. TEACH-0012's exposed suite is never reused as fresh confirmation.
+
+## Why this experiment exists
+
+TEACH-0012's independent audit passed, its parsed-row control nearly solved the task, and its 42M raw model failed even first-hop and direct lookup. Copying mostly worked. The registered raw-binding result is negative. This points to an input-to-relation failure class, but cannot tell whether the raw model failed to find edge boundaries, store the edge, address the correct left side, carry the returned symbol into a second read, or optimize that entire chain from answer labels. TEACH-0014 will make these interfaces visible and test them separately. It is synthetic method qualification, not a Voynich reading.
+
+## Source basis and transfer limits
+
+- [Slot Attention](https://proceedings.neurips.cc/paper/2020/hash/8511df98c02ab60aea1b2356c013bc0f-Abstract.html) motivates competitive, exchangeable relation slots. Its evidence is for perceptual objects; a slot here is only a proposed episode-local edge record. Its index is permutation-indeterminate.
+- [Key-Value Memory Networks](https://aclanthology.org/D16-1147/) separate address encodings from returned content. That is directly relevant because TEACH-0012 could sometimes emit a visible right-hand-side candidate without selecting the queried row.
+- [Neural algorithmic reasoning with causal regularisation](https://proceedings.mlr.press/v202/bevilacqua23a.html) uses transformations that preserve an intermediate computation to improve size generalization. Our transformations have exact synthetic semantics, but its graph-algorithm results do not predict our scores.
+- [Causal abstraction via interchange training](https://proceedings.mlr.press/v162/geiger22a.html) motivates a correct versus deranged interchange-objective comparison. Causal supervision must be labeled as such; success under it cannot be called answer-only discovery.
+- [D3PM](https://proceedings.neurips.cc/paper/2021/hash/958c530554f78bcd8e97125b70e6973d-Abstract.html) supports absorbing-mask discrete corruption. We will test diffusion as a latent edge-set refiner under equal network evaluations. Text likelihood or edge-reconstruction loss alone cannot establish a useful solver.
+- [MuZero](https://www.nature.com/articles/s41586-020-03051-4) and [DreamerV3](https://www.nature.com/articles/s41586-025-08744-2) motivate action-conditioned latent transitions that preserve task-relevant variables. We borrow the world-state/action factorization for controlled graph edits, without rewards, tree search or imagined robot trajectories.
+- Voynich-specific work such as [Reddy and Knight](https://aclanthology.org/W11-1511/) documents unresolved structural questions; [Hauer and Kondrak](https://aclanthology.org/Q16-1006/) tests a specified cipher/anagram family and illustrates how model flexibility can produce suggestive outputs. These works do not apply latent workspaces to Voynich or supply ground-truth edges. Our corpus review in `docs/research/PRIOR_WORK.md` also covers neural Voynich predictors, embeddings and saliency. Passing a generated edge task would license only a subsequent known-cipher/known-language recovery test, with physical-folio, transcription and semantic anchors still outstanding.
+
+## New synthetic data
+
+Use a fresh namespace and fresh logical-family hashes. Retain one shared 2,048-symbol pool, episode-local roles, prefix/infix/suffix/bare serialization, 0–2 gaps, movable/deletable `EDGE` markers, four signal chains and 0–8 two-edge distractor chains. This yields **8–24 shuffled relation rows** on two-hop episodes; four-hop episodes can have **up to 32 rows**. No F/G type tag, correct-row pointer, row boundary or intermediate-key label is supplied to the answer-only arm. Every logical graph, its rerenders and all counterfactual variants belong to one split. Train on one- and two-hop tasks; add separate three- and four-hop confirmation panels using the same shared read transition.
+
+The new suite adds two adversaries: harmless symbol aliases in irrelevant rows, and false paths sharing exactly one endpoint with the true path. Cross hop count with total length and distractors, so length alone cannot determine the required number of reads. Preserve the TEACH-0012 two-hop crossed-family, four-query, F-by-G factorial, order, distractor and marker-boundary panels, with at least 128 independent logical groups per grouped panel. Add 192-token/eight-distractor, alias, false-path, three-hop and four-hop panels. A single logical group's linked items count as one unit for exact-group accuracy and intervals.
+
+The generator must independently verify unique task answers, single-valued row functions, split membership, max length, counterfactual distinctions and the complete expected grid. It must save raw visible tokens, logical edges, row-span truth **for evaluation only**, surface metadata, source seeds and SHA-256 identifiers. **In the current two-operand grammar, stripping `EDGE` and `GAP` tokens and pairing consecutive ordinary symbols recovers every row exactly, even when all markers are dropped.** A direct check reconstructed the serialized rows on 7,000 newly generated TEACH-0012 episodes across 0–6 distractor chains and marker dropout 0, .25, .50 and 1.0. This check uses the generator for comparison; it is a grammar diagnostic, not an independent audit. An independent public-grammar parser must be run as an additional ceiling. Learned edge extraction here tests whether a network can acquire that deterministic pairing, not whether it discovers an unknown language grammar. A later variable-arity or uncertain-boundary study would need its own identifiability audit.
+
+## Primary architecture and observable interfaces
+
+1. A width-384 or width-512 bidirectional token-occurrence encoder reads the already complete episode body and retains all token states for every later read. The answer is predicted only after the whole body and query are available, so bidirectional encoding does not expose a future target. The dense matched arm receives the same visible input and bidirectional access. Exact depth and width will be frozen after source construction and before the benchmark.
+2. A learned parser scores possible ordered edge spans and produces **40 exchangeable candidate edge slots**, enough for the 32-row four-hop maximum with spare capacity. A span proposal may use local token order and the known serialization alphabet, but it receives neither gold row spans nor row IDs. Use a differentiable nonoverlap constraint or competitive normalization so all slots cannot attend to the same easy pair. Save span scores, slot confidence and occurrence provenance.
+3. Each candidate writes distinct address (`K`) and returned-value (`V`) vectors. The relation workspace has no slot-index positional encoding. Permuting slot order together with its K/V entries must leave logits unchanged within numerical tolerance.
+4. A query state performs a content-addressed read, updates a persistent bottleneck using a shared transition, and repeats for the requested hop count. Keep original token and slot states available at every transition; the next read must depend on the previous returned value. Save per-hop query states, address logits, read vectors, update states and answer logits.
+5. A separately labeled action-conditioned branch predicts the changed relation state after `swap-F`, `remap-G`, row reorder, marker deletion or distractor addition. The branch is trained only in the causal-objective arms. Surface actions should preserve the semantic edge set; F/G actions should change the designated edge. Match slots by edge content or optimal assignment, never by raw slot number.
+6. A four-step absorbing-mask discrete refiner is an optional architectural arm, replacing the deterministic candidate-edge refinement. It must use the same candidate source, supervision and downstream reader and match network evaluations and approximate parameters with a four-step recurrent refiner. Its denoising targets are synthetic auxiliary labels, so any gain is explicitly supervised.
+
+The architecture will expose hooks for address-only, value-only, full-slot, first-read-state, second-read-state and encoder-residual interventions. Implementing hooks before training prevents a post hoc redefinition of the causal site.
+
+## Frozen comparison logic for implementation
+
+The implementation registration should contain these eight arms, each with two fixed seeds and identical logical episode exposure. All code-level adjustments must precede the source freeze or be preserved as explicit amendments.
+
+| Arm | Difference | What it tests |
+| --- | --- | --- |
+| `oracle_rows_workspace` | Exact row spans from the public strip-and-pair grammar supplied to the same K/V reader | Executor and optimization positive control; no learned parsing claim |
+| `latent_rows_answer` | Raw parser, K/V memory, recurrent reader, answer loss only | Main answer-only raw claim |
+| `latent_rows_causal` | Same model plus correct matched graph-action/interchange losses | Whether exact interventional supervision helps |
+| `latent_rows_wrong_causal` | Same auxiliary losses with within-cell deranged targets | Generic auxiliary regularization control |
+| `latent_rows_one_read` | Same parser/memory/parameters, only one effective relation read | Need for sequential retrieval |
+| `latent_rows_mean_address` | Same value workspace but query-independent address weights | Need for content addressing |
+| `raw_dense_matched` | Raw Transformer matched as closely as feasible on parameters, updates and measured network evaluations | Whether interface design helps beyond dense compute |
+| `latent_rows_diffuse` | Four absorbing-mask edge-refinement steps before the same reader | Whether diffusion helps under matched evaluations |
+
+The action-conditioned branch is an auxiliary objective comparison, not an automatic world-model claim. The diffusion arm must be compared with a recurrent four-step refiner using identical auxiliary edge labels; if no compute-matched recurrent counterpart fits the eight-arm envelope, report diffusion as descriptive only and do not issue a diffusion advantage label. Parameter counts, measured applications and wall time must all be reported; matching one does not imply matching the others. A shuffled composed-label null can be a separate cheaper validity run if its cost fits the benchmark envelope; it remains mandatory for leakage validation even if it is not one of the eight main arms.
+
+## Measurements and prospective decision tree
+
+Measure answer behavior first on final checkpoints. The parsed oracle must pass first/direct ≥95%, copy ≥98%, all two-hop crossed cells ≥90%, F/G query exact groups ≥85%, factorial exact groups ≥75%, order/distractor exact groups ≥80%, boundary exact groups ≥70%, marker-free ≥80%, long/eight-distractor ≥80%, three-hop ≥75% and four-hop ≥60% in both seeds. If the oracle fails, issue `EXECUTOR/OPTIMIZATION INCOMPLETE` and do not diagnose the raw parser from downstream answers.
+
+For the answer-only raw arm, require the same absolute two-hop gates in both seeds and at least a 15-point advantage over `raw_dense_matched`, `latent_rows_one_read` and `latent_rows_mean_address` on factorial exact groups and marker-free/long adversarial items. Three-hop and four-hop thresholds are a separate `ALGORITHMIC-EXTRAPOLATION` label; a two-hop pass cannot borrow that label. The null must remain ≤35% jointly held-out composition and ≤10% factorial groups, otherwise the suite is invalid pending leakage investigation. Correct causal supervision must beat deranged causal supervision by 15 points on factorial and marker-free panels before claiming a specific supervision benefit. Auxiliary-supervised success does not convert a failed answer-only arm into unsupervised raw qualification.
+
+Parser diagnostics use optimal bipartite matching between predicted edge slots and true synthetic rows, with confidence threshold frozen on development. Report edge precision/recall, complete signal-table exactness and a frozen symbolic interpreter applied to predicted discrete edges. A `PARSER-QUALIFIED` label requires both seeds to reach ≥95% signal-edge precision and recall on marked rows, ≥90% on fully marker-free rows, ≥85% complete table exactness on marked, ≥70% marker-free, ≥90% symbolic two-hop item accuracy and ≥85% exact factorial groups. Parser labels diagnose a generated relation task; they are not gold inputs to the answer-only model.
+
+Failure labels are assigned in this order:
+
+1. Oracle fails → `EXECUTOR/OPTIMIZATION INCOMPLETE`.
+2. Oracle passes, parser/symbolic gates fail, and exact-row injection rescues ≥40 points on two-hop and factorial → `PARSING BOTTLENECK`.
+3. Parser/symbolic gates pass but native answers fail → `MEMORY/ROUTING BOTTLENECK`; use target-row address mass and exact intermediate injection to separate first address, state update, second address and readout failures.
+4. Parser and oracle executor separately pass, native model fails, and injecting its own correctly matched slots into a separately qualified executor rescues → `PARSER–EXECUTOR INTERFACE MISMATCH`.
+5. Behavior passes but finite causal key transfer fails → behavior is shortcut-compatible; no mechanism support label.
+
+All diagnostic thresholds and the order of these labels must be implemented in a separate no-model auditor before training. The labels cannot be chosen by looking at a few favorable examples.
+
+## Mechanistic interpretation after behavioral qualification
+
+Use fresh discovery and confirmation families, with the mediator and any rank selected only on discovery. Reuse one unchanged donor first-read state across three independently remapped recipient G tables. A true reusable-key state should produce each recipient's `G_j(k_donor)`. A fixed donor answer reveals answer injection. Run both directions, marked/marker-free/order/distractor/alias surfaces, full denominators, and controls for wrong key, wrong hop, full donor answer state, address only, value only, slot permutation, norm-matched random, group derangement and equal-energy off-subspace corruption. Test necessity, native-state restoration and exact full-logit identity before support.
+
+For J-space/neuron analysis, compute Jacobian or VJP effects of first-read query and read-result perturbations on recipient-specific answer contrasts. Compare discovery-fitted causal subspaces, orthogonal complements, matched-rank random subspaces and native top-neuron sets. A local cosine or singular vector is descriptive until a finite edit changes the output correctly across new G tables; a neuron name requires both necessity and rescue in both seeds. Cross-seed alignment uses one discovery-fitted map and a deranged-map control, with bidirectional confirmation. The existing TEACH-0013 code is a methodological reference, not an eligible analysis of the TEACH-0012 failures.
+
+## Resource and audit admission
+
+The frozen launch protocol will use a source-matched 24-update MPS benchmark for every arm, including backward pass, and project all two-seed training plus evaluation at a 1.5× safety factor. Candidate envelope: 6,000 updates/arm, batch 32–64, maximum 192 tokens, no more than eight accelerator-hours, 12 GiB sampled MPS and 4 GiB retained artifacts. These are proposed ceilings, not a claim that the architecture fits. If the benchmark fails, stop before scientific training and amend the design openly; do not silently shrink the trained model after seeing confirmation. No paid API or external service is budgeted.
+
+Before training, freeze generator, model, trainer, hooks, auditor, tests, seeds, splits, source hashes, exact metrics and resource guards in Git. The no-model auditor must regenerate the logical suite/oracles and split assignments; verify expected row union, predictions, exact logits where interventions are used, checkpoint/loss hashes, control seeds, decision calculations and resource ceilings. It cannot by itself prove that every optimizer step ran or that saved checkpoint weights generated archived logits, so numerical replay checks should cover a deterministic sample. Failed and inconclusive runs remain recorded.
