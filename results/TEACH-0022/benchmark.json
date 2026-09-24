@@ -1,0 +1,67 @@
+{
+  "artifact_bytes": 10899200,
+  "config": {
+    "batch": 32,
+    "init_seeds": [
+      84121,
+      84131
+    ],
+    "learning_rate": 0.0003,
+    "max_artifact_bytes": 2147483648,
+    "max_mps_bytes": 12884901888,
+    "max_seconds": 14400,
+    "route_weight": 0.2,
+    "steps": 6000,
+    "train_seeds": [
+      84221,
+      84231
+    ]
+  },
+  "conservative_projected_seconds": 4896.742473071208,
+  "elapsed_seconds": 6.626666541000304,
+  "experiment": "TEACH-0022",
+  "measured": {
+    "linked_answer": {
+      "median_timed_step_seconds": 0.06086454150135978,
+      "parameters": 24242178,
+      "timed_steps": 20
+    },
+    "linked_route": {
+      "median_timed_step_seconds": 0.07401374950131867,
+      "parameters": 24242178,
+      "timed_steps": 20
+    },
+    "unlinked_route": {
+      "median_timed_step_seconds": 0.06396841699825018,
+      "parameters": 24766465,
+      "timed_steps": 20
+    }
+  },
+  "mode": "benchmark",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "sampled_mps_bytes": 0,
+  "source_head": "83fbac622ffd1aff602e55cdeb64df5232bf1d5b",
+  "source_sha256": {
+    "docs/experiments/TEACH-0022-linked-reader.md": "8517e2ccf15963b19d66b45b1fd8b3bb7d583716e15c383cf2a380fd1769c134",
+    "scripts/teacher0014_artifact_audit.py": "f28f80cf1709b0e7fafe2f6f5f9d21956e7079a23175ef76b2b904955a357bfb",
+    "scripts/teacher0014_behavior_audit.py": "5b02ec858fb83b67b2b3a14ad419285525b13a8e20485fec08728a8cbece71a8",
+    "scripts/teacher0014_suite_audit.py": "5212b244f30d8e9a3aa66c8c8c0710fc6337faf6813f71324bcf5933df31a9c8",
+    "scripts/teacher0020_dev_run.py": "790e2ffeb3bea3c6379762c9ef9cb95b1f3aa17ae98859fdb855fd56e15e795c",
+    "scripts/teacher0022_audit.py": "33e5917f88f1e033116e68fef3e62d94a9ac20d36163c64969503c42ba953f53",
+    "scripts/teacher0022_replay.py": "a197cbc9ba2813fba729f406cca99b1a9ae5e35180c9426e48bf70735d04b750",
+    "scripts/teacher0022_score.py": "7032d27c47c0402cd7248fc7b11581004f6f45131bdcd9a4088d36b72a624581",
+    "scripts/teacher0022_suite.py": "71f31758b083c19360bac7548e56d00eaba0feb530a19b5ca4fb81601552129c",
+    "scripts/teacher0022_suite_audit.py": "3d34ff4428652ae8468013ca90e2858bd6cb289b8b2bed3d2c85bf2f5e81e4f7",
+    "scripts/teacher0022_train.py": "2eb7366e0a8e9474f708fd782079b413d038413faab338ff36ce7d4046c47245",
+    "src/voynich/workspace/teacher14_models.py": "826315c68e7d33b790376d94a7ae1e0eaea1a22bb64d9b5ef58b50adf966db51",
+    "src/voynich/workspace/teacher14_objectives.py": "c24fd048246d6e909141e2dd8af4d242932a8596d66b989ef1155b18b4eb5878",
+    "src/voynich/workspace/teacher14_tasks.py": "13ebd25a575843c3da87ca8df95eab371be61836e1407c6a80a908e3c96c03fd",
+    "src/voynich/workspace/teacher14_train.py": "ffad4fc6be5b87bc00e54e70d4ef5c0cb9bc875301e9a8b77661e813a2b0e9b8",
+    "src/voynich/workspace/teacher22_models.py": "5f56010ef86c0e4913f123f469ae0349b830a79cd1e15bdad4417224f630ca79",
+    "tests/test_teacher0022_campaign.py": "3c39877b789d1448f48b56555ba7cc45d7556a630446278003d46d562c169089",
+    "tests/test_teacher0022_models.py": "48861bd10c56eaea6039980ac63076e163c220cf354d258e28e2b1b1006e7c47"
+  },
+  "status": "pass",
+  "torch_version": "2.14.0",
+  "worst_median_seconds": 0.07401374950131867
+}

@@ -104,6 +104,19 @@ Write atomic per-run checkpoints and progress with enough optimizer
 state to resume an interrupted run without changing its example
 stream; never infer liveness from a status file alone.
 
+**Prospective resource-reporting correction after random-weight benchmark,
+before training or new-checkpoint inference:** The first source-frozen
+`benchmark.json` did enforce the 12-GiB cap at every timed step and
+projected 4,896.74 seconds under four hours, but its final
+`sampled_mps_bytes` field read zero after unloading the model. It did
+not retain the **peak** sampled allocation, so it is insufficient as
+the final resource record. Preserve that first benchmark, add explicit
+peak tracking to benchmark/training/scoring statuses, and rerun the
+identical 24-step resource procedure in `benchmark-v2.json` under a
+new committed source revision. Do not change arms, suite, objectives,
+seeds, 6,000 steps or decision thresholds. Only a passing source-matched
+v2 benchmark may admit training.
+
 Independent audit checks source and dataset hashes, every checkpoint
 identity, exact per-step input/label hashes against the prior baseline,
 all panel/row denominators, decision arithmetic and artifact sizes.

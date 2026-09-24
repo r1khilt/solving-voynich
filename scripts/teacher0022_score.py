@@ -103,7 +103,7 @@ def score(root: Path) -> dict:
                   "source_head"], "source_sha256": source["source_sha256"],
               "training_status_sha256": sha(result_dir / "status.json"),
               "suite_audit_sha256": sha(result_dir / "suite-audit.json"),
-              "archives": {}}
+              "archives": {}, "peak_sampled_mps_bytes": 0}
     write_json(status_path, status)
     try:
         with torch.no_grad():
@@ -142,6 +142,9 @@ def score(root: Path) -> dict:
                         status["progress"] = {"arm": arm, "replicate": rep,
                                               "seed": seed}
                         status.update(_resource(root, start))
+                        status["peak_sampled_mps_bytes"] = max(
+                            status["peak_sampled_mps_bytes"],
+                            status["sampled_mps_bytes"])
                         write_json(status_path, status)
                     del model, optimizer, saved
                     torch.mps.empty_cache()

@@ -31,6 +31,7 @@ LR = 3e-4
 MAX_SECONDS = 4 * 3600
 MAX_MPS_BYTES = 12 * 1024**3
 MAX_ARTIFACT_BYTES = 2 * 1024**3
+BENCHMARK_NAME = "benchmark-v2.json"
 SOURCE_PATHS = (
     "docs/experiments/TEACH-0022-linked-reader.md",
     "src/voynich/workspace/teacher14_tasks.py",
@@ -188,7 +189,7 @@ def benchmark(root: Path) -> dict:
         raise RuntimeError("MPS required")
     source = provenance(root)
     result_dir = root / "results/TEACH-0022"
-    path = result_dir / "benchmark.json"
+    path = result_dir / BENCHMARK_NAME
     if path.exists():
         raise FileExistsError("No automatic benchmark rerun")
     result_dir.mkdir(parents=True, exist_ok=True)
@@ -199,6 +200,7 @@ def benchmark(root: Path) -> dict:
               "platform": platform.platform(), **source}
     write_json(path, report)
     measured = {}
+    peak_mps = 0
     try:
         for arm in ARMS:
             model, optimizer = new_arm(arm, 0, "mps")
@@ -210,11 +212,13 @@ def benchmark(root: Path) -> dict:
                 if step >= 4:
                     times.append(time.monotonic() - before)
                 resource = _resource(root, start)
+                peak_mps = max(peak_mps, resource["sampled_mps_bytes"])
             measured[arm] = {
                 "parameters": model.parameter_count,
                 "median_timed_step_seconds": statistics.median(times),
                 "timed_steps": 20}
-            report.update({"measured": measured, **resource})
+            report.update({"measured": measured,
+                           "peak_sampled_mps_bytes": peak_mps, **resource})
             write_json(path, report)
             del model, optimizer
             torch.mps.empty_cache()
@@ -224,6 +228,7 @@ def benchmark(root: Path) -> dict:
         report.update({"status": "pass" if projection < MAX_SECONDS else "stop",
                        "worst_median_seconds": worst,
                        "conservative_projected_seconds": projection,
+                       "peak_sampled_mps_bytes": peak_mps,
                        **_resource(root, start)})
         write_json(path, report)
         return report
@@ -247,7 +252,7 @@ def train(root: Path, *, resume: bool = False) -> dict:
     source = provenance(root)
     result_dir = root / "results/TEACH-0022"
     output_dir = root / "outputs/TEACH-0022"
-    benchmark_path = result_dir / "benchmark.json"
+    benchmark_path = result_dir / BENCHMARK_NAME
     bench = json.loads(benchmark_path.read_text())
     if (bench.get("status") != "pass" or bench["source_sha256"] != source[
             "source_sha256"] or bench["config"] != json.loads(json.dumps(
@@ -275,9 +280,11 @@ def train(root: Path, *, resume: bool = False) -> dict:
                   "source_sha256": source["source_sha256"],
                   "suite_audit_sha256": sha(result_dir / "suite-audit.json"),
                   "benchmark_sha256": sha(benchmark_path),
-                  "baseline": baseline, "runs": {}}
+                  "baseline": baseline, "runs": {},
+                  "peak_sampled_mps_bytes": 0}
         write_json(status_path, status)
-    start = time.monotonic()
+    start = time.monotonic() - (float(status.get("elapsed_seconds", 0.0))
+                                if resume else 0.0)
     try:
         for arm in ARMS:
             status["runs"].setdefault(arm, {})
@@ -288,9 +295,7 @@ def train(root: Path, *, resume: bool = False) -> dict:
                 model, optimizer = new_arm(arm, rep, "mps")
                 progress_path = output_dir / f"current-rep{rep}-{arm}.pt"
                 trace_path = result_dir / f"losses-rep{rep}-{arm}.json.gz"
-                if resume:
-                    if not progress_path.exists():
-                        raise ValueError("Interrupted run lacks optimizer checkpoint")
+                if resume and progress_path.exists():
                     saved = torch.load(progress_path, map_location="cpu",
                                        weights_only=True)
                     if (saved["arm"] != arm or saved["replicate"] != rep or
@@ -308,6 +313,9 @@ def train(root: Path, *, resume: bool = False) -> dict:
                     trace.append(row)
                     if step % 100 == 99 or step == STEPS - 1:
                         resource = _resource(root, start)
+                        status["peak_sampled_mps_bytes"] = max(
+                            status["peak_sampled_mps_bytes"],
+                            resource["sampled_mps_bytes"])
                         status["runs"][arm][key] = {
                             "status": "running", "next_step": step + 1,
                             **resource}
@@ -337,6 +345,9 @@ def train(root: Path, *, resume: bool = False) -> dict:
                     "loss_sha256": sha(trace_path),
                     "parameters": model.parameter_count,
                     **_resource(root, start)}
+                status["peak_sampled_mps_bytes"] = max(
+                    status["peak_sampled_mps_bytes"],
+                    status["runs"][arm][key]["sampled_mps_bytes"])
                 write_json(status_path, status)
                 del model, optimizer
                 torch.mps.empty_cache()

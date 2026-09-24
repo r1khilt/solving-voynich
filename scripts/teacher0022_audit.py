@@ -106,7 +106,7 @@ def audit(root: Path) -> dict:
     result_dir = root / "results/TEACH-0022"
     trained_path = result_dir / "status.json"
     score_path = result_dir / "score-status.json"
-    benchmark_path = result_dir / "benchmark.json"
+    benchmark_path = result_dir / "benchmark-v2.json"
     suite_path = result_dir / "suite-audit.json"
     trained = json.loads(trained_path.read_text())
     score = json.loads(score_path.read_text())
@@ -127,7 +127,8 @@ def audit(root: Path) -> dict:
             benchmark["config"]["route_weight"] != .2 or
             benchmark["conservative_projected_seconds"] >= 4 * 3600 or
             trained["artifact_bytes"] > 2 * 1024**3 or
-            trained["sampled_mps_bytes"] > 12 * 1024**3):
+            trained["peak_sampled_mps_bytes"] > 12 * 1024**3 or
+            benchmark["peak_sampled_mps_bytes"] > 12 * 1024**3):
         raise ValueError("Resource/config gate differs")
     head = trained["source_head"]
     if set(trained["source_sha256"]) != set(SOURCE_PATHS) or (
