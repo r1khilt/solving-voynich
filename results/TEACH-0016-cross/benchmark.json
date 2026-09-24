@@ -1,0 +1,94 @@
+{
+  "admitted": true,
+  "artifact_bytes": 0,
+  "conservative_projected_seconds": 5071.2430079989135,
+  "cross_git_head": "d258775cc693d56829dcc2e36e2a37b387a1bf4e",
+  "cross_source_sha256": {
+    "docs/experiments/TEACH-0016-cross-order-execution-registration.md": "5bebdd40b1bd55bc834a31dd810071c1a6347e2c5dec05110e37d7c739177e3e",
+    "docs/experiments/TEACH-0016-cross-order-registration.md": "f920d365af4e8380a75b59ee7862e2d311aee0006bc33c6808074a18c79c5da6",
+    "scripts/teacher0016_cross_audit.py": "d810d2afc3fcc88c770782c5bfc192c76a46f4e215e753b64cb69c77a45a69af",
+    "scripts/teacher0016_cross_replay.py": "d6442252b60dc90360921d711bace20cf22f18066e82360d9d22de2c566295d6",
+    "scripts/teacher0016_cross_result_audit.py": "fb2b8c302dfaa55aafcbe1678b83422cf16ecc1bad48528969543b362582766e",
+    "scripts/teacher0016_cross_run.py": "73771fd03e65cf8b9ecf11908e954c6d13aa8412dfdd68670d779a57b21a65c1",
+    "scripts/teacher0016_cross_score.py": "09c4984dafa66307403137e1d92852f319df669488ccce16f8a40d76fddf8d67",
+    "src/voynich/workspace/teacher16_intervene.py": "0ce1e9364bcdc4d8acfb3497bca6ccd61485de72c8ea36e084af15f8c69e4de2",
+    "tests/test_teacher0016_cross_audit.py": "b12af05eb0a7ffa87d54548a3494c3f79631a8b382a1cb6e8aaefc7d614df120",
+    "tests/test_teacher0016_cross_replay.py": "7dd138b9bfa44934c9a5ccdaee207b17ca749a60936814527b7229ca987ddc4e",
+    "tests/test_teacher0016_cross_result_audit.py": "b145a5a9304cb034ec25323c5cf2587954e0561e23fe138074aefaf62be02edf",
+    "tests/test_teacher0016_cross_score.py": "a84e3f141f370b95da5f80a5783aa4d0233885422fa2ab2ae6bdc210c3983646",
+    "tests/test_teacher0016_intervene.py": "0d5fc7edf51ac52981ecf2bce09ebcbd06bd8f15c2db6d1491c1b127c156ad47"
+  },
+  "elapsed_seconds": 7.064264916998582,
+  "experiment": "TEACH-0016-cross-order",
+  "manifest_sha256": {
+    "confirmation": "102e3d902dd36882d0901b5d51ba09bbb09af5bf5422e3e2cc90fbb1359ea55f",
+    "discovery": "57e95bf3c56083055f896be005dc5da05eb764021ad0817a784ff46c0cb82139"
+  },
+  "max_artifact_bytes": 3221225472,
+  "max_mps_bytes": 12884901888,
+  "max_seconds": 14400,
+  "peak_sampled_mps_allocated_bytes": 100081920,
+  "sampled_mps_allocated_bytes": 100081920,
+  "slowest_type_median_seconds": 0.22187699999994948,
+  "suite_file_sha256": {
+    "confirmation": "b74cbb61271b2a0a0c3f74e782bc04e042d8ae38f95103ea3c8b4163bfc1f8f3",
+    "discovery": "b9a9aa091b7cdb8940ecbb944566989e68781c8984a75e2394885302e0bbafb5"
+  },
+  "timed_surfaces": 24,
+  "timings_seconds": {
+    "0": [
+      0.21439554099924862,
+      0.2190199999986362,
+      0.22023920900028315
+    ],
+    "1": [
+      0.22855750000053376,
+      0.19734925000011572,
+      0.22187699999994948
+    ],
+    "2": [
+      0.217383625000366,
+      0.21661895800025377,
+      0.2081566249999014
+    ],
+    "3": [
+      0.20744487499905517,
+      0.19736041699979978,
+      0.20757624999896507
+    ],
+    "4": [
+      0.2189343749996624,
+      0.220516958999724,
+      0.22978458399848023
+    ],
+    "5": [
+      0.20797358399977384,
+      0.21563970900024287,
+      0.2258453330014163
+    ],
+    "6": [
+      0.20290412499889499,
+      0.19282912500057137,
+      0.20328141699974367
+    ],
+    "7": [
+      0.20073224999941885,
+      0.1957709590005834,
+      0.20077137500084064
+    ]
+  },
+  "vector_names": [
+    "base_native",
+    "target_native",
+    "source_native",
+    "same_key_native",
+    "wrong_source_native",
+    "distinct_source_native",
+    "random_replacement",
+    "wrong_replacement",
+    "distinct_replacement",
+    "source_final_native"
+  ],
+  "warmup_surfaces": 8,
+  "worst_case_surfaces": 12288
+}
