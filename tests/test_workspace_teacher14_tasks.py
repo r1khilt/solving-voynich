@@ -6,8 +6,8 @@ import pytest
 
 from voynich.workspace.teacher14_tasks import (
     ANSWER, BOS, COMPOSE, EDGE, GAP, HOP3, HOP4, SYMBOL_START,
-    RenderSpec, evaluation_suite, make_episode, rows_oracle, sample_episode, strip_pair_rows,
-    training_batch, visible_oracle,
+    RenderSpec, causal_training_batch, evaluation_suite, make_episode, rows_oracle,
+    sample_episode, strip_pair_rows, training_batch, visible_oracle,
 )
 
 
@@ -124,3 +124,18 @@ def test_training_stream_is_arm_matched_and_null_changes_only_labels():
     assert any(a != b for a, b in zip(labels, null_labels, strict=True))
     assert [item.render_id for item in training_batch(74444, 64, step=0)[0]] == [
         item.render_id for item in episodes]
+
+
+def test_causal_pair_requires_recipient_specific_second_read():
+    pairs = causal_training_batch(74611, 16, step=0)
+    assert len({pair.pair_id for pair in pairs}) == 16
+    for pair in pairs:
+        donor_key = rows_oracle(pair.donor.rows, pair.donor.query, 1)
+        assert pair.targets == tuple(rows_oracle(base.rows, donor_key, 1)
+                                     for base in pair.bases)
+        assert pair.targets[0] == pair.fixed_donor_answer
+        assert pair.targets[1] != pair.fixed_donor_answer
+        assert pair.bases[0].answer != pair.targets[0]
+        assert pair.bases[1].answer != pair.targets[1]
+        assert all(item.stage_partitions == ("train", "train")
+                   for item in (pair.donor, *pair.bases))

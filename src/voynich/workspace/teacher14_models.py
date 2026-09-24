@@ -29,6 +29,7 @@ MAX_CANDIDATES = 63
 class WorkspaceOutput:
     logits: torch.Tensor
     cache: dict[str, torch.Tensor]
+    auxiliary: dict[str, torch.Tensor]
 
 
 class BidirectionalBlock(nn.Module):
@@ -289,6 +290,7 @@ class CandidateEdgeWorkspace(nn.Module):
         state = self.symbol(query_ids) + self.task(marker)
         initial_query = state
         state = self._hook("query.0", state, interventions, cache)
+        first_state = state
         for index in range(4):
             active = hops > index
             if not bool(active.any().item()):
@@ -304,9 +306,65 @@ class CandidateEdgeWorkspace(nn.Module):
             state = torch.where(active[:, None], updated, state)
             state = self._hook(f"query.{index + 1}", state,
                                interventions, cache)
+            if index == 0:
+                first_state = state
             if cache is not None:
                 cache[f"read.{index}.address_logits"] = address_logits
                 cache[f"read.{index}.attention"] = attention
         logits = self.unembedding(self.final_norm(state))
         logits = self._hook("answer.logits", logits, interventions, cache)
-        return WorkspaceOutput(logits, {} if cache is None else cache)
+        return WorkspaceOutput(
+            logits, {} if cache is None else cache,
+            {"edge_gate_logits": gate_logits, "candidate_mask": mask,
+             "first_state": first_state})
+
+
+class DenseEpisodeClassifier(nn.Module):
+    """Bidirectional raw control with comparable width, parameters and input."""
+
+    def __init__(self, layers: int = 9):
+        super().__init__()
+        self.symbol = nn.Embedding(VOCAB_SIZE, WIDTH)
+        self.position = nn.Embedding(192, WIDTH)
+        self.blocks = nn.ModuleList(BidirectionalBlock() for _ in range(layers))
+        self.final_norm = nn.RMSNorm(WIDTH)
+        self.unembedding = nn.Linear(WIDTH, VOCAB_SIZE, bias=False)
+        self.unembedding.weight = self.symbol.weight
+        nn.init.normal_(self.symbol.weight, std=.02)
+        nn.init.normal_(self.position.weight, std=.02)
+
+    @property
+    def parameter_count(self) -> int:
+        return sum(parameter.numel() for parameter in self.parameters())
+
+    def forward(self, ids: torch.Tensor, *, capture: bool = False) -> WorkspaceOutput:
+        if ids.ndim != 2 or ids.shape[1] > 192:
+            raise ValueError("Expected B×T episodes at most 192 tokens long")
+        valid = ids.ne(PAD)
+        lengths = valid.sum(dim=1)
+        batch = torch.arange(ids.shape[0], device=ids.device)
+        if not bool((ids[batch, lengths - 1] == ANSWER).all().item()):
+            raise ValueError("Every episode must end at ANSWER")
+        position = torch.arange(ids.shape[1], device=ids.device)[None, :]
+        x = (self.symbol(ids) + self.position(position)) * valid[:, :, None]
+        cache: dict[str, torch.Tensor] | None = {} if capture else None
+        for index, block in enumerate(self.blocks):
+            x = block(x, valid, cache=cache, prefix=f"dense.{index}")
+        state = x[batch, lengths - 1]
+        logits = self.unembedding(self.final_norm(state))
+        return WorkspaceOutput(logits, {} if cache is None else cache, {})
+
+
+def public_edge_loss(output: WorkspaceOutput) -> torch.Tensor:
+    """Auxiliary supervision from the visible two-operand pairing grammar."""
+    if not {"edge_gate_logits", "candidate_mask"} <= set(output.auxiliary):
+        raise ValueError("Candidate-edge auxiliary tensors required")
+    logits = output.auxiliary["edge_gate_logits"]
+    mask = output.auxiliary["candidate_mask"]
+    if logits.shape != mask.shape or mask.dtype != torch.bool:
+        raise ValueError("Malformed candidate-edge auxiliary tensors")
+    truth = (torch.arange(logits.shape[1], device=logits.device) % 2 == 0)
+    truth = truth[None, :].expand_as(logits)
+    losses = F.binary_cross_entropy_with_logits(
+        logits, truth.to(logits.dtype), reduction="none")
+    return losses.masked_select(mask).mean()

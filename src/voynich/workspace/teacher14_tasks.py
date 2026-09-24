@@ -85,6 +85,15 @@ class Episode:
         return self.signal_rows + self.distractor_rows
 
 
+@dataclass(frozen=True)
+class CausalPair:
+    donor: Episode
+    bases: tuple[Episode, Episode]
+    targets: tuple[int, int]
+    fixed_donor_answer: int
+    pair_id: str
+
+
 def rows_oracle(rows: tuple[tuple[int, int], ...], query: int, hops: int) -> int:
     """Follow the unique outgoing edge the requested number of times."""
     if not 0 <= hops <= 4:
@@ -542,3 +551,75 @@ def suite_manifest(suite: dict[str, list[Episode]], *, seed: int,
         "group_count": group_count,
         "panels": json.loads(json.dumps(panels)),
     }
+
+
+def causal_pair(rng: random.Random, *, spec: RenderSpec,
+                distractors: int = 4) -> CausalPair:
+    """Same donor first-hop key against two independently valued G recipients."""
+    if not 0 <= distractors <= 6:
+        raise ValueError("Causal training distractors outside [0,6]")
+    for _ in range(100_000):
+        base = sample_episode(
+            rng, signal_hops=2, task="composed", distractors=distractors,
+            spec=spec, stage_partitions=("train", "train"))
+        f0 = base.signal_paths
+        f1_list = list(f0)
+        f1_list[0] = (f0[1][0], *f0[0][1:])
+        f1_list[1] = (f0[0][0], *f0[1][1:])
+        f1 = tuple(f1_list)
+        f1_rows = tuple((path[0], path[1]) for path in f1)
+        if family_partition("stage-0", f1_rows) != "train":
+            continue
+        used = {symbol for path in f0 + base.distractor_paths for symbol in path}
+        available = tuple(symbol for symbol in range(SYMBOL_START, VOCAB_SIZE)
+                          if symbol not in used)
+        new_objects = rng.sample(available, 4)
+        g1_f0 = tuple((path[0], path[1], new_objects[index])
+                      for index, path in enumerate(f0))
+        g1_f1 = tuple((path[0], path[1], new_objects[index])
+                      for index, path in enumerate(f1))
+        g1_rows = tuple((path[1], path[2]) for path in g1_f0)
+        if family_partition("stage-1", g1_rows) != "train":
+            continue
+        query = f0[0][0]
+        donor = make_episode(
+            f1, base.distractor_paths, task="composed", query=query,
+            rng=random.Random(rng.randrange(2**63)), spec=spec)
+        base0 = rerender(
+            base, random.Random(rng.randrange(2**63)), spec, query=query)
+        base1 = make_episode(
+            g1_f0, base.distractor_paths, task="composed", query=query,
+            rng=random.Random(rng.randrange(2**63)), spec=spec)
+        recipient1 = make_episode(
+            g1_f1, base.distractor_paths, task="composed", query=query,
+            rng=random.Random(rng.randrange(2**63)), spec=spec)
+        episodes = (donor, base0, base1, recipient1)
+        if any(item.stage_partitions != ("train", "train") for item in episodes):
+            raise RuntimeError("Causal pair leaked out of training families")
+        targets = (donor.answer, recipient1.answer)
+        if (len(set((base0.answer, targets[0], base1.answer, targets[1]))) != 4 or
+                targets[1] == donor.answer):
+            raise RuntimeError("Causal pair does not distinguish recipient tables")
+        pair_id = digest({
+            "donor": donor.logical_id,
+            "base0": base0.logical_id,
+            "base1": base1.logical_id,
+            "target": targets,
+        })
+        return CausalPair(donor, (base0, base1), targets, donor.answer, pair_id)
+    raise RuntimeError("Could not sample causal training pair")
+
+
+def causal_training_batch(seed: int, groups: int, *, step: int
+                          ) -> list[CausalPair]:
+    if groups <= 0 or not 0 <= step < 6000:
+        raise ValueError("Invalid causal training groups or step")
+    rng = random.Random(seed)
+    pairs = []
+    for _ in range(groups):
+        spec = RenderSpec(
+            marker_dropout=rng.choice((0.0, .25, .5, 1.0)),
+            max_gaps=rng.randint(0, 2),
+            styles=("prefix", "infix", "suffix"))
+        pairs.append(causal_pair(rng, spec=spec, distractors=rng.randint(0, 6)))
+    return pairs

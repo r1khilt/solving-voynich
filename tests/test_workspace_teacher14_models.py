@@ -6,7 +6,9 @@ import pytest
 import torch
 import torch.nn.functional as F
 
-from voynich.workspace.teacher14_models import CandidateEdgeWorkspace
+from voynich.workspace.teacher14_models import (
+    CandidateEdgeWorkspace, DenseEpisodeClassifier, public_edge_loss,
+)
 from voynich.workspace.teacher14_tasks import (
     COMPOSE, DIRECT, PAD, RenderSpec, sample_episode,
 )
@@ -156,3 +158,24 @@ def test_four_hop_eight_distractor_case_uses_all_63_candidates():
     assert output.cache["edge_gate_logits"].shape == (1, 63)
     assert all(f"read.{step}.attention" in output.cache for step in range(4))
     assert torch.isfinite(output.logits).all()
+
+
+def test_dense_control_matches_parameters_and_edge_aux_is_finite():
+    rng = random.Random(140120)
+    episode = sample_episode(
+        rng, signal_hops=2, task="composed", distractors=3,
+        spec=RenderSpec(.25, 2, ("prefix", "infix", "suffix")))
+    ids = _batch([episode])
+    torch.manual_seed(20)
+    workspace = CandidateEdgeWorkspace()
+    dense = DenseEpisodeClassifier()
+    assert abs(dense.parameter_count / workspace.parameter_count - 1) < .001
+    workspace_output = workspace(ids)
+    dense_output = dense(ids)
+    assert dense_output.logits.shape == workspace_output.logits.shape
+    loss = public_edge_loss(workspace_output)
+    assert torch.isfinite(loss) and loss.item() > 0
+    loss.backward()
+    assert workspace.edge_gate.weight.grad is not None
+    with pytest.raises(ValueError, match="auxiliary tensors required"):
+        public_edge_loss(dense_output)
