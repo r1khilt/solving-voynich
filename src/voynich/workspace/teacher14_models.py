@@ -1,7 +1,6 @@
 """Intervention-ready candidate-edge workspace for the TEACH-0014 design phase.
 
-Only oracle, answer-only, one-read and mean-address variants exist here. This
-module is not a frozen training campaign or a successful mechanism result.
+This is not a frozen training campaign or a successful mechanism result.
 """
 
 from dataclasses import dataclass
@@ -127,11 +126,17 @@ class CandidateEdgeWorkspace(nn.Module):
     """Raw occurrence encoder, learned candidate gate, K/V memory and hop reader."""
 
     def __init__(self, *, oracle_rows: bool = False, one_read: bool = False,
-                 mean_address: bool = False):
+                 mean_address: bool = False,
+                 refinement: str = "standard"):
         super().__init__()
+        if refinement not in ("standard", "recurrent4", "diffusion4"):
+            raise ValueError("Unknown edge refinement")
+        if oracle_rows and refinement != "standard":
+            raise ValueError("Oracle rows cannot use a raw edge refiner")
         self.oracle_rows = oracle_rows
         self.one_read = one_read
         self.mean_address = mean_address
+        self.refinement = refinement
         self.symbol = nn.Embedding(VOCAB_SIZE, WIDTH)
         self.position = nn.Embedding(192, WIDTH)
         self.encoder = nn.ModuleList(
@@ -140,6 +145,10 @@ class CandidateEdgeWorkspace(nn.Module):
         self.pair_distance = nn.Embedding(4, WIDTH)
         self.parser = nn.ModuleList(
             BidirectionalBlock() for _ in range(PARSER_LAYERS))
+        if refinement != "standard":
+            self.refine_block = BidirectionalBlock()
+            # 0/1 are edge decisions; 2 is the absorbing MASK state.
+            self.edge_state = nn.Embedding(3, WIDTH)
         self.edge_gate = nn.Linear(WIDTH, 1)
         self.key_proj = nn.Linear(WIDTH, WIDTH, bias=False)
         self.value_proj = nn.Linear(WIDTH, WIDTH, bias=False)
@@ -159,7 +168,87 @@ class CandidateEdgeWorkspace(nn.Module):
         nn.init.normal_(self.position.weight, std=.02)
         nn.init.normal_(self.task.weight, std=.02)
         nn.init.normal_(self.pair_distance.weight, std=.02)
+        if self.refinement != "standard":
+            nn.init.normal_(self.edge_state.weight, std=.02)
         nn.init.constant_(self.edge_gate.bias, 0.0)
+
+    @staticmethod
+    def _reveal(logits: torch.Tensor, state: torch.Tensor,
+                valid: torch.Tensor, step: int) -> tuple[torch.Tensor, torch.Tensor]:
+        """Deterministically unmask the most confident remaining candidates."""
+        remaining = valid & state.eq(2)
+        confidence = logits.abs().masked_fill(~remaining, -torch.inf)
+        count = valid.sum(dim=1)
+        desired = ((step + 1) * count + 3) // 4
+        reveal_count = (desired - (valid & state.ne(2)).sum(dim=1)).clamp(min=0)
+        next_state = state.clone()
+        revealed = torch.zeros_like(valid)
+        for item in range(logits.shape[0]):
+            n = int(reveal_count[item].item())
+            if n:
+                indices = confidence[item].topk(n).indices
+                next_state[item, indices] = logits[item, indices].ge(0).long()
+                revealed[item, indices] = True
+        return next_state, revealed
+
+    def _refine(self, feature: torch.Tensor, mask: torch.Tensor,
+                cache: dict[str, torch.Tensor] | None,
+                *, initial_state: torch.Tensor | None = None,
+                steps: int = 4) -> tuple[torch.Tensor, torch.Tensor]:
+        if self.refinement == "standard":
+            raise ValueError("Four-step refiner required")
+        state = (torch.full(mask.shape, 2, dtype=torch.long, device=mask.device)
+                 if initial_state is None else initial_state)
+        if state.shape != mask.shape or state.dtype != torch.long or bool(
+                ((state < 0) | (state > 2)).any().item()):
+            raise ValueError("Invalid edge corruption state")
+        hidden = feature
+        step_logits = []
+        selected_logits = torch.zeros(mask.shape, device=feature.device,
+                                      dtype=feature.dtype)
+        for step in range(steps):
+            hidden = self.refine_block(
+                hidden + feature + self.edge_state(state), mask,
+                cache=cache, prefix=f"refine.{step}")
+            logits = self.edge_gate(hidden).squeeze(-1)
+            step_logits.append(logits)
+            if self.refinement == "diffusion4" and initial_state is None:
+                state, revealed = self._reveal(logits.detach(), state, mask, step)
+                selected_logits = torch.where(revealed, logits, selected_logits)
+        if cache is not None:
+            cache["refine.final_state"] = state
+        gates = selected_logits if self.refinement == "diffusion4" and (
+            initial_state is None) else step_logits[-1]
+        return gates, torch.stack(step_logits, dim=1)
+
+    def denoise_edges(self, feature: torch.Tensor, mask: torch.Tensor,
+                      truth: torch.Tensor, *, time_step: int,
+                      uniform: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor]:
+        """Absorbing-mask q_t corruption and masked-edge denoising objective.
+
+        Both four-step arms must run this fifth, q_t-conditioned evaluation
+        during training. They then receive identical visible-grammar labels and
+        network-evaluation counts; only the inference feedback differs.
+        """
+        if self.refinement == "standard":
+            raise ValueError("Denoising requires a four-step refiner")
+        if not 1 <= time_step <= 4 or truth.shape != mask.shape or (
+                uniform.shape != mask.shape):
+            raise ValueError("Invalid absorbing-mask corruption inputs")
+        if truth.dtype != torch.bool or bool(((uniform < 0) | (uniform >= 1)).any().item()):
+            raise ValueError("Invalid edge labels or corruption uniforms")
+        hidden_mask = mask & uniform.lt(time_step / 4)
+        if not bool(hidden_mask.any().item()):
+            candidate = uniform.masked_fill(~mask, torch.inf).argmin(dim=1)
+            hidden_mask[torch.arange(mask.shape[0], device=mask.device), candidate] = True
+        state = truth.long().masked_fill(hidden_mask, 2)
+        # One q_t-conditioned denoising evaluation, distinct from the
+        # four-pass all-mask inference trajectory used for answer prediction.
+        logits, _ = self._refine(feature, mask, None,
+                                 initial_state=state, steps=1)
+        loss = F.binary_cross_entropy_with_logits(
+            logits[hidden_mask], truth[hidden_mask].to(logits.dtype))
+        return loss, hidden_mask
 
     @property
     def parameter_count(self) -> int:
@@ -181,7 +270,8 @@ class CandidateEdgeWorkspace(nn.Module):
     def _raw_slots(self, ids: torch.Tensor, body_valid: torch.Tensor,
                    interventions: dict[str, torch.Tensor] | None,
                    cache: dict[str, torch.Tensor] | None
-                   ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+                   ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor,
+                              torch.Tensor, torch.Tensor, torch.Tensor | None]:
         batch, length = ids.shape
         position = torch.arange(length, device=ids.device)[None, :]
         x = (self.symbol(ids) + self.position(position)) * body_valid[:, :, None]
@@ -202,7 +292,12 @@ class CandidateEdgeWorkspace(nn.Module):
         for index, block in enumerate(self.parser):
             feature = block(feature, candidate_mask, cache=cache,
                             prefix=f"parser.{index}")
-        gate_logits = self.edge_gate(feature).squeeze(-1)
+        if self.refinement == "standard":
+            gate_logits = self.edge_gate(feature).squeeze(-1)
+            step_logits = None
+        else:
+            gate_logits, step_logits = self._refine(
+                feature, candidate_mask, cache)
         gate_logits = self._hook("edge_gate_logits", gate_logits,
                                  interventions, cache)
         keys = self.key_proj(left_symbol)
@@ -213,7 +308,9 @@ class CandidateEdgeWorkspace(nn.Module):
             cache["candidate_left_ids"] = left_ids
             cache["candidate_right_ids"] = right_ids
             cache["candidate_mask"] = candidate_mask
-        return keys, values, gate_logits, candidate_mask
+            if step_logits is not None:
+                cache["edge_step_logits"] = step_logits
+        return keys, values, gate_logits, candidate_mask, feature, step_logits
 
     def _oracle_slots(self, row_left: torch.Tensor, row_right: torch.Tensor,
                       row_mask: torch.Tensor
@@ -283,7 +380,7 @@ class CandidateEdgeWorkspace(nn.Module):
                 raise ValueError("Raw model must not receive oracle rows")
             positions = torch.arange(ids.shape[1], device=ids.device)[None, :]
             body_valid = valid & (positions < (lengths - 3)[:, None])
-            keys, values, gate_logits, mask = self._raw_slots(
+            keys, values, gate_logits, mask, features, step_logits = self._raw_slots(
                 ids, body_valid, interventions, cache)
         keys = self._hook("memory.keys", keys, interventions, cache)
         values = self._hook("memory.values", values, interventions, cache)
@@ -313,10 +410,13 @@ class CandidateEdgeWorkspace(nn.Module):
                 cache[f"read.{index}.attention"] = attention
         logits = self.unembedding(self.final_norm(state))
         logits = self._hook("answer.logits", logits, interventions, cache)
-        return WorkspaceOutput(
-            logits, {} if cache is None else cache,
-            {"edge_gate_logits": gate_logits, "candidate_mask": mask,
-             "first_state": first_state})
+        auxiliary = {"edge_gate_logits": gate_logits, "candidate_mask": mask,
+                     "first_state": first_state}
+        if not self.oracle_rows:
+            auxiliary["candidate_features"] = features
+            if step_logits is not None:
+                auxiliary["edge_step_logits"] = step_logits
+        return WorkspaceOutput(logits, {} if cache is None else cache, auxiliary)
 
 
 class DenseEpisodeClassifier(nn.Module):
@@ -368,3 +468,19 @@ def public_edge_loss(output: WorkspaceOutput) -> torch.Tensor:
     losses = F.binary_cross_entropy_with_logits(
         logits, truth.to(logits.dtype), reduction="none")
     return losses.masked_select(mask).mean()
+
+
+def refinement_edge_loss(output: WorkspaceOutput) -> torch.Tensor:
+    """The same public-grammar label at each of four refiner evaluations."""
+    if "edge_step_logits" not in output.auxiliary:
+        raise ValueError("Four-step refinement logits required")
+    logits = output.auxiliary["edge_step_logits"]
+    mask = output.auxiliary["candidate_mask"]
+    if logits.ndim != 3 or logits.shape[1] != 4 or (
+            logits.shape[0], logits.shape[2]) != mask.shape:
+        raise ValueError("Malformed four-step refinement logits")
+    truth = (torch.arange(logits.shape[2], device=logits.device) % 2 == 0)
+    losses = F.binary_cross_entropy_with_logits(
+        logits, truth[None, None, :].expand_as(logits).to(logits.dtype),
+        reduction="none")
+    return losses.masked_select(mask[:, None, :].expand_as(losses)).mean()

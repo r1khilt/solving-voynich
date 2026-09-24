@@ -8,6 +8,7 @@ import torch.nn.functional as F
 
 from voynich.workspace.teacher14_models import (
     CandidateEdgeWorkspace, DenseEpisodeClassifier, public_edge_loss,
+    refinement_edge_loss,
 )
 from voynich.workspace.teacher14_tasks import (
     COMPOSE, DIRECT, PAD, RenderSpec, sample_episode,
@@ -179,3 +180,67 @@ def test_dense_control_matches_parameters_and_edge_aux_is_finite():
     assert workspace.edge_gate.weight.grad is not None
     with pytest.raises(ValueError, match="auxiliary tensors required"):
         public_edge_loss(dense_output)
+
+
+def test_four_step_refiners_have_matched_parameters_and_edge_supervision():
+    rng = random.Random(140121)
+    episode = sample_episode(
+        rng, signal_hops=2, task="composed", distractors=1,
+        spec=RenderSpec(.5, 1, ("prefix", "infix", "suffix")))
+    ids = _batch([episode])
+    torch.manual_seed(21)
+    recurrent = CandidateEdgeWorkspace(refinement="recurrent4")
+    diffuse = CandidateEdgeWorkspace(refinement="diffusion4")
+    diffuse.load_state_dict(recurrent.state_dict())
+    assert recurrent.parameter_count == diffuse.parameter_count
+    final_states = []
+    outputs = []
+    for model in (recurrent, diffuse):
+        model.eval()
+        output = model(ids, capture=True)
+        steps = output.auxiliary["edge_step_logits"]
+        mask = output.auxiliary["candidate_mask"]
+        assert steps.shape == (1, 4, mask.shape[1])
+        assert all(f"refine.{step}.residual" in output.cache for step in range(4))
+        assert torch.isfinite(refinement_edge_loss(output))
+        assert torch.isfinite(output.logits).all()
+        final_states.append(output.cache["refine.final_state"])
+        outputs.append(output)
+    assert final_states[0].eq(2).all()
+    assert final_states[1][mask].ne(2).all()
+    assert torch.equal(final_states[1][mask],
+                       output.auxiliary["edge_gate_logits"][mask].ge(0).long())
+    torch.testing.assert_close(
+        outputs[0].auxiliary["edge_step_logits"][:, 0],
+        outputs[1].auxiliary["edge_step_logits"][:, 0], rtol=0, atol=0)
+    assert not torch.equal(
+        outputs[0].auxiliary["edge_step_logits"][:, -1],
+        outputs[1].auxiliary["edge_step_logits"][:, -1])
+
+
+def test_absorbing_mask_denoiser_uses_visible_labels_only_on_masked_slots():
+    rng = random.Random(140122)
+    episode = sample_episode(
+        rng, signal_hops=2, task="composed", distractors=1,
+        spec=RenderSpec(.5, 1, ("prefix", "infix", "suffix")))
+    torch.manual_seed(22)
+    model = CandidateEdgeWorkspace(refinement="diffusion4")
+    output = model(_batch([episode]))
+    mask = output.auxiliary["candidate_mask"]
+    truth = (torch.arange(mask.shape[1]) % 2 == 0)[None, :]
+    uniform = torch.ones(mask.shape) * .99
+    loss, corrupted = model.denoise_edges(
+        output.auxiliary["candidate_features"], mask, truth,
+        time_step=1, uniform=uniform)
+    assert corrupted.sum() == 1
+    assert torch.isfinite(loss)
+    total = loss + refinement_edge_loss(output)
+    total.backward()
+    assert model.refine_block.qkv.weight.grad is not None
+    recurrent = CandidateEdgeWorkspace(refinement="recurrent4")
+    recurrent.load_state_dict(model.state_dict())
+    recurrent_features = recurrent(_batch([episode])).auxiliary["candidate_features"]
+    matched_loss, matched_mask = recurrent.denoise_edges(
+        recurrent_features, mask, truth, time_step=1, uniform=uniform)
+    torch.testing.assert_close(loss, matched_loss, rtol=0, atol=0)
+    assert torch.equal(corrupted, matched_mask)

@@ -1,13 +1,18 @@
 """Recipient-specific interchange targets and gradient path."""
 
+import random
+
 import pytest
 import torch
 
 from voynich.workspace.teacher14_models import CandidateEdgeWorkspace
 from voynich.workspace.teacher14_objectives import (
     deranged_interchange_targets, interchange_loss,
+    matched_refinement_objectives, padded_tokens,
 )
-from voynich.workspace.teacher14_tasks import causal_training_batch
+from voynich.workspace.teacher14_tasks import (
+    RenderSpec, causal_training_batch, sample_episode,
+)
 
 
 def test_deranged_targets_preserve_each_recipient_multiset():
@@ -39,3 +44,30 @@ def test_correct_and_wrong_interchange_use_same_inputs_and_backpropagate():
     correct.backward()
     assert model.query_proj.weight.grad is not None
     assert torch.isfinite(model.query_proj.weight.grad).all()
+
+
+def test_four_step_arms_share_corruption_objective_and_fifth_evaluation():
+    episode = sample_episode(
+        random.Random(1415), signal_hops=2, task="composed", distractors=1,
+        spec=RenderSpec(.5, 1, ("prefix", "infix", "suffix")))
+    torch.manual_seed(1415)
+    recurrent = CandidateEdgeWorkspace(refinement="recurrent4")
+    diffuse = CandidateEdgeWorkspace(refinement="diffusion4")
+    diffuse.load_state_dict(recurrent.state_dict())
+    ids = padded_tokens([episode], "cpu")
+    results = []
+    for model in (recurrent, diffuse):
+        output = model(ids)
+        uniform = torch.linspace(.02, .98, output.auxiliary["candidate_mask"].shape[1])[
+            None, :]
+        parts = matched_refinement_objectives(
+            model, output, [episode.answer], time_step=2, uniform=uniform)
+        assert set(parts) == {"answer", "edge_all_steps", "edge_denoise"}
+        assert all(torch.isfinite(loss) for loss in parts.values())
+        results.append(parts)
+    torch.testing.assert_close(results[0]["edge_denoise"],
+                               results[1]["edge_denoise"], rtol=0, atol=0)
+    with pytest.raises(ValueError, match="four-step"):
+        matched_refinement_objectives(
+            CandidateEdgeWorkspace(), recurrent(ids), [episode.answer],
+            time_step=2, uniform=uniform)

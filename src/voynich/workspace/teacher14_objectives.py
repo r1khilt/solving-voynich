@@ -3,7 +3,9 @@
 import torch
 import torch.nn.functional as F
 
-from .teacher14_models import CandidateEdgeWorkspace, WorkspaceOutput
+from .teacher14_models import (
+    CandidateEdgeWorkspace, WorkspaceOutput, refinement_edge_loss,
+)
 from .teacher14_tasks import CausalPair, Episode, PAD, SYMBOL_START
 
 
@@ -24,6 +26,27 @@ def answer_loss(output: WorkspaceOutput, answers: list[int] | torch.Tensor
     if not bool((target >= SYMBOL_START).all().item()):
         raise ValueError("Answer outside ordinary symbol range")
     return F.cross_entropy(output.logits[:, SYMBOL_START:], target - SYMBOL_START)
+
+
+def matched_refinement_objectives(
+        model: CandidateEdgeWorkspace, output: WorkspaceOutput,
+        answers: list[int] | torch.Tensor, *, time_step: int,
+        uniform: torch.Tensor) -> dict[str, torch.Tensor]:
+    """Identical answer, edge and q_t losses for the two four-step arms.
+
+    Objective weights are deliberately left to a later frozen registration.
+    """
+    if model.refinement not in ("recurrent4", "diffusion4"):
+        raise ValueError("Matched objectives require a four-step refiner")
+    mask = output.auxiliary["candidate_mask"]
+    truth = (torch.arange(mask.shape[1], device=mask.device) % 2 == 0)
+    truth = truth[None, :].expand_as(mask)
+    denoise, _ = model.denoise_edges(
+        output.auxiliary["candidate_features"], mask, truth,
+        time_step=time_step, uniform=uniform)
+    return {"answer": answer_loss(output, answers),
+            "edge_all_steps": refinement_edge_loss(output),
+            "edge_denoise": denoise}
 
 
 def deranged_interchange_targets(targets: torch.Tensor) -> torch.Tensor:
