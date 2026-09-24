@@ -1,0 +1,62 @@
+{
+  "admitted": true,
+  "artifact_bytes": 0,
+  "batch_size": 32,
+  "batches_per_arm_seed": 528,
+  "conservative_projected_seconds": 569.7815514208414,
+  "elapsed_seconds": 2.3258505829999194,
+  "experiment": "TEACH-0015-clean-screen",
+  "manifest_sha256": {
+    "confirmation": "941cce744278d677655d01ef71f4dfa4943352e7e477ce66efcbd5233c4db975",
+    "discovery": "ff044ec42ceaaea180a4cde43bbb1bd0dd73dc0c4f53c476876855831402261c"
+  },
+  "max_artifact_bytes": 1073741824,
+  "max_mps_bytes": 12884901888,
+  "max_seconds": 3600,
+  "median_batch_seconds": 0.04866189599943027,
+  "peak_sampled_mps_allocated_bytes": 100081920,
+  "sampled_mps_allocated_bytes": 100081920,
+  "screen_git_head": "44f8a0b27baac251388b8b8fc11871c63acfed06",
+  "screen_source_sha256": {
+    "docs/experiments/TEACH-0015-clean-screen-registration.md": "360053c57874f995adcab993913b2430a23688898ad21a22080a8cd2de57aa93",
+    "scripts/teacher0015_clean_audit.py": "bfcbd2a4da9e994b63418ef0a5f0745f1832010bcd364f22e4873330c77f214f",
+    "scripts/teacher0015_clean_replay.py": "5da95b5ecbbc6df1839aa655007624136d6e0d5c80c1559f30e3c36e0c35c0aa",
+    "scripts/teacher0015_clean_run.py": "05f15ea7f889fe346ae0bd5c32206c1fce2972a686906f37a0626cfbe5005070",
+    "scripts/teacher0015_suite_audit.py": "a1c6cb1832dee4f4977ff1dc30cd1e0ab66c4bf01f130bca4686ba90000cf47a",
+    "src/voynich/workspace/teacher15_tasks.py": "0fe2f3ecb4308d9bd51a658d1c7b19d7cd6506cb0cb29ee718f3b40fab02e7b5",
+    "tests/test_teacher0015_clean_audit.py": "6f9ab191bcc14a4ae8f4f91f8e0fd904b7a09fadef61742b9628b429f651ed60",
+    "tests/test_teacher0015_clean_replay.py": "e9bcd619a05ef4ff2f0c6464a78bf58b3b49734670f7bcaccaec0db917bc05ef"
+  },
+  "suite_file_sha256": {
+    "confirmation": "cc35fef8e0b64cdd0188e2c0dcc8be7da402863affc6d19dd076f977c4bcba69",
+    "discovery": "3714fbc66df69cc53716837e63edcbf0eb72f9cb85aa2aff1aff1438c8d7870e"
+  },
+  "timed_batches": 24,
+  "timings_seconds": [
+    0.05140037500132166,
+    0.046995458000310464,
+    0.06317416700039757,
+    0.04829366699959792,
+    0.05556604199955473,
+    0.041333625000333996,
+    0.040328999999474036,
+    0.05192645800161699,
+    0.0465898330003256,
+    0.05224070800068148,
+    0.04181862500081479,
+    0.039840208999521565,
+    0.04486125000039465,
+    0.06061575000057928,
+    0.051477083999998285,
+    0.049030124999262625,
+    0.04009516599944618,
+    0.035200959000576404,
+    0.06206391700106906,
+    0.05266916599975957,
+    0.06482470799892326,
+    0.04142804199909733,
+    0.03853349999917555,
+    0.06347325000024284
+  ],
+  "warmup_batches": 6
+}

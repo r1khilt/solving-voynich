@@ -1,0 +1,77 @@
+{
+  "admitted": true,
+  "artifact_bytes": 0,
+  "batch_size": 32,
+  "batches_per_seed": 148,
+  "benchmark": "random_weight_full_condition_batches",
+  "conservative_projected_seconds": 1031.4143164995658,
+  "diagnostic_git_head": "44f8a0b27baac251388b8b8fc11871c63acfed06",
+  "diagnostic_source_sha256": {
+    "docs/experiments/TEACH-0014-diagnostic-preregistration.md": "882f1f966ee8506b415a61dc447885f057c69038345f349948ea64f53618fceb",
+    "scripts/teacher0014_diagnostic_audit.py": "d328978dc1d878a53e23da872364c9cc484a8204d18fd9de22eb0e3afcb07567",
+    "scripts/teacher0014_diagnostic_replay.py": "1a5e3d216588b78bb9de4074c7311846362db6057afbe5e15ad2d0871f25fc7b",
+    "scripts/teacher0014_diagnostic_run.py": "7cebdf214f3ab54bc903c4b6ccbca8e8ee79be293e96071592e70a52b8cc23b9",
+    "src/voynich/workspace/teacher14_diagnose.py": "69fb656fe3266b2c0a72a702efc9cfb0b08cc808fd62e4da581978a2da16b749",
+    "tests/test_teacher0014_diagnose.py": "78570cbb55553bf9487a17e16d9e84a6e9898e362522c9a267b84fc8c6b41fa3",
+    "tests/test_teacher0014_diagnostic_audit.py": "6fb7fe027bd09d92058eda09b49f9661b5040e48eed4de4d996d71bdc8e266fd",
+    "tests/test_teacher0014_diagnostic_replay.py": "1b01779e213e3186b297d9d2516cfbfe7c77d9b1392192731cca3eaa6a843d0b"
+  },
+  "elapsed_seconds": 27.734085375001087,
+  "experiment": "TEACH-0014-gate-diagnostic",
+  "max_artifact_bytes": 2147483648,
+  "max_mps_bytes": 12884901888,
+  "max_seconds": 7200,
+  "panel_median_seconds": {
+    "alias_inner": 0.8348132505007015,
+    "boundary_groups": 0.8399298539989104,
+    "copy_confirm": 0.5542014584998469,
+    "factorial": 0.8099978749996808,
+    "hop_4_long_ood": 1.4119967499991617,
+    "long_ood": 0.9992905625003914
+  },
+  "peak_sampled_mps_allocated_bytes": 100081920,
+  "primary_suite_sha256": "9f76e73d8e7ffd2eff5023e106de8fe14378fcb915eee594a43b8d606f243b09",
+  "random_rep": 0,
+  "sampled_mps_allocated_bytes": 100081920,
+  "slowest_panel_median_seconds": 1.4119967499991617,
+  "timed_batches": 24,
+  "timings_seconds": {
+    "alias_inner": [
+      0.8353042920007283,
+      0.8343222090006748,
+      0.829284416999144,
+      0.8407184169991524
+    ],
+    "boundary_groups": [
+      0.7820393329984654,
+      0.8374849159990845,
+      0.8423747919987363,
+      0.8452827500004787
+    ],
+    "copy_confirm": [
+      0.5336095420007041,
+      0.5700135000006412,
+      0.5404010840011324,
+      0.5680018329985614
+    ],
+    "factorial": [
+      0.7951509580016136,
+      0.8044053749999875,
+      0.8516739580009016,
+      0.815590374999374
+    ],
+    "hop_4_long_ood": [
+      1.4101687499987747,
+      1.4138247499995487,
+      1.4011132499999803,
+      1.4299702079988492
+    ],
+    "long_ood": [
+      0.9878638340014732,
+      0.9909022499996354,
+      1.0076788750011474,
+      1.0332984589986154
+    ]
+  },
+  "warmup_batches": 6
+}
