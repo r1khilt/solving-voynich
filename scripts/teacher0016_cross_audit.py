@@ -169,11 +169,19 @@ def audit_cross_surface(
                     other["source_answer"] != anchor["source_answer"] or
                     other["source_render_id"] != anchor["source_render_id"]):
                 raise ValueError("TEACH-0016 source donor changed across G")
-            _close(vectors[a * 3 + b, VECTOR_NAMES.index("source_native")],
-                   vectors[a * 3, VECTOR_NAMES.index("source_native")],
-                   "shared source")
+            for name in ("source_native", "wrong_source_native",
+                         "distinct_source_native", "source_final_native"):
+                _close(vectors[a * 3 + b, VECTOR_NAMES.index(name)],
+                       vectors[a * 3, VECTOR_NAMES.index(name)],
+                       f"shared {name}")
     for b in range(3):
         anchor = rows[b]
+        for a in range(3):
+            _close(vectors[a * 3 + b,
+                           VECTOR_NAMES.index("same_key_native")],
+                   vectors[b * 3 + b,
+                           VECTOR_NAMES.index("source_native")],
+                   "same-key source")
         for a in (1, 2):
             other = rows[a * 3 + b]
             if (other["base_prediction"] != anchor["base_prediction"] or

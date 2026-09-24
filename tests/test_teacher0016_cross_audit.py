@@ -46,6 +46,12 @@ def test_crossed_auditor_accepts_actual_interface_and_rejects_tampering():
         audit_cross_surface(groups[0], groups[1], rows, bad_vectors,
                             distractor=0, marked=True, source_order=0,
                             full_logits=True)
+    bad_vectors = vectors.copy()
+    bad_vectors[1, VECTOR_NAMES.index("same_key_native"), 0] += 1
+    with pytest.raises(ValueError, match="same-key source"):
+        audit_cross_surface(groups[0], groups[1], rows, bad_vectors,
+                            distractor=0, marked=True, source_order=0,
+                            full_logits=True)
     bad_rows = deepcopy(rows)
     bad_rows[4]["transfer_prediction"] = 16
     with pytest.raises(ValueError, match="argmax/logits"):
