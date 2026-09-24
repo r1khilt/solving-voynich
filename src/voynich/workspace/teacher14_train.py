@@ -51,12 +51,14 @@ SOURCE_PATHS = (
     "src/voynich/workspace/teacher14_train.py",
     "scripts/teacher0014_suite_audit.py",
     "scripts/teacher0014_behavior_audit.py",
+    "scripts/teacher0014_artifact_audit.py",
     "tests/test_workspace_teacher14_tasks.py",
     "tests/test_workspace_teacher14_models.py",
     "tests/test_workspace_teacher14_objectives.py",
     "tests/test_teacher0014_suite_audit.py",
     "tests/test_teacher0014_behavior_audit.py",
     "tests/test_workspace_teacher14_train.py",
+    "tests/test_teacher0014_artifact_audit.py",
 )
 LAUNCH_ADMITTED = False
 
@@ -181,19 +183,23 @@ def model_output(model: torch.nn.Module, arm: str, episodes: list,
 
 def one_update(model: torch.nn.Module, optimizer: torch.optim.Optimizer,
                config: Config, replicate: int, arm: str, step: int,
-               device: str) -> dict[str, float]:
+               device: str) -> dict:
     episodes, answers = training_batch(
         config.train_seeds[replicate] + step, config.batch_size, step=step,
         null_composed=arm == "raw_null")
     optimizer.zero_grad(set_to_none=True)
     output = model_output(model, arm, episodes, device)
     components = {"answer": answer_loss(output, answers)}
+    causal_input_sha = None
     if arm == "latent_rows_edge_aux":
         components["edge"] = public_edge_loss(output)
     elif arm in ("latent_rows_causal", "latent_rows_wrong_causal"):
         pairs = causal_training_batch(
             config.train_seeds[replicate] ^ 0x14CA50 ^ step,
             config.causal_groups, step=step)
+        causal_input_sha = _canonical_sha([
+            (pair.donor.render_id, tuple(base.render_id for base in pair.bases))
+            for pair in pairs])
         components["causal"], _ = interchange_loss(
             model, pairs, device,
             wrong_targets=arm == "latent_rows_wrong_causal")
@@ -216,7 +222,13 @@ def one_update(model: torch.nn.Module, optimizer: torch.optim.Optimizer,
     if not bool(torch.isfinite(norm).item()):
         raise RuntimeError(f"Nonfinite {arm} gradients at step {step}")
     optimizer.step()
-    return {key: float(value.detach().item()) for key, value in components.items()}
+    return {"step": step, "losses": {
+        key: float(value.detach().item()) for key, value in components.items()},
+        "gradient_norm": float(norm.item()),
+        "answer_input_sha256": _canonical_sha(
+            [episode.render_id for episode in episodes]),
+        "answer_label_sha256": _canonical_sha(answers),
+        "causal_input_sha256": causal_input_sha}
 
 
 def benchmark(config: Config, result_dir: Path, output_dir: Path) -> dict:
@@ -393,7 +405,7 @@ def run(config: Config, result_dir: Path, output_dir: Path) -> dict:
                     if (step + 1) % 250 == 0:
                         status["progress"] = {"arm": arm, "replicate": replicate,
                                               "step": step + 1,
-                                              "latest_losses": parts,
+                                              "latest_losses": parts["losses"],
                                               "elapsed_seconds": time.monotonic() - start}
                         resource_check(config, start, resource, output_dir,
                                        result_dir,

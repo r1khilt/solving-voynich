@@ -32,6 +32,7 @@ def test_draft_branches_compute_finite_gradients_without_weight_update(monkeypat
     episodes, answers = _development_batch()
     monkeypatch.setattr(campaign, "training_batch",
                         lambda *args, **kwargs: (episodes, answers))
+    records = {}
     for arm in ("oracle_rows_workspace", "latent_rows_edge_aux",
                 "latent_rows_causal", "latent_rows_wrong_causal",
                 "latent_rows_recurrent4", "latent_rows_diffuse"):
@@ -39,10 +40,18 @@ def test_draft_branches_compute_finite_gradients_without_weight_update(monkeypat
         optimizer.step = lambda: None
         parts = campaign.one_update(model, optimizer, campaign.Config(), 0,
                                     arm, 0, "cpu")
-        assert parts and all(torch.isfinite(torch.tensor(value))
-                             for value in parts.values())
+        assert parts["step"] == 0
+        assert all(torch.isfinite(torch.tensor(value))
+                   for value in parts["losses"].values())
+        assert len(parts["answer_input_sha256"]) == 64
+        assert torch.isfinite(torch.tensor(parts["gradient_norm"]))
         assert any(parameter.grad is not None for parameter in model.parameters())
+        records[arm] = parts
         del model, optimizer
+    assert len({row["answer_input_sha256"] for row in records.values()}) == 1
+    assert len({row["answer_label_sha256"] for row in records.values()}) == 1
+    assert records["latent_rows_causal"]["causal_input_sha256"] == (
+        records["latent_rows_wrong_causal"]["causal_input_sha256"])
 
 
 def test_benchmark_and_campaign_remain_closed_before_full_auditor(tmp_path):
