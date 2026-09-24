@@ -51,8 +51,9 @@ TEACH-0015 discovery/confirmation families instead.
 5. **Count-matched random control**: for each episode, select exactly the
    true-row count from all valid candidates with a deterministic seed derived
    from its render ID; assign the same `+20/-20` values. Preserve the chosen
-   indices in the artifact. Use several fixed seeds if the resource
-   benchmark permits; do not cherry-pick the weakest random draw.
+   indices in the artifact. The confirmatory diagnostic uses the single
+   prospectively fixed replicate `0`; additional draws, if any, are exploratory
+   and cannot replace it.
 
 An optional **public-row bypass** constructs an oracle-row variant of the
 same raw checkpoint with identical parameters and supplies rows parsed from
@@ -93,6 +94,9 @@ for TEACH-0015's fresh assay and competence gate.
   distinguishes excess false edges from weak true-edge scores; neither
   changes the primary threshold. Require gold to beat both reversed and
   count-matched random controls by at least35 points on those same measures.
+  For this strict label, both answer-only seeds must separately fail their
+  registered absolute two-hop gate and both must fail their parser gate;
+  a control-margin-only failure is insufficient.
 - If native parser qualifies but native answers fail, report `ROUTING
   BOTTLENECK CANDIDATE`, then describe first/second target-row attention
   and state effects. A more specific first-address, state-update or
@@ -115,6 +119,31 @@ candidate-gate conditions and physical true-edge attention readouts without
 loading any trained checkpoint. Random-weight CPU fixtures verify the native
 identity, row/candidate indexing, deterministic count-matched random mask and
 strong gold-mask suppression. It remains an **interface qualification**:
-trained-checkpoint execution, finite resource estimate, complete result
-archive and independent no-model decision audit must be separately frozen
-and run after the TEACH-0014 primary artifact/replay gates.
+trained-checkpoint execution, finite resource benchmark, complete result
+archive and independent no-model decision audit have not yet run. Their
+interfaces are frozen below for later source-matched execution.
+
+**Prospective execution registration, still before primary neural outcomes.**
+The diagnostic runner covers all19 frozen panels, two answer-only checkpoints,
+and the five gate conditions in batches of32; every batch also evaluates a
+native-gate identity replacement. It stores every ordinary answer and physical
+path readout, with all2,064 logits for the first, middle and final example of
+each panel/condition/seed. The no-model auditor checks every visible answer,
+candidate count, physical target row, all applied gate values including the
+deterministic random assignment,
+native-answer equality against the primary archive, and all registered rescue
+denominators. A separate CPU checkpoint replay checks the sampled intervention
+vectors; the auditor's candidate label is explicitly pending until it passes.
+For gold-minus-native, gold-minus-reversed and gold-minus-random effects on
+factorial exact groups and marker-free boundary items, report paired logical-
+group bootstrap 95% percentile intervals using4,000 resamples and deterministic
+`TEACH-0014-gate-bootstrap` seeds. These intervals describe finite-suite
+uncertainty and do not replace the preregistered point-estimate thresholds.
+The random-weight MPS benchmark runs30 full-condition batches (6 warmup and24
+timed, four per sampled panel), and admits the run only if `1.75 × slowest
+sampled-panel median_batch_time × 2 × complete
+suite_batch_count + 300s` stays below a2-hour wall cap. The run also caps
+sampled MPS allocation at12GiB and diagnostic artifacts at2GiB. Primary
+artifact and sampled checkpoint replay audits must pass before checkpoint
+loading. These ceilings and the source hashes are checked again at execution.
+No paid resources or manuscript text enter this diagnosis.

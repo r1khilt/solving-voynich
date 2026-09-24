@@ -38,6 +38,25 @@ def _target_indices(episode: Episode) -> tuple[int, int]:
     return 2 * rows.index((episode.query, key)), 2 * rows.index((key, answer))
 
 
+def _path_indices(episode: Episode) -> tuple[int, ...]:
+    """Locate requested edges in physical visible order, for any task length."""
+    rows = strip_pair_rows(episode.tokens)
+    mapping = dict(rows)
+    if len(mapping) != len(rows):
+        raise ValueError("Visible rows are not a function")
+    value = episode.query
+    indices = []
+    for _ in range(episode.hops):
+        if value not in mapping:
+            raise ValueError("Requested visible path incomplete")
+        next_value = mapping[value]
+        indices.append(2 * rows.index((value, next_value)))
+        value = next_value
+    if value != episode.answer:
+        raise ValueError("Visible and recorded answers disagree")
+    return tuple(indices)
+
+
 def _gate_conditions(native: torch.Tensor, mask: torch.Tensor,
                      render_id: str, random_rep: int) -> dict[str, torch.Tensor]:
     if native.ndim != 2 or native.shape[0] != 1 or mask.shape != native.shape or (
@@ -130,3 +149,98 @@ def evaluate_episode(model: CandidateEdgeWorkspace, episode: Episode,
             "native_gate_logits": gates[0, :count].float().cpu().tolist(),
             "identity_max_abs_logit_error": identity_error,
             "conditions": conditions}
+
+
+@torch.no_grad()
+def evaluate_batch(model: CandidateEdgeWorkspace, episodes: list[Episode],
+                   *, device: str, random_rep: int = 0) -> list[dict]:
+    """Evaluate all five frozen gate conditions with one forward per batch.
+
+    This includes copy/direct/long-hop panels. A missing read has a null
+    attention value, rather than a fabricated zero-attention observation.
+    Full logits are returned to the caller, which may archive a frozen sample.
+    """
+    if not isinstance(model, CandidateEdgeWorkspace) or model.oracle_rows:
+        raise ValueError("Raw candidate-edge workspace required")
+    if not episodes or type(random_rep) is not int or random_rep < 0:
+        raise ValueError("Nonempty batch and nonnegative random replicate required")
+    paths = [_path_indices(episode) for episode in episodes]
+    rows = [strip_pair_rows(episode.tokens) for episode in episodes]
+    ids = padded_tokens(episodes, device)
+    model.eval()
+    native = model(ids, capture=True)
+    gates = native.auxiliary["edge_gate_logits"]
+    masks = native.auxiliary["candidate_mask"]
+    left = native.cache["candidate_left_ids"]
+    right = native.cache["candidate_right_ids"]
+    assignments = {name: [] for name in CONDITIONS}
+    random_indices = []
+    for index, episode in enumerate(episodes):
+        count = int(masks[index].sum().item())
+        if count != 2 * len(rows[index]) - 1 or tuple(
+                (int(left[index, 2 * row]), int(right[index, 2 * row]))
+                for row in range(len(rows[index]))) != rows[index]:
+            raise ValueError("Candidate occurrences differ from visible rows")
+        choices = _gate_conditions(
+            gates[index:index + 1], masks[index:index + 1],
+            episode.render_id, random_rep)
+        for name in CONDITIONS:
+            assignments[name].append(choices[name])
+        random_indices.append(torch.nonzero(
+            choices["count_random"][0, :count] > 0
+        ).flatten().tolist())
+    replacements = {name: torch.cat(parts, dim=0)
+                    for name, parts in assignments.items()}
+    identity = model(ids, interventions={"edge_gate_logits":
+                                    replacements["native"]})
+    identity_errors = (identity.logits - native.logits).abs().amax(dim=1)
+    if not bool(torch.isfinite(identity_errors).all().item()):
+        raise ValueError("Nonfinite diagnostic identity control")
+
+    observations = [
+        {"render_id": episode.render_id, "answer": episode.answer,
+         "row_count": len(rows[index]),
+         "candidate_count": int(masks[index].sum().item()),
+         "path_candidate_indices": list(paths[index]),
+         "native_gate_logits": gates[index, masks[index]].float().cpu().tolist(),
+         "gate_assignment_logits": {
+             name: replacements[name][index, masks[index]].float().cpu().tolist()
+             for name in CONDITIONS},
+         "random_rep": random_rep,
+         "random_selected_indices": random_indices[index],
+         "identity_max_abs_logit_error": float(identity_errors[index].item()),
+         "conditions": {}}
+        for index, episode in enumerate(episodes)
+    ]
+    for name in CONDITIONS:
+        output = (native if name == "native" else model(
+            ids, interventions={"edge_gate_logits": replacements[name]},
+            capture=True))
+        logits = output.logits.detach().float().cpu()
+        if not bool(torch.isfinite(logits).all().item()):
+            raise ValueError("Nonfinite diagnostic logits")
+        for index, episode in enumerate(episodes):
+            mask = masks[index]
+            false_mask = (torch.arange(mask.numel(), device=mask.device)
+                          .remainder(2).eq(1) & mask)
+            target_attention = []
+            false_attention = []
+            target_rank = []
+            for hop, target in enumerate(paths[index]):
+                attention = output.cache[f"read.{hop}.attention"][index]
+                target_attention.append(float(attention[target].item()))
+                false_attention.append(float(attention[false_mask].sum().item()))
+                target_rank.append(int((attention[mask] > attention[target]).sum(
+                ).item()) + 1)
+            observations[index]["conditions"][name] = {
+                "prediction": _ordinary_prediction(output.logits[index:index + 1]),
+                "logits": logits[index].tolist(),
+                "target_attention": target_attention,
+                "false_attention": false_attention,
+                "target_rank": target_rank,
+                "first_value_norm": (float(output.cache["read.0.value"][index]
+                                           .norm().item()) if episode.hops else None),
+                "first_state_norm": (float(output.cache["query.1"][index]
+                                           .norm().item()) if episode.hops else None),
+            }
+    return observations
