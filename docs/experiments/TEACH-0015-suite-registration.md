@@ -23,8 +23,9 @@ establishes stage-family nonoverlap by the frozen partition function. The
 no-model `scripts/teacher0015_suite_audit.py` reconstructs each visible
 episode's oracle, row positions, partitions and hashes; verifies all66 cells,
 matched physical skeleton/role order, both row permutations, distinct outputs,
-counterfactual targets and cross-split graph/logical nonoverlap. It also
-compares exact IDs with the exposed TEACH-0014 development seed74111/full128,
+counterfactual targets and cross-split signal-stage-family, graph and logical
+nonoverlap. It also compares those signatures with the exposed TEACH-0014
+development seed74111/full128,
 scorer fixture seed74117/size2, and final seed84311/full128 manifests.
 
 The archived JSON manifests are ignored bulk outputs under

@@ -9,6 +9,14 @@ The experiment must receive a separate implementation registration, source
 freeze, independent suite audit and finite resource benchmark before any
 mechanism confirmation is run. This document alone is not launch admission.
 
+**Prospective control correction, still before TEACH-0014 outcomes:** copy
+performs zero reads in the frozen model, so a `query.1` patch is never applied
+to a copy episode. The initial copy-preservation-after-patch clause was
+removed as a support criterion; clean copy competence remains required.
+The suite audit was strengthened to check signal-stage-family overlap with
+exposed TEACH-0014 suites as well as exact graph/logical IDs. Neither change
+uses or alters a neural outcome.
+
 ## Question, prior basis and restricted claim
 
 The primary question is whether the state after the first memory read,
@@ -109,7 +117,12 @@ post-second-read `query.2` full-donor state as an answer-injection positive
 control; wrong-key donor from a different logical group; cyclic within-cell
 derangement; a norm-matched random delta; a same-key/different-render donor;
 recipient-only G remapping; one-read and mean-address ablations when they pass
-clean competence; and direct/copy task specificity. Wrong/random deltas are
+clean competence; and clean first-hop/direct/copy task competence. A copy
+episode has zero reads, so `query.1` is never reached: "copy preservation
+after a `query.1` patch" would pass by construction and is **not** a
+mechanism control. First-hop and direct episodes reach `query.1` only
+immediately before output, so their patches are descriptive readout checks,
+not evidence of a reusable intermediate. Wrong/random deltas are
 scaled to the per-item norm of the true donor-minus-base `query.1` delta.
 Store the actual replacement vectors and pairing IDs for an independent
 intervention audit. Exact identity/restoration logits must agree with clean
@@ -119,8 +132,8 @@ Primary `REUSABLE-KEY-STATE-SUPPORTED` requires **both seeds** of a named arm
 to reach at least75% recipient-specific target items and60% exact
 three-recipient groups on the full confirmation denominator; at least90% of
 changed-G targets must avoid the fixed donor answer; reverse necessity must
-restore the base-key answer on at least70% of eligible items; copy preservation
-must be at least95%; both marked and marker-free transfer rates must be at
+restore the base-key answer on at least70% of eligible items; both marked and
+marker-free transfer rates must be at
 least70%; and the correct donor target rate must exceed each wrong-key,
 deranged and norm-matched random control by at least35 percentage points.
 Each control's full denominator and a group-bootstrap interval are reported.

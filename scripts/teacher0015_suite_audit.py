@@ -47,6 +47,14 @@ def _skeleton(episode: dict) -> tuple[int, ...]:
                  for value in episode["tokens"])
 
 
+def _stage_signatures(episode: dict) -> set[str]:
+    return {
+        _digest([stage, sorted([path[stage:stage + 2]
+                                for path in episode["signal_paths"]])])
+        for stage in range(len(episode["signal_paths"][0]) - 1)
+    }
+
+
 def audit_group(group: dict, split: str) -> dict:
     if not isinstance(group, dict) or set(group) != {
             "group_id", "split", "key0", "key1", "recipient_outputs",
@@ -171,7 +179,9 @@ def audit_group(group: dict, split: str) -> dict:
                     raise ValueError("Auxiliary task oracle drift")
     return {"group_id": group_id, "render_ids": render_ids,
             "graph_ids": {cell["episode"]["graph_id"] for cell in cells},
-            "logical_ids": {cell["episode"]["logical_id"] for cell in cells}}
+            "logical_ids": {cell["episode"]["logical_id"] for cell in cells},
+            "stage_families": set().union(*(
+                _stage_signatures(cell["episode"]) for cell in cells))}
 
 
 def audit_manifest(manifest: dict) -> dict:
@@ -191,22 +201,26 @@ def audit_manifest(manifest: dict) -> dict:
     seen_graphs = set()
     seen_logical = set()
     seen_render = set()
+    seen_stages = set()
     for group in manifest["groups"]:
         checked = audit_group(group, split)
         if (checked["group_id"] in seen_groups or
                 checked["graph_ids"] & seen_graphs or
                 checked["logical_ids"] & seen_logical or
-                checked["render_ids"] & seen_render):
-            raise ValueError("Repeated TEACH-0015 group/graph/logical/render")
+                checked["render_ids"] & seen_render or
+                checked["stage_families"] & seen_stages):
+            raise ValueError("Repeated TEACH-0015 group/family/graph/logical/render")
         seen_groups.add(checked["group_id"])
         seen_graphs.update(checked["graph_ids"])
         seen_logical.update(checked["logical_ids"])
         seen_render.update(checked["render_ids"])
+        seen_stages.update(checked["stage_families"])
     return {"audit": "pass", "scope": "visible_three_recipient_counterfactuals",
             "split": split, "groups": len(seen_groups),
             "episodes": len(seen_render),
             "graph_ids": sorted(seen_graphs),
             "logical_ids": sorted(seen_logical),
+            "stage_families": sorted(seen_stages),
             "manifest_sha256": _digest(manifest)}
 
 
@@ -217,8 +231,9 @@ def audit_splits(discovery: dict, confirmation: dict,
     if a["split"] != "discovery" or b["split"] != "confirmation":
         raise ValueError("TEACH-0015 split order mismatch")
     if set(a["graph_ids"]) & set(b["graph_ids"]) or (
-            set(a["logical_ids"]) & set(b["logical_ids"])):
-        raise ValueError("TEACH-0015 discovery/confirmation identity overlap")
+            set(a["logical_ids"]) & set(b["logical_ids"])) or (
+            set(a["stage_families"]) & set(b["stage_families"])):
+        raise ValueError("TEACH-0015 discovery/confirmation family overlap")
     exposure_hashes = []
     for manifest in exposed_teacher14 or []:
         audited = audit_teacher14_manifest(manifest)
@@ -227,9 +242,13 @@ def audit_splits(discovery: dict, confirmation: dict,
                   for panel in manifest["panels"].values() for episode in panel}
         logical = {episode["logical_id"]
                    for panel in manifest["panels"].values() for episode in panel}
+        stages = set().union(*(
+            _stage_signatures(episode)
+            for panel in manifest["panels"].values() for episode in panel))
         if ((set(a["graph_ids"]) | set(b["graph_ids"])) & graphs or
-                (set(a["logical_ids"]) | set(b["logical_ids"])) & logical):
-            raise ValueError("TEACH-0015 overlaps exposed TEACH-0014 graph")
+                (set(a["logical_ids"]) | set(b["logical_ids"])) & logical or
+                (set(a["stage_families"]) | set(b["stage_families"])) & stages):
+            raise ValueError("TEACH-0015 overlaps exposed TEACH-0014 family")
     return {"audit": "pass", "discovery_sha256": a["manifest_sha256"],
             "confirmation_sha256": b["manifest_sha256"],
             "discovery_groups": a["groups"],
