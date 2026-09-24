@@ -1,0 +1,107 @@
+{
+  "corpus_sha256": {
+    "train": "49618c7be69cef573fe9ad8ae3627ad9f7b495601af1897aafb6082837fceca4",
+    "validation": "9bee4149f26fc49b49e4a826b73598dfb79a1e785731c15a1763489315a2efd3"
+  },
+  "decision": "not_supported_in_this_small_panel",
+  "exact_matches": 0,
+  "experiment": "ANCHOR-0001",
+  "limits": "Five published visual matches on three source pages; orthography only; no plaintext.",
+  "null": {
+    "max": 0.9666666666666668,
+    "mean": 0.5,
+    "min": 0.0,
+    "n": 1440,
+    "p_one_sided": 0.36944444444444446
+  },
+  "observed_four_direct_mean_rank_fraction": 0.7380952380952381,
+  "observed_mean_rank_fraction": 0.6349206349206349,
+  "pair_manifest_sha256": "e7a6ece194c68bce287c6e203f2058cadf599a5d03857d768f005b6df0ec9806",
+  "rows": [
+    {
+      "ambiguous_fragments": [],
+      "candidate_count": 2,
+      "eligible": true,
+      "exact_match": false,
+      "fragment": 212,
+      "herbal_page": "f18v",
+      "label": "koldarod",
+      "label_locus_id": "f102r2.21",
+      "nearest_word": "daror",
+      "pharma_page": "f102r2",
+      "rank": 1.0,
+      "rank_fraction": 1.0,
+      "score": 0.5
+    },
+    {
+      "ambiguous_fragments": [],
+      "candidate_count": 2,
+      "eligible": true,
+      "exact_match": false,
+      "fragment": 213,
+      "herbal_page": "f23r",
+      "label": "odalydary",
+      "label_locus_id": "f102r2.22",
+      "nearest_word": "dalory",
+      "pharma_page": "f102r2",
+      "rank": 1.0,
+      "rank_fraction": 1.0,
+      "score": 0.5555555555555556
+    },
+    {
+      "ambiguous_fragments": [],
+      "candidate_count": 8,
+      "eligible": true,
+      "exact_match": false,
+      "fragment": 240,
+      "herbal_page": "f19r",
+      "label": "loralody",
+      "label_locus_id": "f102v1.17",
+      "nearest_word": "qolody",
+      "pharma_page": "f102v1",
+      "rank": 2.5,
+      "rank_fraction": 0.7857142857142857,
+      "score": 0.625
+    },
+    {
+      "ambiguous_fragments": [
+        "f89v2.12",
+        "f89v2.27"
+      ],
+      "candidate_count": 10,
+      "eligible": true,
+      "exact_match": false,
+      "fragment": 54,
+      "herbal_page": "f48v",
+      "label": "chokam",
+      "label_locus_id": "f89v2.6",
+      "nearest_word": "chckhy",
+      "pharma_page": "f89v2",
+      "rank": 8.0,
+      "rank_fraction": 0.2222222222222222,
+      "score": 0.5
+    },
+    {
+      "ambiguous_fragments": [
+        "f89v2.12",
+        "f89v2.27"
+      ],
+      "candidate_count": 10,
+      "eligible": true,
+      "exact_match": false,
+      "fragment": 61,
+      "herbal_page": "f48r",
+      "label": "daseky",
+      "label_locus_id": "f89v2.28",
+      "nearest_word": "olsheey",
+      "pharma_page": "f89v2",
+      "rank": 8.5,
+      "rank_fraction": 0.16666666666666666,
+      "score": 0.4285714285714286
+    }
+  ],
+  "source_sha256": "1bbb3386381e2b53bf7cd5b1787846d340a7b4cd2c67c6e7a66685ab49b58974",
+  "split_manifest_sha256": "9fc80cb4b000fdd5d952b7c2416b37b6b92f07bc56486a63309142953ed6634e",
+  "status": "complete",
+  "wall_seconds": 0.024500665997038595
+}

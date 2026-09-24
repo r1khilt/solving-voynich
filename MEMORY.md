@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-24 UTC (EXP-0029 matched held-out locus association fails; EXP-0028 rejects local one-edit advantage; TEACH-0014 interrupted; no decipherment).
+Last updated: 2026-09-24 UTC (ANCHOR-0001 image-to-text lexical transfer fails; no decipherment).
 
 ## Current state
+
+- **ANCHOR-0001 first external image/text anchor FAIL:** Five source-published pharmaceutical-fragment ↔ herbal-page visual correspondences were fixed before lexical scoring. Their labels' same-source-page spelling rank fractions were1.0/1.0/0.786 on three train-side pairs and0.222/0.167 on two validation-side pairs; mean0.6349 vs registered≥0.75, exact within-page assignment p0.3694 vs≤0.05, exact word recurrence0/5. Independent all-row/hash/1,440-assignment audit passed. No plaintext or plant name recovered. This narrow approximate spelling-transfer prediction failed on a small three-source-page panel; next use a larger image-only-rated label↔label panel before looking at text. During earlier split triage, f70v1/f70v2 test text was inadvertently printed, though no model or score used it; exclude f70 from any future pristine final-text claim. Read `docs/experiments/ANCHOR-0001-results.md`, NOTEBOOK NB-113--114.
 
 - **EXP-0029 held-out matched locus association FAIL:** Source-frozen train-leaf co-occurrence readout predicts which word belongs to a masked `P0` locus versus a same-page frequency/length/form-matched negative. On1,008 pairs across9 represented validation leaves, form-only vs form+association losses1.00318 vs0.99688 bits/pair, gain+0.00630 below+0.020 floor; leaf-bootstrap95%[−0.00704,0.01417]; page-bag-preserving shuffled-training95th+0.00736; full accuracy51.98%<55%. f73 has no eligible `P0` loci; the first auditor assumed all10 leaves contributed, was corrected without rerunning or changing scores, and then independently passed. Do not assign semantic meaning to cosine/co-occurrence clusters from this result. The validation split is exposed; next movement toward decipherment needs external anchors and frozen constrained rules, not more adaptive word maps. Read `docs/experiments/EXP-0029-results.md`, NOTEBOOK NB-111--112.
 
