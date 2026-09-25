@@ -115,6 +115,24 @@ def test_independent_development_audit_replays_synthetic_score_and_rejects_tampe
     assert result["status"] == "pass"
     assert result["primary_method"] == score["primary_method"]
     assert all(value == 1.0 for value in result["batch_macro_ba"].values())
+    dino_features_path = tmp_path / "dino_features.json"
+    dino_score_path = tmp_path / "dino_score.json"
+    dino_method = "DINOv2-with-registers-base final CLS 224 direct resize L2 cosine"
+    dino_features = json.loads(features_path.read_text())
+    dino_features["feature_method"] = dino_method
+    _save(dino_features_path, dino_features)
+    dino_score = scorer.score(
+        dino_features_path, feature_method=dino_method,
+        result_id="HERBAL-CONTROL-0003-DINO-development-selection")
+    _save(dino_score_path, dino_score)
+    dino_audit = auditor.audit(
+        dino_features_path, dino_score_path, feature_method=dino_method,
+        score_id="HERBAL-CONTROL-0003-DINO-development-selection",
+        audit_id="HERBAL-CONTROL-0003-DINO-independent-development-score-audit")
+    assert dino_audit["id"] == "HERBAL-CONTROL-0003-DINO-independent-development-score-audit"
+    assert dino_audit["primary_method"] == dino_score["primary_method"]
+    with pytest.raises(ValueError, match="feature extraction inputs"):
+        auditor.audit(dino_features_path, dino_score_path)
     score["normalization_medians"]["bnf->egerton"] *= 2
     _save(score_path, score)
     with pytest.raises(ValueError, match="bnf->egerton differs"):

@@ -61,6 +61,19 @@ def test_development_score_uses_only_frozen_inputs_and_rejects_changed_holdout(t
     assert result["primary_method"] == "single_first"
     assert all(item["batch_macro_ba"] == 1.0 for item in result["methods"].values())
     assert result["full_input_freeze_sha256"] == freeze_hash
+    dino_feature_path = tmp_path / "dino_feature.json"
+    dino_method = "DINOv2-with-registers-base final CLS 224 direct resize L2 cosine"
+    dino_features = json.loads(feature_path.read_text())
+    dino_features["feature_method"] = dino_method
+    _save(dino_feature_path, dino_features)
+    dino_result = scoring.score(
+        dino_feature_path, feature_method=dino_method,
+        result_id="HERBAL-CONTROL-0003-DINO-development-selection")
+    assert dino_result["id"] == "HERBAL-CONTROL-0003-DINO-development-selection"
+    assert dino_result["feature_method"] == dino_method
+    assert dino_result["primary_method"] == result["primary_method"]
+    with pytest.raises(ValueError, match="feature matrix source or method"):
+        scoring.score(dino_feature_path)
     eval_path.write_text('{"changed":true}\n')
     with pytest.raises(ValueError, match="input freeze"):
         scoring.score(feature_path)

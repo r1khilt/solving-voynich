@@ -28,6 +28,7 @@ FREEZE = ROOT / "data/manifests/herbal_control_0003_input_freeze.json"
 PANEL_SHA256 = "388fe569beb08bb46bb11cad175c96846b57e7b80cd3e7c209fa86079bddc832"
 MANUSCRIPTS = ("bnf", "egerton", "casanatense")
 METHODS = ("single_first", "single_second", "two_mean", "two_min")
+APPLE_FEATURE_METHOD = "Apple Vision VNGenerateImageFeaturePrintRequest revision 2, scaleFit"
 
 
 def digest(path: Path) -> str:
@@ -190,7 +191,10 @@ def fused(first: list[list[float]], second: list[list[float]], method: str) -> l
     raise ValueError(f"unknown method {method}")
 
 
-def _load_checked_inputs(feature_path: Path, score_path: Path) -> tuple[dict, dict, dict, dict]:
+def _load_checked_inputs(feature_path: Path, score_path: Path, *,
+                         feature_method: str = APPLE_FEATURE_METHOD,
+                         score_id: str = "HERBAL-CONTROL-0003-development-selection"
+                         ) -> tuple[dict, dict, dict, dict]:
     if digest(PANEL) != PANEL_SHA256:
         raise ValueError("panel changed")
     panel = json.loads(PANEL.read_text())
@@ -214,8 +218,7 @@ def _load_checked_inputs(feature_path: Path, score_path: Path) -> tuple[dict, di
             raise ValueError(f"crop changed: {row['crop_file']}")
     features = json.loads(feature_path.read_text())
     if (features.get("id") != "HERBAL-CONTROL-0003-development"
-            or features.get("feature_method") !=
-            "Apple Vision VNGenerateImageFeaturePrintRequest revision 2, scaleFit"
+            or features.get("feature_method") != feature_method
             or features.get("input_manifest_sha256") != digest(DEVELOPMENT)
             or features.get("full_input_freeze_sha256") != digest(FREEZE)):
         raise ValueError("feature extraction inputs differ from freeze")
@@ -239,18 +242,24 @@ def _load_checked_inputs(feature_path: Path, score_path: Path) -> tuple[dict, di
             if j < i and abs(value - matrix[j][i]) > 1e-5:
                 raise ValueError("asymmetric feature matrix")
     score = json.loads(score_path.read_text())
-    if (score.get("id") != "HERBAL-CONTROL-0003-development-selection"
+    if (score.get("id") != score_id
             or score.get("status") != "development-score-produced-awaiting-audit-and-push"
             or score.get("panel_manifest_sha256") != PANEL_SHA256
             or score.get("full_input_freeze_sha256") != digest(FREEZE)
             or score.get("development_images_sha256") != digest(DEVELOPMENT)
-            or score.get("development_features_sha256") != digest(feature_path)):
+            or score.get("development_features_sha256") != digest(feature_path)
+            or (feature_method != APPLE_FEATURE_METHOD
+                and score.get("feature_method") != feature_method)):
         raise ValueError("stored development score provenance differs")
     return panel, features, score, images
 
 
-def audit(feature_path: Path, score_path: Path) -> dict:
-    panel, features, score, _ = _load_checked_inputs(feature_path, score_path)
+def audit(feature_path: Path, score_path: Path, *,
+          feature_method: str = APPLE_FEATURE_METHOD,
+          score_id: str = "HERBAL-CONTROL-0003-development-selection",
+          audit_id: str = "HERBAL-CONTROL-0003-independent-development-score-audit") -> dict:
+    panel, features, score, _ = _load_checked_inputs(
+        feature_path, score_path, feature_method=feature_method, score_id=score_id)
     known = [row["chapter"] for row in panel["roles"]["development_known"]]
     unknown = [row["chapter"] for row in panel["roles"]["development_unknown"]]
     if (len(known) != 24 or len(unknown) != 12 or len(set(known + unknown)) != 36
@@ -326,7 +335,7 @@ def audit(feature_path: Path, score_path: Path) -> dict:
     if score.get("primary_method") != selected:
         raise ValueError("primary method differs")
     return {
-        "id": "HERBAL-CONTROL-0003-independent-development-score-audit",
+        "id": audit_id,
         "status": "pass",
         "feature_sha256": digest(feature_path),
         "score_sha256": digest(score_path),

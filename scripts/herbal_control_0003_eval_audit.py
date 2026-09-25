@@ -54,7 +54,12 @@ def close(actual: float, expected: float, label: str, tolerance: float = 1e-8) -
 
 
 def _load_inputs(feature_path: Path, selection_path: Path,
-                 development_audit_path: Path, score_path: Path) -> tuple[dict, dict, dict, dict]:
+                 development_audit_path: Path, score_path: Path, *,
+                 feature_method: str = FEATURE_METHOD,
+                 selection_id: str = "HERBAL-CONTROL-0003-development-selection",
+                 development_audit_id: str = "HERBAL-CONTROL-0003-independent-development-score-audit",
+                 score_id: str = "HERBAL-CONTROL-0003-evaluation-score"
+                 ) -> tuple[dict, dict, dict, dict]:
     if digest(PANEL) != PANEL_SHA256:
         raise ValueError("fixed panel changed")
     panel = json.loads(PANEL.read_text())
@@ -69,18 +74,19 @@ def _load_inputs(feature_path: Path, selection_path: Path,
         raise ValueError("complete input freeze missing or changed")
     selection = json.loads(selection_path.read_text())
     development_audit = json.loads(development_audit_path.read_text())
-    if (selection.get("id") != "HERBAL-CONTROL-0003-development-selection"
+    if (selection.get("id") != selection_id
             or selection.get("status") != "development-score-produced-awaiting-audit-and-push"
             or selection.get("panel_manifest_sha256") != PANEL_SHA256
             or selection.get("full_input_freeze_sha256") != digest(FREEZE)
-            or development_audit.get("id") !=
-            "HERBAL-CONTROL-0003-independent-development-score-audit"
+            or development_audit.get("id") != development_audit_id
             or development_audit.get("status") != "pass"
             or development_audit.get("score_sha256") != digest(selection_path)
             or development_audit.get("full_input_freeze_sha256") != digest(FREEZE)
             or development_audit.get("feature_sha256") !=
             selection.get("development_features_sha256")
-            or development_audit.get("primary_method") != selection.get("primary_method")):
+            or development_audit.get("primary_method") != selection.get("primary_method")
+            or (feature_method != FEATURE_METHOD
+                and selection.get("feature_method") != feature_method)):
         raise ValueError("development selection/audit changed")
     images = json.loads(EVALUATION_IMAGES.read_text())
     if (images.get("id") != "HERBAL-CONTROL-0003-evaluation"
@@ -93,7 +99,7 @@ def _load_inputs(feature_path: Path, selection_path: Path,
             raise ValueError(f"evaluation crop changed: {row['crop_file']}")
     features = json.loads(feature_path.read_text())
     if (features.get("id") != "HERBAL-CONTROL-0003-evaluation"
-            or features.get("feature_method") != FEATURE_METHOD
+            or features.get("feature_method") != feature_method
             or features.get("input_manifest_sha256") != digest(EVALUATION_IMAGES)
             or features.get("full_input_freeze_sha256") != digest(FREEZE)
             or features.get("development_selection_sha256") != digest(selection_path)
@@ -119,14 +125,16 @@ def _load_inputs(feature_path: Path, selection_path: Path,
             if j < i and abs(value - matrix[j][i]) > 1e-5:
                 raise ValueError("asymmetric evaluation feature matrix")
     score = json.loads(score_path.read_text())
-    if (score.get("id") != "HERBAL-CONTROL-0003-evaluation-score"
+    if (score.get("id") != score_id
             or score.get("status") != "evaluation-score-produced-awaiting-independent-audit"
             or score.get("panel_manifest_sha256") != PANEL_SHA256
             or score.get("full_input_freeze_sha256") != digest(FREEZE)
             or score.get("development_selection_sha256") != digest(selection_path)
             or score.get("development_audit_sha256") != digest(development_audit_path)
             or score.get("evaluation_images_sha256") != digest(EVALUATION_IMAGES)
-            or score.get("evaluation_features_sha256") != digest(feature_path)):
+            or score.get("evaluation_features_sha256") != digest(feature_path)
+            or (feature_method != FEATURE_METHOD
+                and score.get("feature_method") != feature_method)):
         raise ValueError("stored evaluation score provenance changed")
     return panel, features, selection, score
 
@@ -260,9 +268,15 @@ def _compare_bootstrap(stored: dict, expected: dict, label: str) -> None:
 
 
 def audit(feature_path: Path, selection_path: Path, development_audit_path: Path,
-          score_path: Path) -> dict:
+          score_path: Path, *, feature_method: str = FEATURE_METHOD,
+          selection_id: str = "HERBAL-CONTROL-0003-development-selection",
+          development_audit_id: str = "HERBAL-CONTROL-0003-independent-development-score-audit",
+          score_id: str = "HERBAL-CONTROL-0003-evaluation-score",
+          audit_id: str = "HERBAL-CONTROL-0003-independent-evaluation-audit") -> dict:
     panel, features, selection, score = _load_inputs(
-        feature_path, selection_path, development_audit_path, score_path)
+        feature_path, selection_path, development_audit_path, score_path,
+        feature_method=feature_method, selection_id=selection_id,
+        development_audit_id=development_audit_id, score_id=score_id)
     known = [item["chapter"] for item in panel["roles"]["evaluation_known"]]
     unknown = [item["chapter"] for item in panel["roles"]["evaluation_unknown"]]
     if (len(known) != 24 or len(unknown) != 12 or len(set(known + unknown)) != 36
@@ -382,7 +396,7 @@ def audit(feature_path: Path, selection_path: Path, development_audit_path: Path
     if score.get("gates") != gates:
         raise ValueError("evaluation gate decision differs")
     return {
-        "id": "HERBAL-CONTROL-0003-independent-evaluation-audit",
+        "id": audit_id,
         "status": "pass",
         "evaluation_features_sha256": digest(feature_path),
         "development_selection_sha256": digest(selection_path),

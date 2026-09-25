@@ -56,9 +56,10 @@ def _classes(panel: dict) -> tuple[list[str], list[str], set[tuple[str, str, str
 
 def _validate_matrix(features: dict, images: dict,
                      expected_keys: set[tuple[str, str, str]],
-                     selection_path: Path, audit_path: Path) -> None:
+                     selection_path: Path, audit_path: Path,
+                     feature_method: str = FEATURE_METHOD) -> None:
     if (features.get("id") != "HERBAL-CONTROL-0003-evaluation"
-            or features.get("feature_method") != FEATURE_METHOD
+            or features.get("feature_method") != feature_method
             or features.get("input_manifest_sha256") != digest(EVALUATION_IMAGES)
             or features.get("full_input_freeze_sha256") != digest(FREEZE)
             or features.get("development_selection_sha256") != digest(selection_path)
@@ -112,7 +113,10 @@ def near_name_unknowns(known: list[str], unknown: list[str]) -> list[str]:
     return result
 
 
-def _load_gate(selection_path: Path, audit_path: Path) -> dict:
+def _load_gate(selection_path: Path, audit_path: Path, *,
+               selection_id: str = "HERBAL-CONTROL-0003-development-selection",
+               audit_id: str = "HERBAL-CONTROL-0003-independent-development-score-audit",
+               feature_method: str = FEATURE_METHOD) -> dict:
     if digest(PANEL) != PANEL_SHA256:
         raise ValueError("frozen panel hash changed")
     freeze = json.loads(FREEZE.read_text())
@@ -126,17 +130,19 @@ def _load_gate(selection_path: Path, audit_path: Path) -> dict:
         raise ValueError("complete source/crop freeze is missing or changed")
     selection = json.loads(selection_path.read_text())
     audit = json.loads(audit_path.read_text())
-    if (selection.get("id") != "HERBAL-CONTROL-0003-development-selection"
+    if (selection.get("id") != selection_id
             or selection.get("status") != "development-score-produced-awaiting-audit-and-push"
             or selection.get("panel_manifest_sha256") != PANEL_SHA256
             or selection.get("full_input_freeze_sha256") != digest(FREEZE)
-            or audit.get("id") != "HERBAL-CONTROL-0003-independent-development-score-audit"
+            or audit.get("id") != audit_id
             or audit.get("status") != "pass"
             or audit.get("score_sha256") != digest(selection_path)
             or audit.get("full_input_freeze_sha256") != digest(FREEZE)
             or audit.get("feature_sha256") != selection.get("development_features_sha256")
             or audit.get("primary_method") != selection.get("primary_method")
-            or set(selection.get("methods", {})) != set(METHODS)):
+            or set(selection.get("methods", {})) != set(METHODS)
+            or (feature_method != FEATURE_METHOD
+                and selection.get("feature_method") != feature_method)):
         raise ValueError("audited development selection is missing or changed")
     for method in METHODS:
         if (audit.get("batch_macro_ba", {}).get(method) !=
@@ -148,8 +154,13 @@ def _load_gate(selection_path: Path, audit_path: Path) -> dict:
     return selection
 
 
-def score(feature_path: Path, selection_path: Path, audit_path: Path) -> dict:
-    selection = _load_gate(selection_path, audit_path)
+def score(feature_path: Path, selection_path: Path, audit_path: Path, *,
+          feature_method: str = FEATURE_METHOD,
+          selection_id: str = "HERBAL-CONTROL-0003-development-selection",
+          audit_id: str = "HERBAL-CONTROL-0003-independent-development-score-audit",
+          result_id: str = "HERBAL-CONTROL-0003-evaluation-score") -> dict:
+    selection = _load_gate(selection_path, audit_path, selection_id=selection_id,
+                           audit_id=audit_id, feature_method=feature_method)
     panel = json.loads(PANEL.read_text())
     known, unknown, expected_keys = _classes(panel)
     images = json.loads(EVALUATION_IMAGES.read_text())
@@ -162,7 +173,8 @@ def score(feature_path: Path, selection_path: Path, audit_path: Path) -> dict:
         if digest(ROOT / row["crop_file"]) != row["crop_sha256"]:
             raise ValueError(f"evaluation crop changed: {row['crop_file']}")
     features = json.loads(feature_path.read_text())
-    _validate_matrix(features, images, expected_keys, selection_path, audit_path)
+    _validate_matrix(features, images, expected_keys, selection_path, audit_path,
+                     feature_method)
     first, second, truths, medians = prepare_direction_panels(
         features["distance_matrix"], features["row_order"], known, unknown,
         "evaluation", selection["normalization_medians"])
@@ -239,7 +251,7 @@ def score(feature_path: Path, selection_path: Path, audit_path: Path) -> dict:
                   primary_result["independent_macro_ba"] + 0.05
                   and one_to_one_ci["paired_improvement_ci_95"][0] > 0)
     return {
-        "id": "HERBAL-CONTROL-0003-evaluation-score",
+        "id": result_id,
         "status": "evaluation-score-produced-awaiting-independent-audit",
         "panel_manifest_sha256": PANEL_SHA256,
         "full_input_freeze_sha256": digest(FREEZE),
@@ -262,6 +274,7 @@ def score(feature_path: Path, selection_path: Path, audit_path: Path) -> dict:
             "one_to_one_benefit": one_to_one,
         },
         "claim_limit": "Historical chapter-metadata evaluation only; no Voynich image/text inference.",
+        **({"feature_method": feature_method} if feature_method != FEATURE_METHOD else {}),
     }
 
 

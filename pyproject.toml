@@ -15,6 +15,11 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "ruff>=0.11"]
+historical-vision = [
+    "transformers==4.48.3",
+    "pillow==11.3.0",
+    "safetensors==0.8.0",
+]
 
 [project.scripts]
 voynich-train = "voynich.train:main"

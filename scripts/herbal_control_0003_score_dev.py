@@ -33,6 +33,7 @@ FREEZE = ROOT / "data/manifests/herbal_control_0003_input_freeze.json"
 SOURCES = ROOT / "data/manifests/herbal_control_0003_sources.json"
 EVAL_IMAGES = ROOT / "data/manifests/herbal_control_0003_evaluation_images.json"
 PANEL_SHA256 = "388fe569beb08bb46bb11cad175c96846b57e7b80cd3e7c209fa86079bddc832"
+APPLE_FEATURE_METHOD = "Apple Vision VNGenerateImageFeaturePrintRequest revision 2, scaleFit"
 
 
 def digest(raw: bytes) -> str:
@@ -53,7 +54,8 @@ def _development_classes(panel: dict) -> tuple[list[str], list[str], set[tuple[s
 
 
 def _validate_inputs(features: dict, images: dict, freeze: dict,
-                     freeze_raw: bytes, expected_keys: set[tuple[str, str, str]]) -> None:
+                     freeze_raw: bytes, expected_keys: set[tuple[str, str, str]],
+                     feature_method: str = APPLE_FEATURE_METHOD) -> None:
     if (freeze.get("id") != "HERBAL-CONTROL-0003-input-freeze"
             or freeze.get("status") != "complete-pre-score-inputs"
             or freeze.get("panel_manifest_sha256") != PANEL_SHA256
@@ -73,8 +75,7 @@ def _validate_inputs(features: dict, images: dict, freeze: dict,
     if keys != expected_keys or len(keys) != len(image_order):
         raise ValueError("development crop rows do not match panel")
     if (features.get("id") != "HERBAL-CONTROL-0003-development"
-            or features.get("feature_method") !=
-            "Apple Vision VNGenerateImageFeaturePrintRequest revision 2, scaleFit"
+            or features.get("feature_method") != feature_method
             or features.get("input_manifest_sha256") != digest(DEV_IMAGES.read_bytes())
             or features.get("full_input_freeze_sha256") != digest(freeze_raw)):
         raise ValueError("feature matrix source or method does not match crops")
@@ -100,7 +101,8 @@ def _validate_inputs(features: dict, images: dict, freeze: dict,
                 raise ValueError(f"feature matrix is asymmetric at {i},{j}")
 
 
-def score(feature_path: Path) -> dict:
+def score(feature_path: Path, *, feature_method: str = APPLE_FEATURE_METHOD,
+          result_id: str = "HERBAL-CONTROL-0003-development-selection") -> dict:
     panel_raw = PANEL.read_bytes()
     if digest(panel_raw) != PANEL_SHA256:
         raise ValueError("panel hash mismatch")
@@ -112,7 +114,7 @@ def score(feature_path: Path) -> dict:
     freeze = json.loads(freeze_raw)
     feature_raw = feature_path.read_bytes()
     features = json.loads(feature_raw)
-    _validate_inputs(features, images, freeze, freeze_raw, expected_keys)
+    _validate_inputs(features, images, freeze, freeze_raw, expected_keys, feature_method)
     first, second, truths, medians = prepare_direction_panels(
         features["distance_matrix"], features["row_order"], known, unknown, "development")
     selection = choose_primary(first, second, truths, 24, 12)
@@ -150,7 +152,7 @@ def score(feature_path: Path) -> dict:
             "independent_by_direction": independent,
         }
     return {
-        "id": "HERBAL-CONTROL-0003-development-selection",
+        "id": result_id,
         "status": "development-score-produced-awaiting-audit-and-push",
         "panel_manifest_sha256": PANEL_SHA256,
         "full_input_freeze_sha256": digest(freeze_raw),
@@ -162,6 +164,7 @@ def score(feature_path: Path) -> dict:
         "primary_method": selection["primary_method"],
         "methods": methods,
         "claim_limit": "Development-only chapter retrieval; no evaluation or Voynich meaning claim.",
+        **({"feature_method": feature_method} if feature_method != APPLE_FEATURE_METHOD else {}),
     }
 
 

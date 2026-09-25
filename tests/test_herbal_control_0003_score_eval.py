@@ -117,6 +117,46 @@ def test_evaluation_uses_audited_development_thresholds_and_rejects_tamper(
                                                  audit_path, score_path)
     assert independent_result["status"] == "pass"
     assert independent_result["gates"] == result["gates"]
+    dino_method = "DINOv2-with-registers-base final CLS 224 direct resize L2 cosine"
+    dino_selection_path = tmp_path / "dino_selection.json"
+    dino_audit_path = tmp_path / "dino_development_audit.json"
+    dino_features_path = tmp_path / "dino_features.json"
+    dino_score_path = tmp_path / "dino_score.json"
+    dino_selection = json.loads(selection_path.read_text())
+    dino_selection["id"] = "HERBAL-CONTROL-0003-DINO-development-selection"
+    dino_selection["feature_method"] = dino_method
+    dino_selection_hash = _save(dino_selection_path, dino_selection)
+    dino_audit = json.loads(audit_path.read_text())
+    dino_audit["id"] = "HERBAL-CONTROL-0003-DINO-independent-development-score-audit"
+    dino_audit["score_sha256"] = dino_selection_hash
+    dino_audit_hash = _save(dino_audit_path, dino_audit)
+    dino_features = json.loads(features_path.read_text())
+    dino_features["feature_method"] = dino_method
+    dino_features["development_selection_sha256"] = dino_selection_hash
+    dino_features["development_audit_sha256"] = dino_audit_hash
+    _save(dino_features_path, dino_features)
+    dino_score = evaluation.score(
+        dino_features_path, dino_selection_path, dino_audit_path,
+        feature_method=dino_method,
+        selection_id="HERBAL-CONTROL-0003-DINO-development-selection",
+        audit_id="HERBAL-CONTROL-0003-DINO-independent-development-score-audit",
+        result_id="HERBAL-CONTROL-0003-DINO-evaluation-score")
+    assert dino_score["id"] == "HERBAL-CONTROL-0003-DINO-evaluation-score"
+    assert dino_score["feature_method"] == dino_method
+    assert dino_score["gates"] == result["gates"]
+    _save(dino_score_path, dino_score)
+    dino_replay = independent_audit.audit(
+        dino_features_path, dino_selection_path, dino_audit_path,
+        dino_score_path, feature_method=dino_method,
+        selection_id="HERBAL-CONTROL-0003-DINO-development-selection",
+        development_audit_id="HERBAL-CONTROL-0003-DINO-independent-development-score-audit",
+        score_id="HERBAL-CONTROL-0003-DINO-evaluation-score",
+        audit_id="HERBAL-CONTROL-0003-DINO-independent-evaluation-audit")
+    assert dino_replay["id"] == "HERBAL-CONTROL-0003-DINO-independent-evaluation-audit"
+    assert dino_replay["gates"] == dino_score["gates"]
+    with pytest.raises(ValueError, match="development selection/audit changed"):
+        independent_audit.audit(dino_features_path, dino_selection_path,
+                                dino_audit_path, dino_score_path)
     tampered_result = json.loads(score_path.read_text())
     tampered_result["gates"]["historical_image_open_set_feasibility"] = False
     _save(score_path, tampered_result)
