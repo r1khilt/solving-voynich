@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-25 PDT (NAIBBE-001 supplied-grouping key/text recovery PASS; no Voynich decipherment).
+Last updated: 2026-09-25 PDT (NAIBBE-001 supplied-grouping recovery PASS; NAIBBE-002 removes cross-table links; no Voynich decipherment).
 
 ## Current state
+
+- **Active NAIBBE-002, pre-search:** Infer six independent23-letter table permutations (138 anonymous classes) without cross-table same-letter links. Within-table role links, table membership, grammar and boundaries remain supplied. Exposed fit[0,8192), fresh transfer[18432,26624); unchanged Caesar/English LMs. Latin coordinated/local, Latin local-only, English coordinated searches, each8starts×7cycles and≤20min CPU-process wall cap; freeze keys before answers. Exact known-small tests and six-table source-only synthetic calibration pass; separate agents validate builder and audit. Track macro138-key accuracy and uniquely assigned-class frequency only, because original table draws for glyph collisions are unobserved. Read `docs/experiments/NAIBBE-002.md`, NB-193. No target score yet.
 
 - **NAIBBE-001 direct-recovery pivot PASS, with supplied grouping:** Source remote-frozen93b9243, learned keys6787b35, independent auditor5f5af5c all before respective target stages. On published Naibbe-encrypted Pliny, Latin joint recovered23/23 key assignments and4/12,451 transfer character errors, exactly matching known-key oracle. Fixed-parse68 errors; English joint8 errors and also23/23 key. True cross-table same-letter grouping, role grammar, alphabet and token boundaries were supplied: this is mostly substitution competence, not blind verbose-cipher discovery or language identification. Independent audit verifies65,536 emitted chunks,18,432 token lattices and all scores/metrics. Three fits19.915s CPU; full suite1,172 pass+23 subtests,8 skips; five pre-existing full-tree Ruff errors remain. Next remove supplied cross-table homophone links under a separately frozen harder test. Defer BOUNDARY-CHANNEL-0006 until a decoder makes discriminating segmentation predictions. Read `docs/experiments/NAIBBE-001-results.md`, NB-190–192. No manuscript plaintext or meaning.
 

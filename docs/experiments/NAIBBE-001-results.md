@@ -10,7 +10,7 @@ The largest caveat is also the main next research question: the decoder received
 
 All three learned keys and56-cycle search traces were pushed and remote-verified at `6787b35762e6712ac5d0ff1b719dc4589b5fb727` before answer access and transfer decoding. The independent auditor was implemented/tested without results and remotely frozen at `5f5af5c4019a5c239bf2806980dcdf25a8447964` before evaluation. Evaluation ran once, then the independent auditor ran once; neither required a result-dependent repair.
 
-Source search took6.819s (Latin joint),5.636s (Latin fixed parse),7.460s (English joint), **19.915s total**, all local CPU with no paid spend or model training. Latin joint reached its final optimum at the first cycle after6 improving swaps,0.187s. Subsequent registered restarts did not improve it. These timings describe this heavily assisted task; they predict neither blind homophone discovery nor manuscript difficulty.
+Source search took6.819s (Latin joint),5.636s (Latin fixed parse),7.460s (English joint), **19.915s total**, all local CPU with no paid spend or model training. Latin joint reached its selected key at the first cycle after6 improving swaps,0.187s. Subsequent registered restarts did not improve it; global optimality is not proved. These timings describe this heavily assisted task; they predict neither blind homophone discovery nor manuscript difficulty.
 
 ## Held-out recovery
 
