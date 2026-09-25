@@ -1,0 +1,20 @@
+{
+  "id": "ANCHOR-0002-model-blind-review",
+  "status": "image-only-model-self-review-before-answer-key",
+  "packet_manifest_sha256": "ab5b9b46bbe7f6209b1c8c891c106eaf681f562e7d6a94bf13ec68714526ef54",
+  "reviewer": "same Codex research agent, not an independent human or blinded external model",
+  "instructions": "Compare the left drawing to options 1, 2 and 3 without reading writing; choose an option only for a distinctive visible morphological match, NONE for no plausible match, or UNSURE for inadequate discrimination.",
+  "answer_key_accessed_before_review": false,
+  "ratings": [
+    {"item": 1, "choice": "UNSURE", "closest_option": 2, "reason": "The left elongated segmented basal structure and option 2's orange roots share color, but their topology and upper parts differ."},
+    {"item": 2, "choice": "UNSURE", "closest_option": 3, "reason": "The left has narrow upright stems over brown descending roots; option 3 also has a root, but its green flower forms differ."},
+    {"item": 3, "choice": "2", "closest_option": 2, "reason": "Both show a large orange-brown swollen base with thick branching downward extensions; the crop excludes much of the upper plant."},
+    {"item": 4, "choice": "3", "closest_option": 3, "reason": "Both show many radiating downward roots attached at a compact upper base, unlike the other options."},
+    {"item": 5, "choice": "NONE", "closest_option": null, "reason": "The left isolated tapered orange body with long thin lines has no distinctive counterpart among the three leafy options."},
+    {"item": 6, "choice": "UNSURE", "closest_option": 1, "reason": "Option 1 has thick pendant roots and option 2 has a green serrated upper part, but neither preserves both distinctive parts of the left drawing."},
+    {"item": 7, "choice": "2", "closest_option": 2, "reason": "The left and option 2 share a large orange-brown tuber with narrow protruding roots, while the other options are chiefly leaves."},
+    {"item": 8, "choice": "UNSURE", "closest_option": 2, "reason": "The left has looping yellow-brown roots and option 2 has a curved brown axis, but neither its scale nor attached foliage aligns clearly."},
+    {"item": 9, "choice": "NONE", "closest_option": null, "reason": "The left has numerous orange-brown roots from a compact top; none of the three options shows that arrangement clearly."}
+  ],
+  "limits": "Exploratory one-pass model judgment on cropped images; no independent reviewer, botanical identity, word comparison or manuscript holdout inference."
+}
