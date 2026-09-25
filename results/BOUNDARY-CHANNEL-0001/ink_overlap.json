@@ -1,0 +1,65 @@
+{
+  "accepted": 286,
+  "accepted_certain": 265,
+  "accepted_uncertain": 21,
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 430061,
+  "box_auc_folio_bootstrap95": [
+    0.8540455426356589,
+    0.932156862745098
+  ],
+  "box_ink_pearson": 0.2425414101685285,
+  "box_ink_spearman": 0.20438561366253044,
+  "box_label_auc": 0.8947888589398023,
+  "box_minus_ink_auc": 0.2786163522012578,
+  "box_minus_ink_auc_folio_bootstrap95": [
+    0.20477320675105481,
+    0.36786786786786785
+  ],
+  "exact_matches": 300,
+  "folio_ink_means": {
+    "f14v": {
+      "certain": 24,
+      "ink_mean_certain_minus_uncertain_px": 1.5,
+      "uncertain": 6
+    },
+    "f23r": {
+      "certain": 56,
+      "ink_mean_certain_minus_uncertain_px": 1.6964285714285712,
+      "uncertain": 4
+    },
+    "f39v": {
+      "certain": 73,
+      "ink_mean_certain_minus_uncertain_px": 1.410958904109589,
+      "uncertain": 3
+    },
+    "f42v": {
+      "certain": 29,
+      "ink_mean_certain_minus_uncertain_px": 1.7413793103448274,
+      "uncertain": 2
+    },
+    "f56v": {
+      "certain": 47,
+      "ink_mean_certain_minus_uncertain_px": 2.2163120567375882,
+      "uncertain": 6
+    },
+    "f7v": {
+      "certain": 36,
+      "ink_mean_certain_minus_uncertain_px": null,
+      "uncertain": 0
+    }
+  },
+  "folios": 6,
+  "ink_auc_folio_bootstrap95": [
+    0.5536912751677853,
+    0.683739837398374
+  ],
+  "ink_label_auc": 0.6161725067385445,
+  "ink_mean_certain_px": 4.9849056603773585,
+  "ink_mean_difference_px": 1.8420485175202157,
+  "ink_mean_uncertain_px": 3.142857142857143,
+  "sampled": 300,
+  "source_box_rows_sha256": "9effc6e34f3f8ab4951d07e762070ca65fa88f912f96f75cfecf9c54b22c4a32",
+  "source_ink_sha256": "3c15627dc3ddfca4f331a1fed1e1a290a9b8412ebf9247fe4c9b2778412aedee",
+  "status": "train_only_proxy_sensitivity"
+}
