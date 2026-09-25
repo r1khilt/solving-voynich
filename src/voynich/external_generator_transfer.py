@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 import hashlib
 import importlib
 import json
+import os
 import platform
 from pathlib import Path
 import random
@@ -137,6 +138,8 @@ def summarize(records: list[dict], real_reference: dict) -> dict:
 
 def run(root: Path, external_dir: Path) -> dict:
     started = time.monotonic()
+    if os.environ.get("PYTHONHASHSEED") != "0":
+        raise ValueError("EXP-0040 requires PYTHONHASHSEED=0 before Python starts")
     external = check_external(external_dir)
     inputs = [root / "data/raw/v101/GC2a-n.txt",
               root / "data/manifests/zl3b_split.json",
@@ -203,6 +206,7 @@ def run(root: Path, external_dir: Path) -> dict:
             "input_sha256": dict(zip(("gc", "split", "zl_train", "zl_validation", "exp0039"), actual)),
             "external_commit": EXTERNAL_COMMIT, "external_generator_file_sha256": EXTERNAL_FILE_SHA,
             "source_sha256": edge.sha(Path(__file__)), "python": platform.python_version(),
+            "pythonhashseed": os.environ["PYTHONHASHSEED"],
             "train_groups": len(train), "train_words": len(clean_train.split()),
             "validation_groups": len(skeleton), "validation_words": n_words,
             "validation_pairs": reference["validation_pairs"],

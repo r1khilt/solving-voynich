@@ -2,12 +2,13 @@
 
 from __future__ import annotations
 
+from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
 
 from voynich.external_generator_transfer import (
-    lexical_stats, make_stream, stream_sha, summarize, wrap_stream,
+    lexical_stats, make_stream, run, stream_sha, summarize, wrap_stream,
 )
 
 
@@ -65,3 +66,9 @@ def test_decision_uses_full_seed_range_and_existing_reference_interval():
     assert summarize(rows, ref)["edge_decision"] == "not_falsified_by_this_edge_assay"
     rows = [dict(base, last_minus_shuffle=0.32) for _ in range(16)]
     assert summarize(rows, ref)["edge_decision"] == "edge_above_reference"
+
+
+def test_runner_rejects_unrecorded_python_hash_seed_before_input(monkeypatch, tmp_path):
+    monkeypatch.delenv("PYTHONHASHSEED", raising=False)
+    with pytest.raises(ValueError, match="PYTHONHASHSEED=0"):
+        run(tmp_path, Path("/nonexistent-third-party-checkout"))

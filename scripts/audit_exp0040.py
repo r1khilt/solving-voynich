@@ -11,6 +11,7 @@ import hashlib
 import importlib
 import json
 import math
+import os
 from pathlib import Path
 import random
 import re
@@ -78,6 +79,8 @@ def token_stats(words, train_vocabulary):
 
 def audit(root: Path, external_path: Path):
     started = time.monotonic()
+    if os.environ.get("PYTHONHASHSEED") != "0":
+        raise ValueError("EXP-0040 audit requires PYTHONHASHSEED=0 before Python starts")
     external = replay_external(external_path)
     result_path = root / "results/EXP-0040/results.json"
     report = json.loads(result_path.read_text())
@@ -85,6 +88,7 @@ def audit(root: Path, external_path: Path):
     assert sha(root / "src/voynich/external_generator_transfer.py") == report["source_sha256"]
     assert report["external_commit"] == EXTERNAL_COMMIT
     assert report["external_generator_file_sha256"] == EXTERNAL_SHA
+    assert report["pythonhashseed"] == "0"
     paths = [root / "data/raw/v101/GC2a-n.txt",
              root / "data/manifests/zl3b_split.json",
              root / "data/processed/zl3b/train.jsonl",
