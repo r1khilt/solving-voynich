@@ -67,7 +67,7 @@ def run(*, inventory_only: bool = False) -> dict:
     result = {"id": "HERBAL-CONTROL-0002", "status": "fixed-historical-source-images" if not missing else "partial-source-acquisition",
               "source_files": records, "total_source_bytes": total_bytes,
               "missing_files": missing,
-              "limitations": "Commons copies with user-contributed category metadata; bulk bytes ignored; crops and feature scores not yet made."}
+              "limitations": "Commons copies with user-contributed category metadata; bulk bytes are Git-ignored. Crop and score records are separate artifacts."}
     OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     return result
 

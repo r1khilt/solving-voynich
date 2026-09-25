@@ -1,6 +1,7 @@
 """Synthetic controls for the frozen historical-image matching rule."""
 
 from scripts.herbal_control_0002_match import CLASSES, MANUSCRIPTS, score
+from scripts.herbal_control_0002_audit import recompute
 
 
 def test_three_way_assignment_recovers_a_pairwise_mistake():
@@ -22,6 +23,12 @@ def test_three_way_assignment_recovers_a_pairwise_mistake():
     assert result["exact_null_permutations"] == 518_400
     assert result["one_sided_exact_p"] == 1 / 518_400
     assert result["registered_fresh_panel_feasibility_pass"] is True
+    audit = recompute(rows, matrix)
+    assert audit["triplets"] == result["triplets"]
+    assert audit["raw_pairwise_correct_out_of_36"] == result["raw_pairwise_correct_out_of_36"]
+    assert audit["induced_correct_out_of_36"] == result["induced_correct_out_of_36"]
+    assert audit["exact_null_complete_triplet_histogram"] == result["exact_null_complete_triplet_histogram"]
+    assert audit["one_sided_exact_p"] == result["one_sided_exact_p"]
 
 
 def test_no_cross_manuscript_signal_fails_the_gate():
