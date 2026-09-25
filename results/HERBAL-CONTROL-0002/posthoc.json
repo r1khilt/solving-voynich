@@ -1,0 +1,228 @@
+{
+  "id": "HERBAL-CONTROL-0002",
+  "input_manifest_sha256": "3fab2386419e749828ce08b58dd41316a3f8ce6956e355e4fa4bacb9009ca21d",
+  "interpretation_limit": "Pairwise bijection and top-rank checks were selected after seeing the registered result. They diagnose the source of gain and ambiguity; they do not replace the frozen gate or validate Voynich plant names.",
+  "metadata_aligned_assignment_cost": 17.1716500003115,
+  "metadata_aligned_assignment_rank_out_of_518400": 3,
+  "pairwise_bijection_reports": [
+    {
+      "correct_pairs_out_of_6": 6,
+      "index_pairs": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "manuscripts": [
+        "bnf",
+        "egerton"
+      ],
+      "undirected_assignment_cost": 3.992197096347809
+    },
+    {
+      "correct_pairs_out_of_6": 4,
+      "index_pairs": [
+        [
+          0,
+          17
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          12
+        ]
+      ],
+      "manuscripts": [
+        "bnf",
+        "casanatense"
+      ],
+      "undirected_assignment_cost": 3.961868107318878
+    },
+    {
+      "correct_pairs_out_of_6": 6,
+      "index_pairs": [
+        [
+          6,
+          12
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          9,
+          15
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          11,
+          17
+        ]
+      ],
+      "manuscripts": [
+        "egerton",
+        "casanatense"
+      ],
+      "undirected_assignment_cost": 4.244478702545166
+    }
+  ],
+  "pairwise_bijection_three_cycles_out_of_6": 4,
+  "posthoc_pairwise_bijection_correct_out_of_36": 32,
+  "registered_raw_nearest_neighbor_correct_out_of_36": 17,
+  "registered_summary_sha256": "03e108b5e87ce00aab0b2dee6e679b321109c4e9243770eab9c0467404bbeaaf",
+  "registered_three_way_correct_out_of_36": 28,
+  "status": "exploratory-post-result-diagnostic",
+  "three_way_top_three": [
+    {
+      "complete_triplets_out_of_6": 4,
+      "cost": 17.163759660382688,
+      "triplets": [
+        [
+          0,
+          11,
+          17
+        ],
+        [
+          1,
+          7,
+          13
+        ],
+        [
+          2,
+          8,
+          14
+        ],
+        [
+          3,
+          9,
+          15
+        ],
+        [
+          4,
+          10,
+          16
+        ],
+        [
+          5,
+          6,
+          12
+        ]
+      ]
+    },
+    {
+      "complete_triplets_out_of_6": 4,
+      "cost": 17.170160128536676,
+      "triplets": [
+        [
+          0,
+          6,
+          17
+        ],
+        [
+          1,
+          7,
+          13
+        ],
+        [
+          2,
+          8,
+          14
+        ],
+        [
+          3,
+          9,
+          15
+        ],
+        [
+          4,
+          10,
+          16
+        ],
+        [
+          5,
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "complete_triplets_out_of_6": 6,
+      "cost": 17.1716500003115,
+      "triplets": [
+        [
+          0,
+          6,
+          12
+        ],
+        [
+          1,
+          7,
+          13
+        ],
+        [
+          2,
+          8,
+          14
+        ],
+        [
+          3,
+          9,
+          15
+        ],
+        [
+          4,
+          10,
+          16
+        ],
+        [
+          5,
+          11,
+          17
+        ]
+      ]
+    }
+  ],
+  "vision_distance_sha256": "8bc1704cd9a45d78b0ddce2fd1913d267790c968573886f63d33b124f4217781"
+}
