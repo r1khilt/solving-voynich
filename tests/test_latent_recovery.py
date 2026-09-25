@@ -1,6 +1,7 @@
 """Unit tests for EXP-0011 latent recovery data and metrics (no holdout scores)."""
 
 import numpy as np
+import pytest
 
 from voynich.latent_recovery import (
     CIPHER_POOL,
@@ -74,6 +75,35 @@ def test_insert_nulls_preserves_signal_order():
     noisy, mask, _ = insert_nulls(ciphered, rng, 0.3, alphabet)
     recovered = "".join(ch for ch, m in zip(noisy, mask) if m == 1)
     assert recovered == ciphered
+
+
+@pytest.mark.parametrize(
+    "family", ("random_char", "random_pseudoword", "copy_mutate", "periodic", "shift_phase", "stateful")
+)
+@pytest.mark.parametrize("rate", (0.0, 0.3, 0.7))
+def test_insert_nulls_character_alignment(family, rate):
+    alphabet = "".join(list(CIPHER_POOL)[:36])
+    ciphered = "αβγδε ζηθικ λμνξο πρστυ " * 5
+    expected_nulls = round(rate / max(1e-6, 1 - rate) * len(ciphered))
+    for seed in range(10):
+        noisy, mask, families = insert_nulls(
+            ciphered,
+            np.random.default_rng(seed),
+            rate,
+            alphabet,
+            filler_families=(family,),
+        )
+        assert len(noisy) == len(mask) == len(families) == len(ciphered) + expected_nulls
+        assert mask.count(0) == expected_nulls
+        assert "".join(ch for ch, keep in zip(noisy, mask) if keep) == ciphered
+        assert all(tag == family for tag, keep in zip(families, mask) if not keep)
+
+
+def test_length_normalization_rejects_misaligned_mask():
+    from voynich.latent_recovery import _fit_len
+
+    with pytest.raises(ValueError, match="aligned"):
+        _fit_len("abc", [1, 1], length=2)
 
 
 def test_easy_filler_families_only():

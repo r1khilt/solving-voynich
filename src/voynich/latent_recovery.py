@@ -313,18 +313,24 @@ def insert_nulls(
             sig_left == 0 or rng.random() < inserts_left / (sig_left + inserts_left)
         )
         if take_null:
-            out_chars.append(emit_null())
-            mask.append(0)
-            fam_tags.append(family)
-            inserts_left -= 1
+            # A copy mutation can insert a second character. Count and label
+            # emitted characters, rather than treating the string as one slot.
+            null_token = emit_null()
+            if not null_token:
+                raise ValueError("null emitter returned an empty string")
+            for ch in null_token[:inserts_left]:
+                out_chars.append(ch)
+                mask.append(0)
+                fam_tags.append(family)
+                inserts_left -= 1
         else:
             out_chars.append(signal_chars[sig_i])
             mask.append(1)
             fam_tags.append("")
             sig_i += 1
             sig_left -= 1
-        if len(out_chars) > total_target + 5:
-            break
+    if len(out_chars) != total_target or len(mask) != total_target or len(fam_tags) != total_target:
+        raise AssertionError("null insertion length invariant failed")
     return "".join(out_chars), mask, fam_tags
 
 
@@ -352,6 +358,8 @@ def structured_pseudotext(rng: np.random.Generator, length: int, alphabet: str) 
 
 
 def _fit_len(text: str, mask: list[int], length: int = SEQ_LEN) -> tuple[str, list[int]]:
+    if len(text) != len(mask):
+        raise ValueError("text and mask must be aligned before length normalization")
     if len(text) >= length:
         text = text[:length]
         mask = list(mask[:length])
@@ -359,8 +367,6 @@ def _fit_len(text: str, mask: list[int], length: int = SEQ_LEN) -> tuple[str, li
         pad = length - len(text)
         text = text + (" " * pad)
         mask = list(mask) + [1] * pad
-    if len(mask) != length:
-        mask = (list(mask) + [1] * length)[:length]
     return text, mask
 
 

@@ -57,6 +57,8 @@ Full per-language JSON: `results/EXP-0016/per_language_compact.json`, `results/E
 
 ## EXP-0016b
 
+**2026-09-25 erratum:** The copy-mutate follow-up below used a misaligned synthetic generator; its PASS is not evidence about the intended channel. The easy-filler primary result above is not implicated by this defect. See [CHANNEL-ALIGNMENT-0001](CHANNEL-ALIGNMENT-0001-erratum.md).
+
 `copy_mutate` falsifier **PASS** (264/270 beat random; macro recon 0.255 > 0.192). See `EXP-0016b-results.md`.
 
 ## Voynich label-free (ZL3b validation only)

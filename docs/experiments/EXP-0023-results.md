@@ -1,5 +1,7 @@
 # EXP-0023 results — Typed decoder transfer on copy_mutate
 
+**2026-09-25 erratum:** Exact replay found that every copy-mutate row on this split has misaligned character/mask labels and a scored target different from the pre-insertion cipher stream. The numerical FAIL below does not decide corrected-channel recovery. See [CHANNEL-ALIGNMENT-0001](CHANNEL-ALIGNMENT-0001-erratum.md).
+
 Registration: `docs/experiments/EXP-0023.md` (written before Finnish scores). **Not** a manuscript reading or decipherment.
 
 ## Setup

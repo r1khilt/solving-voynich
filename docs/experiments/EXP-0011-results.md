@@ -1,5 +1,7 @@
 # EXP-0011 results — Finnish holdout latent recovery
 
+**2026-09-25 erratum:** The historical full-family generator misaligned `copy_mutate` characters and mask labels. Scores below remain historical but cannot establish recovery of the intended copy-mutate channel. See [CHANNEL-ALIGNMENT-0001](CHANNEL-ALIGNMENT-0001-erratum.md).
+
 Registered pass rule: `docs/experiments/EXP-0011.md`. This is **not** a Voynich decipherment.
 
 ## Setup

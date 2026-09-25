@@ -1,5 +1,7 @@
 # EXP-0024 results — Oracle inverse on EXP-0023 copy_mutate split
 
+**2026-09-25 erratum:** The 1.0 oracle score below compared the stored mask's deletion output with a target constructed from the same misaligned mask. It does not demonstrate inversion of the intended copy-mutate channel; `search_missed_inverse` must be retested. See [CHANNEL-ALIGNMENT-0001](CHANNEL-ALIGNMENT-0001-erratum.md).
+
 Registration: `docs/experiments/EXP-0024.md` (written before scores). **Not** a manuscript reading or decipherment.
 
 ## Setup

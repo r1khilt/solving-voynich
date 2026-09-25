@@ -1,5 +1,7 @@
 # EXP-0026 results — Ciphertext-only typed inverse (EXP-0023 split)
 
+**2026-09-25 erratum:** This study reused the malformed EXP-0023 copy-mutate split and the EXP-0024 stored-mask oracle. The numerical FAIL is historical; its intended true-channel diagnosis requires corrected data. See [CHANNEL-ALIGNMENT-0001](CHANNEL-ALIGNMENT-0001-erratum.md).
+
 Registration: `docs/experiments/EXP-0026.md` (written **before** holdout scores). **Not** a Voynich decipherment. Thresholds untouched after seeing numbers.
 
 ## Setup

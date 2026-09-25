@@ -1,5 +1,7 @@
 # EXP-0014b results — Copy-mutate shift on frozen EXP-0013 + exact-count
 
+**2026-09-25 erratum:** The historical `copy_mutate` generator misaligned visible characters and mask labels. The failure below is on a malformed channel and does not decide transfer on corrected data. See [CHANNEL-ALIGNMENT-0001](CHANNEL-ALIGNMENT-0001-erratum.md).
+
 Registration: `docs/experiments/EXP-0014b.md`. Run only after EXP-0014 PASS. Same frozen recon gate **0.2043264147237504**. **Not** a decipherment.
 
 ## Setup

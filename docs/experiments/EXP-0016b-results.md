@@ -1,5 +1,7 @@
 # EXP-0016b results — copy_mutate falsifier
 
+**2026-09-25 erratum:** The historical `copy_mutate` generator misaligned visible characters and mask labels. The PASS below is a score on malformed synthetic data, not a valid corrected-channel recovery result. See [CHANNEL-ALIGNMENT-0001](CHANNEL-ALIGNMENT-0001-erratum.md).
+
 Registration: `docs/experiments/EXP-0016b.md`. Run only after EXP-0016 PASS. Same exact-count decoder and pass rule. **Not** a decipherment.
 
 ## Setup
