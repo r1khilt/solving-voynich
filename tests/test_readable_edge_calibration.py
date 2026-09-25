@@ -5,6 +5,7 @@ from voynich.readable_edge_calibration import (
     evaluate_view,
     fold_words,
     homophones,
+    shuffle_seed,
     transpositions,
     wrap,
 )
@@ -25,6 +26,11 @@ def test_reversible_channels_preserve_word_count_and_length() -> None:
 
 def test_accent_fold_does_not_split_words() -> None:
     assert fold_words("lähteäni vivía naïve") == ["lahteani", "vivia", "naive"]
+
+
+def test_bijection_replays_exact_plaintext_shuffles() -> None:
+    assert shuffle_seed(0) == shuffle_seed(4) == 410400
+    assert len({shuffle_seed(index) for index in range(21)}) == 20
 
 
 def test_wrap_requires_exact_length() -> None:

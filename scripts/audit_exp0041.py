@@ -42,6 +42,12 @@ def close(a: float, b: float) -> None:
         raise AssertionError((a, b))
 
 
+def shuffle_seed(view_index: int) -> int:
+    if view_index == 4:
+        return 410400
+    return 410400 + 1000 * view_index
+
+
 def chunks(words: list[tuple[str, ...]], skeleton: list[tuple]) -> list[tuple]:
     rows = []
     cursor = 0
@@ -108,7 +114,7 @@ def replay(name: str, words: list[tuple[str, ...]], fit_template: list[tuple],
     model = model_fit(source)
     actual = score(held, model)
     last = aggregate(actual, 0)
-    null = [aggregate(score(scramble(held, 410400 + 1000 * ordinal + rep), model), 0)
+    null = [aggregate(score(scramble(held, shuffle_seed(ordinal) + rep), model), 0)
             for rep in range(200)]
     assert len(null) == len(saved["null_scores_bits_per_pair"])
     for observed, expected in zip(null, saved["null_scores_bits_per_pair"]):

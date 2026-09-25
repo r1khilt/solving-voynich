@@ -43,6 +43,11 @@ SOURCES = {
 }
 
 
+def shuffle_seed(view_index: int) -> int:
+    # The bijective positive control must replay the *same* permutations as English.
+    return 410400 if view_index == 4 else 410400 + 1000 * view_index
+
+
 def fold_words(raw: str) -> list[str]:
     normalized = unicodedata.normalize("NFKD", raw)
     folded = "".join(char for char in normalized if not unicodedata.combining(char))
@@ -179,21 +184,21 @@ def run(root: Path) -> dict:
         source_windows[language] = digest
         windows[language] = words
         views[language] = evaluate_view(words[:n_train], words[n_train:],
-                                        train_skeleton, valid_skeleton, 410400 + 1000 * index)
+                                        train_skeleton, valid_skeleton, shuffle_seed(index))
     english = windows["english"]
     encrypted = bijection(english)
     views["english_bijection"] = evaluate_view(encrypted[:n_train], encrypted[n_train:],
-                                                train_skeleton, valid_skeleton, 414400)
+                                                train_skeleton, valid_skeleton, shuffle_seed(4))
     for index, seed in enumerate(range(410200, 410208), start=5):
         encrypted = homophones(english, seed)
         views[f"english_homophonic_{seed}"] = evaluate_view(
             encrypted[:n_train], encrypted[n_train:], train_skeleton, valid_skeleton,
-            410400 + 1000 * index)
+            shuffle_seed(index))
     for index, seed in enumerate(range(410300, 410308), start=13):
         encrypted = transpositions(english, seed)
         views[f"english_transposition_{seed}"] = evaluate_view(
             encrypted[:n_train], encrypted[n_train:], train_skeleton, valid_skeleton,
-            410400 + 1000 * index)
+            shuffle_seed(index))
     for key in ("last_gain_bits_per_pair", "last_minus_shuffle_bits_per_pair",
                 "last_minus_first_bits_per_pair", "identity_over_last_bits_per_pair"):
         if abs(views["english"][key] - views["english_bijection"][key]) > 1e-10:
