@@ -1,0 +1,44 @@
+{
+  "experiment": "EXP-0035",
+  "passed": true,
+  "data_manifest_sha256": "ca8e3e6c7dfab5df74f750b6434b9905629f2f629a9c886e8f780935e406ec44",
+  "data_audit_sha256": "f7ad2390361e4df6294dc68c0ca0686b1235affaf0af9bd5fae1a7ecbad99bd8",
+  "baseline_freeze_sha256": "69a8000b6f7310a9a330fbf3fa89d614fd71004794c928e6a874a8668ea07fbb",
+  "auditor_sha256": "7b7cd8af62453eaf37ef58fbdebdcf163e74a08e2c30a0596e83a7b4919336cb",
+  "validation_copy_rows": 221,
+  "total_training_elapsed_seconds": 1067.7867642499914,
+  "new_models": {
+    "uniform_320101": {
+      "report_sha256": "dc39530da6d37874d73021008f3e8033d385808d4e13976a466ae41767f283f0",
+      "checkpoint_sha256": "39425e341d7f8178914d62b6e345255cc8cff6e4f82cd2b1eab34c2ac0316b48",
+      "best_step": 2750,
+      "validation_copy_null_f1": 0.4781117376896692,
+      "elapsed_seconds": 266.88420504199894,
+      "parameter_count": 10746629
+    },
+    "uniform_320202": {
+      "report_sha256": "d3b39eba378771dbc8baae9f07facd35434180b4733500f940280b4e7f8b7f54",
+      "checkpoint_sha256": "171415ddd0a24f589d908a16ba81c8fd271fd3cfe1f471ed8dcf116a5b607af6",
+      "best_step": 2500,
+      "validation_copy_null_f1": 0.47892564385791525,
+      "elapsed_seconds": 266.99381637499755,
+      "parameter_count": 10746629
+    },
+    "weighted_320101": {
+      "report_sha256": "a2f93ff2ded3b175f3e6f662df39ea7949d1f86a6dd558582dc529538739d32c",
+      "checkpoint_sha256": "1a5f67321d54d1033055b79e3243585190830bad621363f0be4940fddc6e12fd",
+      "best_step": 3000,
+      "validation_copy_null_f1": 0.47648392535317713,
+      "elapsed_seconds": 266.9374814170005,
+      "parameter_count": 10746629
+    },
+    "weighted_320202": {
+      "report_sha256": "c1e509ab4f0c878c600ec0607bcecbab76c64b23a7c6298fb2edbc6e85d16146",
+      "checkpoint_sha256": "fff6b6bc10478180e6769a00e02c9bc4c2ee03d7f646bc9b9b87ae4ee472f961",
+      "best_step": 3000,
+      "validation_copy_null_f1": 0.49090169176210685,
+      "elapsed_seconds": 266.9712614159944,
+      "parameter_count": 10746629
+    }
+  }
+}

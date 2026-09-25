@@ -1,0 +1,79 @@
+{
+  "experiment": "EXP-0035",
+  "variant": "uniform",
+  "seed": 320202,
+  "device": "mps",
+  "torch": "2.14.0",
+  "parameter_count": 10746629,
+  "steps": 3000,
+  "best_step": 2500,
+  "best_validation_copy_null_f1": 0.47892564385791525,
+  "validation_copy_n": 221,
+  "elapsed_seconds": 266.99381637499755,
+  "history": [
+    {
+      "step": 250,
+      "train_loss": 0.489894837141037,
+      "validation_copy_null_f1": 0.37986163595139816
+    },
+    {
+      "step": 500,
+      "train_loss": 0.6431193351745605,
+      "validation_copy_null_f1": 0.3974187547235626
+    },
+    {
+      "step": 750,
+      "train_loss": 0.53458571434021,
+      "validation_copy_null_f1": 0.43264926457764086
+    },
+    {
+      "step": 1000,
+      "train_loss": 0.4462628960609436,
+      "validation_copy_null_f1": 0.43125399686064764
+    },
+    {
+      "step": 1250,
+      "train_loss": 0.6459758281707764,
+      "validation_copy_null_f1": 0.4605546189175048
+    },
+    {
+      "step": 1500,
+      "train_loss": 0.3937522768974304,
+      "validation_copy_null_f1": 0.4650892389977327
+    },
+    {
+      "step": 1750,
+      "train_loss": 0.4299675226211548,
+      "validation_copy_null_f1": 0.4600895296785071
+    },
+    {
+      "step": 2000,
+      "train_loss": 0.44435715675354004,
+      "validation_copy_null_f1": 0.47555374687518165
+    },
+    {
+      "step": 2250,
+      "train_loss": 0.352425754070282,
+      "validation_copy_null_f1": 0.4754374745654322
+    },
+    {
+      "step": 2500,
+      "train_loss": 0.48919883370399475,
+      "validation_copy_null_f1": 0.47892564385791525
+    },
+    {
+      "step": 2750,
+      "train_loss": 0.36672282218933105,
+      "validation_copy_null_f1": 0.47194930527294926
+    },
+    {
+      "step": 3000,
+      "train_loss": 0.35978713631629944,
+      "validation_copy_null_f1": 0.4735771176094413
+    }
+  ],
+  "checkpoint_sha256": "171415ddd0a24f589d908a16ba81c8fd271fd3cfe1f471ed8dcf116a5b607af6",
+  "data_manifest_sha256": "ca8e3e6c7dfab5df74f750b6434b9905629f2f629a9c886e8f780935e406ec44",
+  "target_sha256": "1f047bf78b216718092029a9ac967924cc5f76bd3b8de87144a21f6517e153ca",
+  "runner_sha256": "507ca2d897cd72afb010448d0b233cd4d4431b82c18be78475e6e686d75fa393"
+}
