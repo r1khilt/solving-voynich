@@ -1,0 +1,78 @@
+{
+  "experiment": "EXP-0032",
+  "variant": "canonical",
+  "seed": 320101,
+  "device": "mps",
+  "torch": "2.14.0",
+  "parameter_count": 10746629,
+  "steps": 3000,
+  "best_step": 2500,
+  "best_validation_copy_null_f1": 0.48590198244288124,
+  "validation_copy_n": 221,
+  "elapsed_seconds": 266.5561107499998,
+  "history": [
+    {
+      "step": 250,
+      "train_loss": 0.45153507590293884,
+      "validation_copy_null_f1": 0.4086971687692576
+    },
+    {
+      "step": 500,
+      "train_loss": 0.5016036033630371,
+      "validation_copy_null_f1": 0.4034649148305331
+    },
+    {
+      "step": 750,
+      "train_loss": 0.45790255069732666,
+      "validation_copy_null_f1": 0.4433463170745887
+    },
+    {
+      "step": 1000,
+      "train_loss": 0.439412921667099,
+      "validation_copy_null_f1": 0.4431137724550898
+    },
+    {
+      "step": 1250,
+      "train_loss": 0.44329729676246643,
+      "validation_copy_null_f1": 0.45369455264228825
+    },
+    {
+      "step": 1500,
+      "train_loss": 0.5912045240402222,
+      "validation_copy_null_f1": 0.46671705133422475
+    },
+    {
+      "step": 1750,
+      "train_loss": 0.3885596990585327,
+      "validation_copy_null_f1": 0.48101854543340505
+    },
+    {
+      "step": 2000,
+      "train_loss": 0.43003687262535095,
+      "validation_copy_null_f1": 0.4834602639381431
+    },
+    {
+      "step": 2250,
+      "train_loss": 0.42026832699775696,
+      "validation_copy_null_f1": 0.47369338991919074
+    },
+    {
+      "step": 2500,
+      "train_loss": 0.41598010063171387,
+      "validation_copy_null_f1": 0.48590198244288124
+    },
+    {
+      "step": 2750,
+      "train_loss": 0.5036536455154419,
+      "validation_copy_null_f1": 0.48287890238939596
+    },
+    {
+      "step": 3000,
+      "train_loss": 0.42821335792541504,
+      "validation_copy_null_f1": 0.48392535317714086
+    }
+  ],
+  "checkpoint_sha256": "164d15d98c362c966d61f53a4ea168394155cdd1836ee24976681ba8df8300d2",
+  "manifest_sha256": "7d2416d19618303e95eb6865b3d12f47ad595c837695ff032baccabfde03db18",
+  "runner_sha256": "9516cfec57372dcd993685331992f9ef06806b1c222b48f7fa33a7d56fd33599"
+}
