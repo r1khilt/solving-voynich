@@ -1,0 +1,712 @@
+{
+  "experiment": "NAIBBE-002",
+  "audit_pass": true,
+  "key_freeze_commit": "8b27c21f397d7c0e3eb5fa8a03f6fae5aa2372ba",
+  "source_commits": [
+    "2aee093e2db46e41ce610bf50760327188ff0430"
+  ],
+  "evaluation_sha256": "81afa0fe7467ca1123081258dab6e40ba668a65a74b7c4b288c7b808bc79daa2",
+  "manifest_sha256": "63ca1c779b52176ce7ca181d64471687781f2ae918e7ad711c91cce1a58f77a4",
+  "auditor_sha256": "68eeae5370c87c02a7fa322a5eaa77e7f947db650199707d21aef1afd81f14d7",
+  "independent_primitives_sha256": "93e5937f774429bab1aa53645d163055636275cbf6c4ef6b3f5115a6d11314b5",
+  "checked_hashes": {
+    "outputs/NAIBBE-002/latin_joint.json": "904367ee678475295d4b0c337b1ea7c26060504602698db8baa0d5dec5daa975",
+    "scripts/run_naibbe002.py": "70603c9b9ab3435f2c8a9ac89fd345f171da3c988e9aaec66556df270b11cb7b",
+    "src/voynich/naibbe_homophone_search.py": "d72c0ec1d87d846b95c2b186d9cc13f64226fcd0852fcd9dc7e7dca2e26fa323",
+    "src/voynich/naibbe_key_search.py": "3d6c6a2b891cdd127a859867a7da3bbf42f1c4c9346470bfae03f9f994db9713",
+    "outputs/NAIBBE-002/latin_local.json": "f27a8fde2db11ded1963e92d8f65673e235a9a38ab1b686453c2770173279892",
+    "outputs/NAIBBE-002/english_joint.json": "312121597846f0a3337083ee0061e8c07fcc6eafeb3705513205e277e952d093",
+    "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la.txt": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c",
+    "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la2.txt": "8bae4d88747b318b58ea193f981766fed337ddf613df452c1a06d72c9af75ffd",
+    "data/raw/external/voynich-units/data/controls/naibbe/greshko_naibbe_tables.csv": "4e7cfd54b7ec66515d39a51e11ec97e8e19b643b0b189124eebc3982e707dcec",
+    "data/raw/external/voynich-units/data/controls/naibbe/greshko_nathist_output_ciphertext.txt": "9cdf2de12f371ac7efdb2e78713f229ada508286c1717758184238a59cd64326",
+    "data/raw/external/voynich-units/data/controls/naibbe/greshko_nathist_pre_encryption_respaced_plaintext.txt": "4979b6826c75dd47b90d6c95ac212a34cd3735b1151ca2a524e9d13b4112e93b",
+    "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/lm_english.txt": "7e1a58776d28d7385752c4be7931f80ad385d6aad28309f56e28f4bcd38f4789",
+    "data/processed/naibbe001/english_lm.txt": "a2df39ce27fe8117a20e39be337d534fd5b0c5939e40d93d7f0ea19fc1d41134",
+    "data/processed/naibbe001/latin_lm.txt": "ccd400154a6697a6b40ed75b0038562de1258a7c12f34d851fd3603c85ebed63",
+    "data/manifests/naibbe001_data.json": "1783ec695407a77eaac903a0620291c1dcfa42bec3469738b5015122c421651f",
+    "scripts/build_naibbe001_data.py": "2d042527882ba0673fdbe222a3d0941aa4b2f3bfe3320b9233d162cc16250e1c",
+    "data/processed/naibbe002/fit_input.json": "02da4631aab90fdf3c1e8c2bf13c7bba2a5bb41416e10a04b2885efb73390ccf",
+    "data/processed/naibbe002/transfer_input.json": "13779e61f1e61f046404435f9594151fb767fffbdde36743a04022c30d255d88",
+    "outputs/NAIBBE-002/evaluation_predictions.json": "7d13ff65d34af2a83050baca704898cb6827b6d7c3ed98184e9c54a8d2a035c6",
+    "data/processed/naibbe002/answer_key.json": "410e0e85a26a059d2e48b2863c68859df8ed3da191a610784a1bbb033b24086d"
+  },
+  "source_table_lattice_tokens_verified": 16384,
+  "exact_local_class_support_verified": true,
+  "emitted_chunks_verified": 65536,
+  "max_score_delta": 1.4551915228366852e-10,
+  "criteria": {
+    "cer_at_most_02": true,
+    "within_005_of_oracle": true,
+    "macro_key_at_least_95": false,
+    "unique_weighted_key_at_least_99": true
+  },
+  "decision": "FAIL",
+  "metrics": {
+    "oracle_fit": {
+      "characters": 12483,
+      "predicted_characters": 12483,
+      "edit_distance": 6,
+      "cer": 0.0004806536890170632,
+      "chunks": 8192,
+      "exact_chunks": 8189,
+      "ambiguous_chunks": 202,
+      "ambiguous_correct": 199,
+      "key_types": 138,
+      "key_types_correct": 138,
+      "key_macro_accuracy": 1.0,
+      "unique_class_characters": 12217,
+      "unique_class_weighted_key_accuracy": 1.0,
+      "no_unique_evidence_classes": 6,
+      "per_group_key_correct": [
+        23,
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      "unresolved_class_characters": 266,
+      "per_group_audit": [
+        {
+          "group_index": 0,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 994,
+          "unique_class_characters_with_correct_key": 994,
+          "no_unique_evidence_classes": 0
+        },
+        {
+          "group_index": 1,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1946,
+          "unique_class_characters_with_correct_key": 1946,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 2,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1903,
+          "unique_class_characters_with_correct_key": 1903,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 3,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 4522,
+          "unique_class_characters_with_correct_key": 4522,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 4,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1869,
+          "unique_class_characters_with_correct_key": 1869,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 5,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 983,
+          "unique_class_characters_with_correct_key": 983,
+          "no_unique_evidence_classes": 2
+        }
+      ]
+    },
+    "latin_joint_fit": {
+      "characters": 12483,
+      "predicted_characters": 12483,
+      "edit_distance": 9,
+      "cer": 0.0007209805335255948,
+      "chunks": 8192,
+      "exact_chunks": 8186,
+      "ambiguous_chunks": 202,
+      "ambiguous_correct": 199,
+      "key_types": 138,
+      "key_types_correct": 130,
+      "key_macro_accuracy": 0.9420289855072463,
+      "unique_class_characters": 12217,
+      "unique_class_weighted_key_accuracy": 0.9997544405336826,
+      "no_unique_evidence_classes": 6,
+      "per_group_key_correct": [
+        23,
+        21,
+        21,
+        23,
+        21,
+        21
+      ],
+      "unresolved_class_characters": 266,
+      "per_group_audit": [
+        {
+          "group_index": 0,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 994,
+          "unique_class_characters_with_correct_key": 994,
+          "no_unique_evidence_classes": 0
+        },
+        {
+          "group_index": 1,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1946,
+          "unique_class_characters_with_correct_key": 1945,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 2,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1903,
+          "unique_class_characters_with_correct_key": 1902,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 3,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 4522,
+          "unique_class_characters_with_correct_key": 4522,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 4,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1869,
+          "unique_class_characters_with_correct_key": 1868,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 5,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 983,
+          "unique_class_characters_with_correct_key": 983,
+          "no_unique_evidence_classes": 2
+        }
+      ]
+    },
+    "latin_local_fit": {
+      "characters": 12483,
+      "predicted_characters": 12483,
+      "edit_distance": 9,
+      "cer": 0.0007209805335255948,
+      "chunks": 8192,
+      "exact_chunks": 8186,
+      "ambiguous_chunks": 202,
+      "ambiguous_correct": 199,
+      "key_types": 138,
+      "key_types_correct": 130,
+      "key_macro_accuracy": 0.9420289855072463,
+      "unique_class_characters": 12217,
+      "unique_class_weighted_key_accuracy": 0.9997544405336826,
+      "no_unique_evidence_classes": 6,
+      "per_group_key_correct": [
+        23,
+        21,
+        21,
+        23,
+        21,
+        21
+      ],
+      "unresolved_class_characters": 266,
+      "per_group_audit": [
+        {
+          "group_index": 0,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 994,
+          "unique_class_characters_with_correct_key": 994,
+          "no_unique_evidence_classes": 0
+        },
+        {
+          "group_index": 1,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1946,
+          "unique_class_characters_with_correct_key": 1945,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 2,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1903,
+          "unique_class_characters_with_correct_key": 1902,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 3,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 4522,
+          "unique_class_characters_with_correct_key": 4522,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 4,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1869,
+          "unique_class_characters_with_correct_key": 1868,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 5,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 983,
+          "unique_class_characters_with_correct_key": 983,
+          "no_unique_evidence_classes": 2
+        }
+      ]
+    },
+    "english_joint_fit": {
+      "characters": 12483,
+      "predicted_characters": 12483,
+      "edit_distance": 133,
+      "cer": 0.0106544901065449,
+      "chunks": 8192,
+      "exact_chunks": 8066,
+      "ambiguous_chunks": 202,
+      "ambiguous_correct": 191,
+      "key_types": 138,
+      "key_types_correct": 128,
+      "key_macro_accuracy": 0.927536231884058,
+      "unique_class_characters": 12217,
+      "unique_class_weighted_key_accuracy": 0.9905868871244986,
+      "no_unique_evidence_classes": 6,
+      "per_group_key_correct": [
+        19,
+        23,
+        23,
+        23,
+        21,
+        19
+      ],
+      "unresolved_class_characters": 266,
+      "per_group_audit": [
+        {
+          "group_index": 0,
+          "classes": 23,
+          "correct": 19,
+          "errors": 4,
+          "unique_class_characters": 994,
+          "unique_class_characters_with_correct_key": 967,
+          "no_unique_evidence_classes": 0
+        },
+        {
+          "group_index": 1,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1946,
+          "unique_class_characters_with_correct_key": 1946,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 2,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1903,
+          "unique_class_characters_with_correct_key": 1903,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 3,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 4522,
+          "unique_class_characters_with_correct_key": 4522,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 4,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1869,
+          "unique_class_characters_with_correct_key": 1868,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 5,
+          "classes": 23,
+          "correct": 19,
+          "errors": 4,
+          "unique_class_characters": 983,
+          "unique_class_characters_with_correct_key": 896,
+          "no_unique_evidence_classes": 2
+        }
+      ]
+    },
+    "oracle_transfer": {
+      "characters": 12326,
+      "predicted_characters": 12326,
+      "edit_distance": 3,
+      "cer": 0.00024338796040889178,
+      "chunks": 8192,
+      "exact_chunks": 8190,
+      "ambiguous_chunks": 201,
+      "ambiguous_correct": 199,
+      "key_types": 138,
+      "key_types_correct": 138,
+      "key_macro_accuracy": 1.0,
+      "unique_class_characters": 12059,
+      "unique_class_weighted_key_accuracy": 1.0,
+      "no_unique_evidence_classes": 8,
+      "per_group_key_correct": [
+        23,
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      "unresolved_class_characters": 267,
+      "per_group_audit": [
+        {
+          "group_index": 0,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 980,
+          "unique_class_characters_with_correct_key": 980,
+          "no_unique_evidence_classes": 2
+        },
+        {
+          "group_index": 1,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1929,
+          "unique_class_characters_with_correct_key": 1929,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 2,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1878,
+          "unique_class_characters_with_correct_key": 1878,
+          "no_unique_evidence_classes": 2
+        },
+        {
+          "group_index": 3,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 4480,
+          "unique_class_characters_with_correct_key": 4480,
+          "no_unique_evidence_classes": 0
+        },
+        {
+          "group_index": 4,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1817,
+          "unique_class_characters_with_correct_key": 1817,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 5,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 975,
+          "unique_class_characters_with_correct_key": 975,
+          "no_unique_evidence_classes": 2
+        }
+      ]
+    },
+    "latin_joint_transfer": {
+      "characters": 12326,
+      "predicted_characters": 12326,
+      "edit_distance": 11,
+      "cer": 0.0008924225214992698,
+      "chunks": 8192,
+      "exact_chunks": 8182,
+      "ambiguous_chunks": 201,
+      "ambiguous_correct": 199,
+      "key_types": 138,
+      "key_types_correct": 130,
+      "key_macro_accuracy": 0.9420289855072463,
+      "unique_class_characters": 12059,
+      "unique_class_weighted_key_accuracy": 0.9993365950742185,
+      "no_unique_evidence_classes": 8,
+      "per_group_key_correct": [
+        23,
+        21,
+        21,
+        23,
+        21,
+        21
+      ],
+      "unresolved_class_characters": 267,
+      "per_group_audit": [
+        {
+          "group_index": 0,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 980,
+          "unique_class_characters_with_correct_key": 980,
+          "no_unique_evidence_classes": 2
+        },
+        {
+          "group_index": 1,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1929,
+          "unique_class_characters_with_correct_key": 1928,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 2,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1878,
+          "unique_class_characters_with_correct_key": 1878,
+          "no_unique_evidence_classes": 2
+        },
+        {
+          "group_index": 3,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 4480,
+          "unique_class_characters_with_correct_key": 4480,
+          "no_unique_evidence_classes": 0
+        },
+        {
+          "group_index": 4,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1817,
+          "unique_class_characters_with_correct_key": 1810,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 5,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 975,
+          "unique_class_characters_with_correct_key": 975,
+          "no_unique_evidence_classes": 2
+        }
+      ]
+    },
+    "latin_local_transfer": {
+      "characters": 12326,
+      "predicted_characters": 12326,
+      "edit_distance": 11,
+      "cer": 0.0008924225214992698,
+      "chunks": 8192,
+      "exact_chunks": 8182,
+      "ambiguous_chunks": 201,
+      "ambiguous_correct": 199,
+      "key_types": 138,
+      "key_types_correct": 130,
+      "key_macro_accuracy": 0.9420289855072463,
+      "unique_class_characters": 12059,
+      "unique_class_weighted_key_accuracy": 0.9993365950742185,
+      "no_unique_evidence_classes": 8,
+      "per_group_key_correct": [
+        23,
+        21,
+        21,
+        23,
+        21,
+        21
+      ],
+      "unresolved_class_characters": 267,
+      "per_group_audit": [
+        {
+          "group_index": 0,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 980,
+          "unique_class_characters_with_correct_key": 980,
+          "no_unique_evidence_classes": 2
+        },
+        {
+          "group_index": 1,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1929,
+          "unique_class_characters_with_correct_key": 1928,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 2,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1878,
+          "unique_class_characters_with_correct_key": 1878,
+          "no_unique_evidence_classes": 2
+        },
+        {
+          "group_index": 3,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 4480,
+          "unique_class_characters_with_correct_key": 4480,
+          "no_unique_evidence_classes": 0
+        },
+        {
+          "group_index": 4,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1817,
+          "unique_class_characters_with_correct_key": 1810,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 5,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 975,
+          "unique_class_characters_with_correct_key": 975,
+          "no_unique_evidence_classes": 2
+        }
+      ]
+    },
+    "english_joint_transfer": {
+      "characters": 12326,
+      "predicted_characters": 12326,
+      "edit_distance": 136,
+      "cer": 0.011033587538536426,
+      "chunks": 8192,
+      "exact_chunks": 8061,
+      "ambiguous_chunks": 201,
+      "ambiguous_correct": 193,
+      "key_types": 138,
+      "key_types_correct": 128,
+      "key_macro_accuracy": 0.927536231884058,
+      "unique_class_characters": 12059,
+      "unique_class_weighted_key_accuracy": 0.9898001492661083,
+      "no_unique_evidence_classes": 8,
+      "per_group_key_correct": [
+        19,
+        23,
+        23,
+        23,
+        21,
+        19
+      ],
+      "unresolved_class_characters": 267,
+      "per_group_audit": [
+        {
+          "group_index": 0,
+          "classes": 23,
+          "correct": 19,
+          "errors": 4,
+          "unique_class_characters": 980,
+          "unique_class_characters_with_correct_key": 951,
+          "no_unique_evidence_classes": 2
+        },
+        {
+          "group_index": 1,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1929,
+          "unique_class_characters_with_correct_key": 1929,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 2,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 1878,
+          "unique_class_characters_with_correct_key": 1878,
+          "no_unique_evidence_classes": 2
+        },
+        {
+          "group_index": 3,
+          "classes": 23,
+          "correct": 23,
+          "errors": 0,
+          "unique_class_characters": 4480,
+          "unique_class_characters_with_correct_key": 4480,
+          "no_unique_evidence_classes": 0
+        },
+        {
+          "group_index": 4,
+          "classes": 23,
+          "correct": 21,
+          "errors": 2,
+          "unique_class_characters": 1817,
+          "unique_class_characters_with_correct_key": 1810,
+          "no_unique_evidence_classes": 1
+        },
+        {
+          "group_index": 5,
+          "classes": 23,
+          "correct": 19,
+          "errors": 4,
+          "unique_class_characters": 975,
+          "unique_class_characters_with_correct_key": 888,
+          "no_unique_evidence_classes": 2
+        }
+      ]
+    }
+  },
+  "seconds": 4.323167415997887,
+  "scope": [
+    "Independent source-table glyph splits and published cipher/reference slices",
+    "Exact local-class supports if answer-only table labels are present; plaintext supports otherwise",
+    "All six within-group permutations, saved chunks and legal candidate choices",
+    "Independent dictionary LM and exact forward max DP for learned and gold objectives",
+    "Independent Wagner-Fischer CER, chunk/ambiguous recovery and macro key accuracy",
+    "Unique-class-position weighting only; per-group correct/error/evidence counts",
+    "All primary criteria, raw/derived/frozen hashes and local Git source/key consistency"
+  ],
+  "not_established": [
+    "No independent rerun of key search",
+    "No gold table-draw trace; weighting excludes ambiguous local-class positions",
+    "Local Git consistency does not prove remote timing or process isolation",
+    "Known role grammar, within-table links and source alphabet remain supplied",
+    "No Voynich plaintext or historical generator is established"
+  ]
+}

@@ -1,0 +1,909 @@
+{
+  "experiment": "NAIBBE-002",
+  "stage": "posthoc_fit_only_diagnostic_after_registered_FAIL",
+  "audit_sha256": "c98f9082426b21419b1246defddf2e4e64cc76cd70136eed28411f175711b868",
+  "fit_input_sha256": "02da4631aab90fdf3c1e8c2bf13c7bba2a5bb41416e10a04b2885efb73390ccf",
+  "lm_sha256": "ccd400154a6697a6b40ed75b0038562de1258a7c12f34d851fd3603c85ebed63",
+  "groups": [
+    {
+      "y_possible_positions": 3,
+      "z_possible_positions": 3,
+      "y_unique_positions": 1,
+      "z_unique_positions": 1,
+      "learned_swapped": false,
+      "both_absent": false
+    },
+    {
+      "y_possible_positions": 1,
+      "z_possible_positions": 0,
+      "y_unique_positions": 1,
+      "z_unique_positions": 0,
+      "learned_swapped": true,
+      "both_absent": false
+    },
+    {
+      "y_possible_positions": 1,
+      "z_possible_positions": 2,
+      "y_unique_positions": 1,
+      "z_unique_positions": 0,
+      "learned_swapped": true,
+      "both_absent": false
+    },
+    {
+      "y_possible_positions": 3,
+      "z_possible_positions": 0,
+      "y_unique_positions": 2,
+      "z_unique_positions": 0,
+      "learned_swapped": false,
+      "both_absent": false
+    },
+    {
+      "y_possible_positions": 1,
+      "z_possible_positions": 0,
+      "y_unique_positions": 1,
+      "z_unique_positions": 0,
+      "learned_swapped": true,
+      "both_absent": false
+    },
+    {
+      "y_possible_positions": 2,
+      "z_possible_positions": 1,
+      "y_unique_positions": 0,
+      "z_unique_positions": 0,
+      "learned_swapped": true,
+      "both_absent": false
+    }
+  ],
+  "enumerated_keys": 64,
+  "best_score": -28282.51251498082,
+  "gold_score": -28282.874941621023,
+  "selected_score": -28282.51251498082,
+  "selected_is_best_in_restricted_family": true,
+  "best_tie_count": 1,
+  "keys_scoring_above_gold": 15,
+  "learned_swaps": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    1
+  ],
+  "orientations": [
+    {
+      "swaps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fit_score": -28282.874941621023
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fit_score": -28282.813200918372
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fit_score": -28282.812803434495
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fit_score": -28282.75106273185
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fit_score": -28283.38649317744
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fit_score": -28283.32475247479
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fit_score": -28283.324354990913
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fit_score": -28283.26261428827
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fit_score": -28282.700283809998
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fit_score": -28282.638543107354
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fit_score": -28282.638145623478
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fit_score": -28282.576404920826
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fit_score": -28283.211835366415
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fit_score": -28283.150094663764
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fit_score": -28283.149697179888
+    },
+    {
+      "swaps": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fit_score": -28283.087956477244
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fit_score": -28282.81105168101
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fit_score": -28282.749310978365
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fit_score": -28282.748913494488
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fit_score": -28282.687172791837
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fit_score": -28283.322603237426
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fit_score": -28283.260862534782
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fit_score": -28283.260465050906
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fit_score": -28283.198724348254
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fit_score": -28282.63639386999
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fit_score": -28282.57465316734
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fit_score": -28282.574255683463
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fit_score": -28282.51251498082
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fit_score": -28283.1479454264
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fit_score": -28283.086204723757
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fit_score": -28283.08580723988
+    },
+    {
+      "swaps": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fit_score": -28283.02406653723
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fit_score": -28283.977107924868
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fit_score": -28283.915367222216
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fit_score": -28283.91496973834
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fit_score": -28283.853229035696
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fit_score": -28284.488659481285
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fit_score": -28284.426918778634
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fit_score": -28284.426521294758
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fit_score": -28284.364780592114
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fit_score": -28283.802450113842
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fit_score": -28283.7407094112
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fit_score": -28283.740311927322
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fit_score": -28283.67857122467
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fit_score": -28284.31400167026
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fit_score": -28284.25226096761
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fit_score": -28284.251863483732
+    },
+    {
+      "swaps": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fit_score": -28284.19012278109
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fit_score": -28283.913217984853
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fit_score": -28283.85147728221
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fit_score": -28283.851079798333
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "fit_score": -28283.78933909568
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "fit_score": -28284.42476954127
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "fit_score": -28284.363028838627
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "fit_score": -28284.36263135475
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "fit_score": -28284.3008906521
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fit_score": -28283.738560173835
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "fit_score": -28283.676819471184
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "fit_score": -28283.676421987308
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "fit_score": -28283.614681284664
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fit_score": -28284.250111730245
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fit_score": -28284.1883710276
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "fit_score": -28284.187973543725
+    },
+    {
+      "swaps": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fit_score": -28284.126232841074
+    }
+  ],
+  "score_contributions": [
+    {
+      "position": 3480,
+      "gold_key_gram": "aloy",
+      "selected_key_gram": "aloz",
+      "selected_minus_gold_log_score": -0.00021641329805444087,
+      "gold_context_count": 28,
+      "selected_context_count": 28
+    },
+    {
+      "position": 3481,
+      "gold_key_gram": "loye",
+      "selected_key_gram": "loze",
+      "selected_minus_gold_log_score": 0.061957115944249797,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 3482,
+      "gold_key_gram": "oyep",
+      "selected_key_gram": "ozep",
+      "selected_minus_gold_log_score": 0.0,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 3483,
+      "gold_key_gram": "yepe",
+      "selected_key_gram": "zepe",
+      "selected_minus_gold_log_score": 0.0,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 3955,
+      "gold_key_gram": "caly",
+      "selected_key_gram": "calz",
+      "selected_minus_gold_log_score": -0.01835754827101166,
+      "gold_context_count": 46,
+      "selected_context_count": 46
+    },
+    {
+      "position": 3956,
+      "gold_key_gram": "alyc",
+      "selected_key_gram": "alzc",
+      "selected_minus_gold_log_score": 0.193015359294332,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 3957,
+      "gold_key_gram": "lyce",
+      "selected_key_gram": "lzce",
+      "selected_minus_gold_log_score": 0.0,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 3958,
+      "gold_key_gram": "ycec",
+      "selected_key_gram": "zcec",
+      "selected_minus_gold_log_score": 0.0,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 5806,
+      "gold_key_gram": "chry",
+      "selected_key_gram": "chrz",
+      "selected_minus_gold_log_score": -1.288514972319632e-05,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 5807,
+      "gold_key_gram": "hrym",
+      "selected_key_gram": "hrzm",
+      "selected_minus_gold_log_score": 0.0639028251591025,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 5808,
+      "gold_key_gram": "rymi",
+      "selected_key_gram": "rzmi",
+      "selected_minus_gold_log_score": 0.0,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 5809,
+      "gold_key_gram": "ymit",
+      "selected_key_gram": "zmit",
+      "selected_minus_gold_log_score": 0.0,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 7480,
+      "gold_key_gram": "cisy",
+      "selected_key_gram": "cisz",
+      "selected_minus_gold_log_score": -0.0020828029555666205,
+      "gold_context_count": 292,
+      "selected_context_count": 292
+    },
+    {
+      "position": 7481,
+      "gold_key_gram": "isyc",
+      "selected_key_gram": "iszc",
+      "selected_minus_gold_log_score": 0.06422098948070243,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 7482,
+      "gold_key_gram": "syce",
+      "selected_key_gram": "szce",
+      "selected_minus_gold_log_score": 0.0,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    },
+    {
+      "position": 7483,
+      "gold_key_gram": "ycen",
+      "selected_key_gram": "zcen",
+      "selected_minus_gold_log_score": 0.0,
+      "gold_context_count": 0,
+      "selected_context_count": 0
+    }
+  ],
+  "claim_limit": "Conditional enumeration of six y/z swaps after observing errors; not global optimization, calibrated posterior, new holdout result, or changed gate. Published FAIL retained."
+}
