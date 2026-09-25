@@ -1,0 +1,139 @@
+{
+  "anonymization_seed": 6069202,
+  "answer_key": {
+    "path": "data/processed/naibbe003/answer_key.json",
+    "sha256": "bee81e93727209c0ad228e4576da765964ef23c5264da799cac081af6c6bd8c2"
+  },
+  "answer_key_sha256": "bee81e93727209c0ad228e4576da765964ef23c5264da799cac081af6c6bd8c2",
+  "archive_revision": "956a7c4fc39981f4d116fa3f4edfccce6d065571",
+  "builder_sources": [
+    {
+      "path": "scripts/build_naibbe001_data.py",
+      "sha256": "2d042527882ba0673fdbe222a3d0941aa4b2f3bfe3320b9233d162cc16250e1c"
+    },
+    {
+      "path": "scripts/build_naibbe002_data.py",
+      "sha256": "098dcd707b0de49f91a899ffed4caf4771fb9700a344a90d0dae148ccfe4c100"
+    },
+    {
+      "path": "scripts/build_naibbe003_data.py",
+      "sha256": "44a49a0d95623567e45ca0036443a3959b454a4d03a5c6289a1403fd509cbd78"
+    }
+  ],
+  "classes": 138,
+  "classes_per_group": 23,
+  "collision_handling": "Identical glyph strings from different tables retain separate local class candidates, including dar",
+  "experiment": "NAIBBE-003",
+  "fit_payload_equality": "Exact JSON equality with NAIBBE-002 fit input except experiment=NAIBBE-003; independently reconstructed support and source slice agree",
+  "group_constraint": "Each group has an independent bijection to the 23-letter alphabet",
+  "groups": 6,
+  "hidden": [
+    "Six class-to-letter permutations and all true cross-table letter equivalences",
+    "Correct ambiguous-token readings; published data does not provide table draw traces"
+  ],
+  "identity_policy": "Reuse all 138 NAIBBE-002 class IDs, six group IDs, orders and hidden identities; no new anonymization",
+  "intervention": "Only source-model choice changes in a separately registered source-only calibration; no corpus, key identities, codebook clues, fit data, preprocessing or support grammar intervention here",
+  "license": "Raw and derived third-party text/codebook remain ignored. Greshko copyright/license stays beside source; cite Cryptologia DOI10.1080/01611194.2025.2566408. No third-party code copied.",
+  "limit": "Restricted six-codebook calibration, not blind family/role discovery. Fresh transfer is same-work, not source-disjoint. Support lattice discards table draw probabilities.",
+  "lms": {
+    "english": {
+      "characters": 317326,
+      "path": "data/processed/naibbe001/english_lm.txt",
+      "sha256": "a2df39ce27fe8117a20e39be337d534fd5b0c5939e40d93d7f0ea19fc1d41134"
+    },
+    "latin": {
+      "characters": 317326,
+      "path": "data/processed/naibbe001/latin_lm.txt",
+      "sha256": "ccd400154a6697a6b40ed75b0038562de1258a7c12f34d851fd3603c85ebed63"
+    }
+  },
+  "normalization": "Gutenberg body markers and pinned narrative openings; English truncated to Latin character budget; lowercase/NFKD accent fold; ae/oe ligatures; j->i,k->c,w->uu,ss for sharp s; retain allowed23 letters; erase spaces; preserve u/v distinction. Caesar parts concatenate at one artificial boundary.",
+  "oracle_gifts": [
+    "Known 23-letter Latin/Italian alphabet",
+    "Six known code tables and exact v1 unigram/prefix/suffix grammar",
+    "True same-letter linkage between the three roles WITHIN each table",
+    "Observed ciphertext token boundaries",
+    "One unknown bijective letter permutation per supplied table group",
+    "Known source-language candidate Latin and the previously used independent Caesar LMs"
+  ],
+  "parent_answer_key": {
+    "path": "data/processed/naibbe002/answer_key.json",
+    "sha256": "410e0e85a26a059d2e48b2863c68859df8ed3da191a610784a1bbb033b24086d"
+  },
+  "parent_fit_input": {
+    "path": "data/processed/naibbe002/fit_input.json",
+    "sha256": "02da4631aab90fdf3c1e8c2bf13c7bba2a5bb41416e10a04b2885efb73390ccf"
+  },
+  "parent_manifest": {
+    "path": "data/manifests/naibbe002_data.json",
+    "sha256": "63ca1c779b52176ce7ca181d64471687781f2ae918e7ad711c91cce1a58f77a4"
+  },
+  "preflight_access": "Builder reads gold only for source-slice and support checks; reports aggregate counts/hashes, never plaintext or hidden mappings; no model/key evaluation",
+  "sources": {
+    "caesar_la.txt": {
+      "path": "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la.txt",
+      "sha256": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c"
+    },
+    "caesar_la2.txt": {
+      "path": "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la2.txt",
+      "sha256": "8bae4d88747b318b58ea193f981766fed337ddf613df452c1a06d72c9af75ffd"
+    },
+    "greshko_naibbe_tables.csv": {
+      "path": "data/raw/external/voynich-units/data/controls/naibbe/greshko_naibbe_tables.csv",
+      "sha256": "4e7cfd54b7ec66515d39a51e11ec97e8e19b643b0b189124eebc3982e707dcec"
+    },
+    "greshko_nathist_output_ciphertext.txt": {
+      "path": "data/raw/external/voynich-units/data/controls/naibbe/greshko_nathist_output_ciphertext.txt",
+      "sha256": "9cdf2de12f371ac7efdb2e78713f229ada508286c1717758184238a59cd64326"
+    },
+    "greshko_nathist_pre_encryption_respaced_plaintext.txt": {
+      "path": "data/raw/external/voynich-units/data/controls/naibbe/greshko_nathist_pre_encryption_respaced_plaintext.txt",
+      "sha256": "4979b6826c75dd47b90d6c95ac212a34cd3735b1151ca2a524e9d13b4112e93b"
+    },
+    "lm_english.txt": {
+      "path": "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/lm_english.txt",
+      "sha256": "7e1a58776d28d7385752c4be7931f80ad385d6aad28309f56e28f4bcd38f4789"
+    }
+  },
+  "split_inputs": {
+    "fit": {
+      "path": "data/processed/naibbe003/fit_input.json",
+      "sha256": "53c7e7fa9a3e6372d42caca0c2d2c0f7441b83b92f1c4570162a39ea17734fb3"
+    },
+    "transfer": {
+      "path": "data/processed/naibbe003/transfer_input.json",
+      "sha256": "e918ff10cdf7964f06e56258c884d2321d229e485ee42eb2cca7516956531215"
+    }
+  },
+  "split_policy": "Reuse exposed fit [0,8192) unchanged. Transfer [26624,34764) is the final previously unscored block from the same Pliny publication, not source-disjoint. Earlier transfer blocks [10240,18432) and [18432,26624) excluded. Neither new model nor old baseline keys may score new transfer before new-key freeze.",
+  "splits": {
+    "fit": {
+      "candidate_count_histogram": {
+        "1": 7990,
+        "2": 202
+      },
+      "gold_characters": 12483,
+      "token_range": [
+        0,
+        8192
+      ],
+      "tokens": 8192,
+      "unique_candidate_tokens": 7990
+    },
+    "transfer": {
+      "candidate_count_histogram": {
+        "1": 7940,
+        "2": 200
+      },
+      "gold_characters": 12296,
+      "token_range": [
+        26624,
+        34764
+      ],
+      "tokens": 8140,
+      "unique_candidate_tokens": 7940
+    }
+  },
+  "stage": "data_preflight_only_no_optimized_scores",
+  "status": "Exploratory source-model followup after exposed NAIBBE-002 results"
+}
