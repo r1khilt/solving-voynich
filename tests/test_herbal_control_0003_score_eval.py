@@ -6,6 +6,7 @@ import json
 import pytest
 
 from scripts import herbal_control_0003_score_eval as evaluation
+from scripts import herbal_control_0003_eval_audit as independent_audit
 
 
 def _save(path, value) -> str:
@@ -24,6 +25,7 @@ def test_evaluation_uses_audited_development_thresholds_and_rejects_tamper(
     selection_path = tmp_path / "selection.json"
     audit_path = tmp_path / "audit.json"
     features_path = tmp_path / "features.json"
+    score_path = tmp_path / "score.json"
     known = [f"known_{i:02d}" for i in range(24)]
     unknown = [f"unknown_{i:02d}" for i in range(12)]
     panel_hash = _save(panel_path, {"roles": {
@@ -93,12 +95,13 @@ def test_evaluation_uses_audited_development_thresholds_and_rejects_tamper(
         "development_audit_sha256": audit_hash,
         "row_order": rows, "distance_matrix": distance,
     })
-    for key, value in (
-        ("ROOT", tmp_path), ("PANEL", panel_path), ("SOURCES", sources_path),
-        ("DEVELOPMENT_IMAGES", development_path), ("EVALUATION_IMAGES", evaluation_path),
-        ("FREEZE", freeze_path), ("PANEL_SHA256", panel_hash),
-    ):
-        monkeypatch.setattr(evaluation, key, value)
+    for module in (evaluation, independent_audit):
+        for key, value in (
+            ("ROOT", tmp_path), ("PANEL", panel_path), ("SOURCES", sources_path),
+            ("DEVELOPMENT_IMAGES", development_path), ("EVALUATION_IMAGES", evaluation_path),
+            ("FREEZE", freeze_path), ("PANEL_SHA256", panel_hash),
+        ):
+            monkeypatch.setattr(module, key, value)
     result = evaluation.score(features_path, selection_path, audit_path)
     assert result["primary_method"] == "single_first"
     assert result["gates"] == {
@@ -109,6 +112,29 @@ def test_evaluation_uses_audited_development_thresholds_and_rejects_tamper(
     assert all(row["batch_threshold"] == 0.25 for row in result["methods"].values())
     assert all(row["batch_macro_ba"] == 1.0 for row in result["methods"].values())
     assert result["primary_macro_ba_ci_95"] == [1.0, 1.0]
+    _save(score_path, result)
+    independent_result = independent_audit.audit(features_path, selection_path,
+                                                 audit_path, score_path)
+    assert independent_result["status"] == "pass"
+    assert independent_result["gates"] == result["gates"]
+    tampered_result = json.loads(score_path.read_text())
+    tampered_result["gates"]["historical_image_open_set_feasibility"] = False
+    _save(score_path, tampered_result)
+    with pytest.raises(ValueError, match="gate decision differs"):
+        independent_audit.audit(features_path, selection_path, audit_path, score_path)
+    # A nonperfect panel exercises class-bootstrap arithmetic beyond [1, 1].
+    features = json.loads(features_path.read_text())
+    for j, row in enumerate(rows):
+        if row["manuscript"] != "bnf":
+            features["distance_matrix"][0][j] = 1.0
+            features["distance_matrix"][j][0] = 1.0
+    _save(features_path, features)
+    imperfect = evaluation.score(features_path, selection_path, audit_path)
+    assert imperfect["methods"]["single_first"]["batch_by_direction"]["bnf"]["known_correct"] == 23
+    assert imperfect["primary_macro_ba_ci_95"][0] < 1.0
+    _save(score_path, imperfect)
+    assert independent_audit.audit(features_path, selection_path,
+                                   audit_path, score_path)["status"] == "pass"
     selection = json.loads(selection_path.read_text())
     selection["methods"]["single_first"]["batch_threshold"] = 0.0
     _save(selection_path, selection)

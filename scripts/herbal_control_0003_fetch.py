@@ -17,10 +17,10 @@ from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PANEL = ROOT / "data/manifests/herbal_control_0003_panel.json"
+PANEL = ROOT / "data/manifests/herbal_control_0003_panel_amended.json"
 OUT = ROOT / "data/manifests/herbal_control_0003_sources.json"
 RAW = ROOT / "data/raw/herbal_control_0003/sources"
-PANEL_SHA256 = "fc2bd19a8eb25d16d8f8387a26b551e42c1f221a048d8f8b07a3f20f02c4b725"
+PANEL_SHA256 = "388fe569beb08bb46bb11cad175c96846b57e7b80cd3e7c209fa86079bddc832"
 MAX_SOURCE_BYTES = 150 * 1024 * 1024
 MAX_IMAGE_BYTES = 5 * 1024 * 1024
 MIN_DELAY_SECONDS = 8.0

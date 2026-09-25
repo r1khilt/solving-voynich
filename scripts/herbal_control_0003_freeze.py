@@ -13,14 +13,14 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PANEL = ROOT / "data/manifests/herbal_control_0003_panel.json"
+PANEL = ROOT / "data/manifests/herbal_control_0003_panel_amended.json"
 SOURCES = ROOT / "data/manifests/herbal_control_0003_sources.json"
 DEVELOPMENT = ROOT / "data/manifests/herbal_control_0003_development_images.json"
 EVALUATION = ROOT / "data/manifests/herbal_control_0003_evaluation_images.json"
 DEVELOPMENT_BOXES = ROOT / "data/manifests/herbal_control_0003_development_boxes.json"
 EVALUATION_BOXES = ROOT / "data/manifests/herbal_control_0003_evaluation_boxes.json"
 OUT = ROOT / "data/manifests/herbal_control_0003_input_freeze.json"
-PANEL_SHA256 = "fc2bd19a8eb25d16d8f8387a26b551e42c1f221a048d8f8b07a3f20f02c4b725"
+PANEL_SHA256 = "388fe569beb08bb46bb11cad175c96846b57e7b80cd3e7c209fa86079bddc832"
 MANUSCRIPTS = ("bnf", "egerton", "casanatense")
 ROLES = ("development_known", "development_unknown", "evaluation_known", "evaluation_unknown")
 

@@ -28,3 +28,14 @@ def test_exposed_and_shared_pages_cannot_enter_panel() -> None:
     assert rejected["exposed_page"] == 1
     assert set(candidates) == {"alpha", "beta"}
     assert page_disjoint_set(candidates) == ["alpha"]
+
+
+def test_first_pre_score_panel_amendment_replays_exact_manifest(tmp_path, monkeypatch) -> None:
+    from scripts import herbal_control_0003_amend_panel as amendment
+
+    output = tmp_path / "amended.json"
+    monkeypatch.setattr(amendment, "AMENDED", output)
+    result = amendment.run()
+    committed = amendment.ROOT / "data/manifests/herbal_control_0003_panel_amended.json"
+    assert output.read_bytes() == committed.read_bytes()
+    assert result["sha256"] == "388fe569beb08bb46bb11cad175c96846b57e7b80cd3e7c209fa86079bddc832"

@@ -56,7 +56,7 @@ func run() throws {
         "data/manifests/herbal_control_0003_evaluation_images.json"))
     guard freeze.id == "HERBAL-CONTROL-0003-input-freeze",
           freeze.status == "complete-pre-score-inputs",
-          freeze.panel_manifest_sha256 == "fc2bd19a8eb25d16d8f8387a26b551e42c1f221a048d8f8b07a3f20f02c4b725",
+          freeze.panel_manifest_sha256 == "388fe569beb08bb46bb11cad175c96846b57e7b80cd3e7c209fa86079bddc832",
           freeze.sources_manifest_sha256 == hexDigest(sourcesBytes),
           freeze.development_images_sha256 == hexDigest(manifestBytes),
           freeze.evaluation_images_sha256 == hexDigest(evaluationBytes),
@@ -65,7 +65,7 @@ func run() throws {
     }
     guard input.id == "HERBAL-CONTROL-0003-development",
           input.status == "complete-pre-score-development-crops",
-          input.panel_manifest_sha256 == "fc2bd19a8eb25d16d8f8387a26b551e42c1f221a048d8f8b07a3f20f02c4b725",
+          input.panel_manifest_sha256 == "388fe569beb08bb46bb11cad175c96846b57e7b80cd3e7c209fa86079bddc832",
           input.rows.count == 108 else {
         throw fail(3, "Development crop manifest is incomplete or not source-frozen")
     }
