@@ -172,7 +172,9 @@ def main() -> None:
     plain, source_hashes = load_sources(n_fit + n_hold)
     assert source_hashes == saved["source_window_sha256"]
     all_streams = {**plain, **channels(plain["english"])}
-    assert list(all_streams) == list(saved["views"])
+    # The runner serializes with sort_keys=True; replay ordinals follow this local
+    # construction order, while JSON object key order has no experimental meaning.
+    assert set(all_streams) == set(saved["views"])
     assert len(all_streams) == 21
     for ordinal, (name, stream) in enumerate(all_streams.items()):
         replay(name, stream, fit_template, hold_template, ordinal, saved["views"][name])
