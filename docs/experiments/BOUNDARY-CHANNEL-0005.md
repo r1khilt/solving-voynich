@@ -31,3 +31,26 @@ PYTHONPATH=.:src .venv/bin/python scripts/register_boundary_ink_cohort_0005.py -
 ```
 
 Keep raw images/overlays ignored, retain compact score matrices and negative outcomes in Git, independently audit the rank arithmetic and controls, and record the result in `NOTEBOOK.md`. If this gate fails, any changes on these newly exposed pages become development only; a further fresh physical-leaf set would be required for another prospective claim.
+
+## Prospective result and audit, 2026-09-25
+
+The complete pre-image registration above, runner, manifest, toy controls, and NB-188 were committed as `2983c2124d91398f918e5016c032adfcb3da6161`, pushed, and verified by matching `origin/main` to local HEAD **before** downloading any selected scan. Only the eight fixed Yale `full/700,/0/default.jpg` scans were downloaded to the ignored directory specified above. They are 700 pixels wide, 900–1026 pixels high, and individually SHA-pinned in the [compact result](../../results/BOUNDARY-CHANNEL-0005/prospective_registration.json). The registered command ran **once**, taking 363.39 seconds on local CPU with OpenCV 5.0.0. Result SHA-256: `ae9991b7517169ce18a75b8c7665cb8aafbd11e3cb93b72ccebb7f346ff14cbb`. There was no paid API use, model training, or manuscript final-test text.
+
+The **registered batch-identity gate passed**: eight of eight correct source layouts rank first after cohort centering, and every own-minus-best-impostor margin exceeds the fixed `.03` bar. The unchanged raw score ranks seven of eight first; f41r is fifth raw and first centered. This is a useful demonstration of why the source-specific background term matters on new pages, although the batch contains related manuscript layouts and source boxes of different completeness.
+
+| Target | Raw own rank | Centered own rank | Centered margin | Own affine `sx,tx,sy,ty` |
+| --- | ---: | ---: | ---: | --- |
+| f41r | 5 | 1 | .03660 | .86,52,.82,54 |
+| f94r | 1 | 1 | .04189 | .88,53,.86,102 |
+| f52v | 1 | 1 | .14581 | .74,188,.74,46 |
+| f21r | 1 | 1 | .10616 | .88,41,.88,144 |
+| f115r | 1 | 1 | .19283 | .92,33,.94,42 |
+| f81r | 1 | 1 | .11193 | .80,45,.80,66 |
+| f100r | 1 | 1 | .12587 | .94,43,.94,28 |
+| f80v | 1 | 1 | .16573 | .82,125,.82,42 |
+
+The [independent audit](../../results/BOUNDARY-CHANNEL-0005/prospective_audit.json) reconstructs all 64 centered scores and ranks by column-total arithmetic, checks frozen configuration/source/scan hashes, replays **all 64** raw scores at their saved affine and verifies each saved translation is optimal at that scale. It confirms 8/8 pass, rejects a blank white target, and finds only **six** pages pass when f41r's target row is replaced by a duplicate of f94r's. The audit code is `scripts/audit_boundary_registration_0005.py`. It does **not** rerun the full 441-scale search independently. The result's own score and gate therefore have an independent arithmetic and fixed-affine replay, while the global search itself retains a shared implementation.
+
+Full-page ignored overlays were inspected for the fixed top, middle and bottom source lines on all eight pages: each appeared to lie on its intended text lines, with no obvious whole-line offset. f41r has two separated text blocks; f94r and f52v contain short/partial blocks. f21r's best vertical translation is **144**, near the registered search ceiling of 150, so a later local stability/crop review is prudent even though the visible text lines align. This is a coarse, unblinded visual check, **not** a certified per-word glyph or boundary match. The overlays and scans remain ignored; only their source/result hashes and compact observations are tracked.
+
+**Interpretation and stop point.** Cohort centering rescued one new raw-rank failure and passed a predeclared eight-page layout identity test. It establishes that this specific batch-dependent alignment tool can locate those eight page layouts; it does not establish whether any particular named word box encloses the intended word, whether pixel gaps reflect writer-intended word boundaries, or what any Voynich text means. Do not feed these pages into a new label/ink-effect claim until a separately specified, blinded exact-word/crop QC passes. The previously reported 0004 failure is unchanged. No decoder, key, language, plaintext, or historical generation mechanism has been identified.
