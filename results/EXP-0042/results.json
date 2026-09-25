@@ -1,0 +1,6082 @@
+{
+  "date_utc": "2026-09-25T18:45:47.856468+00:00",
+  "experiment": "EXP-0042",
+  "inputs_sha256": {
+    "exp0039_result": "e1cb00a0f1ab964622650a30f93a025d712ac7aead82b647a7f413cfbe985329",
+    "exp0041_module": "1aa0701f484e7fabbde47a8b1eaf627a86c7675e59d009d056b72561e601f11c",
+    "exp0041_result": "7a1f1e66b35561ade184b52a91fc2e346331605098998bc646f1d353b46159cd",
+    "gc": "b09570cb6c993bc2d87134d115e60a978650a8a6495483ddbb1f6005a586096f",
+    "split": "9fc80cb4b000fdd5d952b7c2416b37b6b92f07bc56486a63309142953ed6634e",
+    "zl_train": "49618c7be69cef573fe9ad8ae3627ad9f7b495601af1897aafb6082837fceca4",
+    "zl_validation": "9bee4149f26fc49b49e4a826b73598dfb79a1e785731c15a1763489315a2efd3"
+  },
+  "limits": "Repeatedly exposed manuscript validation; source-specific low-data residual; no semantic or historical inference.",
+  "numpy": "2.5.3",
+  "python": "3.12.13",
+  "readable_sensitivity": true,
+  "richer_context_signal": false,
+  "source_sha256": "d04530f1afc833314a2689bec9018c4e8be596f38331154bcfed199f618054f0",
+  "status": "complete",
+  "synthetic_calibration": true,
+  "views": {
+    "english": {
+      "alphabet_size_train_plus_unk": 27,
+      "baseline_last_gain_bits_per_pair": -0.011159584135805145,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 11.389264051311999,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 30.854888506316154,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": 8.822344304019433,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 1.366321003610476,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 8.107915682832244,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 25.939729191067666,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 11.725441997838342,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 136.76626792406543,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 47.69363374170837,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.04122029792499305,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.1472833245624677,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.5249620684435321,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.7181221872289036,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -5.068725062429512,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0305414740984163,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.1146228657381196,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.4319010496562354,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.482563167055705,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -4.552496350300617,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0185653805983306,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.07373780252516668,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.29698961782113853,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.09724403408616,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -3.6014679400811263,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.09635566744554315,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.11233965856562955,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.052362218133407086,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.933137141855855,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -3.7385867305038754,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0053002626896084155,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.03494719144740693,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.1570070870222771,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.6074143156029032,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.099948047728905,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.016499098162498844,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.05741475235686165,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.20310162165531587,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.6999784998416477,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.248441246857638,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.07673029266091135,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.11343819978888302,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.0838965027696586,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.29915631942554555,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.8436634569086898,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.08073809167071669,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.10701951093238478,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.0156502077121389,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.6038940949834545,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.7915639196141644,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0015637014567797122,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.021302556218825677,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.11145873646683066,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.47174902244592537,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.7443658231135053,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.011874721700881354,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.04320042540411974,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.16063650776617144,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.5849019249416811,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.96546820457012,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.063049507478263,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.09975931211291827,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.10047974677861507,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.14437885488450405,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.292078431520625,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.06000188568611131,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.08809879736446766,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.05339665552870678,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.31066948525656574,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.7668700936470363,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0011740241633124246,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.009249986523994514,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.06455754312235555,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.309281516095287,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.2598718010567427,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.006948721513921053,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.026895930803043467,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.10580844250580086,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.41260244741673935,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.485430358058043,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.04607360832710693,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.0771217112466194,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.09507883115979722,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.029505484747281784,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.7486762743831471,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.12105601987270675,
+      "richer_over_p0_bits_per_pair": 0.12105601987270675,
+      "richer_selection": {
+        "alpha": 1.0,
+        "dev_gain_bits_per_pair": 0.11343819978888302,
+        "family": "all",
+        "kappa": 5
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    },
+    "gc_v101": {
+      "alphabet_size_train_plus_unk": 144,
+      "baseline_last_gain_bits_per_pair": 0.08510182200904214,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 0.2474597824441163,
+          "pairs": 89
+        },
+        "f111": {
+          "bits_sum": 10.559370553395645,
+          "pairs": 1010
+        },
+        "f27": {
+          "bits_sum": -2.825468362395554,
+          "pairs": 108
+        },
+        "f36": {
+          "bits_sum": -2.5992074521749338,
+          "pairs": 73
+        },
+        "f37": {
+          "bits_sum": -0.406758349383082,
+          "pairs": 99
+        },
+        "f49": {
+          "bits_sum": -1.6989757483827852,
+          "pairs": 175
+        },
+        "f67": {
+          "bits_sum": 5.690458331434102,
+          "pairs": 62
+        },
+        "f76": {
+          "bits_sum": 38.6991674966721,
+          "pairs": 832
+        },
+        "f89": {
+          "bits_sum": 10.379687608425503,
+          "pairs": 566
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0744234136032202,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.25131863928339865,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.8538590008888166,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -2.7710158592388145,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -8.164609640460936,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.060270386471320624,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.21286935082686928,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.7523325732232324,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -2.5230716069036214,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -7.639919216042899,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0454964469935246,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.1679345825412808,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.6186313109051442,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -2.1634166235982293,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -6.800895436287328,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "physical_leaf_bootstrap95": [
+        -0.0006442980794302112,
+        0.03493939721806983
+      ],
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.00012484351002620519,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0637483327677479,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.3424897857385578,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.3495635369996135,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -4.375092759431029,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.027655482822404143,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.09130049170750872,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.30736109563564423,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.0350462602911894,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -3.3126411027078015,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.03134643058636416,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.10363103510002931,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.34948314171285616,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.1488075091636338,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -3.506598161104732,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.005220596026720823,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.02425290935225698,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.16250313258170518,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.6729395553808569,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.256002474812237,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.006147445471926978,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.03439482284888615,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.23504690863142427,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.0208531438302386,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -3.538342234466443,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.020109300792486944,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0708141067837614,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.2523419301391834,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.8936531695250506,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.9804393668392968,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.023704066150232152,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.08346578651098646,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.2962257356766285,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.0147817563543138,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -3.196809258461395,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.008547122271189495,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.007653930223806331,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.10143644956023437,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.481735355831891,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.7443322268884476,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.008243860984748759,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.014452649031474425,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.14502578081442055,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.7046937363685154,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.64490790569313,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.013646247249492656,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.05178100216050171,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.1956090867933355,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.7310232529002888,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.56512355958992,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.016469094577855822,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.06260197866967966,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.23485696867095712,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.843952752246153,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.773679104195508,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.009072080630280496,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.0020684197116131453,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.05496645963267948,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.31406613880495876,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.2489504466629682,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.019258704001338806,
+      "richer_over_p0_bits_per_pair": 0.019258704001338806,
+      "richer_selection": {
+        "alpha": 0.5,
+        "dev_gain_bits_per_pair": 0.009072080630280496,
+        "family": "all",
+        "kappa": 80
+      },
+      "train_groups": 3224,
+      "train_pairs": 21088,
+      "validation_groups": 415,
+      "validation_pairs": 3014
+    },
+    "italian_historical": {
+      "alphabet_size_train_plus_unk": 23,
+      "baseline_last_gain_bits_per_pair": 0.029029392060768395,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": -0.8728202003260578,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 107.96356895029943,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": 17.18432072071496,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 2.486447352640156,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 9.815172202090555,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 6.771021383732193,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 13.027057548870687,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 159.44417631828077,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 93.78761671379172,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0020988530594043897,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.05561645698464892,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.26301375254605297,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.1023171811699282,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -4.168878841416219,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.001771176673736516,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.043841752173877625,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.22219188933430983,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.9933094975177869,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -3.911640044871302,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0017381268390689057,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.030374395390020376,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.1625133336793537,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.7973975096830739,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -3.397717309949148,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.10793395526182556,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.1456192956648604,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.07144625177072575,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.47330863457962324,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.4650800402660615,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.011127962642591714,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.002733060171355811,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0594044455669647,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.31459242336790405,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.1934032809770647,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0049758388364205975,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.012034171461122989,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.09314134864362635,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.3878787541254929,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.4801410688596959,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0820941666326097,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.1288537478837924,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.13871501521691124,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.07606379170333943,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.0874197541303297,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0895278988189421,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.134478573193722,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.11488225065441153,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.23957969779173335,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.7268350635259304,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.009171970499655737,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.004511594598419486,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.04081669341123487,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.24915015565212223,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.0167157744625994,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0032949652508966172,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.009489333989889805,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.07500663569551116,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.33304997425014005,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.341760538686944,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.06645772358078607,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.11135310007380629,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.143832508080541,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.02917969087928293,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.6782652769461752,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.06486118809076875,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.10617412662004765,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.12244949628095043,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.06417191716551936,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.0525118226449788,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.006475872216957708,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.0044176519314136865,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.02384582798694012,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.17124953852475308,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.7792408442970532,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0015144719661372445,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.007207710670084649,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.05304814325698016,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.2499051207982965,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.0969879726358465,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0472440181970842,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.08342905955964111,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.12349880816770759,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.08754124456506583,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.333806834819045,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.17542036873237452,
+      "richer_over_p0_bits_per_pair": 0.17542036873237452,
+      "richer_selection": {
+        "alpha": 1.0,
+        "dev_gain_bits_per_pair": 0.1456192956648604,
+        "family": "form",
+        "kappa": 5
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    },
+    "synthetic_negative_0": {
+      "alphabet_size_train_plus_unk": 12,
+      "baseline_last_gain_bits_per_pair": -0.0006289903024568887,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 0.0,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 0.0,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": 0.0,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 0.0,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 0.0,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 0.0,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 0.0,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 0.0,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 0.0,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00018281721468678131,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00043644831599653914,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.00106207057076157,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002772622586570071,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.008018213542593041,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00018479538374521068,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00043582143441560535,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0010548957898002219,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002736780863581812,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.007861509201861627,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00018653512242520492,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00043033577874932913,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0010281060262108037,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002627325394156416,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.007421418950644131,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -8.325416302892912e-06,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00012728206950620113,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0006105222989303101,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002535251739978406,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.010169113803052122,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00011113058713604127,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0003201080370215473,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0009359046407601996,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002943538332377016,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.010020174358618674,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00014688366284849205,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0003673083091416693,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.000934468328436986,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0025597927629466615,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.007759352695082976,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -1.0850715530278157e-05,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00010114620482983325,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0004299079794985706,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0016619851349923478,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.006403795646537155,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 3.7394181574004965e-06,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -8.34016404425302e-05,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0004597905806842528,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0019873914251507963,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.00810565936600414,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00011244173752069411,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00031862674006545073,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0009279802714204958,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0029096807493357987,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.00988178997313519,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00014840682173951765,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00036628451934884386,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0009285358658218561,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0025344975539419753,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.007655592802182284,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -4.774143547033279e-06,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -7.82096471441556e-05,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0003552458787285053,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0014009918415370311,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.005440434901478334,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -9.438450994094483e-06,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -7.74362823337085e-05,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0003413529319535789,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0013381780382166902,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.005178969149882616,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00011302117524450196,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0003106833390998444,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0008950846465193011,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002782484188782572,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.009386723773817999,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00014921122814127514,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00035959887823938674,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0009025471772515975,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0024395284700943864,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0072957630525175435,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -1.6422334014389094e-05,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -8.326584124767551e-05,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0003143545401068062,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0011255711726632612,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.004122889571221116,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.0,
+      "richer_over_p0_bits_per_pair": 0.0,
+      "richer_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "form",
+        "kappa": 80
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    },
+    "synthetic_negative_1": {
+      "alphabet_size_train_plus_unk": 12,
+      "baseline_last_gain_bits_per_pair": 0.0001862331195017671,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 0.0,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 0.0,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": 0.0,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 0.0,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 0.0,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 0.0,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 0.0,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 0.0,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 0.0,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00021925328918390275,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.000490800817777929,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.001096723085834129,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0025460632829387964,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.006386994382738732,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00021594572347508707,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00047980343739040954,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0010696188733882602,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0024736544677254704,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0061704916580975055,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00020429110085254265,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0004483007588420152,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0009938875716485808,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002278745179056474,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.005609241886090336,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 6.519089631854467e-05,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 2.810779280589507e-05,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0002662878859593891,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0017128264330254768,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.00798661994216675,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -5.1765791393221636e-05,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00015999646851942438,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0004504371026956092,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0013149272654352298,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.004173336759086847,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00017432237718342986,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00039737159071397463,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0008954300433785631,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002086044157528088,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.005240946486481057,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 6.193011936116716e-05,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 5.660555279614442e-05,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -6.56867327138463e-05,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0007393102477637882,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0037891930389132044,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 8.787741568344348e-05,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 9.180922951843589e-05,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -8.16084922424721e-05,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.001119974941464575,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.005926375847166849,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -5.1511442553075155e-05,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00015597305496715678,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0004397681037495918,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0012848544645460475,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.004078543035290539,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0001727648200544688,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0003904077907059989,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0008785011604400861,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.002042278738004577,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0051141316952855774,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 7.486900719033928e-05,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 9.257495982043611e-05,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 3.228878024977579e-05,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0004426297408217716,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0027974554118019817,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 8.760734187261257e-05,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.00012113498568759019,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 7.37216104998426e-05,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.00043641722984776114,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0030906055258679544,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -4.94667792081375e-05,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00014496973629030564,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0004094644457153603,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.001197365496550023,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.003797001732150808,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0001659011764449774,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0003693545053017825,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.000827640375439844,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.001912945912186455,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.004746134354095713,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 7.059857683397938e-05,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.00010079700032381803,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 9.384897630773881e-05,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.00014925644726208786,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0015356739409529024,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.0,
+      "richer_over_p0_bits_per_pair": 0.0,
+      "richer_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "form",
+        "kappa": 80
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    },
+    "synthetic_negative_2": {
+      "alphabet_size_train_plus_unk": 12,
+      "baseline_last_gain_bits_per_pair": -0.00011683693813427762,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 0.0,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 0.0,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": 0.0,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 0.0,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 0.0,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 0.0,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 0.0,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 0.0,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 0.0,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -7.37139235023839e-05,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00019253234855890557,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.00047148324645500785,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0011813175495408302,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0032063449093778975,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -7.336064512023801e-05,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00018823132382581953,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0004609163511058094,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0011544903340567673,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.003130121788714109,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -7.049595515685631e-05,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00017609761491092267,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.00043106502985167236,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0010797768493860476,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0029214030772492256,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.00018768571422375958,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.00028573107291386294,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.00029936835435559245,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.00038157772160707804,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.004546332698023248,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -3.5771403100538145e-05,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00012599206603439725,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0003743710476874507,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.001130573613578521,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.003675759118968563,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 2.8257634639536535e-05,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -4.236651617591566e-06,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.00015724482186479105,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0008018171125190564,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0034380050655265014,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.00015976030684435104,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.00025553339406008416,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.0003452248747636996,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.00013446872225298472,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0018372947127469428,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.00017354546883069084,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.00027486812242401363,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.0003313234531162786,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.00010805665550657876,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0031740191024036087,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -3.640586776827423e-05,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0001239176027966888,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.00036828757324776183,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0011124143193456113,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.003615658828449522,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 2.678697571633465e-05,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -3.4450814809980848e-06,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0001531202249061999,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0007854939830582961,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.003373362615033939,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0001479682072846865,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.00024164679184788558,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.00034192364851290283,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.00022242620250382793,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0012865945379872997,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.00012958877780243398,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.00021419077196090043,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.00029618833281714837,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.00015348652241215803,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0013368607112169745,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -3.667308394957109e-05,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00011791265101588732,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0003494813762302947,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0010539136252900247,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0034159193597541205,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 2.3542652087625043e-05,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -2.55853372277102e-06,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.00014239126053307402,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0007356190118381628,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.003161181728574269,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.00011382761317898462,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.0001890191984591208,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.00027735835588971577,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.00024597520018440443,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0006330820416570156,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.0,
+      "richer_over_p0_bits_per_pair": 0.0,
+      "richer_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "form",
+        "kappa": 80
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    },
+    "synthetic_positive_0": {
+      "alphabet_size_train_plus_unk": 12,
+      "baseline_last_gain_bits_per_pair": -0.0009666885865885945,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 22.039113873683903,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 318.0672000140461,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": 33.001882543474935,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 20.454759425191355,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 37.39156219374974,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 47.790766049248774,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 34.941505657850676,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 229.15023188438516,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 160.95919553950648,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0012557357090963984,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0026804783973423912,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.005926456331854073,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.01385782213947412,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.03431791359567691,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0011181735403065192,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0023777869426205036,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.005228092622284403,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.012135976410204018,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.029948364734446016,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0007786928468434588,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0016435951001143008,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0035665288663532446,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.00811794807178979,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.019751724406356336,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.1183140288216713,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.2139166375669571,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.34189106202038216,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.40001137752853344,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.13498779948229633,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0250439227867019,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.047654244042890544,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.0857506264140422,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.1345269377034618,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.13648847504476794,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0006779491674476226,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0014668458690134233,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.003279070478765634,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.007794915433704161,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.02008936000293866,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.09071294282354124,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.16830653850704128,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.28594455740511143,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3926297411432353,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.2928949435340573,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.11089190128732027,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.20206118405973209,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.3289451129078899,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.4039862844370754,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.18434361083523176,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.025025000797218866,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.04763925951147589,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.08579766748640524,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.13489579567469107,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.13801895213064616,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0005990846231643443,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0012959383696119757,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0028980652765845673,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.006888506431434649,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.017791247918954884,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.08548125580762946,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.159377388077319,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.2738376702261949,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.38671219889359404,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.3169778632000044,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0953795761888701,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.17650553267190527,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.29796008917448,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.40182783092657653,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.2775937515814255,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.02485901061213522,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.047381954557933696,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.08555427473356886,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.135395415560436,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.14199195357978295,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00040321656453877263,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0008772541537193069,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.001975321906144518,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.004725775137063778,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.012350452432558117,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.07457503686808216,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.14041889041291405,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.24674365575495924,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3682989869536072,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.3579345694785206,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.38706476110541194,
+      "richer_over_p0_bits_per_pair": 0.38706476110541194,
+      "richer_selection": {
+        "alpha": 4.0,
+        "dev_gain_bits_per_pair": 0.4039862844370754,
+        "family": "form",
+        "kappa": 20
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    },
+    "synthetic_positive_1": {
+      "alphabet_size_train_plus_unk": 12,
+      "baseline_last_gain_bits_per_pair": 0.00014451441498036403,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 27.433768396512527,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 309.23508573520587,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": 37.91087557951711,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 14.582540369472898,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 27.604493638321646,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 56.805635883785776,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 18.13905337336744,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 267.4759060736306,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 154.08764938669935,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0008854388110481691,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.002055712339903958,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.005151752277215058,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.014309477311146073,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.04403115496327605,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0008412734881940705,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.001957600954524864,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.004929005601844238,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.013762178562608165,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.04255295592252544,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0007241099485380119,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0016995467351656722,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.00433854277685738,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.012296477371208151,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.03854076314384795,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.11719602290316398,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.2104262182650486,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.3305511548845266,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3660207079982173,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.05361248381825646,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.024842033374515952,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.0470149236870573,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.08357273670546292,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.12700513000040548,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.11267400168120224,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00021478770847163854,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0005902881722821394,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.001727483451045689,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.005518742512502284,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.019011363815234286,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.09000745438916931,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.16620048956042868,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.27920934225727273,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3716705792486319,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.23838922378105024,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.10987412053935623,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.1989309419491445,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.3188370207358908,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.37340841694052573,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.10967466460888423,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.024778925931104156,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.04690989873847329,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.08343407972626012,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.12698867080611478,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.11343392294504873,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00019350277250363757,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0005417746508302722,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0016191191706985822,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0052593136238916075,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.01832797312001375,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.08482591687271629,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.15745250797001478,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.2677454529715862,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3677372015160043,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.266966095694456,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.09450305514735195,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.17396693765981172,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.29006156970477415,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.37785808713727753,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.21667368938883874,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.024506149329282963,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.046440371305645205,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.08277284944817821,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.1266865005774444,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.11597351170954191,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.000140445830262912,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.00042171510571038757,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.001343927464202422,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.004577702430160152,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.01645876847418593,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.0739803068954762,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.13877313022139307,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.24176763988842748,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.35304100515216275,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.31688472319384936,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.39112420061520903,
+      "richer_over_p0_bits_per_pair": 0.39112420061520903,
+      "richer_selection": {
+        "alpha": 4.0,
+        "dev_gain_bits_per_pair": 0.37785808713727753,
+        "family": "form",
+        "kappa": 80
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    },
+    "synthetic_positive_2": {
+      "alphabet_size_train_plus_unk": 12,
+      "baseline_last_gain_bits_per_pair": 2.13304912799296e-05,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 27.069993443244663,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 290.36556276415166,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": 32.08090591372658,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 10.01340629811644,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 39.16895415042778,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 61.12779304324673,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 13.41342959769361,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 251.02454984756943,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 158.35923899253018,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00026787888125801414,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0005911316228092015,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0013096711145939171,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0030209095914166314,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.0075306122838329145,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.000264482728489393,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0005805298265143787,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0012856378029300283,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0029637068256255996,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.007380083755839684,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00025230226261794517,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0005490665007379164,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0012143382614216384,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.0027949990521589497,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.006939689813104785,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.1179340754226643,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.21237856208576475,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.3360095058093138,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3805916477128998,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.08654578160693574,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.024498160485575085,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.04659882063522956,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.08377376429645138,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.13101257570455632,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.13042464081084085,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0003784361941415789,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0008395489414249875,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.001915450936196451,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.004667377791542663,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.012551882622095415,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.09006389937786134,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.16669492790203694,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.28154801714606054,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3801710765503211,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.26134415904431463,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.11050875616533229,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.2006518978427494,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.3237755532928809,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3869272025451518,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.14079598530634418,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.024419530035746494,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.04646069185835363,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.08356154385279524,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.13082803533122395,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.13083067164651782,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0003751342378617779,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0008287293010739936,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0018893387413625702,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.00459939214127545,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.012353663943824521,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.08481582324359373,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.15779333198428663,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.2697160930632541,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.37542170389962176,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.28853150674563705,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.09502820013135563,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.17536712155352055,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.2940536134575282,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.3889577927376896,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.2430211530363033,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.024111425158900822,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.04591249695266341,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.08271400114787379,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.13006708069677883,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.13234163628110274,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00036160560109391876,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0007925955071781163,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.0018013196835102955,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.004367881753802873,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.011671616326051553,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.07391279099912654,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.13893083496261902,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": 0.24314623821846448,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": 0.359042882445819,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": 0.33498276557090756,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.3779973593364913,
+      "richer_over_p0_bits_per_pair": 0.3779973593364913,
+      "richer_selection": {
+        "alpha": 4.0,
+        "dev_gain_bits_per_pair": 0.3889577927376896,
+        "family": "form",
+        "kappa": 80
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    },
+    "zl_basic_matched": {
+      "alphabet_size_train_plus_unk": 33,
+      "baseline_last_gain_bits_per_pair": 0.1184774809853329,
+      "by_leaf": {
+        "f11": {
+          "bits_sum": 3.2596726587033173,
+          "pairs": 65
+        },
+        "f111": {
+          "bits_sum": 18.828686783294575,
+          "pairs": 781
+        },
+        "f27": {
+          "bits_sum": -2.846033686169105,
+          "pairs": 83
+        },
+        "f36": {
+          "bits_sum": 0.30006219351987856,
+          "pairs": 43
+        },
+        "f37": {
+          "bits_sum": 2.147127004092928,
+          "pairs": 87
+        },
+        "f49": {
+          "bits_sum": 4.475672119098737,
+          "pairs": 132
+        },
+        "f67": {
+          "bits_sum": 4.2489067893878385,
+          "pairs": 51
+        },
+        "f76": {
+          "bits_sum": 36.63790227937171,
+          "pairs": 672
+        },
+        "f89": {
+          "bits_sum": 7.557625432588208,
+          "pairs": 421
+        }
+      },
+      "edge_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.033302448633898994,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.142492032453336,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.5352874948221327,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.7252375731587097,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -4.7376042646554835,
+          "family": "edge",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.028484011360620416,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.12710106498734489,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.4903391433731976,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.6111306641654257,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -4.486172086971923,
+          "family": "edge",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.021917324176515755,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.10356151032339721,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.41477186442253744,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -1.408756248185571,
+          "family": "edge",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -4.011829953178822,
+          "family": "edge",
+          "kappa": 80
+        }
+      ],
+      "edge_over_p0_bits_per_pair": 0.0,
+      "edge_selection": {
+        "alpha": 0.0,
+        "dev_gain_bits_per_pair": 0.0,
+        "family": "edge",
+        "kappa": 80
+      },
+      "physical_leaf_bootstrap95": [
+        0.01619167965444048,
+        0.04749152346542378
+      ],
+      "richer_development_grid": [
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.010896322684093754,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.023731202098931592,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.2056529631084717,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.8832365439524866,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.8866525689970004,
+          "family": "form",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.005706642172890606,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.03766404566450711,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.16982272101336154,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.6440065461254516,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.0622532167423606,
+          "family": "history",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.00856997958012425,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.04833277116003996,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.20798316051071908,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.7615088978805276,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.3551739755277725,
+          "family": "layout",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.01363203302872886,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.004000261351254976,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.07524415370835108,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.41873329775058743,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.5507900788719136,
+          "family": "all",
+          "kappa": 5
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.012244887261932463,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.01038814431526476,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.1468500476929458,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.6870577733793563,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.359924053007576,
+          "family": "form",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.0039976589002146965,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.03163939320312934,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.1500538503694078,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.5862206112110874,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.9153769955924742,
+          "family": "history",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.006656091775013556,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.04191476501964266,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.18764207082974133,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.7050754727718801,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -2.220730980310856,
+          "family": "layout",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.013295211571919296,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.008897916495294584,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.047876393610847695,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.31696004494297647,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.249575758569005,
+          "family": "all",
+          "kappa": 20
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.011682056478747227,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.0009164087527311042,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.09255509267810504,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.48247929643670334,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.7535180859128654,
+          "family": "form",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.002292918249685503,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.024317788639986692,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.12249230014781805,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.49732327970528023,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.6762511401665785,
+          "family": "history",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": -0.004308244660935115,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": -0.03279449155268793,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.15524887608330737,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.607439551692912,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -1.974548397805693,
+          "family": "layout",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.0,
+          "dev_gain_bits_per_pair": 0.0,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 0.5,
+          "dev_gain_bits_per_pair": 0.011614011278376508,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 1.0,
+          "dev_gain_bits_per_pair": 0.010892135838229499,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 2.0,
+          "dev_gain_bits_per_pair": -0.025304238920823337,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 4.0,
+          "dev_gain_bits_per_pair": -0.2165728496467008,
+          "family": "all",
+          "kappa": 80
+        },
+        {
+          "alpha": 8.0,
+          "dev_gain_bits_per_pair": -0.9196910698545885,
+          "family": "all",
+          "kappa": 80
+        }
+      ],
+      "richer_minus_edge_bits_per_pair": 0.03195272872543385,
+      "richer_over_p0_bits_per_pair": 0.03195272872543385,
+      "richer_selection": {
+        "alpha": 0.5,
+        "dev_gain_bits_per_pair": 0.01363203302872886,
+        "family": "all",
+        "kappa": 5
+      },
+      "train_groups": 2697,
+      "train_pairs": 16374,
+      "validation_groups": 350,
+      "validation_pairs": 2335
+    }
+  },
+  "wall_seconds": 13.910249333996035
+}
