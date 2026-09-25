@@ -33,3 +33,26 @@ PYTHONPATH=.:src .venv/bin/python scripts/register_boundary_ink_pages.py --group
 ```
 
 Inspect the compact cross-page score matrix, source identity ranks, margin gate, blank/shift controls, and fixed-region overlays. Record negative outcomes, image hashes, elapsed time, tests, and interpretation in a separate result section and NOTEBOOK entry before any later experiment uses the new pages.
+
+## First prospective result after remote freeze
+
+The pre-image code, selection, thresholds and this registration were committed as `2cef97ca7d993ea3c9a74d38f7dc898eca66840b`, pushed and verified by matching `git ls-remote origin refs/heads/main` **before** any of the eight new JPEGs was downloaded. The exact Yale route validated on f42v was then used for the fixed eight; all were 700 pixels wide, between 887 and 1004 pixels high, and their individual SHA-256 values are in `results/BOUNDARY-CHANNEL-0004/prospective_train_registration.json`. Scans and overlays remain Git-ignored. The one registered full search took **345.76 seconds** with OpenCV 5.0.0.93 and NumPy 2.5.3. Result SHA-256 `3817535474c3e7bcbe271916b96035c151115d797158445fccfa78e34288e2a2`.
+
+| Target page | Correct-box rank | Correct score | Best wrong-box score | Correct minus wrong | Fitted `(sx,tx,sy,ty)` |
+| --- | ---: | ---: | ---: | ---: | --- |
+| f1r | 1 | .2525 | .1983 | +.0542 | (.76,117,.76,70) |
+| f112v | **2** | .3075 | **.3268** | **−.0192** | (.90,84,.88,51) |
+| f108r | 1 | .2426 | .2148 | +.0278 | (.92,40,.92,36) |
+| f47v | 1 | .3825 | .2224 | +.1601 | (.80,161,.80,59) |
+| f93r | 1 | .3804 | .2535 | +.1269 | (.86,73,.88,65) |
+| f20r | 1 | .3584 | .2128 | +.1456 | (.90,47,.90,143) |
+| f18v | 1 | .3542 | .2759 | +.0783 | (.62,61,.60,94) |
+| f77v | 1 | .2757 | .2294 | +.0463 | (.82,126,.82,35) |
+
+**Registered gate: FAIL.** Seven of eight correct layouts rank first and clear the `.02` margin; f112v does neither. The winning wrong template on f112v is f18v. It contains only **71 boxes/10 inferred lines**, and its fitted overlay covers a small upper text block on f112v; f112v's own **415-box/47-line** layout overlays most of the page. Normalized correlation is computed over each template's own footprint, so a small, coincidentally matching part can outscore a much larger correct layout. This explains a plausible *failure mode*, but it does not turn the pre-registered failure into a pass. The f18v correct transform also sits at the lower `sy=.60` search bound, and f20r's `ty=143` is near the upper translation bound; both warrant caution even though their identity margins pass.
+
+Coarse unblinded visual checks of the selected **top, middle and bottom source lines on all eight pages** found the own-page boxes over the corresponding visible text regions rather than an obvious adjacent line. f112v's own fit spans its full text column; the f18v impostor only covers the upper part. On f18v itself, the available boxes cover a left portion of the top writing while additional visible writing lies to the right. These observations come from local overlays and are *not* blind named-word or per-boundary QC. The eight per-page overlay composites are derived Yale images and remain ignored, as does the 24-strip local contact review.
+
+`scripts/audit_boundary_registration_0004.py` independently checks the complete 8×8 score-matrix keys, source/scan hashes, image widths, ranks and margins, and repeats the blank and +12/+12 real-image shift controls. It confirms **7/8** at the required rank/margin, blank rejection, and exactly +12/+12 recovered f42v translation with unchanged scale and score; audit SHA-256 `a26798a10255def14926b2e46e5f471ae3a4ae43455762a78fb6444df7b4ebcb`. The auditor does not rerun all 64 scale searches, so its scope is arithmetic/input/control verification. As an unregistered secondary diagnostic, each of the eight source templates had its *own* page as highest-scoring target when ranking down a source column; this is compatible with the small-footprint bias but does not satisfy the frozen target-row criterion.
+
+No new direct-ink gap or certain/uncertain label comparison was performed, and no decoded word, language or cipher key was found. The next method must handle template-footprint comparability and preserve its negative controls. Any revised score on these now-exposed eight pages is development-only; another frozen set of distinct training physical leaves is required for a new prospective registration claim. The registered exact-word/crop QC remains outstanding.
