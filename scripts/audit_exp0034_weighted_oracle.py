@@ -192,6 +192,8 @@ def audit(root: Path) -> dict:
         raise AssertionError("duplicate/missing result rows")
     checked = []
     maximum_probability_error = 0.0
+    numerical_tie_rows: list[int] = []
+    independent_tie_resolved_gains: list[float] = []
     for index, row, full_source in independent_replay(root):
         rec = saved[index]
         independent = explicit_posterior(row["text"], full_source, row["alphabet"], len(row["ciphered"]), row["mask"])
@@ -200,16 +202,35 @@ def audit(root: Path) -> dict:
             if rec[field] != independent[key]:
                 raise AssertionError(f"row {index} exact field {field} mismatch")
         for field, key in (("log_evidence", "log_evidence"), ("gold_mask_posterior", "gold_mask_posterior"),
-                           ("mean_gold_label_probability", "mean_gold_label_probability"),
-                           ("posterior_top_count_null_f1", "null_f1")):
+                           ("mean_gold_label_probability", "mean_gold_label_probability")):
             if abs(rec[field] - independent[key]) > 1e-8:
                 raise AssertionError(f"row {index} numeric field {field} mismatch")
-        if rec["posterior_mask_hex"] != independent["mask_hex"]:
-            raise AssertionError(f"row {index} selected mask mismatch")
         errors = [abs(a - b) for a, b in zip(rec["posterior_keep_probabilities"], independent["keep"], strict=True)]
         maximum_probability_error = max(maximum_probability_error, max(errors))
         if max(errors) > 1e-8:
             raise AssertionError(f"row {index} position posterior mismatch")
+        selected = np.unpackbits(np.frombuffer(bytes.fromhex(rec["posterior_mask_hex"]), dtype=np.uint8), bitorder="big")
+        if len(selected) != 128 or int(selected.sum()) != len(row["ciphered"]):
+            raise AssertionError(f"row {index} selected mask size/count mismatch")
+        chosen = [independent["keep"][position] for position, bit in enumerate(selected) if bit]
+        unchosen = [independent["keep"][position] for position, bit in enumerate(selected) if not bit]
+        if min(chosen) < max(unchosen) - 1e-10:
+            raise AssertionError(f"row {index} selected mask is not top-posterior")
+        if rec["posterior_mask_hex"] != independent["mask_hex"]:
+            alternative = np.unpackbits(np.frombuffer(bytes.fromhex(independent["mask_hex"]), dtype=np.uint8), bitorder="big")
+            differing = [independent["keep"][position] for position in range(128) if selected[position] != alternative[position]]
+            if not differing or max(differing) - min(differing) > 1e-10:
+                raise AssertionError(f"row {index} selected mask differs beyond numerical tie")
+            numerical_tie_rows.append(index)
+        true_null = np.asarray(row["mask"]) == 0
+        predicted_null = selected == 0
+        tp = int((true_null & predicted_null).sum())
+        fp = int((~true_null & predicted_null).sum())
+        fn = int((true_null & ~predicted_null).sum())
+        independently_scored_f1 = 2 * tp / max(2 * tp + fp + fn, 1)
+        if abs(rec["posterior_top_count_null_f1"] - independently_scored_f1) > 1e-12:
+            raise AssertionError(f"row {index} saved-mask F1 mismatch")
+        independent_tie_resolved_gains.append(independent["null_f1"] - rec["uniform_alignment_top_count_null_f1"])
         checked.append(rec)
     gains = np.asarray([r["weighted_minus_uniform_null_f1"] for r in checked])
     rng = np.random.default_rng(340034)
@@ -219,6 +240,11 @@ def audit(root: Path) -> dict:
         raise AssertionError("gain or bootstrap drift")
     if result["material_weighting_gain_by_registered_criterion"] != (float(np.mean(gains)) >= 0.02 and ci[0] > 0):
         raise AssertionError("registered decision drift")
+    alternate_gains = np.asarray(independent_tie_resolved_gains)
+    alternate_ci = np.quantile(alternate_gains[indices].mean(axis=1), [0.025, 0.975])
+    alternate_decision = float(np.mean(alternate_gains)) >= 0.02 and alternate_ci[0] > 0
+    if alternate_decision != result["material_weighting_gain_by_registered_criterion"]:
+        raise AssertionError("registered decision changes under numerical tie resolution")
     for key, field in (("mean_weighted_null_f1", "posterior_top_count_null_f1"),
                        ("mean_uniform_null_f1", "uniform_alignment_top_count_null_f1"),
                        ("mean_gold_mask_posterior", "gold_mask_posterior")):
@@ -239,6 +265,9 @@ def audit(root: Path) -> dict:
     return {"experiment": "EXP-0034", "passed": True, "result_sha256": digest(result_path),
             "auditor_sha256": digest(Path(__file__)), "rows_replayed": 600,
             "copy_posteriors_recomputed": 198, "maximum_position_probability_error": maximum_probability_error,
+            "numerical_tie_rows": numerical_tie_rows,
+            "alternate_tie_resolved_gain": float(np.mean(alternate_gains)),
+            "alternate_tie_resolved_gain_ci95": alternate_ci.tolist(),
             "decision": result["material_weighting_gain_by_registered_criterion"]}
 
 
