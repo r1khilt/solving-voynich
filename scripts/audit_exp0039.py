@@ -282,8 +282,8 @@ def main():
     replay("zl_basic_matched", z_fit, z_hold, 390139, report["views"]["zl_basic_matched"])
 
     def toy_rows(seed, count):
-        return [(group["leaf"], group["leaf"], ("toy", "toy"),
-                 [tuple(word) for word in group["words"]]) for group in toy(seed, count)]
+        return [(leaf, leaf, ("toy", "toy"), [tuple(word) for word in words])
+                for leaf, _, words in toy(seed, count)]
     t_fit = toy_rows(390239, 100)
     t_hold = toy_rows(390339, 30)
     t_model = model_fit(t_fit)
