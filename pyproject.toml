@@ -20,6 +20,11 @@ historical-vision = [
     "pillow==11.3.0",
     "safetensors==0.8.0",
 ]
+boundary-vision = [
+    "opencv-python-headless>=5,<6",
+    "pandas>=3,<4",
+    "pillow>=11,<12",
+]
 
 [project.scripts]
 voynich-train = "voynich.train:main"

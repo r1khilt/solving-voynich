@@ -65,3 +65,7 @@ Results: [EXP-0008](../experiments/EXP-0008-results.md), [EXP-0009](../experimen
 ## Measurement status after BOUNDARY-CHANNEL-0001
 
 - **HYP-006 remains open.** Exploratory training-leaf box gaps predict the next transcribed initial beyond the ZL separator and terminal glyph, but the archived direct-ink pilot shows weak box-to-ink correlation and much weaker physical-gap separation of certain and uncertain labels ([BOUNDARY-CHANNEL-0001](../experiments/BOUNDARY-CHANNEL-0001.md)). This result concerns an editorial/visual measurement channel, not the underlying plaintext unit size. Use direct ink with blind quality control, synthetic known-boundary calibration and an independent anchor before preferring any segmentation or historical generator.
+
+## Measurement status after BOUNDARY-CHANNEL-0002
+
+- **HYP-006 still open.** The archived six-folio raw-ink pilot can be replayed exactly from pinned Yale scan derivatives and its published program. New same-scanline and locator-shift stresses give mixed, estimator-sensitive results, including persistence under one-line vertical displacement ([BOUNDARY-CHANNEL-0002](../experiments/BOUNDARY-CHANNEL-0002.md)). This confirms the measurement pipeline but neither identifies true word boundaries nor validates automatic registration on unseen folios. Do not promote the earlier box-gap predictive result to linguistic-unit evidence; first validate image registration and raw-ink controls on training-assigned new pages.

@@ -1,0 +1,722 @@
+{
+  "accepted_rows": 286,
+  "bootstrap_draws": 2000,
+  "methods": {
+    "overlap_projection": "author binary mask/split restricted to mapped left-right vertical box intersection; edges within 15 px",
+    "same_scanline": "median rowwise nearest-ink gap on common vertical support, both edges within 15 px",
+    "shift_controls": "author primary algorithm after shifting only the mapped vertical crop by plus/minus 20 image pixels; original QC plus new algorithmic QC",
+    "xshift_controls": "author primary algorithm after shifting only horizontal locator/crop by plus/minus 20 image pixels; original QC plus new algorithmic QC"
+  },
+  "pilot_replay_sha256": "d46840fc5786e5ffcb30fd1046f28ceddda98a6ad3fb262b3fb3a1264fbc5992",
+  "primary_on_same_rows": {
+    "overlap_projection": {
+      "auc": 0.6380905511811024,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 1.5,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 48,
+          "difference": 1.8958333333333333,
+          "uncertain": 3
+        },
+        "f39v": {
+          "certain": 73,
+          "difference": 1.410958904109589,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 28,
+          "difference": 1.75,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 45,
+          "difference": 1.6333333333333329,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 36,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 254,
+      "difference_px": 1.715354330708661,
+      "edge_pair_matched_mean_difference_px": 1.784878863826232,
+      "edge_pair_matched_uncertain": 17,
+      "folio_bootstrap95_auc": [
+        0.5810654053845541,
+        0.7247520646189509
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 4.665354330708661,
+        "uncertain": 2.95
+      },
+      "n": 274,
+      "positive_folios": 5,
+      "uncertain": 20,
+      "within_folio_edge_pair_matched_mean_difference_px": 0.7933333333333333,
+      "within_folio_edge_pair_matched_uncertain": 10
+    },
+    "same_scanline": {
+      "auc": 0.6366600790513834,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 1.5,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 47,
+          "difference": 1.822695035460993,
+          "uncertain": 3
+        },
+        "f39v": {
+          "certain": 73,
+          "difference": 1.410958904109589,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 28,
+          "difference": 1.75,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 45,
+          "difference": 1.6333333333333329,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 36,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 253,
+      "difference_px": 1.7061264822134383,
+      "edge_pair_matched_mean_difference_px": 1.784878863826232,
+      "edge_pair_matched_uncertain": 17,
+      "folio_bootstrap95_auc": [
+        0.5818537676499371,
+        0.7238955194949047
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 4.6561264822134385,
+        "uncertain": 2.95
+      },
+      "n": 273,
+      "positive_folios": 5,
+      "uncertain": 20,
+      "within_folio_edge_pair_matched_mean_difference_px": 0.7933333333333333,
+      "within_folio_edge_pair_matched_uncertain": 10
+    },
+    "shift_+20": {
+      "auc": 0.6266932270916334,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 1.5,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 56,
+          "difference": 1.6964285714285712,
+          "uncertain": 4
+        },
+        "f39v": {
+          "certain": 69,
+          "difference": 1.6884057971014492,
+          "uncertain": 2
+        },
+        "f42v": {
+          "certain": 29,
+          "difference": 1.7413793103448274,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 42,
+          "difference": 2.3571428571428568,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 31,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 251,
+      "difference_px": 1.796414342629482,
+      "edge_pair_matched_mean_difference_px": 2.0224310261461964,
+      "edge_pair_matched_uncertain": 17,
+      "folio_bootstrap95_auc": [
+        0.5821197411003236,
+        0.6864066193853428
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 4.896414342629482,
+        "uncertain": 3.1
+      },
+      "n": 271,
+      "positive_folios": 5,
+      "uncertain": 20,
+      "within_folio_edge_pair_matched_mean_difference_px": 0.8296296296296295,
+      "within_folio_edge_pair_matched_uncertain": 9
+    },
+    "shift_-20": {
+      "auc": 0.6394875478927203,
+      "by_folio": {
+        "f14v": {
+          "certain": 22,
+          "difference": 1.727272727272727,
+          "uncertain": 5
+        },
+        "f23r": {
+          "certain": 49,
+          "difference": 2.2108843537414966,
+          "uncertain": 3
+        },
+        "f39v": {
+          "certain": 65,
+          "difference": 1.4153846153846157,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 24,
+          "difference": 1.583333333333333,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 42,
+          "difference": 1.5999999999999996,
+          "uncertain": 5
+        },
+        "f7v": {
+          "certain": 30,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 232,
+      "difference_px": 1.7926245210727965,
+      "edge_pair_matched_mean_difference_px": 1.8517845117845118,
+      "edge_pair_matched_uncertain": 15,
+      "folio_bootstrap95_auc": [
+        0.5755102040816327,
+        0.7375344079939666
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 4.737068965517241,
+        "uncertain": 2.9444444444444446
+      },
+      "n": 250,
+      "positive_folios": 5,
+      "uncertain": 18,
+      "within_folio_edge_pair_matched_mean_difference_px": 0.802469135802469,
+      "within_folio_edge_pair_matched_uncertain": 9
+    },
+    "xshift_+20": {
+      "auc": 0.6302267526523819,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 1.5,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 53,
+          "difference": 0.8301886792452828,
+          "uncertain": 4
+        },
+        "f39v": {
+          "certain": 70,
+          "difference": 1.4857142857142858,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 28,
+          "difference": null,
+          "uncertain": 0
+        },
+        "f56v": {
+          "certain": 45,
+          "difference": 1.9222222222222216,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 33,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 253,
+      "difference_px": 1.689203245267319,
+      "edge_pair_matched_mean_difference_px": 2.178817536630037,
+      "edge_pair_matched_uncertain": 16,
+      "folio_bootstrap95_auc": [
+        0.5775777734298572,
+        0.7022012578616352
+      ],
+      "informative_folios": 4,
+      "mean_px": {
+        "certain": 4.794466403162056,
+        "uncertain": 3.1052631578947367
+      },
+      "n": 272,
+      "positive_folios": 4,
+      "uncertain": 19,
+      "within_folio_edge_pair_matched_mean_difference_px": 0.788888888888889,
+      "within_folio_edge_pair_matched_uncertain": 10
+    },
+    "xshift_-20": {
+      "auc": 0.6357287449392712,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 1.2666666666666666,
+          "uncertain": 5
+        },
+        "f23r": {
+          "certain": 54,
+          "difference": 1.351851851851852,
+          "uncertain": 4
+        },
+        "f39v": {
+          "certain": 71,
+          "difference": 1.464788732394366,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 28,
+          "difference": 1.8571428571428568,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 47,
+          "difference": 2.5829787234042554,
+          "uncertain": 5
+        },
+        "f7v": {
+          "certain": 36,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 260,
+      "difference_px": 1.8408906882591096,
+      "edge_pair_matched_mean_difference_px": 1.7968296409472881,
+      "edge_pair_matched_uncertain": 17,
+      "folio_bootstrap95_auc": [
+        0.6091357155430382,
+        0.6773670557717251
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 4.946153846153846,
+        "uncertain": 3.1052631578947367
+      },
+      "n": 279,
+      "positive_folios": 5,
+      "uncertain": 19,
+      "within_folio_edge_pair_matched_mean_difference_px": 0.9259259259259258,
+      "within_folio_edge_pair_matched_uncertain": 9
+    }
+  },
+  "rows_sha256": "c83de5218906a8142681be385aa9130db7622863ceb934d416b9bc24657f59f2",
+  "same_scanline_support": {
+    ",": {
+      "at_least_three": 19,
+      "median": 6.0,
+      "n": 21,
+      "zero": 1
+    },
+    ".": {
+      "at_least_three": 244,
+      "median": 6.0,
+      "n": 265,
+      "zero": 12
+    }
+  },
+  "seed": 430201,
+  "source_archived_pilot_sha256": "3c15627dc3ddfca4f331a1fed1e1a290a9b8412ebf9247fe4c9b2778412aedee",
+  "status": "exploratory_six_folio_vertical_support_stress",
+  "summaries": {
+    "overlap_projection": {
+      "auc": 0.7161417322834646,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 0.5833333333333335,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 48,
+          "difference": 3.5,
+          "uncertain": 3
+        },
+        "f39v": {
+          "certain": 73,
+          "difference": 2.5114155251141557,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 28,
+          "difference": 3.178571428571429,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 45,
+          "difference": 3.2555555555555555,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 36,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 254,
+      "difference_px": 2.624803149606299,
+      "edge_pair_matched_mean_difference_px": 3.116668556761436,
+      "edge_pair_matched_uncertain": 17,
+      "folio_bootstrap95_auc": [
+        0.6605970149253731,
+        0.7886673151750972
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 6.074803149606299,
+        "uncertain": 3.45
+      },
+      "n": 274,
+      "positive_folios": 5,
+      "uncertain": 20,
+      "within_folio_edge_pair_matched_mean_difference_px": 2.9100000000000006,
+      "within_folio_edge_pair_matched_uncertain": 10
+    },
+    "primary": {
+      "auc": 0.6305480682839173,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 1.5,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 56,
+          "difference": 1.6964285714285712,
+          "uncertain": 4
+        },
+        "f39v": {
+          "certain": 73,
+          "difference": 1.410958904109589,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 29,
+          "difference": 1.7413793103448274,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 47,
+          "difference": 2.2163120567375882,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 36,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 265,
+      "difference_px": 1.8420485175202157,
+      "edge_pair_matched_mean_difference_px": 2.046332371332371,
+      "edge_pair_matched_uncertain": 18,
+      "folio_bootstrap95_auc": [
+        0.5832211641159568,
+        0.6893939393939394
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 4.9849056603773585,
+        "uncertain": 3.142857142857143
+      },
+      "n": 286,
+      "positive_folios": 5,
+      "uncertain": 21,
+      "within_folio_edge_pair_matched_mean_difference_px": 0.7933333333333333,
+      "within_folio_edge_pair_matched_uncertain": 10
+    },
+    "same_scanline": {
+      "auc": 0.7555335968379446,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 1.5000000000000009,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 47,
+          "difference": 5.223404255319149,
+          "uncertain": 3
+        },
+        "f39v": {
+          "certain": 73,
+          "difference": 3.858447488584475,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 28,
+          "difference": -0.9285714285714288,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 45,
+          "difference": 4.9833333333333325,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 36,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 253,
+      "difference_px": 3.3039525691699607,
+      "edge_pair_matched_mean_difference_px": 3.197657416542865,
+      "edge_pair_matched_uncertain": 17,
+      "folio_bootstrap95_auc": [
+        0.6200698080279232,
+        0.8719336219336219
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 9.503952569169961,
+        "uncertain": 6.2
+      },
+      "n": 273,
+      "positive_folios": 4,
+      "uncertain": 20,
+      "within_folio_edge_pair_matched_mean_difference_px": 3.4075,
+      "within_folio_edge_pair_matched_uncertain": 10
+    },
+    "shift_+20": {
+      "auc": 0.6376494023904382,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 2.0,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 56,
+          "difference": 3.2321428571428568,
+          "uncertain": 4
+        },
+        "f39v": {
+          "certain": 69,
+          "difference": 0.3695652173913042,
+          "uncertain": 2
+        },
+        "f42v": {
+          "certain": 29,
+          "difference": 2.931034482758621,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 42,
+          "difference": 2.095238095238095,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 31,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 251,
+      "difference_px": 1.8860557768924298,
+      "edge_pair_matched_mean_difference_px": 2.131602762562515,
+      "edge_pair_matched_uncertain": 17,
+      "folio_bootstrap95_auc": [
+        0.5205889578510686,
+        0.7427612994350282
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 4.48605577689243,
+        "uncertain": 2.6
+      },
+      "n": 271,
+      "positive_folios": 5,
+      "uncertain": 20,
+      "within_folio_edge_pair_matched_mean_difference_px": 1.8617283950617285,
+      "within_folio_edge_pair_matched_uncertain": 9
+    },
+    "shift_-20": {
+      "auc": 0.5262212643678161,
+      "by_folio": {
+        "f14v": {
+          "certain": 22,
+          "difference": 0.24545454545454604,
+          "uncertain": 5
+        },
+        "f23r": {
+          "certain": 49,
+          "difference": 2.4693877551020407,
+          "uncertain": 3
+        },
+        "f39v": {
+          "certain": 65,
+          "difference": 0.6871794871794874,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 24,
+          "difference": 1.7916666666666665,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 42,
+          "difference": 0.4666666666666668,
+          "uncertain": 5
+        },
+        "f7v": {
+          "certain": 30,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 232,
+      "difference_px": 0.7662835249042144,
+      "edge_pair_matched_mean_difference_px": -0.22492968904733612,
+      "edge_pair_matched_uncertain": 15,
+      "folio_bootstrap95_auc": [
+        0.4509229776247849,
+        0.6183758584078792
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 4.155172413793103,
+        "uncertain": 3.388888888888889
+      },
+      "n": 250,
+      "positive_folios": 5,
+      "uncertain": 18,
+      "within_folio_edge_pair_matched_mean_difference_px": 0.6490299823633158,
+      "within_folio_edge_pair_matched_uncertain": 9
+    },
+    "xshift_+20": {
+      "auc": 0.3969211566465571,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": 0.20833333333333304,
+          "uncertain": 6
+        },
+        "f23r": {
+          "certain": 53,
+          "difference": -4.273584905660377,
+          "uncertain": 4
+        },
+        "f39v": {
+          "certain": 70,
+          "difference": -4.095238095238095,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 28,
+          "difference": null,
+          "uncertain": 0
+        },
+        "f56v": {
+          "certain": 45,
+          "difference": 0.42222222222222205,
+          "uncertain": 6
+        },
+        "f7v": {
+          "certain": 33,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 253,
+      "difference_px": -1.3415851882671102,
+      "edge_pair_matched_mean_difference_px": -0.9764022435897436,
+      "edge_pair_matched_uncertain": 16,
+      "folio_bootstrap95_auc": [
+        0.20574912891986064,
+        0.536075036075036
+      ],
+      "informative_folios": 4,
+      "mean_px": {
+        "certain": 3.3952569169960474,
+        "uncertain": 4.7368421052631575
+      },
+      "n": 272,
+      "positive_folios": 2,
+      "uncertain": 19,
+      "within_folio_edge_pair_matched_mean_difference_px": -1.1,
+      "within_folio_edge_pair_matched_uncertain": 10
+    },
+    "xshift_-20": {
+      "auc": 0.5064777327935223,
+      "by_folio": {
+        "f14v": {
+          "certain": 24,
+          "difference": -0.5583333333333336,
+          "uncertain": 5
+        },
+        "f23r": {
+          "certain": 54,
+          "difference": -4.583333333333333,
+          "uncertain": 4
+        },
+        "f39v": {
+          "certain": 71,
+          "difference": -0.10328638497652554,
+          "uncertain": 3
+        },
+        "f42v": {
+          "certain": 28,
+          "difference": 4.0,
+          "uncertain": 2
+        },
+        "f56v": {
+          "certain": 47,
+          "difference": -1.7106382978723405,
+          "uncertain": 5
+        },
+        "f7v": {
+          "certain": 36,
+          "difference": null,
+          "uncertain": 0
+        }
+      },
+      "certain": 260,
+      "difference_px": -0.7595141700404864,
+      "edge_pair_matched_mean_difference_px": -0.5100713012477718,
+      "edge_pair_matched_uncertain": 17,
+      "folio_bootstrap95_auc": [
+        0.4073817229157035,
+        0.6659192825112108
+      ],
+      "informative_folios": 5,
+      "mean_px": {
+        "certain": 3.6615384615384614,
+        "uncertain": 4.421052631578948
+      },
+      "n": 279,
+      "positive_folios": 1,
+      "uncertain": 19,
+      "within_folio_edge_pair_matched_mean_difference_px": -0.18827160493827172,
+      "within_folio_edge_pair_matched_uncertain": 9
+    }
+  }
+}
