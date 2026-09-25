@@ -1,0 +1,38 @@
+{
+  "experiment": "EXP-0030",
+  "status": "exploratory_post_result",
+  "holdout_sha256": "138f158484ff5e3859fad113f96910d61be224dc44d6b9ab16084d0edce014d7",
+  "checkpoint_sha256": "b1fe842a1320a65b5923446910efec2d273ef62dac97bff44a7f6a8825bebda2",
+  "decision_sha256": "49b352ecfa78511935ff6413d35105fe1e72507774525d9d0b5b6b63d4164a4b",
+  "script_sha256": "0bea240a8d620f9085973fb1c3db9e8a0efcccea7ea45081d6899652e2290a88",
+  "families": [
+    {
+      "family": "random_char",
+      "n": 94,
+      "retrained_recon": 0.15466394848736467,
+      "frozen_easy_recon": 0.16595803955129898,
+      "matched_random_recon": 0.1940833866166007,
+      "retrained_null_precision": 0.3762597984322508,
+      "retrained_null_recall": 0.3866513233601841
+    },
+    {
+      "family": "periodic",
+      "n": 107,
+      "retrained_recon": 0.2382308298922308,
+      "frozen_easy_recon": 0.27413995883090475,
+      "matched_random_recon": 0.1893962975385484,
+      "retrained_null_precision": 0.824643384161338,
+      "retrained_null_recall": 0.8392991239048812
+    },
+    {
+      "family": "copy_mutate",
+      "n": 99,
+      "retrained_recon": 0.16651924193353831,
+      "frozen_easy_recon": 0.1582700374624086,
+      "matched_random_recon": 0.2074623649767012,
+      "retrained_null_precision": 0.33466241360978205,
+      "retrained_null_recall": 0.3230690274570182
+    }
+  ],
+  "weighted_retrained_recon": 0.18838171635900422
+}

@@ -1,0 +1,93 @@
+{
+  "passed": false,
+  "winner_program": "exact_count_neural",
+  "reasons": [
+    "recon_acc 0.1884 not > frozen_matched_random 0.2043",
+    "copy-only recon 0.1665 not > matched-random + 0.05 (0.2575)"
+  ],
+  "rule": "EXP-0030",
+  "parent_pass_rule": "EXP-0014",
+  "holdout_metrics": {
+    "mask_f1": 0.7987554565607566,
+    "mask_acc": 0.7172916666666667,
+    "recon_acc": 0.18838171635900422,
+    "recon_edit_sim": 0.6673300659426299,
+    "pred_bits_gain": -0.0972474803804329,
+    "n": 300,
+    "null_precision": 0.5224561403508772,
+    "null_recall": 0.523926812104152,
+    "pred_null_rate": 0.296875,
+    "true_null_rate": 0.29604166666666665,
+    "null_f1": 0.5231904427266338,
+    "n_ops": 1,
+    "program": "exact_count_neural",
+    "selection_score": 0.18838171635900422
+  },
+  "copy_only_metrics": {
+    "mask_f1": 0.7090033115692189,
+    "mask_acc": 0.594302398989899,
+    "recon_acc": 0.16651924193353831,
+    "recon_edit_sim": 0.5388758265781558,
+    "pred_bits_gain": -0.061251702794772135,
+    "n": 99,
+    "null_precision": 0.33466241360978205,
+    "null_recall": 0.3230690274570182,
+    "pred_null_rate": 0.296875,
+    "true_null_rate": 0.3075284090909091,
+    "null_f1": 0.3287635461548505,
+    "n_ops": 1,
+    "program": "exact_count_neural",
+    "selection_score": 0.16651924193353831
+  },
+  "n_copy_holdout": 99,
+  "val_winner_metrics": {
+    "recon_acc": 0.19259740256136906,
+    "selection_score": 0.19259740256136906,
+    "null_recall": 0.5463688457490352,
+    "null_precision": 0.5488721804511278,
+    "pred_null_rate": 0.296875
+  },
+  "controls": {
+    "matched_random_recon": 0.1976526807059483,
+    "copy_only_matched_random_recon": 0.2074623649767012,
+    "matched_random_frozen_gate": 0.2043264147237504,
+    "vocab_filter_recon": 0.0545635458857004,
+    "vocab_filter_mask_f1": 0.40445364737485706,
+    "random_program_val_score_mean": 0.13044787241057118,
+    "no_retrain": {
+      "program": "exact_count_neural",
+      "checkpoint": "outputs/EXP-0013/model.pt",
+      "passed_exp0014_gates": false,
+      "reasons": [
+        "recon_acc 0.2020 not > frozen_matched_random 0.2043"
+      ],
+      "metrics": {
+        "mask_f1": 0.7982699875155185,
+        "mask_acc": 0.7166666666666667,
+        "recon_acc": 0.20200588340502457,
+        "recon_edit_sim": 0.667129401815248,
+        "pred_bits_gain": -0.09026998643828672,
+        "n": 300,
+        "null_precision": 0.5214035087719299,
+        "null_recall": 0.5228712174524982,
+        "pred_null_rate": 0.296875,
+        "true_null_rate": 0.29604166666666665,
+        "null_f1": 0.5221363316936051,
+        "n_ops": 1,
+        "program": "exact_count_neural",
+        "selection_score": 0.20200588340502457
+      }
+    }
+  },
+  "thresholds": {
+    "length_penalty": 0.02,
+    "null_recall_min": 0.5,
+    "null_precision_min": 0.5,
+    "pred_null_rate_min": 0.15,
+    "pred_null_rate_max": 0.45,
+    "recon_vs_frozen_matched_random": 0.2043264147237504,
+    "copy_only_recon_margin_over_matched_random": 0.05,
+    "copy_only_n_min": 60,
+    "vocab_f1_max": 0.55
+  }
+}
