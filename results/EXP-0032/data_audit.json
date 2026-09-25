@@ -1,0 +1,26 @@
+{
+  "experiment": "EXP-0032",
+  "passed": true,
+  "manifest_sha256": "7d2416d19618303e95eb6865b3d12f47ad595c837695ff032baccabfde03db18",
+  "auditor_sha256": "6e5476fb73128cd1d39b580c1fc5ff7c07ccf14e413e604feaf623bd19d0682b",
+  "rows_replayed": 14400,
+  "true_source_rows_checked": 8450,
+  "polish_nonoverlap_blocks": 600,
+  "family_counts": {
+    "train": {
+      "random_char": 2459,
+      "periodic": 2319,
+      "copy_mutate": 2343
+    },
+    "validation": {
+      "random_char": 232,
+      "periodic": 276,
+      "copy_mutate": 221
+    },
+    "polish_holdout": {
+      "random_char": 200,
+      "periodic": 202,
+      "copy_mutate": 198
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "experiment": "EXP-0032",
+  "source_url": "https://www.gutenberg.org/ebooks/34635",
+  "source_title": "Menazerya ludzka",
+  "source_author": "Gabriela Zapolska",
+  "source_language": "Polish",
+  "source_status": "Project Gutenberg page states public domain in the USA; raw text stays ignored",
+  "source_sha256": {
+    "english": "4beea3799a297c19b2a0781056e851873558c1317c67d482d2982e3940e018e7",
+    "latin": "298bdb17fb07ace8b861102975e0d961dc054bb57a0397e37d91dc40e6254a1f",
+    "polish_34635": "d5521a54c38616e4b2255af8fe8deb6e95f4428e721d140973c672a482b28b5c"
+  },
+  "polish_clean_sha256": "f04f01cfa8e1cb92435b22f637011432eab84ce3e94fe9c22180ec5c2026964f",
+  "polish_clean_characters": 270506,
+  "preprocessing": "Slice raw from first =Żabusia.= to last UWAGI DO WYDANIA ELEKTRONICZNEGO; ł/Ł→l/L; Unicode NFKD strip combining marks; clean_plaintext; 128-char disjoint source blocks",
+  "train_val_source_split_char": {
+    "english": 108408,
+    "latin": 115120
+  },
+  "train_val_gap_chars": 128,
+  "family_counts": {
+    "train": {
+      "random_char": 2459,
+      "periodic": 2319,
+      "copy_mutate": 2343
+    },
+    "validation": {
+      "random_char": 232,
+      "periodic": 276,
+      "copy_mutate": 221
+    },
+    "polish_holdout": {
+      "random_char": 200,
+      "periodic": 202,
+      "copy_mutate": 198
+    },
+    "iid_control": {
+      "random_char": 0,
+      "periodic": 0,
+      "copy_mutate": 0
+    }
+  },
+  "counts": {
+    "train": 12000,
+    "validation": 1200,
+    "polish_holdout": 600,
+    "iid_control": 600
+  },
+  "seeds": {
+    "train": 320032,
+    "validation": 320033,
+    "polish_holdout": 320034,
+    "iid_control": 320035
+  },
+  "filler_rate": 0.3,
+  "derived_sha256": {
+    "train": "378276e449cd25934c62e770a104eadb0275d7e1e9813baa6c45b6fe453f7240",
+    "validation": "aa7404ebd06d206ed8798fdb2f0f931167fa0834f862fb3a7a8fe2383f2d125a",
+    "polish_holdout": "ee78f08814a993c42e0558e5028cfdaa4d1c1e2812c9e56d82585a1e8b255664",
+    "iid_control": "fecb59fc34f1fa5f1da6055802ffb576cf19592839f8a6e4680ecdea2dc17e21"
+  },
+  "generator_sha256": "4e6f04f8622b6a0abead667a79ad951942421d9b11bfd5f75c5b4c22c76b5cfc",
+  "builder_sha256": "915a1df558df9ccbc08f24ba462bc5d8adb07a3c6b7611c81025dca47339abd2"
+}
