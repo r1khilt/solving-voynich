@@ -1,4 +1,4 @@
-"""EXP-0023 — typed decoder transfer on copy_mutate (retrain + search).
+"""Typed decoder transfer on copy_mutate (historical EXP-0023 and corrected reruns).
 
 Synthetic method test only. Not a Voynich decipherment.
 """
@@ -10,6 +10,7 @@ import hashlib
 import itertools
 import json
 import re
+import signal
 from pathlib import Path
 
 import numpy as np
@@ -28,8 +29,6 @@ from voynich.exact_count_decode import (
     load_frozen_exp0013,
 )
 from voynich.latent_recovery import (
-    DATA_SEED,
-    FINNISH_SEED,
     MATCHED_RANDOM_SEEDS,
     MAX_UPDATES,
     MODEL_SEED,
@@ -58,6 +57,8 @@ EXPERIMENT_ID = "EXP-0023"
 FILLER_FAMILIES = ("random_char", "periodic", "copy_mutate")
 SEARCH_SEED = 4023
 MAX_CANDIDATES = 200
+COPY_ONLY_MARGIN = 0.05
+COPY_ONLY_N_MIN = 60
 N_TRAIN = 4000
 N_VAL = 400
 N_HOLDOUT = 300
@@ -136,13 +137,25 @@ def apply_exp0014_gates(metrics: dict, vocab_b: dict) -> tuple[bool, list[str]]:
     return ok, reasons
 
 
+def apply_copy_only_gate(metrics: dict | None, random_control: dict | None, n: int) -> tuple[bool, list[str]]:
+    if n < COPY_ONLY_N_MIN:
+        return False, [f"only {n} copy_mutate holdout samples (<{COPY_ONLY_N_MIN})"]
+    if metrics is None or random_control is None:
+        return False, ["copy-only metrics unavailable"]
+    floor = random_control["recon_acc"] + COPY_ONLY_MARGIN
+    if metrics["recon_acc"] <= floor:
+        return False, [f"copy-only recon {metrics['recon_acc']:.4f} not > matched-random + 0.05 ({floor:.4f})"]
+    return True, []
+
+
 def search_typed(
     val: list[dict],
     probs: list[np.ndarray],
     rank_model: dict,
     english_rank: list[str],
+    search_seed: int = SEARCH_SEED,
 ) -> tuple[tuple[str, ...] | None, dict | None, list[dict], float | None]:
-    candidates = enumerate_programs(SEARCH_SEED)
+    candidates = enumerate_programs(search_seed)
     val_rows = []
     feasible: list[tuple[tuple[str, ...], dict]] = []
     for prog in candidates:
@@ -171,17 +184,32 @@ def search_typed(
     )
     winner, winner_metrics = feasible[0]
     random_ctrl = []
-    for prog in random_programs(20, len(winner), SEARCH_SEED + 1):
+    for prog in random_programs(20, len(winner), search_seed + 1):
         m = score_program_on_samples(val, prog, probs, rank_model, english_rank)
         random_ctrl.append(m["selection_score"])
     return winner, winner_metrics, val_rows, float(np.mean(random_ctrl))
 
 
-def run_experiment(root: Path, device: str) -> dict:
+def run_experiment(
+    root: Path,
+    device: str,
+    *,
+    experiment_id: str,
+    data_seed: int,
+    finnish_seed: int,
+    search_seed: int,
+) -> dict:
+    if experiment_id == EXPERIMENT_ID:
+        raise ValueError("EXP-0023 is an immutable historical run; use a new experiment ID")
+    if not re.fullmatch(r"EXP-\d{4}", experiment_id):
+        raise ValueError("experiment_id must have form EXP-0000")
     device = resolve_device(device)
-    proc_root = root / "data" / "processed" / "exp0023"
-    out_root = root / "outputs" / EXPERIMENT_ID
-    res_root = root / "results" / EXPERIMENT_ID
+    proc_root = root / "data" / "processed" / experiment_id.lower().replace("-", "")
+    out_root = root / "outputs" / experiment_id
+    res_root = root / "results" / experiment_id
+    manifest_path = root / "data" / "manifests" / f"{experiment_id.lower().replace('-', '')}_data.json"
+    if manifest_path.exists() or any(path.exists() for path in (proc_root, out_root, res_root)):
+        raise FileExistsError(f"{experiment_id} output already exists; refusing to overwrite")
     for path in (proc_root, out_root, res_root, root / "data" / "manifests"):
         path.mkdir(parents=True, exist_ok=True)
 
@@ -195,14 +223,14 @@ def run_experiment(root: Path, device: str) -> dict:
         {"english": texts["english"], "latin": texts["latin"]},
         n_train=N_TRAIN,
         n_val=N_VAL,
-        seed=DATA_SEED,
+        seed=data_seed,
         filler_rate=PRIMARY_FILLER_RATE,
         filler_families=FILLER_FAMILIES,
     )
     holdout = generate_finnish_holdout(
         texts["finnish"],
         n=N_HOLDOUT,
-        seed=FINNISH_SEED,
+        seed=finnish_seed,
         filler_families=FILLER_FAMILIES,
     )
     digests = {
@@ -228,7 +256,7 @@ def run_experiment(root: Path, device: str) -> dict:
             "vocab": vocab,
             "summary": train_summary,
             "signal_threshold": train_summary.get("signal_threshold", 0.5),
-            "experiment": EXPERIMENT_ID,
+            "experiment": experiment_id,
             "filler_families": list(FILLER_FAMILIES),
         },
         ckpt_path,
@@ -243,7 +271,7 @@ def run_experiment(root: Path, device: str) -> dict:
     val_c = [s for s in val if s["world"] == WORLD_C]
     val_probs = predict_mask_probs(model, val_c, vocab, device)
     winner, winner_metrics, val_rows, random_ctrl_mean = search_typed(
-        val_c, val_probs, rank_model, english_rank
+        val_c, val_probs, rank_model, english_rank, search_seed=search_seed
     )
 
     train_token_vocab: set[str] = set()
@@ -254,15 +282,28 @@ def run_experiment(root: Path, device: str) -> dict:
     random_b = matched_random_baseline(holdout, rank_model, n_seeds=MATCHED_RANDOM_SEEDS)
 
     hold_probs = predict_mask_probs(model, holdout, vocab, device)
+    copy_indices = [i for i, sample in enumerate(holdout) if sample["filler_family"] == "copy_mutate"]
+    copy_samples = [holdout[i] for i in copy_indices]
+    copy_probs = [hold_probs[i] for i in copy_indices]
+    copy_random = matched_random_baseline(
+        copy_samples, rank_model, n_seeds=MATCHED_RANDOM_SEEDS
+    ) if copy_samples else None
     if winner is None:
         hold_metrics = None
+        copy_metrics = None
         primary_ok = False
         reasons = ["no validation-feasible program"]
     else:
         hold_metrics = score_program_on_samples(
             holdout, winner, hold_probs, rank_model, english_rank
         )
+        copy_metrics = score_program_on_samples(
+            copy_samples, winner, copy_probs, rank_model, english_rank
+        ) if copy_samples else None
         primary_ok, reasons = apply_exp0014_gates(hold_metrics, vocab_b)
+        copy_ok, copy_reasons = apply_copy_only_gate(copy_metrics, copy_random, len(copy_samples))
+        primary_ok = primary_ok and copy_ok
+        reasons.extend(copy_reasons)
         if random_ctrl_mean is not None and winner_metrics["selection_score"] <= random_ctrl_mean:
             primary_ok = False
             reasons.append(
@@ -270,7 +311,7 @@ def run_experiment(root: Path, device: str) -> dict:
                 f"random-program mean {random_ctrl_mean:.4f}"
             )
         if primary_ok:
-            reasons = ["all EXP-0023 gates cleared"]
+            reasons = [f"all {experiment_id} gates cleared"]
 
     # No-retrain control: frozen EXP-0013 + exact_count_neural on the same holdout.
     frozen_model, frozen_vocab, _ = load_frozen_exp0013(root, device)
@@ -284,9 +325,11 @@ def run_experiment(root: Path, device: str) -> dict:
         "passed": primary_ok,
         "winner_program": None if winner is None else readable(winner),
         "reasons": reasons,
-        "rule": "EXP-0023",
+        "rule": experiment_id,
         "parent_pass_rule": "EXP-0014",
         "holdout_metrics": hold_metrics,
+        "copy_only_metrics": copy_metrics,
+        "n_copy_holdout": len(copy_samples),
         "val_winner_metrics": None
         if winner_metrics is None
         else {
@@ -298,6 +341,7 @@ def run_experiment(root: Path, device: str) -> dict:
         },
         "controls": {
             "matched_random_recon": random_b["recon_acc"],
+            "copy_only_matched_random_recon": None if copy_random is None else copy_random["recon_acc"],
             "matched_random_frozen_gate": FROZEN_MATCHED_RANDOM_RECON,
             "vocab_filter_recon": vocab_b["recon_acc"],
             "vocab_filter_mask_f1": vocab_b["mask_f1"],
@@ -317,18 +361,22 @@ def run_experiment(root: Path, device: str) -> dict:
             "pred_null_rate_min": PASS13_PRED_NULL_RATE_MIN,
             "pred_null_rate_max": PASS13_PRED_NULL_RATE_MAX,
             "recon_vs_frozen_matched_random": FROZEN_MATCHED_RANDOM_RECON,
+            "copy_only_recon_margin_over_matched_random": COPY_ONLY_MARGIN,
+            "copy_only_n_min": COPY_ONLY_N_MIN,
             "vocab_f1_max": PASS13_VOCAB_F1_MAX,
         },
     }
 
     write_json(
-        root / "data" / "manifests" / "exp0023_data.json",
+        manifest_path,
         {
-            "experiment": EXPERIMENT_ID,
-            "data_seed": DATA_SEED,
+            "experiment": experiment_id,
+            "runner_sha256": file_sha256(Path(__file__)),
+            "generator_sha256": file_sha256(Path(generate_dataset.__code__.co_filename)),
+            "data_seed": data_seed,
             "model_seed": MODEL_SEED,
-            "finnish_seed": FINNISH_SEED,
-            "search_seed": SEARCH_SEED,
+            "finnish_seed": finnish_seed,
+            "search_seed": search_seed,
             "filler_rate": PRIMARY_FILLER_RATE,
             "filler_families": list(FILLER_FAMILIES),
             "seq_len": SEQ_LEN,
@@ -338,7 +386,7 @@ def run_experiment(root: Path, device: str) -> dict:
             "updates": UPDATES,
             "derived_sha256": digests,
             "checkpoint_sha256": ckpt_sha,
-            "checkpoint_path": "outputs/EXP-0023/model.pt",
+            "checkpoint_path": f"outputs/{experiment_id}/model.pt",
             "param_count": param_count,
             "ops": list(OPS),
             "length_penalty": LENGTH_PENALTY,
@@ -350,13 +398,15 @@ def run_experiment(root: Path, device: str) -> dict:
     )
 
     report = {
-        "experiment": EXPERIMENT_ID,
+        "experiment": experiment_id,
+        "runner_sha256": file_sha256(Path(__file__)),
+        "generator_sha256": file_sha256(Path(generate_dataset.__code__.co_filename)),
         "environment": environment(),
         "filler_families": list(FILLER_FAMILIES),
         "param_count": param_count,
         "checkpoint_sha256": ckpt_sha,
         "train_summary": {k: v for k, v in train_summary.items() if k != "history"},
-        "n_candidates": len(enumerate_programs(SEARCH_SEED)),
+        "n_candidates": len(enumerate_programs(search_seed)),
         "n_val_world_c": len(val_c),
         "n_feasible_val": sum(1 for r in val_rows if r["feasible"]),
         "winner_program": decision["winner_program"],
@@ -365,6 +415,7 @@ def run_experiment(root: Path, device: str) -> dict:
         "holdout_metrics": hold_metrics,
         "no_retrain_control": decision["controls"]["no_retrain"],
         "matched_random": random_b,
+        "copy_only_matched_random": copy_random,
         "vocab_filter": vocab_b,
         "derived_sha256": digests,
         "voynich_label_free": None,
@@ -385,13 +436,33 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("."))
     parser.add_argument("--device", default="auto")
+    parser.add_argument("--experiment-id", required=True)
+    parser.add_argument("--data-seed", type=int, required=True)
+    parser.add_argument("--finnish-seed", type=int, required=True)
+    parser.add_argument("--search-seed", type=int, required=True)
+    parser.add_argument("--max-wall-seconds", type=int, default=600)
     args = parser.parse_args()
-    report = run_experiment(args.root, args.device)
+    if args.max_wall_seconds <= 0:
+        parser.error("--max-wall-seconds must be positive")
+
+    def wall_timeout(_signum: int, _frame: object) -> None:
+        raise TimeoutError(f"experiment exceeded {args.max_wall_seconds} seconds")
+
+    signal.signal(signal.SIGALRM, wall_timeout)
+    signal.alarm(args.max_wall_seconds)
+    report = run_experiment(
+        args.root,
+        args.device,
+        experiment_id=args.experiment_id,
+        data_seed=args.data_seed,
+        finnish_seed=args.finnish_seed,
+        search_seed=args.search_seed,
+    )
     ctrl = report["decision"]["controls"]["no_retrain"]
     print(
         json.dumps(
             {
-                "experiment": EXPERIMENT_ID,
+                "experiment": args.experiment_id,
                 "passed": report["decision"]["passed"],
                 "winner_program": report["winner_program"],
                 "holdout_recon": None
