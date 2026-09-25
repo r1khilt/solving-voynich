@@ -1,0 +1,143 @@
+{
+  "experiment": "NAIBBE-001",
+  "audit_pass": true,
+  "key_freeze_commit": "6787b35762e6712ac5d0ff1b719dc4589b5fb727",
+  "source_commits": [
+    "93b9243da606405cbd58393b50ed504f46a65c5d"
+  ],
+  "evaluation_sha256": "6c2abf0946ebee5c72033e92230424793458a7c5917742720bfcd95a8c5d945f",
+  "manifest_sha256": "1783ec695407a77eaac903a0620291c1dcfa42bec3469738b5015122c421651f",
+  "auditor_sha256": "93e5937f774429bab1aa53645d163055636275cbf6c4ef6b3f5115a6d11314b5",
+  "checked_hashes": {
+    "outputs/NAIBBE-001/latin_joint.json": "48f55e9ce8e7ee0b6a43a4477256e81e864b637c6cbc3d6fd79c5bd39997271a",
+    "outputs/NAIBBE-001/latin_fixed.json": "55d387d4278032b4f618356b7ceda3734559116ab58e67b15d63d00cb888e13d",
+    "outputs/NAIBBE-001/english_joint.json": "deea98ced6f70b15cb6d2ab7134e0b6c3b3fc7cbcb4d91a221449465f257e829",
+    "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la.txt": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c",
+    "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la2.txt": "8bae4d88747b318b58ea193f981766fed337ddf613df452c1a06d72c9af75ffd",
+    "data/raw/external/voynich-units/data/controls/naibbe/greshko_naibbe_tables.csv": "4e7cfd54b7ec66515d39a51e11ec97e8e19b643b0b189124eebc3982e707dcec",
+    "data/raw/external/voynich-units/data/controls/naibbe/greshko_nathist_output_ciphertext.txt": "9cdf2de12f371ac7efdb2e78713f229ada508286c1717758184238a59cd64326",
+    "data/raw/external/voynich-units/data/controls/naibbe/greshko_nathist_pre_encryption_respaced_plaintext.txt": "4979b6826c75dd47b90d6c95ac212a34cd3735b1151ca2a524e9d13b4112e93b",
+    "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/lm_english.txt": "7e1a58776d28d7385752c4be7931f80ad385d6aad28309f56e28f4bcd38f4789",
+    "data/processed/naibbe001/english_lm.txt": "a2df39ce27fe8117a20e39be337d534fd5b0c5939e40d93d7f0ea19fc1d41134",
+    "data/processed/naibbe001/latin_lm.txt": "ccd400154a6697a6b40ed75b0038562de1258a7c12f34d851fd3603c85ebed63",
+    "data/processed/naibbe001/dev_input.json": "1732d3039024b97330b2b8782937ee2c0564624d73175697fdf7c8fbf810eca6",
+    "data/processed/naibbe001/fit_input.json": "8db41d528b46383f3982f0887b4187cb39abb10d0260c6539af16778be96f112",
+    "data/processed/naibbe001/transfer_input.json": "e7fa100e30753d2152f496b7890ad1302c3e83d7b15fcc367c4a0d5b15694df7",
+    "data/processed/naibbe001/solver_input.json": "46221ad1dcbe3e74b4f312e9b17de2df79c9b78d76cc3435d89c064015219cf3",
+    "outputs/NAIBBE-001/evaluation_predictions.json": "fa71f1f44956fd93260346d3dc67905e728cefb04311804563241f76df250230",
+    "data/processed/naibbe001/answer_key.json": "3490c23a8d536757b5c6b101e4aa8aab048784c39849717fa1845111e65979a3"
+  },
+  "source_table_lattice_tokens_verified": 18432,
+  "emitted_chunks_verified": 65536,
+  "max_score_delta": 1.2369127944111824e-10,
+  "criteria": {
+    "cer_at_most_02": true,
+    "cer_within_005_of_oracle": true,
+    "weighted_key_at_least_99": true
+  },
+  "decision": "PASS",
+  "metrics": {
+    "oracle_fit": {
+      "chunks": 8192,
+      "characters": 12483,
+      "edit_distance": 6,
+      "cer": 0.0004806536890170632,
+      "exact_chunks": 8189,
+      "ambiguous_chunks": 64,
+      "ambiguous_correct": 61,
+      "key_frequency_weighted_accuracy": 1.0,
+      "ambiguous_accuracy": 0.953125
+    },
+    "latin_joint_fit": {
+      "chunks": 8192,
+      "characters": 12483,
+      "edit_distance": 6,
+      "cer": 0.0004806536890170632,
+      "exact_chunks": 8189,
+      "ambiguous_chunks": 64,
+      "ambiguous_correct": 61,
+      "key_frequency_weighted_accuracy": 1.0,
+      "ambiguous_accuracy": 0.953125
+    },
+    "latin_fixed_fit": {
+      "chunks": 8192,
+      "characters": 12483,
+      "edit_distance": 88,
+      "cer": 0.007049587438916927,
+      "exact_chunks": 8148,
+      "ambiguous_chunks": 64,
+      "ambiguous_correct": 20,
+      "key_frequency_weighted_accuracy": 1.0,
+      "ambiguous_accuracy": 0.3125
+    },
+    "english_joint_fit": {
+      "chunks": 8192,
+      "characters": 12483,
+      "edit_distance": 16,
+      "cer": 0.0012817431707121685,
+      "exact_chunks": 8184,
+      "ambiguous_chunks": 64,
+      "ambiguous_correct": 56,
+      "key_frequency_weighted_accuracy": 1.0,
+      "ambiguous_accuracy": 0.875
+    },
+    "oracle_transfer": {
+      "chunks": 8192,
+      "characters": 12451,
+      "edit_distance": 4,
+      "cer": 0.00032125933659946993,
+      "exact_chunks": 8190,
+      "ambiguous_chunks": 46,
+      "ambiguous_correct": 44,
+      "key_frequency_weighted_accuracy": 1.0,
+      "ambiguous_accuracy": 0.9565217391304348
+    },
+    "latin_joint_transfer": {
+      "chunks": 8192,
+      "characters": 12451,
+      "edit_distance": 4,
+      "cer": 0.00032125933659946993,
+      "exact_chunks": 8190,
+      "ambiguous_chunks": 46,
+      "ambiguous_correct": 44,
+      "key_frequency_weighted_accuracy": 1.0,
+      "ambiguous_accuracy": 0.9565217391304348
+    },
+    "latin_fixed_transfer": {
+      "chunks": 8192,
+      "characters": 12451,
+      "edit_distance": 68,
+      "cer": 0.0054614087221909885,
+      "exact_chunks": 8158,
+      "ambiguous_chunks": 46,
+      "ambiguous_correct": 12,
+      "key_frequency_weighted_accuracy": 1.0,
+      "ambiguous_accuracy": 0.2608695652173913
+    },
+    "english_joint_transfer": {
+      "chunks": 8192,
+      "characters": 12451,
+      "edit_distance": 8,
+      "cer": 0.0006425186731989399,
+      "exact_chunks": 8188,
+      "ambiguous_chunks": 46,
+      "ambiguous_correct": 42,
+      "key_frequency_weighted_accuracy": 1.0,
+      "ambiguous_accuracy": 0.9130434782608695
+    }
+  },
+  "seconds": 3.570789290999528,
+  "scope": [
+    "Independent source-table parse support for all prepared split tokens",
+    "Every emitted chunk, legal parse choice, and frozen key",
+    "Independent dictionary LM counts, interpolation, source scoring and exact lattice DP",
+    "Independent Wagner-Fischer CER, exact and ambiguous chunks, weighted key accuracy",
+    "Every fit/transfer report score and metric, and all primary decision criteria",
+    "Pinned raw/derived inputs, local Git freeze consistency, learned result/key agreement"
+  ],
+  "not_established": [
+    "No independent rerun of key optimization",
+    "Local Git checks do not prove remote publication timing or historical process isolation",
+    "This is known-codebook calibration; it does not recover the Voynich plaintext"
+  ]
+}
