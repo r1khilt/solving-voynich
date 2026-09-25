@@ -12,6 +12,7 @@ import json
 from math import isfinite
 from pathlib import Path
 
+from voynich.herbal_folio import FEATURE_METHOD as FOLIO_FEATURE_METHOD
 from voynich.herbal_open_set import (
     METHODS,
     MANUSCRIPTS,
@@ -97,7 +98,7 @@ def _validate_inputs(features: dict, images: dict, freeze: dict,
         if abs(row[i]) > 1e-5:
             raise ValueError(f"feature matrix diagonal not zero at {i}")
         for j in range(i):
-            if abs(row[j] - matrix[j][i]) > 1e-5:
+            if feature_method != FOLIO_FEATURE_METHOD and abs(row[j] - matrix[j][i]) > 1e-5:
                 raise ValueError(f"feature matrix is asymmetric at {i},{j}")
 
 

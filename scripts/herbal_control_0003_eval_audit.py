@@ -12,6 +12,8 @@ from hashlib import sha256
 import json
 from math import floor, isfinite
 from pathlib import Path
+
+from voynich.herbal_folio import FEATURE_METHOD as FOLIO_FEATURE_METHOD
 import random
 
 if __package__:
@@ -122,7 +124,8 @@ def _load_inputs(feature_path: Path, selection_path: Path,
                 raise ValueError("invalid evaluation feature distance")
             if i == j and abs(value) > 1e-5:
                 raise ValueError("nonzero evaluation feature diagonal")
-            if j < i and abs(value - matrix[j][i]) > 1e-5:
+            if (feature_method != FOLIO_FEATURE_METHOD and j < i
+                    and abs(value - matrix[j][i]) > 1e-5):
                 raise ValueError("asymmetric evaluation feature matrix")
     score = json.loads(score_path.read_text())
     if (score.get("id") != score_id
@@ -272,7 +275,8 @@ def audit(feature_path: Path, selection_path: Path, development_audit_path: Path
           selection_id: str = "HERBAL-CONTROL-0003-development-selection",
           development_audit_id: str = "HERBAL-CONTROL-0003-independent-development-score-audit",
           score_id: str = "HERBAL-CONTROL-0003-evaluation-score",
-          audit_id: str = "HERBAL-CONTROL-0003-independent-evaluation-audit") -> dict:
+          audit_id: str = "HERBAL-CONTROL-0003-independent-evaluation-audit",
+          feasibility_gate_name: str = "historical_image_open_set_feasibility") -> dict:
     panel, features, selection, score = _load_inputs(
         feature_path, selection_path, development_audit_path, score_path,
         feature_method=feature_method, selection_id=selection_id,
@@ -389,7 +393,7 @@ def audit(feature_path: Path, selection_path: Path, development_audit_path: Path
     one_to_one = (macro[primary] >= independent_macro + 0.05
                   and one_ci["paired_improvement_ci_95"][0] > 0)
     gates = {
-        "historical_image_open_set_feasibility": feasibility,
+        feasibility_gate_name: feasibility,
         "two_source_benefit": two_source,
         "one_to_one_benefit": one_to_one,
     }

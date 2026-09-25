@@ -9,6 +9,7 @@ import pytest
 
 from scripts import herbal_control_0003_score_audit as auditor
 from scripts import herbal_control_0003_score_dev as scorer
+from voynich.herbal_folio import FEATURE_METHOD as FOLIO_METHOD
 
 
 def _save(path, value) -> str:
@@ -131,6 +132,27 @@ def test_independent_development_audit_replays_synthetic_score_and_rejects_tampe
         audit_id="HERBAL-CONTROL-0003-DINO-independent-development-score-audit")
     assert dino_audit["id"] == "HERBAL-CONTROL-0003-DINO-independent-development-score-audit"
     assert dino_audit["primary_method"] == dino_score["primary_method"]
+    folio_features_path = tmp_path / "folio_features.json"
+    folio_score_path = tmp_path / "folio_score.json"
+    folio_features = json.loads(features_path.read_text())
+    folio_features["feature_method"] = FOLIO_METHOD
+    folio_features["distance_matrix"][0][4] += 0.2
+    _save(folio_features_path, folio_features)
+    folio_score = scorer.score(
+        folio_features_path, feature_method=FOLIO_METHOD,
+        result_id="HERBAL-CONTROL-0003-FOLIO-development-selection")
+    _save(folio_score_path, folio_score)
+    folio_replay = auditor.audit(
+        folio_features_path, folio_score_path, feature_method=FOLIO_METHOD,
+        score_id="HERBAL-CONTROL-0003-FOLIO-development-selection",
+        audit_id="HERBAL-CONTROL-0003-FOLIO-independent-development-score-audit")
+    assert folio_replay["status"] == "pass"
+    assert folio_replay["primary_method"] == folio_score["primary_method"]
+    dino_asymmetric_path = tmp_path / "dino_asymmetric.json"
+    folio_features["feature_method"] = dino_method
+    _save(dino_asymmetric_path, folio_features)
+    with pytest.raises(ValueError, match="asymmetric"):
+        scorer.score(dino_asymmetric_path, feature_method=dino_method)
     with pytest.raises(ValueError, match="feature extraction inputs"):
         auditor.audit(dino_features_path, dino_score_path)
     score["normalization_medians"]["bnf->egerton"] *= 2

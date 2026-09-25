@@ -7,6 +7,7 @@ import pytest
 
 from scripts import herbal_control_0003_score_eval as evaluation
 from scripts import herbal_control_0003_eval_audit as independent_audit
+from voynich.herbal_folio import FEATURE_METHOD as FOLIO_METHOD
 
 
 def _save(path, value) -> str:
@@ -154,6 +155,43 @@ def test_evaluation_uses_audited_development_thresholds_and_rejects_tamper(
         audit_id="HERBAL-CONTROL-0003-DINO-independent-evaluation-audit")
     assert dino_replay["id"] == "HERBAL-CONTROL-0003-DINO-independent-evaluation-audit"
     assert dino_replay["gates"] == dino_score["gates"]
+    folio_selection_path = tmp_path / "folio_selection.json"
+    folio_audit_path = tmp_path / "folio_development_audit.json"
+    folio_features_path = tmp_path / "folio_features.json"
+    folio_score_path = tmp_path / "folio_score.json"
+    folio_selection = json.loads(selection_path.read_text())
+    folio_selection["id"] = "HERBAL-CONTROL-0003-FOLIO-development-selection"
+    folio_selection["feature_method"] = FOLIO_METHOD
+    folio_selection_hash = _save(folio_selection_path, folio_selection)
+    folio_development_audit = json.loads(audit_path.read_text())
+    folio_development_audit["id"] = "HERBAL-CONTROL-0003-FOLIO-independent-development-score-audit"
+    folio_development_audit["score_sha256"] = folio_selection_hash
+    folio_audit_hash = _save(folio_audit_path, folio_development_audit)
+    folio_features = json.loads(features_path.read_text())
+    folio_features["feature_method"] = FOLIO_METHOD
+    folio_features["development_selection_sha256"] = folio_selection_hash
+    folio_features["development_audit_sha256"] = folio_audit_hash
+    folio_features["distance_matrix"][0][4] += 0.2
+    _save(folio_features_path, folio_features)
+    folio_score = evaluation.score(
+        folio_features_path, folio_selection_path, folio_audit_path,
+        feature_method=FOLIO_METHOD,
+        selection_id="HERBAL-CONTROL-0003-FOLIO-development-selection",
+        audit_id="HERBAL-CONTROL-0003-FOLIO-independent-development-score-audit",
+        result_id="HERBAL-CONTROL-0003-FOLIO-evaluation-score",
+        feasibility_gate_name="folio_open_set_feasibility")
+    assert folio_score["gates"]["folio_open_set_feasibility"] is True
+    _save(folio_score_path, folio_score)
+    folio_replay = independent_audit.audit(
+        folio_features_path, folio_selection_path, folio_audit_path,
+        folio_score_path, feature_method=FOLIO_METHOD,
+        selection_id="HERBAL-CONTROL-0003-FOLIO-development-selection",
+        development_audit_id="HERBAL-CONTROL-0003-FOLIO-independent-development-score-audit",
+        score_id="HERBAL-CONTROL-0003-FOLIO-evaluation-score",
+        audit_id="HERBAL-CONTROL-0003-FOLIO-independent-evaluation-audit",
+        feasibility_gate_name="folio_open_set_feasibility")
+    assert folio_replay["status"] == "pass"
+    assert folio_replay["gates"] == folio_score["gates"]
     with pytest.raises(ValueError, match="development selection/audit changed"):
         independent_audit.audit(dino_features_path, dino_selection_path,
                                 dino_audit_path, dino_score_path)

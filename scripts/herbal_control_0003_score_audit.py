@@ -14,6 +14,8 @@ from hashlib import sha256
 import json
 from math import floor, isfinite
 from pathlib import Path
+
+from voynich.herbal_folio import FEATURE_METHOD as FOLIO_FEATURE_METHOD
 from statistics import median
 
 import networkx as nx
@@ -239,7 +241,8 @@ def _load_checked_inputs(feature_path: Path, score_path: Path, *,
                 raise ValueError("invalid feature distance")
             if i == j and abs(value) > 1e-5:
                 raise ValueError("nonzero feature diagonal")
-            if j < i and abs(value - matrix[j][i]) > 1e-5:
+            if (feature_method != FOLIO_FEATURE_METHOD and j < i
+                    and abs(value - matrix[j][i]) > 1e-5):
                 raise ValueError("asymmetric feature matrix")
     score = json.loads(score_path.read_text())
     if (score.get("id") != score_id

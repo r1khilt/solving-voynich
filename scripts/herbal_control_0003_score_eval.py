@@ -14,6 +14,7 @@ import json
 from math import isfinite
 from pathlib import Path
 
+from voynich.herbal_folio import FEATURE_METHOD as FOLIO_FEATURE_METHOD
 from voynich.herbal_open_set import (
     MANUSCRIPTS,
     METHODS,
@@ -88,7 +89,8 @@ def _validate_matrix(features: dict, images: dict,
                 raise ValueError("invalid evaluation feature distance")
             if i == j and abs(value) > 1e-5:
                 raise ValueError("nonzero evaluation feature diagonal")
-            if j < i and abs(value - matrix[j][i]) > 1e-5:
+            if (feature_method != FOLIO_FEATURE_METHOD and j < i
+                    and abs(value - matrix[j][i]) > 1e-5):
                 raise ValueError("asymmetric evaluation feature matrix")
 
 
@@ -158,7 +160,8 @@ def score(feature_path: Path, selection_path: Path, audit_path: Path, *,
           feature_method: str = FEATURE_METHOD,
           selection_id: str = "HERBAL-CONTROL-0003-development-selection",
           audit_id: str = "HERBAL-CONTROL-0003-independent-development-score-audit",
-          result_id: str = "HERBAL-CONTROL-0003-evaluation-score") -> dict:
+          result_id: str = "HERBAL-CONTROL-0003-evaluation-score",
+          feasibility_gate_name: str = "historical_image_open_set_feasibility") -> dict:
     selection = _load_gate(selection_path, audit_path, selection_id=selection_id,
                            audit_id=audit_id, feature_method=feature_method)
     panel = json.loads(PANEL.read_text())
@@ -269,7 +272,7 @@ def score(feature_path: Path, selection_path: Path, audit_path: Path, *,
         "two_source_comparison": two_source_ci,
         "one_to_one_comparison": one_to_one_ci,
         "gates": {
-            "historical_image_open_set_feasibility": feasibility,
+            feasibility_gate_name: feasibility,
             "two_source_benefit": two_source,
             "one_to_one_benefit": one_to_one,
         },
