@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment": "BOUNDARY-CHANNEL-0005",
+  "search_code_sha256": "d47269490a1c5e493585f5e6b45217753993709fa49e222939de42121de714a9",
+  "source_archive_revision": "956a7c4fc39981f4d116fa3f4edfccce6d065571",
+  "split_sha256": "9fc80cb4b000fdd5d952b7c2416b37b6b92f07bc56486a63309142953ed6634e",
+  "yale_iiif_manifest_sha256": "317d58fd9ea90392a83d9858a91eada3d0b41416a3c835857dc0154bd123a309",
+  "selection": "Training physical leaves only, Yale canvas, >=70 source boxes, >=8 inferred lines. Exclude every physical leaf in BOUNDARY-CHANNEL-0002 and -0004. Sort by SHA256('BOUNDARY-CHANNEL-0005|' + folio), take first eight. No selected scan downloaded or inspected before freeze.",
+  "score": "For target t and source s: raw_TM_CCOEFF_NORMED(t,s) minus the arithmetic mean of raw scores for source s against the seven other target scans. Rank sources by this cohort-centered score. No fitted coefficients or thresholds from new scans.",
+  "success_gate": "All eight correct sources rank first with cohort-centered margin >=0.03 over best wrong source; full own-page top/middle/bottom overlay check; blank/duplicate-target controls. Baseline raw-score ranks also reported. Any miss is failure.",
+  "scan_dir": "data/raw/boundary_ink_0005/yale700",
+  "folios": [
+    {"folio": "f41r", "canvas_id": "1006154", "box_sha256": "8e89c68edea81f16aa7a8985c028fc11707b6e0abf11c5c53c863fd4de9f1fec"},
+    {"folio": "f94r", "canvas_id": "1006240", "box_sha256": "edaf54a9edfcea8fdf5e125358f244c0615666747f1a172696fcaedd10734967"},
+    {"folio": "f52v", "canvas_id": "1006177", "box_sha256": "cf9b04d35f83d55915be663babcc48eec5784749796bf25e411f3bf1d8795f4b"},
+    {"folio": "f21r", "canvas_id": "1006114", "box_sha256": "6b9434a58bb40aa4be6d87b9a6e24bfa3e5f16ad9153e8310eb68dd34dac2e69"},
+    {"folio": "f115r", "canvas_id": "1006274", "box_sha256": "e9e8b249083f21edb3d9e36e7618ffc77ee6aff0b1d90bb8e400060c9691c101"},
+    {"folio": "f81r", "canvas_id": "1006220", "box_sha256": "6ab9a411d01bae8e9511dd28d77b2b51c991ea2ac5c4789fed1b14962133aca8"},
+    {"folio": "f100r", "canvas_id": "1006248", "box_sha256": "eef28de88cd72f41efc1aca14b62dee2db850da66a4de13793c228082a252c26"},
+    {"folio": "f80v", "canvas_id": "1006219", "box_sha256": "bfda94865ad98353831214532a8ccc709fdde965d6c3acfa87efa232d539c8bf"}
+  ]
+}
