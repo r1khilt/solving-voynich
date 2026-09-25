@@ -1,8 +1,9 @@
 """Frozen DINOv2 secondary features for HERBAL-CONTROL-0003.
 
 Development and evaluation are separate invocations. Evaluation refuses to
-open any crop until a hash-linked, independently audited DINO development
-selection is supplied. Remote push verification remains a manual protocol gate.
+open any crop until hash-linked, independently audited DINO development
+features and selection are supplied. Remote push verification remains a manual
+protocol gate.
 """
 
 from __future__ import annotations
@@ -48,7 +49,9 @@ def image_manifest(split: str) -> Path:
 
 
 def preflight(split: str, selection_path: Path | None = None,
-              audit_path: Path | None = None) -> tuple[dict, str, str]:
+              audit_path: Path | None = None,
+              development_features_path: Path | None = None,
+              feature_audit_path: Path | None = None) -> tuple[dict, str, str]:
     """Validate provenance before opening any image pixels or loading weights."""
     if split not in ("development", "evaluation"):
         raise ValueError("split must be development or evaluation")
@@ -73,11 +76,14 @@ def preflight(split: str, selection_path: Path | None = None,
             != digest(other_path)):
         raise ValueError("complete 216/216 input freeze missing or changed")
     if split == "evaluation":
-        if selection_path is None or audit_path is None:
-            raise ValueError("evaluation requires audited DINO development selection")
+        if any(path is None for path in (selection_path, audit_path,
+                                        development_features_path, feature_audit_path)):
+            raise ValueError("evaluation requires audited DINO development features and selection")
         selection_sha = digest(selection_path)
+        development_features_sha = digest(development_features_path)
         selection = json.loads(selection_path.read_text())
         audit = json.loads(audit_path.read_text())
+        feature_audit = json.loads(feature_audit_path.read_text())
         if (selection.get("id") != "HERBAL-CONTROL-0003-DINO-development-selection"
                 or selection.get("status") != "development-score-produced-awaiting-audit-and-push"
                 or selection.get("panel_manifest_sha256") != PANEL_SHA256
@@ -87,8 +93,16 @@ def preflight(split: str, selection_path: Path | None = None,
                 or audit.get("status") != "pass"
                 or audit.get("score_sha256") != selection_sha
                 or audit.get("full_input_freeze_sha256") != freeze_sha
-                or audit.get("feature_sha256") != selection.get("development_features_sha256")
-                or audit.get("primary_method") != selection.get("primary_method")):
+                or audit.get("feature_sha256") != development_features_sha
+                or selection.get("development_features_sha256") != development_features_sha
+                or audit.get("primary_method") != selection.get("primary_method")
+                or feature_audit.get("id") != "HERBAL-CONTROL-0003-DINO-development-feature-audit"
+                or feature_audit.get("status") != "pass"
+                or feature_audit.get("feature_sha256") != development_features_sha
+                or feature_audit.get("input_manifest_sha256") != digest(image_manifest("development"))
+                or feature_audit.get("full_input_freeze_sha256") != freeze_sha
+                or feature_audit.get("model_sha256") != MODEL_FILES["model.safetensors"]
+                or feature_audit.get("compared_distance_cells") != 108 * 108):
             raise ValueError("DINO development selection/audit missing or changed")
     images = json.loads(image_path.read_text())
     if (images.get("id") != f"HERBAL-CONTROL-0003-{split}"
@@ -120,8 +134,12 @@ def preflight(split: str, selection_path: Path | None = None,
 
 
 def extract(split: str, selection_path: Path | None = None,
-            audit_path: Path | None = None) -> dict:
-    images, image_sha, freeze_sha = preflight(split, selection_path, audit_path)
+            audit_path: Path | None = None,
+            development_features_path: Path | None = None,
+            feature_audit_path: Path | None = None) -> dict:
+    images, image_sha, freeze_sha = preflight(
+        split, selection_path, audit_path, development_features_path,
+        feature_audit_path)
     started = time.monotonic()
     torch.set_num_threads(min(8, torch.get_num_threads()))
     processor = AutoImageProcessor.from_pretrained(
@@ -169,9 +187,12 @@ def extract(split: str, selection_path: Path | None = None,
         "row_order": row_order,
         "distance_matrix": matrix.tolist(),
         **({"development_selection_sha256": digest(selection_path),
-            "development_audit_sha256": digest(audit_path)}
+            "development_audit_sha256": digest(audit_path),
+            "development_features_sha256": digest(development_features_path),
+            "development_feature_audit_sha256": digest(feature_audit_path)}
            if split == "evaluation" and selection_path is not None
-           and audit_path is not None else {}),
+           and audit_path is not None and development_features_path is not None
+           and feature_audit_path is not None else {}),
     }
 
 
@@ -181,8 +202,11 @@ def main() -> None:
     parser.add_argument("output", type=Path)
     parser.add_argument("--selection", type=Path)
     parser.add_argument("--audit", type=Path)
+    parser.add_argument("--development-features", type=Path)
+    parser.add_argument("--feature-audit", type=Path)
     args = parser.parse_args()
-    result = extract(args.split, args.selection, args.audit)
+    result = extract(args.split, args.selection, args.audit,
+                     args.development_features, args.feature_audit)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"split": args.split, "rows": len(result["row_order"]),

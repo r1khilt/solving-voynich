@@ -102,32 +102,58 @@ def test_dino_preflight_refuses_incomplete_and_tampered_evaluation(tmp_path,
 
     selection_path = tmp_path / "selection.json"
     audit_path = tmp_path / "audit.json"
+    development_features_path = tmp_path / "development_features.json"
+    feature_audit_path = tmp_path / "feature_audit.json"
+    _save(development_features_path, {"synthetic_development_feature": True})
+    development_features_sha = _sha(development_features_path)
     _save(selection_path, {
         "id": "HERBAL-CONTROL-0003-DINO-development-selection",
         "status": "development-score-produced-awaiting-audit-and-push",
         "panel_manifest_sha256": dino.PANEL_SHA256,
         "full_input_freeze_sha256": freeze_sha,
         "feature_method": dino.FEATURE_METHOD,
-        "development_features_sha256": "synthetic-feature-sha",
+        "development_features_sha256": development_features_sha,
         "primary_method": "two_mean",
     })
     _save(audit_path, {
         "id": "HERBAL-CONTROL-0003-DINO-independent-development-score-audit",
         "status": "pass", "score_sha256": _sha(selection_path),
         "full_input_freeze_sha256": freeze_sha,
-        "feature_sha256": "synthetic-feature-sha",
+        "feature_sha256": development_features_sha,
         "primary_method": "two_mean",
     })
-    evaluation, _, _ = dino.preflight("evaluation", selection_path, audit_path)
+    _save(feature_audit_path, {
+        "id": "HERBAL-CONTROL-0003-DINO-development-feature-audit",
+        "status": "pass", "feature_sha256": development_features_sha,
+        "input_manifest_sha256": image_shas["development"],
+        "full_input_freeze_sha256": freeze_sha,
+        "model_sha256": model_files["model.safetensors"],
+        "compared_distance_cells": 108 * 108,
+    })
+    with pytest.raises(ValueError, match="requires audited"):
+        dino.preflight("evaluation", selection_path, audit_path)
+    evaluation, _, _ = dino.preflight(
+        "evaluation", selection_path, audit_path,
+        development_features_path, feature_audit_path)
     assert len(evaluation["rows"]) == 108
+    feature_audit = json.loads(feature_audit_path.read_text())
+    feature_audit["compared_distance_cells"] -= 1
+    _save(feature_audit_path, feature_audit)
+    with pytest.raises(ValueError, match="selection/audit"):
+        dino.preflight("evaluation", selection_path, audit_path,
+                       development_features_path, feature_audit_path)
+    feature_audit["compared_distance_cells"] += 1
+    _save(feature_audit_path, feature_audit)
     bad = json.loads(audit_path.read_text())
     bad["score_sha256"] = "wrong"
     _save(audit_path, bad)
     with pytest.raises(ValueError, match="selection/audit"):
-        dino.preflight("evaluation", selection_path, audit_path)
+        dino.preflight("evaluation", selection_path, audit_path,
+                       development_features_path, feature_audit_path)
     bad["score_sha256"] = _sha(selection_path)
     _save(audit_path, bad)
     crop = tmp_path / evaluation["rows"][0]["crop_file"]
     crop.write_bytes(b"tampered")
     with pytest.raises(ValueError, match="crop changed"):
-        dino.preflight("evaluation", selection_path, audit_path)
+        dino.preflight("evaluation", selection_path, audit_path,
+                       development_features_path, feature_audit_path)

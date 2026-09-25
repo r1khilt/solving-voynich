@@ -29,9 +29,12 @@ def manual_tensor(path: Path) -> torch.Tensor:
 
 
 def audit(split: str, feature_path: Path, selection_path: Path | None = None,
-          development_audit_path: Path | None = None) -> dict:
+          development_audit_path: Path | None = None,
+          development_features_path: Path | None = None,
+          development_feature_audit_path: Path | None = None) -> dict:
     images, images_sha, freeze_sha = source.preflight(
-        split, selection_path, development_audit_path)
+        split, selection_path, development_audit_path,
+        development_features_path, development_feature_audit_path)
     features = json.loads(feature_path.read_text())
     if (features.get("id") != f"HERBAL-CONTROL-0003-{split}"
             or features.get("feature_method") != source.FEATURE_METHOD
@@ -43,7 +46,10 @@ def audit(split: str, feature_path: Path, selection_path: Path | None = None,
         raise ValueError("DINO feature provenance differs")
     if split == "evaluation" and (
             features.get("development_selection_sha256") != source.digest(selection_path)
-            or features.get("development_audit_sha256") != source.digest(development_audit_path)):
+            or features.get("development_audit_sha256") != source.digest(development_audit_path)
+            or features.get("development_features_sha256") != source.digest(development_features_path)
+            or features.get("development_feature_audit_sha256")
+            != source.digest(development_feature_audit_path)):
         raise ValueError("evaluation feature development gate differs")
     rows = features.get("row_order", [])
     if len(rows) != 108:
@@ -94,8 +100,12 @@ def main() -> None:
     parser.add_argument("output", type=Path)
     parser.add_argument("--selection", type=Path)
     parser.add_argument("--development-audit", type=Path)
+    parser.add_argument("--development-features", type=Path)
+    parser.add_argument("--development-feature-audit", type=Path)
     args = parser.parse_args()
-    result = audit(args.split, args.features, args.selection, args.development_audit)
+    result = audit(args.split, args.features, args.selection,
+                   args.development_audit, args.development_features,
+                   args.development_feature_audit)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"status": result["status"],
