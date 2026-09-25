@@ -1,0 +1,43 @@
+{
+  "experiment": "EXP-0035",
+  "source_url": "https://www.gutenberg.org/ebooks/55752",
+  "source_title": "Dom Casmurro",
+  "source_author": "Machado de Assis",
+  "source_language": "Portuguese",
+  "source_rights": "Project Gutenberg official page states public domain in USA; raw text remains Git-ignored",
+  "portuguese_raw_sha256": "0fc3dbf384544d81d87e5a731e67b7976ac3a57acb378f0f354d12a3b52bd0c7",
+  "portuguese_clean_sha256": "6c5a4271c2ce38b3bfb289085fd32ec635fd07f6a8bb23de13c18d3be1b0dddf",
+  "portuguese_clean_characters": 360738,
+  "preprocessing": "Slice exact Gutenberg START/END; Unicode NFKD strip combining marks; clean_plaintext; disjoint 128-char blocks",
+  "prior_train_sha256": "378276e449cd25934c62e770a104eadb0275d7e1e9813baa6c45b6fe453f7240",
+  "prior_validation_sha256": "aa7404ebd06d206ed8798fdb2f0f931167fa0834f862fb3a7a8fe2383f2d125a",
+  "prior_data_manifest_sha256": "7d2416d19618303e95eb6865b3d12f47ad595c837695ff032baccabfde03db18",
+  "generator_sha256": "4e6f04f8622b6a0abead667a79ad951942421d9b11bfd5f75c5b4c22c76b5cfc",
+  "builder_sha256": "acae3db84f45e9aab642b217da8887a362873413161efe32dbece8e6c778fffb",
+  "seeds": {
+    "training_replay": 320032,
+    "portuguese_holdout": 350035,
+    "iid_control": 350036
+  },
+  "counts": {
+    "train": 12000,
+    "portuguese_holdout": 600,
+    "iid_control": 600
+  },
+  "family_counts": {
+    "random_char": 192,
+    "periodic": 199,
+    "copy_mutate": 209
+  },
+  "soft_targets": {
+    "training_rows_replayed": 12000,
+    "copy_soft_rows": 2343,
+    "mean_copy_weighted_abs_gold_difference": 0.03436281904578209,
+    "mean_copy_uniform_abs_gold_difference": 0.05047192797064781
+  },
+  "derived_sha256": {
+    "train_soft_targets": "1f047bf78b216718092029a9ac967924cc5f76bd3b8de87144a21f6517e153ca",
+    "portuguese_holdout": "37727a48e75bb288e1943c1d3c3683d160bd996f2fb2ad420b9a2131f3a26971",
+    "iid_control": "0a2b30730a5f1263618066851a142fb966cc6310fedb3158624cedbfbd2fede3"
+  }
+}
