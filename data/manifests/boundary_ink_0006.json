@@ -1,0 +1,419 @@
+{
+  "box_sha256": {
+    "f100r": "eef28de88cd72f41efc1aca14b62dee2db850da66a4de13793c228082a252c26",
+    "f115r": "e9e8b249083f21edb3d9e36e7618ffc77ee6aff0b1d90bb8e400060c9691c101",
+    "f21r": "6b9434a58bb40aa4be6d87b9a6e24bfa3e5f16ad9153e8310eb68dd34dac2e69",
+    "f41r": "8e89c68edea81f16aa7a8985c028fc11707b6e0abf11c5c53c863fd4de9f1fec",
+    "f52v": "cf9b04d35f83d55915be663babcc48eec5784749796bf25e411f3bf1d8795f4b",
+    "f80v": "bfda94865ad98353831214532a8ccc709fdde965d6c3acfa87efa232d539c8bf",
+    "f81r": "6ab9a411d01bae8e9511dd28d77b2b51c991ea2ac5c4789fed1b14962133aca8",
+    "f94r": "edaf54a9edfcea8fdf5e125358f244c0615666747f1a172696fcaedd10734967"
+  },
+  "eligible_rows": 1024,
+  "experiment": "BOUNDARY-CHANNEL-0006",
+  "registration_config_sha256": "581275b21d62860792e8fdc6fc5041295c6a3796ccf36b3441a2208f54a8dc8b",
+  "registration_result_sha256": "ae9991b7517169ce18a75b8c7665cb8aafbd11e3cb93b72ccebb7f346ff14cbb",
+  "sampling": "For each of 8 fixed train folios, hash-rank all eligible '.' and ',' pairs separately; take first 6 of each or all if fewer. Pick two selected pairs per folio by a separate hash and displace their mapped boxes +20/-20 image pixels vertically. Shuffle originals and decoys by a third hash for review. No gap or ink score is inspected for selection.",
+  "scan_sha256": {
+    "f100r": "7ec8d0ebc7def432e564d76a31195248d55cf7caaa1a9fb945ada406609cfbfc",
+    "f115r": "3466dc6f651ea69cbff7c44c687982c217501bf7965358aaf1092a225ff588d1",
+    "f21r": "f9264bd20611db19028a34a1ca58303225e94da98308776bc0b018b0c05dc011",
+    "f41r": "e0b7b52ee2826d4a12afbd1101ac7c48b6afdea91b8360593bc6df05728db7cc",
+    "f52v": "241bbb56c6634f34f8dd3a5df6709008167449cf7ea4097828d8466df23e793e",
+    "f80v": "d94ffbc8aab7147644c6b3e697ec02f40216a0ea7f2a1b0115b0e5b5e7b750c9",
+    "f81r": "8ae3e6dbb1d350ffbdce346d4510fbe409adc6b8ed9c7cb9b9b3cec7d7bc6159",
+    "f94r": "224a87631abe394b4609af36f04450553dbe8710613f7e639a179a6458b40027"
+  },
+  "selected_decoys": [
+    {
+      "dy": 20,
+      "folio": "f100r",
+      "pair_id": "f100r:96:74"
+    },
+    {
+      "dy": -20,
+      "folio": "f100r",
+      "pair_id": "f100r:43:27"
+    },
+    {
+      "dy": 20,
+      "folio": "f115r",
+      "pair_id": "f115r:35:38"
+    },
+    {
+      "dy": -20,
+      "folio": "f115r",
+      "pair_id": "f115r:129:138"
+    },
+    {
+      "dy": 20,
+      "folio": "f21r",
+      "pair_id": "f21r:7:9"
+    },
+    {
+      "dy": -20,
+      "folio": "f21r",
+      "pair_id": "f21r:9:11"
+    },
+    {
+      "dy": 20,
+      "folio": "f41r",
+      "pair_id": "f41r:82:72"
+    },
+    {
+      "dy": -20,
+      "folio": "f41r",
+      "pair_id": "f41r:87:76"
+    },
+    {
+      "dy": 20,
+      "folio": "f52v",
+      "pair_id": "f52v:46:47"
+    },
+    {
+      "dy": -20,
+      "folio": "f52v",
+      "pair_id": "f52v:15:17"
+    },
+    {
+      "dy": 20,
+      "folio": "f80v",
+      "pair_id": "f80v:299:298"
+    },
+    {
+      "dy": -20,
+      "folio": "f80v",
+      "pair_id": "f80v:67:66"
+    },
+    {
+      "dy": 20,
+      "folio": "f81r",
+      "pair_id": "f81r:153:154"
+    },
+    {
+      "dy": -20,
+      "folio": "f81r",
+      "pair_id": "f81r:12:12"
+    },
+    {
+      "dy": 20,
+      "folio": "f94r",
+      "pair_id": "f94r:43:41"
+    },
+    {
+      "dy": -20,
+      "folio": "f94r",
+      "pair_id": "f94r:72:69"
+    }
+  ],
+  "selected_originals": [
+    {
+      "folio": "f41r",
+      "pair_id": "f41r:81:71"
+    },
+    {
+      "folio": "f41r",
+      "pair_id": "f41r:75:66"
+    },
+    {
+      "folio": "f41r",
+      "pair_id": "f41r:61:53"
+    },
+    {
+      "folio": "f41r",
+      "pair_id": "f41r:87:76"
+    },
+    {
+      "folio": "f41r",
+      "pair_id": "f41r:95:83"
+    },
+    {
+      "folio": "f41r",
+      "pair_id": "f41r:82:72"
+    },
+    {
+      "folio": "f41r",
+      "pair_id": "f41r:9:8"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:37:35"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:45:43"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:30:28"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:11:10"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:72:69"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:43:41"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:38:36"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:39:37"
+    },
+    {
+      "folio": "f94r",
+      "pair_id": "f94r:79:74"
+    },
+    {
+      "folio": "f52v",
+      "pair_id": "f52v:52:53"
+    },
+    {
+      "folio": "f52v",
+      "pair_id": "f52v:50:51"
+    },
+    {
+      "folio": "f52v",
+      "pair_id": "f52v:61:63"
+    },
+    {
+      "folio": "f52v",
+      "pair_id": "f52v:46:47"
+    },
+    {
+      "folio": "f52v",
+      "pair_id": "f52v:30:32"
+    },
+    {
+      "folio": "f52v",
+      "pair_id": "f52v:16:18"
+    },
+    {
+      "folio": "f52v",
+      "pair_id": "f52v:4:4"
+    },
+    {
+      "folio": "f52v",
+      "pair_id": "f52v:15:17"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:8:10"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:7:9"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:5:7"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:32:36"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:76:85"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:26:29"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:9:11"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:51:58"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:71:80"
+    },
+    {
+      "folio": "f21r",
+      "pair_id": "f21r:16:18"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:136:145"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:35:38"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:229:239"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:27:30"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:197:207"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:63:68"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:152:162"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:129:138"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:399:415"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:208:218"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:253:264"
+    },
+    {
+      "folio": "f115r",
+      "pair_id": "f115r:354:369"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:127:128"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:11:11"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:153:154"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:91:91"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:92:92"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:117:118"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:39:40"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:18:19"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:12:12"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:181:182"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:155:156"
+    },
+    {
+      "folio": "f81r",
+      "pair_id": "f81r:136:137"
+    },
+    {
+      "folio": "f100r",
+      "pair_id": "f100r:25:10"
+    },
+    {
+      "folio": "f100r",
+      "pair_id": "f100r:43:27"
+    },
+    {
+      "folio": "f100r",
+      "pair_id": "f100r:37:21"
+    },
+    {
+      "folio": "f100r",
+      "pair_id": "f100r:96:74"
+    },
+    {
+      "folio": "f100r",
+      "pair_id": "f100r:67:45"
+    },
+    {
+      "folio": "f100r",
+      "pair_id": "f100r:71:49"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:205:205"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:67:66"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:201:201"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:23:22"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:15:14"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:2:2"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:241:239"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:73:72"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:310:309"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:299:298"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:173:173"
+    },
+    {
+      "folio": "f80v",
+      "pair_id": "f80v:66:65"
+    }
+  ],
+  "selection_seed": "BOUNDARY-CHANNEL-0006|2026-09-25",
+  "source_rows_manifest_sha256": "b39910a99066dfcf674871aa2c14121515ffbe81a3809220261dd3eec8b7cc76",
+  "source_rows_sha256": "9effc6e34f3f8ab4951d07e762070ca65fa88f912f96f75cfecf9c54b22c4a32",
+  "status": "frozen_blind_crop_selection"
+}

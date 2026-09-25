@@ -1,0 +1,107 @@
+{
+  "anonymization_seed": 6069101,
+  "answer_key_sha256": "3490c23a8d536757b5c6b101e4aa8aab048784c39849717fa1845111e65979a3",
+  "archive_revision": "956a7c4fc39981f4d116fa3f4edfccce6d065571",
+  "experiment": "NAIBBE-001",
+  "full_candidate_count_histogram": {
+    "1": 34517,
+    "2": 246,
+    "3": 1
+  },
+  "full_published_tokens": 34764,
+  "hidden": [
+    "Global class-to-plaintext-letter permutation",
+    "Correct ambiguous-token parses"
+  ],
+  "license": "Raw and derived third-party text/codebook remain ignored. Greshko copyright/license stays beside source; cite Cryptologia DOI10.1080/01611194.2025.2566408. No third-party code copied.",
+  "limit": "Codebook-anonymized calibration; supplied grouping removes most verbose-cipher inference. Not blind cipher-family discovery or Voynich decipherment.",
+  "lms": {
+    "english": {
+      "characters": 317326,
+      "path": "data/processed/naibbe001/english_lm.txt",
+      "sha256": "a2df39ce27fe8117a20e39be337d534fd5b0c5939e40d93d7f0ea19fc1d41134"
+    },
+    "latin": {
+      "characters": 317326,
+      "path": "data/processed/naibbe001/latin_lm.txt",
+      "sha256": "ccd400154a6697a6b40ed75b0038562de1258a7c12f34d851fd3603c85ebed63"
+    }
+  },
+  "normalization": "Gutenberg body markers and pinned narrative openings; English truncated to Latin character budget; lowercase/NFKD accent fold; ae/oe ligatures; j->i,k->c,w->uu,ss for sharp s; retain allowed23 letters; erase spaces; preserve u/v distinction. Caesar parts concatenate at one artificial boundary.",
+  "oracle_gifts": [
+    "Known 23-letter Latin/Italian alphabet",
+    "Exact codeword role grammar",
+    "True same-letter links across six code tables and three roles",
+    "Observed ciphertext token boundaries",
+    "Known source language candidate Latin"
+  ],
+  "solver_input_sha256": "46221ad1dcbe3e74b4f312e9b17de2df79c9b78d76cc3435d89c064015219cf3",
+  "sources": {
+    "caesar_la.txt": {
+      "path": "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la.txt",
+      "sha256": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c"
+    },
+    "caesar_la2.txt": {
+      "path": "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la2.txt",
+      "sha256": "8bae4d88747b318b58ea193f981766fed337ddf613df452c1a06d72c9af75ffd"
+    },
+    "greshko_naibbe_tables.csv": {
+      "path": "data/raw/external/voynich-units/data/controls/naibbe/greshko_naibbe_tables.csv",
+      "sha256": "4e7cfd54b7ec66515d39a51e11ec97e8e19b643b0b189124eebc3982e707dcec"
+    },
+    "greshko_nathist_output_ciphertext.txt": {
+      "path": "data/raw/external/voynich-units/data/controls/naibbe/greshko_nathist_output_ciphertext.txt",
+      "sha256": "9cdf2de12f371ac7efdb2e78713f229ada508286c1717758184238a59cd64326"
+    },
+    "greshko_nathist_pre_encryption_respaced_plaintext.txt": {
+      "path": "data/raw/external/voynich-units/data/controls/naibbe/greshko_nathist_pre_encryption_respaced_plaintext.txt",
+      "sha256": "4979b6826c75dd47b90d6c95ac212a34cd3735b1151ca2a524e9d13b4112e93b"
+    },
+    "lm_english.txt": {
+      "path": "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/lm_english.txt",
+      "sha256": "7e1a58776d28d7385752c4be7931f80ad385d6aad28309f56e28f4bcd38f4789"
+    }
+  },
+  "split_inputs": {
+    "dev": {
+      "path": "data/processed/naibbe001/dev_input.json",
+      "sha256": "1732d3039024b97330b2b8782937ee2c0564624d73175697fdf7c8fbf810eca6"
+    },
+    "fit": {
+      "path": "data/processed/naibbe001/fit_input.json",
+      "sha256": "8db41d528b46383f3982f0887b4187cb39abb10d0260c6539af16778be96f112"
+    },
+    "transfer": {
+      "path": "data/processed/naibbe001/transfer_input.json",
+      "sha256": "e7fa100e30753d2152f496b7890ad1302c3e83d7b15fcc367c4a0d5b15694df7"
+    }
+  },
+  "splits": {
+    "dev": {
+      "candidate_count_histogram": {
+        "1": 2037,
+        "2": 11
+      },
+      "gold_characters": 3085,
+      "tokens": 2048
+    },
+    "fit": {
+      "candidate_count_histogram": {
+        "1": 8128,
+        "2": 64
+      },
+      "gold_characters": 12483,
+      "tokens": 8192
+    },
+    "transfer": {
+      "candidate_count_histogram": {
+        "1": 8146,
+        "2": 45,
+        "3": 1
+      },
+      "gold_characters": 12451,
+      "tokens": 8192
+    }
+  },
+  "stage": "data_preflight_only_no_optimized_scores"
+}

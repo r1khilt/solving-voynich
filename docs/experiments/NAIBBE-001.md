@@ -1,0 +1,56 @@
+# NAIBBE-001 — recovering text and a shared key, with codebook grouping supplied
+
+**Pre-search registration, 2026-09-25.** Exploratory engineering competence test with a prospectively frozen transfer evaluation. No Pliny key search or answer evaluation has run. Data-preflight counts are exposed. This replaces further unconditional boundary measurement as the active branch; BOUNDARY-CHANNEL-0006 is deferred. The long-term target remains actual Voynich decipherment.
+
+## Why this changes the strategy
+
+EXP-0035's source-free mask model failed its new-source improvement gate; EXP-0034 succeeded only with the entire source supplied. Much subsequent boundary work measured genuine constraints without identifying a message. The next model must propose **both a plaintext and a single reusable encoding key**. Its outputs must reproduce the observed symbols and transfer without changing that key. Mechanistic analysis becomes useful when applied to a solver that actually recovers hidden content. Token similarity, larger predictors, diffusion and image measurements remain possible tools, not substitutes for this requirement.
+
+[Greshko's Naibbe cipher](https://github.com/greshko/naibbe-cipher), Cryptologia DOI [10.1080/01611194.2025.2566408](https://doi.org/10.1080/01611194.2025.2566408), is a published verbose homophonic construction that produces some Voynich-like properties while encoding readable text. It demonstrates one possible construction, not the manuscript's historical mechanism. The pinned archive supplies an aligned Pliny Latin sample and the actual code tables. This is a useful controlled target because there is a correct answer and a known mechanism.
+
+[Nuhn, Schamper and Ney (2014)](https://aclanthology.org/D14-1184/) show that search design and scoring can matter far more than raw compute for substitution decipherment. Our steepest-swap search is a simpler independent implementation, not a reproduction of their beam method or performance. [Ravi and Knight (2011)](https://aclanthology.org/P11-1025/) motivate explicit source/channel inference with unknown word boundaries. [Berg-Kirkpatrick and Klein (2013)](https://aclanthology.org/D13-1087/) motivate distinguishing failed optimization from a failed cipher assumption. [Aldarrab and May (2022)](https://aclanthology.org/2022.emnlp-main.44/) distinguish substitution-unit segmentation from decoding a lattice with a supplied key; historical cases are materially harder than synthetic ones. [Hauer and Kondrak (2016)](https://aclanthology.org/Q16-1006/) are direct Voynich prior art on conditional language/cipher search: a favored language under a restricted model does not constitute an accepted decipherment.
+
+## Inputs and explicit assistance
+
+Source archive commit `956a7c4fc39981f4d116fa3f4edfccce6d065571`; original Greshko repository snapshot `f2675ec5dd275268bc64dd48ea64fc0e0e9827a2`. The builder checks six immutable file hashes and the archive revision. Exact files, checksums, processed hashes and counts are in [the manifest](../../data/manifests/naibbe001_data.json). Third-party raw text/tables/license and all processed data remain ignored. No external implementation was copied. Cite the author's paper when publishing results based on this control.
+
+The decoder receives the correct 23-letter alphabet, ciphertext token boundaries, unigram/prefix/suffix grammar, and **true same-letter equivalence across six tables and all three roles**. It does not receive the class-to-letter mapping. The 23 classes have random opaque IDs, with shuffled order. Candidate paths are sorted by those IDs rather than plaintext letters. Naibbe v1 unigram precedence excludes prefix+suffix alternatives whenever the complete ciphertext token is also a unigram codeword. Every candidate of an observed token has the same character length. Tables are used only to construct allowed paths; card-deck/table-selection probabilities are not modeled.
+
+This is mostly a 23-symbol substitution problem: of 34,764 published tokens, 34,517 have one allowed anonymous parse, 246 have two, and one has three. It is **not blind verbose-cipher discovery**. The known grouping is the largest oracle gift. The public builder seed permits reconstructing the answer; therefore the solver never imports the builder or accesses its source tables/answers. This is auditable software separation, not cryptographic secrecy from the researcher.
+
+Splits are fixed contiguous token blocks: fit `[0,8192)`, reserved development `[8192,10240)`, transfer `[10240,18432)`. Fit has64 ambiguous tokens; transfer has46. Each split has a separate input file. Search opens only `fit_input.json`; the development block is unused. Transfer and answers open only after all selected keys are committed, pushed and remote-verified. These are blocks of one publication, not independent authors/manuscripts.
+
+The source prior is character 1–4gram Latin trained on Caesar's De Bello Gallico I–VIII, a different author/work from the Pliny target. Gutenberg wrappers and source-specific front matter are removed at pinned narrative openings. Lowercase, NFKD/ligature folding, j→i, k→c, w→uu, and allowed23-letter filtering erase spaces; u/v remain distinct. The two Caesar files concatenate at one artificial boundary. Wrong-language control uses the English Caesar translation, identically normalized and truncated to the same number of source characters. Corpus artifacts, historical spelling, absence of Latin z and rarity of y limit rare-letter estimation. Additive smoothing prevents zero probability.
+
+## Frozen method and controls
+
+Each order uses additive .1 counts per possible next character. Conditional distributions are mixed with weights `.02,.08,.20,.70`; lower-order sequence prefixes renormalize the available weights. Probabilities sum to one per context. There is no pretrained model, dictionary, target-plaintext prior or paid inference.
+
+Search a global bijection. Initialize by unigram frequency rank. Run8 starts with seed910101, perturbing restart r by3r random swaps. Each start has7 cycles (initial plus6 kicks). Within a cycle, enumerate all253 pair swaps and repeatedly accept the best improvement, maximum200 moves. For the joint arm, alternate this fixed-path key search with exact Viterbi over all legal token parses, at most3 alternating rounds per cycle. Viterbi merges states only when their last three plaintext letters match. After each cycle perturb the global incumbent by2–5 swaps. Selection uses only the fit source objective. Log every cycle and selected key; no answer-dependent adjustment.
+
+Three frozen arms: **Latin joint key/parse** (primary), **Latin first anonymous parse** (ablates latent parsing), **English joint** (wrong-language control). Fixed-first parse depends on arbitrary opaque-ID order and is not a linguistically meaningful parse. Type-renaming tests transport candidates/keys and verify objective/Viterbi invariance, not identical restart trajectories under reindexed variables. No marginalization over table multiplicities is claimed. The best-path log source score is a **search objective**, not normalized ciphertext likelihood, evidence, or a Bayes factor.
+
+## Evaluation and decision
+
+Freeze all three learned keys and fit traces before reading answers or decoding transfer. Evaluate the unchanged key on fit and transfer. Report plaintext Levenshtein character error rate (CER), exact ciphertext-token chunk recovery, ambiguous-token accuracy, type-level key recovery, and source-frequency-weighted key recovery. Show zero-occurrence and misidentified rare classes explicitly. Re-encoding support requires each predicted chunk to be the image of an allowed anonymous path under the frozen key; this checks compatibility but does not identify the actual table/card sequence.
+
+Known-key oracle uses the same Latin LM and exact Viterbi. Primary competence **PASS** requires all: transfer CER≤.02, CER≤known-key-oracle CER+.005, weighted key accuracy≥.99. These are engineering gates, not literature-established decipherment thresholds. Controls are descriptive, not alternative ways to rescue a primary failure. A source-score improvement under the wrong-language arm does not identify a language. No confidence interval generalization is claimed from a single contiguous publication.
+
+After opening gold: gold-key score above learned score proves search failed to find at least that better candidate. A wrong learned key scoring above gold instead diagnoses objective preference; more optimization alone cannot recover gold under that preference. Gold-key parsing errors reveal residual grammar/source-model ambiguity. These diagnostics are conditional, and several can coexist for different key letters.
+
+Tests independently enumerate tiny lattices/keys; compare all counted objectives with sequential scores; check per-context normalization, local swap optimality, renamed-variable invariance and bit-parallel edit distance against ordinary dynamic programming. A Caesar-only synthetic throughput check (12,500 later-source characters, source LM fit to first250,000, random23-key, two starts×three cycles) took0.629s, recovered100% of occurring characters and21/23 key types; two types absent from that target are not identified. This is development competence, not the published target result. An initial toy test incorrectly expected one greedy start to find the global optimum; it failed and was corrected to test local optimality and exhaustive multistart coverage rather than assert a false optimizer guarantee.
+
+Budget: expected seconds to a few minutes CPU per arm from the toy throughput; upper search deadline1hour per arm, checked within every climb step, with a final lattice pass allowed to finish. Three arms≤roughly3hours local CPU and modest RAM; zero paid spend. Runs are sequential to avoid unnecessary contention. No interruption-resume is implemented; preserve any failed run record rather than silently retry. Pre-search source must be committed/pushed/remote-verified. Commands:
+
+```
+.venv/bin/python scripts/build_naibbe001_data.py --preflight
+PYTHONPATH=src .venv/bin/python scripts/run_naibbe001.py --arm latin_joint
+PYTHONPATH=src .venv/bin/python scripts/run_naibbe001.py --arm latin_fixed
+PYTHONPATH=src .venv/bin/python scripts/run_naibbe001.py --arm english_joint
+# Commit/push/verify all learned key freezes before the following:
+PYTHONPATH=src .venv/bin/python scripts/evaluate_naibbe001.py --key-freeze-commit <verified-commit>
+```
+
+## Next rung, fixed before the result
+
+If this assisted rung passes, **remove the supplied same-letter links across the six tables** while retaining the known codeword-role grammar. Infer homophone groups jointly with plaintext. Later remove role/segmentation knowledge and add truly historical controls such as the [Borg cipher](https://www.su.se/english/research/research-catalogue/research-projects/d/decipherment-of-historical-manuscripts/the-borg-cipher). A failure instead triggers the predeclared search-versus-objective diagnosis. No outcome here establishes any Voynich language, glyph reading, word or meaning. The manuscript must ultimately be tested under bounded competing families and untouched physical-folio predictions, with an explicit outside-tested-family outcome.
