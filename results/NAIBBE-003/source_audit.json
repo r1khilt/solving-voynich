@@ -1,0 +1,646 @@
+{
+  "experiment": "NAIBBE-003",
+  "stage": "independent_source_only_audit",
+  "audit_pass": true,
+  "source_commit": "9cba3ff7a83333c850de52353a5aed2386d4a07f",
+  "source_selection_sha256": "4dec9b63f39ce91e396f7c2f9bcfc078fcd4c0aaccc8f99ccb3ba47080daa676",
+  "auditor_sha256": "d6b143e98393c17b48b476a128eb2abeea90f8d1f6c27d13079e90fd29ec6230",
+  "checked_hashes": {
+    "scripts/select_naibbe003_source.py": "f55fcc88b3728f25947f08d489873dacc7359a1b81567f7005f125cda69fce94",
+    "src/voynich/recursive_character_lm.py": "e156fd43b32b37324caed81dfc2e2fe7423a4e3db4678bde1801f98d76a0e2aa",
+    "src/voynich/naibbe_key_search.py": "3d6c6a2b891cdd127a859867a7da3bbf42f1c4c9346470bfae03f9f994db9713",
+    "docs/experiments/NAIBBE-003.md": "cab9ed318513d19b9285d072609414212640d819044e6075fa4d719af63d4c94",
+    "scripts/audit_naibbe003_source.py": "d6b143e98393c17b48b476a128eb2abeea90f8d1f6c27d13079e90fd29ec6230",
+    "tests/test_naibbe003_source_audit.py": "37ac10882c3f3e18da96ce7aaf3ac5903c7c1a2c03737cb2d4c76851eedcc1f7",
+    "data/manifests/naibbe003_data.json": "a6f88fda38bbb0f284e1f6600224d640a9417e0c1199770b5d9813f84c2f64be",
+    "data/processed/naibbe001/latin_lm.txt": "ccd400154a6697a6b40ed75b0038562de1258a7c12f34d851fd3603c85ebed63",
+    "data/processed/naibbe001/english_lm.txt": "a2df39ce27fe8117a20e39be337d534fd5b0c5939e40d93d7f0ea19fc1d41134"
+  },
+  "languages": {
+    "latin": {
+      "selected_index": 4,
+      "selected_config": {
+        "family": "dirichlet",
+        "parameter": 16.0
+      },
+      "dev_bits_per_character": [
+        2.6648114877283255,
+        2.741186227186757,
+        2.686388389358642,
+        2.6433849091710497,
+        2.6284287721739497,
+        2.6696063695794665,
+        2.792870466733605,
+        2.673263201416589,
+        2.6520070601657766,
+        2.6480507249852874,
+        2.653347573132471
+      ],
+      "baseline_check_bits_per_character": 2.6466065989577356,
+      "selected_check_bits_per_character": 2.6162863952053126,
+      "gain_bits_per_character": 0.030320203752423443,
+      "gain_ci95": [
+        0.025442918033139802,
+        0.03515509110436677
+      ],
+      "gain_blocks": [
+        {
+          "sum": 28.933556978744218,
+          "count": 1000
+        },
+        {
+          "sum": 31.324836412102016,
+          "count": 1000
+        },
+        {
+          "sum": 52.479334146547814,
+          "count": 1000
+        },
+        {
+          "sum": 18.919891855413866,
+          "count": 1000
+        },
+        {
+          "sum": 47.282165623727295,
+          "count": 1000
+        },
+        {
+          "sum": 31.19805719775992,
+          "count": 1000
+        },
+        {
+          "sum": 21.079185155791087,
+          "count": 1000
+        },
+        {
+          "sum": -20.872451728822508,
+          "count": 1000
+        },
+        {
+          "sum": 24.083730740469193,
+          "count": 1000
+        },
+        {
+          "sum": 12.46490427917585,
+          "count": 1000
+        },
+        {
+          "sum": 29.940508467958978,
+          "count": 1000
+        },
+        {
+          "sum": 30.942313446992376,
+          "count": 1000
+        },
+        {
+          "sum": 49.55483153034048,
+          "count": 1000
+        },
+        {
+          "sum": 59.51137694855269,
+          "count": 1000
+        },
+        {
+          "sum": 33.22079278005367,
+          "count": 1000
+        },
+        {
+          "sum": 25.212470214437264,
+          "count": 1000
+        },
+        {
+          "sum": 54.91619759832995,
+          "count": 1000
+        },
+        {
+          "sum": 57.54272249049405,
+          "count": 1000
+        },
+        {
+          "sum": 48.224865512277646,
+          "count": 1000
+        },
+        {
+          "sum": 27.91342283848822,
+          "count": 1000
+        },
+        {
+          "sum": 22.049610903417065,
+          "count": 1000
+        },
+        {
+          "sum": 32.15214407277365,
+          "count": 1000
+        },
+        {
+          "sum": 43.072632731827255,
+          "count": 1000
+        },
+        {
+          "sum": 49.8240196827241,
+          "count": 1000
+        },
+        {
+          "sum": 28.31519936704569,
+          "count": 1000
+        },
+        {
+          "sum": 11.581167528436248,
+          "count": 1000
+        },
+        {
+          "sum": 44.78302982713745,
+          "count": 1000
+        },
+        {
+          "sum": 51.88828901644802,
+          "count": 1000
+        },
+        {
+          "sum": 31.17635659486679,
+          "count": 1000
+        },
+        {
+          "sum": 39.38265223892069,
+          "count": 1000
+        },
+        {
+          "sum": 41.00785676490137,
+          "count": 1000
+        },
+        {
+          "sum": 58.40544156969508,
+          "count": 1000
+        },
+        {
+          "sum": 11.8855658006685,
+          "count": 1000
+        },
+        {
+          "sum": 41.259883937083615,
+          "count": 1000
+        },
+        {
+          "sum": 26.903721683797794,
+          "count": 1000
+        },
+        {
+          "sum": 44.43741742173233,
+          "count": 1000
+        },
+        {
+          "sum": 21.608777290251208,
+          "count": 1000
+        },
+        {
+          "sum": 14.92962749740822,
+          "count": 1000
+        },
+        {
+          "sum": 31.08716386223422,
+          "count": 1000
+        },
+        {
+          "sum": 0.08679176304867145,
+          "count": 1000
+        },
+        {
+          "sum": -2.629693000072922,
+          "count": 1000
+        },
+        {
+          "sum": 26.195531036779617,
+          "count": 1000
+        },
+        {
+          "sum": 39.26430670024235,
+          "count": 1000
+        },
+        {
+          "sum": 15.404939024388263,
+          "count": 1000
+        },
+        {
+          "sum": 15.692814892054027,
+          "count": 1000
+        },
+        {
+          "sum": 10.82167732957396,
+          "count": 1000
+        },
+        {
+          "sum": 6.611012139204335,
+          "count": 1000
+        },
+        {
+          "sum": 36.71398204085233,
+          "count": 1000
+        },
+        {
+          "sum": 25.311837755255493,
+          "count": 1000
+        },
+        {
+          "sum": 12.477900330509375,
+          "count": 326
+        }
+      ],
+      "normalization": [
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 4.5454070252901903e-07
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 5.281628598715949e-20
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 3.3776280450572322e-18
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 2.155009638701307e-16
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 1.3623293833403572e-14
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 8.306837297857071e-13
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 4.4333190517748685e-11
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 6.048963565554081e-17
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 4.839170852443265e-16
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 1.633220162699602e-15
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 8624,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 2.822204441144912e-15
+        }
+      ],
+      "criteria": {
+        "new_family_selected": true,
+        "check_gain_at_least_005_bits": true,
+        "block_bootstrap_lower_positive": true
+      },
+      "decision": "PASS"
+    },
+    "english": {
+      "selected_index": 4,
+      "selected_config": {
+        "family": "dirichlet",
+        "parameter": 16.0
+      },
+      "dev_bits_per_character": [
+        2.5677289050330794,
+        2.6857144440360794,
+        2.6112723502426722,
+        2.555931515349597,
+        2.54291533359103,
+        2.604705531157059,
+        2.7581011321746653,
+        2.596458624540648,
+        2.566963291697531,
+        2.5606681703469674,
+        2.5668015361087466
+      ],
+      "baseline_check_bits_per_character": 2.5419031136158177,
+      "selected_check_bits_per_character": 2.5143853951170363,
+      "gain_bits_per_character": 0.027517718498781218,
+      "gain_ci95": [
+        0.02087506265969158,
+        0.033393638507068106
+      ],
+      "gain_blocks": [
+        {
+          "sum": 20.599966460571586,
+          "count": 1000
+        },
+        {
+          "sum": 39.81388662242765,
+          "count": 1000
+        },
+        {
+          "sum": 67.68038186337115,
+          "count": 1000
+        },
+        {
+          "sum": 40.75649425662977,
+          "count": 1000
+        },
+        {
+          "sum": 68.54493379516926,
+          "count": 1000
+        },
+        {
+          "sum": 46.51301019561153,
+          "count": 1000
+        },
+        {
+          "sum": -22.142049442436154,
+          "count": 1000
+        },
+        {
+          "sum": 11.039142849215713,
+          "count": 1000
+        },
+        {
+          "sum": 23.2925202507005,
+          "count": 1000
+        },
+        {
+          "sum": 56.017542077986015,
+          "count": 1000
+        },
+        {
+          "sum": 34.279075594326905,
+          "count": 1000
+        },
+        {
+          "sum": -17.330964542654524,
+          "count": 1000
+        },
+        {
+          "sum": 13.205255355422258,
+          "count": 1000
+        },
+        {
+          "sum": 22.264717064811382,
+          "count": 1000
+        },
+        {
+          "sum": -21.44954989499205,
+          "count": 1000
+        },
+        {
+          "sum": 12.98133203508511,
+          "count": 1000
+        },
+        {
+          "sum": 1.1775369421543906,
+          "count": 1000
+        },
+        {
+          "sum": 27.72965395692132,
+          "count": 1000
+        },
+        {
+          "sum": 20.558513958761033,
+          "count": 1000
+        },
+        {
+          "sum": 45.19259758444001,
+          "count": 1000
+        },
+        {
+          "sum": 62.95766676379875,
+          "count": 1000
+        },
+        {
+          "sum": 12.377593481417302,
+          "count": 1000
+        },
+        {
+          "sum": 49.00927995459709,
+          "count": 1000
+        },
+        {
+          "sum": 11.83656009290996,
+          "count": 1000
+        },
+        {
+          "sum": 39.415183911289155,
+          "count": 1000
+        },
+        {
+          "sum": 47.41150050382009,
+          "count": 1000
+        },
+        {
+          "sum": 38.74927031852071,
+          "count": 1000
+        },
+        {
+          "sum": 33.23916529403361,
+          "count": 1000
+        },
+        {
+          "sum": 18.369086415209075,
+          "count": 1000
+        },
+        {
+          "sum": 45.815386632871466,
+          "count": 1000
+        },
+        {
+          "sum": -7.285955978901245,
+          "count": 1000
+        },
+        {
+          "sum": 0.7886938062218859,
+          "count": 1000
+        },
+        {
+          "sum": 7.71713175922706,
+          "count": 1000
+        },
+        {
+          "sum": -8.652754174972209,
+          "count": 1000
+        },
+        {
+          "sum": 17.854362849845025,
+          "count": 1000
+        },
+        {
+          "sum": 36.6602756236767,
+          "count": 1000
+        },
+        {
+          "sum": -6.053279904813596,
+          "count": 1000
+        },
+        {
+          "sum": 61.822827857722885,
+          "count": 1000
+        },
+        {
+          "sum": 43.10143978586529,
+          "count": 1000
+        },
+        {
+          "sum": 24.002579443837732,
+          "count": 1000
+        },
+        {
+          "sum": 42.42960819563958,
+          "count": 1000
+        },
+        {
+          "sum": 28.9224393362854,
+          "count": 1000
+        },
+        {
+          "sum": 5.80670446195339,
+          "count": 1000
+        },
+        {
+          "sum": 61.65008438388513,
+          "count": 1000
+        },
+        {
+          "sum": 41.81490716958438,
+          "count": 1000
+        },
+        {
+          "sum": 27.97742443672699,
+          "count": 1000
+        },
+        {
+          "sum": 44.74893747072444,
+          "count": 1000
+        },
+        {
+          "sum": 53.714342729370784,
+          "count": 1000
+        },
+        {
+          "sum": 14.795811719893598,
+          "count": 1000
+        },
+        {
+          "sum": 15.618711347119012,
+          "count": 326
+        }
+      ],
+      "normalization": [
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 1.6787119420097333e-05
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 1.832860527250846e-18
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 1.1727621347770318e-16
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 7.498806978426208e-15
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 4.78170411908223e-13
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 3.015980704274937e-11
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 1.8223956921748806e-09
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 1.863061662027233e-14
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 1.4904493296217863e-13
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 5.030266487473529e-13
+        },
+        {
+          "histories": 12720,
+          "unseen_histories": 7718,
+          "max_normalization_error": 2.220446049250313e-16,
+          "minimum_probability": 8.69230049035426e-13
+        }
+      ],
+      "criteria": {
+        "new_family_selected": true,
+        "check_gain_at_least_005_bits": true,
+        "block_bootstrap_lower_positive": true
+      },
+      "decision": "PASS"
+    }
+  },
+  "cipher_phase_allowed": true,
+  "candidate_models_replayed": 22,
+  "normalized_histories": 279840,
+  "maximum_numeric_delta": 2.842170943040401e-14,
+  "cipher_files_read": false,
+  "seconds": 11.14555583299807,
+  "scope": [
+    "Independent raw string counts and scalar conditional probabilities",
+    "All eleven source-development candidates in each language and fixed winner selection",
+    "Every conditional row positive and normalized; recursive families back off exactly on unseen histories",
+    "Only winner and baseline source-check scores, paired character gains and weighted block bootstrap",
+    "Source-input hashes and local Git source/manifest/auditor consistency"
+  ],
+  "not_established": [
+    "No cipher evaluation, plaintext recovery, or historical mechanism audited here",
+    "Within-work source blocks do not establish cross-author generalization",
+    "Block bootstrap does not constitute independent-document uncertainty",
+    "Local Git checks do not prove publication timing or process isolation"
+  ]
+}

@@ -1,0 +1,653 @@
+{
+  "experiment": "NAIBBE-003",
+  "stage": "source_only_selection",
+  "source_commit": "9cba3ff7a83333c850de52353a5aed2386d4a07f",
+  "source_hashes": {
+    "scripts/select_naibbe003_source.py": "f55fcc88b3728f25947f08d489873dacc7359a1b81567f7005f125cda69fce94",
+    "src/voynich/recursive_character_lm.py": "e156fd43b32b37324caed81dfc2e2fe7423a4e3db4678bde1801f98d76a0e2aa",
+    "src/voynich/naibbe_key_search.py": "3d6c6a2b891cdd127a859867a7da3bbf42f1c4c9346470bfae03f9f994db9713",
+    "docs/experiments/NAIBBE-003.md": "cab9ed318513d19b9285d072609414212640d819044e6075fa4d719af63d4c94"
+  },
+  "manifest_sha256": "a6f88fda38bbb0f284e1f6600224d640a9417e0c1199770b5d9813f84c2f64be",
+  "alphabet": "abcdefghilmnopqrstuvxyz",
+  "ranges": {
+    "train": [
+      0,
+      220000
+    ],
+    "dev": [
+      220000,
+      268000
+    ],
+    "check": [
+      268000,
+      317326
+    ]
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.3"
+  },
+  "languages": {
+    "latin": {
+      "source": {
+        "characters": 317326,
+        "path": "data/processed/naibbe001/latin_lm.txt",
+        "sha256": "ccd400154a6697a6b40ed75b0038562de1258a7c12f34d851fd3603c85ebed63"
+      },
+      "candidates": [
+        {
+          "config": {
+            "family": "legacy",
+            "parameter": null
+          },
+          "dev_bits_per_character": 2.6648114877283255
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 0.25
+          },
+          "dev_bits_per_character": 2.741186227186757
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 1.0
+          },
+          "dev_bits_per_character": 2.686388389358642
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 4.0
+          },
+          "dev_bits_per_character": 2.6433849091710497
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 16.0
+          },
+          "dev_bits_per_character": 2.62842877217395
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 64.0
+          },
+          "dev_bits_per_character": 2.669606369579467
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 256.0
+          },
+          "dev_bits_per_character": 2.7928704667336044
+        },
+        {
+          "config": {
+            "family": "absolute_discount",
+            "parameter": 0.25
+          },
+          "dev_bits_per_character": 2.673263201416589
+        },
+        {
+          "config": {
+            "family": "absolute_discount",
+            "parameter": 0.5
+          },
+          "dev_bits_per_character": 2.6520070601657766
+        },
+        {
+          "config": {
+            "family": "absolute_discount",
+            "parameter": 0.75
+          },
+          "dev_bits_per_character": 2.6480507249852865
+        },
+        {
+          "config": {
+            "family": "absolute_discount",
+            "parameter": 0.9
+          },
+          "dev_bits_per_character": 2.6533475731324705
+        }
+      ],
+      "selected_index": 4,
+      "selected_config": {
+        "family": "dirichlet",
+        "parameter": 16.0
+      },
+      "check": {
+        "characters": 49326,
+        "legacy_bits_per_character": 2.6466065989577356,
+        "selected_bits_per_character": 2.6162863952053126,
+        "gain_bits_per_character": 0.03032020375242344,
+        "gain_ci95": [
+          0.025442918033139802,
+          0.03515509110436677
+        ],
+        "gain_blocks": [
+          {
+            "sum": 28.93355697874421,
+            "count": 1000
+          },
+          {
+            "sum": 31.324836412102016,
+            "count": 1000
+          },
+          {
+            "sum": 52.479334146547814,
+            "count": 1000
+          },
+          {
+            "sum": 18.919891855413866,
+            "count": 1000
+          },
+          {
+            "sum": 47.28216562372728,
+            "count": 1000
+          },
+          {
+            "sum": 31.198057197759923,
+            "count": 1000
+          },
+          {
+            "sum": 21.079185155791095,
+            "count": 1000
+          },
+          {
+            "sum": -20.87245172882252,
+            "count": 1000
+          },
+          {
+            "sum": 24.083730740469193,
+            "count": 1000
+          },
+          {
+            "sum": 12.46490427917585,
+            "count": 1000
+          },
+          {
+            "sum": 29.94050846795898,
+            "count": 1000
+          },
+          {
+            "sum": 30.942313446992372,
+            "count": 1000
+          },
+          {
+            "sum": 49.55483153034047,
+            "count": 1000
+          },
+          {
+            "sum": 59.51137694855268,
+            "count": 1000
+          },
+          {
+            "sum": 33.22079278005367,
+            "count": 1000
+          },
+          {
+            "sum": 25.212470214437253,
+            "count": 1000
+          },
+          {
+            "sum": 54.916197598329944,
+            "count": 1000
+          },
+          {
+            "sum": 57.54272249049404,
+            "count": 1000
+          },
+          {
+            "sum": 48.224865512277646,
+            "count": 1000
+          },
+          {
+            "sum": 27.913422838488223,
+            "count": 1000
+          },
+          {
+            "sum": 22.049610903417076,
+            "count": 1000
+          },
+          {
+            "sum": 32.15214407277364,
+            "count": 1000
+          },
+          {
+            "sum": 43.072632731827255,
+            "count": 1000
+          },
+          {
+            "sum": 49.82401968272409,
+            "count": 1000
+          },
+          {
+            "sum": 28.31519936704569,
+            "count": 1000
+          },
+          {
+            "sum": 11.581167528436254,
+            "count": 1000
+          },
+          {
+            "sum": 44.78302982713745,
+            "count": 1000
+          },
+          {
+            "sum": 51.888289016448034,
+            "count": 1000
+          },
+          {
+            "sum": 31.17635659486679,
+            "count": 1000
+          },
+          {
+            "sum": 39.382652238920684,
+            "count": 1000
+          },
+          {
+            "sum": 41.00785676490136,
+            "count": 1000
+          },
+          {
+            "sum": 58.40544156969507,
+            "count": 1000
+          },
+          {
+            "sum": 11.88556580066849,
+            "count": 1000
+          },
+          {
+            "sum": 41.259883937083615,
+            "count": 1000
+          },
+          {
+            "sum": 26.90372168379779,
+            "count": 1000
+          },
+          {
+            "sum": 44.43741742173232,
+            "count": 1000
+          },
+          {
+            "sum": 21.608777290251215,
+            "count": 1000
+          },
+          {
+            "sum": 14.929627497408209,
+            "count": 1000
+          },
+          {
+            "sum": 31.087163862234213,
+            "count": 1000
+          },
+          {
+            "sum": 0.08679176304867298,
+            "count": 1000
+          },
+          {
+            "sum": -2.6296930000729333,
+            "count": 1000
+          },
+          {
+            "sum": 26.195531036779613,
+            "count": 1000
+          },
+          {
+            "sum": 39.26430670024236,
+            "count": 1000
+          },
+          {
+            "sum": 15.404939024388266,
+            "count": 1000
+          },
+          {
+            "sum": 15.692814892054038,
+            "count": 1000
+          },
+          {
+            "sum": 10.82167732957395,
+            "count": 1000
+          },
+          {
+            "sum": 6.611012139204329,
+            "count": 1000
+          },
+          {
+            "sum": 36.713982040852315,
+            "count": 1000
+          },
+          {
+            "sum": 25.31183775525549,
+            "count": 1000
+          },
+          {
+            "sum": 12.477900330509376,
+            "count": 326
+          }
+        ]
+      },
+      "criteria": {
+        "new_family_selected": true,
+        "check_gain_at_least_005_bits": true,
+        "block_bootstrap_lower_positive": true
+      },
+      "decision": "PASS"
+    },
+    "english": {
+      "source": {
+        "characters": 317326,
+        "path": "data/processed/naibbe001/english_lm.txt",
+        "sha256": "a2df39ce27fe8117a20e39be337d534fd5b0c5939e40d93d7f0ea19fc1d41134"
+      },
+      "candidates": [
+        {
+          "config": {
+            "family": "legacy",
+            "parameter": null
+          },
+          "dev_bits_per_character": 2.5677289050330794
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 0.25
+          },
+          "dev_bits_per_character": 2.6857144440360794
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 1.0
+          },
+          "dev_bits_per_character": 2.611272350242672
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 4.0
+          },
+          "dev_bits_per_character": 2.555931515349597
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 16.0
+          },
+          "dev_bits_per_character": 2.54291533359103
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 64.0
+          },
+          "dev_bits_per_character": 2.604705531157059
+        },
+        {
+          "config": {
+            "family": "dirichlet",
+            "parameter": 256.0
+          },
+          "dev_bits_per_character": 2.7581011321746653
+        },
+        {
+          "config": {
+            "family": "absolute_discount",
+            "parameter": 0.25
+          },
+          "dev_bits_per_character": 2.5964586245406487
+        },
+        {
+          "config": {
+            "family": "absolute_discount",
+            "parameter": 0.5
+          },
+          "dev_bits_per_character": 2.566963291697531
+        },
+        {
+          "config": {
+            "family": "absolute_discount",
+            "parameter": 0.75
+          },
+          "dev_bits_per_character": 2.5606681703469674
+        },
+        {
+          "config": {
+            "family": "absolute_discount",
+            "parameter": 0.9
+          },
+          "dev_bits_per_character": 2.5668015361087466
+        }
+      ],
+      "selected_index": 4,
+      "selected_config": {
+        "family": "dirichlet",
+        "parameter": 16.0
+      },
+      "check": {
+        "characters": 49326,
+        "legacy_bits_per_character": 2.5419031136158177,
+        "selected_bits_per_character": 2.5143853951170367,
+        "gain_bits_per_character": 0.027517718498781218,
+        "gain_ci95": [
+          0.02087506265969158,
+          0.033393638507068106
+        ],
+        "gain_blocks": [
+          {
+            "sum": 20.599966460571586,
+            "count": 1000
+          },
+          {
+            "sum": 39.81388662242766,
+            "count": 1000
+          },
+          {
+            "sum": 67.68038186337117,
+            "count": 1000
+          },
+          {
+            "sum": 40.75649425662977,
+            "count": 1000
+          },
+          {
+            "sum": 68.54493379516927,
+            "count": 1000
+          },
+          {
+            "sum": 46.51301019561153,
+            "count": 1000
+          },
+          {
+            "sum": -22.142049442436164,
+            "count": 1000
+          },
+          {
+            "sum": 11.039142849215715,
+            "count": 1000
+          },
+          {
+            "sum": 23.2925202507005,
+            "count": 1000
+          },
+          {
+            "sum": 56.01754207798601,
+            "count": 1000
+          },
+          {
+            "sum": 34.27907559432691,
+            "count": 1000
+          },
+          {
+            "sum": -17.330964542654527,
+            "count": 1000
+          },
+          {
+            "sum": 13.205255355422265,
+            "count": 1000
+          },
+          {
+            "sum": 22.26471706481138,
+            "count": 1000
+          },
+          {
+            "sum": -21.449549894992042,
+            "count": 1000
+          },
+          {
+            "sum": 12.981332035085103,
+            "count": 1000
+          },
+          {
+            "sum": 1.1775369421543833,
+            "count": 1000
+          },
+          {
+            "sum": 27.729653956921332,
+            "count": 1000
+          },
+          {
+            "sum": 20.55851395876104,
+            "count": 1000
+          },
+          {
+            "sum": 45.192597584440016,
+            "count": 1000
+          },
+          {
+            "sum": 62.95766676379878,
+            "count": 1000
+          },
+          {
+            "sum": 12.377593481417298,
+            "count": 1000
+          },
+          {
+            "sum": 49.00927995459709,
+            "count": 1000
+          },
+          {
+            "sum": 11.836560092909956,
+            "count": 1000
+          },
+          {
+            "sum": 39.415183911289155,
+            "count": 1000
+          },
+          {
+            "sum": 47.41150050382009,
+            "count": 1000
+          },
+          {
+            "sum": 38.7492703185207,
+            "count": 1000
+          },
+          {
+            "sum": 33.23916529403361,
+            "count": 1000
+          },
+          {
+            "sum": 18.369086415209075,
+            "count": 1000
+          },
+          {
+            "sum": 45.81538663287146,
+            "count": 1000
+          },
+          {
+            "sum": -7.285955978901248,
+            "count": 1000
+          },
+          {
+            "sum": 0.7886938062218789,
+            "count": 1000
+          },
+          {
+            "sum": 7.717131759227052,
+            "count": 1000
+          },
+          {
+            "sum": -8.652754174972216,
+            "count": 1000
+          },
+          {
+            "sum": 17.854362849845025,
+            "count": 1000
+          },
+          {
+            "sum": 36.6602756236767,
+            "count": 1000
+          },
+          {
+            "sum": -6.053279904813591,
+            "count": 1000
+          },
+          {
+            "sum": 61.8228278577229,
+            "count": 1000
+          },
+          {
+            "sum": 43.101439785865296,
+            "count": 1000
+          },
+          {
+            "sum": 24.002579443837732,
+            "count": 1000
+          },
+          {
+            "sum": 42.429608195639595,
+            "count": 1000
+          },
+          {
+            "sum": 28.9224393362854,
+            "count": 1000
+          },
+          {
+            "sum": 5.806704461953402,
+            "count": 1000
+          },
+          {
+            "sum": 61.650084383885144,
+            "count": 1000
+          },
+          {
+            "sum": 41.81490716958439,
+            "count": 1000
+          },
+          {
+            "sum": 27.97742443672699,
+            "count": 1000
+          },
+          {
+            "sum": 44.74893747072447,
+            "count": 1000
+          },
+          {
+            "sum": 53.71434272937078,
+            "count": 1000
+          },
+          {
+            "sum": 14.795811719893587,
+            "count": 1000
+          },
+          {
+            "sum": 15.61871134711901,
+            "count": 326
+          }
+        ]
+      },
+      "criteria": {
+        "new_family_selected": true,
+        "check_gain_at_least_005_bits": true,
+        "block_bootstrap_lower_positive": true
+      },
+      "decision": "PASS"
+    }
+  },
+  "cipher_phase_allowed": true,
+  "seconds": 0.507168999996793
+}
