@@ -2577,3 +2577,10 @@ Added independent no-model `teacher0014_parser_audit.py`, which validates all sa
 
 
 **Follow-up source validation before fitting.** Full repository suite passed1,417tests+23subtests,8skipped in127.65s; durable log `outputs/validation/2026-09-27-bijective-followup-pytest.log`. Fourteen new-document local links, all changed Ruff/compile checks and diff hygiene pass. Independent reviewer confirms001reported fractions, failed recovery and narrowly justified admissible-witness interpretation. The original source, data and selected model freezes remain unchanged. No002empirical fit has run yet.
+
+
+## 2026-09-27 — NB-207: exact-neighborhood diagnostic keys frozen before new evaluation
+
+**Bounded fits.** After publishing001negative results and remotely verifying002source/protocol8cce2359f352155fe6ad489db9f45aafb1453570, ran all four registered A/paired-shuffle fits sequentially with unchanged priors/data. Akey1/key1shuffle/key2/key2shuffle completed in0.6450/0.5826/0.6977/0.5904seconds, all16restarts. They scored91,333/72,611/91,333/73,117neighbors across361/287/361/289complete253-pair sweeps. Each returned key has a complete pair-local certificate at the declared tolerance; no global certificate. Correctness is not inferred from that certificate. Selected objective3356.3000/4102.3912/3397.7778/4160.1787bits; both positives match the previously exposed literal-gold fit score, but decoded metrics have not been evaluated in this follow-up. No currentfit reads answer files or originalfound models. Source/fit hashes, fulltraces and actual185-bit channel codes are preserved. No paid use.
+
+**Next state.** Freeze/push/verify the four keys before002evaluation and independent scalar replay. This is an adaptive same-data diagnostic with a narrower hypothesis family, not fresh confirmation orBunit recovery. An isolated batched variable-unit likelihood kernel is being derived/tested on artificial fixtures in parallel to make later Bneighborhood search practical; it has no empirical benchmark result and changes none of the current frozen code.
