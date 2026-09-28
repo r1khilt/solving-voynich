@@ -1,0 +1,1103 @@
+{
+  "alphabet": "abcdefghiklmnopqrstuxyz",
+  "created_utc": "2026-09-28T06:01:11.065420+00:00",
+  "duplicate_screen_window": 64,
+  "exact_overlap_screen": [
+    {
+      "first": "caesar",
+      "first_positions": 0,
+      "second": "cicero",
+      "second_positions": 0,
+      "shared_unique_windows": 0,
+      "window": 64
+    },
+    {
+      "first": "caesar",
+      "first_positions": 0,
+      "second": "virgil",
+      "second_positions": 0,
+      "shared_unique_windows": 0,
+      "window": 64
+    },
+    {
+      "first": "cicero",
+      "first_positions": 0,
+      "second": "virgil",
+      "second_positions": 0,
+      "shared_unique_windows": 0,
+      "window": 64
+    }
+  ],
+  "final_authors_downloaded": false,
+  "normalization": "NFKD; lower; ae/oe ligatures; remove combining marks; j->i,v->u; omit spaces; reject unknown letters; remove square bracket spans and entire numeric/mixed tokens",
+  "paid_cost_usd": 0,
+  "prefix_cap": 50000,
+  "schema_version": 1,
+  "source_code_sha256": "97976ec0adfa716a953e4f7f92bba3abd17cbb0d0de12370f82c5477246a897b",
+  "sources": {
+    "caesar": {
+      "advertised_text_url": "https://www.gutenberg.org/ebooks/218.txt.utf-8",
+      "author": "Julius Caesar",
+      "body_spans": [
+        {
+          "normalized_end": 47364,
+          "normalized_start": 0,
+          "raw_byte_end": 59945,
+          "raw_byte_start": 1111,
+          "raw_sha256": "490bd64079d8956a23d1e9dfb108068020c541d286e24342c3f428cf711b94aa"
+        },
+        {
+          "normalized_end": 72497,
+          "normalized_start": 47364,
+          "raw_byte_end": 90620,
+          "raw_byte_start": 60001,
+          "raw_sha256": "0556c01e5491a6c2109adbd7721536380a1456e3b9ab3ce72af90067c08e737f"
+        },
+        {
+          "normalized_end": 94323,
+          "normalized_start": 72497,
+          "raw_byte_end": 117467,
+          "raw_byte_start": 90675,
+          "raw_sha256": "8d465b77825425c803c984da038f2ac22f81d42cee78422dae804c44b369c3f8"
+        },
+        {
+          "normalized_end": 121204,
+          "normalized_start": 94323,
+          "raw_byte_end": 150973,
+          "raw_byte_start": 117522,
+          "raw_sha256": "93f593f1c5bc872d269ca8af165d6def9f2bbcb62290d9cf99af728051756eac"
+        }
+      ],
+      "catalogue_url": "https://www.gutenberg.org/ebooks/218",
+      "derived_path": "data/processed/blind-channel-development/caesar.json",
+      "derived_sha256": "971752aacdfc532b65b2d713ef6ef36b4c2a6299c33487b0e8b0d4e68e841749",
+      "edition": "Pinned PG electronic edition; source print edition/editor not established",
+      "eligible_characters": 121204,
+      "excluded_counts": {
+        "square_bracket_span": 69
+      },
+      "excluded_spans": [
+        {
+          "raw_byte_end": 2415,
+          "raw_byte_start": 1903,
+          "reason": "square_bracket_span",
+          "sha256": "94b1c24d2688dac4899da1ef54f0e8bcaa5066115e77863ccbf59ce500f29edb"
+        },
+        {
+          "raw_byte_end": 2508,
+          "raw_byte_start": 2501,
+          "reason": "square_bracket_span",
+          "sha256": "ed39fd1a358c4b1066460027ec6886f325150982be7606e899d1187ea27bdfc3"
+        },
+        {
+          "raw_byte_end": 10634,
+          "raw_byte_start": 10625,
+          "reason": "square_bracket_span",
+          "sha256": "674a339a66665420964fcc7f272a04cac1480ddae601bc98f91c014c91779753"
+        },
+        {
+          "raw_byte_end": 11213,
+          "raw_byte_start": 11206,
+          "reason": "square_bracket_span",
+          "sha256": "7d99201f1573b4ad5d987decf0b4e515166b485aa1448ccb164916e5694d6a58"
+        },
+        {
+          "raw_byte_end": 11288,
+          "raw_byte_start": 11283,
+          "reason": "square_bracket_span",
+          "sha256": "0b8bc66266343760891a03e381bd08231adef72b33caadfb3541fa47c68266db"
+        },
+        {
+          "raw_byte_end": 16400,
+          "raw_byte_start": 16333,
+          "reason": "square_bracket_span",
+          "sha256": "90b031766cc020152d312b390c8d73c373ac92a6273fb759c2443fb3f5dc2d3e"
+        },
+        {
+          "raw_byte_end": 17311,
+          "raw_byte_start": 17258,
+          "reason": "square_bracket_span",
+          "sha256": "d9a55398dfa0bcef9f2293e7643a268d9890013d3e52dbac6aa1892b92ad2268"
+        },
+        {
+          "raw_byte_end": 17734,
+          "raw_byte_start": 17725,
+          "reason": "square_bracket_span",
+          "sha256": "8eecba40531952dabb12894c465183ea79b97b376a4042177eb57252c039c75d"
+        },
+        {
+          "raw_byte_end": 20741,
+          "raw_byte_start": 20731,
+          "reason": "square_bracket_span",
+          "sha256": "b8abda48a0cc4c53be2993754f5eb640244ba968c5344150b6df01f5c9f06cfa"
+        },
+        {
+          "raw_byte_end": 22892,
+          "raw_byte_start": 22885,
+          "reason": "square_bracket_span",
+          "sha256": "462784d94f8aa01983733b2df4c8bc85b56dd5ddce0d69fe6be5d40728095591"
+        },
+        {
+          "raw_byte_end": 24082,
+          "raw_byte_start": 24074,
+          "reason": "square_bracket_span",
+          "sha256": "10872d80573e5b72a0794ae69ee4f3eb7ec90c8bb04611e08ae9026d8de31f75"
+        },
+        {
+          "raw_byte_end": 25893,
+          "raw_byte_start": 25885,
+          "reason": "square_bracket_span",
+          "sha256": "ba6af9edb0c97a02522a908e5246b8c2c4f90e1fd676ff83824c81ebfb149db1"
+        },
+        {
+          "raw_byte_end": 26089,
+          "raw_byte_start": 26085,
+          "reason": "square_bracket_span",
+          "sha256": "74457cd50607e247ab26fa20e2c9f8895141e03fe52c0d82f7709830e4793f06"
+        },
+        {
+          "raw_byte_end": 26255,
+          "raw_byte_start": 26245,
+          "reason": "square_bracket_span",
+          "sha256": "5aea002fcd51ed3beb20b8016fb11550ace2e4c6a9bb815648905462f7c256f6"
+        },
+        {
+          "raw_byte_end": 27201,
+          "raw_byte_start": 27160,
+          "reason": "square_bracket_span",
+          "sha256": "d72a68cfa594dcd2cc33a144f301489e962df2c4bda1226a51e6f1be45c9c1b4"
+        },
+        {
+          "raw_byte_end": 27333,
+          "raw_byte_start": 27317,
+          "reason": "square_bracket_span",
+          "sha256": "c735fddb0770ae9096a8b3ee2445f2d48bb833e09d3a298ef431417c84587701"
+        },
+        {
+          "raw_byte_end": 27985,
+          "raw_byte_start": 27967,
+          "reason": "square_bracket_span",
+          "sha256": "c27af628c736dbea514d31504f24a36bd9603c5bc87473b33dbad7b9ef05b420"
+        },
+        {
+          "raw_byte_end": 29011,
+          "raw_byte_start": 29007,
+          "reason": "square_bracket_span",
+          "sha256": "6bc1b6edb2cb97d1b0cddf7f780394586792821f8d49f51d24b40aaed8848598"
+        },
+        {
+          "raw_byte_end": 29565,
+          "raw_byte_start": 29559,
+          "reason": "square_bracket_span",
+          "sha256": "7c4677ae18bf760ab875b3c1623c6ac24056ad2a42eeb303efb075088fafc840"
+        },
+        {
+          "raw_byte_end": 29613,
+          "raw_byte_start": 29592,
+          "reason": "square_bracket_span",
+          "sha256": "4cbd28273c91194df3d9b214e7d84db2adbe3b471c39030a0dc3de7f4bfcb4bf"
+        },
+        {
+          "raw_byte_end": 30204,
+          "raw_byte_start": 30196,
+          "reason": "square_bracket_span",
+          "sha256": "1c87f49515c7202757b8272a0833de716873a7703aa6a0706c9526af13cdb3c1"
+        },
+        {
+          "raw_byte_end": 35521,
+          "raw_byte_start": 35517,
+          "reason": "square_bracket_span",
+          "sha256": "982898e7f85b2254122f40e9338c824b4cd73bd436f25aed42fb6323c0354901"
+        },
+        {
+          "raw_byte_end": 36110,
+          "raw_byte_start": 36044,
+          "reason": "square_bracket_span",
+          "sha256": "a5458fb2c4703bbe880c3cd3e392c51392601f0e3730f078e14cab246aac5b62"
+        },
+        {
+          "raw_byte_end": 37621,
+          "raw_byte_start": 37617,
+          "reason": "square_bracket_span",
+          "sha256": "85cc8afb107ea4abed67cfe10ab6a205b477a1c3bd4c44c59299639809148f8e"
+        },
+        {
+          "raw_byte_end": 39922,
+          "raw_byte_start": 39879,
+          "reason": "square_bracket_span",
+          "sha256": "fb40eea2c33b76b401670bf6441f3ff9cdbdb1197aad897f25a44da303f8bc09"
+        },
+        {
+          "raw_byte_end": 40183,
+          "raw_byte_start": 40175,
+          "reason": "square_bracket_span",
+          "sha256": "e32958d6dac99cc16b04f3134feeb7e474bffe346044d03188a22fbced077590"
+        },
+        {
+          "raw_byte_end": 43006,
+          "raw_byte_start": 42933,
+          "reason": "square_bracket_span",
+          "sha256": "14df75af1e801bfdc4e58d9140130f1efb8adf7bf72c71f4f82653f8ee42e9f8"
+        },
+        {
+          "raw_byte_end": 55308,
+          "raw_byte_start": 55243,
+          "reason": "square_bracket_span",
+          "sha256": "f2536b0f88f38e7d527a5da817a62c487dd767c2db01a196bcfcd7ade12d377b"
+        },
+        {
+          "raw_byte_end": 60054,
+          "raw_byte_start": 60041,
+          "reason": "square_bracket_span",
+          "sha256": "cf32f881bd47c663924415357680083a7bd397b2c0c5b36af993ca4d5b743967"
+        },
+        {
+          "raw_byte_end": 64458,
+          "raw_byte_start": 64451,
+          "reason": "square_bracket_span",
+          "sha256": "3f096ba5c0eecd9da7f1ff01e49729913403c59da534b7aac511ea7b2c8ae476"
+        },
+        {
+          "raw_byte_end": 68502,
+          "raw_byte_start": 68494,
+          "reason": "square_bracket_span",
+          "sha256": "e3085ce69d8e46c7f19047beb902b66423a571cb422437a74747683e3cf1eb6a"
+        },
+        {
+          "raw_byte_end": 71012,
+          "raw_byte_start": 71002,
+          "reason": "square_bracket_span",
+          "sha256": "182b2474a7fada6665c36587505bbfcc81a2afca122274486bb4c84c445e8bd0"
+        },
+        {
+          "raw_byte_end": 75501,
+          "raw_byte_start": 75497,
+          "reason": "square_bracket_span",
+          "sha256": "57d4edcfc0b82040e443c0e038299954ced6963829760545ca716f4f1221c888"
+        },
+        {
+          "raw_byte_end": 76916,
+          "raw_byte_start": 76912,
+          "reason": "square_bracket_span",
+          "sha256": "35fc1050ed7841f3200516384a3b393e969187b46bb1d74bcbadf11e03806408"
+        },
+        {
+          "raw_byte_end": 77511,
+          "raw_byte_start": 77484,
+          "reason": "square_bracket_span",
+          "sha256": "b2baa8ed8454e1a499750787eac2d59caf4bb6de7ee904e0b1d8c778ecb6ac3b"
+        },
+        {
+          "raw_byte_end": 78529,
+          "raw_byte_start": 78525,
+          "reason": "square_bracket_span",
+          "sha256": "982898e7f85b2254122f40e9338c824b4cd73bd436f25aed42fb6323c0354901"
+        },
+        {
+          "raw_byte_end": 79332,
+          "raw_byte_start": 79312,
+          "reason": "square_bracket_span",
+          "sha256": "ccf8a791f7bf0d76d3bc5968a6412cc6cf5c36fa1d08686a72825effe448a775"
+        },
+        {
+          "raw_byte_end": 80662,
+          "raw_byte_start": 80658,
+          "reason": "square_bracket_span",
+          "sha256": "74457cd50607e247ab26fa20e2c9f8895141e03fe52c0d82f7709830e4793f06"
+        },
+        {
+          "raw_byte_end": 81526,
+          "raw_byte_start": 81518,
+          "reason": "square_bracket_span",
+          "sha256": "adb009739177eb4ee8017b5c868603b23ea72dcb864429faace47c7da0030468"
+        },
+        {
+          "raw_byte_end": 82378,
+          "raw_byte_start": 82372,
+          "reason": "square_bracket_span",
+          "sha256": "6113f6ed6c0eaa237762547884736446366b4b9cd1f781307abde2d45a2be6ea"
+        },
+        {
+          "raw_byte_end": 82611,
+          "raw_byte_start": 82606,
+          "reason": "square_bracket_span",
+          "sha256": "9f7f3af176fbcce7b5beeb1769b5912e91e8a42527ab9a3785eef2719f06cd64"
+        },
+        {
+          "raw_byte_end": 86172,
+          "raw_byte_start": 86162,
+          "reason": "square_bracket_span",
+          "sha256": "6c0916ce7f4107b2759982eda4961c07d4d2dd0010775b0b96cce13e469ff36a"
+        },
+        {
+          "raw_byte_end": 87026,
+          "raw_byte_start": 87019,
+          "reason": "square_bracket_span",
+          "sha256": "13b69f9247e90c7c0eb1fff741a8284da9d6226b0d8b0cb3eec09fe8c6d537e5"
+        },
+        {
+          "raw_byte_end": 91618,
+          "raw_byte_start": 91604,
+          "reason": "square_bracket_span",
+          "sha256": "3ec31a73df181c168ce8c3cbe74008f710dac0e345b56ba9d2018bc069cb0256"
+        },
+        {
+          "raw_byte_end": 93479,
+          "raw_byte_start": 93472,
+          "reason": "square_bracket_span",
+          "sha256": "02f871fb575b303d4e8cb58f8b1dfd82427db676219cdd41926f6df1fae637f6"
+        },
+        {
+          "raw_byte_end": 95812,
+          "raw_byte_start": 95798,
+          "reason": "square_bracket_span",
+          "sha256": "e7c54363a287d64a6a41971978647a671bd70932f5be3d943fcce102a70bae68"
+        },
+        {
+          "raw_byte_end": 96185,
+          "raw_byte_start": 96119,
+          "reason": "square_bracket_span",
+          "sha256": "147c36d1741aedc1aeb95b9a8553a784a68e5117155a5dff8cc3c26154ba0db9"
+        },
+        {
+          "raw_byte_end": 98194,
+          "raw_byte_start": 98177,
+          "reason": "square_bracket_span",
+          "sha256": "66a62461eb9989e9a7dcc203d13a8622509dc886b95213798c5c1c716c91d7a9"
+        },
+        {
+          "raw_byte_end": 98376,
+          "raw_byte_start": 98257,
+          "reason": "square_bracket_span",
+          "sha256": "8e0f4ccc73b730ef174b7e91060e35d3bde428edff2d5ef9fb062e9e27063162"
+        },
+        {
+          "raw_byte_end": 98840,
+          "raw_byte_start": 98834,
+          "reason": "square_bracket_span",
+          "sha256": "3d16711c02b05fff45b129eabca0ebeeae652179890f3b390274708690d499ab"
+        },
+        {
+          "raw_byte_end": 101061,
+          "raw_byte_start": 101056,
+          "reason": "square_bracket_span",
+          "sha256": "d625be6166d7dce604daf917102964de0c641d7958e574b216f29b6371453ec8"
+        },
+        {
+          "raw_byte_end": 102316,
+          "raw_byte_start": 102311,
+          "reason": "square_bracket_span",
+          "sha256": "8729589c2810ad4eb57edc93832d364505c0807f1d447239d46c7aab7dd40604"
+        },
+        {
+          "raw_byte_end": 102978,
+          "raw_byte_start": 102949,
+          "reason": "square_bracket_span",
+          "sha256": "8c46bb3b0bd123dc8220ec9cb32aa4dacc4f5af4488a44feaf10ebd32ff1239d"
+        },
+        {
+          "raw_byte_end": 106215,
+          "raw_byte_start": 106196,
+          "reason": "square_bracket_span",
+          "sha256": "1bafef57ccea5e6fea23d7fee7657edf4257b2641ff58a3c651da4e4e614cb82"
+        },
+        {
+          "raw_byte_end": 109378,
+          "raw_byte_start": 109372,
+          "reason": "square_bracket_span",
+          "sha256": "2a3c84932d91dd0724934d6b337abcae5aa8a023a1492138550959bc4c85e75b"
+        },
+        {
+          "raw_byte_end": 109448,
+          "raw_byte_start": 109400,
+          "reason": "square_bracket_span",
+          "sha256": "582305a729d858ffb991c13101158173d5e01db6ad1beb6dc6f126cf9c912097"
+        },
+        {
+          "raw_byte_end": 109485,
+          "raw_byte_start": 109473,
+          "reason": "square_bracket_span",
+          "sha256": "2a5f7cb8b43346b73b79d46b7490799235a67b8afc5c985f1f25ec9378905933"
+        },
+        {
+          "raw_byte_end": 112404,
+          "raw_byte_start": 112399,
+          "reason": "square_bracket_span",
+          "sha256": "2e23e5ee1e92fd36d9628b668e3b2a780ff2d53e02785342b62666fc80b777f7"
+        },
+        {
+          "raw_byte_end": 117647,
+          "raw_byte_start": 117642,
+          "reason": "square_bracket_span",
+          "sha256": "2e23e5ee1e92fd36d9628b668e3b2a780ff2d53e02785342b62666fc80b777f7"
+        },
+        {
+          "raw_byte_end": 120192,
+          "raw_byte_start": 120186,
+          "reason": "square_bracket_span",
+          "sha256": "0515585fff16bea93fc79979a1a57bfcdcb886d398024c51bfda0c7917e4e5a9"
+        },
+        {
+          "raw_byte_end": 122529,
+          "raw_byte_start": 122524,
+          "reason": "square_bracket_span",
+          "sha256": "d1c1940aa47cc42117f0f18de2f6f807f58586b6c1b918b97bacbcccca402105"
+        },
+        {
+          "raw_byte_end": 123243,
+          "raw_byte_start": 123237,
+          "reason": "square_bracket_span",
+          "sha256": "38a2103ba3d59cd8d36df23925e616a939691683168a2a03a88ad3532f37017e"
+        },
+        {
+          "raw_byte_end": 125218,
+          "raw_byte_start": 124555,
+          "reason": "square_bracket_span",
+          "sha256": "2d166590cb34d39b8bce70a9277c26f8838d877ffdeae32cf60d6ae53183faeb"
+        },
+        {
+          "raw_byte_end": 125460,
+          "raw_byte_start": 125451,
+          "reason": "square_bracket_span",
+          "sha256": "918928daebf367726154c24e13126f99034c2cebe6c080ce1eaafefe2e86bf67"
+        },
+        {
+          "raw_byte_end": 131240,
+          "raw_byte_start": 131236,
+          "reason": "square_bracket_span",
+          "sha256": "6c6405e238e4fb64c610d5d524dc708a41d9d44c105713a4efdf439a2c99909c"
+        },
+        {
+          "raw_byte_end": 142646,
+          "raw_byte_start": 142642,
+          "reason": "square_bracket_span",
+          "sha256": "3a9ae1f1fdf69b6d675c6236d34545eacdac90603845cb472d25260e7052a1af"
+        },
+        {
+          "raw_byte_end": 143776,
+          "raw_byte_start": 143724,
+          "reason": "square_bracket_span",
+          "sha256": "667170fa988e129e00cf80d25fa73d85bc2315aad87bdf6b05bddd1567d510e9"
+        },
+        {
+          "raw_byte_end": 145601,
+          "raw_byte_start": 145594,
+          "reason": "square_bracket_span",
+          "sha256": "66886252fb357dfbedf0257cc744f82511ca4d11e9367a31c6a0c3340a567afb"
+        },
+        {
+          "raw_byte_end": 147509,
+          "raw_byte_start": 147492,
+          "reason": "square_bracket_span",
+          "sha256": "d02f8f5cc4697f78494a36e7d2d274683cc2ea227456fe83322c1cd6ee6b7680"
+        }
+      ],
+      "full_normalized_sha256": "15ff0de5e87ce15268e6332fe6662a5775d4d8de4060a2ca4fd166c86573ab7a",
+      "observed_codepoints": {
+        "\u00e6": 2,
+        "\u2014": 2,
+        "\u2018": 1,
+        "\u2019": 6,
+        "\u201c": 11,
+        "\u201d": 11,
+        "\u2022": 4,
+        "\u2122": 17
+      },
+      "raw_bytes": 169899,
+      "raw_path": "data/raw/external/voynich-units/voynich_decipherment_repro_bundle/decipherment_attack_v6/lm_corpora/caesar_la.txt",
+      "raw_sha256": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c",
+      "rights_screen": "PG catalogue public domain in USA; ebook license notice retained in raw",
+      "role": "P1",
+      "selected_characters": 50000,
+      "selected_text_sha256": "6e6a1e917b3dda8a8bb8c92c93225a07243c54419964cff8b85ae2262adb1a52"
+    },
+    "cicero": {
+      "advertised_text_url": "https://www.gutenberg.org/ebooks/226.txt.utf-8",
+      "author": "Marcus Tullius Cicero",
+      "body_spans": [
+        {
+          "normalized_end": 18435,
+          "normalized_start": 0,
+          "raw_byte_end": 26191,
+          "raw_byte_start": 3061,
+          "raw_sha256": "7cb56d047b2ad1b056d197ac0b3f0eadfd6b77a00d91329a0315c6d8fa69f9d9"
+        },
+        {
+          "normalized_end": 35839,
+          "normalized_start": 18435,
+          "raw_byte_end": 48618,
+          "raw_byte_start": 26854,
+          "raw_sha256": "f035dffb5b658949400c4b6aa5d0e36888100157a6d86030db13b2ac0642d4a0"
+        },
+        {
+          "normalized_end": 54065,
+          "normalized_start": 35839,
+          "raw_byte_end": 72127,
+          "raw_byte_start": 49466,
+          "raw_sha256": "8a55596dd43d5d582863d047a15926dcd0c73c5cf96f691329547f09c700a1af"
+        },
+        {
+          "normalized_end": 70778,
+          "normalized_start": 54065,
+          "raw_byte_end": 93486,
+          "raw_byte_start": 72831,
+          "raw_sha256": "c86710d8430b76a22fd733c80f73aba6f3f2d33f2d5144d6a3ee3f7b59b5c2d6"
+        }
+      ],
+      "catalogue_url": "https://www.gutenberg.org/ebooks/226",
+      "derived_path": "data/processed/blind-channel-development/cicero.json",
+      "derived_sha256": "a7657a08af8da8ec2c5f01a3bcd7b67f59e4dd20702ab35b7cd422b84ea26444",
+      "edition": "Pinned PG electronic edition; source print edition/editor not established",
+      "eligible_characters": 70778,
+      "excluded_counts": {
+        "numeric_or_mixed_token": 1,
+        "square_bracket_span": 38
+      },
+      "excluded_spans": [
+        {
+          "raw_byte_end": 4081,
+          "raw_byte_start": 4066,
+          "reason": "square_bracket_span",
+          "sha256": "e3ce46f0b263ef412ee4ab34548c3868968baefd227e1b579bfa0ebdadbfc8e1"
+        },
+        {
+          "raw_byte_end": 5239,
+          "raw_byte_start": 5233,
+          "reason": "square_bracket_span",
+          "sha256": "794bb571d5bc11a47fd97a1d9a790c5375ea42c843c6d7f7b18f02af1fc17395"
+        },
+        {
+          "raw_byte_end": 6482,
+          "raw_byte_start": 6476,
+          "reason": "square_bracket_span",
+          "sha256": "f252db52c5f73a065ae18ae18db5a8cda8b7d8924dccd4a7087d7508c1cc3de9"
+        },
+        {
+          "raw_byte_end": 9425,
+          "raw_byte_start": 9419,
+          "reason": "square_bracket_span",
+          "sha256": "b02aeb7001fd8467f8bc8c2f99cd40cd44bb4074a96e95bfad87778b9e9d8237"
+        },
+        {
+          "raw_byte_end": 10968,
+          "raw_byte_start": 10959,
+          "reason": "square_bracket_span",
+          "sha256": "f4e6ddbe50d5b3627a7623594d28870f2ad383ad1ae850e9b8f446f5064fe549"
+        },
+        {
+          "raw_byte_end": 13374,
+          "raw_byte_start": 13361,
+          "reason": "square_bracket_span",
+          "sha256": "08dcf7755aea924acfa7f65fc9134b203ab55ea4aa1db6ae3afb3aafef696d4a"
+        },
+        {
+          "raw_byte_end": 13403,
+          "raw_byte_start": 13386,
+          "reason": "square_bracket_span",
+          "sha256": "399e1baa8d253630ded92ab56cc48a1e2cf7c06972fe239f7e85ef1115bb8e6e"
+        },
+        {
+          "raw_byte_end": 13512,
+          "raw_byte_start": 13506,
+          "reason": "square_bracket_span",
+          "sha256": "794bb571d5bc11a47fd97a1d9a790c5375ea42c843c6d7f7b18f02af1fc17395"
+        },
+        {
+          "raw_byte_end": 13584,
+          "raw_byte_start": 13548,
+          "reason": "square_bracket_span",
+          "sha256": "fe43280b788f6e6af8668b226b7e95421c32363955647cb3ababeb7db20cd091"
+        },
+        {
+          "raw_byte_end": 14340,
+          "raw_byte_start": 14335,
+          "reason": "square_bracket_span",
+          "sha256": "e8d9b5e5323e472b0e60f70fe762467a39d170fc4a471cc966a21d20bb7c14ca"
+        },
+        {
+          "raw_byte_end": 16996,
+          "raw_byte_start": 16990,
+          "reason": "square_bracket_span",
+          "sha256": "00ef624e582c9d5be19404772f3f8af714070f822e5b8b88888244801efaf0d7"
+        },
+        {
+          "raw_byte_end": 19744,
+          "raw_byte_start": 19727,
+          "reason": "square_bracket_span",
+          "sha256": "c60beb4b8c62063b1e506f571a5362fca3c5e8d34f23f6e2f619fdc44eb25bb2"
+        },
+        {
+          "raw_byte_end": 23166,
+          "raw_byte_start": 23160,
+          "reason": "square_bracket_span",
+          "sha256": "6b99e1fb605f5e8a520b1b8ccbfea16f16c1be32054494a32506bb8d7883ba1a"
+        },
+        {
+          "raw_byte_end": 24980,
+          "raw_byte_start": 24976,
+          "reason": "square_bracket_span",
+          "sha256": "85cc8afb107ea4abed67cfe10ab6a205b477a1c3bd4c44c59299639809148f8e"
+        },
+        {
+          "raw_byte_end": 25920,
+          "raw_byte_start": 25914,
+          "reason": "square_bracket_span",
+          "sha256": "cb7168c4a2522dc76dd9916df2f92360d43c7a11be735f1f433735dd83dc615f"
+        },
+        {
+          "raw_byte_end": 26004,
+          "raw_byte_start": 25996,
+          "reason": "square_bracket_span",
+          "sha256": "59e6770e9e75203d8a6657d29a4f243e2ee5cc61c360b1512f066e2c31325ac6"
+        },
+        {
+          "raw_byte_end": 28737,
+          "raw_byte_start": 28685,
+          "reason": "square_bracket_span",
+          "sha256": "98da39b94b6f73b1a784eba96224fa788fa0611d863174b666bd3f9264412312"
+        },
+        {
+          "raw_byte_end": 28823,
+          "raw_byte_start": 28774,
+          "reason": "square_bracket_span",
+          "sha256": "958eccadce0c3501bf2c5a23aac7bec61cd24bcf9bf5e5217b2650c9a6ff9c70"
+        },
+        {
+          "raw_byte_end": 32082,
+          "raw_byte_start": 32074,
+          "reason": "square_bracket_span",
+          "sha256": "719f5c89ddc82b2aadb937f79c6e865145cd679d3f25807d865de158318ad40d"
+        },
+        {
+          "raw_byte_end": 32451,
+          "raw_byte_start": 32447,
+          "reason": "square_bracket_span",
+          "sha256": "0dd2fd97f472e14f7e2b6ea30f091969e41ffc660f6a0ad504bb0c8b7fe36d87"
+        },
+        {
+          "raw_byte_end": 35956,
+          "raw_byte_start": 35942,
+          "reason": "square_bracket_span",
+          "sha256": "6a14c96b65ae093b06a40633cbe5f31ca5be75fbe39f6b616d0490093c57da23"
+        },
+        {
+          "raw_byte_end": 36282,
+          "raw_byte_start": 36272,
+          "reason": "square_bracket_span",
+          "sha256": "755d7139afc066742426ec8972ab8635a9116cf78c852ee534bec7fdfe7f8d11"
+        },
+        {
+          "raw_byte_end": 40617,
+          "raw_byte_start": 40594,
+          "reason": "square_bracket_span",
+          "sha256": "dcde4d9325ce596ecb346ce70fcf59fc1e638c723867f744b925dbb15cc9e634"
+        },
+        {
+          "raw_byte_end": 46646,
+          "raw_byte_start": 46640,
+          "reason": "square_bracket_span",
+          "sha256": "e0e27448f630c9dbea2eed403e0cf2641c63242148c62041e5ccc932f5a4be95"
+        },
+        {
+          "raw_byte_end": 65831,
+          "raw_byte_start": 65812,
+          "reason": "square_bracket_span",
+          "sha256": "ff04fbbc2a53d7350901af49bdbefd1d15ccfdc11528dcf659d065598f6a6490"
+        },
+        {
+          "raw_byte_end": 66458,
+          "raw_byte_start": 66422,
+          "reason": "square_bracket_span",
+          "sha256": "f7bbfd528ceb94a1ebd78b7b5dce6749c84f4dad24dddd3b0d95e1bddfbcfa8f"
+        },
+        {
+          "raw_byte_end": 67366,
+          "raw_byte_start": 67358,
+          "reason": "square_bracket_span",
+          "sha256": "25c8598484196e0d4c5406301f30758a6eb723a2b9836dc50b6647ea3b41ca3d"
+        },
+        {
+          "raw_byte_end": 67672,
+          "raw_byte_start": 67656,
+          "reason": "square_bracket_span",
+          "sha256": "2ab4a6009a116d00a0bc9574962664b7fc5a71ca4141b39a0ef9b01aead975b2"
+        },
+        {
+          "raw_byte_end": 68346,
+          "raw_byte_start": 68336,
+          "reason": "square_bracket_span",
+          "sha256": "4da3e6edb09ae7e4220634023a54ec0b8ed4d88acf2a7b2c8d35d641f1f87fe1"
+        },
+        {
+          "raw_byte_end": 60246,
+          "raw_byte_start": 60244,
+          "reason": "numeric_or_mixed_token",
+          "sha256": "4aea5bdce2dadba8aacf1aa5a729deca5e26ab438d3cc86b49e185b5019db0d4"
+        },
+        {
+          "raw_byte_end": 73727,
+          "raw_byte_start": 73712,
+          "reason": "square_bracket_span",
+          "sha256": "23efd7c9c541d13ccd3fd7dbba72cd488a9b98cf785415fd7b6cda6dca5bebc6"
+        },
+        {
+          "raw_byte_end": 78165,
+          "raw_byte_start": 78141,
+          "reason": "square_bracket_span",
+          "sha256": "74e4dffe15fd062ab68e41aea456bff305b8b4c48edb02d8f85aced15d76066a"
+        },
+        {
+          "raw_byte_end": 86786,
+          "raw_byte_start": 86781,
+          "reason": "square_bracket_span",
+          "sha256": "e8d9b5e5323e472b0e60f70fe762467a39d170fc4a471cc966a21d20bb7c14ca"
+        },
+        {
+          "raw_byte_end": 87467,
+          "raw_byte_start": 87459,
+          "reason": "square_bracket_span",
+          "sha256": "648e01932f5bbcf3279ae71bb186b203396d9b7cb609cba9af103c95455eae64"
+        },
+        {
+          "raw_byte_end": 89584,
+          "raw_byte_start": 89579,
+          "reason": "square_bracket_span",
+          "sha256": "3a05f7fdc177922022b04f4452c0a113207ad0646783af1ea4018de4938edfa3"
+        },
+        {
+          "raw_byte_end": 90081,
+          "raw_byte_start": 90066,
+          "reason": "square_bracket_span",
+          "sha256": "0bfcb34729d6d84e7d9ba79ce26be1a5a7018d3505f34bf80261566bfb1740c3"
+        },
+        {
+          "raw_byte_end": 90326,
+          "raw_byte_start": 90320,
+          "reason": "square_bracket_span",
+          "sha256": "6b99e1fb605f5e8a520b1b8ccbfea16f16c1be32054494a32506bb8d7883ba1a"
+        },
+        {
+          "raw_byte_end": 90632,
+          "raw_byte_start": 90628,
+          "reason": "square_bracket_span",
+          "sha256": "6bc1b6edb2cb97d1b0cddf7f780394586792821f8d49f51d24b40aaed8848598"
+        },
+        {
+          "raw_byte_end": 91462,
+          "raw_byte_start": 91448,
+          "reason": "square_bracket_span",
+          "sha256": "eb9149b9cc0e4af6f42a6506a0458229e92a1eef14b52481282c7ef60b0740b9"
+        }
+      ],
+      "full_normalized_sha256": "504fcbc6f0160e075918af92ff33fb36485c4dff2bbc585b169cb2bdee69d3f5",
+      "observed_codepoints": {
+        "\u2014": 2,
+        "\u2018": 1,
+        "\u2019": 6,
+        "\u201c": 11,
+        "\u201d": 11,
+        "\u2022": 4,
+        "\u2122": 17
+      },
+      "raw_bytes": 112390,
+      "raw_path": "data/raw/blind-channel-development/pg226.txt",
+      "raw_sha256": "d35576eee076806a236f7f9edf8c1a07462a4102084e025076f6227d8847afdb",
+      "rights_screen": "PG catalogue public domain in USA; ebook license notice retained in raw",
+      "role": "D",
+      "selected_characters": 50000,
+      "selected_text_sha256": "c24cf9c39b32998bc0a7a5cb41d253264629a227f73a030912a967264b214e77"
+    },
+    "virgil": {
+      "advertised_text_url": "https://www.gutenberg.org/ebooks/227.txt.utf-8",
+      "author": "Virgil",
+      "body_spans": [
+        {
+          "normalized_end": 27839,
+          "normalized_start": 0,
+          "raw_byte_end": 37235,
+          "raw_byte_start": 862,
+          "raw_sha256": "47b3de25e5504109264e03cd93d57723085fa2713bde73352b7d3f36fc54a854"
+        },
+        {
+          "normalized_end": 56805,
+          "normalized_start": 27839,
+          "raw_byte_end": 76084,
+          "raw_byte_start": 37246,
+          "raw_sha256": "335819bce60aab7e75ae520e3291ee84802c4fb5ff5e1a603bf78a2d7bf3c4e8"
+        },
+        {
+          "normalized_end": 83353,
+          "normalized_start": 56805,
+          "raw_byte_end": 110597,
+          "raw_byte_start": 76096,
+          "raw_sha256": "28078817584ad10493ab659265f9ba978f67a859cff69b11e1e1dc7812936074"
+        },
+        {
+          "normalized_end": 109389,
+          "normalized_start": 83353,
+          "raw_byte_end": 144705,
+          "raw_byte_start": 110608,
+          "raw_sha256": "d41d02d7d534718133def45016145daed8d191a783c080e79570ddd40b278799"
+        },
+        {
+          "normalized_end": 141775,
+          "normalized_start": 109389,
+          "raw_byte_end": 186687,
+          "raw_byte_start": 144715,
+          "raw_sha256": "4a03e13313499f7414b78903de7c2eaa9143d7903e608e185230258febb8766a"
+        },
+        {
+          "normalized_end": 175102,
+          "normalized_start": 141775,
+          "raw_byte_end": 230365,
+          "raw_byte_start": 186698,
+          "raw_sha256": "c046e13cc7901860bc6bf1555863f8af181828410e0d42a56186e625d9726295"
+        },
+        {
+          "normalized_end": 205325,
+          "normalized_start": 175102,
+          "raw_byte_end": 269305,
+          "raw_byte_start": 230377,
+          "raw_sha256": "6a230be24d8c1fd800ab4cc847d6f9a7f471e2bf5b9e252471ae9fa2d65d834a"
+        },
+        {
+          "normalized_end": 232115,
+          "normalized_start": 205325,
+          "raw_byte_end": 304119,
+          "raw_byte_start": 269318,
+          "raw_sha256": "7449efa2ef57fa1384cd2cdb0589b485b61900947e9e77e5092523aa4315c881"
+        },
+        {
+          "normalized_end": 262154,
+          "normalized_start": 232115,
+          "raw_byte_end": 343284,
+          "raw_byte_start": 304130,
+          "raw_sha256": "18a46ce7ac45729e8c0a8eb50818b5e19e4e5bbac1d21bfb4808e1c645e57d27"
+        },
+        {
+          "normalized_end": 295879,
+          "normalized_start": 262154,
+          "raw_byte_end": 387124,
+          "raw_byte_start": 343294,
+          "raw_sha256": "a794064ad97e7e0f4b2b6ed6f5c6572483edf678e05456f8ebbd5261e2757923"
+        },
+        {
+          "normalized_end": 329939,
+          "normalized_start": 295879,
+          "raw_byte_end": 431099,
+          "raw_byte_start": 387135,
+          "raw_sha256": "82b82e3ae742f55d123445278e92218beff0814188464770d9c7ab7ece0eefb3"
+        },
+        {
+          "normalized_end": 365310,
+          "normalized_start": 329939,
+          "raw_byte_end": 476981,
+          "raw_byte_start": 431111,
+          "raw_sha256": "0cc2eb242e73b6cd4cf9038ff942a968e15a81fd27b65e8ebfa10452cf9cab1d"
+        }
+      ],
+      "catalogue_url": "https://www.gutenberg.org/ebooks/227",
+      "derived_path": "data/processed/blind-channel-development/virgil.json",
+      "derived_sha256": "2300486331bea3a8b47574ae92cfaebbd526bd986fc9ce87a871cca950dcb780",
+      "edition": "Pinned PG electronic edition; source print edition/editor not established",
+      "eligible_characters": 365310,
+      "excluded_counts": {
+        "square_bracket_span": 29
+      },
+      "excluded_spans": [
+        {
+          "raw_byte_end": 21486,
+          "raw_byte_start": 21438,
+          "reason": "square_bracket_span",
+          "sha256": "e80d28afe75af9f40eeb2cc3d2833eb345aa74eafcd23cb4b30ad0ee52771d9f"
+        },
+        {
+          "raw_byte_end": 35016,
+          "raw_byte_start": 34971,
+          "reason": "square_bracket_span",
+          "sha256": "faab4f2504750bb98e0b74c6ac293dd633810d68583d8080a59a55b0dd76ac12"
+        },
+        {
+          "raw_byte_end": 40918,
+          "raw_byte_start": 40872,
+          "reason": "square_bracket_span",
+          "sha256": "2da91dcdfac4ce153c7469084d33ccd4add66ebaa69ce376b3b86b438acdf415"
+        },
+        {
+          "raw_byte_end": 65671,
+          "raw_byte_start": 64608,
+          "reason": "square_bracket_span",
+          "sha256": "6b8459c705e1f5073b0ef1f1c1a8040b59dfabb51c288d0260fa352eb648fcb9"
+        },
+        {
+          "raw_byte_end": 74650,
+          "raw_byte_start": 74605,
+          "reason": "square_bracket_span",
+          "sha256": "d8802f46cbe7dcf093a2e27645e8a0125c35e314aa19517cb063d0a58a3653a4"
+        },
+        {
+          "raw_byte_end": 104611,
+          "raw_byte_start": 104564,
+          "reason": "square_bracket_span",
+          "sha256": "dd31b55e58d9804f844b6319a3f93be7c22bec769e3796ea29d724b02781bcde"
+        },
+        {
+          "raw_byte_end": 116643,
+          "raw_byte_start": 116599,
+          "reason": "square_bracket_span",
+          "sha256": "c73dd9f06d1a5e862a9dea21f0d1e77f552572758d76fe7cf3609cf515cf520f"
+        },
+        {
+          "raw_byte_end": 123692,
+          "raw_byte_start": 123649,
+          "reason": "square_bracket_span",
+          "sha256": "bc3704a16dd12a9cb3c98e506f9212a7386d0b06a5cf000bceadd95162f6b7a9"
+        },
+        {
+          "raw_byte_end": 135978,
+          "raw_byte_start": 135937,
+          "reason": "square_bracket_span",
+          "sha256": "81eddc90bd3190beb4937d1ffe0ac4635f428b0c83e79d853d39c0c735a5c1e5"
+        },
+        {
+          "raw_byte_end": 173354,
+          "raw_byte_start": 173332,
+          "reason": "square_bracket_span",
+          "sha256": "271f7c2bccbb1152764adb1aafad3bbc41c7352df35e733c2662d4e896fe15ce"
+        },
+        {
+          "raw_byte_end": 198360,
+          "raw_byte_start": 198319,
+          "reason": "square_bracket_span",
+          "sha256": "937c62363a4b5cd25172a2871f66ed207ddfa3eb0005f7a18768c8d5b69cb030"
+        },
+        {
+          "raw_byte_end": 215784,
+          "raw_byte_start": 215739,
+          "reason": "square_bracket_span",
+          "sha256": "38e5e8af3ef921c12180c20f3b97f23ddc3e02560ed2a82a1730479b8fbb9d0c"
+        },
+        {
+          "raw_byte_end": 220689,
+          "raw_byte_start": 220641,
+          "reason": "square_bracket_span",
+          "sha256": "af8d458b69cf974a5197a8b826e54b4619629f9491ef00f9210ff78dd9815563"
+        },
+        {
+          "raw_byte_end": 221364,
+          "raw_byte_start": 221314,
+          "reason": "square_bracket_span",
+          "sha256": "b028f8041444acd4fcb478d5ed7a2199ebc9e1c3cd885fd044cec8a57a707081"
+        },
+        {
+          "raw_byte_end": 230314,
+          "raw_byte_start": 230267,
+          "reason": "square_bracket_span",
+          "sha256": "4ee8156e07ecd12d5c82d6ca752817710b89c277291d21d75455d9ae7ca6223c"
+        },
+        {
+          "raw_byte_end": 233886,
+          "raw_byte_start": 233839,
+          "reason": "square_bracket_span",
+          "sha256": "89b0ac64846451b88cd7bfc46c802267a2e743f24b199a2ae79b19fc4d8250f2"
+        },
+        {
+          "raw_byte_end": 271574,
+          "raw_byte_start": 271231,
+          "reason": "square_bracket_span",
+          "sha256": "e88151a4150f243bc53c4bbc663e86687152412bfa8046611f8d0406b5403fa8"
+        },
+        {
+          "raw_byte_end": 305507,
+          "raw_byte_start": 305458,
+          "reason": "square_bracket_span",
+          "sha256": "61e76f041db4f61f8ad63ac5100a339aac41549fe429a07565554f4c87e34ff2"
+        },
+        {
+          "raw_byte_end": 308218,
+          "raw_byte_start": 308174,
+          "reason": "square_bracket_span",
+          "sha256": "e7150908b6cecec06e8266a79c04368813533437eee5721df4e61a27c49c4156"
+        },
+        {
+          "raw_byte_end": 321547,
+          "raw_byte_start": 321505,
+          "reason": "square_bracket_span",
+          "sha256": "7f6fe2f0a9cbea0bc644053564b9c173b7e7ed3a1b9b8aafdcf1f8a0779906bc"
+        },
+        {
+          "raw_byte_end": 329471,
+          "raw_byte_start": 329421,
+          "reason": "square_bracket_span",
+          "sha256": "c5afaa2422f16aeb3f02afa84b0fcbd4935209430ca2907efce4e97d3b78f8b6"
+        },
+        {
+          "raw_byte_end": 341273,
+          "raw_byte_start": 341223,
+          "reason": "square_bracket_span",
+          "sha256": "a236b354d10ca33fe5fdbcfa26aa0c0a187349dbbbe600a3286895c10b9021a0"
+        },
+        {
+          "raw_byte_end": 344293,
+          "raw_byte_start": 344244,
+          "reason": "square_bracket_span",
+          "sha256": "b7478158f4e21df2f419eb921d80ca7830be0524009543a7a50f586fc53d6496"
+        },
+        {
+          "raw_byte_end": 344594,
+          "raw_byte_start": 344568,
+          "reason": "square_bracket_span",
+          "sha256": "f8b91eacc451afe81d4d868c9b3c2fcd30c49f5b0b77b795c5a4bbf810e77736"
+        },
+        {
+          "raw_byte_end": 356677,
+          "raw_byte_start": 356628,
+          "reason": "square_bracket_span",
+          "sha256": "b8a775d5823e3c5a3dc36dc01abd2f19ce25b7f608fe026d7973a9d06963d1a4"
+        },
+        {
+          "raw_byte_end": 385341,
+          "raw_byte_start": 385297,
+          "reason": "square_bracket_span",
+          "sha256": "ad9170e354d3c481bdb0ae5216971c434b4ad3a515827a68bc61a7b1e5659738"
+        },
+        {
+          "raw_byte_end": 395298,
+          "raw_byte_start": 395218,
+          "reason": "square_bracket_span",
+          "sha256": "09b2175e21a28102969312272d4e68572d33a549240e38f25b2e785d7fc746b9"
+        },
+        {
+          "raw_byte_end": 460612,
+          "raw_byte_start": 460518,
+          "reason": "square_bracket_span",
+          "sha256": "1b108c439cc7083a991c85891ef0e7e0d9ef7142e7962c05fa77b42afb867fdd"
+        },
+        {
+          "raw_byte_end": 469712,
+          "raw_byte_start": 469620,
+          "reason": "square_bracket_span",
+          "sha256": "a504e1571beccd4a59c4151e0e78a51950823081d4199c4097aa79d42017744b"
+        }
+      ],
+      "full_normalized_sha256": "500909d9d18f54e720625cc44ea2933fcba2122fdc51033f341cba95f8414c4b",
+      "observed_codepoints": {
+        "\u2014": 2,
+        "\u2018": 1,
+        "\u2019": 6,
+        "\u201c": 11,
+        "\u201d": 11,
+        "\u2022": 4,
+        "\u2122": 17
+      },
+      "raw_bytes": 495876,
+      "raw_path": "data/raw/blind-channel-development/pg227.txt",
+      "raw_sha256": "2620ba82c00964d1a1f0458c8cf171946f158a06de0d0e764594170602c4c7b8",
+      "rights_screen": "PG catalogue public domain in USA; ebook license notice retained in raw",
+      "role": "P2",
+      "selected_characters": 50000,
+      "selected_text_sha256": "61a03f368b747d9645776cde4741a35a240f7d7d8967209757910709732706f7"
+    }
+  },
+  "status": "development_only"
+}
