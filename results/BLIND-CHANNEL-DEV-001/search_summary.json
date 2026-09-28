@@ -1,0 +1,1047 @@
+{
+  "cases": {
+    "A-key1": {
+      "accepted_initializations": 4,
+      "accepted_move_counts": {
+        "add_emission": 46,
+        "initial_weights": 25,
+        "remove_emission": 17,
+        "replace_unit": 30,
+        "retarget": 32,
+        "row_weights": 11,
+        "swap_letters": 62,
+        "swap_rows": 62
+      },
+      "accepted_proposals": 285,
+      "attempted_restart_state_pairs": 4,
+      "attempted_state_counts": [
+        1,
+        2
+      ],
+      "completed_candidates": 3548,
+      "completed_stage_phases": {
+        "raw": 2255,
+        "refined": 1293
+      },
+      "configured_wall_seconds": 120.0,
+      "cpu_seconds_before_final_write": 57.952759,
+      "freeze_sha256": "8cd81a0cc2ae738c33cc646876efefb8fc11a98277541c74f3bccc3f68f88bca",
+      "full_output_bytes": 516971,
+      "full_output_sha256": "c27896afe7b4f2a0bfa28de266ba5e32965c572225c8e37d9033f4db27b73ec3",
+      "initialization_methods": {
+        "frequency": 1,
+        "random": 3
+      },
+      "maximum_proposals": 4000,
+      "maximum_restart_state_pairs": 4,
+      "minimum_recorded_total_bits": 3573.1657188247746,
+      "peak_rss_bytes": 214630400,
+      "proposal_move_counts": {
+        "add_emission": 534,
+        "initial_weights": 500,
+        "remove_emission": 509,
+        "replace_unit": 506,
+        "retarget": 471,
+        "row_weights": 508,
+        "swap_letters": 492,
+        "swap_rows": 480
+      },
+      "proposals": 4000,
+      "records_per_completed_stage": 4,
+      "rejection_reasons": {
+        "alternative_limit": 8,
+        "cannot_empty_row": 432,
+        "no_initial_weight_transfer": 242,
+        "no_row_weight_transfer": 447,
+        "no_sufficient_score_improvement": 1966,
+        "single_state": 240,
+        "unchanged_channel": 2,
+        "unsupported": 378
+      },
+      "requested_proposals_per_restart": 1000,
+      "requested_restarts_per_state": 2,
+      "requested_state_counts": [
+        1,
+        2
+      ],
+      "restart_details": [
+        {
+          "accepted_proposals": 12,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "frequency": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 592,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 86,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 885,
+          "state_count": 2
+        },
+        {
+          "accepted_proposals": 84,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 1,
+          "scored_stages": 893,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 103,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 1,
+          "scored_stages": 1178,
+          "state_count": 2
+        }
+      ],
+      "returned_minimum_verified": true,
+      "score": {
+        "data_bits": 3367.1657188247746,
+        "log_likelihood": -2333.941424481494,
+        "model_bits": 206,
+        "total_bits": 3573.1657188247746
+      },
+      "seed": 48101,
+      "selected_model": {
+        "alternatives": 24,
+        "alternatives_per_row": {
+          "1": 22,
+          "2": 1
+        },
+        "distinct_destination_unit_pairs": 22,
+        "emission_length_counts": {
+          "1": 22,
+          "2": 2
+        },
+        "rows": 23,
+        "states": 1,
+        "unique_units": 22
+      },
+      "source_freeze": "5a5f155cb5ceacef9c7dd94555857c65ceb2c174",
+      "status": "verified",
+      "stop_reason": "budget_exhausted",
+      "supported_restart_state_pairs": 4,
+      "unit_pool_size": 128,
+      "wall_seconds": 57.69913774999441
+    },
+    "A-key1-shuffle": {
+      "accepted_initializations": 4,
+      "accepted_move_counts": {
+        "add_emission": 55,
+        "initial_weights": 42,
+        "remove_emission": 11,
+        "replace_unit": 30,
+        "retarget": 46,
+        "row_weights": 10,
+        "swap_letters": 50,
+        "swap_rows": 65
+      },
+      "accepted_proposals": 309,
+      "attempted_restart_state_pairs": 4,
+      "attempted_state_counts": [
+        1,
+        2
+      ],
+      "completed_candidates": 4143,
+      "completed_stage_phases": {
+        "raw": 2341,
+        "refined": 1802
+      },
+      "configured_wall_seconds": 120.0,
+      "cpu_seconds_before_final_write": 80.824052,
+      "freeze_sha256": "ac794371afc507e1e9240e7cecbf4d87a04b2fdff1b7458eeb67fd4fe570c490",
+      "full_output_bytes": 592588,
+      "full_output_sha256": "aecd0f10404b790f304aafa38df3c0d22fdc6fe75f8d42545fb75ab36a6461b8",
+      "initialization_methods": {
+        "frequency": 1,
+        "random": 3
+      },
+      "maximum_proposals": 4000,
+      "maximum_restart_state_pairs": 4,
+      "minimum_recorded_total_bits": 4056.9409903028277,
+      "peak_rss_bytes": 237453312,
+      "proposal_move_counts": {
+        "add_emission": 490,
+        "initial_weights": 517,
+        "remove_emission": 500,
+        "replace_unit": 465,
+        "retarget": 500,
+        "row_weights": 510,
+        "swap_letters": 509,
+        "swap_rows": 509
+      },
+      "proposals": 4000,
+      "records_per_completed_stage": 4,
+      "rejection_reasons": {
+        "alternative_limit": 11,
+        "cannot_empty_row": 432,
+        "no_initial_weight_transfer": 247,
+        "no_row_weight_transfer": 431,
+        "no_sufficient_score_improvement": 2028,
+        "single_state": 262,
+        "unchanged_channel": 2,
+        "unsupported": 278
+      },
+      "requested_proposals_per_restart": 1000,
+      "requested_restarts_per_state": 2,
+      "requested_state_counts": [
+        1,
+        2
+      ],
+      "restart_details": [
+        {
+          "accepted_proposals": 28,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "frequency": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 784,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 113,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 1241,
+          "state_count": 2
+        },
+        {
+          "accepted_proposals": 56,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 1,
+          "scored_stages": 874,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 112,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 1,
+          "scored_stages": 1244,
+          "state_count": 2
+        }
+      ],
+      "returned_minimum_verified": true,
+      "score": {
+        "data_bits": 3786.9409903028277,
+        "log_likelihood": -2624.907470375292,
+        "model_bits": 270,
+        "total_bits": 4056.9409903028277
+      },
+      "seed": 48102,
+      "selected_model": {
+        "alternatives": 30,
+        "alternatives_per_row": {
+          "1": 18,
+          "2": 3,
+          "3": 2
+        },
+        "distinct_destination_unit_pairs": 22,
+        "emission_length_counts": {
+          "1": 28,
+          "2": 2
+        },
+        "rows": 23,
+        "states": 1,
+        "unique_units": 22
+      },
+      "source_freeze": "5a5f155cb5ceacef9c7dd94555857c65ceb2c174",
+      "status": "verified",
+      "stop_reason": "budget_exhausted",
+      "supported_restart_state_pairs": 4,
+      "unit_pool_size": 128,
+      "wall_seconds": 80.56089745899953
+    },
+    "A-key2": {
+      "accepted_initializations": 4,
+      "accepted_move_counts": {
+        "add_emission": 38,
+        "initial_weights": 39,
+        "remove_emission": 4,
+        "replace_unit": 32,
+        "retarget": 40,
+        "row_weights": 9,
+        "swap_letters": 54,
+        "swap_rows": 76
+      },
+      "accepted_proposals": 292,
+      "attempted_restart_state_pairs": 4,
+      "attempted_state_counts": [
+        1,
+        2
+      ],
+      "completed_candidates": 3502,
+      "completed_stage_phases": {
+        "raw": 2229,
+        "refined": 1273
+      },
+      "configured_wall_seconds": 120.0,
+      "cpu_seconds_before_final_write": 59.878463,
+      "freeze_sha256": "6d2070e73e8124b1f05e969b4e15771f62c77e0f2760c39f45790ce2a39fb81a",
+      "full_output_bytes": 506920,
+      "full_output_sha256": "78e5a5dc1d40dc4b0951083c0256ece967e86338af7bdd7851329fa86a3b1af3",
+      "initialization_methods": {
+        "frequency": 1,
+        "random": 3
+      },
+      "maximum_proposals": 4000,
+      "maximum_restart_state_pairs": 4,
+      "minimum_recorded_total_bits": 3700.019117332876,
+      "peak_rss_bytes": 210436096,
+      "proposal_move_counts": {
+        "add_emission": 483,
+        "initial_weights": 499,
+        "remove_emission": 499,
+        "replace_unit": 496,
+        "retarget": 513,
+        "row_weights": 511,
+        "swap_letters": 471,
+        "swap_rows": 528
+      },
+      "proposals": 4000,
+      "records_per_completed_stage": 4,
+      "rejection_reasons": {
+        "alternative_limit": 7,
+        "cannot_empty_row": 464,
+        "no_initial_weight_transfer": 256,
+        "no_row_weight_transfer": 451,
+        "no_sufficient_score_improvement": 1933,
+        "single_state": 265,
+        "unchanged_channel": 3,
+        "unsupported": 329
+      },
+      "requested_proposals_per_restart": 1000,
+      "requested_restarts_per_state": 2,
+      "requested_state_counts": [
+        1,
+        2
+      ],
+      "restart_details": [
+        {
+          "accepted_proposals": 23,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "frequency": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 653,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 110,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 1167,
+          "state_count": 2
+        },
+        {
+          "accepted_proposals": 57,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 1,
+          "scored_stages": 814,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 102,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 1,
+          "scored_stages": 868,
+          "state_count": 2
+        }
+      ],
+      "returned_minimum_verified": true,
+      "score": {
+        "data_bits": 3467.019117332876,
+        "log_likelihood": -2403.154526126713,
+        "model_bits": 233,
+        "total_bits": 3700.019117332876
+      },
+      "seed": 48202,
+      "selected_model": {
+        "alternatives": 27,
+        "alternatives_per_row": {
+          "1": 20,
+          "2": 2,
+          "3": 1
+        },
+        "distinct_destination_unit_pairs": 21,
+        "emission_length_counts": {
+          "1": 26,
+          "2": 1
+        },
+        "rows": 23,
+        "states": 1,
+        "unique_units": 21
+      },
+      "source_freeze": "5a5f155cb5ceacef9c7dd94555857c65ceb2c174",
+      "status": "verified",
+      "stop_reason": "budget_exhausted",
+      "supported_restart_state_pairs": 4,
+      "unit_pool_size": 128,
+      "wall_seconds": 59.65236979200563
+    },
+    "A-key2-shuffle": {
+      "accepted_initializations": 4,
+      "accepted_move_counts": {
+        "add_emission": 65,
+        "initial_weights": 24,
+        "remove_emission": 17,
+        "replace_unit": 37,
+        "retarget": 40,
+        "row_weights": 16,
+        "swap_letters": 57,
+        "swap_rows": 80
+      },
+      "accepted_proposals": 336,
+      "attempted_restart_state_pairs": 4,
+      "attempted_state_counts": [
+        1,
+        2
+      ],
+      "completed_candidates": 4059,
+      "completed_stage_phases": {
+        "raw": 2349,
+        "refined": 1710
+      },
+      "configured_wall_seconds": 120.0,
+      "cpu_seconds_before_final_write": 76.733645,
+      "freeze_sha256": "153697079538696798e131a666485c01b35dcf2beb05c3134f7ffbb7d1cc8753",
+      "full_output_bytes": 582512,
+      "full_output_sha256": "1764137c502db3bc43a693a0ea1d7fd6af7bb73442f264005590e5297366f6cd",
+      "initialization_methods": {
+        "frequency": 1,
+        "random": 3
+      },
+      "maximum_proposals": 4000,
+      "maximum_restart_state_pairs": 4,
+      "minimum_recorded_total_bits": 4102.447787298251,
+      "peak_rss_bytes": 232554496,
+      "proposal_move_counts": {
+        "add_emission": 515,
+        "initial_weights": 463,
+        "remove_emission": 518,
+        "replace_unit": 504,
+        "retarget": 518,
+        "row_weights": 490,
+        "swap_letters": 477,
+        "swap_rows": 515
+      },
+      "proposals": 4000,
+      "records_per_completed_stage": 4,
+      "rejection_reasons": {
+        "alternative_limit": 21,
+        "cannot_empty_row": 429,
+        "no_initial_weight_transfer": 241,
+        "no_row_weight_transfer": 398,
+        "no_sufficient_score_improvement": 2009,
+        "single_state": 253,
+        "unchanged_channel": 1,
+        "unsupported": 312
+      },
+      "requested_proposals_per_restart": 1000,
+      "requested_restarts_per_state": 2,
+      "requested_state_counts": [
+        1,
+        2
+      ],
+      "restart_details": [
+        {
+          "accepted_proposals": 36,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "frequency": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 926,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 111,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 1210,
+          "state_count": 2
+        },
+        {
+          "accepted_proposals": 97,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 1,
+          "scored_stages": 988,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 92,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 1000,
+          "restart": 1,
+          "scored_stages": 935,
+          "state_count": 2
+        }
+      ],
+      "returned_minimum_verified": true,
+      "score": {
+        "data_bits": 3785.4477872982507,
+        "log_likelihood": -2623.872460922666,
+        "model_bits": 317,
+        "total_bits": 4102.447787298251
+      },
+      "seed": 48203,
+      "selected_model": {
+        "alternatives": 33,
+        "alternatives_per_row": {
+          "1": 16,
+          "2": 4,
+          "3": 3
+        },
+        "distinct_destination_unit_pairs": 25,
+        "emission_length_counts": {
+          "1": 28,
+          "2": 5
+        },
+        "rows": 23,
+        "states": 1,
+        "unique_units": 25
+      },
+      "source_freeze": "5a5f155cb5ceacef9c7dd94555857c65ceb2c174",
+      "status": "verified",
+      "stop_reason": "budget_exhausted",
+      "supported_restart_state_pairs": 4,
+      "unit_pool_size": 128,
+      "wall_seconds": 76.46230783399369
+    },
+    "B-key1": {
+      "accepted_initializations": 2,
+      "accepted_move_counts": {
+        "add_emission": 7,
+        "initial_weights": 4,
+        "remove_emission": 4,
+        "replace_unit": 6,
+        "retarget": 6,
+        "row_weights": 2,
+        "swap_letters": 14,
+        "swap_rows": 15
+      },
+      "accepted_proposals": 58,
+      "attempted_restart_state_pairs": 2,
+      "attempted_state_counts": [
+        1,
+        2
+      ],
+      "completed_candidates": 1029,
+      "completed_stage_phases": {
+        "raw": 597,
+        "refined": 432
+      },
+      "configured_wall_seconds": 120.0,
+      "cpu_seconds_before_final_write": 120.01212899999999,
+      "freeze_sha256": "1f84758b47086992c2a83be2ad6ecb6d283771f268a5706c3ccb006f9d645e48",
+      "full_output_bytes": 123051,
+      "full_output_sha256": "85b6f566f2159c119c7dc9c714e045db21e95ac95314da21b90bd15fdd4cdca0",
+      "initialization_methods": {
+        "frequency": 1,
+        "random": 1
+      },
+      "maximum_proposals": 4000,
+      "maximum_restart_state_pairs": 4,
+      "minimum_recorded_total_bits": 4059.605340500719,
+      "peak_rss_bytes": 64765952,
+      "proposal_move_counts": {
+        "add_emission": 158,
+        "initial_weights": 147,
+        "remove_emission": 161,
+        "replace_unit": 118,
+        "retarget": 149,
+        "row_weights": 141,
+        "swap_letters": 153,
+        "swap_rows": 139
+      },
+      "proposals": 1166,
+      "records_per_completed_stage": 4,
+      "rejection_reasons": {
+        "alternative_limit": 4,
+        "cannot_empty_row": 147,
+        "no_initial_weight_transfer": 121,
+        "no_row_weight_transfer": 123,
+        "no_sufficient_score_improvement": 537,
+        "single_state": 132,
+        "time_limit": 1,
+        "unchanged_channel": 42,
+        "unsupported": 1
+      },
+      "requested_proposals_per_restart": 1000,
+      "requested_restarts_per_state": 2,
+      "requested_state_counts": [
+        1,
+        2
+      ],
+      "restart_details": [
+        {
+          "accepted_proposals": 38,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "frequency": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 892,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 20,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 166,
+          "restart": 0,
+          "scored_stages": 137,
+          "state_count": 2
+        }
+      ],
+      "returned_minimum_verified": true,
+      "score": {
+        "data_bits": 3872.605340500719,
+        "log_likelihood": -2684.2854731894604,
+        "model_bits": 187,
+        "total_bits": 4059.605340500719
+      },
+      "seed": 48303,
+      "selected_model": {
+        "alternatives": 26,
+        "alternatives_per_row": {
+          "1": 20,
+          "2": 3
+        },
+        "distinct_destination_unit_pairs": 12,
+        "emission_length_counts": {
+          "1": 19,
+          "2": 7
+        },
+        "rows": 23,
+        "states": 1,
+        "unique_units": 12
+      },
+      "source_freeze": "5a5f155cb5ceacef9c7dd94555857c65ceb2c174",
+      "status": "verified",
+      "stop_reason": "time_limit",
+      "supported_restart_state_pairs": 2,
+      "unit_pool_size": 41,
+      "wall_seconds": 120.00999154199963
+    },
+    "B-key1-shuffle": {
+      "accepted_initializations": 2,
+      "accepted_move_counts": {
+        "add_emission": 3,
+        "initial_weights": 12,
+        "remove_emission": 3,
+        "replace_unit": 5,
+        "retarget": 24,
+        "row_weights": 1,
+        "swap_letters": 26,
+        "swap_rows": 27
+      },
+      "accepted_proposals": 101,
+      "attempted_restart_state_pairs": 2,
+      "attempted_state_counts": [
+        1,
+        2
+      ],
+      "completed_candidates": 1254,
+      "completed_stage_phases": {
+        "raw": 965,
+        "refined": 289
+      },
+      "configured_wall_seconds": 120.0,
+      "cpu_seconds_before_final_write": 120.04161,
+      "freeze_sha256": "48b4fde3bfcc262e913dffb8f61207a45f1ca07b4ccbff1c282a9624ad64cfee",
+      "full_output_bytes": 166782,
+      "full_output_sha256": "57a596cfbb04a819b480f2aac7812dbdae12c7f690af703b1b09d7b63267dad7",
+      "initialization_methods": {
+        "frequency": 1,
+        "random": 1
+      },
+      "maximum_proposals": 4000,
+      "maximum_restart_state_pairs": 4,
+      "minimum_recorded_total_bits": 4248.9842226417995,
+      "peak_rss_bytes": 87982080,
+      "proposal_move_counts": {
+        "add_emission": 206,
+        "initial_weights": 222,
+        "remove_emission": 235,
+        "replace_unit": 210,
+        "retarget": 194,
+        "row_weights": 212,
+        "swap_letters": 206,
+        "swap_rows": 203
+      },
+      "proposals": 1688,
+      "records_per_completed_stage": 4,
+      "rejection_reasons": {
+        "cannot_empty_row": 231,
+        "no_initial_weight_transfer": 131,
+        "no_row_weight_transfer": 205,
+        "no_sufficient_score_improvement": 862,
+        "single_state": 111,
+        "time_limit": 1,
+        "unchanged_channel": 45,
+        "unsupported": 1
+      },
+      "requested_proposals_per_restart": 1000,
+      "requested_restarts_per_state": 2,
+      "requested_state_counts": [
+        1,
+        2
+      ],
+      "restart_details": [
+        {
+          "accepted_proposals": 30,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "frequency": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 670,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 71,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 688,
+          "restart": 0,
+          "scored_stages": 584,
+          "state_count": 2
+        }
+      ],
+      "returned_minimum_verified": true,
+      "score": {
+        "data_bits": 4103.9842226417995,
+        "log_likelihood": -2844.665092986662,
+        "model_bits": 145,
+        "total_bits": 4248.9842226417995
+      },
+      "seed": 48304,
+      "selected_model": {
+        "alternatives": 23,
+        "alternatives_per_row": {
+          "1": 23
+        },
+        "distinct_destination_unit_pairs": 8,
+        "emission_length_counts": {
+          "1": 21,
+          "2": 2
+        },
+        "rows": 23,
+        "states": 1,
+        "unique_units": 8
+      },
+      "source_freeze": "5a5f155cb5ceacef9c7dd94555857c65ceb2c174",
+      "status": "verified",
+      "stop_reason": "time_limit",
+      "supported_restart_state_pairs": 2,
+      "unit_pool_size": 42,
+      "wall_seconds": 120.00550733300042
+    },
+    "B-key2": {
+      "accepted_initializations": 2,
+      "accepted_move_counts": {
+        "add_emission": 9,
+        "initial_weights": 4,
+        "remove_emission": 5,
+        "replace_unit": 17,
+        "retarget": 8,
+        "row_weights": 4,
+        "swap_letters": 21,
+        "swap_rows": 25
+      },
+      "accepted_proposals": 93,
+      "attempted_restart_state_pairs": 2,
+      "attempted_state_counts": [
+        1,
+        2
+      ],
+      "completed_candidates": 1167,
+      "completed_stage_phases": {
+        "raw": 647,
+        "refined": 520
+      },
+      "configured_wall_seconds": 120.0,
+      "cpu_seconds_before_final_write": 120.009653,
+      "freeze_sha256": "687383b7c960155243d2a239df9cdd2618ef147cf7582f142723bdd007530360",
+      "full_output_bytes": 141235,
+      "full_output_sha256": "903d59281fbd6d22e0eb9c202843e94fbff20244859e1197b583f92d6024f6f9",
+      "initialization_methods": {
+        "frequency": 1,
+        "random": 1
+      },
+      "maximum_proposals": 4000,
+      "maximum_restart_state_pairs": 4,
+      "minimum_recorded_total_bits": 3610.535133908252,
+      "peak_rss_bytes": 70303744,
+      "proposal_move_counts": {
+        "add_emission": 153,
+        "initial_weights": 178,
+        "remove_emission": 116,
+        "replace_unit": 141,
+        "retarget": 152,
+        "row_weights": 119,
+        "swap_letters": 171,
+        "swap_rows": 142
+      },
+      "proposals": 1172,
+      "records_per_completed_stage": 4,
+      "rejection_reasons": {
+        "alternative_limit": 2,
+        "cannot_empty_row": 100,
+        "no_initial_weight_transfer": 156,
+        "no_row_weight_transfer": 103,
+        "no_sufficient_score_improvement": 552,
+        "single_state": 131,
+        "unchanged_channel": 30,
+        "unsupported": 5
+      },
+      "requested_proposals_per_restart": 1000,
+      "requested_restarts_per_state": 2,
+      "requested_state_counts": [
+        1,
+        2
+      ],
+      "restart_details": [
+        {
+          "accepted_proposals": 63,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "frequency": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 954,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 30,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 172,
+          "restart": 0,
+          "scored_stages": 213,
+          "state_count": 2
+        }
+      ],
+      "returned_minimum_verified": true,
+      "score": {
+        "data_bits": 3420.535133908252,
+        "log_likelihood": -2370.93428407474,
+        "model_bits": 190,
+        "total_bits": 3610.535133908252
+      },
+      "seed": 48404,
+      "selected_model": {
+        "alternatives": 26,
+        "alternatives_per_row": {
+          "1": 20,
+          "2": 3
+        },
+        "distinct_destination_unit_pairs": 11,
+        "emission_length_counts": {
+          "1": 18,
+          "2": 8
+        },
+        "rows": 23,
+        "states": 1,
+        "unique_units": 11
+      },
+      "source_freeze": "5a5f155cb5ceacef9c7dd94555857c65ceb2c174",
+      "status": "verified",
+      "stop_reason": "time_limit",
+      "supported_restart_state_pairs": 2,
+      "unit_pool_size": 41,
+      "wall_seconds": 120.00145837500168
+    },
+    "B-key2-shuffle": {
+      "accepted_initializations": 2,
+      "accepted_move_counts": {
+        "add_emission": 7,
+        "initial_weights": 12,
+        "remove_emission": 2,
+        "replace_unit": 12,
+        "retarget": 8,
+        "row_weights": 1,
+        "swap_letters": 10,
+        "swap_rows": 23
+      },
+      "accepted_proposals": 75,
+      "attempted_restart_state_pairs": 2,
+      "attempted_state_counts": [
+        1,
+        2
+      ],
+      "completed_candidates": 1185,
+      "completed_stage_phases": {
+        "raw": 665,
+        "refined": 520
+      },
+      "configured_wall_seconds": 120.0,
+      "cpu_seconds_before_final_write": 119.995626,
+      "freeze_sha256": "301c03adaccd59e7d32486837f35a06b68829ae12c6a10d3cf775b40bd7f44a5",
+      "full_output_bytes": 143359,
+      "full_output_sha256": "a8b0e5f7bc34e1b610ddda70a66731b6dcf2c7da7812f9c31f76a3f95b42d9e3",
+      "initialization_methods": {
+        "frequency": 1,
+        "random": 1
+      },
+      "maximum_proposals": 4000,
+      "maximum_restart_state_pairs": 4,
+      "minimum_recorded_total_bits": 4084.942170518157,
+      "peak_rss_bytes": 70844416,
+      "proposal_move_counts": {
+        "add_emission": 140,
+        "initial_weights": 164,
+        "remove_emission": 140,
+        "replace_unit": 156,
+        "retarget": 136,
+        "row_weights": 147,
+        "swap_letters": 158,
+        "swap_rows": 150
+      },
+      "proposals": 1191,
+      "records_per_completed_stage": 4,
+      "rejection_reasons": {
+        "cannot_empty_row": 130,
+        "no_initial_weight_transfer": 127,
+        "no_row_weight_transfer": 135,
+        "no_sufficient_score_improvement": 588,
+        "single_state": 115,
+        "time_limit": 1,
+        "unchanged_channel": 20
+      },
+      "requested_proposals_per_restart": 1000,
+      "requested_restarts_per_state": 2,
+      "requested_state_counts": [
+        1,
+        2
+      ],
+      "restart_details": [
+        {
+          "accepted_proposals": 33,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "frequency": 1
+          },
+          "proposals": 1000,
+          "restart": 0,
+          "scored_stages": 958,
+          "state_count": 1
+        },
+        {
+          "accepted_proposals": 42,
+          "initialization_attempts": 1,
+          "initialization_methods": {
+            "random": 1
+          },
+          "proposals": 191,
+          "restart": 0,
+          "scored_stages": 227,
+          "state_count": 2
+        }
+      ],
+      "returned_minimum_verified": true,
+      "score": {
+        "data_bits": 3915.942170518157,
+        "log_likelihood": -2714.324274730453,
+        "model_bits": 169,
+        "total_bits": 4084.942170518157
+      },
+      "seed": 48405,
+      "selected_model": {
+        "alternatives": 25,
+        "alternatives_per_row": {
+          "1": 21,
+          "2": 2
+        },
+        "distinct_destination_unit_pairs": 9,
+        "emission_length_counts": {
+          "1": 21,
+          "2": 4
+        },
+        "rows": 23,
+        "states": 1,
+        "unique_units": 9
+      },
+      "source_freeze": "5a5f155cb5ceacef9c7dd94555857c65ceb2c174",
+      "status": "verified",
+      "stop_reason": "time_limit",
+      "supported_restart_state_pairs": 2,
+      "unit_pool_size": 42,
+      "wall_seconds": 120.00322529199184
+    }
+  },
+  "cases_verified": 8,
+  "ciphertext_corpus_transfer_answers_or_evaluation_opened": false,
+  "errors": [],
+  "experiment": "BLIND-CHANNEL-DEV-001",
+  "pending": [],
+  "scope": "recorded_search_integrity_and_budget_coverage_only",
+  "score_replay_performed": false,
+  "status": "pass",
+  "summarizer_source_sha256": "85e5204784866bc2d52c5438613b244babc9837174024d4a2c1a2f96ff38c4af"
+}
