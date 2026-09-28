@@ -1,0 +1,100 @@
+{
+  "cases": {
+    "A-key1": {
+      "found_fit_total_bits": 3573.1657188247746,
+      "found_minus_gold_bits": 216.86567481007614,
+      "gold_compatible_with_same_coding_context": true,
+      "gold_fit_total_bits": 3356.3000440146984,
+      "gold_model_bits": 185,
+      "gold_unit_count": 23,
+      "gold_units_outside_proposal_pool": 0
+    },
+    "A-key2": {
+      "found_fit_total_bits": 3700.019117332876,
+      "found_minus_gold_bits": 302.24133588124596,
+      "gold_compatible_with_same_coding_context": true,
+      "gold_fit_total_bits": 3397.77778145163,
+      "gold_model_bits": 185,
+      "gold_unit_count": 23,
+      "gold_units_outside_proposal_pool": 0
+    },
+    "B-key1": {
+      "found_fit_total_bits": 4059.605340500719,
+      "found_minus_gold_bits": 778.728863029999,
+      "gold_compatible_with_same_coding_context": true,
+      "gold_fit_total_bits": 3280.87647747072,
+      "gold_model_bits": 190,
+      "gold_unit_count": 23,
+      "gold_units_outside_proposal_pool": 1,
+      "pool_admissible_gold_assisted_witness": {
+        "all_units_in_pool": true,
+        "found_minus_witness_bits": 781.7315816059295,
+        "max_independent_delta": 2.2737367544323206e-13,
+        "replacement_rule": "Replace every gold emission absent from fit-substring pool with lexicographically first allowed singleton A",
+        "score": {
+          "data_bits": 3090.8737588947897,
+          "log_likelihood": -2142.4304314446435,
+          "model_bits": 187,
+          "total_bits": 3277.8737588947897
+        },
+        "splits": {
+          "fit": {
+            "decoded_characters": 891,
+            "edits": 19,
+            "exact_records": 0,
+            "gold_characters": 896,
+            "log_likelihood": -2142.4304314446435
+          },
+          "transfer": {
+            "decoded_characters": 446,
+            "edits": 4,
+            "exact_records": 0,
+            "gold_characters": 448,
+            "log_likelihood": -1107.677959298669
+          }
+        }
+      }
+    },
+    "B-key2": {
+      "found_fit_total_bits": 3610.535133908252,
+      "found_minus_gold_bits": 332.9168585050843,
+      "gold_compatible_with_same_coding_context": true,
+      "gold_fit_total_bits": 3277.618275403168,
+      "gold_model_bits": 190,
+      "gold_unit_count": 23,
+      "gold_units_outside_proposal_pool": 1,
+      "pool_admissible_gold_assisted_witness": {
+        "all_units_in_pool": true,
+        "found_minus_witness_bits": 337.6296128018398,
+        "max_independent_delta": 4.547473508864641e-13,
+        "replacement_rule": "Replace every gold emission absent from fit-substring pool with lexicographically first allowed singleton A",
+        "score": {
+          "data_bits": 3085.9055211064124,
+          "log_likelihood": -2138.9867114292783,
+          "model_bits": 187,
+          "total_bits": 3272.9055211064124
+        },
+        "splits": {
+          "fit": {
+            "decoded_characters": 885,
+            "edits": 57,
+            "exact_records": 0,
+            "gold_characters": 896,
+            "log_likelihood": -2138.9867114292783
+          },
+          "transfer": {
+            "decoded_characters": 446,
+            "edits": 21,
+            "exact_records": 0,
+            "gold_characters": 448,
+            "log_likelihood": -1031.257140898446
+          }
+        }
+      }
+    }
+  },
+  "evaluation_sha256": "c66bbeb6c3d9d57b1366ee900528b8beb692d33e998b5a311d6c267823eaf0d8",
+  "experiment": "BLIND-CHANNEL-DEV-001",
+  "interpretation": "A gold channels are in the proposal pool. Each B gold channel has one unobserved pair outside the pool; a deterministic gold-assisted replacement yields an admissible better-scoring near-gold witness. These runs missed better candidates within their grammar and unit pool, without proving gold global optimality, a monotone path from initialization, or uniqueness.",
+  "scope": "post-evaluation gold-assisted diagnosis; not another blind fit"
+}

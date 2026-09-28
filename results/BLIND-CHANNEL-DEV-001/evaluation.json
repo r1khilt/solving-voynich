@@ -1,0 +1,348 @@
+{
+  "cases": {
+    "A-key1": {
+      "baseline_model_bits": 118,
+      "diagnostic_flag": true,
+      "family": "A",
+      "fit_saving_vs_iid_bits": 111.58479533576656,
+      "freeze_sha256": "8cd81a0cc2ae738c33cc646876efefb8fc11a98277541c74f3bccc3f68f88bca",
+      "model_bits_with_selector": 207,
+      "positive": true,
+      "splits": {
+        "fit": {
+          "baseline_log_likelihood": -2472.976209831674,
+          "glyph_characters": 896,
+          "learned": {
+            "decoded_characters": 880,
+            "edits": 153,
+            "exact_records": 0,
+            "gold_characters": 896,
+            "log_likelihood": -2333.941424481494
+          },
+          "oracle": {
+            "decoded_characters": 896,
+            "edits": 0,
+            "exact_records": 4,
+            "gold_characters": 896,
+            "log_likelihood": -2198.1776842184186
+          }
+        },
+        "transfer": {
+          "baseline_log_likelihood": -1232.824974242435,
+          "glyph_characters": 448,
+          "learned": {
+            "decoded_characters": 439,
+            "edits": 71,
+            "exact_records": 0,
+            "gold_characters": 448,
+            "log_likelihood": -1146.5862575609588
+          },
+          "oracle": {
+            "decoded_characters": 448,
+            "edits": 0,
+            "exact_records": 2,
+            "gold_characters": 448,
+            "log_likelihood": -1076.1733644998328
+          }
+        }
+      },
+      "transfer_gain_vs_iid_bits_per_glyph": 0.27771466269864764
+    },
+    "A-key1-shuffle": {
+      "baseline_model_bits": 118,
+      "diagnostic_flag": false,
+      "family": "A",
+      "fit_saving_vs_iid_bits": -372.19047614228657,
+      "freeze_sha256": "ac794371afc507e1e9240e7cecbf4d87a04b2fdff1b7458eeb67fd4fe570c490",
+      "model_bits_with_selector": 271,
+      "positive": false,
+      "splits": {
+        "fit": {
+          "baseline_log_likelihood": -2472.976209831674,
+          "glyph_characters": 896,
+          "learned": {
+            "decoded_characters": 886,
+            "edits": null,
+            "exact_records": null,
+            "gold_characters": null,
+            "log_likelihood": -2624.907470375292
+          }
+        },
+        "transfer": {
+          "baseline_log_likelihood": -1232.824974242435,
+          "glyph_characters": 448,
+          "learned": {
+            "decoded_characters": 447,
+            "edits": null,
+            "exact_records": null,
+            "gold_characters": null,
+            "log_likelihood": -1345.8696550871737
+          }
+        }
+      },
+      "transfer_gain_vs_iid_bits_per_glyph": -0.36403794744102685
+    },
+    "A-key2": {
+      "baseline_model_bits": 118,
+      "diagnostic_flag": false,
+      "family": "A",
+      "fit_saving_vs_iid_bits": -2.8834222268442318,
+      "freeze_sha256": "6d2070e73e8124b1f05e969b4e15771f62c77e0f2760c39f45790ce2a39fb81a",
+      "model_bits_with_selector": 234,
+      "positive": true,
+      "splits": {
+        "fit": {
+          "baseline_log_likelihood": -2481.5609630847657,
+          "glyph_characters": 896,
+          "learned": {
+            "decoded_characters": 886,
+            "edits": 339,
+            "exact_records": 0,
+            "gold_characters": 896,
+            "log_likelihood": -2403.154526126713
+          },
+          "oracle": {
+            "decoded_characters": 896,
+            "edits": 0,
+            "exact_records": 4,
+            "gold_characters": 896,
+            "log_likelihood": -2226.9278609788335
+          }
+        },
+        "transfer": {
+          "baseline_log_likelihood": -1236.1077839647166,
+          "glyph_characters": 448,
+          "learned": {
+            "decoded_characters": 443,
+            "edits": 188,
+            "exact_records": 0,
+            "gold_characters": 448,
+            "log_likelihood": -1229.3366785084079
+          },
+          "oracle": {
+            "decoded_characters": 448,
+            "edits": 0,
+            "exact_records": 2,
+            "gold_characters": 448,
+            "log_likelihood": -1084.2746867131461
+          }
+        }
+      },
+      "transfer_gain_vs_iid_bits_per_glyph": 0.021805000587394756
+    },
+    "A-key2-shuffle": {
+      "baseline_model_bits": 118,
+      "diagnostic_flag": false,
+      "family": "A",
+      "fit_saving_vs_iid_bits": -405.3120921922191,
+      "freeze_sha256": "153697079538696798e131a666485c01b35dcf2beb05c3134f7ffbb7d1cc8753",
+      "model_bits_with_selector": 318,
+      "positive": false,
+      "splits": {
+        "fit": {
+          "baseline_log_likelihood": -2481.5609630847657,
+          "glyph_characters": 896,
+          "learned": {
+            "decoded_characters": 868,
+            "edits": null,
+            "exact_records": null,
+            "gold_characters": null,
+            "log_likelihood": -2623.872460922666
+          }
+        },
+        "transfer": {
+          "baseline_log_likelihood": -1236.1077839647166,
+          "glyph_characters": 448,
+          "learned": {
+            "decoded_characters": 437,
+            "edits": null,
+            "exact_records": null,
+            "gold_characters": null,
+            "log_likelihood": -1358.752020277294
+          }
+        }
+      },
+      "transfer_gain_vs_iid_bits_per_glyph": -0.39495140964680664
+    },
+    "B-key1": {
+      "baseline_model_bits": 47,
+      "diagnostic_flag": true,
+      "family": "B",
+      "fit_saving_vs_iid_bits": 92.45271309051668,
+      "freeze_sha256": "1f84758b47086992c2a83be2ad6ecb6d283771f268a5706c3ccb006f9d645e48",
+      "model_bits_with_selector": 188,
+      "positive": true,
+      "splits": {
+        "fit": {
+          "baseline_log_likelihood": -2846.102563062222,
+          "glyph_characters": 1700,
+          "learned": {
+            "decoded_characters": 1321,
+            "edits": 956,
+            "exact_records": 0,
+            "gold_characters": 896,
+            "log_likelihood": -2684.2854731894604
+          },
+          "oracle": {
+            "decoded_characters": 891,
+            "edits": 19,
+            "exact_records": 0,
+            "gold_characters": 896,
+            "log_likelihood": -2142.432315817885
+          }
+        },
+        "transfer": {
+          "baseline_log_likelihood": -1427.2635820458268,
+          "glyph_characters": 848,
+          "learned": {
+            "decoded_characters": 672,
+            "edits": 477,
+            "exact_records": 0,
+            "gold_characters": 448,
+            "log_likelihood": -1376.3185953980415
+          },
+          "oracle": {
+            "decoded_characters": 446,
+            "edits": 4,
+            "exact_records": 0,
+            "gold_characters": 448,
+            "log_likelihood": -1107.6810984989188
+          }
+        }
+      },
+      "transfer_gain_vs_iid_bits_per_glyph": 0.08667226367324801
+    },
+    "B-key1-shuffle": {
+      "baseline_model_bits": 47,
+      "diagnostic_flag": false,
+      "family": "B",
+      "fit_saving_vs_iid_bits": -96.92616905056366,
+      "freeze_sha256": "48b4fde3bfcc262e913dffb8f61207a45f1ca07b4ccbff1c282a9624ad64cfee",
+      "model_bits_with_selector": 146,
+      "positive": false,
+      "splits": {
+        "fit": {
+          "baseline_log_likelihood": -2846.102563062222,
+          "glyph_characters": 1700,
+          "learned": {
+            "decoded_characters": 1662,
+            "edits": null,
+            "exact_records": null,
+            "gold_characters": null,
+            "log_likelihood": -2844.665092986662
+          }
+        },
+        "transfer": {
+          "baseline_log_likelihood": -1427.2635820458268,
+          "glyph_characters": 848,
+          "learned": {
+            "decoded_characters": 835,
+            "edits": null,
+            "exact_records": null,
+            "gold_characters": null,
+            "log_likelihood": -1441.863542648095
+          }
+        }
+      },
+      "transfer_gain_vs_iid_bits_per_glyph": -0.024838786271305112
+    },
+    "B-key2": {
+      "baseline_model_bits": 47,
+      "diagnostic_flag": true,
+      "family": "B",
+      "fit_saving_vs_iid_bits": 323.06108436765726,
+      "freeze_sha256": "687383b7c960155243d2a239df9cdd2618ef147cf7582f142723bdd007530360",
+      "model_bits_with_selector": 191,
+      "positive": true,
+      "splits": {
+        "fit": {
+          "baseline_log_likelihood": -2694.6763578534524,
+          "glyph_characters": 1560,
+          "learned": {
+            "decoded_characters": 1187,
+            "edits": 863,
+            "exact_records": 0,
+            "gold_characters": 896,
+            "log_likelihood": -2370.93428407474
+          },
+          "oracle": {
+            "decoded_characters": 885,
+            "edits": 57,
+            "exact_records": 0,
+            "gold_characters": 896,
+            "log_likelihood": -2140.1739022410666
+          }
+        },
+        "transfer": {
+          "baseline_log_likelihood": -1339.416437202716,
+          "glyph_characters": 780,
+          "learned": {
+            "decoded_characters": 594,
+            "edits": 430,
+            "exact_records": 0,
+            "gold_characters": 448,
+            "log_likelihood": -1150.5572292062484
+          },
+          "oracle": {
+            "decoded_characters": 446,
+            "edits": 21,
+            "exact_records": 0,
+            "gold_characters": 448,
+            "log_likelihood": -1031.7631066820957
+          }
+        }
+      },
+      "transfer_gain_vs_iid_bits_per_glyph": 0.34931569590092443
+    },
+    "B-key2-shuffle": {
+      "baseline_model_bits": 47,
+      "diagnostic_flag": false,
+      "family": "B",
+      "fit_saving_vs_iid_bits": -151.34595224224768,
+      "freeze_sha256": "301c03adaccd59e7d32486837f35a06b68829ae12c6a10d3cf775b40bd7f44a5",
+      "model_bits_with_selector": 170,
+      "positive": false,
+      "splits": {
+        "fit": {
+          "baseline_log_likelihood": -2694.6763578534524,
+          "glyph_characters": 1560,
+          "learned": {
+            "decoded_characters": 1442,
+            "edits": null,
+            "exact_records": null,
+            "gold_characters": null,
+            "log_likelihood": -2714.324274730453
+          }
+        },
+        "transfer": {
+          "baseline_log_likelihood": -1339.416437202716,
+          "glyph_characters": 780,
+          "learned": {
+            "decoded_characters": 727,
+            "edits": null,
+            "exact_records": null,
+            "gold_characters": null,
+            "log_likelihood": -1360.4510736859638
+          }
+        }
+      },
+      "transfer_gain_vs_iid_bits_per_glyph": -0.038905853514466286
+    }
+  },
+  "diagnostic_summary": {
+    "nulls_flagged": 0,
+    "positives_cer_at_most_10pct": 0,
+    "positives_flagged": 3,
+    "scope": "Development diagnostics; no sealed benchmark or source-language decision"
+  },
+  "experiment": "BLIND-CHANNEL-DEV-001",
+  "full_predictions": {
+    "bytes": 52160,
+    "path": "outputs/BLIND-CHANNEL-DEV-001/evaluation_predictions.json",
+    "sha256": "467a8e8ba53dda25a9993eea858b116e838f3481cbd917e3c03ef1ffb8058ac4"
+  },
+  "key_freeze": "4b84ab0f82fef4998048edfd0557c5ad4638fea6",
+  "manifest_sha256": "8587ae6010de94996bdd57d74ea2e1eee3f71940cdb13c1cc3125adfdfc9acea",
+  "source_sha256": "7de1c233b3ea69eb632247062f97db86040666daa13ba73bba28bbb51b3493b0",
+  "status": "exposed_development"
+}
