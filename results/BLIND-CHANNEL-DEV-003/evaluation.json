@@ -1,0 +1,98 @@
+{
+  "cases": {
+    "B-key1": {
+      "freeze_sha256": "36da9e154ecaa82be4ed5a6a99e69350d271b7959833429df49baf7ebb53086e",
+      "maximum_independent_delta": 2.2737367544323206e-13,
+      "positive": true,
+      "splits": {
+        "fit": {
+          "decoded_characters": 891,
+          "edits": 19,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2141.7127730306875
+        },
+        "transfer": {
+          "decoded_characters": 446,
+          "edits": 4,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1107.3901299130187
+        }
+      }
+    },
+    "B-key1-shuffle": {
+      "freeze_sha256": "b1559febf87f1ffd9e0b289560f90bc64dfe1c15fba24a54eb8be392dded6142",
+      "maximum_independent_delta": 4.547473508864641e-13,
+      "positive": false,
+      "splits": {
+        "fit": {
+          "decoded_characters": 1614,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2844.7177701614187
+        },
+        "transfer": {
+          "decoded_characters": 818,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1432.0338138905831
+        }
+      }
+    },
+    "B-key2": {
+      "freeze_sha256": "67ec4276cee3457107007ad0c95f533e039fbc266eeb2f80a1777122ac234287",
+      "maximum_independent_delta": 1.1368683772161603e-13,
+      "positive": true,
+      "splits": {
+        "fit": {
+          "decoded_characters": 883,
+          "edits": 91,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2122.9984057930737
+        },
+        "transfer": {
+          "decoded_characters": 446,
+          "edits": 32,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1042.1641432935403
+        }
+      }
+    },
+    "B-key2-shuffle": {
+      "freeze_sha256": "c13199c3522e4a1c0b9f30eac82608095e0e715f1c6a47b8a3dc432d96dd14e8",
+      "maximum_independent_delta": 5.684341886080801e-13,
+      "positive": false,
+      "splits": {
+        "fit": {
+          "decoded_characters": 1466,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2694.903602380736
+        },
+        "transfer": {
+          "decoded_characters": 748,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1362.2026818685954
+        }
+      }
+    }
+  },
+  "experiment": "BLIND-CHANNEL-DEV-003",
+  "full_predictions": {
+    "bytes": 17218,
+    "path": "outputs/BLIND-CHANNEL-DEV-003/predictions.json",
+    "sha256": "8756c02f656d8db5e510d88d257bb1dd358b75425d6f160c31653f19b9474185"
+  },
+  "key_freeze": "8e6e5c8d17bf4bdd568f22a2e1df22d12972b1ac",
+  "manifest_sha256": "8587ae6010de94996bdd57d74ea2e1eee3f71940cdb13c1cc3125adfdfc9acea",
+  "source_sha256": "7de1c233b3ea69eb632247062f97db86040666daa13ba73bba28bbb51b3493b0",
+  "status": "exposed_diagnostic_independent_replay_pass"
+}

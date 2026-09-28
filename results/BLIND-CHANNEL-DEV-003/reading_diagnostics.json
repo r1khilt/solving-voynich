@@ -1,0 +1,192 @@
+{
+  "cases": {
+    "B-key1": {
+      "posthoc_literal_key_comparison": {
+        "answer_sha256": "64679b4c13b5b514a6447d8af97206211115b57bc7a9ae8ddf36f41ddfef232e",
+        "changed_rows": {
+          "k": {
+            "generating_unit": "AE",
+            "learned_unit": "E"
+          },
+          "y": {
+            "generating_unit": "A",
+            "learned_unit": "E"
+          },
+          "z": {
+            "generating_unit": "BB",
+            "learned_unit": "E"
+          }
+        },
+        "matching_rows": 20,
+        "total_rows": 23
+      },
+      "splits": {
+        "fit": {
+          "conditional_map_plaintext_surprisal_bits_by_record": [
+            2.709484513313541,
+            2.8125820323093755,
+            3.8539940666142734,
+            1.4473884569243871
+          ],
+          "gold_characters": 896,
+          "new_cer": 0.021205357142857144,
+          "new_edits": 19,
+          "oracle_edits": 19,
+          "prior_edits": 956,
+          "records_with_identical_oracle_prediction": 4,
+          "total_conditional_map_surprisal_bits": 10.823449069161576
+        },
+        "transfer": {
+          "conditional_map_plaintext_surprisal_bits_by_record": [
+            4.347280299085551,
+            4.601085838131715
+          ],
+          "gold_characters": 448,
+          "new_cer": 0.008928571428571428,
+          "new_edits": 4,
+          "oracle_edits": 4,
+          "prior_edits": 477,
+          "records_with_identical_oracle_prediction": 2,
+          "total_conditional_map_surprisal_bits": 8.948366137217265
+        }
+      },
+      "unique_units": 20,
+      "unit_length_counts": {
+        "1": 8,
+        "2": 15
+      }
+    },
+    "B-key1-shuffle": {
+      "splits": {
+        "fit": {
+          "conditional_map_plaintext_surprisal_bits_by_record": [
+            238.6286792021631,
+            243.263397105521,
+            241.04184889777284,
+            242.01769425333183
+          ],
+          "total_conditional_map_surprisal_bits": 964.9516194587887
+        },
+        "transfer": {
+          "conditional_map_plaintext_surprisal_bits_by_record": [
+            238.7510022267065,
+            227.9420161299629
+          ],
+          "total_conditional_map_surprisal_bits": 466.6930183566694
+        }
+      },
+      "unique_units": 8,
+      "unit_length_counts": {
+        "1": 21,
+        "2": 2
+      }
+    },
+    "B-key2": {
+      "posthoc_literal_key_comparison": {
+        "answer_sha256": "358bfbbb893296c70213f34a3b715529f39f60ea6a8c62a6abcf9057ebe394ba",
+        "changed_rows": {
+          "b": {
+            "generating_unit": "F",
+            "learned_unit": "C"
+          },
+          "h": {
+            "generating_unit": "D",
+            "learned_unit": "A"
+          },
+          "k": {
+            "generating_unit": "BE",
+            "learned_unit": "C"
+          },
+          "x": {
+            "generating_unit": "C",
+            "learned_unit": "F"
+          },
+          "y": {
+            "generating_unit": "FC",
+            "learned_unit": "AF"
+          },
+          "z": {
+            "generating_unit": "FB",
+            "learned_unit": "F"
+          }
+        },
+        "matching_rows": 17,
+        "total_rows": 23
+      },
+      "splits": {
+        "fit": {
+          "conditional_map_plaintext_surprisal_bits_by_record": [
+            18.661774986432192,
+            22.3370321421747,
+            20.27894324839775,
+            22.604544783024743
+          ],
+          "gold_characters": 896,
+          "new_cer": 0.1015625,
+          "new_edits": 91,
+          "oracle_edits": 57,
+          "prior_edits": 863,
+          "records_with_identical_oracle_prediction": 0,
+          "total_conditional_map_surprisal_bits": 83.88229516002939
+        },
+        "transfer": {
+          "conditional_map_plaintext_surprisal_bits_by_record": [
+            16.373819877482962,
+            20.300693476309217
+          ],
+          "gold_characters": 448,
+          "new_cer": 0.07142857142857142,
+          "new_edits": 32,
+          "oracle_edits": 21,
+          "prior_edits": 430,
+          "records_with_identical_oracle_prediction": 0,
+          "total_conditional_map_surprisal_bits": 36.67451335379218
+        }
+      },
+      "unique_units": 20,
+      "unit_length_counts": {
+        "1": 8,
+        "2": 15
+      }
+    },
+    "B-key2-shuffle": {
+      "splits": {
+        "fit": {
+          "conditional_map_plaintext_surprisal_bits_by_record": [
+            194.86725713580228,
+            206.7232298534949,
+            199.3510506783456,
+            199.43576029063087
+          ],
+          "total_conditional_map_surprisal_bits": 800.3772979582736
+        },
+        "transfer": {
+          "conditional_map_plaintext_surprisal_bits_by_record": [
+            205.65469383707088,
+            209.05625583160926
+          ],
+          "total_conditional_map_surprisal_bits": 414.71094966868014
+        }
+      },
+      "unique_units": 9,
+      "unit_length_counts": {
+        "1": 20,
+        "2": 3
+      }
+    }
+  },
+  "evaluation_sha256": "f820d84b41d78300a8b64afbb171b6fbf8ca3f45c618753bf4597406afd25de1",
+  "experiment": "BLIND-CHANNEL-DEV-003",
+  "new_full_predictions": {
+    "bytes": 17218,
+    "path": "outputs/BLIND-CHANNEL-DEV-003/predictions.json",
+    "sha256": "8756c02f656d8db5e510d88d257bb1dd358b75425d6f160c31653f19b9474185"
+  },
+  "old_full_predictions": {
+    "bytes": 52160,
+    "path": "outputs/BLIND-CHANNEL-DEV-001/evaluation_predictions.json",
+    "sha256": "467a8e8ba53dda25a9993eea858b116e838f3481cbd917e3c03ef1ffb8058ac4"
+  },
+  "posthoc_literal_key_comparison_scope": "After evaluation only: exact generating-unit matches; no equivalence correction or complete-key identifiability claim; no fitting or selection uses this diagnostic.",
+  "scope": "registered posterior and dictionary diagnostics; oracle-string comparisons are post-evaluation descriptive checks, not extra held-out data"
+}
