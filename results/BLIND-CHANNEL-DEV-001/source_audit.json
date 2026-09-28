@@ -1,0 +1,81 @@
+{
+  "absolute_score_tolerance": 1e-10,
+  "auditor_source_sha256": "40812fefc810edf6ef8c69438a9b37222f84da231bf7cd88096a296bb84bac75",
+  "candidate_scores": [
+    {
+      "order": 0,
+      "tau": 1.0,
+      "validation_bits_per_character": 3.9852970529602385
+    },
+    {
+      "order": 1,
+      "tau": 0.25,
+      "validation_bits_per_character": 3.644937528192679
+    },
+    {
+      "order": 1,
+      "tau": 1.0,
+      "validation_bits_per_character": 3.6378742731904525
+    },
+    {
+      "order": 1,
+      "tau": 4.0,
+      "validation_bits_per_character": 3.630787333480913
+    },
+    {
+      "order": 1,
+      "tau": 16.0,
+      "validation_bits_per_character": 3.6235890948673704
+    },
+    {
+      "order": 1,
+      "tau": 64.0,
+      "validation_bits_per_character": 3.6168618294042036
+    },
+    {
+      "order": 1,
+      "tau": 256.0,
+      "validation_bits_per_character": 3.6168986003934616
+    }
+  ],
+  "candidates_checked": 7,
+  "cicero_or_ciphertext_or_answers_opened": false,
+  "corpus_manifest_sha256": "01557ccb84a0d4c0a3970329672252a73854049c392c407f18410f22e193a990",
+  "errors": [],
+  "experiment": "BLIND-CHANNEL-DEV-001",
+  "final_context_rows_checked": 24,
+  "final_probabilities_checked": 552,
+  "final_training_characters": 100000,
+  "final_training_pairs": 99996,
+  "maximum_normalization_error": 0.0,
+  "maximum_probability_delta": 0.0,
+  "maximum_score_delta_bits_per_character": 8.36664071357518e-13,
+  "paid_cost_usd": 0,
+  "scope": "source_only_caesar_virgil",
+  "selected": {
+    "order": 1,
+    "tau": 64.0,
+    "validation_bits_per_character": 3.6168618294042036
+  },
+  "source_input_artifacts": {
+    "caesar": {
+      "bodies": 2,
+      "characters": 50000,
+      "pairs": 49998,
+      "path": "data/processed/blind-channel-development/caesar.json",
+      "selected_text_sha256": "6e6a1e917b3dda8a8bb8c92c93225a07243c54419964cff8b85ae2262adb1a52",
+      "sha256": "971752aacdfc532b65b2d713ef6ef36b4c2a6299c33487b0e8b0d4e68e841749"
+    },
+    "virgil": {
+      "bodies": 2,
+      "characters": 50000,
+      "pairs": 49998,
+      "path": "data/processed/blind-channel-development/virgil.json",
+      "selected_text_sha256": "61a03f368b747d9645776cde4741a35a240f7d7d8967209757910709732706f7",
+      "sha256": "2300486331bea3a8b47574ae92cfaebbd526bd986fc9ce87a871cca950dcb780"
+    }
+  },
+  "source_selection_sha256": "7de1c233b3ea69eb632247062f97db86040666daa13ba73bba28bbb51b3493b0",
+  "status": "pass",
+  "task_manifest_sha256": "8587ae6010de94996bdd57d74ea2e1eee3f71940cdb13c1cc3125adfdfc9acea"
+}

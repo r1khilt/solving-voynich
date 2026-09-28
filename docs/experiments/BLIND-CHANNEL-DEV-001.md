@@ -77,7 +77,13 @@ exact full-path marginal and actual model-code bits. Choose minimum total.
 
 Compare gold-channel exact marginal/joint-Viterbi decoding on each positive,
 with no key optimization; this identifies errors the fixed source prior and
-decoder make even with the right channel. Decode transfer with unchanged
+decoder make even with the right channel. In bijective family A the correct
+channel determines a unique plaintext regardless of source quality, so zero
+oracle errors do not validate the source's ranking of alternative keys. More
+generally, a good oracle decoder and a good model-selection objective are
+different properties. Compare actual learned/gold scores as well as readings;
+the independent pre-fit inference review develops this limitation further.
+Decode transfer with unchanged
 selected channels. Baseline is a proper independent-glyph/geometric model,
 fit only on ciphertext: unigram+.5 rounded to positive counts summing256;
 stop probability rounded to r/4096,r=1..4095 from geometric MLE. Its actual
