@@ -1,0 +1,98 @@
+{
+  "cases": {
+    "A-key1": {
+      "freeze_sha256": "cf7f14329e0c3c8d22d51408f457d885cc1d1a6f00e4248e29c92349206b61f3",
+      "maximum_independent_delta": 0.0,
+      "positive": true,
+      "splits": {
+        "fit": {
+          "decoded_characters": 896,
+          "edits": 0,
+          "exact_records": 4,
+          "gold_characters": 896,
+          "log_likelihood": -2198.1776842184186
+        },
+        "transfer": {
+          "decoded_characters": 448,
+          "edits": 0,
+          "exact_records": 2,
+          "gold_characters": 448,
+          "log_likelihood": -1076.1733644998328
+        }
+      }
+    },
+    "A-key1-shuffle": {
+      "freeze_sha256": "506d399ffa1ecdbf4f064a7527d5fe9c8eaa73c8009a75c831b6089f4cc8c33a",
+      "maximum_independent_delta": 0.0,
+      "positive": false,
+      "splits": {
+        "fit": {
+          "decoded_characters": 896,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2715.3286999857305
+        },
+        "transfer": {
+          "decoded_characters": 448,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1400.6825621215714
+        }
+      }
+    },
+    "A-key2": {
+      "freeze_sha256": "9beb2f77fe796ea4a66fbf7d62ba352045f54dd47d3a2b61421841edc69bddc5",
+      "maximum_independent_delta": 0.0,
+      "positive": true,
+      "splits": {
+        "fit": {
+          "decoded_characters": 896,
+          "edits": 0,
+          "exact_records": 4,
+          "gold_characters": 896,
+          "log_likelihood": -2226.9278609788335
+        },
+        "transfer": {
+          "decoded_characters": 448,
+          "edits": 0,
+          "exact_records": 2,
+          "gold_characters": 448,
+          "log_likelihood": -1084.2746867131461
+        }
+      }
+    },
+    "A-key2-shuffle": {
+      "freeze_sha256": "1af6698f991281eb710fc2b28cfd810f639e94e4d35c15028f0d74f4f34cfad7",
+      "maximum_independent_delta": 0.0,
+      "positive": false,
+      "splits": {
+        "fit": {
+          "decoded_characters": 896,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2755.3838896052835
+        },
+        "transfer": {
+          "decoded_characters": 448,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1424.8167678977143
+        }
+      }
+    }
+  },
+  "experiment": "BLIND-CHANNEL-DEV-002",
+  "full_predictions": {
+    "bytes": 15193,
+    "path": "outputs/BLIND-CHANNEL-DEV-002/predictions.json",
+    "sha256": "42d19fef0c8303bee6ff4839df239a6906b68d3c5ee9b8297f12e8abb372b3bc"
+  },
+  "key_freeze": "05b561391c821a2aaf263859178128db8ce68930",
+  "manifest_sha256": "8587ae6010de94996bdd57d74ea2e1eee3f71940cdb13c1cc3125adfdfc9acea",
+  "source_sha256": "7de1c233b3ea69eb632247062f97db86040666daa13ba73bba28bbb51b3493b0",
+  "status": "exposed_diagnostic_independent_replay_pass"
+}

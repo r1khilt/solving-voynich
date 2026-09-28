@@ -1,0 +1,58 @@
+{
+  "cases": {
+    "A-key1": {
+      "completed_sweeps": 361,
+      "cpu_seconds": 0.915783,
+      "distinct_endpoint_mappings": 8,
+      "endpoint_log_likelihood_max": -2198.177684218418,
+      "endpoint_log_likelihood_min": -2617.331826451069,
+      "endpoints_at_selected_likelihood": 14,
+      "evaluated_neighbors": 91333,
+      "freeze_sha256": "cf7f14329e0c3c8d22d51408f457d885cc1d1a6f00e4248e29c92349206b61f3",
+      "local_endpoints": 16,
+      "seconds": 0.6450067910045618,
+      "verified_trace_sha256": true
+    },
+    "A-key1-shuffle": {
+      "completed_sweeps": 287,
+      "cpu_seconds": 0.8024979999999999,
+      "distinct_endpoint_mappings": 16,
+      "endpoint_log_likelihood_max": -2715.3286999857287,
+      "endpoint_log_likelihood_min": -2764.6071036684793,
+      "endpoints_at_selected_likelihood": 1,
+      "evaluated_neighbors": 72611,
+      "freeze_sha256": "506d399ffa1ecdbf4f064a7527d5fe9c8eaa73c8009a75c831b6089f4cc8c33a",
+      "local_endpoints": 16,
+      "seconds": 0.5826422090030974,
+      "verified_trace_sha256": true
+    },
+    "A-key2": {
+      "completed_sweeps": 361,
+      "cpu_seconds": 0.9680090000000001,
+      "distinct_endpoint_mappings": 7,
+      "endpoint_log_likelihood_max": -2226.9278609788335,
+      "endpoint_log_likelihood_min": -2380.8175105214436,
+      "endpoints_at_selected_likelihood": 15,
+      "evaluated_neighbors": 91333,
+      "freeze_sha256": "9beb2f77fe796ea4a66fbf7d62ba352045f54dd47d3a2b61421841edc69bddc5",
+      "local_endpoints": 16,
+      "seconds": 0.6976985420042183,
+      "verified_trace_sha256": true
+    },
+    "A-key2-shuffle": {
+      "completed_sweeps": 289,
+      "cpu_seconds": 0.8110999999999997,
+      "distinct_endpoint_mappings": 16,
+      "endpoint_log_likelihood_max": -2755.3838896052825,
+      "endpoint_log_likelihood_min": -2826.886405407557,
+      "endpoints_at_selected_likelihood": 1,
+      "evaluated_neighbors": 73117,
+      "freeze_sha256": "1af6698f991281eb710fc2b28cfd810f639e94e4d35c15028f0d74f4f34cfad7",
+      "local_endpoints": 16,
+      "seconds": 0.59038354200311,
+      "verified_trace_sha256": true
+    }
+  },
+  "experiment": "BLIND-CHANNEL-DEV-002",
+  "interpretation": "post-evaluation descriptive trace accounting; selected likelihood ties do not imply identical keys or independently evaluated endpoint accuracy"
+}
