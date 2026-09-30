@@ -1,0 +1,251 @@
+{
+  "baseline_edits": 43,
+  "cases": {
+    "B-key1": {
+      "neural-31103": {
+        "available": true,
+        "decoded_characters": 448,
+        "edits": 6,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          0,
+          6
+        ],
+        "supported_records": 2
+      },
+      "neural-31109": {
+        "available": true,
+        "decoded_characters": 448,
+        "edits": 6,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          0,
+          6
+        ],
+        "supported_records": 2
+      }
+    },
+    "B-key2": {
+      "neural-31103": {
+        "available": true,
+        "decoded_characters": 446,
+        "edits": 4,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          4,
+          0
+        ],
+        "supported_records": 2
+      },
+      "neural-31109": {
+        "available": true,
+        "decoded_characters": 447,
+        "edits": 2,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          2,
+          0
+        ],
+        "supported_records": 2
+      }
+    },
+    "B-key3": {
+      "neural-31103": {
+        "available": true,
+        "decoded_characters": 447,
+        "edits": 7,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          2,
+          5
+        ],
+        "supported_records": 2
+      },
+      "neural-31109": {
+        "available": true,
+        "decoded_characters": 447,
+        "edits": 3,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          0,
+          3
+        ],
+        "supported_records": 2
+      }
+    },
+    "B-key4": {
+      "neural-31103": {
+        "available": true,
+        "decoded_characters": 449,
+        "edits": 2,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          2,
+          0
+        ],
+        "supported_records": 2
+      },
+      "neural-31109": {
+        "available": true,
+        "decoded_characters": 448,
+        "edits": 0,
+        "exact_records": 2,
+        "gold_characters": 448,
+        "record_edits": [
+          0,
+          0
+        ],
+        "supported_records": 2
+      }
+    },
+    "B-key5": {
+      "neural-31103": {
+        "available": true,
+        "decoded_characters": 448,
+        "edits": 4,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          4,
+          0
+        ],
+        "supported_records": 2
+      },
+      "neural-31109": {
+        "available": true,
+        "decoded_characters": 448,
+        "edits": 4,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          4,
+          0
+        ],
+        "supported_records": 2
+      }
+    },
+    "B-key6": {
+      "neural-31103": {
+        "available": true,
+        "decoded_characters": 446,
+        "edits": 3,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          1,
+          2
+        ],
+        "supported_records": 2
+      },
+      "neural-31109": {
+        "available": true,
+        "decoded_characters": 447,
+        "edits": 2,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "record_edits": [
+          0,
+          2
+        ],
+        "supported_records": 2
+      }
+    },
+    "B-key7": {
+      "neural-31103": {
+        "available": true,
+        "decoded_characters": 448,
+        "edits": 0,
+        "exact_records": 2,
+        "gold_characters": 448,
+        "record_edits": [
+          0,
+          0
+        ],
+        "supported_records": 2
+      },
+      "neural-31109": {
+        "available": true,
+        "decoded_characters": 448,
+        "edits": 0,
+        "exact_records": 2,
+        "gold_characters": 448,
+        "record_edits": [
+          0,
+          0
+        ],
+        "supported_records": 2
+      }
+    },
+    "B-key8": {
+      "neural-31103": {
+        "available": true,
+        "decoded_characters": 448,
+        "edits": 12,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          8,
+          4
+        ],
+        "supported_records": 2
+      },
+      "neural-31109": {
+        "available": true,
+        "decoded_characters": 449,
+        "edits": 12,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          8,
+          4
+        ],
+        "supported_records": 2
+      }
+    }
+  },
+  "development_clauses": {
+    "all_sixteen_case_model_predictions_complete_audited": true,
+    "both_seeds_strictly_improve_43_edit_baseline": true,
+    "both_seeds_support_all_records": true,
+    "neither_seed_has_a_key_above_five_percent": true
+  },
+  "development_gate": "PASS",
+  "experiment": "KEY-BANK-NEURAL-002",
+  "freeze": "d76e9106d42bc84181ae157852e984794f9eaf85",
+  "independent_edit_checks": 32,
+  "not_fresh_or_null_qualification": true,
+  "resources": {
+    "cpu_seconds": 0.4453259999999999,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 292454400,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.4616780829965137
+  },
+  "totals": {
+    "neural-31103": {
+      "edits": 38,
+      "exact_records": 6,
+      "gold_characters": 3584,
+      "supported_records": 16
+    },
+    "neural-31109": {
+      "edits": 29,
+      "exact_records": 9,
+      "gold_characters": 3584,
+      "supported_records": 16
+    }
+  }
+}

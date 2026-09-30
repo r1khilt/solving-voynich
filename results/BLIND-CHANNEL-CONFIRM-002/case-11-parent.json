@@ -1,0 +1,354 @@
+{
+  "baseline": {
+    "counts": [
+      34,
+      28,
+      47,
+      39,
+      51,
+      57
+    ],
+    "denominator": 256,
+    "family": "iid_glyph_geometric",
+    "glyph_alphabet": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "model_bits": 47,
+    "model_code": "10000000010010100000101010001011000010111101100",
+    "stop_count": 10,
+    "stop_denominator": 4096
+  },
+  "case": "case-11",
+  "data_freeze": "592c177d364d8b3ddd6883177afadd01354e1eab",
+  "fit": {
+    "bytes": 2235,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-002/case-11/fit.json",
+    "sha256": "69484d1734267481cec85b05e5deb6059aa34c9d1e4ceedb55586e12b75c6a2a"
+  },
+  "frequency_units": [
+    "D",
+    "D",
+    "A",
+    "E",
+    "F",
+    "B",
+    "A",
+    "F",
+    "E",
+    "D",
+    "B",
+    "D",
+    "E",
+    "C",
+    "F",
+    "C",
+    "F",
+    "B",
+    "A",
+    "C",
+    "E",
+    "C",
+    "A"
+  ],
+  "independent_final_score_deltas": [
+    1.3642420526593924e-12,
+    4.547473508864641e-13
+  ],
+  "score": {
+    "data_bits": 4134.556476572459,
+    "log_likelihood": -2865.8561646020617,
+    "model_bits": 145,
+    "total_bits": 4279.556476572459
+  },
+  "source_freeze": "770d383eef06c1d8d5d6159570c7f0ecc563a46e",
+  "stage1_accounting": {
+    "accepted_move_counts": {
+      "replace": 246,
+      "swap": 117
+    },
+    "best_is_certified_local_optimum": true,
+    "completed_sweeps": 379,
+    "configured_wall_seconds": 300.0,
+    "evaluated_neighbors": 446916,
+    "initialization_methods": {
+      "random_singleton_coverage_plus_uniform_pool": 15,
+      "source_start_and_glyph_frequency_singletons": 1
+    },
+    "kernel_fallbacks": 0,
+    "local_optima": 16,
+    "minimum_recorded_score": {
+      "data_bits": 4079.7146380188806,
+      "log_likelihood": -2827.8426988319247,
+      "model_bits": 145,
+      "total_bits": 4224.714638018881
+    },
+    "move_counts": {
+      "replace": 357397,
+      "swap": 89519
+    },
+    "requested_restarts": 16,
+    "restart_details": [
+      {
+        "accepted_moves": 12,
+        "completed_sweeps": 13,
+        "method": "source_start_and_glyph_frequency_singletons",
+        "neighbors": 15152,
+        "restart": 0,
+        "seed": 3834710559760266112,
+        "supported": true,
+        "sweeps": 13
+      },
+      {
+        "accepted_moves": 19,
+        "completed_sweeps": 20,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 23517,
+        "restart": 1,
+        "seed": 13176107366016666577,
+        "supported": true,
+        "sweeps": 20
+      },
+      {
+        "accepted_moves": 30,
+        "completed_sweeps": 31,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 36610,
+        "restart": 2,
+        "seed": 5375923458720789413,
+        "supported": true,
+        "sweeps": 31
+      },
+      {
+        "accepted_moves": 18,
+        "completed_sweeps": 19,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 22510,
+        "restart": 3,
+        "seed": 15542800910581557068,
+        "supported": true,
+        "sweeps": 19
+      },
+      {
+        "accepted_moves": 22,
+        "completed_sweeps": 23,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 27152,
+        "restart": 4,
+        "seed": 17389514589876942710,
+        "supported": true,
+        "sweeps": 23
+      },
+      {
+        "accepted_moves": 23,
+        "completed_sweeps": 24,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 28223,
+        "restart": 5,
+        "seed": 2909659062040610663,
+        "supported": true,
+        "sweeps": 24
+      },
+      {
+        "accepted_moves": 26,
+        "completed_sweeps": 27,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 31911,
+        "restart": 6,
+        "seed": 12905410861258339689,
+        "supported": true,
+        "sweeps": 27
+      },
+      {
+        "accepted_moves": 23,
+        "completed_sweeps": 24,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 28308,
+        "restart": 7,
+        "seed": 153832518787059258,
+        "supported": true,
+        "sweeps": 24
+      },
+      {
+        "accepted_moves": 25,
+        "completed_sweeps": 26,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 30548,
+        "restart": 8,
+        "seed": 14229932397419285328,
+        "supported": true,
+        "sweeps": 26
+      },
+      {
+        "accepted_moves": 25,
+        "completed_sweeps": 26,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 30647,
+        "restart": 9,
+        "seed": 11841615491006113819,
+        "supported": true,
+        "sweeps": 26
+      },
+      {
+        "accepted_moves": 27,
+        "completed_sweeps": 28,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 33019,
+        "restart": 10,
+        "seed": 13435328982380082447,
+        "supported": true,
+        "sweeps": 28
+      },
+      {
+        "accepted_moves": 20,
+        "completed_sweeps": 21,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 24748,
+        "restart": 11,
+        "seed": 1010137241378278613,
+        "supported": true,
+        "sweeps": 21
+      },
+      {
+        "accepted_moves": 26,
+        "completed_sweeps": 27,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 31913,
+        "restart": 12,
+        "seed": 8706565637953094334,
+        "supported": true,
+        "sweeps": 27
+      },
+      {
+        "accepted_moves": 22,
+        "completed_sweeps": 23,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 27170,
+        "restart": 13,
+        "seed": 2755903544380763435,
+        "supported": true,
+        "sweeps": 23
+      },
+      {
+        "accepted_moves": 25,
+        "completed_sweeps": 26,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 30748,
+        "restart": 14,
+        "seed": 15208818763697840575,
+        "supported": true,
+        "sweeps": 26
+      },
+      {
+        "accepted_moves": 20,
+        "completed_sweeps": 21,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 24740,
+        "restart": 15,
+        "seed": 15457581133452781760,
+        "supported": true,
+        "sweeps": 21
+      }
+    ],
+    "returned_minimum_verified": true,
+    "score": {
+      "data_bits": 4079.7146380188824,
+      "log_likelihood": -2827.842698831926,
+      "model_bits": 145,
+      "total_bits": 4224.714638018882
+    },
+    "scored_initializations": 16,
+    "selected_length_counts": {
+      "1": 21,
+      "2": 2
+    },
+    "selected_unique_units": 8,
+    "status": "verified",
+    "stop_reason": "budget_exhausted",
+    "supported_initializations": 16,
+    "unit_pool_size": 42,
+    "wall_seconds": 171.20193670800654
+  },
+  "stage1_score": {
+    "data_bits": 4079.7146380188824,
+    "log_likelihood": -2827.842698831926,
+    "model_bits": 145,
+    "total_bits": 4224.714638018882
+  },
+  "stage1_summary": {
+    "bytes": 10317,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-002/case-11-stage1-summary.json.gz",
+    "sha256": "506ca47a450dd960e85f18626642b440f012d8cbed0cf7b9129435b0352d659c"
+  },
+  "stage1_trace": {
+    "bytes": 15134687,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-002/case-11-stage1.json.gz",
+    "sha256": "d42d55dbf4ddbb2fa563b5537f30accad4b347acb5938c62b21a52964deec01e"
+  },
+  "stage1_units": [
+    "D",
+    "F",
+    "A",
+    "B",
+    "E",
+    "AD",
+    "E",
+    "E",
+    "F",
+    "F",
+    "F",
+    "D",
+    "E",
+    "A",
+    "A",
+    "C",
+    "F",
+    "B",
+    "C",
+    "C",
+    "CB",
+    "B",
+    "E"
+  ],
+  "stage2_accounting": {
+    "all_neighbor_likelihoods_independently_replayed": false,
+    "complete_sweeps": 1,
+    "final_local_certificate": false,
+    "neighbors_accounted": 1973
+  },
+  "stage2_stop": "time_limit",
+  "stage2_trace": {
+    "bytes": 67129,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-002/case-11-stage2.json.gz",
+    "sha256": "9fd8f1d6f8109284a81b775e5f3ff714c662cfa40b6c5ac5602a4c08c0816ca2"
+  },
+  "units": [
+    "F",
+    "F",
+    "A",
+    "B",
+    "E",
+    "AD",
+    "E",
+    "E",
+    "D",
+    "F",
+    "D",
+    "F",
+    "E",
+    "A",
+    "A",
+    "C",
+    "F",
+    "B",
+    "C",
+    "C",
+    "CB",
+    "B",
+    "E"
+  ]
+}

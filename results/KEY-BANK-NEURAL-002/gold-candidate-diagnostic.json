@@ -1,0 +1,207 @@
+{
+  "audit_code_sha256": "7453f378722cde93189f4310356785c209d9d0d550ac78eb79bead8831995781",
+  "cases": {
+    "B-key1": {
+      "arms": {
+        "neural-31103": {
+          "edits": 6,
+          "exact_records": 1,
+          "restricted_winner_margin_nats": 0.35470559467648854,
+          "selected_equals_gold_tuple": false
+        },
+        "neural-31109": {
+          "edits": 6,
+          "exact_records": 1,
+          "restricted_winner_margin_nats": 0.9001694142524457,
+          "selected_equals_gold_tuple": false
+        }
+      },
+      "gold_index": null,
+      "gold_whole_tuple_in_candidate_union": false,
+      "statistical_edits": 8
+    },
+    "B-key2": {
+      "arms": {
+        "neural-31103": {
+          "edits": 4,
+          "exact_records": 1,
+          "restricted_winner_margin_nats": 1.8648194542475949,
+          "selected_equals_gold_tuple": false
+        },
+        "neural-31109": {
+          "edits": 2,
+          "exact_records": 1,
+          "restricted_winner_margin_nats": 0.08827374854809023,
+          "selected_equals_gold_tuple": false
+        }
+      },
+      "gold_index": null,
+      "gold_whole_tuple_in_candidate_union": false,
+      "statistical_edits": 6
+    },
+    "B-key3": {
+      "arms": {
+        "neural-31103": {
+          "edits": 7,
+          "exact_records": 0,
+          "restricted_winner_margin_nats": 2.019025496786071,
+          "selected_equals_gold_tuple": false
+        },
+        "neural-31109": {
+          "edits": 3,
+          "exact_records": 1,
+          "restricted_winner_margin_nats": 1.813769402443313,
+          "selected_equals_gold_tuple": false
+        }
+      },
+      "gold_index": null,
+      "gold_whole_tuple_in_candidate_union": false,
+      "statistical_edits": 7
+    },
+    "B-key4": {
+      "arms": {
+        "neural-31103": {
+          "edits": 2,
+          "exact_records": 1,
+          "observed_wrong_choice_with_gold_available": true,
+          "restricted_winner_margin_nats": 1.662636571760686,
+          "selected_equals_gold_tuple": false,
+          "selected_minus_gold_key_mass_nats": 0.0,
+          "selected_minus_gold_score_nats": 1.662636571760686,
+          "selected_minus_gold_source_nats": 1.662636571760686
+        },
+        "neural-31109": {
+          "edits": 0,
+          "exact_records": 2,
+          "observed_wrong_choice_with_gold_available": false,
+          "restricted_winner_margin_nats": 5.812087034419392,
+          "selected_equals_gold_tuple": true,
+          "selected_minus_gold_key_mass_nats": 0.0,
+          "selected_minus_gold_score_nats": 0.0,
+          "selected_minus_gold_source_nats": 0.0
+        }
+      },
+      "gold_index": 7531,
+      "gold_whole_tuple_in_candidate_union": true,
+      "statistical_edits": 1,
+      "statistical_selected_minus_gold_nats": 1.0774726957348548
+    },
+    "B-key5": {
+      "arms": {
+        "neural-31103": {
+          "edits": 4,
+          "exact_records": 1,
+          "observed_wrong_choice_with_gold_available": true,
+          "restricted_winner_margin_nats": 1.7453522825127266,
+          "selected_equals_gold_tuple": false,
+          "selected_minus_gold_key_mass_nats": -2.923130359729072,
+          "selected_minus_gold_score_nats": 3.375896745321711,
+          "selected_minus_gold_source_nats": 6.2990271050507545
+        },
+        "neural-31109": {
+          "edits": 4,
+          "exact_records": 1,
+          "observed_wrong_choice_with_gold_available": true,
+          "restricted_winner_margin_nats": 0.9046431627597258,
+          "selected_equals_gold_tuple": false,
+          "selected_minus_gold_key_mass_nats": -2.923130359729072,
+          "selected_minus_gold_score_nats": 6.224295833260044,
+          "selected_minus_gold_source_nats": 9.147426192989087
+        }
+      },
+      "gold_index": 6,
+      "gold_whole_tuple_in_candidate_union": true,
+      "statistical_edits": 2,
+      "statistical_selected_minus_gold_nats": 3.601623086391669
+    },
+    "B-key6": {
+      "arms": {
+        "neural-31103": {
+          "edits": 3,
+          "exact_records": 0,
+          "observed_wrong_choice_with_gold_available": true,
+          "restricted_winner_margin_nats": 0.7408386516691507,
+          "selected_equals_gold_tuple": false,
+          "selected_minus_gold_key_mass_nats": -2.082278888303083,
+          "selected_minus_gold_score_nats": 3.2663226317719136,
+          "selected_minus_gold_source_nats": 5.348601520075022
+        },
+        "neural-31109": {
+          "edits": 2,
+          "exact_records": 1,
+          "observed_wrong_choice_with_gold_available": true,
+          "restricted_winner_margin_nats": 1.8360202674527955,
+          "selected_equals_gold_tuple": false,
+          "selected_minus_gold_key_mass_nats": 0.0,
+          "selected_minus_gold_score_nats": 3.820699716501167,
+          "selected_minus_gold_source_nats": 3.820699716501167
+        }
+      },
+      "gold_index": 392,
+      "gold_whole_tuple_in_candidate_union": true,
+      "statistical_edits": 0,
+      "statistical_selected_minus_gold_nats": 0.0
+    },
+    "B-key7": {
+      "arms": {
+        "neural-31103": {
+          "edits": 0,
+          "exact_records": 2,
+          "observed_wrong_choice_with_gold_available": false,
+          "restricted_winner_margin_nats": 9.13365589595162,
+          "selected_equals_gold_tuple": true,
+          "selected_minus_gold_key_mass_nats": 0.0,
+          "selected_minus_gold_score_nats": 0.0,
+          "selected_minus_gold_source_nats": 0.0
+        },
+        "neural-31109": {
+          "edits": 0,
+          "exact_records": 2,
+          "observed_wrong_choice_with_gold_available": false,
+          "restricted_winner_margin_nats": 5.927064251390902,
+          "selected_equals_gold_tuple": true,
+          "selected_minus_gold_key_mass_nats": 0.0,
+          "selected_minus_gold_score_nats": 0.0,
+          "selected_minus_gold_source_nats": 0.0
+        }
+      },
+      "gold_index": 5507,
+      "gold_whole_tuple_in_candidate_union": true,
+      "statistical_edits": 2,
+      "statistical_selected_minus_gold_nats": 1.283442966550865
+    },
+    "B-key8": {
+      "arms": {
+        "neural-31103": {
+          "edits": 12,
+          "exact_records": 0,
+          "restricted_winner_margin_nats": 0.6389514901366056,
+          "selected_equals_gold_tuple": false
+        },
+        "neural-31109": {
+          "edits": 12,
+          "exact_records": 0,
+          "restricted_winner_margin_nats": 0.5031295990145281,
+          "selected_equals_gold_tuple": false
+        }
+      },
+      "gold_index": null,
+      "gold_whole_tuple_in_candidate_union": false,
+      "statistical_edits": 17
+    }
+  },
+  "diagnostic_only_after_gold_freeze": true,
+  "evaluation": {
+    "bytes": 5612,
+    "path": "results/KEY-BANK-NEURAL-002/evaluation.json",
+    "sha256": "bd4697c26a945ce160458bfe27e4ae7b1679a3355991a10957404b577dded0e3"
+  },
+  "gold_available_cases": 4,
+  "no_additional_neural_scoring": true,
+  "no_candidate_or_criterion_changes": true,
+  "predictions": {
+    "bytes": 15411,
+    "path": "results/KEY-BANK-NEURAL-002/predictions.json",
+    "sha256": "53263392a5e121fae43b7a9d3c17c9350791a23a8d159635b539f5c81edde340"
+  }
+}

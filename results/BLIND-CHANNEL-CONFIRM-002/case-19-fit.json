@@ -1,0 +1,129 @@
+{
+  "all_positive_weights_retained_in_log_domain": true,
+  "bank": {
+    "bytes": 521059,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-002/case-19-bank.json.gz",
+    "sha256": "9f7cee181d512ef6d4d1c315cc88c76f77c7335b5daf63048bb905e80d7cae16"
+  },
+  "bank_size": 4610,
+  "best_index": 4530,
+  "best_units": [
+    "F",
+    "B",
+    "A",
+    "E",
+    "A",
+    "B",
+    "C",
+    "C",
+    "E",
+    "B",
+    "B",
+    "F",
+    "C",
+    "C",
+    "E",
+    "A",
+    "A",
+    "D",
+    "A",
+    "B",
+    "D",
+    "C",
+    "D"
+  ],
+  "case": "case-19",
+  "complete_rounds": 4,
+  "data_freeze": "592c177d364d8b3ddd6883177afadd01354e1eab",
+  "experiment": "BLIND-CHANNEL-CONFIRM-002",
+  "finite_keys": 4610,
+  "fit": {
+    "bytes": 2238,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-002/case-19/fit.json",
+    "sha256": "56da56cfeed083fcf1a7e8dc1049cfe75a17f5e838ed79ff3661c30cbce468f9"
+  },
+  "fit_log_normalizer_restricted_not_full_family_evidence": -2956.0977068585285,
+  "global_optimality_claimed": false,
+  "maximum_rounds": 4,
+  "maximum_weight": 0.11814330229734471,
+  "native_benchmark": {
+    "bytes": 25535,
+    "path": "results/NATIVE-SUFFIX-001/result.json",
+    "sha256": "0c32447bc7c18efad82ff58cb8b80b1782be629ea40d5393932dbe5dbbeee89b"
+  },
+  "parent": {
+    "bytes": 8433,
+    "path": "results/BLIND-CHANNEL-CONFIRM-002/case-19-parent.json",
+    "sha256": "004ed8c7d7d988750b73f88111dbb81f83a0e99334ddfbd0c349214ea4bc8a52"
+  },
+  "progress": {
+    "bytes": 472063,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-002/case-19-bank-progress.jsonl.gz",
+    "sha256": "6e09b000f1b69523d0e95839fcb1f0d7c118a7f94b44760f57c0620fef5f1980"
+  },
+  "resources": {
+    "cpu_seconds": 652.547505,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1045954560,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 653.7776620839722
+  },
+  "rounds": [
+    {
+      "accepted": true,
+      "complete_neighborhood": true,
+      "cumulative_unique_keys": 1161,
+      "gain_nats": 31.839173024070078,
+      "member_count": 1161,
+      "parent_index": 0,
+      "round": 0,
+      "selected_index": 49
+    },
+    {
+      "accepted": true,
+      "complete_neighborhood": true,
+      "cumulative_unique_keys": 2312,
+      "gain_nats": 20.382015583187695,
+      "member_count": 1161,
+      "parent_index": 49,
+      "round": 1,
+      "selected_index": 1186
+    },
+    {
+      "accepted": true,
+      "complete_neighborhood": true,
+      "cumulative_unique_keys": 3461,
+      "gain_nats": 8.721657021128976,
+      "member_count": 1161,
+      "parent_index": 1186,
+      "round": 2,
+      "selected_index": 2406
+    },
+    {
+      "accepted": true,
+      "complete_neighborhood": true,
+      "cumulative_unique_keys": 4610,
+      "gain_nats": 1.2639079288510402,
+      "member_count": 1161,
+      "parent_index": 2406,
+      "round": 3,
+      "selected_index": 4530
+    }
+  ],
+  "search_center_index": 4530,
+  "source": {
+    "bytes": 2098,
+    "path": "results/LATIN-SOURCE-COMPACT-001/large.json",
+    "sha256": "91df142e8229ca60f0e9a52ffe7e803bd7f0c8a983f5cd4e41b47fd04167377b"
+  },
+  "source_freeze": "770d383eef06c1d8d5d6159570c7f0ecc563a46e",
+  "status": "complete_fit_only",
+  "stop_reason": "round_limit",
+  "tolerance_nats": 1e-06
+}

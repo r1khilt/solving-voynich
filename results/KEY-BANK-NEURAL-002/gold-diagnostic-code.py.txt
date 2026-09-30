@@ -1,0 +1,39 @@
+import json,math,hashlib
+from pathlib import Path
+from scripts.run_key_bank_neural001 import NAMES,ARMS,MANIFEST
+from scripts.run_key_bank_neural002 import OUT
+from scripts.run_blind_channel_dev001 import checked_artifact
+from scripts.run_blind_channel_dev004 import load_archive,save_new
+from scripts.run_latin_source_model001 import ROOT,artifact
+p=json.loads((OUT/'predictions.json').read_text());e=json.loads((OUT/'evaluation.json').read_text())
+manifest=json.loads((ROOT/MANIFEST).read_text());old=json.loads((ROOT/'results/KEY-BANK-READ-002/evaluation.json').read_text())
+rows={}
+for name in NAMES:
+ truth=checked_artifact(manifest['cases'][name]['artifacts']['answer'])['plaintext']['transfer']
+ prepared=load_archive(p['cases'][name]['prepared']);lookup={t:i for i,t in enumerate(prepared['texts'])}
+ target=[lookup.get(t) for t in truth]
+ matches=[i for i,c in enumerate(prepared['candidates']) if c['text_indices']==target]
+ assert len(matches)<=1
+ stat=prepared['statistical_best_index'];scores_stat=[c['statistical_source_log_probability']+c['key_log_mass'] for c in prepared['candidates']]
+ row={'statistical_edits':old['cases'][name]['arms']['mixture']['edits'],
+      'gold_whole_tuple_in_candidate_union':bool(matches),'gold_index':matches[0] if matches else None,'arms':{}}
+ if matches:row['statistical_selected_minus_gold_nats']=scores_stat[stat]-scores_stat[matches[0]]
+ for arm in ARMS:
+  r=json.loads((ROOT/p['cases'][name]['predictions'][arm]['path']).read_text());v=load_archive(r['readings']);selected=v['candidate_index']
+  d={'edits':e['cases'][name][arm]['edits'],'exact_records':e['cases'][name][arm]['exact_records'],
+     'restricted_winner_margin_nats':v['margin_nats'],'selected_equals_gold_tuple':v['plaintexts']==truth}
+  if matches:
+   gold=matches[0];sc=v['record_scores'];ss=math.fsum(sc[i] for i in prepared['candidates'][selected]['text_indices']);gs=math.fsum(sc[i] for i in target)
+   keygap=prepared['candidates'][selected]['key_log_mass']-prepared['candidates'][gold]['key_log_mass']
+   d.update({'selected_minus_gold_source_nats':ss-gs,'selected_minus_gold_key_mass_nats':keygap,
+     'selected_minus_gold_score_nats':v['candidate_scores'][selected]-v['candidate_scores'][gold],
+     'observed_wrong_choice_with_gold_available':v['plaintexts']!=truth})
+   assert abs(d['selected_minus_gold_score_nats']-(ss-gs+keygap))<1e-9
+  row['arms'][arm]=d
+ rows[name]=row
+result={'evaluation':artifact(OUT/'evaluation.json'),'predictions':artifact(OUT/'predictions.json'),'cases':rows,
+ 'diagnostic_only_after_gold_freeze':True,'no_additional_neural_scoring':True,'no_candidate_or_criterion_changes':True,
+ 'gold_available_cases':sum(r['gold_whole_tuple_in_candidate_union'] for r in rows.values()),
+ 'audit_code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+save_new(OUT/'gold-candidate-diagnostic.json',result)
+print(json.dumps(rows,indent=2))

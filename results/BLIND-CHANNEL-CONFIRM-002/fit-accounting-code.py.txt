@@ -1,0 +1,43 @@
+import hashlib,json
+from pathlib import Path
+from scripts.confirm002_common import fit_inputs,NAMES,OUT,PATHS
+from scripts.run_blind_channel_dev001 import require_frozen
+from scripts.run_blind_channel_dev004 import load_archive,save_new
+from scripts.run_latin_source_model001 import ROOT,artifact
+freeze='592c177d364d8b3ddd6883177afadd01354e1eab'
+require_frozen(freeze,PATHS)
+panel,_=fit_inputs(freeze)
+c=json.loads((OUT/'fit-campaign.json').read_text());assert c['status']=='complete'
+assert c['data_freeze']==freeze and c['source_freeze']==panel['source_freeze']
+assert [r['case'] for r in c['results']]==list(NAMES)
+rows={};keys=finite=records=rounds=0;cpu_fit=cpu_audit=wall_fit=wall_audit=0.;rss=0;delta1=delta2=0.
+for process in c['results']:
+ name=process['case'];assert process['fit_returncode']==process['audit_returncode']==0
+ assert json.loads((OUT/f'{name}-fit-process.json').read_text())==process
+ path=OUT/f'{name}-fit.json';r=json.loads(path.read_text());a=json.loads((OUT/f'{name}-fit-audit.json').read_text())
+ assert r['status']=='complete_fit_only' and r['case']==name and r['data_freeze']==freeze and r['fit']==panel['cases'][name]['fit']
+ assert a['status']=='PASS' and a['result']==artifact(path) and a['auditor']==artifact(ROOT/'scripts/audit_blind_channel_confirm002.py')
+ assert a['no_transfer_or_gold_opened'] and not a['all_candidate_likelihoods_independently_replayed']
+ for field in ('bank','progress','parent','fit','source','native_benchmark'):
+  assert artifact(ROOT/r[field]['path'])==r[field]
+ parent=json.loads((ROOT/r['parent']['path']).read_text())
+ for field in ('stage1_trace','stage2_trace','stage1_summary'):
+  assert artifact(ROOT/parent[field]['path'])==parent[field]
+ bank=load_archive(r['bank']);assert len(bank['bank'])==r['bank_size']==a['candidates_accounted']
+ active=sum(v['log_weight'] is not None for v in bank['bank']); keys+=r['bank_size'];finite+=active
+ rounds+=r['complete_rounds'];records+=a['independent_records']
+ cpu_fit+=r['resources']['cpu_seconds'];cpu_audit+=a['resources']['cpu_seconds']
+ wall_fit+=r['resources']['wall_seconds'];wall_audit+=a['resources']['wall_seconds']
+ rss=max(rss,r['resources']['peak_rss_bytes'],a['resources']['peak_rss_bytes'])
+ delta1=max(delta1,a['initial_maximum_delta']);delta2=max(delta2,a['maximum_delta'])
+ rows[name]={'fit':artifact(path),'audit':artifact(OUT/f'{name}-fit-audit.json'),'process':artifact(OUT/f'{name}-fit-process.json'),
+  'bank':r['bank'],'progress':r['progress'],'candidate_keys':r['bank_size'],'finite_keys':active,'complete_rounds':r['complete_rounds']}
+result={'status':'PASS','data_freeze':freeze,'source_freeze':panel['source_freeze'],'campaign':artifact(OUT/'fit-campaign.json'),
+ 'cases':rows,'complete_audited_cases':32,'candidate_keys_casewise':keys,'finite_weight_keys_casewise':finite,
+ 'complete_neighborhoods':rounds,'sampled_independent_large_source_records':records,'initial_selected_record_checks':256,
+ 'maximum_initial_delta_nats':delta1,'maximum_large_source_delta_nats':delta2,
+ 'sum_fit_wall_seconds':wall_fit,'sum_audit_wall_seconds':wall_audit,'sum_fit_cpu_seconds':cpu_fit,'sum_audit_cpu_seconds':cpu_audit,
+ 'maximum_worker_peak_rss_bytes':rss,'frozen_source_paths':len(PATHS),'no_transfer_or_gold_opened':True,'paid_spend_usd':0,
+ 'audit_code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+save_new(OUT/'fit-accounting.json',result)
+print(json.dumps({k:v for k,v in result.items() if k!='cases'},indent=2))
