@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-30 PDT (four source fits audited; fresh supplied-key reader passes; exposed unknown-key bank reading improves309→43edits; expanded reading43edits with complete noise screen; fresh unknown-key qualification still required; no Voynich decipherment).
+Last updated: 2026-09-30 PDT (fresh unknown-key CONFIRM-002 registered; implementation validated; source publication/preparation next; no Voynich decipherment).
 
 ## Current state
+
+- **BLIND-CHANNEL-CONFIRM-002 registered, not run:** New16keys+16pairedshuffles, fourNeposfit/twoApuleiustransfer224-letterwindows/key, wholepreviousNEURALrecords excluded and64-letter protected-duplicate filter. Same original order1/order3 search from scratch, then unchanged four-round large-source bank and fixedk8 marginal reader. FourCPUworkers, bounded local30CPU-hour planning ceiling (expected1–2wallhours),0paid. Recoverymean≤2%,eachkey≤5%,oracleexcess≤2points,all32auditedcomplete,eachbeatsweakfrequency/order3; separatepredictiveiid screenall16positive/0null. Source/panel/fits/predictions must each bepublishedbeforedependentstage. Newpasses/keys, notnewauthors; proceduralblindnessonly. Full2226+23subtests/10skip; newartificialchecks validated. No registeredfreshdata/key construction or empiricaljob yet. Nextpublishsource→prepare/audit/freeze→fit. `docs/experiments/BLIND-CHANNEL-CONFIRM-002.md`, NB-277.
 
 - **KEY-BANK-READ-002 exposed development PASS, modest45→43edits:** Source583b711/predictionadafb31publishedbeforedependentstages. All16evidences and8positivefour-armreadingscomplete; original/fitpoint/joint/marginal309/264/45/43of3,584,6exact/16supported,worstkey17/448. Key48→1butkey812→17;sixunchanged. All8positivesbeatfrozeniid/all8shuffleslose. Everytruewholetexttuplenowhasbanksupport; all8floatingMAPboundsseparated, sevenremainingwrongcases favoredbylanguage-sourceprobability. Key8sourcegap−36.132nats overwhelms+7.014key-supportadvantage. Widersearchalonewillnotfixcurrentobjective. Allaudits/full2,199+23subtestsPASS/10skip,14.90minprediction,0paid. Allhandlesterminal;nofreshqualification/Voynichclaim. Nextfreshunknown-keypipelineevaluation; separatelytestsource/decisionerror, avoidmoreexposedneighborhoodtuning. `docs/experiments/KEY-BANK-READ-002-results.md`, NB-273–276. Decision-riskmemo/diagnosticarenotimplementedMBRorobservedbenefit.
 
