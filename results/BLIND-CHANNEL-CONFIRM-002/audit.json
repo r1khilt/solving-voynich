@@ -1,0 +1,1069 @@
+{
+  "auditor": {
+    "bytes": 17579,
+    "path": "scripts/audit_blind_channel_confirm002.py",
+    "sha256": "f40d57509165c162e3af83b2e27c3e10e07bedb1c6e18678f0726a2e2ff6e5d0"
+  },
+  "campaign": {
+    "bytes": 2192,
+    "path": "results/BLIND-CHANNEL-CONFIRM-002/campaign.json",
+    "sha256": "481c256d8f122cf15367259e91517cb96abade4588078431e83ecb34a44f21ad"
+  },
+  "cases": {
+    "case-01": {
+      "active_keys": 4381,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1549,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-01-evidence.json",
+        "sha256": "ae16565c1b3073b7b3fe60ff5563d810068f01e7d46c2c0d1c853d7726764c68"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 1.2505552149377763e-12,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-01",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 4381,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 35048,
+        "literal_candidate_key_checks": 284765,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 21662
+      },
+      "result": {
+        "bytes": 2303,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-01.json",
+        "sha256": "7f9419c88d4d04cd8b5f71c895afdb52f457b22c8de0927b4398e72f4143f430"
+      },
+      "sampled_bank_indices": [
+        0,
+        2352,
+        4586,
+        4665
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4381
+    },
+    "case-02": {
+      "active_keys": 4602,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1562,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-02-evidence.json",
+        "sha256": "f27b9c3a9d636b159316de2cc7ea669928b82a0fd6e158553d24d3a7f76a672c"
+      },
+      "maximum_delta": 5.684341886080801e-13,
+      "process": {
+        "case": "case-02",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1630,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-02.json",
+        "sha256": "903faea3be95513735c6edaf6b5ee91c72a6a03272aa931f97a61bc4d22f18b0"
+      },
+      "sampled_bank_indices": [
+        0,
+        2301,
+        4550,
+        4601
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4602
+    },
+    "case-03": {
+      "active_keys": 4617,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1552,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-03-evidence.json",
+        "sha256": "ff562ebfdbcb39199758badd81abf51b94d7322d8d0bed1d225f98b8d6d75988"
+      },
+      "maximum_delta": 5.684341886080801e-13,
+      "process": {
+        "case": "case-03",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1620,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-03.json",
+        "sha256": "eecdd24c0d86d88f7f5daa3818ca761c1c2174b752481fb4369a0911ce3265d5"
+      },
+      "sampled_bank_indices": [
+        0,
+        2308,
+        3583,
+        4616
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4617
+    },
+    "case-04": {
+      "active_keys": 2173,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1558,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-04-evidence.json",
+        "sha256": "a1003c232d69ca1f7a6c6566140a192ca3c715c55b57bdac14117733c8d18b21"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 4.547473508864641e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-04",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 2173,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 17384,
+        "literal_candidate_key_checks": 141245,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 7711
+      },
+      "result": {
+        "bytes": 2299,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-04.json",
+        "sha256": "dbbf8fe0da0532ea97a6c93c94ad257b85b6fa90cdab0338e20170129600c413"
+      },
+      "sampled_bank_indices": [
+        0,
+        1568,
+        1818,
+        3498
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 2173
+    },
+    "case-05": {
+      "active_keys": 4599,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1563,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-05-evidence.json",
+        "sha256": "79d1d403e90359e5100d4a3b6eda6b22bbe06b968706d4c3b29611f10f262586"
+      },
+      "maximum_delta": 1.3642420526593924e-12,
+      "process": {
+        "case": "case-05",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1631,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-05.json",
+        "sha256": "710f4428fcc4d1061d1cec40fce1edf16ce50111ea95ecf9c650b1b9ddee2f6a"
+      },
+      "sampled_bank_indices": [
+        0,
+        2299,
+        4271,
+        4598
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4599
+    },
+    "case-06": {
+      "active_keys": 4586,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1551,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-06-evidence.json",
+        "sha256": "ee7941c5d1f3e01d4dbbaaf782178441c7c5ca41cabcf89d2cc8b97d8982e7b4"
+      },
+      "maximum_delta": 5.684341886080801e-13,
+      "process": {
+        "case": "case-06",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1619,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-06.json",
+        "sha256": "3c6f91c59ba13b8d4cac0da3beb16c4e097329167ed1e49256d51eb312d0fa7d"
+      },
+      "sampled_bank_indices": [
+        0,
+        2293,
+        4481,
+        4585
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4586
+    },
+    "case-07": {
+      "active_keys": 4562,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1553,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-07-evidence.json",
+        "sha256": "025bf1197f7396e7531becd12750d34991f34532dbfd589ca6ced35ba24d582d"
+      },
+      "maximum_delta": 5.684341886080801e-13,
+      "process": {
+        "case": "case-07",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1621,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-07.json",
+        "sha256": "dd84668dfa276429e7a90e1b1c45f121551a73b93460c34b5ffce2bfe60d1dc7"
+      },
+      "sampled_bank_indices": [
+        0,
+        2281,
+        4445,
+        4561
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4562
+    },
+    "case-08": {
+      "active_keys": 2202,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1554,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-08-evidence.json",
+        "sha256": "5cad5634558e08cb44e786e9c5af116aef71d61ec8e7b59e3098b9aee83756c8"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 6.252776074688882e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-08",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 2202,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 17616,
+        "literal_candidate_key_checks": 145332,
+        "sampled_candidate_tuples": 66,
+        "unique_candidates": 7633
+      },
+      "result": {
+        "bytes": 2289,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-08.json",
+        "sha256": "750d4b997aa8e9a0593ed3d70b617600b7882e4094b15e1add93c53631a72b7f"
+      },
+      "sampled_bank_indices": [
+        0,
+        1584,
+        2302,
+        3489
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 2202
+    },
+    "case-09": {
+      "active_keys": 3850,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1548,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-09-evidence.json",
+        "sha256": "d4543fe0e807647fdf87dc2db1b921c5f0a3f50d40f39ae733053acf2d1285b0"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 5.684341886080801e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-09",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 3850,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 30800,
+        "literal_candidate_key_checks": 250250,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 9708
+      },
+      "result": {
+        "bytes": 2295,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-09.json",
+        "sha256": "a8bfd2fabb0ea58ebc5b230ba0c4ad4bcdcfa4f252b57d4e65510ec22fa6464d"
+      },
+      "sampled_bank_indices": [
+        0,
+        2326,
+        2971,
+        4650
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 3850
+    },
+    "case-10": {
+      "active_keys": 3003,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1557,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-10-evidence.json",
+        "sha256": "84503d5e3d1c57a9259c66c79ac673dd6719905af641188e1138b48d13b92fab"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 5.684341886080801e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-10",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 3003,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 24024,
+        "literal_candidate_key_checks": 195195,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 12039
+      },
+      "result": {
+        "bytes": 2301,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-10.json",
+        "sha256": "448d79753c21ae06fae76b826e78edc78134d1520fd5c56abd904524d7e6caa5"
+      },
+      "sampled_bank_indices": [
+        0,
+        2263,
+        3499,
+        4677
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 3003
+    },
+    "case-11": {
+      "active_keys": 4593,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1564,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-11-evidence.json",
+        "sha256": "def65a57c1c55f18b5fcdf8325e96d1fe3d5d780475eb4b269af97c11f5b3385"
+      },
+      "maximum_delta": 6.821210263296962e-13,
+      "process": {
+        "case": "case-11",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1632,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-11.json",
+        "sha256": "6302e9f40531ae55f5885a6de4ffb70025286dd524f1c55f5c16392b7a251b0b"
+      },
+      "sampled_bank_indices": [
+        0,
+        2296,
+        3940,
+        4592
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4593
+    },
+    "case-12": {
+      "active_keys": 4553,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1552,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-12-evidence.json",
+        "sha256": "dfe68a23e4378b502bf640a6f60d2fd29330bc1baf4dd6a2ab8ed4f734556315"
+      },
+      "maximum_delta": 3.410605131648481e-13,
+      "process": {
+        "case": "case-12",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1620,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-12.json",
+        "sha256": "842e1890271bea3e21e113d5ee2a89671d2ffa21a8777c10040cd8becfdd41c8"
+      },
+      "sampled_bank_indices": [
+        0,
+        2276,
+        4495,
+        4552
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4553
+    },
+    "case-13": {
+      "active_keys": 4398,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1562,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-13-evidence.json",
+        "sha256": "b82d2d594e82923749c0c6a52480d555c3a9889cc9bc93b6d8e9c120e329c768"
+      },
+      "maximum_delta": 1.0231815394945443e-12,
+      "process": {
+        "case": "case-13",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1630,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-13.json",
+        "sha256": "d09c594a6b9ba935cecf88dc637df1e2247e44d966481d263f3f6e2ca4009caf"
+      },
+      "sampled_bank_indices": [
+        0,
+        2281,
+        3912,
+        4561
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4398
+    },
+    "case-14": {
+      "active_keys": 2607,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1549,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-14-evidence.json",
+        "sha256": "1694e0e9e1bc01633702313bc2bdfd54a51d3df5f5627f8f2cd9c0c95dba6e49"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 6.252776074688882e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-14",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 2607,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 20784,
+        "literal_candidate_key_checks": 169455,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 7338
+      },
+      "result": {
+        "bytes": 2295,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-14.json",
+        "sha256": "cdd61185af99808213087177d0594a487614e41b6886a276b0c925dfffdbfead"
+      },
+      "sampled_bank_indices": [
+        0,
+        1741,
+        1811,
+        3484
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 2598
+    },
+    "case-15": {
+      "active_keys": 2565,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1556,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-15-evidence.json",
+        "sha256": "f4a7baad25c14c6a3236f024c8960d079cae895eebe907ed64a9134388559e69"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 7.389644451905042e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-15",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 2565,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 20520,
+        "literal_candidate_key_checks": 166725,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 6735
+      },
+      "result": {
+        "bytes": 2292,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-15.json",
+        "sha256": "7b43b8c7874035d776f6d177ce0085f52a5b38eb1641a81a045451deebb3ab7a"
+      },
+      "sampled_bank_indices": [
+        0,
+        1686,
+        2307,
+        3482
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 2565
+    },
+    "case-16": {
+      "active_keys": 4552,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1563,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-16-evidence.json",
+        "sha256": "dfeff6318ed9977a6737b363458b577dcd2e5dc30eeea7151e8edf1972537b7b"
+      },
+      "maximum_delta": 4.547473508864641e-13,
+      "process": {
+        "case": "case-16",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1631,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-16.json",
+        "sha256": "a8109ffe73bfaeb0af607225a6b80ad05c64d39a99b350965b0beff79769a175"
+      },
+      "sampled_bank_indices": [
+        0,
+        2276,
+        3652,
+        4551
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4552
+    },
+    "case-17": {
+      "active_keys": 4598,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1554,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-17-evidence.json",
+        "sha256": "f1b2e1c796b179a09f64b6f52db849ab4a8979dbb89a18acb7e9ed8239e6b6e5"
+      },
+      "maximum_delta": 9.094947017729282e-13,
+      "process": {
+        "case": "case-17",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1622,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-17.json",
+        "sha256": "48ffd4e6380a4e91abd61ebdb6d20d7ee677d65f8f37793103500f0a1cc0026e"
+      },
+      "sampled_bank_indices": [
+        0,
+        2299,
+        4519,
+        4597
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4598
+    },
+    "case-18": {
+      "active_keys": 3007,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1555,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-18-evidence.json",
+        "sha256": "808f3ec13249f1a43a9208778a9b9b861af50d7a068f1dc20657201e6ad34921"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 3.979039320256561e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-18",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 3007,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 24032,
+        "literal_candidate_key_checks": 195455,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 8518
+      },
+      "result": {
+        "bytes": 2300,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-18.json",
+        "sha256": "3d5e0f50d12956c6543ab136579e501b2fe0a4e49c005ae53a62cdc055347d76"
+      },
+      "sampled_bank_indices": [
+        0,
+        1786,
+        1814,
+        3493
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 3004
+    },
+    "case-19": {
+      "active_keys": 4610,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1562,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-19-evidence.json",
+        "sha256": "3f877f0aa6245e4350410f8ce18e2480d3c6facdd564be88cc3639dd40136872"
+      },
+      "maximum_delta": 7.958078640513122e-13,
+      "process": {
+        "case": "case-19",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1630,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-19.json",
+        "sha256": "8210c937249a56378aeef51ddde2aa25ec76fd45c0b97fbdbf7655440e55d3cf"
+      },
+      "sampled_bank_indices": [
+        0,
+        2305,
+        4530,
+        4609
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4610
+    },
+    "case-20": {
+      "active_keys": 2410,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1549,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-20-evidence.json",
+        "sha256": "82ab35b53e87cd3a9525d223fd8ddd81f35da309c7bcb044acd02fd1bf086443"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 6.821210263296962e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-20",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 2410,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 19256,
+        "literal_candidate_key_checks": 156650,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 6241
+      },
+      "result": {
+        "bytes": 2301,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-20.json",
+        "sha256": "024da32e2929cfd958b13923f401e8df4bc0cf930bd0e48c79cff74b587e7ed6"
+      },
+      "sampled_bank_indices": [
+        0,
+        1687,
+        1814,
+        3495
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 2407
+    },
+    "case-21": {
+      "active_keys": 4606,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1560,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-21-evidence.json",
+        "sha256": "aaf873637373c18b547786a5b812c9c6829b77e8d9e1ac3b1a4e360149fe5d4e"
+      },
+      "maximum_delta": 6.821210263296962e-13,
+      "process": {
+        "case": "case-21",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1628,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-21.json",
+        "sha256": "aec50abc17223382bbc8d883a31e449b09afb1ff0cf74ec1346eda7f403279df"
+      },
+      "sampled_bank_indices": [
+        0,
+        2303,
+        4530,
+        4605
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4606
+    },
+    "case-22": {
+      "active_keys": 2360,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1559,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-22-evidence.json",
+        "sha256": "ffd5a724c49a6134f7a326c11e370b87285010ba0d820eacd8421cbc246fa2f9"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 5.684341886080801e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-22",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 2360,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 18880,
+        "literal_candidate_key_checks": 153400,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 8607
+      },
+      "result": {
+        "bytes": 2292,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-22.json",
+        "sha256": "9abde7c5d014ac4caa1c9faa756089965292de4b23f3b7633b08c0f805833e2e"
+      },
+      "sampled_bank_indices": [
+        0,
+        1864,
+        2339,
+        3527
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 2360
+    },
+    "case-23": {
+      "active_keys": 4593,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1553,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-23-evidence.json",
+        "sha256": "202654dba728ca75bcd08b24c8f5bc7fe9f3ece952ffcdf3de55566adae61dab"
+      },
+      "maximum_delta": 5.684341886080801e-13,
+      "process": {
+        "case": "case-23",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1621,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-23.json",
+        "sha256": "69ad51e6e43ee879ed275eeb9f5741e28367ecb21e652910259111f5c9e805d2"
+      },
+      "sampled_bank_indices": [
+        0,
+        2296,
+        3652,
+        4592
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4593
+    },
+    "case-24": {
+      "active_keys": 4585,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1553,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-24-evidence.json",
+        "sha256": "4d74bec215437f6ab18560d397b625999b61cb1dba897e558b9dedffa168a9ee"
+      },
+      "maximum_delta": 7.958078640513122e-13,
+      "process": {
+        "case": "case-24",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1621,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-24.json",
+        "sha256": "f07faf49da1183412ed502bdcac3297617683c22109d54d93ebc1ec739e1ae88"
+      },
+      "sampled_bank_indices": [
+        0,
+        2292,
+        3893,
+        4584
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4585
+    },
+    "case-25": {
+      "active_keys": 4029,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1556,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-25-evidence.json",
+        "sha256": "a27498f9170c1c1e6f48595b680977d9a5d0765f369ff4cd8cb48846a837a804"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 2.2737367544323206e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-25",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 4029,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 32232,
+        "literal_candidate_key_checks": 261885,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 13341
+      },
+      "result": {
+        "bytes": 2293,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-25.json",
+        "sha256": "0af4ca7c62a8de66fd99756ad55ed6789f41b9fe87823015572ddac5338745bb"
+      },
+      "sampled_bank_indices": [
+        0,
+        2301,
+        2966,
+        4643
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4029
+    },
+    "case-26": {
+      "active_keys": 3125,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1547,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-26-evidence.json",
+        "sha256": "12cafd823369506c885ced0e8b580e82f7873aed857d66302e4ef0ff872a187b"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 4.547473508864641e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-26",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 3125,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 24952,
+        "literal_candidate_key_checks": 203125,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 12993
+      },
+      "result": {
+        "bytes": 2303,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-26.json",
+        "sha256": "36233912e01f5789090074a30f4dfdad976b2b659d32288d0a8d5d7d4644e79c"
+      },
+      "sampled_bank_indices": [
+        0,
+        1763,
+        2304,
+        3528
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 3119
+    },
+    "case-27": {
+      "active_keys": 2999,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1549,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-27-evidence.json",
+        "sha256": "31703232e1734886a5e9b7bdef7a9e04e76571307073c80a5a49b251a98b9547"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 6.252776074688882e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-27",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 2999,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 23984,
+        "literal_candidate_key_checks": 194935,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 11709
+      },
+      "result": {
+        "bytes": 2303,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-27.json",
+        "sha256": "7f2a46224bda686ba47ae9be1334742c7f3b005a9c919fd6b7f88c0248944ef6"
+      },
+      "sampled_bank_indices": [
+        0,
+        1701,
+        1806,
+        3485
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 2998
+    },
+    "case-28": {
+      "active_keys": 3354,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1557,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-28-evidence.json",
+        "sha256": "60d292465cd3236642f219f8f6eee735e2028cbe09ffd21a21cb34574cdb1f97"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 3.410605131648481e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-28",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 3354,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 26824,
+        "literal_candidate_key_checks": 218010,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 12743
+      },
+      "result": {
+        "bytes": 2302,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-28.json",
+        "sha256": "83af6dd43525eef1e79db6db715a7852ac4ead8c669d8256077d42edb902d2a9"
+      },
+      "sampled_bank_indices": [
+        0,
+        2444,
+        3412,
+        4644
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 3353
+    },
+    "case-29": {
+      "active_keys": 4582,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1553,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-29-evidence.json",
+        "sha256": "d3ce87745d42a24c043a27f73dcd371ff0818f6c6ed19839452544eb587cba74"
+      },
+      "maximum_delta": 4.547473508864641e-13,
+      "process": {
+        "case": "case-29",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1621,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-29.json",
+        "sha256": "b577b304ae8c1813a7a920198f3daa8bec3e96c7195d84cd598e1ba72c6f0b20"
+      },
+      "sampled_bank_indices": [
+        0,
+        2291,
+        4528,
+        4581
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4582
+    },
+    "case-30": {
+      "active_keys": 4560,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1552,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-30-evidence.json",
+        "sha256": "e8d903d1b07b38e5a722a6737b7f658d9b1b46ea5500758f2a1f7a0ad1fa9527"
+      },
+      "maximum_delta": 9.094947017729282e-13,
+      "process": {
+        "case": "case-30",
+        "returncode": 0
+      },
+      "result": {
+        "bytes": 1620,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-30.json",
+        "sha256": "31e87bc9a15539723374081aac9eb9794f65f127ad51726c3c8992a68c70c55b"
+      },
+      "sampled_bank_indices": [
+        0,
+        2280,
+        3533,
+        4559
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4560
+    },
+    "case-31": {
+      "active_keys": 3587,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1559,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-31-evidence.json",
+        "sha256": "f3eedcd7ba591a75b326aaca7ea5ab4dd1b3667cbb0e672131b48586e02e264f"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 3.979039320256561e-13,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-31",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 3587,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 28688,
+        "literal_candidate_key_checks": 233155,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 12571
+      },
+      "result": {
+        "bytes": 2295,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-31.json",
+        "sha256": "a80f35eecda623dc0203c1b3bf8bafd9dbd2d3cd637f66efca8295b4dc0dd4c9"
+      },
+      "sampled_bank_indices": [
+        0,
+        2319,
+        2962,
+        4639
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 3586
+    },
+    "case-32": {
+      "active_keys": 4258,
+      "backward_records": 8,
+      "evidence": {
+        "bytes": 1549,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-32-evidence.json",
+        "sha256": "f285b1f298ec215de9760a57dd7eaa22789cdbea7d80e615942c0b604bb74e8d"
+      },
+      "frequency_record_replays": 2,
+      "maximum_delta": 1.0231815394945443e-12,
+      "point_record_replays": 4,
+      "process": {
+        "case": "case-32",
+        "returncode": 0
+      },
+      "reading": {
+        "active_keys": 4258,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": false,
+        "listed_tuples": 34064,
+        "literal_candidate_key_checks": 276770,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 26314
+      },
+      "result": {
+        "bytes": 2305,
+        "path": "results/BLIND-CHANNEL-CONFIRM-002/case-32.json",
+        "sha256": "c7296a6e11dbee6022557052ddf3d1f73e139f88951fed1f7f17878e6f8e85b7"
+      },
+      "sampled_bank_indices": [
+        0,
+        2374,
+        4737,
+        4748
+      ],
+      "status": "evidence_complete",
+      "supported_keys": 4258
+    }
+  },
+  "no_gold_opened": true,
+  "resources": {
+    "cpu_seconds": 202.96379,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 913670144,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 203.28640204202384
+  },
+  "status": "PASS"
+}

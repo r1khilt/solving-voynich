@@ -1,0 +1,139 @@
+"""One post-prediction, no-answer inventory; no fitting or new decoding."""
+import hashlib
+import json
+import math
+from pathlib import Path
+
+from scripts.confirm002_common import NAMES, OUT, PATHS, ROOT, fit_status
+from scripts.run_blind_channel_dev001 import require_frozen
+from scripts.run_blind_channel_dev004 import load_archive, save_new
+from scripts.run_latin_source_model001 import artifact
+
+freeze = 'f0b4375bab279d76f620ec4fa83ed99dd1471d85'
+require_frozen(freeze, PATHS)
+panel, _, admitted, _ = fit_status(freeze)
+campaign = json.loads((OUT / 'campaign.json').read_text())
+audit = json.loads((OUT / 'audit.json').read_text())
+assert campaign['freeze'] == freeze
+assert [p['case'] for p in campaign['results']] == list(NAMES)
+assert audit['status'] == 'PASS' and audit['no_gold_opened']
+assert audit['campaign'] == artifact(OUT / 'campaign.json')
+assert audit['auditor'] == artifact(ROOT / 'scripts/audit_blind_channel_confirm002.py')
+assert set(audit['cases']) == set(NAMES)
+totals = dict(evidence_keys=0, native_record_scores=0, positive_keys=0,
+              listed_tuples=0, unique_candidates=0, sampled_tuples=0,
+              literal_key_checks=0, forward_records=0, backward_records=0,
+              point_record_replays=0, frequency_record_replays=0)
+case_rows, positive_gains, shuffle_gains = {}, [], []
+wall_sum = cpu_sum = 0.
+rss = 0
+native_delta = forward_delta = reference_delta = 0.
+margins, differing = [], []
+complete = evidences = positives_complete = 0
+for process in campaign['results']:
+    name = process['case']
+    report = audit['cases'][name]
+    assert report['process'] == process
+    row = {'process': process, 'fit_complete': admitted[name] is not None,
+           'positive': panel['cases'][name]['positive']}
+    final_path, evidence_path = OUT / f'{name}.json', OUT / f'{name}-evidence.json'
+    if evidence_path.exists():
+        header = json.loads(evidence_path.read_text())
+        assert header['freeze'] == freeze and header['case'] == name
+        assert header['bank'] == admitted[name]['bank']
+        assert header['transfer'] == panel['cases'][name]['transfer']
+        for field in ('bank', 'parent', 'transfer', 'evidence'):
+            assert artifact(ROOT / header[field]['path']) == header[field]
+        evidence = load_archive(header['evidence'])
+        bank = load_archive(header['bank'])
+        active = [i for i, v in enumerate(bank['bank']) if v['log_weight'] is not None]
+        assert evidence['active_bank_indices'] == active
+        assert [v['bank_index'] for v in evidence['per_key']] == active
+        assert all(len(v['record_log_likelihoods']) == 2 for v in evidence['per_key'])
+        totals['evidence_keys'] += len(active)
+        totals['native_record_scores'] += 2 * len(active)
+        totals['backward_records'] += report['backward_records']
+        totals['point_record_replays'] += report.get('point_record_replays', 0)
+        totals['frequency_record_replays'] += report.get('frequency_record_replays', 0)
+        reference_delta = max(reference_delta, report['maximum_delta'])
+        gain = header['summary']['gain_bits_vs_iid']
+        (positive_gains if row['positive'] else shuffle_gains).append(gain)
+        evidences += 1
+        row.update(evidence=artifact(evidence_path), gain_bits_vs_iid=gain)
+    if process['returncode'] == 0:
+        result = json.loads(final_path.read_text())
+        assert result['freeze'] == freeze and result['case'] == name
+        assert report['result'] == artifact(final_path)
+        complete += 1
+        resources = result['resources']
+        wall_sum += resources['wall_seconds']
+        cpu_sum += resources['cpu_seconds']
+        rss = max(rss, resources['peak_rss_bytes'])
+        row.update(result=artifact(final_path), resources=resources)
+        if row['positive']:
+            assert result['status'] == 'complete'
+            reading = load_archive(result['readings'])
+            summary = report['reading']
+            assert reading['active_bank_indices'] == active
+            for field in ('readings', 'points', 'frequency_order3'):
+                assert artifact(ROOT / result[field]['path']) == result[field]
+            assert summary['active_keys'] == len(active) == result['checks']['keys']
+            assert summary['listed_tuples'] == result['checks']['tuples']
+            assert reading['checks'] == result['checks']
+            for total, item in (('positive_keys', 'active_keys'),
+                                ('listed_tuples', 'listed_tuples'),
+                                ('unique_candidates', 'unique_candidates'),
+                                ('sampled_tuples', 'sampled_candidate_tuples'),
+                                ('literal_key_checks', 'literal_candidate_key_checks')):
+                totals[total] += summary[item]
+            totals['forward_records'] += result['checks']['forward_records']
+            forward_delta = max(forward_delta, result['checks']['maximum_delta'])
+            mixture = reading['mixture']
+            for expected, actual in zip(evidence['per_key'], mixture['per_key'], strict=True):
+                left, right = expected['log_likelihood'], actual['log_likelihood']
+                assert (left is None) == (right is None)
+                if left is not None:
+                    native_delta = max(native_delta, abs(left - right))
+                    assert abs(left - right) <= 1e-7
+            if mixture['floating_bound_separated']:
+                lower = mixture['joint_log_probability']
+                upper = mixture['unseen_log_probability_upper_bound']
+                margins.append(None if upper is None else lower - upper)
+            if reading['joint']['plaintexts'] != mixture['plaintexts']:
+                differing.append(name)
+            positives_complete += 1
+            row.update(floating_bound_separated=mixture['floating_bound_separated'],
+                       checks=result['checks'], reading_audit=summary)
+        else:
+            assert result['status'] == 'complete_evidence_only_by_design'
+            assert result['readings'] is None
+    else:
+        row['terminal_failure_retained'] = True
+    case_rows[name] = row
+finite_margins = [v for v in margins if v is not None]
+result = {
+    'status': 'PASS', 'freeze': freeze, 'frozen_source_paths': len(PATHS),
+    'campaign': artifact(OUT / 'campaign.json'), 'audit': artifact(OUT / 'audit.json'),
+    'cases': case_rows, 'totals': totals, 'terminal_cases': len(case_rows),
+    'complete_cases': complete, 'complete_evidences': evidences,
+    'complete_positive_readings': positives_complete,
+    'floating_bound_separated_cases': len(margins),
+    'minimum_finite_separation_margin_nats': min(finite_margins, default=None),
+    'joint_and_marginal_differ_cases': differing,
+    'maximum_native_backward_delta_nats': native_delta,
+    'maximum_forward_path_delta_nats': forward_delta,
+    'maximum_sampled_reference_delta_nats': reference_delta,
+    'positive_predictive_gains_bits': positive_gains,
+    'shuffle_predictive_gains_bits': shuffle_gains,
+    'positives_beating_iid': sum(v is not None and v > 0 for v in positive_gains),
+    'shuffles_beating_iid': sum(v is not None and v > 0 for v in shuffle_gains),
+    'sum_successful_worker_wall_seconds': wall_sum,
+    'sum_successful_worker_cpu_seconds': cpu_sum,
+    'maximum_successful_worker_rss_bytes': rss,
+    'no_gold_opened': True, 'no_new_candidates_or_scores_computed': True,
+    'paid_spend_usd': 0,
+    'audit_code_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+}
+assert all(math.isfinite(v) for v in (wall_sum, cpu_sum))
+save_new(OUT / 'prediction-accounting.json', result)
+print(json.dumps({k: v for k, v in result.items() if k != 'cases'}, indent=2))
