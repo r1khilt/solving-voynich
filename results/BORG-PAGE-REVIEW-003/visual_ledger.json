@@ -1,0 +1,457 @@
+{
+  "acquisition_manifest_sha256": "24969237f3c15b479c388005d75d86ac77bba53036a176865d9cca6fa0a34428",
+  "boundary_evidence": {
+    "all_source_bytes_of_block196_retained": true,
+    "ending_99r": {
+      "crop_box_xyxy": [
+        150,
+        2010,
+        1490,
+        2410
+      ],
+      "crop_path": "outputs/borg-page-review003/p0201-detail.png",
+      "crop_sha256": "57e06933f4619bfe357973f60b9dfb9d5383d52a7cd9bffade624fd99c2f1ed2",
+      "end_byte": 82305,
+      "glyph_occurrences": 8,
+      "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+      "reviewed_glyph_sequence_sha256": "4f0ba93317784c8ace2013597b5384634812867ff6187829db5b9abdf7653aae",
+      "source_line": 4117,
+      "source_slice_sha256": "4f0ba93317784c8ace2013597b5384634812867ff6187829db5b9abdf7653aae",
+      "start_byte": 82297
+    },
+    "interpretation": "Existing nonstandard page comment marks the visually supported 99r-to-99v boundary; initial block196 page label is inconsistent with its recto image. No midpoint split or invented content.",
+    "literal_marker": "#0099v",
+    "marker_sha256": "a84fb807e029388dc2bacf7d92a1f95d909a1e4a464460955a7f2c6a77e1c55e",
+    "source_line": 4119,
+    "starting_99v_check_reference": {
+      "canvas_label": "99v",
+      "check_index": 0
+    }
+  },
+  "competing_candidate_review": [
+    {
+      "group": "49r/v",
+      "observation": "Distinct first-line shapes: loop/horn/star series on49r versus double-bar/loop/arrow series on49v; source96/97 align to those respectively, not interchangeably."
+    },
+    {
+      "group": "99r/v",
+      "observation": "Recto starts double-bar/box/horn/star series matching4098; verso begins star/barred-loop/arrow series matching4120. Recto bottom contains4117 and verso top begins after the existing4119marker."
+    },
+    {
+      "group": "150 four candidates",
+      "observation": "Main recto, main verso, insert recto and insert verso have visibly different line openings and layouts; two source-line runs per candidate support distinct assignments. Matching suffix names alone was not used as evidence."
+    }
+  ],
+  "experiment": "BORG-PAGE-REVIEW-003",
+  "exposure": "Eight full-page thumbnails and reviewed regions including incidental original cleartext, no published key/deciphered text; all eight pages preparation-exposed.",
+  "mappings": [
+    {
+      "canvas": "https://digi.vatlib.it/iiif/MSS_Borg.lat.898/canvas/p0101",
+      "checks": [
+        {
+          "crop_box_xyxy": [
+            120,
+            245,
+            1460,
+            690
+          ],
+          "crop_path": "outputs/borg-page-review003/p0101-top.png",
+          "crop_sha256": "8d62386fda60f4b728cb54a945eeab8032d125807d567fdeece6408f193eb7c5",
+          "end_byte": 42136,
+          "glyph_occurrences": 9,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "0f84e486e493a6d1641be6e5485da7f9dcfd8bdc059b98a909a56e561b03c33f",
+          "source_line": 2013,
+          "source_slice_sha256": "d21959e8edf0024de27e77efb4ea81ef51b15d5d1b851c6efa657a55c94512a2",
+          "start_byte": 42125
+        },
+        {
+          "crop_box_xyxy": [
+            170,
+            620,
+            1480,
+            1000
+          ],
+          "crop_path": "outputs/borg-page-review003/p0101-detail.png",
+          "crop_sha256": "04b131a826da63b196130df891ddd7f7821e0a23f73828bbcba3a6dec98ea404",
+          "end_byte": 42202,
+          "glyph_occurrences": 12,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "adf9768f276e39c698b25b0f6a44f6ff8156258211383a9b999bbb5109928230",
+          "source_line": 2017,
+          "source_slice_sha256": "adf9768f276e39c698b25b0f6a44f6ff8156258211383a9b999bbb5109928230",
+          "start_byte": 42190
+        }
+      ],
+      "end_byte": 42429,
+      "image_path": "data/raw/borg-page-review003/p0101.jpg",
+      "image_sha256": "3f3679765bafdcc15ecb37ff4dafcd3b13d6d47a833fd26b87afd9d8d3c977ce",
+      "original_block_index": 96,
+      "original_label": "0049v",
+      "proposed_canvas_label": "49r",
+      "scope": "Local source identity only; no all-symbol validation, translation or supplied key.",
+      "slice_sha256": "5e6ea4cedf250e3b02ee709fb657fcf0e40a83a0798e4e2014a4077b81e4fa70",
+      "source_end_line": 2031,
+      "source_start_line": 2012,
+      "start_byte": 42111
+    },
+    {
+      "canvas": "https://digi.vatlib.it/iiif/MSS_Borg.lat.898/canvas/p0102",
+      "checks": [
+        {
+          "crop_box_xyxy": [
+            160,
+            270,
+            1470,
+            650
+          ],
+          "crop_path": "outputs/borg-page-review003/p0102-top.png",
+          "crop_sha256": "c3b57ddb1fec2643f817be14b5620e169d446b25d745d0f385ebedebe25f386a",
+          "end_byte": 42451,
+          "glyph_occurrences": 9,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "1e00dbcc3daa4afaaac078cc2c5ea3d77618114b77339af154177994c8264aa4",
+          "source_line": 2033,
+          "source_slice_sha256": "1e00dbcc3daa4afaaac078cc2c5ea3d77618114b77339af154177994c8264aa4",
+          "start_byte": 42442
+        },
+        {
+          "crop_box_xyxy": [
+            160,
+            270,
+            1470,
+            650
+          ],
+          "crop_path": "outputs/borg-page-review003/p0102-top.png",
+          "crop_sha256": "c3b57ddb1fec2643f817be14b5620e169d446b25d745d0f385ebedebe25f386a",
+          "end_byte": 42492,
+          "glyph_occurrences": 10,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "c4b01e0720c372410fb7e0769becb89f3760227689b7bc2889e5f9ad028bb641",
+          "source_line": 2035,
+          "source_slice_sha256": "26467c2d435d5fd822d102a6ad5d684c1aa8d99137a7197d5026f2b4aec8b9ba",
+          "start_byte": 42481
+        }
+      ],
+      "end_byte": 42780,
+      "image_path": "data/raw/borg-page-review003/p0102.jpg",
+      "image_sha256": "3c0cdf1d556b5e02ae12a128d0944e7c3ab8ac957acca37fd32bc06455aa3a0f",
+      "original_block_index": 97,
+      "original_label": "0049v",
+      "proposed_canvas_label": "49v",
+      "scope": "Local source identity only; no all-symbol validation, translation or supplied key.",
+      "slice_sha256": "923923b3051e88d20aa6243fea7c48e3268e783dbf10aa6d3ca76eeecb7eeb37",
+      "source_end_line": 2052,
+      "source_start_line": 2032,
+      "start_byte": 42429
+    },
+    {
+      "canvas": "https://digi.vatlib.it/iiif/MSS_Borg.lat.898/canvas/p0201",
+      "checks": [
+        {
+          "crop_box_xyxy": [
+            120,
+            245,
+            1460,
+            690
+          ],
+          "crop_path": "outputs/borg-page-review003/p0201-top.png",
+          "crop_sha256": "a11bea89b2b036ae9fc12d1212e30d0915549f056256bcc9884ee8d976a827ed",
+          "end_byte": 81888,
+          "glyph_occurrences": 14,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "06546600449406a6d45be86098d0edc523b2221688c15d5fa0b5e83959cd9468",
+          "source_line": 4098,
+          "source_slice_sha256": "34593807512e2d4fad98d6964885826e8ff79f60a2a76ae3d02374fd1f7b95fc",
+          "start_byte": 81873
+        },
+        {
+          "crop_box_xyxy": [
+            120,
+            245,
+            1460,
+            690
+          ],
+          "crop_path": "outputs/borg-page-review003/p0201-top.png",
+          "crop_sha256": "a11bea89b2b036ae9fc12d1212e30d0915549f056256bcc9884ee8d976a827ed",
+          "end_byte": 81909,
+          "glyph_occurrences": 13,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "9cb2dce6c37ad797c8b0ee76820905e528deb7648b75b25a225a8f176ce94dbe",
+          "source_line": 4099,
+          "source_slice_sha256": "084f83ab3c820f07b28214455db51a90df63530d210206be81d526d5e31347af",
+          "start_byte": 81895
+        }
+      ],
+      "end_byte": 82318,
+      "image_path": "data/raw/borg-page-review003/p0201.jpg",
+      "image_sha256": "657bb3c1faa7ff296ddb1b67aa81f4e0831137ea01a3073df6ec2dd15fa373b6",
+      "original_block_index": 196,
+      "original_label": "0099v",
+      "proposed_canvas_label": "99r",
+      "scope": "Local source identity only; no all-symbol validation, translation or supplied key.",
+      "slice_sha256": "894ff94fe16bc7157bb20db773385319ea6ac6a828df01d0de3c58f939ccece4",
+      "source_end_line": 4118,
+      "source_start_line": 4097,
+      "start_byte": 81860
+    },
+    {
+      "canvas": "https://digi.vatlib.it/iiif/MSS_Borg.lat.898/canvas/p0202",
+      "checks": [
+        {
+          "crop_box_xyxy": [
+            160,
+            270,
+            1470,
+            650
+          ],
+          "crop_path": "outputs/borg-page-review003/p0202-top.png",
+          "crop_sha256": "06d27267ae294b14db872d0b029ef0b0ca31a06e06cb12484fa733d41f53d6d3",
+          "end_byte": 82336,
+          "glyph_occurrences": 9,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "4d6610e7aa96d16b76f9471933087be9d2b8792beb122378f8c1b7abe90fd01b",
+          "source_line": 4120,
+          "source_slice_sha256": "51008df52ffea0a34ed99f6190fc069bc284ea60fe8dff05d7ef9f891dd97601",
+          "start_byte": 82326
+        },
+        {
+          "crop_box_xyxy": [
+            160,
+            270,
+            1470,
+            650
+          ],
+          "crop_path": "outputs/borg-page-review003/p0202-top.png",
+          "crop_sha256": "06d27267ae294b14db872d0b029ef0b0ca31a06e06cb12484fa733d41f53d6d3",
+          "end_byte": 82360,
+          "glyph_occurrences": 11,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "9cd717b33de4c7f0bba1057a457714c2835d05c852fc818ec9ed86ef6cfd0bbf",
+          "source_line": 4121,
+          "source_slice_sha256": "a48caddcb5582ee3855a5910c13e0614bab5608225c6585afdea3cf870c15294",
+          "start_byte": 82347
+        }
+      ],
+      "end_byte": 82724,
+      "image_path": "data/raw/borg-page-review003/p0202.jpg",
+      "image_sha256": "c0902ab3083cb2fe2443f991f718f04c22e39ba9bfb0e9108a879720c20e02c4",
+      "original_block_index": 196,
+      "original_label": "0099v",
+      "proposed_canvas_label": "99v",
+      "scope": "Local source identity only; no all-symbol validation, translation or supplied key.",
+      "slice_sha256": "a64e30506429d58944483c60eaa9c3b2c7f184157cced871ccadac355d88ba3d",
+      "source_end_line": 4139,
+      "source_start_line": 4119,
+      "start_byte": 82318
+    },
+    {
+      "canvas": "https://digi.vatlib.it/iiif/MSS_Borg.lat.898/canvas/p0305",
+      "checks": [
+        {
+          "crop_box_xyxy": [
+            120,
+            245,
+            1460,
+            690
+          ],
+          "crop_path": "outputs/borg-page-review003/p0305-top.png",
+          "crop_sha256": "e6945c65d1df61692359bca31b3d74f10cdde2e023522f2ea40101e48a51f0a6",
+          "end_byte": 122797,
+          "glyph_occurrences": 8,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "a1679ae9d361d69f3e3f5eec1c9d4a286da1a882dff1e9516fee2ce4dfc4ef78",
+          "source_line": 6133,
+          "source_slice_sha256": "d66afad5de090a7cdb3adc92361c7dcbab2cc77131fe61050c27ba172188d9b1",
+          "start_byte": 122788
+        },
+        {
+          "crop_box_xyxy": [
+            120,
+            245,
+            1460,
+            690
+          ],
+          "crop_path": "outputs/borg-page-review003/p0305-top.png",
+          "crop_sha256": "e6945c65d1df61692359bca31b3d74f10cdde2e023522f2ea40101e48a51f0a6",
+          "end_byte": 122818,
+          "glyph_occurrences": 8,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "33128b0497646e1e4c96ee56e2136f28ca56e0871ab1be8b653d0f0b0d574279",
+          "source_line": 6134,
+          "source_slice_sha256": "aa86e3a2f3d57fa42c1a6b6225fb9c6359cb78bce7fc60d772d992f496f99add",
+          "start_byte": 122808
+        }
+      ],
+      "end_byte": 123149,
+      "image_path": "data/raw/borg-page-review003/p0305.jpg",
+      "image_sha256": "abc160ab2f170bbd623c937fef98eb61bbaa97715d6ba9ca4655f6d2a39c4ed2",
+      "original_block_index": 297,
+      "original_label": "0150r",
+      "proposed_canvas_label": "150r",
+      "scope": "Local source identity only; no all-symbol validation, translation or supplied key.",
+      "slice_sha256": "3b775d21172f8e02b9ed1c6d3555c9a4ea31c810bc67b0f766b99e7c22c51c27",
+      "source_end_line": 6151,
+      "source_start_line": 6131,
+      "start_byte": 122755
+    },
+    {
+      "canvas": "https://digi.vatlib.it/iiif/MSS_Borg.lat.898/canvas/p0306",
+      "checks": [
+        {
+          "crop_box_xyxy": [
+            210,
+            480,
+            1500,
+            950
+          ],
+          "crop_path": "outputs/borg-page-review003/p0306-detail.png",
+          "crop_sha256": "3502727e6092302158577b164eb1d280b1a2db4d8d8644b4f4d0c333a5e9d049",
+          "end_byte": 123210,
+          "glyph_occurrences": 9,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "47eca1f1c65f53220f3d4565fb068aa81c1c1681b687f15d8c48c49824b5e7c1",
+          "source_line": 6155,
+          "source_slice_sha256": "47eca1f1c65f53220f3d4565fb068aa81c1c1681b687f15d8c48c49824b5e7c1",
+          "start_byte": 123201
+        },
+        {
+          "crop_box_xyxy": [
+            210,
+            480,
+            1500,
+            950
+          ],
+          "crop_path": "outputs/borg-page-review003/p0306-detail.png",
+          "crop_sha256": "3502727e6092302158577b164eb1d280b1a2db4d8d8644b4f4d0c333a5e9d049",
+          "end_byte": 123235,
+          "glyph_occurrences": 9,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "adc5b89aba9cd3d3ba7d64eee026a484e17907d20d5f326583a70d885618f4e6",
+          "source_line": 6156,
+          "source_slice_sha256": "c34ebdc332a28b4ff914a2729a70315322bb09e333a536998ce393ec41b108ad",
+          "start_byte": 123224
+        }
+      ],
+      "end_byte": 123536,
+      "image_path": "data/raw/borg-page-review003/p0306.jpg",
+      "image_sha256": "064540fd4e0a5958f02570447975857303f80af3b3cb50d1e8893e6f5f902ed8",
+      "original_block_index": 298,
+      "original_label": "0150v",
+      "proposed_canvas_label": "150v",
+      "scope": "Local source identity only; no all-symbol validation, translation or supplied key.",
+      "slice_sha256": "67c48996e9f9ea2ebc632e793dbb273862257ae1ab37f81af02628060656e675",
+      "source_end_line": 6170,
+      "source_start_line": 6152,
+      "start_byte": 123149
+    },
+    {
+      "canvas": "https://digi.vatlib.it/iiif/MSS_Borg.lat.898/canvas/p0307",
+      "checks": [
+        {
+          "crop_box_xyxy": [
+            120,
+            245,
+            1460,
+            690
+          ],
+          "crop_path": "outputs/borg-page-review003/p0307-top.png",
+          "crop_sha256": "8be3beb72abf3804123dc3b096230b51c490e28724e84361c7c371c3fc674002",
+          "end_byte": 123586,
+          "glyph_occurrences": 9,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "9932af024161cfa8fcbdbd06eb63eaf9883846cacb3a527931968c8bdc7dc9d4",
+          "source_line": 6173,
+          "source_slice_sha256": "081bf8aac661f31096e3ec701e1224ceb0d8903e4ce32e9dc7b1854ff5826417",
+          "start_byte": 123576
+        },
+        {
+          "crop_box_xyxy": [
+            150,
+            600,
+            1490,
+            1100
+          ],
+          "crop_path": "outputs/borg-page-review003/p0307-detail.png",
+          "crop_sha256": "fe1977aa077da24eaedb214517c1ca52b9d34568fbe615beb854d4cba0a5aa12",
+          "end_byte": 123621,
+          "glyph_occurrences": 9,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "3e5e4b9e298b4b742280ae5bdf865590269511ed1442400bb0f4f404aed7f108",
+          "source_line": 6175,
+          "source_slice_sha256": "b424e917ecff96c9b63203d1b5ada139c8b651f6f73b1b1cc9abbed12b148819",
+          "start_byte": 123611
+        }
+      ],
+      "end_byte": 123911,
+      "image_path": "data/raw/borg-page-review003/p0307.jpg",
+      "image_sha256": "88f757002ce896f8a492f33c4fb188e574bf3fec4e16ed3e194511f662d8c9e9",
+      "original_block_index": 299,
+      "original_label": "0150r.01",
+      "proposed_canvas_label": "150r.[01.fx.0000]",
+      "scope": "Local source identity only; no all-symbol validation, translation or supplied key.",
+      "slice_sha256": "80211c499c841f146e845540006fdc807f1b20bc39a558868d9425cb63277d68",
+      "source_end_line": 6188,
+      "source_start_line": 6171,
+      "start_byte": 123536
+    },
+    {
+      "canvas": "https://digi.vatlib.it/iiif/MSS_Borg.lat.898/canvas/p0308",
+      "checks": [
+        {
+          "crop_box_xyxy": [
+            160,
+            270,
+            1470,
+            650
+          ],
+          "crop_path": "outputs/borg-page-review003/p0308-top.png",
+          "crop_sha256": "56494f93c86ae3af9ae4f71d2c5b955920d1783f1bd10da01221ea3f6d6ef428",
+          "end_byte": 123939,
+          "glyph_occurrences": 11,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "c131c3fce98059c37ead836cedb8b4e650b03ae14edbeb58dc5b584cb1c603af",
+          "source_line": 6190,
+          "source_slice_sha256": "507873c85081ee7fb99d34938cb7b33102e0e5971d24ed85c2759b9626659081",
+          "start_byte": 123927
+        },
+        {
+          "crop_box_xyxy": [
+            160,
+            270,
+            1470,
+            650
+          ],
+          "crop_path": "outputs/borg-page-review003/p0308-top.png",
+          "crop_sha256": "56494f93c86ae3af9ae4f71d2c5b955920d1783f1bd10da01221ea3f6d6ef428",
+          "end_byte": 123972,
+          "glyph_occurrences": 11,
+          "review_status": "visual_correspondence_supported_by_one_unblinded_reviewer",
+          "reviewed_glyph_sequence_sha256": "a10fae5c23c0759537b1fbfbee708a233f446bf566a7e2d2974f969e8c2ba2d5",
+          "source_line": 6191,
+          "source_slice_sha256": "adba1d236e24c8d1b7137048ede0d8f78ba45b3f19a98d5d5e40e0c06453d219",
+          "start_byte": 123960
+        }
+      ],
+      "end_byte": 124304,
+      "image_path": "data/raw/borg-page-review003/p0308.jpg",
+      "image_sha256": "888bc200dbc2b1975118e81121a65c615e345e06fc24df7e13e78a604f695d2a",
+      "original_block_index": 300,
+      "original_label": "0150v.01",
+      "proposed_canvas_label": "150v.[01.fx.0000]",
+      "scope": "Local source identity only; no all-symbol validation, translation or supplied key.",
+      "slice_sha256": "92a3b836bcd200cb511d3a9d1fd42d73b5e27a97e8288c6860d427e358e02623",
+      "source_end_line": 6206,
+      "source_start_line": 6189,
+      "start_byte": 123911
+    }
+  ],
+  "paid_cost_usd": 0,
+  "raw_file_or_parser_modified": false,
+  "registration_freeze": "f9f3c2b88bafa9e68ddfce665d2c025ba27ed999",
+  "reviewer": "Root assistant, unblinded and not independent paleographic certification",
+  "schema_version": 1,
+  "solver_records": 0,
+  "source_sha256": "79950123a2760e92f3f27287aca94d16168169651eac8a4f9c15af37e349dde3",
+  "status": "eight_local_correspondences_supported_not_full_page_collation"
+}
