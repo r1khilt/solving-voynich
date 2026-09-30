@@ -1,0 +1,95 @@
+"""All-case post-run binding and alternate arithmetic checks; no new scoring."""
+import hashlib
+import json
+import math
+from pathlib import Path
+
+from scripts.confirm002_common import ROOT, fit_status
+from scripts.diagnose_blind_channel_confirm002a import OUT, PATHS
+from scripts.run_blind_channel_dev001 import checked_artifact, require_frozen
+from scripts.run_blind_channel_dev004 import save_new
+from scripts.run_latin_source_model001 import artifact
+
+freeze = '2812e2c7c33051cb49bd741f10564f48362fba2e'
+require_frozen(freeze, PATHS)
+panel, _, _, _ = fit_status(freeze)
+result = json.loads((OUT / 'result.json').read_text())
+assert result['freeze'] == freeze and result['status'] == 'complete_exposed_diagnostic'
+expected = {n for n, r in panel['cases'].items() if r['positive']}
+assert set(result['cases']) == expected and len(expected) == 16
+counts = checks = starts = 0
+better = {'order1': [], 'order3': [], 'large': []}
+alternates = []
+for name in sorted(expected):
+    assert artifact(ROOT / result['cases'][name]['path']) == result['cases'][name]
+    row = checked_artifact(result['cases'][name])
+    assert row['fit'] == panel['cases'][name]['fit'] and row['answer'] == panel['cases'][name]['answer']
+    for field in ('fit', 'answer', 'parent', 'fit_result', 'stage1_trace'):
+        assert artifact(ROOT / row[field]['path']) == row[field]
+    answer = checked_artifact(row['answer'])
+    parent = checked_artifact(row['parent'])
+    fit = checked_artifact(row['fit_result'])
+    context = checked_artifact(row['fit'])['context']
+    unit_map = {'generating': tuple(answer['units']), 'stage1_selected': tuple(parent['stage1_units']),
+                'stage2_selected': tuple(parent['units']), 'expanded_selected': tuple(fit['best_units'])}
+    endpoints = row['restart_endpoints']
+    assert len(endpoints) == parent['stage1_accounting']['scored_initializations'] <= 16
+    starts += len(endpoints)
+    unit_map.update({f'restart-{int(i):02d}': tuple(r['units']) for i, r in endpoints.items() if r['score'] is not None})
+    assert set(row['large_scores']) == set(unit_map) and len(unit_map) <= 20
+    counts += 4 * len(set(unit_map.values()))
+    for label, score in row['large_scores'].items():
+        units = unit_map[label]
+        width = lambda cardinality: (cardinality - 1).bit_length()
+        code = (width(context['source_count']) + width(context['max_states'])
+                + len(units) * (width(context['max_alternatives']) + width(context['max_emission_length']))
+                + sum(len(u) for u in units) * width(len(context['glyph_alphabet'])))
+        assert score['model_bits'] == code
+        logs = score['record_log_likelihoods']
+        assert len(logs) == len(score['record_nodes']) == len(score['record_edges']) == 4
+        if None in logs:
+            assert score['total_bits'] is score['fit_log_likelihood'] is score['log_weight_unnormalized'] is None
+        else:
+            assert abs(score['fit_log_likelihood'] - math.fsum(logs)) < 1e-10
+            assert abs(score['total_bits'] - code + math.fsum(logs)/math.log(2)) < 1e-10
+            assert abs(score['log_weight_unnormalized'] - math.fsum(logs) + code*math.log(2)) < 1e-10
+        checks += 1
+    for source, small in row['original_source_comparisons'].items():
+        assert source in ('order1', 'order3') and len(small['record_log_likelihoods']) == 4
+        cost = row['large_scores']['generating']['model_bits'] - math.fsum(small['record_log_likelihoods'])/math.log(2)
+        assert abs(cost-small['true_key_total_bits']) < 1e-10
+        gap = small['learned_total_bits'] - cost
+        assert abs(gap-small['learned_minus_true_total_bits']) < 1e-10
+        assert small['true_key_is_known_better_candidate'] == (gap > 1e-7)
+        if gap > 1e-7:
+            better[source].append(name)
+    large = row['large_scores']
+    gap = large['expanded_selected']['total_bits'] - large['generating']['total_bits']
+    assert abs(gap-row['large_selected_comparison']['learned_minus_true_total_bits']) < 1e-10
+    assert row['large_selected_comparison']['true_key_is_known_better_candidate'] == (gap > 1e-7)
+    if gap > 1e-7:
+        better['large'].append(name)
+    candidates = [(r['total_bits'], label) for label, r in large.items() if label.startswith('restart-') and r['total_bits'] is not None]
+    best_cost, best_label = min(candidates)
+    assert best_label == row['best_restart_by_large_fit_objective'] and best_cost == row['best_restart_total_bits']
+    assert abs(best_cost-large['stage1_selected']['total_bits']-row['best_restart_minus_original_stage1_selected_bits']) < 1e-10
+    assert abs(best_cost-large['expanded_selected']['total_bits']-row['best_restart_minus_expanded_selected_bits']) < 1e-10
+    if best_cost < large['expanded_selected']['total_bits'] - 1e-7:
+        alternates.append(name)
+    for i, state in endpoints.items():
+        matches = sum(left == right for left, right in zip(state['units'], answer['units'], strict=True))
+        assert row['restart_literal_row_matches'][f'restart-{int(i):02d}'] == matches
+assert counts == result['large_native_record_scores']
+assert result['large_generating_key_reference_records'] == 64
+assert result['original_source_independent_record_checks'] == 128
+save_new(OUT / 'accounting.json', {
+    'status': 'PASS', 'result': artifact(OUT / 'result.json'), 'frozen_paths': len(PATHS),
+    'complete_cases': len(expected), 'restart_endpoints': starts,
+    'all_label_score_arithmetic_checks': checks, 'native_record_count_replayed': counts,
+    'generating_key_is_known_better_cases': better,
+    'saved_endpoint_beats_expanded_fit_cases': alternates,
+    'no_new_likelihoods_fitting_or_predictions': True,
+    'audit_code_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+})
+print(json.dumps({'complete_cases': len(expected), 'starts': starts, 'checks': checks,
+                  'native_records': counts, 'known_better': better, 'endpoint_better': alternates}, indent=2))

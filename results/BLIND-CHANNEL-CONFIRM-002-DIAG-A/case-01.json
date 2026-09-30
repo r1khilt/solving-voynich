@@ -1,0 +1,1277 @@
+{
+  "answer": {
+    "bytes": 3867,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-002/case-01/answer.json",
+    "sha256": "086b55864a4aaf791817cb979c07b06f6a4b2fbc7043bac3f1db63100592b151"
+  },
+  "best_restart_by_large_fit_objective": "restart-13",
+  "best_restart_minus_expanded_selected_bits": 86.77025246679113,
+  "best_restart_minus_original_stage1_selected_bits": 0.0,
+  "best_restart_total_bits": 3866.4824750103044,
+  "fit": {
+    "bytes": 2245,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-002/case-01/fit.json",
+    "sha256": "618de091f3b28454b8fad86f3111b073886bac64d9632a8071e8a1ef494e942b"
+  },
+  "fit_result": {
+    "bytes": 3394,
+    "path": "results/BLIND-CHANNEL-CONFIRM-002/case-01-fit.json",
+    "sha256": "42fc6102a60211f98771cb4750c385b56184518977b344bc268300b2656630cc"
+  },
+  "fresh_evaluation_case": {
+    "arms": {
+      "fit_selected": {
+        "available": true,
+        "decoded_characters": 480,
+        "edits": 353,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          175,
+          178
+        ],
+        "supported_records": 2
+      },
+      "frequency_order3": {
+        "available": true,
+        "decoded_characters": 784,
+        "edits": 568,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          281,
+          287
+        ],
+        "supported_records": 2
+      },
+      "joint": {
+        "available": true,
+        "decoded_characters": 479,
+        "edits": 352,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          175,
+          177
+        ],
+        "supported_records": 2
+      },
+      "mixture": {
+        "available": true,
+        "decoded_characters": 479,
+        "edits": 352,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          175,
+          177
+        ],
+        "supported_records": 2
+      },
+      "oracle_large": {
+        "available": true,
+        "decoded_characters": 447,
+        "edits": 15,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          6,
+          9
+        ],
+        "supported_records": 2
+      },
+      "original": {
+        "available": true,
+        "decoded_characters": 473,
+        "edits": 341,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "record_edits": [
+          167,
+          174
+        ],
+        "supported_records": 2
+      }
+    },
+    "evidence": {
+      "all_positive_weights_retained": true,
+      "fit_selected_log_likelihood": -1336.2520287315335,
+      "gain_bits_vs_iid": 77.64000470044155,
+      "iid_log_likelihood": -1380.395228278228,
+      "log_likelihood": -1326.579277921456,
+      "original_log_likelihood": -1332.0978439099222,
+      "records": 2,
+      "supported_keys": 4381
+    },
+    "fit_complete": true,
+    "literal_key_row_matches": {
+      "fit_selected": 5,
+      "initial": 5
+    },
+    "mixture_search": {
+      "candidate_tuples": 21662,
+      "floating_bound_separated": true,
+      "joint_log_probability": -1355.3288091480447,
+      "log_likelihood": -1326.5792779214555,
+      "unseen_log_probability_upper_bound": -1355.4453583516063
+    },
+    "pair_index": 12,
+    "positive": true,
+    "prediction_complete": true,
+    "source_letter_exposure": {
+      "fit": {
+        "a": 69,
+        "b": 16,
+        "c": 39,
+        "d": 23,
+        "e": 114,
+        "f": 5,
+        "g": 6,
+        "h": 10,
+        "i": 104,
+        "l": 22,
+        "m": 54,
+        "n": 57,
+        "o": 41,
+        "p": 27,
+        "q": 12,
+        "r": 56,
+        "s": 77,
+        "t": 72,
+        "u": 87,
+        "x": 4,
+        "y": 1
+      },
+      "transfer": {
+        "a": 42,
+        "b": 4,
+        "c": 15,
+        "d": 11,
+        "e": 42,
+        "f": 4,
+        "g": 8,
+        "h": 3,
+        "i": 61,
+        "l": 13,
+        "m": 31,
+        "n": 25,
+        "o": 24,
+        "p": 23,
+        "q": 5,
+        "r": 33,
+        "s": 37,
+        "t": 24,
+        "u": 39,
+        "y": 3,
+        "z": 1
+      }
+    },
+    "truth_diagnosis": {
+      "status": "true_tuple_outside_positive_weight_bank_support",
+      "supporting_keys": 0
+    }
+  },
+  "large_scores": {
+    "expanded_selected": {
+      "fit_log_likelihood": -2498.5961137860104,
+      "log_weight_unnormalized": -2619.896870384001,
+      "model_bits": 175,
+      "record_edges": [
+        20090,
+        23029,
+        21993,
+        19813
+      ],
+      "record_log_likelihoods": [
+        -640.0318614666866,
+        -620.5897407316487,
+        -623.8192466565614,
+        -614.155264931114
+      ],
+      "record_nodes": [
+        7739,
+        8838,
+        8183,
+        7741
+      ],
+      "total_bits": 3779.7122225435132
+    },
+    "generating": {
+      "fit_log_likelihood": -1565.068742723031,
+      "log_weight_unnormalized": -1696.7667070294206,
+      "model_bits": 190,
+      "record_edges": [
+        6594,
+        7210,
+        7033,
+        6820
+      ],
+      "record_log_likelihoods": [
+        -423.30984992287154,
+        -361.90159870901147,
+        -417.0051900803464,
+        -362.85210401080144
+      ],
+      "record_nodes": [
+        3709,
+        4073,
+        3891,
+        3819
+      ],
+      "total_bits": 2447.9169137768417
+    },
+    "restart-00": {
+      "fit_log_likelihood": -2754.490081379455,
+      "log_weight_unnormalized": -2875.790837977446,
+      "model_bits": 175,
+      "record_edges": [
+        31780,
+        35204,
+        34591,
+        36356
+      ],
+      "record_log_likelihoods": [
+        -703.2990580756925,
+        -667.5489772661086,
+        -709.3169085141049,
+        -674.3251375235492
+      ],
+      "record_nodes": [
+        12542,
+        13916,
+        13566,
+        14052
+      ],
+      "total_bits": 4148.889180583978
+    },
+    "restart-01": {
+      "fit_log_likelihood": -2730.8975753979275,
+      "log_weight_unnormalized": -2854.2777735375976,
+      "model_bits": 178,
+      "record_edges": [
+        11159,
+        12434,
+        11976,
+        12620
+      ],
+      "record_log_likelihoods": [
+        -686.9448137572681,
+        -709.7351719377159,
+        -692.2230786163249,
+        -641.9945110866187
+      ],
+      "record_nodes": [
+        4819,
+        5385,
+        5166,
+        5363
+      ],
+      "total_bits": 4117.852389202284
+    },
+    "restart-02": {
+      "fit_log_likelihood": -2745.6486607590527,
+      "log_weight_unnormalized": -2873.1877419820826,
+      "model_bits": 184,
+      "record_edges": [
+        9820,
+        11490,
+        11816,
+        10424
+      ],
+      "record_log_likelihoods": [
+        -703.492762383568,
+        -696.1380748884624,
+        -686.6961453461183,
+        -659.321678140904
+      ],
+      "record_nodes": [
+        4474,
+        5108,
+        5220,
+        4626
+      ],
+      "total_bits": 4145.133706900509
+    },
+    "restart-03": {
+      "fit_log_likelihood": -2859.0440349328683,
+      "log_weight_unnormalized": -2978.265349989179,
+      "model_bits": 172,
+      "record_edges": [
+        35480,
+        37389,
+        37821,
+        33651
+      ],
+      "record_log_likelihoods": [
+        -712.6210566485211,
+        -717.2685070625329,
+        -737.8996583257352,
+        -691.2548128960789
+      ],
+      "record_nodes": [
+        13158,
+        13933,
+        13935,
+        12807
+      ],
+      "total_bits": 4296.728650880821
+    },
+    "restart-04": {
+      "fit_log_likelihood": -2657.228178432511,
+      "log_weight_unnormalized": -2780.6083765721814,
+      "model_bits": 178,
+      "record_edges": [
+        20536,
+        22328,
+        22276,
+        20725
+      ],
+      "record_log_likelihoods": [
+        -633.3959017126504,
+        -693.7141964722555,
+        -669.7631423777051,
+        -660.3549378699
+      ],
+      "record_nodes": [
+        8626,
+        9264,
+        9240,
+        8494
+      ],
+      "total_bits": 4011.569915534997
+    },
+    "restart-05": {
+      "fit_log_likelihood": -2568.4842838799264,
+      "log_weight_unnormalized": -2689.785040477917,
+      "model_bits": 175,
+      "record_edges": [
+        21576,
+        23685,
+        25561,
+        22113
+      ],
+      "record_log_likelihoods": [
+        -646.4223907735171,
+        -646.8406798529968,
+        -632.4937304352143,
+        -642.7274828181982
+      ],
+      "record_nodes": [
+        8283,
+        9096,
+        9395,
+        8309
+      ],
+      "total_bits": 3880.5395389548103
+    },
+    "restart-06": {
+      "fit_log_likelihood": -2660.624932425652,
+      "log_weight_unnormalized": -2784.0051305653224,
+      "model_bits": 178,
+      "record_edges": [
+        14392,
+        15693,
+        15108,
+        14268
+      ],
+      "record_log_likelihoods": [
+        -665.4674051639495,
+        -695.2076694419264,
+        -667.2297829822047,
+        -632.7200748375714
+      ],
+      "record_nodes": [
+        5856,
+        6241,
+        6050,
+        5750
+      ],
+      "total_bits": 4016.4703956760213
+    },
+    "restart-07": {
+      "fit_log_likelihood": -2621.5838955065833,
+      "log_weight_unnormalized": -2749.122976729613,
+      "model_bits": 184,
+      "record_edges": [
+        8055,
+        8210,
+        8286,
+        7697
+      ],
+      "record_log_likelihoods": [
+        -647.349749128014,
+        -648.5391213345447,
+        -681.3757814256245,
+        -644.3192436184
+      ],
+      "record_nodes": [
+        3975,
+        4113,
+        4076,
+        3815
+      ],
+      "total_bits": 3966.146085321718
+    },
+    "restart-08": {
+      "fit_log_likelihood": -2724.737974777432,
+      "log_weight_unnormalized": -2848.118172917102,
+      "model_bits": 178,
+      "record_edges": [
+        15684,
+        18275,
+        17829,
+        17278
+      ],
+      "record_log_likelihoods": [
+        -724.4668481836318,
+        -663.3803759013347,
+        -683.0118083699141,
+        -653.8789423225518
+      ],
+      "record_nodes": [
+        6602,
+        7588,
+        7396,
+        7151
+      ],
+      "total_bits": 4108.9659639332385
+    },
+    "restart-09": {
+      "fit_log_likelihood": -2852.7158778066364,
+      "log_weight_unnormalized": -2978.1755174879863,
+      "model_bits": 181,
+      "record_edges": [
+        13056,
+        14812,
+        13254,
+        14262
+      ],
+      "record_log_likelihoods": [
+        -704.6779896514345,
+        -685.0222734474573,
+        -731.7214639976781,
+        -731.2941507100666
+      ],
+      "record_nodes": [
+        5848,
+        6616,
+        5933,
+        6174
+      ],
+      "total_bits": 4296.59904997684
+    },
+    "restart-10": {
+      "fit_log_likelihood": -2660.3945807427117,
+      "log_weight_unnormalized": -2779.6158957990224,
+      "model_bits": 172,
+      "record_edges": [
+        33144,
+        36862,
+        36764,
+        31191
+      ],
+      "record_log_likelihoods": [
+        -658.6506752857856,
+        -678.9158140466686,
+        -663.0198335003279,
+        -659.8082579099296
+      ],
+      "record_nodes": [
+        12820,
+        13928,
+        13901,
+        11955
+      ],
+      "total_bits": 4010.1380684453834
+    },
+    "restart-11": {
+      "fit_log_likelihood": -2662.605726306439,
+      "log_weight_unnormalized": -2781.8270413627497,
+      "model_bits": 172,
+      "record_edges": [
+        37024,
+        39920,
+        41015,
+        40216
+      ],
+      "record_log_likelihoods": [
+        -671.5213267610284,
+        -689.3942141599744,
+        -672.8938048287097,
+        -628.7963805567265
+      ],
+      "record_nodes": [
+        13797,
+        14859,
+        15095,
+        14712
+      ],
+      "total_bits": 4013.3280771848563
+    },
+    "restart-12": {
+      "fit_log_likelihood": -2700.6230565223814,
+      "log_weight_unnormalized": -2824.0032546620514,
+      "model_bits": 178,
+      "record_edges": [
+        12067,
+        13911,
+        13294,
+        12774
+      ],
+      "record_log_likelihoods": [
+        -710.5443987582973,
+        -653.1305111451592,
+        -695.3749771469635,
+        -641.5731694719613
+      ],
+      "record_nodes": [
+        5355,
+        6096,
+        5745,
+        5553
+      ],
+      "total_bits": 4074.1754909552346
+    },
+    "restart-13": {
+      "fit_log_likelihood": -2556.6612280981612,
+      "log_weight_unnormalized": -2680.0414262378317,
+      "model_bits": 178,
+      "record_edges": [
+        14895,
+        17242,
+        16433,
+        16368
+      ],
+      "record_log_likelihoods": [
+        -657.6189709914038,
+        -633.7838932016971,
+        -643.5554655866822,
+        -621.7028983183782
+      ],
+      "record_nodes": [
+        6147,
+        6967,
+        6622,
+        6489
+      ],
+      "total_bits": 3866.4824750103044
+    },
+    "restart-14": {
+      "fit_log_likelihood": -2719.1363948168355,
+      "log_weight_unnormalized": -2836.2782683314663,
+      "model_bits": 169,
+      "record_edges": [
+        54164,
+        57156,
+        60835,
+        49935
+      ],
+      "record_log_likelihoods": [
+        -675.2802036898561,
+        -688.0519894546761,
+        -684.447105221801,
+        -671.3570964505024
+      ],
+      "record_nodes": [
+        16664,
+        17855,
+        18255,
+        16612
+      ],
+      "total_bits": 4091.884592302943
+    },
+    "restart-15": {
+      "fit_log_likelihood": -2637.0442756950424,
+      "log_weight_unnormalized": -2760.4244738347124,
+      "model_bits": 178,
+      "record_edges": [
+        18771,
+        20045,
+        20923,
+        18114
+      ],
+      "record_log_likelihoods": [
+        -705.5369986297944,
+        -666.3715309522264,
+        -650.4963792590854,
+        -614.6393668539362
+      ],
+      "record_nodes": [
+        7916,
+        8605,
+        8789,
+        7820
+      ],
+      "total_bits": 3982.450699149866
+    },
+    "stage1_selected": {
+      "fit_log_likelihood": -2556.6612280981612,
+      "log_weight_unnormalized": -2680.0414262378317,
+      "model_bits": 178,
+      "record_edges": [
+        14895,
+        17242,
+        16433,
+        16368
+      ],
+      "record_log_likelihoods": [
+        -657.6189709914038,
+        -633.7838932016971,
+        -643.5554655866822,
+        -621.7028983183782
+      ],
+      "record_nodes": [
+        6147,
+        6967,
+        6622,
+        6489
+      ],
+      "total_bits": 3866.4824750103044
+    },
+    "stage2_selected": {
+      "fit_log_likelihood": -2546.736559173499,
+      "log_weight_unnormalized": -2668.0373157714894,
+      "model_bits": 175,
+      "record_edges": [
+        15748,
+        17893,
+        16006,
+        17176
+      ],
+      "record_log_likelihoods": [
+        -648.4096495354756,
+        -628.4164728539059,
+        -643.2096037433058,
+        -626.7008330408114
+      ],
+      "record_nodes": [
+        6333,
+        7135,
+        6476,
+        6731
+      ],
+      "total_bits": 3849.164204370229
+    }
+  },
+  "large_selected_comparison": {
+    "learned_minus_true_total_bits": 1331.7953087666715,
+    "true_key_is_known_better_candidate": true
+  },
+  "original_source_comparisons": {
+    "order1": {
+      "learned_minus_true_total_bits": 133.97764364762816,
+      "learned_total_bits": 3349.002057298661,
+      "record_log_likelihoods": [
+        -522.9119754882701,
+        -517.8577654812958,
+        -534.333201474619,
+        -521.6842010030301
+      ],
+      "true_key_is_known_better_candidate": true,
+      "true_key_total_bits": 3215.024413651033
+    },
+    "order3": {
+      "learned_minus_true_total_bits": 403.08730315270077,
+      "learned_total_bits": 3376.0860799191705,
+      "record_log_likelihoods": [
+        -477.5345562931067,
+        -475.2977553597671,
+        -494.8028798103646,
+        -481.3925641542168
+      ],
+      "true_key_is_known_better_candidate": true,
+      "true_key_total_bits": 2972.9987767664697
+    }
+  },
+  "pair_index": 12,
+  "parent": {
+    "bytes": 8460,
+    "path": "results/BLIND-CHANNEL-CONFIRM-002/case-01-parent.json",
+    "sha256": "c9c97d79992a29b0e0991da198abc1d269ad56e613e3f833d50742be7b7e4a1e"
+  },
+  "restart_endpoints": {
+    "0": {
+      "method": "source_start_and_glyph_frequency_singletons",
+      "score": {
+        "data_bits": 3411.7495935876923,
+        "log_likelihood": -2364.844611571848,
+        "model_bits": 175,
+        "total_bits": 3586.7495935876923
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "AD",
+        "CF",
+        "CF",
+        "AE",
+        "B",
+        "D",
+        "CF",
+        "EF",
+        "C",
+        "E",
+        "AE",
+        "F",
+        "C",
+        "A",
+        "D",
+        "AE",
+        "CB",
+        "B",
+        "BD",
+        "E",
+        "DB",
+        "FD",
+        "D"
+      ]
+    },
+    "1": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3211.8477131390473,
+        "log_likelihood": -2226.2831867502387,
+        "model_bits": 178,
+        "total_bits": 3389.8477131390473
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "CF",
+        "FD",
+        "AD",
+        "BB",
+        "CB",
+        "C",
+        "F",
+        "E",
+        "AE",
+        "E",
+        "CC",
+        "EF",
+        "BC",
+        "BD",
+        "A",
+        "A",
+        "C",
+        "EB",
+        "B",
+        "D",
+        "EE",
+        "BE",
+        "E"
+      ]
+    },
+    "2": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3263.870418259121,
+        "log_likelihood": -2262.342578129319,
+        "model_bits": 184,
+        "total_bits": 3447.870418259121
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "AE",
+        "A",
+        "CF",
+        "FD",
+        "BD",
+        "DB",
+        "BB",
+        "CC",
+        "CB",
+        "A",
+        "E",
+        "EB",
+        "BC",
+        "CF",
+        "D",
+        "B",
+        "EF",
+        "C",
+        "AD",
+        "B",
+        "DA",
+        "FA",
+        "D"
+      ]
+    },
+    "3": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3394.5938661948558,
+        "log_likelihood": -2352.9531674990485,
+        "model_bits": 172,
+        "total_bits": 3566.5938661948558
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "AD",
+        "B",
+        "D",
+        "C",
+        "C",
+        "BC",
+        "FD",
+        "EF",
+        "BD",
+        "F",
+        "BD",
+        "AE",
+        "E",
+        "A",
+        "EF",
+        "E",
+        "CF",
+        "CB",
+        "B",
+        "B",
+        "F",
+        "EE",
+        "D"
+      ]
+    },
+    "4": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3280.5103185539488,
+        "log_likelihood": -2273.8764781034774,
+        "model_bits": 178,
+        "total_bits": 3458.5103185539488
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "D",
+        "FD",
+        "A",
+        "EB",
+        "C",
+        "AD",
+        "E",
+        "EB",
+        "AE",
+        "A",
+        "CC",
+        "BB",
+        "AD",
+        "CB",
+        "BD",
+        "C",
+        "B",
+        "EF",
+        "B",
+        "CF",
+        "EE",
+        "F",
+        "F"
+      ]
+    },
+    "5": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3215.857552287204,
+        "log_likelihood": -2229.062595450282,
+        "model_bits": 175,
+        "total_bits": 3390.857552287204
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "CF",
+        "FD",
+        "A",
+        "EB",
+        "AE",
+        "F",
+        "CC",
+        "AD",
+        "CB",
+        "A",
+        "E",
+        "AD",
+        "B",
+        "D",
+        "EB",
+        "B",
+        "EF",
+        "B",
+        "C",
+        "BD",
+        "BB",
+        "B",
+        "D"
+      ]
+    },
+    "6": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3186.320021485636,
+        "log_likelihood": -2208.588739254473,
+        "model_bits": 178,
+        "total_bits": 3364.320021485636
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "BD",
+        "CC",
+        "BC",
+        "BB",
+        "CB",
+        "B",
+        "FD",
+        "BD",
+        "AE",
+        "A",
+        "E",
+        "B",
+        "EB",
+        "D",
+        "A",
+        "C",
+        "C",
+        "EF",
+        "AD",
+        "CF",
+        "F",
+        "BE",
+        "A"
+      ]
+    },
+    "7": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3169.8661274913075,
+        "log_likelihood": -2197.183769023072,
+        "model_bits": 184,
+        "total_bits": 3353.8661274913075
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "AE",
+        "EF",
+        "BB",
+        "FD",
+        "CF",
+        "E",
+        "CC",
+        "F",
+        "D",
+        "E",
+        "A",
+        "BC",
+        "B",
+        "BD",
+        "EF",
+        "BA",
+        "AD",
+        "C",
+        "EB",
+        "CB",
+        "EE",
+        "BE",
+        "D"
+      ]
+    },
+    "8": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3235.392489000338,
+        "log_likelihood": -2242.603181755408,
+        "model_bits": 178,
+        "total_bits": 3413.392489000338
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "B",
+        "BB",
+        "A",
+        "CC",
+        "AE",
+        "B",
+        "DB",
+        "C",
+        "CF",
+        "F",
+        "E",
+        "C",
+        "AD",
+        "BD",
+        "BC",
+        "F",
+        "EB",
+        "EF",
+        "CB",
+        "D",
+        "DA",
+        "FA",
+        "E"
+      ]
+    },
+    "9": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3369.22826787164,
+        "log_likelihood": -2335.3710745380954,
+        "model_bits": 181,
+        "total_bits": 3550.22826787164
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "CF",
+        "EF",
+        "CC",
+        "BB",
+        "BD",
+        "CB",
+        "FD",
+        "EF",
+        "C",
+        "E",
+        "EB",
+        "A",
+        "E",
+        "AE",
+        "D",
+        "C",
+        "AD",
+        "BC",
+        "F",
+        "B",
+        "DA",
+        "DE",
+        "C"
+      ]
+    },
+    "10": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3290.2005606644134,
+        "log_likelihood": -2280.5932421012894,
+        "model_bits": 172,
+        "total_bits": 3462.2005606644134
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "AE",
+        "FD",
+        "EB",
+        "CF",
+        "D",
+        "CC",
+        "EB",
+        "C",
+        "C",
+        "F",
+        "E",
+        "EF",
+        "AD",
+        "CF",
+        "A",
+        "A",
+        "B",
+        "B",
+        "B",
+        "CB",
+        "DA",
+        "F",
+        "F"
+      ]
+    },
+    "11": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3343.610668110346,
+        "log_likelihood": -2317.6143074908414,
+        "model_bits": 172,
+        "total_bits": 3515.610668110346
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "CF",
+        "CC",
+        "A",
+        "BB",
+        "C",
+        "EE",
+        "FD",
+        "C",
+        "D",
+        "F",
+        "EB",
+        "EF",
+        "B",
+        "E",
+        "CB",
+        "C",
+        "B",
+        "AD",
+        "B",
+        "AE",
+        "F",
+        "AC",
+        "E"
+      ]
+    },
+    "12": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3203.731692633173,
+        "log_likelihood": -2220.657590019225,
+        "model_bits": 178,
+        "total_bits": 3381.731692633173
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "BD",
+        "FD",
+        "BB",
+        "EB",
+        "AE",
+        "A",
+        "F",
+        "DB",
+        "CF",
+        "D",
+        "E",
+        "B",
+        "D",
+        "CB",
+        "A",
+        "C",
+        "BC",
+        "EF",
+        "AD",
+        "C",
+        "EB",
+        "BE",
+        "D"
+      ]
+    },
+    "13": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3171.0020572986623,
+        "log_likelihood": -2197.971135566354,
+        "model_bits": 178,
+        "total_bits": 3349.0020572986623
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "D",
+        "FD",
+        "BC",
+        "A",
+        "AE",
+        "F",
+        "E",
+        "CC",
+        "CB",
+        "A",
+        "BB",
+        "EF",
+        "AD",
+        "BD",
+        "AD",
+        "C",
+        "EB",
+        "C",
+        "B",
+        "CF",
+        "EE",
+        "B",
+        "A"
+      ]
+    },
+    "14": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3467.061019892419,
+        "log_likelihood": -2403.1835707677187,
+        "model_bits": 169,
+        "total_bits": 3636.061019892419
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "AD",
+        "CB",
+        "D",
+        "B",
+        "C",
+        "B",
+        "B",
+        "FD",
+        "B",
+        "E",
+        "BC",
+        "F",
+        "C",
+        "A",
+        "EF",
+        "AE",
+        "CF",
+        "BD",
+        "AE",
+        "E",
+        "B",
+        "EB",
+        "B"
+      ]
+    },
+    "15": {
+      "method": "random_singleton_coverage_plus_uniform_pool",
+      "score": {
+        "data_bits": 3232.732293626075,
+        "log_likelihood": -2240.759274831999,
+        "model_bits": 178,
+        "total_bits": 3410.732293626075
+      },
+      "stop_reason": "local_optimum",
+      "units": [
+        "AE",
+        "BB",
+        "B",
+        "A",
+        "B",
+        "DB",
+        "FD",
+        "F",
+        "CF",
+        "D",
+        "E",
+        "EB",
+        "EF",
+        "BD",
+        "D",
+        "BA",
+        "C",
+        "AD",
+        "C",
+        "CB",
+        "DA",
+        "CD",
+        "D"
+      ]
+    }
+  },
+  "restart_literal_row_matches": {
+    "restart-00": 1,
+    "restart-01": 1,
+    "restart-02": 4,
+    "restart-03": 0,
+    "restart-04": 1,
+    "restart-05": 5,
+    "restart-06": 4,
+    "restart-07": 5,
+    "restart-08": 4,
+    "restart-09": 0,
+    "restart-10": 3,
+    "restart-11": 0,
+    "restart-12": 7,
+    "restart-13": 7,
+    "restart-14": 0,
+    "restart-15": 6
+  },
+  "stage1_trace": {
+    "bytes": 17978568,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-002/case-01-stage1.json.gz",
+    "sha256": "c9e9ef37ac2ecff48a630de3d99914e8ea84693385ffaa96a9976b401b1ac3de"
+  }
+}
