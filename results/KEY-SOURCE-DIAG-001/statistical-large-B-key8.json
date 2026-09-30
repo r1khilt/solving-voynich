@@ -1,0 +1,87 @@
+{
+  "case": "B-key8",
+  "metrics": {
+    "fit_key_comparison": {
+      "learned_minus_gold_total_bits": 112.37571973507147,
+      "true_key_is_known_better_candidate": true
+    },
+    "gold": {
+      "fit": {
+        "all_supported": true,
+        "decoded_characters": 893,
+        "edits": 16,
+        "exact_records": 0,
+        "gold_characters": 896,
+        "log_likelihood": -1489.7368218100742,
+        "model_bits": 190,
+        "objective_kind": "exact_path_marginal_plus_literal_code",
+        "record_edits": [
+          2,
+          4,
+          4,
+          6
+        ],
+        "supported_records": 4,
+        "total_bits": 2339.2359250550794
+      },
+      "transfer": {
+        "all_supported": true,
+        "decoded_characters": 448,
+        "edits": 12,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "log_likelihood": -916.6830479005546,
+        "model_bits": 190,
+        "objective_kind": "exact_path_marginal_plus_literal_code",
+        "record_edits": [
+          6,
+          6
+        ],
+        "supported_records": 2,
+        "total_bits": 1512.4940872731102
+      }
+    },
+    "learned": {
+      "fit": {
+        "all_supported": true,
+        "decoded_characters": 898,
+        "edits": 33,
+        "exact_records": 0,
+        "gold_characters": 896,
+        "log_likelihood": -1578.0269428162326,
+        "model_bits": 175,
+        "objective_kind": "exact_path_marginal_plus_literal_code",
+        "record_edits": [
+          10,
+          6,
+          5,
+          12
+        ],
+        "supported_records": 4,
+        "total_bits": 2451.611644790151
+      },
+      "transfer": {
+        "all_supported": true,
+        "decoded_characters": 455,
+        "edits": 26,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "log_likelihood": -949.4692625085894,
+        "model_bits": 175,
+        "objective_kind": "exact_path_marginal_plus_literal_code",
+        "record_edits": [
+          16,
+          10
+        ],
+        "supported_records": 2,
+        "total_bits": 1544.7945964976434
+      }
+    }
+  },
+  "readings": {
+    "bytes": 1525,
+    "path": "outputs/KEY-SOURCE-DIAG-001/statistical-large/B-key8.json.gz",
+    "sha256": "4553642fcf75c45361c6e0ff0c14447e26cf51eefe570f81c6586f5c890a7da7"
+  },
+  "source": "statistical-large"
+}

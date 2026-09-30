@@ -1,0 +1,39 @@
+{
+  "case": "B-key3-shuffle",
+  "metrics": {
+    "learned": {
+      "fit": {
+        "all_supported": true,
+        "decoded_characters": 1492,
+        "edits": null,
+        "exact_records": null,
+        "gold_characters": null,
+        "log_likelihood": -2730.919838868428,
+        "model_bits": 145,
+        "objective_kind": "exact_path_marginal_plus_literal_code",
+        "record_edits": null,
+        "supported_records": 4,
+        "total_bits": 4084.884508600768
+      },
+      "transfer": {
+        "all_supported": true,
+        "decoded_characters": 739,
+        "edits": null,
+        "exact_records": null,
+        "gold_characters": null,
+        "log_likelihood": -1415.7250027261177,
+        "model_bits": 145,
+        "objective_kind": "exact_path_marginal_plus_literal_code",
+        "record_edits": null,
+        "supported_records": 2,
+        "total_bits": 2187.4594406954843
+      }
+    }
+  },
+  "readings": {
+    "bytes": 1675,
+    "path": "outputs/KEY-SOURCE-DIAG-001/statistical-small/B-key3-shuffle.json.gz",
+    "sha256": "d0633d10104aa681bb2818de3744243ce41b13bfe58f25858f1174ca77a380cb"
+  },
+  "source": "statistical-small"
+}

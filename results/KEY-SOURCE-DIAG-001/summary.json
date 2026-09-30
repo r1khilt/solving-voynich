@@ -1,0 +1,63 @@
+{
+  "evaluation": {
+    "bytes": 133926,
+    "path": "results/KEY-SOURCE-DIAG-001/evaluation.json",
+    "sha256": "cda9c86b3458fba30cbbdd54883276ed9dc939cc06a19c12e41d6bd01a7d5cf2"
+  },
+  "historical_order3_edits": {
+    "learned": 395,
+    "oracle": 142
+  },
+  "no_new_key_recovery_or_qualification": true,
+  "positive_transfer_characters": 3584,
+  "totals": {
+    "neural-31103": {
+      "gold": {
+        "edits": 39,
+        "exact_records": 4,
+        "supported_records": 16
+      },
+      "learned": {
+        "edits": 288,
+        "exact_records": 2,
+        "supported_records": 15
+      }
+    },
+    "neural-31109": {
+      "gold": {
+        "edits": 35,
+        "exact_records": 6,
+        "supported_records": 16
+      },
+      "learned": {
+        "edits": 296,
+        "exact_records": 3,
+        "supported_records": 15
+      }
+    },
+    "statistical-large": {
+      "gold": {
+        "edits": 37,
+        "exact_records": 7,
+        "supported_records": 16
+      },
+      "learned": {
+        "edits": 309,
+        "exact_records": 4,
+        "supported_records": 15
+      }
+    },
+    "statistical-small": {
+      "gold": {
+        "edits": 126,
+        "exact_records": 0,
+        "supported_records": 16
+      },
+      "learned": {
+        "edits": 373,
+        "exact_records": 0,
+        "supported_records": 15
+      }
+    }
+  }
+}

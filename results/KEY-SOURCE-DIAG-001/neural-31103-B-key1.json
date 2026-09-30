@@ -1,0 +1,93 @@
+{
+  "case": "B-key1",
+  "metrics": {
+    "fit_key_comparison": {
+      "floating_bounds_favor_gold": false,
+      "floating_bounds_favor_learned": false,
+      "gold_minus_learned_returned_joint_nats": -0.43723528928353517,
+      "not_marginal_or_interval_arithmetic_proof": true
+    },
+    "gold": {
+      "fit": {
+        "all_supported": true,
+        "decoded_characters": 896,
+        "edits": 4,
+        "exact_records": 3,
+        "gold_characters": 896,
+        "joint_map_lower_nats": -1576.9628179542997,
+        "joint_map_upper_nats": -377.95153378923,
+        "marginal_likelihood_available": false,
+        "model_bits": 190,
+        "objective_kind": "bounded_joint_map_not_marginal",
+        "record_edits": [
+          0,
+          0,
+          0,
+          4
+        ],
+        "supported_records": 4
+      },
+      "transfer": {
+        "all_supported": true,
+        "decoded_characters": 449,
+        "edits": 6,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "joint_map_lower_nats": -955.6010620071104,
+        "joint_map_upper_nats": -251.71410254989348,
+        "marginal_likelihood_available": false,
+        "model_bits": 190,
+        "objective_kind": "bounded_joint_map_not_marginal",
+        "record_edits": [
+          4,
+          2
+        ],
+        "supported_records": 2
+      }
+    },
+    "learned": {
+      "fit": {
+        "all_supported": true,
+        "decoded_characters": 896,
+        "edits": 6,
+        "exact_records": 3,
+        "gold_characters": 896,
+        "joint_map_lower_nats": -1576.5255826650161,
+        "joint_map_upper_nats": -324.180479620498,
+        "marginal_likelihood_available": false,
+        "model_bits": 181,
+        "objective_kind": "bounded_joint_map_not_marginal",
+        "record_edits": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "supported_records": 4
+      },
+      "transfer": {
+        "all_supported": true,
+        "decoded_characters": 449,
+        "edits": 6,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "joint_map_lower_nats": -949.3627419287513,
+        "joint_map_upper_nats": -225.85014896628473,
+        "marginal_likelihood_available": false,
+        "model_bits": 181,
+        "objective_kind": "bounded_joint_map_not_marginal",
+        "record_edits": [
+          4,
+          2
+        ],
+        "supported_records": 2
+      }
+    }
+  },
+  "readings": {
+    "bytes": 1758,
+    "path": "outputs/KEY-SOURCE-DIAG-001/neural-31103/B-key1.json.gz",
+    "sha256": "2db3a7ee7ae20dbf3b4eef73b7e17a675cde9d4dfe269bf1f7314514450708c2"
+  },
+  "source": "neural-31103"
+}

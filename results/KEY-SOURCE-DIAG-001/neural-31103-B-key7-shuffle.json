@@ -1,0 +1,41 @@
+{
+  "case": "B-key7-shuffle",
+  "metrics": {
+    "learned": {
+      "fit": {
+        "all_supported": true,
+        "decoded_characters": 1519,
+        "edits": null,
+        "exact_records": null,
+        "gold_characters": null,
+        "joint_map_lower_nats": -3061.615456696966,
+        "joint_map_upper_nats": -203.5413633296394,
+        "marginal_likelihood_available": false,
+        "model_bits": 145,
+        "objective_kind": "bounded_joint_map_not_marginal",
+        "record_edits": null,
+        "supported_records": 4
+      },
+      "transfer": {
+        "all_supported": true,
+        "decoded_characters": 739,
+        "edits": null,
+        "exact_records": null,
+        "gold_characters": null,
+        "joint_map_lower_nats": -1568.6752181761442,
+        "joint_map_upper_nats": -150.81966467094736,
+        "marginal_likelihood_available": false,
+        "model_bits": 145,
+        "objective_kind": "bounded_joint_map_not_marginal",
+        "record_edits": null,
+        "supported_records": 2
+      }
+    }
+  },
+  "readings": {
+    "bytes": 1981,
+    "path": "outputs/KEY-SOURCE-DIAG-001/neural-31103/B-key7-shuffle.json.gz",
+    "sha256": "fc7fe5b5818ce9dad811ace5564a2222921dbbea5df4f09cf7409e1f3761c2e0"
+  },
+  "source": "neural-31103"
+}
