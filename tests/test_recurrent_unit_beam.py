@@ -109,3 +109,27 @@ def test_malformed_probabilities_cap_and_empty_record():
             return np.zeros((len(tokens), 2)), [''] * len(tokens)
     with pytest.raises(ValueError, match='normalized'):
         decode_beam(Bad(), ('x', 'x'), 'x', .2)
+
+
+@pytest.mark.skipif(not torch.backends.mps.is_available(), reason='MPS unavailable in current sandbox')
+def test_mps_state_carry_and_batched_beam_match_cpu_full_forward():
+    torch.manual_seed(9917)
+    cpu = RecurrentSource('ab', embedding=4, width=7, layers=2).eval()
+    gpu = RecurrentSource('ab', embedding=4, width=7, layers=2).eval()
+    gpu.load_state_dict(cpu.state_dict())
+    gpu.to('mps')
+    result = decode_beam(RecurrentProvider(gpu, 'mps'), ('x', 'xx'), 'xxxxxx', .2, beam_width=128)
+    values = {}
+    with torch.inference_mode():
+        for n in range(3, 7):
+            for letters in itertools.product('ab', repeat=n):
+                text = ''.join(letters)
+                if ''.join('x' if c == 'a' else 'xx' for c in text) != 'xxxxxx':
+                    continue
+                ids = ['ab'.index(c) for c in text]
+                logits, _ = cpu(torch.tensor([[2] + ids[:-1]]))
+                logp = torch.log_softmax(logits[0].double(), dim=-1)
+                values[text] = math.log(.2) + n * math.log(.8) + sum(float(logp[i, c]) for i, c in enumerate(ids))
+    assert result.joint_log_probability == pytest.approx(max(values.values()), abs=2e-6)
+    assert result.joint_log_probability == pytest.approx(values[result.plaintext], abs=2e-6)
+    assert result.discarded_prefixes == 0

@@ -272,8 +272,8 @@ def evaluate(freeze):
             if len(rows) != 2:
                 raise ValueError('Missing author record')
             summary = metrics(rows, truth[name])
-            independent = sum(edit_reference(r['plaintext'], answer) for r, answer in zip(rows, truth[name], strict=True))
-            if independent != summary['edits']:
+            independent = [edit_reference(r['plaintext'], answer) for r, answer in zip(rows, truth[name], strict=True)]
+            if independent != summary['record_edits'] or sum(independent) != summary['edits']:
                 raise ValueError('Independent edit-distance mismatch')
             table[arm][name] = summary
     for seed in SEEDS:

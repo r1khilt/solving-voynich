@@ -1,0 +1,304 @@
+{
+  "all_paired_initial_weights_verified": true,
+  "all_same_dataset_inputs_identical_between_families": true,
+  "cipher_reading_accuracy_not_measured_here": true,
+  "experiment": "LATIN-SOURCE-MODEL-001",
+  "neural_fit_cpu_seconds_sum": 426.234776,
+  "neural_fit_wall_seconds_sum": 3166.3506029600103,
+  "neural_runs": [
+    {
+      "audit": {
+        "bytes": 907,
+        "path": "results/LATIN-SOURCE-MODEL-001/small-seed31103-audit.json",
+        "sha256": "331df5a05de6d10fa51240316d44daeed7551a7a2c52a19d926dcbd0b5d58a8f"
+      },
+      "curve": [
+        {
+          "bpc": 4.520799948881122,
+          "step": 0
+        },
+        {
+          "bpc": 3.319126278308818,
+          "step": 100
+        },
+        {
+          "bpc": 6.082655602879686,
+          "step": 500
+        },
+        {
+          "bpc": 7.225454236467713,
+          "step": 1000
+        },
+        {
+          "bpc": 7.95822885434016,
+          "step": 2000
+        },
+        {
+          "bpc": 8.656549028034005,
+          "step": 4000
+        },
+        {
+          "bpc": 8.700065820234608,
+          "step": 6000
+        }
+      ],
+      "dataset": "small",
+      "final_bpc": 8.700065820234608,
+      "parameters": 7405079,
+      "resources": {
+        "cpu_seconds": 107.759404,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 597327872,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 794.0834556250193
+      },
+      "seed": 31103,
+      "selected_bpc": 3.319126278308818,
+      "selected_step": 100,
+      "source_result": {
+        "bytes": 100996,
+        "path": "results/LATIN-SOURCE-MODEL-001/small-seed31103.json",
+        "sha256": "f35fdd8a3396a4ff0672a7b8ead2a86fb6b39ecc8a746407b731ad1f5744f1c9"
+      }
+    },
+    {
+      "audit": {
+        "bytes": 896,
+        "path": "results/LATIN-SOURCE-MODEL-001/small-seed31109-audit.json",
+        "sha256": "0c9ebaeb5220ae214a3ac4fefcf28dde9d019cc5c293ff620f74c3d87df825b4"
+      },
+      "curve": [
+        {
+          "bpc": 4.533335113075199,
+          "step": 0
+        },
+        {
+          "bpc": 3.3157564739058896,
+          "step": 100
+        },
+        {
+          "bpc": 6.000325683786379,
+          "step": 500
+        },
+        {
+          "bpc": 7.107467782624582,
+          "step": 1000
+        },
+        {
+          "bpc": 7.94833804395338,
+          "step": 2000
+        },
+        {
+          "bpc": 8.477113834217018,
+          "step": 4000
+        },
+        {
+          "bpc": 8.621032060699937,
+          "step": 6000
+        }
+      ],
+      "dataset": "small",
+      "final_bpc": 8.621032060699937,
+      "parameters": 7405079,
+      "resources": {
+        "cpu_seconds": 106.345864,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 591282176,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 790.7987026670016
+      },
+      "seed": 31109,
+      "selected_bpc": 3.3157564739058896,
+      "selected_step": 100,
+      "source_result": {
+        "bytes": 101050,
+        "path": "results/LATIN-SOURCE-MODEL-001/small-seed31109.json",
+        "sha256": "25eaed103d6536a36927aa0fddbe125a586789781fd0558057d108c26003f1b0"
+      }
+    },
+    {
+      "audit": {
+        "bytes": 907,
+        "path": "results/LATIN-SOURCE-MODEL-001/large-seed31103-audit.json",
+        "sha256": "34bd38e161fd6a7038fc8a43e601d372e0a4e5ddfac62f73616608d9f17a2d11"
+      },
+      "curve": [
+        {
+          "bpc": 4.520799948881122,
+          "step": 0
+        },
+        {
+          "bpc": 3.2849990334765593,
+          "step": 100
+        },
+        {
+          "bpc": 2.56269815224159,
+          "step": 500
+        },
+        {
+          "bpc": 2.4322016563462374,
+          "step": 1000
+        },
+        {
+          "bpc": 2.3668255668347378,
+          "step": 2000
+        },
+        {
+          "bpc": 2.353183816755674,
+          "step": 4000
+        },
+        {
+          "bpc": 2.3726436468630103,
+          "step": 6000
+        }
+      ],
+      "dataset": "large",
+      "final_bpc": 2.3726436468630103,
+      "parameters": 7405079,
+      "resources": {
+        "cpu_seconds": 105.76696,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 679444480,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 792.9890309589973
+      },
+      "seed": 31103,
+      "selected_bpc": 2.353183816755674,
+      "selected_step": 4000,
+      "source_result": {
+        "bytes": 100956,
+        "path": "results/LATIN-SOURCE-MODEL-001/large-seed31103.json",
+        "sha256": "8ad9c8759699f8468a92ee0669fd260c1869da23a8a27c374d45b2dc35b2b9c9"
+      }
+    },
+    {
+      "audit": {
+        "bytes": 908,
+        "path": "results/LATIN-SOURCE-MODEL-001/large-seed31109-audit.json",
+        "sha256": "5daf0db222f72b125b06a322459f862210030cd1459c13a92af013ff5d0f4068"
+      },
+      "curve": [
+        {
+          "bpc": 4.533335113075199,
+          "step": 0
+        },
+        {
+          "bpc": 3.2771688641876606,
+          "step": 100
+        },
+        {
+          "bpc": 2.5647832967137787,
+          "step": 500
+        },
+        {
+          "bpc": 2.4305277292462386,
+          "step": 1000
+        },
+        {
+          "bpc": 2.362937722238956,
+          "step": 2000
+        },
+        {
+          "bpc": 2.3550325596231194,
+          "step": 4000
+        },
+        {
+          "bpc": 2.371853628103159,
+          "step": 6000
+        }
+      ],
+      "dataset": "large",
+      "final_bpc": 2.371853628103159,
+      "parameters": 7405079,
+      "resources": {
+        "cpu_seconds": 106.362548,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 681181184,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 788.4794137089921
+      },
+      "seed": 31109,
+      "selected_bpc": 2.3550325596231194,
+      "selected_step": 4000,
+      "source_result": {
+        "bytes": 100976,
+        "path": "results/LATIN-SOURCE-MODEL-001/large-seed31109.json",
+        "sha256": "ee436d7aa2e9a0996e9050bf270c0ea822602c09af1bfd72df27aa17bd32ceef"
+      }
+    }
+  ],
+  "original_failure": {
+    "freeze": "37cb7c5ee48f1e1a54389c6e49eb453636b8c30c",
+    "message": "Fixed context cap exceeded; do not change cutoff",
+    "time_unix": 1790763854.68425,
+    "type": "RuntimeError"
+  },
+  "original_full_architecture_screen": "UNAVAILABLE_failed_large_statistical_arm",
+  "paid_experiment_api_cloud_spend_usd": 0,
+  "paired_comparisons": [
+    {
+      "data_gain_bpc": 0.9659424615531442,
+      "large_neural_gain_over_large_statistical_bpc": 0.08890909894392518,
+      "seed": 31103,
+      "supplementary_fixed_thresholds_met": true
+    },
+    {
+      "data_gain_bpc": 0.9607239142827702,
+      "large_neural_gain_over_large_statistical_bpc": 0.08706035607647955,
+      "seed": 31109,
+      "supplementary_fixed_thresholds_met": true
+    }
+  ],
+  "statistical": {
+    "large": {
+      "selected_bpc": 2.442092915699599,
+      "source_result": {
+        "bytes": 2098,
+        "path": "results/LATIN-SOURCE-COMPACT-001/large.json",
+        "sha256": "91df142e8229ca60f0e9a52ffe7e803bd7f0c8a983f5cd4e41b47fd04167377b"
+      },
+      "tau": 64.0
+    },
+    "small": {
+      "selected_bpc": 3.037414668987277,
+      "source_result": {
+        "bytes": 2065,
+        "path": "results/LATIN-SOURCE-COMPACT-001/small.json",
+        "sha256": "b4a35cbbe8dd01230635c3407cb64e9cadceb6669e23ff6c3c6eacffad6cd492"
+      },
+      "tau": 64.0
+    }
+  },
+  "statistical_revision": "LATIN-SOURCE-COMPACT-001",
+  "status": "completed_four_neural_fits_with_recorded_statistical_cap_failure",
+  "supplementary_priority_screen_pass": true,
+  "total_presented_target_characters": 196608000,
+  "training_characters_by_dataset": {
+    "large": 6497939,
+    "small": 97850
+  }
+}
