@@ -16,6 +16,17 @@ not completed edition-level or worldwide rights clearance. Both contain English
 material, so treating the whole file as Latin is prohibited. No catalogue body
 or ebook was opened for this implementation.
 
+**2026-09-30 pre-text transport amendment:** The first frozen acquisition refused
+the advertised endpoints' HTTP downgrades before receiving any book bytes.
+The failed `blind_channel_confirmation_acquisition.json` is preserved. HEAD-only
+checks verified the same files at direct HTTPS cache paths, PG7402/PG9090, with
+503,378/436,490 advertised bytes. After a new published pre-text freeze, use
+`https://www.gutenberg.org/cache/epub/7402/pg7402.txt` and
+`https://www.gutenberg.org/cache/epub/9090/pg9090.txt`; record that separate attempt
+in `blind_channel_confirmation_acquisition_v2.json`. All scientific choices and
+no-overwrite/HTTPS checks remain unchanged. This is an explicit registration
+amendment, not automatic retry or alternate-edition selection.
+
 ## Ordered stages
 
 1. Freeze and publish the whole recovery pipeline, extraction policy, fixed
@@ -118,7 +129,7 @@ development. An LLM's possible pretraining exposure is not certified absent.
 
 Raw files live under ignored `data/raw/blind-channel-confirmation/`; derived
 payloads under ignored `data/processed/blind-channel-confirmation/`. The compact
-tracked manifests are `data/manifests/blind_channel_confirmation_acquisition.json`
+tracked current manifests are `data/manifests/blind_channel_confirmation_acquisition_v2.json`
 and `data/manifests/blind_channel_confirmation_corpora.json`. No full text or
 token map is added to Git. The prepared artifact includes source/code freeze,
 plan/acquisition/development hashes, URL/time metadata, normalization provenance,

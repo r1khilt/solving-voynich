@@ -265,6 +265,8 @@ def test_failed_second_acquisition_preserves_first_and_records_failure(tmp_path,
     with pytest.raises(FileExistsError):
         corpus.acquire("0" * 40, "fixture.md")
     assert len(calls) == 2
+    assert calls == ["https://www.gutenberg.org/cache/epub/7402/pg7402.txt",
+                     "https://www.gutenberg.org/cache/epub/9090/pg9090.txt"]
 
 
 def test_freeze_checks_actual_committed_bytes(tmp_path, monkeypatch):

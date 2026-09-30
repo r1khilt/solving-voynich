@@ -29,7 +29,7 @@ WINDOW_STRIDE = 256
 KEY_COUNT = 8
 KEY_WINDOW_BLOCK = 16
 DEVELOPMENT = "data/manifests/blind_channel_development_corpora.json"
-ACQUISITION = "data/manifests/blind_channel_confirmation_acquisition.json"
+ACQUISITION = "data/manifests/blind_channel_confirmation_acquisition_v2.json"
 MANIFEST = "data/manifests/blind_channel_confirmation_corpora.json"
 FINAL = {
     "sallust": {"role": "F", "author": "Sallust", "pg": 7402},
@@ -114,7 +114,8 @@ def acquire(commit: str, registration: str) -> None:
     # Sequential acquisition, with each successful raw file preserved if a later request fails.
     sources = {}
     for (name, spec), path in zip(FINAL.items(), targets, strict=True):
-        url = f"https://www.gutenberg.org/ebooks/{spec['pg']}.txt.utf-8"
+        # Explicit pre-text amendment; preserve the original failed manifest.
+        url = f"https://www.gutenberg.org/cache/epub/{spec['pg']}/pg{spec['pg']}.txt"
         try:
             raw, row = download(url)
         except Exception as error:

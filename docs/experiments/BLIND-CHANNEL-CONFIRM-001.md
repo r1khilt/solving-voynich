@@ -7,6 +7,26 @@ and no new score observed at registration. This does not replace the larger
 [blind-channel program](../research/blind-channel-recovery-design.md), qualify
 stateful familyC or identify Voynich's language or encoding.
 
+## Pre-text transport amendment, 2026-09-30
+
+The original pre-data freeze `e142a59f8c87bb2f16eb74343cca7c874aa56b68`
+was published before acquisition. The first request stopped at an HTTP302
+because its Location downgraded to HTTP. No book bytes, source statistics,
+keys or scores were read. Failure remains at
+`data/manifests/blind_channel_confirmation_acquisition.json`.
+Subsequent HEAD-only checks showed the same origin/path responds200 over HTTPS:
+`https://www.gutenberg.org/cache/epub/7402/pg7402.txt` (503,378bytes) and
+`https://www.gutenberg.org/cache/epub/9090/pg9090.txt` (436,490bytes).
+
+Before any text acquisition, publish this explicit transport-only amendment
+and freeze the pipeline again. A separate acquisition attempt uses those exact
+HTTPS paths and writes `blind_channel_confirmation_acquisition_v2.json`.
+Preserve the original failure and retain HTTPS verification, no automatic retry,
+the same edition IDs, byte caps, all extraction rules, source tables, solver,
+key streams, windows, limits and decision gates. This is not a replacement of
+a scored experiment or an outcome-dependent change. Any second failure is
+preserved rather than silently retried.
+
 ## Question and rationale
 
 Can the complete pipeline developed on Cicero and two exposed B keys recover
