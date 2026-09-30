@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-30 PDT (fresh-key pipeline prepared; Borg transcription constraint explicit; no Voynich decipherment).
+Last updated: 2026-09-30 PDT (pipeline frozen; final editions acquired for evaluator preparation; no Voynich decipherment).
 
 ## Current state
+
+- **Current acquisition stage:** Fresh pipeline/protocol originally frozen e142a59; first acquisition refused an HTTP downgrade before book bytes. Failed manifest preserved. Explicit pre-text HTTPS amendment0d3f885 was remotely verified; separate acquisition-v2 succeeds on PG7402/9090, raw SHA3e0ee5ce/a6bc1ed9. Root reviewed original Latin bodies and editorial byte exclusions without model/cipher scores; reviewed planSHA7b3374a8. Publish that plan before preparation and full-body overlap screen. No cases/keys generated or fitted. Corpus/solver/source/gates remain frozen; any post-exposure methodological change needs explicit failure/amendment, not silent retuning. NB-221–222.
 
 - **Fresh qualification prepared, not yet run:** `BLIND-CHANNEL-CONFIRM-001` freezes8new Bkeys+8paired shuffles, Sallustfit/Tacitustransfer, unchanged source1search300s→source3refinement300s. Strict per-key5%/macro2%/oracle-gap2point gates and separate unchanged iid screen. Final editions remain unopened pending full source/protocol freeze; corpus policy requires explicit Latin/apparatus spans, all-body64letter overlap screen and body-contained fixed windows.98newfocused tests pass, including15 independent integration checks after fixing five pre-data no-repeat/failure guards. FiveCPUhour/two-worker/8GiB planning cap; no paiduse. Read registration, `docs/research/blind-channel-fresh-qualification-review.md`, `final-corpus-provenance-plan.md`, NB-219. Do not restart or tune exposedDEV cases.
 

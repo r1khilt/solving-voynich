@@ -1,0 +1,63 @@
+{
+  "acquisition_sha256": "e59f29baac93ef8a76676286ec0769c55ec13b8a9909a07df52f1230278cb52b",
+  "review_script_sha256": "be135259ac0f05a26ead699f7c48ad6cdb1775f80a2b782da355ad3dd12c98e8",
+  "scope": "Bibliographic body and apparatus audit only; no normalization/source/cipher scores",
+  "sources": {
+    "sallust": {
+      "catalogue": "https://www.gutenberg.org/ebooks/7402",
+      "catalogue_rights_checked": "2026-09-30: public domain in USA; raw license notice retained",
+      "observations": [
+        {
+          "body_id": "bellum_catilinarium",
+          "bytes_excluded": 86565,
+          "chapter_count": 61,
+          "editorial_blocks": 59,
+          "editorial_note_headers": 353,
+          "exclusive_end_line": 2998,
+          "first_line": 384,
+          "repeated_note_numbers_preserved": {}
+        },
+        {
+          "body_id": "bellum_jugurthinum",
+          "bytes_excluded": 140655,
+          "chapter_count": 114,
+          "editorial_blocks": 115,
+          "editorial_note_headers": 640,
+          "exclusive_end_line": 7714,
+          "first_line": 3004,
+          "repeated_note_numbers_preserved": {
+            "495": 2
+          }
+        }
+      ],
+      "scope_limit": "Mechanical bibliographic extraction, no manuscript collation or certification of authorial/editorial readings"
+    },
+    "tacitus": {
+      "catalogue": "https://www.gutenberg.org/ebooks/9090",
+      "catalogue_rights_checked": "2026-09-30: public domain in USA; raw license notice retained",
+      "observations": [
+        {
+          "body_id": "germania",
+          "bytes_excluded": 0,
+          "chapter_count": 46,
+          "editorial_blocks": 0,
+          "editorial_note_headers": 0,
+          "exclusive_end_line": 1335,
+          "first_line": 694,
+          "repeated_note_numbers_preserved": {}
+        },
+        {
+          "body_id": "agricola",
+          "bytes_excluded": 0,
+          "chapter_count": 46,
+          "editorial_blocks": 0,
+          "editorial_note_headers": 0,
+          "exclusive_end_line": 2171,
+          "first_line": 1387,
+          "repeated_note_numbers_preserved": {}
+        }
+      ],
+      "scope_limit": "Mechanical bibliographic extraction, no manuscript collation or certification of authorial/editorial readings"
+    }
+  }
+}
