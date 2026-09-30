@@ -1,0 +1,126 @@
+{
+  "baseline": {
+    "bytes": 2576245,
+    "path": "outputs/BLIND-CHANNEL-DEV-004/selected_sources.json.gz",
+    "sha256": "a314c7120a14f6636a7b0a129e803fc517c0488016422a3fd84764b092179615"
+  },
+  "baseline_regression_delta": 0.0,
+  "candidates": [
+    {
+      "contexts": 3089,
+      "order": 3,
+      "tau": 4.0,
+      "validation_bits_per_character": 3.8960769876396113
+    },
+    {
+      "contexts": 3089,
+      "order": 3,
+      "tau": 16.0,
+      "validation_bits_per_character": 3.614768097902449
+    },
+    {
+      "contexts": 3089,
+      "order": 3,
+      "tau": 64.0,
+      "validation_bits_per_character": 3.475162595860755
+    },
+    {
+      "contexts": 3089,
+      "order": 3,
+      "tau": 256.0,
+      "validation_bits_per_character": 3.452566316942548
+    },
+    {
+      "contexts": 37079,
+      "order": 5,
+      "tau": 4.0,
+      "validation_bits_per_character": 4.214364699591577
+    },
+    {
+      "contexts": 37079,
+      "order": 5,
+      "tau": 16.0,
+      "validation_bits_per_character": 3.6689393224167257
+    },
+    {
+      "contexts": 37079,
+      "order": 5,
+      "tau": 64.0,
+      "validation_bits_per_character": 3.4609564272061917
+    },
+    {
+      "contexts": 37079,
+      "order": 5,
+      "tau": 256.0,
+      "validation_bits_per_character": 3.4360508359176825
+    },
+    {
+      "contexts": 150247,
+      "order": 8,
+      "tau": 4.0,
+      "validation_bits_per_character": 4.274450085582017
+    },
+    {
+      "contexts": 150247,
+      "order": 8,
+      "tau": 16.0,
+      "validation_bits_per_character": 3.6797033850207144
+    },
+    {
+      "contexts": 150247,
+      "order": 8,
+      "tau": 64.0,
+      "validation_bits_per_character": 3.460015638166775
+    },
+    {
+      "contexts": 150247,
+      "order": 8,
+      "tau": 256.0,
+      "validation_bits_per_character": 3.4343693288675503
+    },
+    {
+      "contexts": 339192,
+      "order": 12,
+      "tau": 4.0,
+      "validation_bits_per_character": 4.276807965587344
+    },
+    {
+      "contexts": 339192,
+      "order": 12,
+      "tau": 16.0,
+      "validation_bits_per_character": 3.6801513438750244
+    },
+    {
+      "contexts": 339192,
+      "order": 12,
+      "tau": 64.0,
+      "validation_bits_per_character": 3.4600145156854905
+    },
+    {
+      "contexts": 339192,
+      "order": 12,
+      "tau": 256.0,
+      "validation_bits_per_character": 3.4343270293805133
+    }
+  ],
+  "corpus_manifest_sha256": "01557ccb84a0d4c0a3970329672252a73854049c392c407f18410f22e193a990",
+  "experiment": "SUFFIX-READER-001",
+  "freeze": "063b8ac6feccd7308325bcc5bd74e96b84d7b764",
+  "independent_all_counts_match": true,
+  "selected": {
+    "contexts": 339192,
+    "order": 12,
+    "tau": 256.0,
+    "validation_bits_per_character": 3.4343270293805133
+  },
+  "source": {
+    "bytes": 2671749,
+    "path": "outputs/SUFFIX-READER-001/source.json.gz",
+    "sha256": "5fcea148591aa23446b9cff3bd7ebf88eea55799bd70b585dca307d05ee2ba4d"
+  },
+  "source_authors": [
+    "caesar",
+    "virgil"
+  ],
+  "source_contexts": 688558
+}
