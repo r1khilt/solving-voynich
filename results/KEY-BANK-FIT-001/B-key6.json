@@ -1,0 +1,70 @@
+{
+  "all_positive_weights_retained_in_log_domain": true,
+  "bank": {
+    "bytes": 88039,
+    "path": "outputs/KEY-BANK-FIT-001/B-key6-bank.json.gz",
+    "sha256": "1d67f3636a3ee1bb11522f301f3cec562695a88f603bd2b6316510f5d4b76f1e"
+  },
+  "bank_size": 1194,
+  "best_index": 1115,
+  "best_units": [
+    "BC",
+    "AF",
+    "D",
+    "BA",
+    "AC",
+    "CB",
+    "A",
+    "AE",
+    "E",
+    "B",
+    "EB",
+    "C",
+    "FD",
+    "B",
+    "CE",
+    "DD",
+    "BB",
+    "AA",
+    "FE",
+    "FC",
+    "EA",
+    "E",
+    "A"
+  ],
+  "case": "B-key6",
+  "experiment": "KEY-BANK-FIT-001",
+  "finite_keys": 952,
+  "fit": {
+    "bytes": 2238,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key6/fit.json",
+    "sha256": "df813c3c4ba3569a3a5981f63e3e5a60423f061254a5cec2c83f9df3eabf0416"
+  },
+  "fit_log_normalizer_restricted_not_full_family_evidence": -1635.113327670039,
+  "freeze": "60cfa9069212e19fd6eb09f3d0eb81789e92d1d6",
+  "maximum_weight": 0.062375004292950884,
+  "parent": {
+    "bytes": 8646,
+    "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key6_freeze.json",
+    "sha256": "0956162e1e80b526f17e8c9469faaa05b5276b1cf355850a8fadb656788a9b92"
+  },
+  "resources": {
+    "cpu_seconds": 37.021057,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 545554432,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 37.05348662499455
+  },
+  "source": {
+    "bytes": 2098,
+    "path": "results/LATIN-SOURCE-COMPACT-001/large.json",
+    "sha256": "91df142e8229ca60f0e9a52ffe7e803bd7f0c8a983f5cd4e41b47fd04167377b"
+  },
+  "status": "complete_fit_only_bank"
+}

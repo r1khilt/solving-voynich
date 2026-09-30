@@ -1,0 +1,43 @@
+{
+  "fit": {
+    "bytes": 2234,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key1-shuffle/fit.json",
+    "sha256": "eade2c30058aeac6e4b64a87898fb51be41fcef3ae72dba3e2eee4ea1103df9a"
+  },
+  "identical_full_readings": true,
+  "indices": [
+    0,
+    166,
+    332,
+    499,
+    665,
+    832,
+    998,
+    1165
+  ],
+  "parent": {
+    "bytes": 8643,
+    "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key1-shuffle_freeze.json",
+    "sha256": "9c4348accae1bbad591e892af31d8079b3419ed19fbd6a76bceed1a866dcd3b6"
+  },
+  "readings": {
+    "bytes": 4734,
+    "path": "outputs/DENSE-SOURCE-001/B-key1-shuffle.json.gz",
+    "sha256": "bbc288b7ffb861b746520a43a75c332c41edf4e6a1e88cdbe2f25f433d3ff5e1"
+  },
+  "speedup_observed_not_universal": 6.349606546585174,
+  "timings": {
+    "dense": {
+      "cpu_seconds": 4.289816,
+      "edges": 6667613,
+      "nodes": 1680100,
+      "wall_seconds": 4.297464583010878
+    },
+    "lazy": {
+      "cpu_seconds": 27.261505,
+      "edges": 6667613,
+      "nodes": 1680100,
+      "wall_seconds": 27.287209250003798
+    }
+  }
+}

@@ -1,0 +1,533 @@
+{
+  "campaign": {
+    "bytes": 1203,
+    "path": "results/KEY-BANK-FIT-001/campaign.json",
+    "sha256": "288875a41560f339d732fb8640127fe05bb4ef2f878302a2dc3b101b39e46193"
+  },
+  "campaign_wall_seconds": 2666.926435292,
+  "cases": [
+    {
+      "audit": {
+        "bytes": 964,
+        "path": "results/KEY-BANK-FIT-001/B-key1-audit.json",
+        "sha256": "90f54b0e77f644a9870b866545dcb0302759693bc037139da0bc6ac386ab4014"
+      },
+      "bank_size": 1193,
+      "case": "B-key1",
+      "finite_keys": 1030,
+      "fit_objective_gain_bits": 5.2542457207479005,
+      "maximum_weight": 0.5487104694431997,
+      "resources": {
+        "cpu_seconds": 48.306324,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 562020352,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 48.33335033399635
+      },
+      "retained_files": {
+        "-bank.json.gz": {
+          "bytes": 95585,
+          "path": "outputs/KEY-BANK-FIT-001/B-key1-bank.json.gz",
+          "sha256": "99b0abe7e8583b339c05a6caf5066ccbcffa86a080a9a1913fee145269561147"
+        },
+        "-progress.jsonl.gz": {
+          "bytes": 84546,
+          "path": "outputs/KEY-BANK-FIT-001/B-key1-progress.jsonl.gz",
+          "sha256": "ce298c5453a5b844dc4c770b303edfe34b327fde5de1eec1c9fe49cfaa98719f"
+        },
+        ".log": {
+          "bytes": 2458,
+          "path": "outputs/KEY-BANK-FIT-001/B-key1.log",
+          "sha256": "bab4ff3b42d56fdd1099668f8e6f747784bf3c2f4e2f6d5652884159e41bfc10"
+        }
+      },
+      "returncode": 0,
+      "status": "complete_audited_bank"
+    },
+    {
+      "case": "B-key1-shuffle",
+      "exact_final_cpu_and_rss_unavailable": true,
+      "partial_gzip_not_assumed_complete": true,
+      "retained_files": {
+        "-progress.jsonl.gz": {
+          "bytes": 11678,
+          "path": "outputs/KEY-BANK-FIT-001/B-key1-shuffle-progress.jsonl.gz",
+          "sha256": "70c37f9dc0c3fe359795684c179cb88b04e6c4dfbabb872d91b47250f22afa23"
+        },
+        ".log": {
+          "bytes": 177,
+          "path": "outputs/KEY-BANK-FIT-001/B-key1-shuffle.log",
+          "sha256": "30b16d7a39d4b2e21cd6fd7dbdfb8309c3853777302745f5dd529d89a75408ad"
+        }
+      },
+      "returncode": -24,
+      "signal": "SIGXCPU",
+      "status": "CPU_limit_no_complete_bank"
+    },
+    {
+      "audit": {
+        "bytes": 955,
+        "path": "results/KEY-BANK-FIT-001/B-key2-audit.json",
+        "sha256": "598e18546811d83c21cf1dec3d3554a7bb1589b1c941d5076a154c53290158cd"
+      },
+      "bank_size": 1194,
+      "case": "B-key2",
+      "finite_keys": 1073,
+      "fit_objective_gain_bits": 0.23012797709689883,
+      "maximum_weight": 0.035503589413475846,
+      "resources": {
+        "cpu_seconds": 51.033202,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 559218688,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 51.06300104199909
+      },
+      "retained_files": {
+        "-bank.json.gz": {
+          "bytes": 94316,
+          "path": "outputs/KEY-BANK-FIT-001/B-key2-bank.json.gz",
+          "sha256": "4c3b5e4655d438c780baf41fc696b3db9468e26fbdc4d4631e8a216396626226"
+        },
+        "-progress.jsonl.gz": {
+          "bytes": 83476,
+          "path": "outputs/KEY-BANK-FIT-001/B-key2-progress.jsonl.gz",
+          "sha256": "f77a60eb6d632463afad4e56a7372da19ad0d57937bb47af8335ff3deb60c3f1"
+        },
+        ".log": {
+          "bytes": 2460,
+          "path": "outputs/KEY-BANK-FIT-001/B-key2.log",
+          "sha256": "a07b87d94558739b5fed9b08c4b9a86f7b7c3862df7068e4f817eded4e2df286"
+        }
+      },
+      "returncode": 0,
+      "status": "complete_audited_bank"
+    },
+    {
+      "case": "B-key2-shuffle",
+      "exact_final_cpu_and_rss_unavailable": true,
+      "partial_gzip_not_assumed_complete": true,
+      "retained_files": {
+        "-progress.jsonl.gz": {
+          "bytes": 11736,
+          "path": "outputs/KEY-BANK-FIT-001/B-key2-shuffle-progress.jsonl.gz",
+          "sha256": "34f691ba3478035279048747e08bb4d07e143d8dbbcf5d64301b3affd60631fa"
+        },
+        ".log": {
+          "bytes": 177,
+          "path": "outputs/KEY-BANK-FIT-001/B-key2-shuffle.log",
+          "sha256": "3ded0c3cea92fbc7ed5591cf70d907968dbf33bfa0e312883e19f604a1bf7647"
+        }
+      },
+      "returncode": -24,
+      "signal": "SIGXCPU",
+      "status": "CPU_limit_no_complete_bank"
+    },
+    {
+      "audit": {
+        "bytes": 955,
+        "path": "results/KEY-BANK-FIT-001/B-key3-audit.json",
+        "sha256": "f0007fb4a38fd75d3c0e6c87d88a6aae7887f85f9a09b367be92230186ee4fe8"
+      },
+      "bank_size": 1194,
+      "case": "B-key3",
+      "finite_keys": 1073,
+      "fit_objective_gain_bits": 0.005972111842532117,
+      "maximum_weight": 0.030797393820327996,
+      "resources": {
+        "cpu_seconds": 55.838857000000004,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 559808512,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 55.87758191701141
+      },
+      "retained_files": {
+        "-bank.json.gz": {
+          "bytes": 97031,
+          "path": "outputs/KEY-BANK-FIT-001/B-key3-bank.json.gz",
+          "sha256": "6fe1e33195f9b4a9b06678668b92b38e60476ae1450eec237a734b406e5bed0c"
+        },
+        "-progress.jsonl.gz": {
+          "bytes": 85656,
+          "path": "outputs/KEY-BANK-FIT-001/B-key3-progress.jsonl.gz",
+          "sha256": "6a3569dc4d8273baa1be9bae2247ca8a3bcc6aeaf26775d251e0d4a174ee6f7e"
+        },
+        ".log": {
+          "bytes": 2467,
+          "path": "outputs/KEY-BANK-FIT-001/B-key3.log",
+          "sha256": "06d7f4401f17912746735ea7151e0272bc95f5643505f7e29096cbd4d692abf5"
+        }
+      },
+      "returncode": 0,
+      "status": "complete_audited_bank"
+    },
+    {
+      "case": "B-key3-shuffle",
+      "exact_final_cpu_and_rss_unavailable": true,
+      "partial_gzip_not_assumed_complete": true,
+      "retained_files": {
+        "-progress.jsonl.gz": {
+          "bytes": 22683,
+          "path": "outputs/KEY-BANK-FIT-001/B-key3-shuffle-progress.jsonl.gz",
+          "sha256": "236618401d1f19b9d61a7f9b45c6b5ee63cb787fbdb9c3c654c8aef31a0b75d1"
+        },
+        ".log": {
+          "bytes": 297,
+          "path": "outputs/KEY-BANK-FIT-001/B-key3-shuffle.log",
+          "sha256": "c46553d72bb709a24760250a4d32b7f04498b92a815a9c0e03a5114ab2abd3f2"
+        }
+      },
+      "returncode": -24,
+      "signal": "SIGXCPU",
+      "status": "CPU_limit_no_complete_bank"
+    },
+    {
+      "audit": {
+        "bytes": 953,
+        "path": "results/KEY-BANK-FIT-001/B-key4-audit.json",
+        "sha256": "5619c8d6d3be676233746be1befef1c0bc51f0408bfabc217591f5864f3333f4"
+      },
+      "bank_size": 1189,
+      "case": "B-key4",
+      "finite_keys": 946,
+      "fit_objective_gain_bits": 182.35407002424986,
+      "maximum_weight": 1.0,
+      "resources": {
+        "cpu_seconds": 38.092361999999994,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 541425664,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 38.11713929200778
+      },
+      "retained_files": {
+        "-bank.json.gz": {
+          "bytes": 88180,
+          "path": "outputs/KEY-BANK-FIT-001/B-key4-bank.json.gz",
+          "sha256": "24d4add9c871fd67bb16761fe7970cb3a2d8f5fcee4562ce1b66dd6af5e75bf4"
+        },
+        "-progress.jsonl.gz": {
+          "bytes": 78447,
+          "path": "outputs/KEY-BANK-FIT-001/B-key4-progress.jsonl.gz",
+          "sha256": "0eb2e5269b3ff3ea983ce9576218b0fb9591d5109f5a2c517b7a81d90ba85420"
+        },
+        ".log": {
+          "bytes": 2449,
+          "path": "outputs/KEY-BANK-FIT-001/B-key4.log",
+          "sha256": "451399cbd096f80c5412ae704f35ba647e21abf9580b23a2831ad2e1bfcf5a85"
+        }
+      },
+      "returncode": 0,
+      "status": "complete_audited_bank"
+    },
+    {
+      "case": "B-key4-shuffle",
+      "exact_final_cpu_and_rss_unavailable": true,
+      "partial_gzip_not_assumed_complete": true,
+      "retained_files": {
+        "-progress.jsonl.gz": {
+          "bytes": 17059,
+          "path": "outputs/KEY-BANK-FIT-001/B-key4-shuffle-progress.jsonl.gz",
+          "sha256": "c661d044d10199655af5ff6be6908f653ef95534eb2f495e93395c01c29bfe2e"
+        },
+        ".log": {
+          "bytes": 237,
+          "path": "outputs/KEY-BANK-FIT-001/B-key4-shuffle.log",
+          "sha256": "66e127529630184efba19147d331fc38b3a99c42b021a22d128d263d1712c113"
+        }
+      },
+      "returncode": -24,
+      "signal": "SIGXCPU",
+      "status": "CPU_limit_no_complete_bank"
+    },
+    {
+      "audit": {
+        "bytes": 952,
+        "path": "results/KEY-BANK-FIT-001/B-key5-audit.json",
+        "sha256": "e444d6c16871752b7cd89b2f228b8f75615b0f17000a07ce7f3fa35405d8e8f8"
+      },
+      "bank_size": 1194,
+      "case": "B-key5",
+      "finite_keys": 952,
+      "fit_objective_gain_bits": 0.005535316779035205,
+      "maximum_weight": 0.03084680133287213,
+      "resources": {
+        "cpu_seconds": 24.996287000000002,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 529842176,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 25.01653266698122
+      },
+      "retained_files": {
+        "-bank.json.gz": {
+          "bytes": 88592,
+          "path": "outputs/KEY-BANK-FIT-001/B-key5-bank.json.gz",
+          "sha256": "759701c20c6b031227ddd00a00fefce81b6e4ceaf218aa4eeeb67c3ea3a8d23b"
+        },
+        "-progress.jsonl.gz": {
+          "bytes": 78331,
+          "path": "outputs/KEY-BANK-FIT-001/B-key5-progress.jsonl.gz",
+          "sha256": "b78d275fdd699ee8a08b1f56e1cfd1906764a4e24a0e4a3033768cf6517ce4e0"
+        },
+        ".log": {
+          "bytes": 2466,
+          "path": "outputs/KEY-BANK-FIT-001/B-key5.log",
+          "sha256": "532ada107baba71d21f8744a340da93367dcfb43214cc4eac60eff58017db83b"
+        }
+      },
+      "returncode": 0,
+      "status": "complete_audited_bank"
+    },
+    {
+      "case": "B-key5-shuffle",
+      "exact_final_cpu_and_rss_unavailable": true,
+      "partial_gzip_not_assumed_complete": true,
+      "retained_files": {
+        "-progress.jsonl.gz": {
+          "bytes": 27871,
+          "path": "outputs/KEY-BANK-FIT-001/B-key5-shuffle-progress.jsonl.gz",
+          "sha256": "8b3f8adb2e47bf2a46096fdd276aeb75a6d17ec58abfd54393710579670a0a57"
+        },
+        ".log": {
+          "bytes": 357,
+          "path": "outputs/KEY-BANK-FIT-001/B-key5-shuffle.log",
+          "sha256": "f533e66f2bea170e39c81bcfeb9202c0484b1afc6678cd610e829e8786c731be"
+        }
+      },
+      "returncode": -24,
+      "signal": "SIGXCPU",
+      "status": "CPU_limit_no_complete_bank"
+    },
+    {
+      "audit": {
+        "bytes": 954,
+        "path": "results/KEY-BANK-FIT-001/B-key6-audit.json",
+        "sha256": "952369e0d35579d20fa75bc95cbe0854864f6f8b4235407305a1403a20b4be6e"
+      },
+      "bank_size": 1194,
+      "case": "B-key6",
+      "finite_keys": 952,
+      "fit_objective_gain_bits": 1.1749722067387642,
+      "maximum_weight": 0.062375004292950884,
+      "resources": {
+        "cpu_seconds": 37.021057,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 545554432,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 37.05348662499455
+      },
+      "retained_files": {
+        "-bank.json.gz": {
+          "bytes": 88039,
+          "path": "outputs/KEY-BANK-FIT-001/B-key6-bank.json.gz",
+          "sha256": "1d67f3636a3ee1bb11522f301f3cec562695a88f603bd2b6316510f5d4b76f1e"
+        },
+        "-progress.jsonl.gz": {
+          "bytes": 77754,
+          "path": "outputs/KEY-BANK-FIT-001/B-key6-progress.jsonl.gz",
+          "sha256": "cd66f38562f68dd75b207daed0becb4e2e2babd7c20de1e83635bf3334eae2fb"
+        },
+        ".log": {
+          "bytes": 2458,
+          "path": "outputs/KEY-BANK-FIT-001/B-key6.log",
+          "sha256": "211c91536072f0401a747b404787bd66d1f11dec6bc10e255c82f17baabbee92"
+        }
+      },
+      "returncode": 0,
+      "status": "complete_audited_bank"
+    },
+    {
+      "case": "B-key6-shuffle",
+      "exact_final_cpu_and_rss_unavailable": true,
+      "partial_gzip_not_assumed_complete": true,
+      "retained_files": {
+        "-progress.jsonl.gz": {
+          "bytes": 22479,
+          "path": "outputs/KEY-BANK-FIT-001/B-key6-shuffle-progress.jsonl.gz",
+          "sha256": "86baf0541712ce74c5857cfc68ab6ba0080d045fafd4c2083264f669687ebaa6"
+        },
+        ".log": {
+          "bytes": 297,
+          "path": "outputs/KEY-BANK-FIT-001/B-key6-shuffle.log",
+          "sha256": "9f41f8f3ff8fdc6956dcfa233aad556335ebab35533a2df069cc485ea3ce27f0"
+        }
+      },
+      "returncode": -24,
+      "signal": "SIGXCPU",
+      "status": "CPU_limit_no_complete_bank"
+    },
+    {
+      "audit": {
+        "bytes": 955,
+        "path": "results/KEY-BANK-FIT-001/B-key7-audit.json",
+        "sha256": "dc81c1cc8671752d06a304ced50e0eb3f350cdca2113ba8aaf4a98f94d67033c"
+      },
+      "bank_size": 1193,
+      "case": "B-key7",
+      "finite_keys": 1152,
+      "fit_objective_gain_bits": 20.414725187250188,
+      "maximum_weight": 0.9927201265981714,
+      "resources": {
+        "cpu_seconds": 42.568521000000004,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 548028416,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 42.59901141602313
+      },
+      "retained_files": {
+        "-bank.json.gz": {
+          "bytes": 101592,
+          "path": "outputs/KEY-BANK-FIT-001/B-key7-bank.json.gz",
+          "sha256": "0b12e6d89c820c46186824296fde1cba002e6930a1e2e6be9eee1208b1cdf532"
+        },
+        "-progress.jsonl.gz": {
+          "bytes": 89384,
+          "path": "outputs/KEY-BANK-FIT-001/B-key7-progress.jsonl.gz",
+          "sha256": "aeb120e95af475a7794ab0fcc697dca255de5c4e1cbf3b8dc7808d002323278a"
+        },
+        ".log": {
+          "bytes": 2467,
+          "path": "outputs/KEY-BANK-FIT-001/B-key7.log",
+          "sha256": "8766334abda2ea9164843d07fe8c265382f7152f1f632784185061d3d76746b9"
+        }
+      },
+      "returncode": 0,
+      "status": "complete_audited_bank"
+    },
+    {
+      "case": "B-key7-shuffle",
+      "exact_final_cpu_and_rss_unavailable": true,
+      "partial_gzip_not_assumed_complete": true,
+      "retained_files": {
+        "-progress.jsonl.gz": {
+          "bytes": 17089,
+          "path": "outputs/KEY-BANK-FIT-001/B-key7-shuffle-progress.jsonl.gz",
+          "sha256": "726a9142e07ecdfc96edecedd8b0ecb706de0673c117cae575c3e9326ec13369"
+        },
+        ".log": {
+          "bytes": 237,
+          "path": "outputs/KEY-BANK-FIT-001/B-key7-shuffle.log",
+          "sha256": "5642c385181f7b0e399d7eecd204020659c12a4eb015dc7cddb850b716c3fa81"
+        }
+      },
+      "returncode": -24,
+      "signal": "SIGXCPU",
+      "status": "CPU_limit_no_complete_bank"
+    },
+    {
+      "audit": {
+        "bytes": 953,
+        "path": "results/KEY-BANK-FIT-001/B-key8-audit.json",
+        "sha256": "2ff3a0ce8e58f3bc10528ca3039750571c3f0683d325acda7f988fd1d59f67ef"
+      },
+      "bank_size": 1191,
+      "case": "B-key8",
+      "finite_keys": 1109,
+      "fit_objective_gain_bits": 77.97115422401171,
+      "maximum_weight": 0.9999999999997726,
+      "resources": {
+        "cpu_seconds": 78.15165800000001,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 563609600,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 78.19915279198904
+      },
+      "retained_files": {
+        "-bank.json.gz": {
+          "bytes": 101219,
+          "path": "outputs/KEY-BANK-FIT-001/B-key8-bank.json.gz",
+          "sha256": "d6da9fee500f807a4d4b30b06270897098a8d08de06751ef445989dadfd4a7a9"
+        },
+        "-progress.jsonl.gz": {
+          "bytes": 89108,
+          "path": "outputs/KEY-BANK-FIT-001/B-key8-progress.jsonl.gz",
+          "sha256": "fe155e8e184b2b6b9d1c7adb3626ad9f977fcd47800db56137c1d8f40e5fdc8b"
+        },
+        ".log": {
+          "bytes": 2464,
+          "path": "outputs/KEY-BANK-FIT-001/B-key8.log",
+          "sha256": "a994b973de49db232e0696363b472ce8e28f98c730b81134113740fcbd64ee3d"
+        }
+      },
+      "returncode": 0,
+      "status": "complete_audited_bank"
+    },
+    {
+      "case": "B-key8-shuffle",
+      "exact_final_cpu_and_rss_unavailable": true,
+      "partial_gzip_not_assumed_complete": true,
+      "retained_files": {
+        "-progress.jsonl.gz": {
+          "bytes": 22705,
+          "path": "outputs/KEY-BANK-FIT-001/B-key8-shuffle-progress.jsonl.gz",
+          "sha256": "c823e10597a2c04ef8300ee286c3bf2851aaeca6593e44ba8bcbab1c2c14c50f"
+        },
+        ".log": {
+          "bytes": 297,
+          "path": "outputs/KEY-BANK-FIT-001/B-key8-shuffle.log",
+          "sha256": "4abdbaf5cdecc6f7e85e130d65d9fa40da6947319904b6c6bb1d3ec92aac9f52"
+        }
+      },
+      "returncode": -24,
+      "signal": "SIGXCPU",
+      "status": "CPU_limit_no_complete_bank"
+    }
+  ],
+  "complete_candidates": 9542,
+  "complete_null_banks": 0,
+  "complete_positive_banks": 8,
+  "completed_worker_cpu_seconds": 376.00826800000004,
+  "completed_worker_wall_seconds": 376.25925608500256,
+  "finite_keys": 8287,
+  "frozen_bindings_verified": 74,
+  "killed_workers_cpu_limit_seconds_each": 600,
+  "killed_workers_final_resource_measurements_available": false,
+  "paid_spend_usd": 0,
+  "status": "incomplete_failures_retained"
+}

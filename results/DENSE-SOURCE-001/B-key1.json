@@ -1,0 +1,43 @@
+{
+  "fit": {
+    "bytes": 2226,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key1/fit.json",
+    "sha256": "c3192162157160bd6e189b890c3a4edfbbc4ff30ed4ea570daf131d0b03c5a35"
+  },
+  "identical_full_readings": true,
+  "indices": [
+    0,
+    170,
+    340,
+    510,
+    681,
+    851,
+    1021,
+    1192
+  ],
+  "parent": {
+    "bytes": 8624,
+    "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key1_freeze.json",
+    "sha256": "5bd6eb0a4e19a34764e076d4863cbaffa712b470b39d309d8df267a4f3933d36"
+  },
+  "readings": {
+    "bytes": 2531,
+    "path": "outputs/DENSE-SOURCE-001/B-key1.json.gz",
+    "sha256": "e22b01f6985ba44cc4e22d257853c866219946c374f004210f5394251db09e70"
+  },
+  "speedup_observed_not_universal": 2.82866039235062,
+  "timings": {
+    "dense": {
+      "cpu_seconds": 0.22322300000000017,
+      "edges": 296212,
+      "nodes": 141307,
+      "wall_seconds": 0.22499200000311248
+    },
+    "lazy": {
+      "cpu_seconds": 0.6354700000000002,
+      "edges": 296212,
+      "nodes": 141307,
+      "wall_seconds": 0.6364259590045549
+    }
+  }
+}

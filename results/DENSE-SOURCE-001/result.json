@@ -1,0 +1,259 @@
+{
+  "array_bytes": 399571824,
+  "cases": {
+    "B-key1": {
+      "fit": {
+        "bytes": 2226,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key1/fit.json",
+        "sha256": "c3192162157160bd6e189b890c3a4edfbbc4ff30ed4ea570daf131d0b03c5a35"
+      },
+      "identical_full_readings": true,
+      "indices": [
+        0,
+        170,
+        340,
+        510,
+        681,
+        851,
+        1021,
+        1192
+      ],
+      "parent": {
+        "bytes": 8624,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key1_freeze.json",
+        "sha256": "5bd6eb0a4e19a34764e076d4863cbaffa712b470b39d309d8df267a4f3933d36"
+      },
+      "readings": {
+        "bytes": 2531,
+        "path": "outputs/DENSE-SOURCE-001/B-key1.json.gz",
+        "sha256": "e22b01f6985ba44cc4e22d257853c866219946c374f004210f5394251db09e70"
+      },
+      "speedup_observed_not_universal": 2.82866039235062,
+      "timings": {
+        "dense": {
+          "cpu_seconds": 0.22322300000000017,
+          "edges": 296212,
+          "nodes": 141307,
+          "wall_seconds": 0.22499200000311248
+        },
+        "lazy": {
+          "cpu_seconds": 0.6354700000000002,
+          "edges": 296212,
+          "nodes": 141307,
+          "wall_seconds": 0.6364259590045549
+        }
+      }
+    },
+    "B-key1-shuffle": {
+      "fit": {
+        "bytes": 2234,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key1-shuffle/fit.json",
+        "sha256": "eade2c30058aeac6e4b64a87898fb51be41fcef3ae72dba3e2eee4ea1103df9a"
+      },
+      "identical_full_readings": true,
+      "indices": [
+        0,
+        166,
+        332,
+        499,
+        665,
+        832,
+        998,
+        1165
+      ],
+      "parent": {
+        "bytes": 8643,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key1-shuffle_freeze.json",
+        "sha256": "9c4348accae1bbad591e892af31d8079b3419ed19fbd6a76bceed1a866dcd3b6"
+      },
+      "readings": {
+        "bytes": 4734,
+        "path": "outputs/DENSE-SOURCE-001/B-key1-shuffle.json.gz",
+        "sha256": "bbc288b7ffb861b746520a43a75c332c41edf4e6a1e88cdbe2f25f433d3ff5e1"
+      },
+      "speedup_observed_not_universal": 6.349606546585174,
+      "timings": {
+        "dense": {
+          "cpu_seconds": 4.289816,
+          "edges": 6667613,
+          "nodes": 1680100,
+          "wall_seconds": 4.297464583010878
+        },
+        "lazy": {
+          "cpu_seconds": 27.261505,
+          "edges": 6667613,
+          "nodes": 1680100,
+          "wall_seconds": 27.287209250003798
+        }
+      }
+    }
+  },
+  "construction_seconds": 0.263500707980711,
+  "freeze": "16fd41dce73c672c0bb2473161809cc7033ca52a",
+  "lazy_parent_profile": [
+    {
+      "cumulative_seconds": 2.440449167,
+      "function": "('/Users/rikhil/coding/solving-voynich/src/voynich/sparse_suffix_source.py', 132, 'decode')",
+      "primitive_calls": 1,
+      "self_seconds": 0.26111431500000004,
+      "total_calls": 1
+    },
+    {
+      "cumulative_seconds": 1.228935898,
+      "function": "('/Users/rikhil/coding/solving-voynich/src/voynich/compact_suffix_adapter.py', 63, '_step')",
+      "primitive_calls": 182541,
+      "self_seconds": 0.116570877,
+      "total_calls": 182541
+    },
+    {
+      "cumulative_seconds": 0.881605186,
+      "function": "('/Users/rikhil/coding/solving-voynich/src/voynich/compact_suffix_adapter.py', 44, '_find')",
+      "primitive_calls": 219245,
+      "self_seconds": 0.381059166,
+      "total_calls": 219245
+    },
+    {
+      "cumulative_seconds": 0.870298318,
+      "function": "('/Users/rikhil/coding/solving-voynich/src/voynich/compact_suffix_adapter.py', 18, '__getitem__')",
+      "primitive_calls": 182541,
+      "self_seconds": 0.035265908000000006,
+      "total_calls": 182541
+    },
+    {
+      "cumulative_seconds": 0.8350324100000001,
+      "function": "('/Users/rikhil/coding/solving-voynich/src/voynich/compact_suffix_adapter.py', 71, '_row')",
+      "primitive_calls": 32461,
+      "self_seconds": 0.152743865,
+      "total_calls": 36705
+    },
+    {
+      "cumulative_seconds": 0.649316446,
+      "function": "('/Users/rikhil/coding/solving-voynich/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py', 1459, 'searchsorted')",
+      "primitive_calls": 827103,
+      "self_seconds": 0.136410476,
+      "total_calls": 827103
+    },
+    {
+      "cumulative_seconds": 0.51290597,
+      "function": "('/Users/rikhil/coding/solving-voynich/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py', 48, '_wrapfunc')",
+      "primitive_calls": 827103,
+      "self_seconds": 0.13643560600000001,
+      "total_calls": 827103
+    },
+    {
+      "cumulative_seconds": 0.33815699400000004,
+      "function": "('~', 0, \"<method 'searchsorted' of 'numpy.ndarray' objects>\")",
+      "primitive_calls": 827103,
+      "self_seconds": 0.33815699400000004,
+      "total_calls": 827103
+    },
+    {
+      "cumulative_seconds": 0.31351438400000003,
+      "function": "('/Users/rikhil/coding/solving-voynich/.venv/lib/python3.12/site-packages/numpy/_core/numeric.py', 2320, 'isclose')",
+      "primitive_calls": 36705,
+      "self_seconds": 0.13360274800000002,
+      "total_calls": 36705
+    },
+    {
+      "cumulative_seconds": 0.30155123300000003,
+      "function": "('/Users/rikhil/coding/solving-voynich/src/voynich/compact_suffix_adapter.py', 37, '_parts')",
+      "primitive_calls": 219246,
+      "self_seconds": 0.129905666,
+      "total_calls": 219246
+    },
+    {
+      "cumulative_seconds": 0.16644823,
+      "function": "('/Users/rikhil/coding/solving-voynich/src/voynich/compact_suffix_source.py', 101, 'lookup')",
+      "primitive_calls": 36705,
+      "self_seconds": 0.109099662,
+      "total_calls": 36705
+    },
+    {
+      "cumulative_seconds": 0.11962876800000001,
+      "function": "('/Users/rikhil/coding/solving-voynich/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py', 86, '_wrapreduction_any_all')",
+      "primitive_calls": 110115,
+      "self_seconds": 0.047242171000000006,
+      "total_calls": 110115
+    },
+    {
+      "cumulative_seconds": 0.107195329,
+      "function": "('/Users/rikhil/coding/solving-voynich/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py', 2586, 'all')",
+      "primitive_calls": 73410,
+      "self_seconds": 0.016791242,
+      "total_calls": 73410
+    },
+    {
+      "cumulative_seconds": 0.069604224,
+      "function": "('~', 0, '<built-in method builtins.len>')",
+      "primitive_calls": 1692503,
+      "self_seconds": 0.069604224,
+      "total_calls": 1692503
+    },
+    {
+      "cumulative_seconds": 0.050124474,
+      "function": "('~', 0, \"<method 'all' of 'numpy.generic' objects>\")",
+      "primitive_calls": 73410,
+      "self_seconds": 0.022712422000000003,
+      "total_calls": 73410
+    },
+    {
+      "cumulative_seconds": 0.044732259,
+      "function": "('~', 0, '<built-in method builtins.getattr>')",
+      "primitive_calls": 937218,
+      "self_seconds": 0.044732259,
+      "total_calls": 937218
+    },
+    {
+      "cumulative_seconds": 0.03894102,
+      "function": "('/Users/rikhil/coding/solving-voynich/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py', 2474, 'any')",
+      "primitive_calls": 36705,
+      "self_seconds": 0.009716339000000001,
+      "total_calls": 36705
+    },
+    {
+      "cumulative_seconds": 0.038601662,
+      "function": "('~', 0, \"<method 'reduce' of 'numpy.ufunc' objects>\")",
+      "primitive_calls": 146820,
+      "self_seconds": 0.038601662,
+      "total_calls": 146820
+    },
+    {
+      "cumulative_seconds": 0.033127159,
+      "function": "('/Users/rikhil/coding/solving-voynich/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py', 1455, '_searchsorted_dispatcher')",
+      "primitive_calls": 827103,
+      "self_seconds": 0.033127159,
+      "total_calls": 827103
+    },
+    {
+      "cumulative_seconds": 0.028908144,
+      "function": "('/Users/rikhil/coding/solving-voynich/.venv/lib/python3.12/site-packages/numpy/_core/numeric.py', 2412, '<genexpr>')",
+      "primitive_calls": 183525,
+      "self_seconds": 0.019702098,
+      "total_calls": 183525
+    }
+  ],
+  "maximum_sampled_probability_delta": 0.0,
+  "no_new_key_selection_or_transfer_reading": true,
+  "resources": {
+    "cpu_seconds": 35.537763,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1021526016,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 35.58671333300299
+  },
+  "sampled_rows": 376,
+  "sampled_transitions": 8648,
+  "source": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  },
+  "states": 1447724,
+  "status": "representation_benchmark_only"
+}
