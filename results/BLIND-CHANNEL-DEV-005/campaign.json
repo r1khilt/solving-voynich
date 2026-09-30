@@ -1,0 +1,33 @@
+{
+  "experiment": "BLIND-CHANNEL-DEV-005",
+  "results": [
+    {
+      "case": "B-key1",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"case\": \"B-key1\", \"neighbors\": 3574, \"stop\": \"local_optimum\"}\n"
+    },
+    {
+      "case": "B-key1-shuffle",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"case\": \"B-key1-shuffle\", \"neighbors\": 1377, \"stop\": \"time_limit\"}\n"
+    },
+    {
+      "case": "B-key2",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"case\": \"B-key2\", \"neighbors\": 7161, \"stop\": \"local_optimum\"}\n"
+    },
+    {
+      "case": "B-key2-shuffle",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"case\": \"B-key2-shuffle\", \"neighbors\": 1159, \"stop\": \"time_limit\"}\n"
+    }
+  ],
+  "source_freeze": "d8d61bc8986f9d7ca6ac5b1052af716369823201",
+  "status": "complete",
+  "wall_seconds": 520.6127180409967,
+  "workers": 2
+}
