@@ -1,0 +1,322 @@
+{
+  "evaluation_sha256": "e03324756498451bd23735717c64ee42a67fb4315fed46b1b08299be0e668320",
+  "experiment": "SUFFIX-READER-001",
+  "key_improved_equal_worse": [
+    11,
+    3,
+    2
+  ],
+  "maximum_probability_delta": 3.3306690738754696e-16,
+  "mixture": {
+    "selected_reading_history": {
+      "n": 7130,
+      "posterior": [
+        0.014941929749260802,
+        0.1959714401097949,
+        0.4169494462333359,
+        0.24301455099558705,
+        0.08543596385016729,
+        0.028162265972691863,
+        0.009480101767349983,
+        0.0035448849862095948,
+        0.0014455009324003511,
+        0.0006193390059136104,
+        0.0002736537125666025,
+        0.00011178150285185992,
+        4.91411818696197e-05
+      ],
+      "posterior_mass_depth_at_least4": 0.12912263291202078,
+      "prior": [
+        0.019510696293170465,
+        0.22621136655669022,
+        0.4387775405624632,
+        0.22155073540009806,
+        0.06591686464322265,
+        0.018757746793364723,
+        0.005857609599551763,
+        0.0020797607076121485,
+        0.0007795930122247627,
+        0.00032442831186051856,
+        0.00015062316324750784,
+        6.232262226285862e-05,
+        2.0712334233109953e-05
+      ],
+      "prior_mass_depth_at_least4": 0.09394966118758004
+    },
+    "truth_history": {
+      "n": 7168,
+      "posterior": [
+        0.015462093371491303,
+        0.19638042242419143,
+        0.417802827842546,
+        0.24173995065312925,
+        0.08470583071337483,
+        0.02825328406837414,
+        0.009568771322016157,
+        0.0035692265475083715,
+        0.0014624938613334282,
+        0.0006186095363853262,
+        0.00027463657515035977,
+        0.00011297241670702588,
+        4.888066779162786e-05
+      ],
+      "posterior_mass_depth_at_least4": 0.12861470570864125,
+      "prior": [
+        0.019591419034596293,
+        0.2275451520429552,
+        0.43939224107691455,
+        0.22017036189352807,
+        0.06532817725901122,
+        0.018641751627570504,
+        0.005883715504316237,
+        0.002096184539625379,
+        0.0007872444018823182,
+        0.00032862951498761574,
+        0.0001514468800322772,
+        6.25308571616937e-05,
+        2.1145367419884422e-05
+      ],
+      "prior_mass_depth_at_least4": 0.09330082595200713
+    }
+  },
+  "records": [
+    {
+      "case": "B-key1",
+      "conditional_map_probability": 0.005952713776787088,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 9.832797730426003,
+      "record": 0
+    },
+    {
+      "case": "B-key1",
+      "conditional_map_probability": 0.01881729030215828,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 6.95681805307969,
+      "record": 1
+    },
+    {
+      "case": "B-key10",
+      "conditional_map_probability": 0.19238527468018612,
+      "correct_map": true,
+      "map_minus_truth_joint_bits": -8.200771849766189e-14,
+      "record": 0
+    },
+    {
+      "case": "B-key10",
+      "conditional_map_probability": 0.040017256038252846,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 3.884545688429232,
+      "record": 1
+    },
+    {
+      "case": "B-key11",
+      "conditional_map_probability": 0.026020400934684624,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 14.595417616096373,
+      "record": 0
+    },
+    {
+      "case": "B-key11",
+      "conditional_map_probability": 0.21780963392064082,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 7.8149765573466805,
+      "record": 1
+    },
+    {
+      "case": "B-key12",
+      "conditional_map_probability": 0.08072206077924593,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 4.24065051141931,
+      "record": 0
+    },
+    {
+      "case": "B-key12",
+      "conditional_map_probability": 0.0020849287427105057,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 9.747450928984488,
+      "record": 1
+    },
+    {
+      "case": "B-key13",
+      "conditional_map_probability": 0.012704092360882461,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 16.9323761105358,
+      "record": 0
+    },
+    {
+      "case": "B-key13",
+      "conditional_map_probability": 0.0005891216722293409,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 11.572424922107764,
+      "record": 1
+    },
+    {
+      "case": "B-key14",
+      "conditional_map_probability": 0.003787109007339285,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 2.3960093945436247,
+      "record": 0
+    },
+    {
+      "case": "B-key14",
+      "conditional_map_probability": 0.01204301230454843,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 6.5884960303930145,
+      "record": 1
+    },
+    {
+      "case": "B-key15",
+      "conditional_map_probability": 0.34995940306174095,
+      "correct_map": true,
+      "map_minus_truth_joint_bits": 0.0,
+      "record": 0
+    },
+    {
+      "case": "B-key15",
+      "conditional_map_probability": 0.16355148681032694,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 5.826406655690033,
+      "record": 1
+    },
+    {
+      "case": "B-key16",
+      "conditional_map_probability": 1.871131176819734e-05,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 23.911387157213078,
+      "record": 0
+    },
+    {
+      "case": "B-key16",
+      "conditional_map_probability": 6.312819288167806e-05,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 4.8801229393240195,
+      "record": 1
+    },
+    {
+      "case": "B-key2",
+      "conditional_map_probability": 0.07193886919505874,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 2.854832298574151,
+      "record": 0
+    },
+    {
+      "case": "B-key2",
+      "conditional_map_probability": 0.0008265380840662209,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 5.323316680979598,
+      "record": 1
+    },
+    {
+      "case": "B-key3",
+      "conditional_map_probability": 0.031849446821769795,
+      "correct_map": true,
+      "map_minus_truth_joint_bits": -1.6401543699532378e-13,
+      "record": 0
+    },
+    {
+      "case": "B-key3",
+      "conditional_map_probability": 0.12573803955053114,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 5.854101707588349,
+      "record": 1
+    },
+    {
+      "case": "B-key4",
+      "conditional_map_probability": 0.06564616542929416,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 8.596554223030818,
+      "record": 0
+    },
+    {
+      "case": "B-key4",
+      "conditional_map_probability": 0.10283309416296683,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 2.5649901612874424,
+      "record": 1
+    },
+    {
+      "case": "B-key5",
+      "conditional_map_probability": 0.03670777312056242,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 4.445878137552259,
+      "record": 0
+    },
+    {
+      "case": "B-key5",
+      "conditional_map_probability": 0.07850076179783705,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 2.4870156563877845,
+      "record": 1
+    },
+    {
+      "case": "B-key6",
+      "conditional_map_probability": 0.0033396185649350652,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 2.1882027350541837,
+      "record": 0
+    },
+    {
+      "case": "B-key6",
+      "conditional_map_probability": 0.030515343958390808,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 3.1401619845406854,
+      "record": 1
+    },
+    {
+      "case": "B-key7",
+      "conditional_map_probability": 0.0006305815621240515,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 10.029129662493,
+      "record": 0
+    },
+    {
+      "case": "B-key7",
+      "conditional_map_probability": 0.0031813668972176397,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 0.5721301180145939,
+      "record": 1
+    },
+    {
+      "case": "B-key8",
+      "conditional_map_probability": 0.11087148589141772,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 13.368283251701063,
+      "record": 0
+    },
+    {
+      "case": "B-key8",
+      "conditional_map_probability": 0.21698109044579933,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 0.8946492119658545,
+      "record": 1
+    },
+    {
+      "case": "B-key9",
+      "conditional_map_probability": 0.012682271588027457,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 1.2142503662979123,
+      "record": 0
+    },
+    {
+      "case": "B-key9",
+      "conditional_map_probability": 0.05151006482084894,
+      "correct_map": false,
+      "map_minus_truth_joint_bits": 2.6302298754584115,
+      "record": 1
+    }
+  ],
+  "resources": {
+    "cpu_seconds": 3.202045,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 656457728,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 3.2047174160252325
+  },
+  "status": "posthoc_descriptive_not_new_qualification"
+}
