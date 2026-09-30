@@ -1,0 +1,197 @@
+{
+  "complete_scores": {
+    "bytes": 10619,
+    "path": "results/GLOBAL-SEARCH-SYSTEMS-001/complete-scores.json",
+    "sha256": "88434cfef918cf92502f0e33c3f93b1427f55954ae7f735e508dd720f42065bb"
+  },
+  "config": {
+    "block_sizes": [
+      2,
+      3,
+      6
+    ],
+    "iterations": 256,
+    "max_scored_keys": 2048,
+    "max_seconds": 120.0,
+    "proposal_weights": [
+      2,
+      1,
+      1
+    ],
+    "seed": 94739,
+    "swap_interval": 4,
+    "temperatures": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0
+    ]
+  },
+  "engineering_clauses": {
+    "all_artificial_workloads": true,
+    "bounded_search_completed": true,
+    "exact_equivalence": true,
+    "resource_limits": true,
+    "score_accounting": true
+  },
+  "engineering_gate": "PASS",
+  "experiment": "GLOBAL-SEARCH-SYSTEMS-001",
+  "freeze": "b7de43fc4cad4d0d85f8bb84d1e5fc0cebafd685",
+  "inputs": {
+    "bytes": 5004,
+    "path": "results/GLOBAL-SEARCH-SYSTEMS-001/artificial-inputs.json",
+    "sha256": "0ab0b9fc5153c12ba00e1fde02af9b7aaa029048d73adfc8056b259607e5bc35"
+  },
+  "maximum_likelihood_delta": 4.547473508864641e-13,
+  "native_benchmark": {
+    "bytes": 25535,
+    "path": "results/NATIVE-SUFFIX-001/result.json",
+    "sha256": "0c32447bc7c18efad82ff58cb8b80b1782be629ea40d5393932dbe5dbbeee89b"
+  },
+  "no_empirical_cipher_panel_opened": true,
+  "partial_results": [
+    {
+      "bytes": 372,
+      "path": "results/GLOBAL-SEARCH-SYSTEMS-001/partial-00.json",
+      "sha256": "8fe552cb9d67396f03b46ed5328ff744ca2ff526c5df8776c0f5db01ae9ec8ec"
+    },
+    {
+      "bytes": 370,
+      "path": "results/GLOBAL-SEARCH-SYSTEMS-001/partial-11.json",
+      "sha256": "ee5ff114834c60ead82e9ae64f33daae022a83bcdc8059598f900c904325e93f"
+    },
+    {
+      "bytes": 371,
+      "path": "results/GLOBAL-SEARCH-SYSTEMS-001/partial-20.json",
+      "sha256": "e440d68059bd04a3d89e9bdff895de79739b43f5fbc74e8b30fa9aa7cf437276"
+    },
+    {
+      "bytes": 584,
+      "path": "results/GLOBAL-SEARCH-SYSTEMS-001/partial-23.json",
+      "sha256": "b44be9dcd45ee706b385a20abfdf8cba37ab31f75ad4e9f6ca403ef80574d938"
+    }
+  ],
+  "progress": {
+    "bytes": 270342,
+    "path": "outputs/GLOBAL-SEARCH-SYSTEMS-001/progress.jsonl.gz",
+    "sha256": "c4e060ed414cdb8b8f7150320df8a1eb0e6a8b709499595589c83a68cf415e13"
+  },
+  "resources": {
+    "cpu_seconds": 11.033629,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 843710464,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 11.055411334033124
+  },
+  "search": {
+    "bytes": 301882,
+    "path": "outputs/GLOBAL-SEARCH-SYSTEMS-001/search.json.gz",
+    "sha256": "31680bca10dea77a239f1f9784cc59c671d6589ac2bdd64be18128a2f12b654c"
+  },
+  "search_summary": {
+    "best_index": 1979,
+    "best_score": -3286.9895963542513,
+    "best_units": [
+      "B",
+      "C",
+      "FE",
+      "F",
+      "C",
+      "FE",
+      "AC",
+      "BB",
+      "D",
+      "CA",
+      "EC",
+      "EF",
+      "CC",
+      "EE",
+      "BD",
+      "FD",
+      "EB",
+      "B",
+      "E",
+      "A",
+      "A",
+      "FB",
+      "EE"
+    ],
+    "cache_hits": 15,
+    "completed_iterations": 256,
+    "exchange_counts": {
+      "accepted": 80,
+      "proposed": 224
+    },
+    "final_replica_indices": [
+      1979,
+      1878,
+      1989,
+      1982,
+      1966,
+      2016,
+      1994,
+      2001
+    ],
+    "global_optimality_claimed": false,
+    "initial_replica_indices": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "proposal_counts": {
+      "block": {
+        "accepted": 41,
+        "proposed": 527
+      },
+      "replace": {
+        "accepted": 260,
+        "proposed": 983
+      },
+      "swap": {
+        "accepted": 202,
+        "proposed": 538
+      }
+    },
+    "proposals": 2048,
+    "scored_keys": 2034,
+    "self_proposals": 9,
+    "stationary_distribution_claimed": false,
+    "stop_reason": "iteration_limit",
+    "temperatures": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0
+    ],
+    "wall_seconds": 10.059301917033736
+  },
+  "source": {
+    "bytes": 2098,
+    "path": "results/LATIN-SOURCE-COMPACT-001/large.json",
+    "sha256": "91df142e8229ca60f0e9a52ffe7e803bd7f0c8a983f5cd4e41b47fd04167377b"
+  },
+  "source_counts": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  }
+}
