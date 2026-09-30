@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/usr/bin/clang++",
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-ffp-contract=off",
+    "src/voynich/native/suffix_marginal.cpp",
+    "tests/native_suffix_sanitizer.cpp",
+    "-o",
+    "/Users/rikhil/coding/solving-voynich/outputs/validation/native-suffix001-sanitizer-wrapper/check"
+  ],
+  "compile_returncode": 0,
+  "run_returncode": 0,
+  "wall_seconds": 1.227280457969755,
+  "checks": 1014,
+  "source_sha256": "03dabaeb7814d283b41c94adb8063a6306e28beaf4ab97d17cb684532cd29d61",
+  "driver_sha256": "8066f1086025dc21eb3055251719fba87745ed6814105b4c73d29f78231b3be9",
+  "stderr": "",
+  "initial_direct_compiler_attempt": {
+    "status": "compile_failed_before_execution",
+    "reason": "Direct CommandLineTools compiler did not find C++ standard headers; working /usr/bin wrapper used next",
+    "log": "outputs/validation/native-suffix001-sanitizer/compile.log"
+  }
+}
