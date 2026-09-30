@@ -1,0 +1,1467 @@
+{
+  "cases": {
+    "B-key1": {
+      "arms": {
+        "learned": {
+          "decisions": {
+            "fit": {
+              "decoded_characters": 891,
+              "edits": 19,
+              "exact_records": 0,
+              "gold_characters": 896,
+              "record_edits": [
+                4,
+                6,
+                2,
+                7
+              ],
+              "supported_records": 4
+            },
+            "transfer": {
+              "decoded_characters": 446,
+              "edits": 4,
+              "exact_records": 0,
+              "gold_characters": 448,
+              "record_edits": [
+                2,
+                2
+              ],
+              "supported_records": 2
+            }
+          },
+          "dictionary_edit_floor": {
+            "fit": {
+              "edits": 0,
+              "record_edits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "transfer": {
+              "edits": 0,
+              "record_edits": [
+                0,
+                0
+              ]
+            }
+          },
+          "model_bits_with_selector": 185,
+          "sources": {
+            "old": {
+              "fit": {
+                "data_bits": 3089.838396659923,
+                "decoded_characters": 891,
+                "edits": 19,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2141.7127730306875,
+                "map_surprisal_bits": [
+                  2.709484513313541,
+                  2.8125820323093755,
+                  3.8539940666142734,
+                  1.4473884569243871
+                ],
+                "record_edits": [
+                  4,
+                  6,
+                  2,
+                  7
+                ],
+                "supported_records": 4,
+                "total_bits": 3274.838396659923
+              },
+              "transfer": {
+                "data_bits": 1597.626248754897,
+                "decoded_characters": 446,
+                "edits": 4,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1107.3901299130187,
+                "map_surprisal_bits": [
+                  4.347280299085551,
+                  4.601085838131715
+                ],
+                "record_edits": [
+                  2,
+                  2
+                ],
+                "supported_records": 2,
+                "total_bits": 1782.626248754897
+              }
+            },
+            "order0": {
+              "fit": {
+                "data_bits": 3466.3791992876813,
+                "decoded_characters": 890,
+                "edits": 30,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2402.710968737897,
+                "map_surprisal_bits": [
+                  5.225025384565546,
+                  5.436254533968951,
+                  7.307049736552131,
+                  5.461021305970776
+                ],
+                "record_edits": [
+                  6,
+                  4,
+                  11,
+                  9
+                ],
+                "supported_records": 4,
+                "total_bits": 3651.3791992876813
+              },
+              "transfer": {
+                "data_bits": 1744.4156822259747,
+                "decoded_characters": 443,
+                "edits": 16,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1209.1368118594878,
+                "map_surprisal_bits": [
+                  5.681023555697698,
+                  3.955912527043853
+                ],
+                "record_edits": [
+                  10,
+                  6
+                ],
+                "supported_records": 2,
+                "total_bits": 1929.4156822259747
+              }
+            },
+            "order1": {
+              "fit": {
+                "data_bits": 3089.838396659923,
+                "decoded_characters": 891,
+                "edits": 19,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2141.7127730306875,
+                "map_surprisal_bits": [
+                  2.709484513313541,
+                  2.8125820323093755,
+                  3.8539940666142734,
+                  1.4473884569243871
+                ],
+                "record_edits": [
+                  4,
+                  6,
+                  2,
+                  7
+                ],
+                "supported_records": 4,
+                "total_bits": 3274.838396659923
+              },
+              "transfer": {
+                "data_bits": 1597.626248754897,
+                "decoded_characters": 446,
+                "edits": 4,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1107.3901299130187,
+                "map_surprisal_bits": [
+                  4.347280299085551,
+                  4.601085838131715
+                ],
+                "record_edits": [
+                  2,
+                  2
+                ],
+                "supported_records": 2,
+                "total_bits": 1782.626248754897
+              }
+            },
+            "order2": {
+              "fit": {
+                "data_bits": 2895.9379322895347,
+                "decoded_characters": 894,
+                "edits": 13,
+                "exact_records": 2,
+                "gold_characters": 896,
+                "log_likelihood": -2007.3112128430887,
+                "map_surprisal_bits": [
+                  2.670704911431155,
+                  2.1660337853664986,
+                  2.837437145262082,
+                  1.2665211114806405
+                ],
+                "record_edits": [
+                  0,
+                  6,
+                  0,
+                  7
+                ],
+                "supported_records": 4,
+                "total_bits": 3080.9379322895347
+              },
+              "transfer": {
+                "data_bits": 1513.3268129637554,
+                "decoded_characters": 448,
+                "edits": 0,
+                "exact_records": 2,
+                "gold_characters": 448,
+                "log_likelihood": -1048.9582136715946,
+                "map_surprisal_bits": [
+                  4.486685549255422,
+                  2.766843622585966
+                ],
+                "record_edits": [
+                  0,
+                  0
+                ],
+                "supported_records": 2,
+                "total_bits": 1698.3268129637554
+              }
+            },
+            "order3": {
+              "fit": {
+                "data_bits": 2815.2809047096966,
+                "decoded_characters": 894,
+                "edits": 13,
+                "exact_records": 2,
+                "gold_characters": 896,
+                "log_likelihood": -1951.404021583778,
+                "map_surprisal_bits": [
+                  1.646361469239503,
+                  2.6683169618428493,
+                  2.0359813213650746,
+                  1.1493116746455143
+                ],
+                "record_edits": [
+                  0,
+                  6,
+                  0,
+                  7
+                ],
+                "supported_records": 4,
+                "total_bits": 3000.2809047096966
+              },
+              "transfer": {
+                "data_bits": 1470.9280910602617,
+                "decoded_characters": 448,
+                "edits": 0,
+                "exact_records": 2,
+                "gold_characters": 448,
+                "log_likelihood": -1019.5696591248429,
+                "map_surprisal_bits": [
+                  2.4052890133009766,
+                  2.1000320374524133
+                ],
+                "record_edits": [
+                  0,
+                  0
+                ],
+                "supported_records": 2,
+                "total_bits": 1655.9280910602617
+              }
+            }
+          }
+        },
+        "oracle": {
+          "decisions": {
+            "fit": {
+              "decoded_characters": 891,
+              "edits": 19,
+              "exact_records": 0,
+              "gold_characters": 896,
+              "record_edits": [
+                4,
+                6,
+                2,
+                7
+              ],
+              "supported_records": 4
+            },
+            "transfer": {
+              "decoded_characters": 446,
+              "edits": 4,
+              "exact_records": 0,
+              "gold_characters": 448,
+              "record_edits": [
+                2,
+                2
+              ],
+              "supported_records": 2
+            }
+          },
+          "dictionary_edit_floor": {
+            "fit": {
+              "edits": 0,
+              "record_edits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "transfer": {
+              "edits": 0,
+              "record_edits": [
+                0,
+                0
+              ]
+            }
+          },
+          "model_bits_with_selector": 191,
+          "sources": {
+            "old": {
+              "fit": {
+                "data_bits": 3090.87647747072,
+                "decoded_characters": 891,
+                "edits": 19,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2142.432315817885,
+                "map_surprisal_bits": [
+                  2.399566107751814,
+                  2.681056367300033,
+                  3.083092615307778,
+                  1.6216531680050288
+                ],
+                "record_edits": [
+                  4,
+                  6,
+                  2,
+                  7
+                ],
+                "supported_records": 4,
+                "total_bits": 3281.87647747072
+              },
+              "transfer": {
+                "data_bits": 1598.0460276908295,
+                "decoded_characters": 446,
+                "edits": 4,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1107.6810984989188,
+                "map_surprisal_bits": [
+                  4.100192488217434,
+                  4.428394713067381
+                ],
+                "record_edits": [
+                  2,
+                  2
+                ],
+                "supported_records": 2,
+                "total_bits": 1789.0460276908295
+              }
+            },
+            "order0": {
+              "fit": {
+                "data_bits": 3467.2487792394195,
+                "decoded_characters": 890,
+                "edits": 30,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2403.3137156297157,
+                "map_surprisal_bits": [
+                  4.727021697844049,
+                  5.357582311888269,
+                  7.171267249152853,
+                  5.3038997504343275
+                ],
+                "record_edits": [
+                  6,
+                  4,
+                  11,
+                  9
+                ],
+                "supported_records": 4,
+                "total_bits": 3658.2487792394195
+              },
+              "transfer": {
+                "data_bits": 1744.653464823286,
+                "decoded_characters": 443,
+                "edits": 16,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1209.3016301964003,
+                "map_surprisal_bits": [
+                  5.615400924677715,
+                  3.783752560752765
+                ],
+                "record_edits": [
+                  10,
+                  6
+                ],
+                "supported_records": 2,
+                "total_bits": 1935.653464823286
+              }
+            },
+            "order1": {
+              "fit": {
+                "data_bits": 3090.87647747072,
+                "decoded_characters": 891,
+                "edits": 19,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2142.432315817885,
+                "map_surprisal_bits": [
+                  2.399566107751814,
+                  2.681056367300033,
+                  3.083092615307778,
+                  1.6216531680050288
+                ],
+                "record_edits": [
+                  4,
+                  6,
+                  2,
+                  7
+                ],
+                "supported_records": 4,
+                "total_bits": 3281.87647747072
+              },
+              "transfer": {
+                "data_bits": 1598.0460276908295,
+                "decoded_characters": 446,
+                "edits": 4,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1107.6810984989188,
+                "map_surprisal_bits": [
+                  4.100192488217434,
+                  4.428394713067381
+                ],
+                "record_edits": [
+                  2,
+                  2
+                ],
+                "supported_records": 2,
+                "total_bits": 1789.0460276908295
+              }
+            },
+            "order2": {
+              "fit": {
+                "data_bits": 2896.5344186016473,
+                "decoded_characters": 894,
+                "edits": 13,
+                "exact_records": 2,
+                "gold_characters": 896,
+                "log_likelihood": -2007.7246656485722,
+                "map_surprisal_bits": [
+                  2.2054966740361954,
+                  2.2106259104918333,
+                  2.569928032957815,
+                  1.3581600239416498
+                ],
+                "record_edits": [
+                  0,
+                  6,
+                  0,
+                  7
+                ],
+                "supported_records": 4,
+                "total_bits": 3087.5344186016473
+              },
+              "transfer": {
+                "data_bits": 1513.9711833467231,
+                "decoded_characters": 448,
+                "edits": 0,
+                "exact_records": 2,
+                "gold_characters": 448,
+                "log_likelihood": -1049.4048571857852,
+                "map_surprisal_bits": [
+                  4.309069410358117,
+                  2.3000893785155014
+                ],
+                "record_edits": [
+                  0,
+                  0
+                ],
+                "supported_records": 2,
+                "total_bits": 1704.9711833467231
+              }
+            },
+            "order3": {
+              "fit": {
+                "data_bits": 2815.8907681688643,
+                "decoded_characters": 894,
+                "edits": 13,
+                "exact_records": 2,
+                "gold_characters": 896,
+                "log_likelihood": -1951.8267467210267,
+                "map_surprisal_bits": [
+                  1.1950375432072782,
+                  2.654723660120732,
+                  1.8491923106066548,
+                  1.191154453990505
+                ],
+                "record_edits": [
+                  0,
+                  6,
+                  0,
+                  7
+                ],
+                "supported_records": 4,
+                "total_bits": 3006.8907681688643
+              },
+              "transfer": {
+                "data_bits": 1471.3732573995903,
+                "decoded_characters": 448,
+                "edits": 0,
+                "exact_records": 2,
+                "gold_characters": 448,
+                "log_likelihood": -1019.8782249178287,
+                "map_surprisal_bits": [
+                  2.2870394430217296,
+                  1.773115268403236
+                ],
+                "record_edits": [
+                  0,
+                  0
+                ],
+                "supported_records": 2,
+                "total_bits": 1662.3732573995903
+              }
+            }
+          }
+        }
+      },
+      "positive": true
+    },
+    "B-key1-shuffle": {
+      "arms": {
+        "learned": {
+          "decisions": {
+            "fit": {
+              "decoded_characters": 1614,
+              "edits": null,
+              "exact_records": null,
+              "gold_characters": null,
+              "record_edits": null,
+              "supported_records": 4
+            },
+            "transfer": {
+              "decoded_characters": 818,
+              "edits": null,
+              "exact_records": null,
+              "gold_characters": null,
+              "record_edits": null,
+              "supported_records": 2
+            }
+          },
+          "model_bits_with_selector": 146,
+          "sources": {
+            "old": {
+              "fit": {
+                "data_bits": 4104.060219740589,
+                "decoded_characters": 1614,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2844.7177701614187,
+                "map_surprisal_bits": [
+                  238.6286792021631,
+                  243.263397105521,
+                  241.04184889777284,
+                  242.01769425333183
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4250.060219740589
+              },
+              "transfer": {
+                "data_bits": 2065.9880816852533,
+                "decoded_characters": 818,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1432.0338138905831,
+                "map_surprisal_bits": [
+                  238.7510022267065,
+                  227.9420161299629
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2211.9880816852533
+              }
+            },
+            "order0": {
+              "fit": {
+                "data_bits": 4107.743929758187,
+                "decoded_characters": 1556,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2847.271123374117,
+                "map_surprisal_bits": [
+                  420.053367685805,
+                  427.96338320403584,
+                  425.5998164082649,
+                  428.379933423792
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4253.743929758187
+              },
+              "transfer": {
+                "data_bits": 2062.038812851238,
+                "decoded_characters": 779,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1429.2963893330125,
+                "map_surprisal_bits": [
+                  427.44603409898923,
+                  421.004761750798
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2208.038812851238
+              }
+            },
+            "order1": {
+              "fit": {
+                "data_bits": 4104.060219740589,
+                "decoded_characters": 1614,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2844.7177701614187,
+                "map_surprisal_bits": [
+                  238.6286792021631,
+                  243.263397105521,
+                  241.04184889777284,
+                  242.01769425333183
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4250.060219740589
+              },
+              "transfer": {
+                "data_bits": 2065.9880816852533,
+                "decoded_characters": 818,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1432.0338138905831,
+                "map_surprisal_bits": [
+                  238.7510022267065,
+                  227.9420161299629
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2211.9880816852533
+              }
+            },
+            "order2": {
+              "fit": {
+                "data_bits": 4133.407887373748,
+                "decoded_characters": 1630,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2865.060023237353,
+                "map_surprisal_bits": [
+                  200.74316886611652,
+                  211.98896724612538,
+                  206.70130416262995,
+                  198.08367486379922
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4279.407887373748
+              },
+              "transfer": {
+                "data_bits": 2087.4456721724923,
+                "decoded_characters": 819,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1446.9070822384228,
+                "map_surprisal_bits": [
+                  211.13989400719294,
+                  205.48162430178564
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2233.4456721724923
+              }
+            },
+            "order3": {
+              "fit": {
+                "data_bits": 4148.349433177297,
+                "decoded_characters": 1640,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2875.416713584291,
+                "map_surprisal_bits": [
+                  187.51939482787697,
+                  201.1787019117408,
+                  196.59463250383698,
+                  187.70334246370106
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4294.349433177297
+              },
+              "transfer": {
+                "data_bits": 2094.494261986628,
+                "decoded_characters": 822,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1451.7927923950144,
+                "map_surprisal_bits": [
+                  200.07061386423428,
+                  192.45827298843437
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2240.494261986628
+              }
+            }
+          }
+        }
+      },
+      "positive": false
+    },
+    "B-key2": {
+      "arms": {
+        "learned": {
+          "decisions": {
+            "fit": {
+              "decoded_characters": 883,
+              "edits": 91,
+              "exact_records": 0,
+              "gold_characters": 896,
+              "record_edits": [
+                23,
+                19,
+                29,
+                20
+              ],
+              "supported_records": 4
+            },
+            "transfer": {
+              "decoded_characters": 446,
+              "edits": 32,
+              "exact_records": 0,
+              "gold_characters": 448,
+              "record_edits": [
+                19,
+                13
+              ],
+              "supported_records": 2
+            }
+          },
+          "dictionary_edit_floor": {
+            "fit": {
+              "edits": 20,
+              "record_edits": [
+                4,
+                3,
+                9,
+                4
+              ]
+            },
+            "transfer": {
+              "edits": 12,
+              "record_edits": [
+                10,
+                2
+              ]
+            }
+          },
+          "model_bits_with_selector": 185,
+          "sources": {
+            "old": {
+              "fit": {
+                "data_bits": 3062.8392718528426,
+                "decoded_characters": 883,
+                "edits": 91,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2122.9984057930737,
+                "map_surprisal_bits": [
+                  18.661774986432192,
+                  22.3370321421747,
+                  20.27894324839775,
+                  22.604544783024743
+                ],
+                "record_edits": [
+                  23,
+                  19,
+                  29,
+                  20
+                ],
+                "supported_records": 4,
+                "total_bits": 3247.8392718528426
+              },
+              "transfer": {
+                "data_bits": 1503.5250413218857,
+                "decoded_characters": 446,
+                "edits": 32,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1042.1641432935403,
+                "map_surprisal_bits": [
+                  16.373819877482962,
+                  20.300693476309217
+                ],
+                "record_edits": [
+                  19,
+                  13
+                ],
+                "supported_records": 2,
+                "total_bits": 1688.5250413218857
+              }
+            },
+            "order0": {
+              "fit": {
+                "data_bits": 3281.36962436176,
+                "decoded_characters": 863,
+                "edits": 146,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2274.472103501401,
+                "map_surprisal_bits": [
+                  34.34331913028031,
+                  30.26755650988438,
+                  30.365131298654507,
+                  31.701952243842022
+                ],
+                "record_edits": [
+                  36,
+                  30,
+                  37,
+                  43
+                ],
+                "supported_records": 4,
+                "total_bits": 3466.36962436176
+              },
+              "transfer": {
+                "data_bits": 1639.7088471187956,
+                "decoded_characters": 431,
+                "edits": 83,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1136.5595643195916,
+                "map_surprisal_bits": [
+                  37.233331844404354,
+                  34.21226005147632
+                ],
+                "record_edits": [
+                  46,
+                  37
+                ],
+                "supported_records": 2,
+                "total_bits": 1824.7088471187956
+              }
+            },
+            "order1": {
+              "fit": {
+                "data_bits": 3062.8392718528426,
+                "decoded_characters": 883,
+                "edits": 91,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2122.9984057930737,
+                "map_surprisal_bits": [
+                  18.661774986432192,
+                  22.3370321421747,
+                  20.27894324839775,
+                  22.604544783024743
+                ],
+                "record_edits": [
+                  23,
+                  19,
+                  29,
+                  20
+                ],
+                "supported_records": 4,
+                "total_bits": 3247.8392718528426
+              },
+              "transfer": {
+                "data_bits": 1503.5250413218857,
+                "decoded_characters": 446,
+                "edits": 32,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1042.1641432935403,
+                "map_surprisal_bits": [
+                  16.373819877482962,
+                  20.300693476309217
+                ],
+                "record_edits": [
+                  19,
+                  13
+                ],
+                "supported_records": 2,
+                "total_bits": 1688.5250413218857
+              }
+            },
+            "order2": {
+              "fit": {
+                "data_bits": 2928.4631630075824,
+                "decoded_characters": 883,
+                "edits": 68,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2029.8559848123653,
+                "map_surprisal_bits": [
+                  16.009633574487626,
+                  15.001438477924447,
+                  17.781887238554976,
+                  17.641092187810376
+                ],
+                "record_edits": [
+                  15,
+                  13,
+                  22,
+                  18
+                ],
+                "supported_records": 4,
+                "total_bits": 3113.4631630075824
+              },
+              "transfer": {
+                "data_bits": 1440.609969459262,
+                "decoded_characters": 445,
+                "edits": 26,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -998.5547386172362,
+                "map_surprisal_bits": [
+                  11.618244599356204,
+                  14.551572742037262
+                ],
+                "record_edits": [
+                  20,
+                  6
+                ],
+                "supported_records": 2,
+                "total_bits": 1625.609969459262
+              }
+            },
+            "order3": {
+              "fit": {
+                "data_bits": 2886.0250325311076,
+                "decoded_characters": 885,
+                "edits": 70,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2000.4401143243615,
+                "map_surprisal_bits": [
+                  14.762275715357413,
+                  12.428435912508991,
+                  17.48199244752142,
+                  16.04626139721868
+                ],
+                "record_edits": [
+                  15,
+                  13,
+                  22,
+                  20
+                ],
+                "supported_records": 4,
+                "total_bits": 3071.0250325311076
+              },
+              "transfer": {
+                "data_bits": 1413.624419628253,
+                "decoded_characters": 444,
+                "edits": 22,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -979.8497808360125,
+                "map_surprisal_bits": [
+                  9.407710980878653,
+                  11.498268453467835
+                ],
+                "record_edits": [
+                  20,
+                  2
+                ],
+                "supported_records": 2,
+                "total_bits": 1598.624419628253
+              }
+            }
+          }
+        },
+        "oracle": {
+          "decisions": {
+            "fit": {
+              "decoded_characters": 885,
+              "edits": 57,
+              "exact_records": 0,
+              "gold_characters": 896,
+              "record_edits": [
+                9,
+                10,
+                24,
+                14
+              ],
+              "supported_records": 4
+            },
+            "transfer": {
+              "decoded_characters": 446,
+              "edits": 21,
+              "exact_records": 0,
+              "gold_characters": 448,
+              "record_edits": [
+                10,
+                11
+              ],
+              "supported_records": 2
+            }
+          },
+          "dictionary_edit_floor": {
+            "fit": {
+              "edits": 0,
+              "record_edits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "transfer": {
+              "edits": 0,
+              "record_edits": [
+                0,
+                0
+              ]
+            }
+          },
+          "model_bits_with_selector": 191,
+          "sources": {
+            "old": {
+              "fit": {
+                "data_bits": 3087.618275403168,
+                "decoded_characters": 885,
+                "edits": 57,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2140.1739022410666,
+                "map_surprisal_bits": [
+                  14.894052975337486,
+                  17.43857948984899,
+                  17.102445165091005,
+                  17.0802905536753
+                ],
+                "record_edits": [
+                  9,
+                  10,
+                  24,
+                  14
+                ],
+                "supported_records": 4,
+                "total_bits": 3278.618275403168
+              },
+              "transfer": {
+                "data_bits": 1488.51951738245,
+                "decoded_characters": 446,
+                "edits": 21,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1031.7631066820957,
+                "map_surprisal_bits": [
+                  12.480197366771364,
+                  17.849651291877212
+                ],
+                "record_edits": [
+                  10,
+                  11
+                ],
+                "supported_records": 2,
+                "total_bits": 1679.51951738245
+              }
+            },
+            "order0": {
+              "fit": {
+                "data_bits": 3290.6669336188834,
+                "decoded_characters": 865,
+                "edits": 131,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2280.9165071997695,
+                "map_surprisal_bits": [
+                  29.398019860624505,
+                  26.489598935918913,
+                  29.757392625397983,
+                  31.146803359541902
+                ],
+                "record_edits": [
+                  32,
+                  25,
+                  34,
+                  40
+                ],
+                "supported_records": 4,
+                "total_bits": 3481.6669336188834
+              },
+              "transfer": {
+                "data_bits": 1638.4483081071494,
+                "decoded_characters": 433,
+                "edits": 73,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1135.685825257683,
+                "map_surprisal_bits": [
+                  34.06720022935274,
+                  31.786681085682243
+                ],
+                "record_edits": [
+                  38,
+                  35
+                ],
+                "supported_records": 2,
+                "total_bits": 1829.4483081071494
+              }
+            },
+            "order1": {
+              "fit": {
+                "data_bits": 3087.618275403168,
+                "decoded_characters": 885,
+                "edits": 57,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2140.1739022410666,
+                "map_surprisal_bits": [
+                  14.894052975337486,
+                  17.43857948984899,
+                  17.102445165091005,
+                  17.0802905536753
+                ],
+                "record_edits": [
+                  9,
+                  10,
+                  24,
+                  14
+                ],
+                "supported_records": 4,
+                "total_bits": 3278.618275403168
+              },
+              "transfer": {
+                "data_bits": 1488.51951738245,
+                "decoded_characters": 446,
+                "edits": 21,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -1031.7631066820957,
+                "map_surprisal_bits": [
+                  12.480197366771364,
+                  17.849651291877212
+                ],
+                "record_edits": [
+                  10,
+                  11
+                ],
+                "supported_records": 2,
+                "total_bits": 1679.51951738245
+              }
+            },
+            "order2": {
+              "fit": {
+                "data_bits": 2929.9267637917483,
+                "decoded_characters": 885,
+                "edits": 35,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -2030.8704755693752,
+                "map_surprisal_bits": [
+                  10.85535027100604,
+                  8.906835921380042,
+                  14.01861184234232,
+                  13.687617844613829
+                ],
+                "record_edits": [
+                  2,
+                  8,
+                  12,
+                  13
+                ],
+                "supported_records": 4,
+                "total_bits": 3120.9267637917483
+              },
+              "transfer": {
+                "data_bits": 1397.00444900731,
+                "decoded_characters": 447,
+                "edits": 14,
+                "exact_records": 0,
+                "gold_characters": 448,
+                "log_likelihood": -968.3296950591168,
+                "map_surprisal_bits": [
+                  7.257424219212338,
+                  11.707980079147932
+                ],
+                "record_edits": [
+                  10,
+                  4
+                ],
+                "supported_records": 2,
+                "total_bits": 1588.00444900731
+              }
+            },
+            "order3": {
+              "fit": {
+                "data_bits": 2871.3005042979544,
+                "decoded_characters": 885,
+                "edits": 34,
+                "exact_records": 0,
+                "gold_characters": 896,
+                "log_likelihood": -1990.233849094476,
+                "map_surprisal_bits": [
+                  9.463160064293803,
+                  7.576878757897845,
+                  12.837225711247825,
+                  12.815959709775104
+                ],
+                "record_edits": [
+                  2,
+                  6,
+                  12,
+                  14
+                ],
+                "supported_records": 4,
+                "total_bits": 3062.3005042979544
+              },
+              "transfer": {
+                "data_bits": 1357.332390442903,
+                "decoded_characters": 446,
+                "edits": 8,
+                "exact_records": 1,
+                "gold_characters": 448,
+                "log_likelihood": -940.8311195181891,
+                "map_surprisal_bits": [
+                  5.573153369478223,
+                  9.32329462370242
+                ],
+                "record_edits": [
+                  8,
+                  0
+                ],
+                "supported_records": 2,
+                "total_bits": 1548.332390442903
+              }
+            }
+          }
+        }
+      },
+      "positive": true
+    },
+    "B-key2-shuffle": {
+      "arms": {
+        "learned": {
+          "decisions": {
+            "fit": {
+              "decoded_characters": 1466,
+              "edits": null,
+              "exact_records": null,
+              "gold_characters": null,
+              "record_edits": null,
+              "supported_records": 4
+            },
+            "transfer": {
+              "decoded_characters": 748,
+              "edits": null,
+              "exact_records": null,
+              "gold_characters": null,
+              "record_edits": null,
+              "supported_records": 2
+            }
+          },
+          "model_bits_with_selector": 149,
+          "sources": {
+            "old": {
+              "fit": {
+                "data_bits": 3887.924062828491,
+                "decoded_characters": 1466,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2694.903602380736,
+                "map_surprisal_bits": [
+                  194.86725713580228,
+                  206.7232298534949,
+                  199.3510506783456,
+                  199.43576029063087
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4036.924062828491
+              },
+              "transfer": {
+                "data_bits": 1965.243053817469,
+                "decoded_characters": 748,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1362.2026818685954,
+                "map_surprisal_bits": [
+                  205.65469383707088,
+                  209.05625583160926
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2114.243053817469
+              }
+            },
+            "order0": {
+              "fit": {
+                "data_bits": 3896.198076568526,
+                "decoded_characters": 1419,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2700.638711676556,
+                "map_surprisal_bits": [
+                  337.6836083712591,
+                  349.3827912224713,
+                  364.40360568117154,
+                  334.2590333834448
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4045.198076568526
+              },
+              "transfer": {
+                "data_bits": 1939.569832256513,
+                "decoded_characters": 713,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1344.407360727728,
+                "map_surprisal_bits": [
+                  352.3956394269541,
+                  345.0794618639097
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2088.569832256513
+              }
+            },
+            "order1": {
+              "fit": {
+                "data_bits": 3887.924062828491,
+                "decoded_characters": 1466,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2694.903602380736,
+                "map_surprisal_bits": [
+                  194.86725713580228,
+                  206.7232298534949,
+                  199.3510506783456,
+                  199.43576029063087
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4036.924062828491
+              },
+              "transfer": {
+                "data_bits": 1965.243053817469,
+                "decoded_characters": 748,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1362.2026818685954,
+                "map_surprisal_bits": [
+                  205.65469383707088,
+                  209.05625583160926
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2114.243053817469
+              }
+            },
+            "order2": {
+              "fit": {
+                "data_bits": 3944.9891545681157,
+                "decoded_characters": 1475,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2734.4581098284516,
+                "map_surprisal_bits": [
+                  183.67514699609376,
+                  183.20529944645435,
+                  181.65495505921882,
+                  183.00848565033849
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4093.9891545681157
+              },
+              "transfer": {
+                "data_bits": 1981.290148526402,
+                "decoded_characters": 751,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1373.3256803222707,
+                "map_surprisal_bits": [
+                  182.67499350918138,
+                  171.65378003850543
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2130.290148526402
+              }
+            },
+            "order3": {
+              "fit": {
+                "data_bits": 3958.1305637908085,
+                "decoded_characters": 1492,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -2743.5670405797455,
+                "map_surprisal_bits": [
+                  167.46207604628614,
+                  175.52670537964136,
+                  168.6307227877479,
+                  172.2043511548842
+                ],
+                "record_edits": null,
+                "supported_records": 4,
+                "total_bits": 4107.130563790808
+              },
+              "transfer": {
+                "data_bits": 1981.4622087888633,
+                "decoded_characters": 754,
+                "edits": null,
+                "exact_records": null,
+                "gold_characters": null,
+                "log_likelihood": -1373.4449434080823,
+                "map_surprisal_bits": [
+                  168.2896724381796,
+                  163.3104619750477
+                ],
+                "record_edits": null,
+                "supported_records": 2,
+                "total_bits": 2130.4622087888633
+              }
+            }
+          }
+        }
+      },
+      "positive": false
+    }
+  },
+  "experiment": "BLIND-CHANNEL-DEV-004",
+  "prediction_freeze": "41708414cd1af85e25381b9127e3817adf0ee13e",
+  "predictions": {
+    "bytes": 639938,
+    "path": "outputs/BLIND-CHANNEL-DEV-004/predictions.json.gz",
+    "sha256": "766ce73bd4663185aad870a3454f8533880e1fc4f179640fb6b8e0ff0236b8a3"
+  },
+  "resources": {
+    "cpu_seconds": 0.467718,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 49938432,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.8552141670079436
+  },
+  "status": "adaptive_fixed_dictionary_diagnostic"
+}
