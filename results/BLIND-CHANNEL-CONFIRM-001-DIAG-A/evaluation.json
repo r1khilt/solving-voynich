@@ -1,0 +1,200 @@
+{
+  "arms": {
+    "control_k": {
+      "changed_letter": "k",
+      "fit": {
+        "decoded_characters": 895,
+        "edits": 18,
+        "exact_records": 1,
+        "gold_characters": 896,
+        "log_likelihood": -1960.3014569063598,
+        "record_edits": [
+          6,
+          4,
+          0,
+          8
+        ],
+        "record_log_likelihoods": [
+          -476.3592389012859,
+          -497.6580005158256,
+          -487.9069233508714,
+          -498.3772941383768
+        ],
+        "supported_records": 4,
+        "total_bits": 3012.1171905262154
+      },
+      "fit_bits_minus_learned": 0.023556853934678657,
+      "model_bits": 184,
+      "transfer": {
+        "decoded_characters": 446,
+        "edits": 9,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "log_likelihood": -1025.6722423721073,
+        "record_edits": [
+          1,
+          8
+        ],
+        "record_log_likelihoods": [
+          -527.2806448379466,
+          -498.3915975341607
+        ],
+        "supported_records": 2,
+        "total_bits": 1663.7322576477022
+      }
+    },
+    "control_z": {
+      "changed_letter": "z",
+      "fit": {
+        "decoded_characters": 895,
+        "edits": 18,
+        "exact_records": 1,
+        "gold_characters": 896,
+        "log_likelihood": -1960.304787581977,
+        "record_edits": [
+          6,
+          4,
+          0,
+          8
+        ],
+        "record_log_likelihoods": [
+          -476.3833423813463,
+          -497.6387292270014,
+          -487.90676931307104,
+          -498.37594666055827
+        ],
+        "supported_records": 4,
+        "total_bits": 3012.121995675411
+      },
+      "fit_bits_minus_learned": 0.028362003130496305,
+      "model_bits": 184,
+      "transfer": {
+        "decoded_characters": 446,
+        "edits": 9,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "log_likelihood": -1025.6567402841506,
+        "record_edits": [
+          1,
+          8
+        ],
+        "record_log_likelihoods": [
+          -527.2652193419162,
+          -498.3915209422345
+        ],
+        "supported_records": 2,
+        "total_bits": 1663.7098928622836
+      }
+    },
+    "learned": {
+      "changed_letter": null,
+      "fit": {
+        "decoded_characters": 895,
+        "edits": 18,
+        "exact_records": 1,
+        "gold_characters": 896,
+        "log_likelihood": -1960.285128539472,
+        "record_edits": [
+          6,
+          4,
+          0,
+          8
+        ],
+        "record_log_likelihoods": [
+          -476.364469270289,
+          -497.6363290498804,
+          -487.9069877098025,
+          -498.3773425095001
+        ],
+        "supported_records": 4,
+        "total_bits": 3012.0936336722807
+      },
+      "fit_bits_minus_learned": 0.0,
+      "model_bits": 184,
+      "transfer": {
+        "decoded_characters": 222,
+        "edits": 232,
+        "exact_records": 0,
+        "gold_characters": 448,
+        "log_likelihood": null,
+        "record_edits": [
+          224,
+          8
+        ],
+        "record_log_likelihoods": [
+          null,
+          -498.3903793922771
+        ],
+        "supported_records": 1,
+        "total_bits": null
+      }
+    },
+    "repair_y": {
+      "changed_letter": "y",
+      "fit": {
+        "decoded_characters": 895,
+        "edits": 18,
+        "exact_records": 1,
+        "gold_characters": 896,
+        "log_likelihood": -1960.879977528031,
+        "record_edits": [
+          6,
+          4,
+          0,
+          8
+        ],
+        "record_log_likelihoods": [
+          -476.5378769157542,
+          -497.8391983355959,
+          -487.9401999844119,
+          -498.562702292269
+        ],
+        "supported_records": 4,
+        "total_bits": 3012.9518193581525
+      },
+      "fit_bits_minus_learned": 0.8581856858718311,
+      "model_bits": 184,
+      "transfer": {
+        "decoded_characters": 446,
+        "edits": 8,
+        "exact_records": 1,
+        "gold_characters": 448,
+        "log_likelihood": -1019.2497142678494,
+        "record_edits": [
+          0,
+          8
+        ],
+        "record_log_likelihoods": [
+          -520.7112994296311,
+          -498.5384148382183
+        ],
+        "supported_records": 2,
+        "total_bits": 1654.4665082017193
+      }
+    }
+  },
+  "evaluation_sha256": "c91ccc5281c4e618585c29248f652b13a44d4227809ff735aa82d5931e99899d",
+  "experiment": "BLIND-CHANNEL-CONFIRM-001-DIAG-A",
+  "freeze": "99d3d137763c4b792e5650b4c787244c03ff8be7",
+  "maximum_score_delta": 8.526512829121202e-13,
+  "predictions": {
+    "bytes": 1580,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-001-DIAG-A/predictions.json.gz",
+    "sha256": "b28518246fb2021abfda1fb521f756534ec9cc4a1a47dc6a16e7a319e48acde9"
+  },
+  "record_predictions_replayed": 24,
+  "resources": {
+    "cpu_seconds": 0.444775,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 100368384,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.7483772090054117
+  },
+  "status": "exploratory_answer_informed_counterfactual_not_qualification"
+}

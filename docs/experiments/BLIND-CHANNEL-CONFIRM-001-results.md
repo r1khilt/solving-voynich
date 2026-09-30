@@ -97,9 +97,13 @@ eight errors, exactly the true-key decoder's reading. The wrong selected key
 has a6.977bit better fitting objective than the generating key; finite-sample
 compression does not protect unseen assignments or future support.
 
-The last diagnosis motivates a separately declared, answer-informed
-[single-row intervention](BLIND-CHANNEL-CONFIRM-001-DIAG-A.md). It does not repair
-or reclassify this fresh test. No further fitting or corpus/source tuning has
+The separately declared, answer-informed
+[single-row intervention](BLIND-CHANNEL-CONFIRM-001-DIAG-A-results.md) is now
+complete. Assigning the missing F to either wrong letter k or z restores both
+records and reduces232 transfer edits to9; assigning it to the correct y gives8.
+The fitting objective prefers the original key to all three repairs. This
+isolates coverage loss from rare-letter identity without repairing or
+reclassifying this fresh test. No further fitting or corpus/source tuning has
 been performed on this panel.
 
 ## Audit, resources and next decision
