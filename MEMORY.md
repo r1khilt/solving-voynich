@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-28 PDT (unknown-unit development recovery; objective mismatch remains; no Voynich decipherment).
+Last updated: 2026-09-29 PDT (fixed-dictionary diagnosis in preparation; no Voynich decipherment).
 
 ## Current state
+
+- **Active DEV004 diagnostic, no empirical result yet:** Hold DEV003 dictionaries fixed; source-only context-order selection, posterior sampled edit-risk decisions, and an answer-only minimum achievable edit floor separate source/ranking limitations from dictionary support errors. Protocol `docs/experiments/BLIND-CHANNEL-DEV-004.md`, method `docs/research/fixed-channel-source-context.md`, NB-212. No refit, final-author access, stateful-C test or manuscript inference. Preparation resumed after disclosed usage-limit interruption; finish independent checks and source/prediction freezes before scoring.
 
 - **Current: systematic search recovers exposed A and unknown-unit B; fresh qualification still needed:** DEV002Atransfer0/448errors each. DEV003Btransfer4/448and32/448(0.89/7.14%), versus earlier477/430;B1exactlymatches true-channel oracle predictions on all6records,B2trails21-errororacle. Source830a53f and keys/auditor8e6e5c8remotelyfrozen before dependentstages; independent24record replay agrees≤5.69e-13;2,021,878neighbor trace audit passes. Fourfits403.105s wall/781.834CPU seconds, no paiduse; fullsuite1,540pass+23subtests,8skips. This is adaptive same-data/narrow-family competence, not completekeys or newconfirmation. B2objectivebeats literalgold30.779bits despiteworse reading: next separate source/finite-sample/decoding-decision effects, then freeze freshkeys/authors; do not hand-tune exposedrareletters or assume moresearch fixes it. Finalauthors/statefulC/Voynich remain untested. Read `docs/experiments/BLIND-CHANNEL-DEV-003-results.md`, `BLIND-CHANNEL-DEV-002-results.md`, notebookNB-206–211.
 
