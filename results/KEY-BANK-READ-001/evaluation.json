@@ -1,0 +1,960 @@
+{
+  "baseline_records_reproduced": 32,
+  "cases": {
+    "B-key1": {
+      "arms": {
+        "fit_selected": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 8,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            6
+          ],
+          "supported_records": 2
+        },
+        "joint": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 8,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            6
+          ],
+          "supported_records": 2
+        },
+        "mixture": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 8,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            6
+          ],
+          "supported_records": 2
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 6,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            0,
+            6
+          ],
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": true,
+      "inference_status": "complete",
+      "mixture_search": {
+        "candidate_tuples": 5264,
+        "floating_bound_separated": true,
+        "joint_log_probability": -862.1426197766016,
+        "log_likelihood": -857.1316051505406,
+        "unseen_log_probability_upper_bound": -862.7669091645037
+      },
+      "truth_diagnosis": {
+        "status": "model_prefers_wrong_tuple",
+        "supporting_keys": 126,
+        "true_joint_key_text_log_probability": -866.9589752013749,
+        "true_marginal_text_log_probability": -866.3587908467262,
+        "true_minus_returned_marginal_nats": -4.216171070124574,
+        "true_source_log_probability": -866.3587908467262
+      }
+    },
+    "B-key1-shuffle": {
+      "arms": {
+        "fit_selected": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "joint": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "mixture": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 771,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": false,
+      "inference_status": "fit_bank_unavailable"
+    },
+    "B-key2": {
+      "arms": {
+        "fit_selected": {
+          "available": true,
+          "decoded_characters": 446,
+          "edits": 6,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            6,
+            0
+          ],
+          "supported_records": 2
+        },
+        "joint": {
+          "available": true,
+          "decoded_characters": 446,
+          "edits": 6,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            6,
+            0
+          ],
+          "supported_records": 2
+        },
+        "mixture": {
+          "available": true,
+          "decoded_characters": 446,
+          "edits": 6,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            6,
+            0
+          ],
+          "supported_records": 2
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 446,
+          "edits": 6,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            6,
+            0
+          ],
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": true,
+      "inference_status": "complete",
+      "mixture_search": {
+        "candidate_tuples": 4935,
+        "floating_bound_separated": true,
+        "joint_log_probability": -790.938288730282,
+        "log_likelihood": -789.3730055541098,
+        "unseen_log_probability_upper_bound": -793.2565601350344
+      },
+      "truth_diagnosis": {
+        "status": "model_prefers_wrong_tuple",
+        "supporting_keys": 127,
+        "true_joint_key_text_log_probability": -798.6288995056482,
+        "true_marginal_text_log_probability": -795.2907780282749,
+        "true_minus_returned_marginal_nats": -4.352489297992861,
+        "true_source_log_probability": -795.2907780282749
+      }
+    },
+    "B-key2-shuffle": {
+      "arms": {
+        "fit_selected": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "joint": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "mixture": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 737,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": false,
+      "inference_status": "fit_bank_unavailable"
+    },
+    "B-key3": {
+      "arms": {
+        "fit_selected": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 7,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            5
+          ],
+          "supported_records": 2
+        },
+        "joint": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 7,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            5
+          ],
+          "supported_records": 2
+        },
+        "mixture": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 7,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            5
+          ],
+          "supported_records": 2
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 7,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            5
+          ],
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": true,
+      "inference_status": "complete",
+      "mixture_search": {
+        "candidate_tuples": 5063,
+        "floating_bound_separated": true,
+        "joint_log_probability": -768.4178498291383,
+        "log_likelihood": -766.4245716321365,
+        "unseen_log_probability_upper_bound": -770.289487166264
+      },
+      "truth_diagnosis": {
+        "status": "model_prefers_wrong_tuple",
+        "supporting_keys": 132,
+        "true_joint_key_text_log_probability": -775.935364070132,
+        "true_marginal_text_log_probability": -772.4550388613261,
+        "true_minus_returned_marginal_nats": -4.037189032187825,
+        "true_source_log_probability": -772.4550388613261
+      }
+    },
+    "B-key3-shuffle": {
+      "arms": {
+        "fit_selected": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "joint": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "mixture": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 742,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": false,
+      "inference_status": "fit_bank_unavailable"
+    },
+    "B-key4": {
+      "arms": {
+        "fit_selected": {
+          "available": true,
+          "decoded_characters": 452,
+          "edits": 8,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            4,
+            4
+          ],
+          "supported_records": 2
+        },
+        "joint": {
+          "available": true,
+          "decoded_characters": 452,
+          "edits": 8,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            4,
+            4
+          ],
+          "supported_records": 2
+        },
+        "mixture": {
+          "available": true,
+          "decoded_characters": 452,
+          "edits": 8,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            4,
+            4
+          ],
+          "supported_records": 2
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 457,
+          "edits": 18,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            4,
+            14
+          ],
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": true,
+      "inference_status": "complete",
+      "mixture_search": {
+        "candidate_tuples": 4836,
+        "floating_bound_separated": true,
+        "joint_log_probability": -836.7881211697331,
+        "log_likelihood": -834.366967811319,
+        "unseen_log_probability_upper_bound": -837.883215640015
+      },
+      "truth_diagnosis": {
+        "status": "true_tuple_outside_positive_weight_bank_support",
+        "supporting_keys": 0
+      }
+    },
+    "B-key4-shuffle": {
+      "arms": {
+        "fit_selected": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "joint": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "mixture": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 796,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": false,
+      "inference_status": "fit_bank_unavailable"
+    },
+    "B-key5": {
+      "arms": {
+        "fit_selected": {
+          "available": true,
+          "decoded_characters": 447,
+          "edits": 2,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            0
+          ],
+          "supported_records": 2
+        },
+        "joint": {
+          "available": true,
+          "decoded_characters": 447,
+          "edits": 3,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            3,
+            0
+          ],
+          "supported_records": 2
+        },
+        "mixture": {
+          "available": true,
+          "decoded_characters": 447,
+          "edits": 2,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            0
+          ],
+          "supported_records": 2
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 447,
+          "edits": 2,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            2,
+            0
+          ],
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": true,
+      "inference_status": "complete",
+      "mixture_search": {
+        "candidate_tuples": 4451,
+        "floating_bound_separated": true,
+        "joint_log_probability": -786.7358013232224,
+        "log_likelihood": -785.958046204727,
+        "unseen_log_probability_upper_bound": -791.1109674305509
+      },
+      "truth_diagnosis": {
+        "status": "model_prefers_wrong_tuple",
+        "supporting_keys": 127,
+        "true_joint_key_text_log_probability": -793.8161466281304,
+        "true_marginal_text_log_probability": -790.3374244096142,
+        "true_minus_returned_marginal_nats": -3.6016230863917826,
+        "true_source_log_probability": -790.3374244096142
+      }
+    },
+    "B-key5-shuffle": {
+      "arms": {
+        "fit_selected": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "joint": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "mixture": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 824,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": false,
+      "inference_status": "fit_bank_unavailable"
+    },
+    "B-key6": {
+      "arms": {
+        "fit_selected": {
+          "available": true,
+          "decoded_characters": 224,
+          "edits": 224,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            224,
+            0
+          ],
+          "supported_records": 1
+        },
+        "joint": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 0,
+          "exact_records": 2,
+          "gold_characters": 448,
+          "record_edits": [
+            0,
+            0
+          ],
+          "supported_records": 2
+        },
+        "mixture": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 0,
+          "exact_records": 2,
+          "gold_characters": 448,
+          "record_edits": [
+            0,
+            0
+          ],
+          "supported_records": 2
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 224,
+          "edits": 224,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            224,
+            0
+          ],
+          "supported_records": 1
+        }
+      },
+      "fit_bank_available": true,
+      "inference_status": "complete",
+      "mixture_search": {
+        "candidate_tuples": 440,
+        "floating_bound_separated": true,
+        "joint_log_probability": -819.7183066544501,
+        "log_likelihood": -818.1804228722846,
+        "unseen_log_probability_upper_bound": -822.1977365525238
+      },
+      "truth_diagnosis": {
+        "status": "exact_true_tuple",
+        "supporting_keys": 1,
+        "true_joint_key_text_log_probability": -819.7183066544501,
+        "true_marginal_text_log_probability": -819.7183066544501,
+        "true_minus_returned_marginal_nats": 0.0,
+        "true_source_log_probability": -816.099183281482
+      }
+    },
+    "B-key6-shuffle": {
+      "arms": {
+        "fit_selected": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "joint": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "mixture": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 774,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": false,
+      "inference_status": "fit_bank_unavailable"
+    },
+    "B-key7": {
+      "arms": {
+        "fit_selected": {
+          "available": true,
+          "decoded_characters": 447,
+          "edits": 2,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            0,
+            2
+          ],
+          "supported_records": 2
+        },
+        "joint": {
+          "available": true,
+          "decoded_characters": 447,
+          "edits": 2,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            0,
+            2
+          ],
+          "supported_records": 2
+        },
+        "mixture": {
+          "available": true,
+          "decoded_characters": 447,
+          "edits": 2,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "record_edits": [
+            0,
+            2
+          ],
+          "supported_records": 2
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 454,
+          "edits": 20,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            14,
+            6
+          ],
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": true,
+      "inference_status": "complete",
+      "mixture_search": {
+        "candidate_tuples": 5584,
+        "floating_bound_separated": true,
+        "joint_log_probability": -845.5763812851678,
+        "log_likelihood": -843.4487124334676,
+        "unseen_log_probability_upper_bound": -847.3090649952738
+      },
+      "truth_diagnosis": {
+        "status": "model_prefers_wrong_tuple",
+        "supporting_keys": 1,
+        "true_joint_key_text_log_probability": -846.8598242517188,
+        "true_marginal_text_log_probability": -846.8598242517188,
+        "true_minus_returned_marginal_nats": -1.2834429665509788,
+        "true_source_log_probability": -846.8525177507296
+      }
+    },
+    "B-key7-shuffle": {
+      "arms": {
+        "fit_selected": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "joint": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "mixture": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 742,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": false,
+      "inference_status": "fit_bank_unavailable"
+    },
+    "B-key8": {
+      "arms": {
+        "fit_selected": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 12,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            6,
+            6
+          ],
+          "supported_records": 2
+        },
+        "joint": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 12,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            6,
+            6
+          ],
+          "supported_records": 2
+        },
+        "mixture": {
+          "available": true,
+          "decoded_characters": 448,
+          "edits": 12,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            6,
+            6
+          ],
+          "supported_records": 2
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 455,
+          "edits": 26,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "record_edits": [
+            16,
+            10
+          ],
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": true,
+      "inference_status": "complete",
+      "mixture_search": {
+        "candidate_tuples": 5475,
+        "floating_bound_separated": true,
+        "joint_log_probability": -921.7458238211415,
+        "log_likelihood": -916.6729610329495,
+        "unseen_log_probability_upper_bound": -922.4998524248073
+      },
+      "truth_diagnosis": {
+        "status": "true_tuple_outside_positive_weight_bank_support",
+        "supporting_keys": 0
+      }
+    },
+    "B-key8-shuffle": {
+      "arms": {
+        "fit_selected": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "joint": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "mixture": {
+          "available": false,
+          "decoded_characters": 0,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 0
+        },
+        "original": {
+          "available": true,
+          "decoded_characters": 732,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "record_edits": null,
+          "supported_records": 2
+        }
+      },
+      "fit_bank_available": false,
+      "inference_status": "fit_bank_unavailable"
+    }
+  },
+  "completed_case_metrics_conditional": {
+    "fit_selected": {
+      "cases": 8,
+      "edits": 269,
+      "gold_characters": 3584
+    },
+    "joint": {
+      "cases": 8,
+      "edits": 46,
+      "gold_characters": 3584
+    },
+    "mixture": {
+      "cases": 8,
+      "edits": 45,
+      "gold_characters": 3584
+    },
+    "original": {
+      "cases": 8,
+      "edits": 309,
+      "gold_characters": 3584
+    }
+  },
+  "development_clauses": {
+    "all_positive_inference_complete": true,
+    "all_positive_records_supported": true,
+    "every_positive_key_at_most_five_percent": true,
+    "thirty_percent_fewer_edits_vs_fit_point": true
+  },
+  "development_gate": "PASS",
+  "experiment": "KEY-BANK-READ-001",
+  "fit_campaign_status": "incomplete_failures_retained",
+  "freeze": "eff63841c0e1c29aab2172740dbe33617f7faaab",
+  "independent_record_edit_checks": 64,
+  "marginal_minus_joint_edits": -1,
+  "not_fresh_qualification_or_null_discrimination": true,
+  "prediction_campaign_status": "complete",
+  "resources": {
+    "cpu_seconds": 0.852489,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 867876864,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.8613767079950776
+  },
+  "totals": {
+    "fit_selected": {
+      "edits": 269,
+      "exact_records": 4,
+      "gold_characters": 3584,
+      "supported_records": 15
+    },
+    "joint": {
+      "edits": 46,
+      "exact_records": 5,
+      "gold_characters": 3584,
+      "supported_records": 16
+    },
+    "mixture": {
+      "edits": 45,
+      "exact_records": 5,
+      "gold_characters": 3584,
+      "supported_records": 16
+    },
+    "original": {
+      "edits": 309,
+      "exact_records": 4,
+      "gold_characters": 3584,
+      "supported_records": 15
+    }
+  }
+}
