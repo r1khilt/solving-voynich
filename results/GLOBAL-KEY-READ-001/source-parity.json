@@ -1,0 +1,55 @@
+{
+  "functions": [
+    {
+      "function": "predict",
+      "new_path": "scripts/predict_global_key_read001.py",
+      "normalized_ast_sha256": "42531b356c7f22a275c818f993153758d3e27eb72e16388251f27501748ba8ae",
+      "old_path": "scripts/predict_blind_channel_confirm002.py"
+    },
+    {
+      "function": "campaign",
+      "new_path": "scripts/predict_global_key_read001.py",
+      "normalized_ast_sha256": "f033722065e1044702eb53c6f5fef6333ded2c09f59ced97dd35c3fd73915fd7",
+      "old_path": "scripts/predict_blind_channel_confirm002.py"
+    },
+    {
+      "function": "literal_source",
+      "new_path": "scripts/audit_global_key_read001.py",
+      "normalized_ast_sha256": "596aa90ac83c7ff00e8e8f4cb23ce3981995e5cefcf3dc4eb0e1ba16fd7451ff",
+      "old_path": "scripts/audit_blind_channel_confirm002.py"
+    },
+    {
+      "function": "audit_points",
+      "new_path": "scripts/audit_global_key_read001.py",
+      "normalized_ast_sha256": "590fbf2aa1bcb2be8d4cdfa88305591b12254d3f99763f666eda6dcb03c8dc5f",
+      "old_path": "scripts/audit_blind_channel_confirm002.py"
+    },
+    {
+      "function": "audit_predictions",
+      "new_path": "scripts/audit_global_key_read001.py",
+      "normalized_ast_sha256": "30dd93be1b0cf4afdb522a48c83a1d4f8a622dccf23e8a216fb3a6af37b15306",
+      "old_path": "scripts/audit_blind_channel_confirm002.py"
+    },
+    {
+      "function": "decisions",
+      "new_path": "scripts/evaluate_global_key_read001.py",
+      "normalized_ast_sha256": "3bbe779eb38396ed6ebde2b9f610fe07ddfc6f3d1a918daa3bba487ee346a4d1",
+      "old_path": "scripts/evaluate_blind_channel_confirm002.py"
+    },
+    {
+      "function": "checked_metrics",
+      "new_path": "scripts/evaluate_global_key_read001.py",
+      "normalized_ast_sha256": "434c5dc30d094588489ae4a92cb1b619d7eee95e00b7b06ab0eb9273662e0d66",
+      "old_path": "scripts/evaluate_blind_channel_confirm002.py"
+    },
+    {
+      "function": "oracle_rows",
+      "new_path": "scripts/evaluate_global_key_read001.py",
+      "normalized_ast_sha256": "0c44fc7a18a3b9b4089c6ca82f552183c133b7e28248a28e1285c40344f86ef2",
+      "old_path": "scripts/evaluate_blind_channel_confirm002.py"
+    }
+  ],
+  "normalization": "omit docstrings; canonicalize only auditor-identity pathname",
+  "qualification": "static_algorithm_parity_not_empirical_recovery",
+  "status": "PASS"
+}

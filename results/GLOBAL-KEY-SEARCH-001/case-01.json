@@ -1,0 +1,217 @@
+{
+  "case": "case-01",
+  "config": {
+    "block_sizes": [
+      2,
+      3,
+      6
+    ],
+    "iterations": 24000,
+    "max_scored_keys": 150000,
+    "max_seconds": 1200.0,
+    "proposal_weights": [
+      2,
+      1,
+      1
+    ],
+    "seed": 95101,
+    "swap_interval": 4,
+    "temperatures": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0
+    ]
+  },
+  "fit": {
+    "bytes": 2245,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-002/case-01/fit.json",
+    "sha256": "618de091f3b28454b8fad86f3111b073886bac64d9632a8071e8a1ef494e942b"
+  },
+  "fit_objective_gain_nats": 937.0204342820207,
+  "freeze": "c4e3a3a58c863f8fea2e6af49bb23e768be38003",
+  "gain_vs_best_warm_nats": 937.0204342820207,
+  "graph_caps": {
+    "edges": 40000000,
+    "nodes": 10000000
+  },
+  "neighborhood_seconds": 23.562326750019565,
+  "old_bank": {
+    "bytes": 479585,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-002/case-01-bank.json.gz",
+    "sha256": "a94dfb74613395627f035da2fac85677cf6a39159becb998d0e235bdc11da955"
+  },
+  "old_fit": {
+    "bytes": 3394,
+    "path": "results/BLIND-CHANNEL-CONFIRM-002/case-01-fit.json",
+    "sha256": "42fc6102a60211f98771cb4750c385b56184518977b344bc268300b2656630cc"
+  },
+  "parent": {
+    "bytes": 8460,
+    "path": "results/BLIND-CHANNEL-CONFIRM-002/case-01-parent.json",
+    "sha256": "c9c97d79992a29b0e0991da198abc1d269ad56e613e3f833d50742be7b7e4a1e"
+  },
+  "progress": {
+    "bytes": 18758022,
+    "path": "outputs/GLOBAL-KEY-SEARCH-001/case-01-progress.jsonl.gz",
+    "sha256": "1ec71ccc5cfee5efe0ec568f346d960f096d83a16d7a2fd5359a2fcb8b703431"
+  },
+  "reader_bank": {
+    "bytes": 582633,
+    "path": "outputs/GLOBAL-KEY-SEARCH-001/case-01-reader-bank.json.gz",
+    "sha256": "1285f9d9533e685dc7615d06818b668ffc6db5e476aa0fee6f91f23b7c504fd3"
+  },
+  "reader_summary": {
+    "bank_size": 5894,
+    "best_index": 4666,
+    "best_units": [
+      "BD",
+      "FD",
+      "BB",
+      "A",
+      "AE",
+      "F",
+      "DA",
+      "CC",
+      "CF",
+      "B",
+      "E",
+      "BC",
+      "EF",
+      "D",
+      "B",
+      "BA",
+      "EB",
+      "C",
+      "AD",
+      "CB",
+      "DB",
+      "D",
+      "C"
+    ],
+    "finite_keys": 5487,
+    "global_optimality_claimed": false,
+    "neighborhood_size": 1194,
+    "old_bank_size": 4666,
+    "retained_new_top_count": 64,
+    "visit_counts_used_as_weights": false,
+    "whole_old_bank_preserved": true
+  },
+  "resources": {
+    "cpu_seconds": 1219.6090720000002,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1435877376,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 1229.7618267500075
+  },
+  "search": {
+    "bytes": 20762640,
+    "path": "outputs/GLOBAL-KEY-SEARCH-001/case-01-search.json.gz",
+    "sha256": "8b7b0cbfa5d7513f367456891f08e73342157589d1550472d07b993b69cff83b"
+  },
+  "search_gain_vs_best_warm_nats": 937.0204342820207,
+  "search_summary": {
+    "best_index": 49236,
+    "best_score": -1682.8764361019803,
+    "best_units": [
+      "BD",
+      "FD",
+      "BB",
+      "A",
+      "AE",
+      "F",
+      "DA",
+      "CC",
+      "CF",
+      "B",
+      "E",
+      "BC",
+      "EF",
+      "D",
+      "B",
+      "BA",
+      "EB",
+      "C",
+      "AD",
+      "CB",
+      "DB",
+      "D",
+      "C"
+    ],
+    "cache_hits": 2623,
+    "completed_iterations": 17404,
+    "exchange_counts": {
+      "accepted": 1853,
+      "proposed": 15229
+    },
+    "final_replica_indices": [
+      52929,
+      136484,
+      136456,
+      125078,
+      136605,
+      136598,
+      136600,
+      136607
+    ],
+    "global_optimality_claimed": false,
+    "initial_replica_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "proposal_counts": {
+      "block": {
+        "accepted": 2140,
+        "proposed": 35085
+      },
+      "replace": {
+        "accepted": 18210,
+        "proposed": 69283
+      },
+      "swap": {
+        "accepted": 7225,
+        "proposed": 34865
+      }
+    },
+    "proposals": 139233,
+    "scored_keys": 136618,
+    "self_proposals": 811,
+    "stationary_distribution_claimed": false,
+    "stop_reason": "time_limit",
+    "temperatures": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0
+    ],
+    "wall_seconds": 1200.0021277919877
+  },
+  "status": "complete_fit_only",
+  "transfer_or_answer_files_opened": false,
+  "unique_full_fit_scores_including_warm_and_neighborhood": 137591,
+  "warm": {
+    "bytes": 16600,
+    "path": "results/GLOBAL-KEY-SEARCH-001/case-01-warm.json",
+    "sha256": "170d5bf4f4f047f27cf40e995490adb89abf9f0096b2be86503b037c7e271799"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "auditor": {
+    "bytes": 11850,
+    "path": "scripts/audit_global_key_search001.py",
+    "sha256": "97c26bf867f3c8e65200ac687f3574488161cc0c50a6dd2bfd9fc4b807b87acf"
+  },
+  "case": "case-11",
+  "full_fit_scores_accounted": 52613,
+  "maximum_delta": 1.0231815394945443e-12,
+  "reference_keys": 10,
+  "reference_records": 40,
+  "resources": {
+    "cpu_seconds": 117.787696,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1342210048,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 124.03226900001755
+  },
+  "result": {
+    "bytes": 4711,
+    "path": "results/GLOBAL-KEY-SEARCH-001/case-11.json",
+    "sha256": "c6635146082756a58c98b703509f02a651db22cb00caf27ada97b14b1cafd04a"
+  },
+  "same_author_not_independent_agent_review": true,
+  "status": "PASS",
+  "trace_counts": {
+    "exchanges": 5782,
+    "proposals": 52875,
+    "search_keys": 51516
+  },
+  "transfer_or_answer_files_opened": false
+}
