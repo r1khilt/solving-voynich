@@ -1,0 +1,870 @@
+{
+  "build": {
+    "abi": 1,
+    "command": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/src/voynich/native/suffix_marginal.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib"
+    ],
+    "compiler": "/usr/bin/clang++",
+    "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib"
+    ],
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib",
+    "library_sha256": "d8d0fbdeb183b292594248f95c1a56eeea843d3c3ba26a0eb05548fb7bcaf30f",
+    "machine": "arm64",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "source_sha256": "03dabaeb7814d283b41c94adb8063a6306e28beaf4ab97d17cb684532cd29d61"
+  },
+  "cases": {
+    "B-key1": {
+      "backend_order": [
+        "full_python",
+        "marginal_python",
+        "native"
+      ],
+      "fit": {
+        "bytes": 2226,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key1/fit.json",
+        "sha256": "c3192162157160bd6e189b890c3a4edfbbc4ff30ed4ea570daf131d0b03c5a35"
+      },
+      "full_bank_size": 1193,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        170,
+        340,
+        510,
+        681,
+        851,
+        1021,
+        1192
+      ],
+      "maximum_log_likelihood_delta": 4.547473508864641e-13,
+      "parent": {
+        "bytes": 8624,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key1_freeze.json",
+        "sha256": "5bd6eb0a4e19a34764e076d4863cbaffa712b470b39d309d8df267a4f3933d36"
+      },
+      "readings": {
+        "bytes": 788,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key1.json.gz",
+        "sha256": "bcda7a5e93edb576c1e01ef9251a73c82ec60c916cbdc53c0313217aa29c7a2b"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 0.20904200000000006,
+          "wall_seconds": 0.20932533399900422
+        },
+        "marginal_python": {
+          "cpu_seconds": 0.13572099999999998,
+          "wall_seconds": 0.13580324995564297
+        },
+        "native": {
+          "cpu_seconds": 0.02333199999999991,
+          "wall_seconds": 0.023357291996944696
+        }
+      }
+    },
+    "B-key1-shuffle": {
+      "backend_order": [
+        "marginal_python",
+        "native",
+        "full_python"
+      ],
+      "fit": {
+        "bytes": 2234,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key1-shuffle/fit.json",
+        "sha256": "eade2c30058aeac6e4b64a87898fb51be41fcef3ae72dba3e2eee4ea1103df9a"
+      },
+      "full_bank_size": 1166,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        166,
+        332,
+        499,
+        665,
+        832,
+        998,
+        1165
+      ],
+      "maximum_log_likelihood_delta": 1.3642420526593924e-12,
+      "parent": {
+        "bytes": 8643,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key1-shuffle_freeze.json",
+        "sha256": "9c4348accae1bbad591e892af31d8079b3419ed19fbd6a76bceed1a866dcd3b6"
+      },
+      "readings": {
+        "bytes": 851,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key1-shuffle.json.gz",
+        "sha256": "5ae27d06278be5f798c4a3bd73943496a0babc5583124b052f064579e1a63d3d"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 3.601001,
+          "wall_seconds": 3.604099457967095
+        },
+        "marginal_python": {
+          "cpu_seconds": 2.846914,
+          "wall_seconds": 2.849280958995223
+        },
+        "native": {
+          "cpu_seconds": 0.2084710000000003,
+          "wall_seconds": 0.2086602080380544
+        }
+      }
+    },
+    "B-key2": {
+      "backend_order": [
+        "native",
+        "full_python",
+        "marginal_python"
+      ],
+      "fit": {
+        "bytes": 2220,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key2/fit.json",
+        "sha256": "0655ac876c925d0da09463e3cd8f94ba0a32c7910321df310568a520674f8870"
+      },
+      "full_bank_size": 1194,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        170,
+        340,
+        511,
+        681,
+        852,
+        1022,
+        1193
+      ],
+      "maximum_log_likelihood_delta": 4.547473508864641e-13,
+      "parent": {
+        "bytes": 8650,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key2_freeze.json",
+        "sha256": "9a6ea397bbf72cbbe0b88b15c4d7696b50ab83b122c7fc761ad3a80d1ca8589e"
+      },
+      "readings": {
+        "bytes": 796,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key2.json.gz",
+        "sha256": "8a3fcaa117105e7871e8483662d23299aca6ac53f3af55f9dd52594ba01ec956"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 0.17852099999999993,
+          "wall_seconds": 0.17867816699435934
+        },
+        "marginal_python": {
+          "cpu_seconds": 0.14093399999999967,
+          "wall_seconds": 0.1410514580202289
+        },
+        "native": {
+          "cpu_seconds": 0.02505799999999958,
+          "wall_seconds": 0.025086874957196414
+        }
+      }
+    },
+    "B-key2-shuffle": {
+      "backend_order": [
+        "full_python",
+        "marginal_python",
+        "native"
+      ],
+      "fit": {
+        "bytes": 2228,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key2-shuffle/fit.json",
+        "sha256": "0c36fda27daca76a391780fd151ed82436bce0abee0168808796c7095698d1aa"
+      },
+      "full_bank_size": 1168,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        166,
+        333,
+        500,
+        666,
+        833,
+        1000,
+        1167
+      ],
+      "maximum_log_likelihood_delta": 6.821210263296962e-13,
+      "parent": {
+        "bytes": 8645,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key2-shuffle_freeze.json",
+        "sha256": "bfebb4607eb75d147d56570be7e843d3953d28e0f848310e1a9b90e3fc6d3c11"
+      },
+      "readings": {
+        "bytes": 860,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key2-shuffle.json.gz",
+        "sha256": "cc5d3d2757ac6081b90da1adb654e31201a6c4728b07cf0e26ef4e601f7a796e"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 3.7843160000000005,
+          "wall_seconds": 3.7888629579683766
+        },
+        "marginal_python": {
+          "cpu_seconds": 2.95467,
+          "wall_seconds": 2.9571526250219904
+        },
+        "native": {
+          "cpu_seconds": 0.22294300000000078,
+          "wall_seconds": 0.22313370800111443
+        }
+      }
+    },
+    "B-key3": {
+      "backend_order": [
+        "marginal_python",
+        "native",
+        "full_python"
+      ],
+      "fit": {
+        "bytes": 2223,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key3/fit.json",
+        "sha256": "c3ae5466feb3b63db070cc6e266864e0e136874807a2b591a531d9fc3c8c73d7"
+      },
+      "full_bank_size": 1194,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        170,
+        340,
+        511,
+        681,
+        852,
+        1022,
+        1193
+      ],
+      "maximum_log_likelihood_delta": 5.684341886080801e-13,
+      "parent": {
+        "bytes": 8628,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key3_freeze.json",
+        "sha256": "29fedfa4c2b28fd7b5f55833cd7ebbdbbf27b77bca1927cde96ccaa7c87c0b91"
+      },
+      "readings": {
+        "bytes": 777,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key3.json.gz",
+        "sha256": "4c1094269bac083292bb559162e033ff7e082ba7fad6eb94cea80e1feb4c2172"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 0.1892630000000004,
+          "wall_seconds": 0.18941712495870888
+        },
+        "marginal_python": {
+          "cpu_seconds": 0.15216299999999983,
+          "wall_seconds": 0.1522793750045821
+        },
+        "native": {
+          "cpu_seconds": 0.02520400000000045,
+          "wall_seconds": 0.025230541999917477
+        }
+      }
+    },
+    "B-key3-shuffle": {
+      "backend_order": [
+        "native",
+        "full_python",
+        "marginal_python"
+      ],
+      "fit": {
+        "bytes": 2231,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key3-shuffle/fit.json",
+        "sha256": "382a983ce5c6b449105a3136d46777a7784102d452e21fbc74c893533272f644"
+      },
+      "full_bank_size": 1167,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        166,
+        333,
+        499,
+        666,
+        832,
+        999,
+        1166
+      ],
+      "maximum_log_likelihood_delta": 4.547473508864641e-13,
+      "parent": {
+        "bytes": 8620,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key3-shuffle_freeze.json",
+        "sha256": "81802d8f4277dfcb90483483ffb066c995b52d477df6945cd7beb3bd929164c5"
+      },
+      "readings": {
+        "bytes": 803,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key3-shuffle.json.gz",
+        "sha256": "b4f84eb4dd078741df5939eaacdd731d18486e9041ea5caf02de0dfc249773ae"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 2.388069999999999,
+          "wall_seconds": 2.3905297499732114
+        },
+        "marginal_python": {
+          "cpu_seconds": 1.8706219999999973,
+          "wall_seconds": 1.872164333006367
+        },
+        "native": {
+          "cpu_seconds": 0.14287000000000027,
+          "wall_seconds": 0.1429852910223417
+        }
+      }
+    },
+    "B-key4": {
+      "backend_order": [
+        "full_python",
+        "marginal_python",
+        "native"
+      ],
+      "fit": {
+        "bytes": 2262,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key4/fit.json",
+        "sha256": "e776f02adb7804554e4b13086ec7995786c8134e79200255579bb22f9c4ec04f"
+      },
+      "full_bank_size": 1189,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        169,
+        339,
+        509,
+        678,
+        848,
+        1018,
+        1188
+      ],
+      "maximum_log_likelihood_delta": 5.684341886080801e-13,
+      "parent": {
+        "bytes": 8643,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key4_freeze.json",
+        "sha256": "0240df68f6dca8ab60b1a70f91ca3bfb06f47e24ea3dec0e7c909f4b1c595439"
+      },
+      "readings": {
+        "bytes": 715,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key4.json.gz",
+        "sha256": "689494b22d37ac89fabda666a2672a23ef9b4d30a64c796e644d7be33d9565bd"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 0.13972100000000154,
+          "wall_seconds": 0.1398369170492515
+        },
+        "marginal_python": {
+          "cpu_seconds": 0.11160400000000337,
+          "wall_seconds": 0.11168833303963766
+        },
+        "native": {
+          "cpu_seconds": 0.02256699999999867,
+          "wall_seconds": 0.02258479199372232
+        }
+      }
+    },
+    "B-key4-shuffle": {
+      "backend_order": [
+        "marginal_python",
+        "native",
+        "full_python"
+      ],
+      "fit": {
+        "bytes": 2270,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key4-shuffle/fit.json",
+        "sha256": "7ad8a406182f3487ecf7525b278acfc0294ac401e19b2ec750be02370f5f62a2"
+      },
+      "full_bank_size": 1166,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        166,
+        332,
+        499,
+        665,
+        832,
+        998,
+        1165
+      ],
+      "maximum_log_likelihood_delta": 4.547473508864641e-13,
+      "parent": {
+        "bytes": 8646,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key4-shuffle_freeze.json",
+        "sha256": "d33c868a2026fd2d9dfc1c04d857531c722c00da93a4348e17cf2155f18c8276"
+      },
+      "readings": {
+        "bytes": 867,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key4-shuffle.json.gz",
+        "sha256": "d8581fe77b2fd07e6336187bc580130b5717e9f95c616ba015c078b09cee47a7"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 2.686529,
+          "wall_seconds": 2.688782833982259
+        },
+        "marginal_python": {
+          "cpu_seconds": 2.1481280000000034,
+          "wall_seconds": 2.1506517499801703
+        },
+        "native": {
+          "cpu_seconds": 0.16713299999999975,
+          "wall_seconds": 0.16728508396772668
+        }
+      }
+    },
+    "B-key5": {
+      "backend_order": [
+        "native",
+        "full_python",
+        "marginal_python"
+      ],
+      "fit": {
+        "bytes": 2300,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key5/fit.json",
+        "sha256": "31a2eb65c2db438e02061076ae66db07a7f54a193ec866114c946a3342beddbc"
+      },
+      "full_bank_size": 1194,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        170,
+        340,
+        511,
+        681,
+        852,
+        1022,
+        1193
+      ],
+      "maximum_log_likelihood_delta": 3.410605131648481e-13,
+      "parent": {
+        "bytes": 8659,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key5_freeze.json",
+        "sha256": "9850e04f9d7130254e89b509244b6fd97856d171e62ee5957b6fd390daa3779c"
+      },
+      "readings": {
+        "bytes": 809,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key5.json.gz",
+        "sha256": "1a147d5365544f2a60751ccd4a57b6db20e9386a962e6fb6c5a95b1b046614f2"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 0.10309200000000018,
+          "wall_seconds": 0.10318004200235009
+        },
+        "marginal_python": {
+          "cpu_seconds": 0.08199099999999859,
+          "wall_seconds": 0.0820565419853665
+        },
+        "native": {
+          "cpu_seconds": 0.020250000000000767,
+          "wall_seconds": 0.020266666018869728
+        }
+      }
+    },
+    "B-key5-shuffle": {
+      "backend_order": [
+        "full_python",
+        "marginal_python",
+        "native"
+      ],
+      "fit": {
+        "bytes": 2308,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key5-shuffle/fit.json",
+        "sha256": "cb9e3b87a62f72858a54ca5d2cc6c1cb5f18c9e3ba16e9152487b3d409f506cb"
+      },
+      "full_bank_size": 1157,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        165,
+        330,
+        495,
+        660,
+        825,
+        990,
+        1156
+      ],
+      "maximum_log_likelihood_delta": 6.821210263296962e-13,
+      "parent": {
+        "bytes": 8639,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key5-shuffle_freeze.json",
+        "sha256": "edc1728cba8b569ec00806d0d88126fd40d6f89b80873f65080f8122913e9279"
+      },
+      "readings": {
+        "bytes": 851,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key5-shuffle.json.gz",
+        "sha256": "89d3537eb6394bef1369cca465d2dda68a57086b1433282cf5a1aa133070733b"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 1.8756090000000007,
+          "wall_seconds": 1.8776661250158213
+        },
+        "marginal_python": {
+          "cpu_seconds": 1.4712560000000003,
+          "wall_seconds": 1.4725443749921396
+        },
+        "native": {
+          "cpu_seconds": 0.11736900000000006,
+          "wall_seconds": 0.11746820801636204
+        }
+      }
+    },
+    "B-key6": {
+      "backend_order": [
+        "marginal_python",
+        "native",
+        "full_python"
+      ],
+      "fit": {
+        "bytes": 2238,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key6/fit.json",
+        "sha256": "df813c3c4ba3569a3a5981f63e3e5a60423f061254a5cec2c83f9df3eabf0416"
+      },
+      "full_bank_size": 1194,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        170,
+        340,
+        511,
+        681,
+        852,
+        1022,
+        1193
+      ],
+      "maximum_log_likelihood_delta": 3.410605131648481e-13,
+      "parent": {
+        "bytes": 8646,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key6_freeze.json",
+        "sha256": "0956162e1e80b526f17e8c9469faaa05b5276b1cf355850a8fadb656788a9b92"
+      },
+      "readings": {
+        "bytes": 728,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key6.json.gz",
+        "sha256": "26c425e6e3da881d120800694aaf1aeabbc2d38d3054048a688ded0d09e80415"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 0.12343299999999857,
+          "wall_seconds": 0.12354779097950086
+        },
+        "marginal_python": {
+          "cpu_seconds": 0.09745399999999904,
+          "wall_seconds": 0.09753320802701637
+        },
+        "native": {
+          "cpu_seconds": 0.021077999999999264,
+          "wall_seconds": 0.02109570801258087
+        }
+      }
+    },
+    "B-key6-shuffle": {
+      "backend_order": [
+        "native",
+        "full_python",
+        "marginal_python"
+      ],
+      "fit": {
+        "bytes": 2246,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key6-shuffle/fit.json",
+        "sha256": "5876e130fa7138303112cbf5c291c18a152d8ada6c03778cd820c541294ed6c7"
+      },
+      "full_bank_size": 1166,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        166,
+        332,
+        499,
+        665,
+        832,
+        998,
+        1165
+      ],
+      "maximum_log_likelihood_delta": 6.821210263296962e-13,
+      "parent": {
+        "bytes": 8607,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key6-shuffle_freeze.json",
+        "sha256": "7ee3c1ebfd5aca59990e6ed526aa6c7819f75eefd526222aacec94d3da46e45a"
+      },
+      "readings": {
+        "bytes": 835,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key6-shuffle.json.gz",
+        "sha256": "e53e79906729af0768c4eda4ec693f0674e721f60920757143705b18d4f5fd81"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 2.4306949999999965,
+          "wall_seconds": 2.433966791955754
+        },
+        "marginal_python": {
+          "cpu_seconds": 1.9071449999999999,
+          "wall_seconds": 1.9087443329626694
+        },
+        "native": {
+          "cpu_seconds": 0.16449700000000078,
+          "wall_seconds": 0.16464462503790855
+        }
+      }
+    },
+    "B-key7": {
+      "backend_order": [
+        "full_python",
+        "marginal_python",
+        "native"
+      ],
+      "fit": {
+        "bytes": 2230,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key7/fit.json",
+        "sha256": "cb1dd42edfe2dcb0342a588c90903da5e648321390e089f44a253de1b90028de"
+      },
+      "full_bank_size": 1193,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        170,
+        340,
+        510,
+        681,
+        851,
+        1021,
+        1192
+      ],
+      "maximum_log_likelihood_delta": 4.547473508864641e-13,
+      "parent": {
+        "bytes": 8644,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key7_freeze.json",
+        "sha256": "b9761c740c6b6787f506d6471a1f59a85d666b7a8b84f9778304085a9c31c4ec"
+      },
+      "readings": {
+        "bytes": 845,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key7.json.gz",
+        "sha256": "de9f75ffda0b4a0768b63600fc89c68347c11b6ab9b35a6fa13dd630ffaa4bb8"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 0.1613919999999993,
+          "wall_seconds": 0.16152754198992625
+        },
+        "marginal_python": {
+          "cpu_seconds": 0.1264889999999994,
+          "wall_seconds": 0.12660979200154543
+        },
+        "native": {
+          "cpu_seconds": 0.024190999999994744,
+          "wall_seconds": 0.02421474998118356
+        }
+      }
+    },
+    "B-key7-shuffle": {
+      "backend_order": [
+        "marginal_python",
+        "native",
+        "full_python"
+      ],
+      "fit": {
+        "bytes": 2238,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key7-shuffle/fit.json",
+        "sha256": "712e1cb3b9bf0cf268e0a01f52528250c92e0af9d6aee03243d3c44ec96f07de"
+      },
+      "full_bank_size": 1168,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        166,
+        333,
+        500,
+        666,
+        833,
+        1000,
+        1167
+      ],
+      "maximum_log_likelihood_delta": 6.821210263296962e-13,
+      "parent": {
+        "bytes": 8647,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key7-shuffle_freeze.json",
+        "sha256": "c17bb7f7deffd494646499a907a628d7b6feb793408bece91914bdbe350b1953"
+      },
+      "readings": {
+        "bytes": 855,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key7-shuffle.json.gz",
+        "sha256": "3d130ed824e012746444450148a4df76fc068504cac8fce8594633ec0548234d"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 3.010486,
+          "wall_seconds": 3.0131188750383444
+        },
+        "marginal_python": {
+          "cpu_seconds": 2.358891,
+          "wall_seconds": 2.361220999970101
+        },
+        "native": {
+          "cpu_seconds": 0.1810260000000028,
+          "wall_seconds": 0.18119416700210422
+        }
+      }
+    },
+    "B-key8": {
+      "backend_order": [
+        "native",
+        "full_python",
+        "marginal_python"
+      ],
+      "fit": {
+        "bytes": 2178,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key8/fit.json",
+        "sha256": "fa5c2e0087aee47cec3240f4a2e622cfab8082102f4d2908394cd1cae9714c50"
+      },
+      "full_bank_size": 1191,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        170,
+        340,
+        510,
+        680,
+        850,
+        1020,
+        1190
+      ],
+      "maximum_log_likelihood_delta": 3.410605131648481e-13,
+      "parent": {
+        "bytes": 8641,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key8_freeze.json",
+        "sha256": "b4d4d03ab3b63db545f0a329fa890888933c856c6fba02e4890467100cc09bba"
+      },
+      "readings": {
+        "bytes": 831,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key8.json.gz",
+        "sha256": "75cf34f1a371edafe5198ed645a8049bdb158e63d192cfbbf00242852a0dd964"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 0.2866470000000021,
+          "wall_seconds": 0.28689004201442003
+        },
+        "marginal_python": {
+          "cpu_seconds": 0.22838000000000136,
+          "wall_seconds": 0.22855987498769537
+        },
+        "native": {
+          "cpu_seconds": 0.030559000000003778,
+          "wall_seconds": 0.030583875020965934
+        }
+      }
+    },
+    "B-key8-shuffle": {
+      "backend_order": [
+        "full_python",
+        "marginal_python",
+        "native"
+      ],
+      "fit": {
+        "bytes": 2186,
+        "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key8-shuffle/fit.json",
+        "sha256": "822153d93d8e4fd08d8aac1e8e58561fc8bd84ecbdd33ce2f059cbe9cc0e10c2"
+      },
+      "full_bank_size": 1169,
+      "identical_support_nodes_edges": true,
+      "indices": [
+        0,
+        166,
+        333,
+        500,
+        667,
+        834,
+        1001,
+        1168
+      ],
+      "maximum_log_likelihood_delta": 4.547473508864641e-13,
+      "parent": {
+        "bytes": 8627,
+        "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key8-shuffle_freeze.json",
+        "sha256": "dbc83d9f959296556582e8919aa94544c9fb6a658e945bc259b030bda47654ad"
+      },
+      "readings": {
+        "bytes": 842,
+        "path": "outputs/NATIVE-SUFFIX-001/B-key8-shuffle.json.gz",
+        "sha256": "4dc2cf275facee58a7b978b3fc47173f7cd4be62637953b9759cfddc94cab653"
+      },
+      "timings": {
+        "full_python": {
+          "cpu_seconds": 2.4709300000000027,
+          "wall_seconds": 2.4740000409656204
+        },
+        "marginal_python": {
+          "cpu_seconds": 1.9242319999999964,
+          "wall_seconds": 1.9258346669957973
+        },
+        "native": {
+          "cpu_seconds": 0.14438099999999565,
+          "wall_seconds": 0.14450220798607916
+        }
+      }
+    }
+  },
+  "compilation_seconds": 0.5024856250383891,
+  "construction_seconds": 0.23911887500435114,
+  "engineering_clauses": {
+    "all_sixteen_cases": true,
+    "equivalent_likelihood_graph_support": true,
+    "threefold_vs_full_python": true,
+    "twofold_vs_marginal_python": true
+  },
+  "engineering_gate": "PASS",
+  "freeze": "c7c850e28d71c9a88e8485af21230a1a75fdba1d",
+  "group_wall_seconds": {
+    "positive": {
+      "full_python": 1.3924029599875212,
+      "marginal_python": 1.0755818330217153,
+      "native": 0.192420499981381
+    },
+    "shuffle": {
+      "full_python": 22.271026832866482,
+      "marginal_python": 17.497594041924458,
+      "native": 1.3498734990716912
+    }
+  },
+  "library": {
+    "bytes": 36888,
+    "path": "outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib",
+    "sha256": "d8d0fbdeb183b292594248f95c1a56eeea843d3c3ba26a0eb05548fb7bcaf30f"
+  },
+  "maximum_log_likelihood_delta": 1.3642420526593924e-12,
+  "no_new_keys_fitted_or_transfer_read": true,
+  "resources": {
+    "cpu_seconds": 44.818842,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 899022848,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 45.359708125004545
+  },
+  "scorings": 1536,
+  "source": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  },
+  "totals_wall_seconds": {
+    "full_python": 23.663429792854004,
+    "marginal_python": 18.573175874946173,
+    "native": 1.5422939990530722
+  },
+  "unique_workloads": 512
+}

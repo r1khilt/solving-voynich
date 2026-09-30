@@ -1,0 +1,49 @@
+{
+  "backend_order": [
+    "native",
+    "full_python",
+    "marginal_python"
+  ],
+  "fit": {
+    "bytes": 2178,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key8/fit.json",
+    "sha256": "fa5c2e0087aee47cec3240f4a2e622cfab8082102f4d2908394cd1cae9714c50"
+  },
+  "full_bank_size": 1191,
+  "identical_support_nodes_edges": true,
+  "indices": [
+    0,
+    170,
+    340,
+    510,
+    680,
+    850,
+    1020,
+    1190
+  ],
+  "maximum_log_likelihood_delta": 3.410605131648481e-13,
+  "parent": {
+    "bytes": 8641,
+    "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key8_freeze.json",
+    "sha256": "b4d4d03ab3b63db545f0a329fa890888933c856c6fba02e4890467100cc09bba"
+  },
+  "readings": {
+    "bytes": 831,
+    "path": "outputs/NATIVE-SUFFIX-001/B-key8.json.gz",
+    "sha256": "75cf34f1a371edafe5198ed645a8049bdb158e63d192cfbbf00242852a0dd964"
+  },
+  "timings": {
+    "full_python": {
+      "cpu_seconds": 0.2866470000000021,
+      "wall_seconds": 0.28689004201442003
+    },
+    "marginal_python": {
+      "cpu_seconds": 0.22838000000000136,
+      "wall_seconds": 0.22855987498769537
+    },
+    "native": {
+      "cpu_seconds": 0.030559000000003778,
+      "wall_seconds": 0.030583875020965934
+    }
+  }
+}
