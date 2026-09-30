@@ -1,0 +1,63 @@
+import json,math
+from pathlib import Path
+from scripts.run_key_bank_neural002 import admission,OUT,BULK,PATHS
+from scripts.run_key_bank_neural001 import NAMES,ARMS,inputs,literal_support_audit
+from scripts.run_blind_channel_dev004 import load_archive,save_new
+from scripts.run_latin_source_model001 import ROOT,artifact
+freeze='651588d625c923ba0cc4492d49e071160f80fd4c'
+admission(freeze)
+headers,sources=inputs(freeze)
+summary=json.loads((OUT/'predictions.json').read_text())
+assert summary['status']=='complete' and summary['source_freeze']==freeze and summary['sources']==sources
+assert summary['experiment']=='KEY-BANK-NEURAL-002' and summary['no_answers_opened']
+assert not summary['global_map_or_neural_evidence_claimed'] and set(summary['cases'])==set(NAMES)
+assert not (OUT/'prediction-failure.json').exists()
+checks,cases,delta,literal=0,{},0.,0
+for name in NAMES:
+ h=headers[name]; row=summary['cases'][name]
+ assert row['original']==artifact(ROOT/f'results/KEY-BANK-READ-002/{name}.json')
+ assert row['bank']==h['bank'] and row['transfer']==h['transfer']
+ prepared=load_archive(row['prepared']);bank=load_archive(row['bank'])
+ records=json.loads((ROOT/row['transfer']['path']).read_text())['records']
+ assert row['candidates']==len(prepared['candidates']) and row['unique_records']==len(prepared['texts'])
+ assert row['characters']==sum(map(len,prepared['texts'])) and set(row['predictions'])==set(ARMS)
+ cases[name]={}
+ for arm in ARMS:
+  spec=row['predictions'][arm];r=json.loads((ROOT/spec['path']).read_text());assert artifact(ROOT/spec['path'])==spec
+  assert r['source']==sources[arm] and r['source_freeze']==freeze and r['prepared']==row['prepared']
+  v=load_archive(r['readings']); scores=v['record_scores'];assert len(scores)==len(prepared['texts'])
+  assert all(math.isfinite(s) for s in scores)
+  manual=[sum(scores[i] for i in c['text_indices'])+c['key_log_mass'] for c in prepared['candidates']]
+  differences=[abs(a-b) for a,b in zip(manual,v['candidate_scores'],strict=True)]
+  delta=max(delta,max(differences));assert max(differences)<=1e-10
+  order=sorted(range(len(manual)),key=lambda i:(-manual[i],i));best,second=order[:2]
+  assert v['candidate_index']==r['candidate_index']==best and v['runner_up_index']==second
+  assert v['score']==manual[best] and abs(v['margin_nats']-(manual[best]-manual[second]))<=1e-10
+  assert v['plaintexts']==[prepared['texts'][i] for i in prepared['candidates'][best]['text_indices']]
+  assert not v['global_map_claimed'] and not v['neural_evidence_computed']
+  n=r['numerical_audit'];assert n['maximum_mps_float64_delta']<=1e-3 and n['maximum_stepwise_delta']<=1e-7
+  support=literal_support_audit(prepared,bank,records,[best]);literal+=support['literal_candidate_key_checks']
+  checks+=len(manual)
+  cases[name][arm]={'result':spec,'candidate_count':len(manual),'unique_record_scores':len(scores),
+    'maximum_float64_delta':n['maximum_mps_float64_delta'],'maximum_stepwise_delta':n['maximum_stepwise_delta'],
+    'literal_support_replay':support}
+m=json.loads((OUT/'memory-accounting.json').read_text())
+assert artifact(ROOT/m['trace']['path'])==m['trace'] and m['source_freeze']==freeze
+trace=[json.loads(s) for s in (ROOT/m['trace']['path']).read_text().splitlines()]
+assert len(trace)==m['mps_batches']==19822 and max(r['call'] for r in trace)==m['mps_calls_completed_or_attempted']==2484
+assert trace[-1]['total_records']==m['mps_batch_records_processed']==158528
+assert max(r['driver_bytes'] for r in trace)==m['sampled_driver_peak_bytes']<=2*1024**3
+assert max(r['tensor_bytes'] for r in trace)==m['sampled_tensor_peak_bytes']
+assert all(r['batch_shape']==[8,270] and r['peak_rss_bytes']<=4*1024**3 for r in trace)
+assert all(a['total_records']<b['total_records'] for a,b in zip(trace,trace[1:]))
+assert m['characters_in_completed_calls']==sum(c['characters'] for c in summary['cases'].values())*2==37032100
+value={'status':'PASS','source_freeze':freeze,'predictions':artifact(OUT/'predictions.json'),
+ 'memory_accounting':artifact(OUT/'memory-accounting.json'),'cases':cases,'complete_case_model_results':16,
+ 'independently_replayed_candidate_scores':checks,'maximum_arithmetic_delta':delta,
+ 'selected_literal_candidate_key_checks':literal,'all_memory_trace_rows_checked':len(trace),
+ 'frozen_source_paths':len(PATHS),'no_answers_opened':True,'prediction_process_terminal_exit_code':0,
+ 'auditor_sha256':artifact(Path('/private/tmp/audit_neural002_predictions.py')) if False else None,
+ 'audit_code_sha256':__import__('hashlib').sha256(Path(__file__).read_bytes()).hexdigest()}
+save_new(OUT/'prediction-accounting.json',value)
+print(json.dumps({k:v for k,v in value.items() if k!='cases'},indent=2))
+print(json.dumps(summary['resources'],indent=2))

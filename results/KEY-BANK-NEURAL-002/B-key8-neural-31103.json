@@ -1,0 +1,65 @@
+{
+  "arm": "neural-31103",
+  "candidate_index": 10291,
+  "case": "B-key8",
+  "margin_nats": 0.6389514901366056,
+  "numerical_audit": {
+    "float64_winner_minus_mps_runner_nats": 0.6389517885443272,
+    "maximum_mps_float64_delta": 6.578162549430999e-05,
+    "maximum_stepwise_delta": 1.1368683772161603e-13,
+    "sampled_numerics_not_global_floating_certificate": true,
+    "sampled_record_indices": [
+      0,
+      980,
+      1961,
+      2942,
+      2943,
+      3922,
+      4903,
+      5884,
+      6864,
+      7845,
+      8826,
+      9806,
+      10787,
+      11687,
+      11768,
+      12748,
+      13729,
+      14710
+    ],
+    "winning_record_stepwise_checks": 2
+  },
+  "prepared": {
+    "bytes": 417746,
+    "path": "outputs/KEY-BANK-NEURAL-002/B-key8-candidates.json.gz",
+    "sha256": "cfe94d85729e489a9d8c47a3b1892a7c5a7aef1ba63f85093d6dfc056f1e8da5"
+  },
+  "readings": {
+    "bytes": 306335,
+    "path": "outputs/KEY-BANK-NEURAL-002/B-key8-neural-31103.json.gz",
+    "sha256": "375f42ae172433d06733631d24745289e51f15452902b3a72bfd307afa8d8fd0"
+  },
+  "source": {
+    "audit": {
+      "bytes": 907,
+      "path": "results/LATIN-SOURCE-MODEL-001/large-seed31103-audit.json",
+      "sha256": "34bd38e161fd6a7038fc8a43e601d372e0a4e5ddfac62f73616608d9f17a2d11"
+    },
+    "checkpoint": {
+      "bytes": 29624322,
+      "path": "outputs/LATIN-SOURCE-MODEL-001/large-seed31103/step4000.pt",
+      "sha256": "8bf08a89a844a1202905cb88408f5ad21e0798504f491c6d40cb3ad4c9a87480"
+    },
+    "result": {
+      "bytes": 100956,
+      "path": "results/LATIN-SOURCE-MODEL-001/large-seed31103.json",
+      "sha256": "8ad9c8759699f8468a92ee0669fd260c1869da23a8a27c374d45b2dc35b2b9c9"
+    }
+  },
+  "source_freeze": "651588d625c923ba0cc4492d49e071160f80fd4c",
+  "support_audit": {
+    "literal_candidate_key_checks": 4107,
+    "maximum_delta": 0.0
+  }
+}
