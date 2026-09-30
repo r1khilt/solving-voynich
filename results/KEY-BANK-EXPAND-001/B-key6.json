@@ -1,0 +1,118 @@
+{
+  "all_positive_weights_retained_in_log_domain": true,
+  "bank": {
+    "bytes": 302862,
+    "path": "outputs/KEY-BANK-EXPAND-001/B-key6-bank.json.gz",
+    "sha256": "c73bf5c42cb1ed8c9f75026260f570c2059e1fcf32e96cc9b11936062475f23a"
+  },
+  "bank_size": 3491,
+  "best_index": 2303,
+  "best_units": [
+    "BC",
+    "AF",
+    "D",
+    "BA",
+    "AC",
+    "CB",
+    "A",
+    "AE",
+    "E",
+    "B",
+    "EB",
+    "C",
+    "FD",
+    "B",
+    "CE",
+    "DD",
+    "BB",
+    "AA",
+    "FE",
+    "FC",
+    "EA",
+    "E",
+    "B"
+  ],
+  "case": "B-key6",
+  "complete_rounds": 3,
+  "experiment": "KEY-BANK-EXPAND-001",
+  "finite_keys": 2725,
+  "fit": {
+    "bytes": 2238,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-001/B-key6/fit.json",
+    "sha256": "df813c3c4ba3569a3a5981f63e3e5a60423f061254a5cec2c83f9df3eabf0416"
+  },
+  "fit_log_normalizer_restricted_not_full_family_evidence": -1633.8999588853173,
+  "freeze": "accca6d7b07920ac6f25d491e1db087349bab2a5",
+  "global_optimality_claimed": false,
+  "maximum_rounds": 4,
+  "maximum_weight": 0.021229755252315595,
+  "native_benchmark": {
+    "bytes": 25535,
+    "path": "results/NATIVE-SUFFIX-001/result.json",
+    "sha256": "0c32447bc7c18efad82ff58cb8b80b1782be629ea40d5393932dbe5dbbeee89b"
+  },
+  "parent": {
+    "bytes": 8646,
+    "path": "results/BLIND-CHANNEL-CONFIRM-001/B-key6_freeze.json",
+    "sha256": "0956162e1e80b526f17e8c9469faaa05b5276b1cf355850a8fadb656788a9b92"
+  },
+  "progress": {
+    "bytes": 275579,
+    "path": "outputs/KEY-BANK-EXPAND-001/B-key6-progress.jsonl.gz",
+    "sha256": "1c65f5322cbb18429f4b1c8859430132da0f46a30a4f48aabb289e4c4e7e60af"
+  },
+  "resources": {
+    "cpu_seconds": 9.935214,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 841187328,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 9.951486791018397
+  },
+  "rounds": [
+    {
+      "accepted": true,
+      "complete_neighborhood": true,
+      "cumulative_unique_keys": 1194,
+      "gain_nats": 0.8144286723377263,
+      "member_count": 1194,
+      "parent_index": 0,
+      "round": 0,
+      "selected_index": 1115
+    },
+    {
+      "accepted": true,
+      "complete_neighborhood": true,
+      "cumulative_unique_keys": 2344,
+      "gain_nats": 0.1356079090851381,
+      "member_count": 1194,
+      "parent_index": 1115,
+      "round": 1,
+      "selected_index": 2303
+    },
+    {
+      "accepted": false,
+      "complete_neighborhood": true,
+      "cumulative_unique_keys": 3491,
+      "gain_nats": 0.0,
+      "member_count": 1193,
+      "parent_index": 2303,
+      "round": 2,
+      "selected_index": 2303
+    }
+  ],
+  "search_center_index": 2303,
+  "source": {
+    "bytes": 2098,
+    "path": "results/LATIN-SOURCE-COMPACT-001/large.json",
+    "sha256": "91df142e8229ca60f0e9a52ffe7e803bd7f0c8a983f5cd4e41b47fd04167377b"
+  },
+  "status": "complete_fit_only_expanded_bank",
+  "stop_reason": "local_tolerance_stop_at_center",
+  "tolerance_nats": 1e-06
+}
