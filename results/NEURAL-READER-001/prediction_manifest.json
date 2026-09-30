@@ -1,0 +1,45 @@
+{
+  "answers_not_loaded": true,
+  "arms": [
+    "statistical-small",
+    "statistical-large",
+    "neural-31103-b32",
+    "neural-31103-b128",
+    "neural-31109-b32",
+    "neural-31109-b128"
+  ],
+  "experiment": "NEURAL-READER-001",
+  "maximum_replay_deltas": {
+    "neural-31103-b128": 3.3085338259297714e-05,
+    "neural-31103-b32": 3.8004913335498713e-05,
+    "neural-31109-b128": 3.602837222160815e-05,
+    "neural-31109-b32": 4.142877446611237e-05,
+    "statistical-large": 1.5916157281026244e-12,
+    "statistical-small": 1.8189894035458565e-12
+  },
+  "panel_manifest": {
+    "bytes": 14916,
+    "path": "results/NEURAL-READER-001/panel_manifest.json",
+    "sha256": "3507e36b9c2e8d7e66c171dc7ebc2941d5bef2d1ec0b6b817ed4de153dd61bb0"
+  },
+  "prediction_freeze": "6e575508e843c529492ddc731bbcd229d99eb20c",
+  "predictions": {
+    "bytes": 67824,
+    "path": "outputs/NEURAL-READER-001/predictions.json.gz",
+    "sha256": "87aba329d37fe6183ce4709793ba5a0466cc984bf97a7e46c58f692e5b223fa6"
+  },
+  "records_per_arm": 64,
+  "resources": {
+    "cpu_seconds": 101.28136,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 713687040,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 198.76260016698507
+  }
+}

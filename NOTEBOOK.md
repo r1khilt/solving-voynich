@@ -3056,3 +3056,11 @@ Added independent no-model `teacher0014_parser_audit.py`, which validates all sa
 **Artifacts and checks.** Panel42,711bytes SHA26385d6c496f7e15ceb749aa2158e774368100ff0ad6c680b357efee0b7f45b7; gold15,842bytes SHAd2af4bcbc98afd0f42503aa966c784c154d93da7ca8a74f257dc33c92084ebb7, both ignored. Sixteen prescribed nonoverlapping224letterwindows perauthor, source metadata/hashes retained. Sixteennewkeys each6singletons/17pairs, no prior-schedule duplicate;32positive/32nullrecords. Separate panel-only checks confirm dimensions, source identity, within-segment disjointness and matchedcontrol glyph-count equality. No answer text opened for inspection or evaluation; no prediction stage yet.
 
 **Next state.** Publish/remoteverify thispanelmanifest, then one fixedsix-arm prediction with3,600second wall/CPU limits and existingper-record caps. Allpredictions must be published before goldscoring. Any failure retains partialoutputs and prevents qualification.
+
+## 2026-09-30 — NB-255: all384 fresh readings complete before answer scoring
+
+**Ordered execution.** Panel checkpoint6e575508e843c529492ddc731bbcd229d99eb20c pushed and remoteHEAD verified before one `predict` invocation. Allsixarms complete64records each,384total, in198.762600wall/101.281360hostCPU seconds; peakRSS713,687,040bytes. No cap, exception, unsupported path, paid use or answer access during prediction.
+
+**Prediction integrity.** Every path exactly re-encodes. Statistical separate backward marginal/MAP/node-count and literal path checks pass(maxdelta1.819e-12nats). Neural full-forward versus incremental maximumdelta4.143e-5nats per whole path, below registered per-letter tolerance. Combined ignored archive67,824bytes SHA87aba329d37fe6183ce4709793ba5a0466cc984bf97a7e46c58f692e5b223fa6. All192per-case archive hashes checked and their384readings equal the combined archive. Panelmanifest identity rechecked. No accuracy result inferred yet.
+
+**Next state.** Publish/remoteverify allpredictionmanifests before opening answers in the fixed evaluation. No replacement of beam128 by beam32 or source/decoder changes based on readings.
