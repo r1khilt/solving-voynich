@@ -1,0 +1,80 @@
+"""Arithmetic/accounting replay of the frozen complete qualification."""
+import hashlib
+import json
+from pathlib import Path
+
+from scripts.confirm002_common import NAMES, OUT, PATHS, ROOT, fit_status
+from scripts.run_blind_channel_dev001 import require_frozen
+from scripts.run_blind_channel_dev004 import save_new
+from scripts.run_latin_source_model001 import artifact
+
+freeze = '7cb3473ad4087b6f74f9e36268fc8dbd4d1e14a2'
+require_frozen(freeze, PATHS)
+panel, _, admitted, _ = fit_status(freeze)
+value = json.loads((OUT / 'evaluation.json').read_text())
+assert value['freeze'] == freeze and set(value['cases']) == set(NAMES)
+for field, filename in [('prediction_campaign', 'campaign.json'),
+                        ('prediction_audit', 'audit.json'),
+                        ('fit_campaign', 'fit-campaign.json')]:
+    assert value[field] == artifact(OUT / filename)
+rows = []
+for name in NAMES:
+    row = value['cases'][name]
+    assert row['positive'] == panel['cases'][name]['positive']
+    assert row['pair_index'] == panel['cases'][name]['pair_index']
+    assert row['fit_complete'] and row['prediction_complete'] and admitted[name] is not None
+    if row['positive']:
+        for arm in value['totals']:
+            metric = row['arms'][arm]
+            assert metric['gold_characters'] == 448 and metric['available']
+            assert metric['edits'] == sum(metric['record_edits'])
+            assert len(metric['record_edits']) == 2
+            assert metric['exact_records'] == sum(e == 0 for e in metric['record_edits'])
+        rows.append((name, row))
+assert len(rows) == 16
+for arm, actual in value['totals'].items():
+    expected = {key: sum(row['arms'][arm][key] for _, row in rows) for key in actual}
+    assert actual == expected
+errors = [r['arms']['mixture']['edits'] for _, r in rows]
+oracle = [r['arms']['oracle_large']['edits'] for _, r in rows]
+frequency = [r['arms']['frequency_order3']['edits'] for _, r in rows]
+checks = {
+    'all_32_fits_and_predictions_complete_audited': True,
+    'all_32_positive_records_supported': all(r['arms']['mixture']['supported_records'] == 2 for _, r in rows),
+    'macro_cer_at_most_002': 100 * sum(errors) <= 2 * 7168,
+    'every_key_cer_at_most_005': all(100 * e <= 5 * 448 for e in errors),
+    'every_key_oracle_excess_at_most_002': all(100 * (e - o) <= 2 * 448 for e, o in zip(errors, oracle)),
+    'every_key_strictly_beats_frequency_order3': all(e < f for e, f in zip(errors, frequency)),
+}
+assert checks == value['recovery_clauses']
+assert value['recovery_gate'] == ('PASS' if all(checks.values()) else 'FAIL')
+screen = {
+    'all_32_fits_and_predictions_complete_audited': True,
+    'all_32_evidences_available': all(r['evidence'] is not None for r in value['cases'].values()),
+    'all_16_positives_beat_frozen_iid': all(r['evidence']['gain_bits_vs_iid'] > 0 for _, r in rows),
+    'no_shuffle_beats_frozen_iid': all(r['evidence']['gain_bits_vs_iid'] <= 0
+                                     for r in value['cases'].values() if not r['positive']),
+}
+assert screen == value['screen_clauses']
+assert value['iid_screen_gate'] == ('PASS' if all(screen.values()) else 'FAIL')
+outside = [n for n, r in rows if r['truth_diagnosis']['supporting_keys'] == 0]
+other = [(n, r) for n, r in rows if n not in outside]
+support_errors = sum(value['cases'][n]['arms']['mixture']['edits'] for n in outside)
+assert len(outside) == 2 and support_errors == 723
+assert all(r['arms']['mixture']['edits'] == r['arms']['oracle_large']['edits'] for _, r in other)
+assert value['independent_record_edit_checks'] == 192 and value['independent_oracle_records'] == 32
+result = {
+    'status': 'PASS', 'evaluation': artifact(OUT / 'evaluation.json'),
+    'prediction_freeze': freeze, 'all_32_cases_retained': True,
+    'all_arm_totals_and_integer_gate_arithmetic_replayed': True,
+    'true_tuple_outside_bank_cases': outside,
+    'outside_bank_edits': support_errors,
+    'remaining_cases': len(other), 'remaining_edits': sum(r['arms']['mixture']['edits'] for _, r in other),
+    'remaining_gold_characters': sum(r['arms']['mixture']['gold_characters'] for _, r in other),
+    'remaining_per_key_edit_counts_equal_oracle': True,
+    'equal_reading_strings_not_checked': True,
+    'no_new_fitting_decoding_or_candidate_insertion': True,
+    'audit_code_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+}
+save_new(OUT / 'evaluation-audit.json', result)
+print(json.dumps(result, indent=2))
