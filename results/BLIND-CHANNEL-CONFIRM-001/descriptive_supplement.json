@@ -1,0 +1,1676 @@
+{
+  "evaluation_sha256": "c91ccc5281c4e618585c29248f652b13a44d4227809ff735aa82d5931e99899d",
+  "exact_rational_gate_replay": {
+    "all_jobs_complete": true,
+    "each_beats_frequency": true,
+    "each_oracle_excess_at_most_002": false,
+    "each_transfer_cer_at_most_005": false,
+    "macro_transfer_cer_at_most_002": false
+  },
+  "experiment": "BLIND-CHANNEL-CONFIRM-001",
+  "key_freeze": "3ee1a7f5936e47e471e236c48269f77ee755aaac",
+  "limitations": [
+    "No new numerical inference or independent author review",
+    "Positive objective gap proves only one better known key exists",
+    "Posterior uncertainty is conditional on one fixed source and key",
+    "Literal row errors are not plaintext edit counts"
+  ],
+  "positives": {
+    "B-key1": {
+      "conditional_map_surprisal_bits": {
+        "frequency": {
+          "fit": [
+            197.83565252134463,
+            181.58345194071435,
+            175.2725437536032,
+            203.06975716639346
+          ],
+          "transfer": [
+            195.5978390821942,
+            184.20520079762161
+          ]
+        },
+        "learned": {
+          "fit": [
+            10.49912856721478,
+            11.153372264537255,
+            9.044014472404388,
+            7.199097814802615
+          ],
+          "transfer": [
+            8.02713825488468,
+            15.222298478260784
+          ]
+        },
+        "oracle": {
+          "fit": [
+            10.459390126213838,
+            10.848918748467284,
+            8.774844071543177,
+            7.494382088962332
+          ],
+          "transfer": [
+            7.854821232988387,
+            14.91296757086315
+          ]
+        },
+        "stage1": {
+          "fit": [
+            10.51067221288309,
+            11.19281118393752,
+            8.990844175219157,
+            7.199066999427809
+          ],
+          "transfer": [
+            8.007867063623106,
+            15.229157336224898
+          ]
+        }
+      },
+      "incorrect_row_occurrences": {
+        "fit": 1,
+        "transfer": 0
+      },
+      "learned_minus_oracle_fit_bits": -9.318078083772889,
+      "literal_rows_correct": 20,
+      "row_count": 23,
+      "rows": [
+        {
+          "correct": true,
+          "fit_occurrences": 87,
+          "letter": "a",
+          "transfer_occurrences": 38
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 14,
+          "letter": "b",
+          "transfer_occurrences": 13
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 24,
+          "letter": "c",
+          "transfer_occurrences": 20
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 15,
+          "letter": "d",
+          "transfer_occurrences": 10
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 103,
+          "letter": "e",
+          "transfer_occurrences": 46
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 10,
+          "letter": "f",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 15,
+          "letter": "g",
+          "transfer_occurrences": 6
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 6,
+          "letter": "h",
+          "transfer_occurrences": 3
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 122,
+          "letter": "i",
+          "transfer_occurrences": 47
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "k",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 22,
+          "letter": "l",
+          "transfer_occurrences": 16
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 59,
+          "letter": "m",
+          "transfer_occurrences": 26
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 56,
+          "letter": "n",
+          "transfer_occurrences": 29
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 46,
+          "letter": "o",
+          "transfer_occurrences": 29
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 22,
+          "letter": "p",
+          "transfer_occurrences": 15
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 16,
+          "letter": "q",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 64,
+          "letter": "r",
+          "transfer_occurrences": 22
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 61,
+          "letter": "s",
+          "transfer_occurrences": 41
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 71,
+          "letter": "t",
+          "transfer_occurrences": 34
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 76,
+          "letter": "u",
+          "transfer_occurrences": 43
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 6,
+          "letter": "x",
+          "transfer_occurrences": 2
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 1,
+          "letter": "y",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "z",
+          "transfer_occurrences": 0
+        }
+      ],
+      "transfer_edits": {
+        "frequency": 556,
+        "learned": 24,
+        "oracle": 24,
+        "stage1": 24
+      },
+      "transfer_learned_minus_stage1_edits": 0
+    },
+    "B-key2": {
+      "conditional_map_surprisal_bits": {
+        "frequency": {
+          "fit": [
+            183.35570252234305,
+            187.8812541342613,
+            187.2075682901077,
+            182.27313830567886
+          ],
+          "transfer": [
+            160.81557756364643,
+            190.75363906256098
+          ]
+        },
+        "learned": {
+          "fit": [
+            14.132942757130795,
+            6.9003487270785495,
+            6.2827793218758385,
+            7.21366557697187
+          ],
+          "transfer": [
+            12.009959491068376,
+            6.617205825104798
+          ]
+        },
+        "oracle": {
+          "fit": [
+            14.137942871773905,
+            6.736948283426061,
+            6.255507334323794,
+            6.9861937610766525
+          ],
+          "transfer": [
+            11.773481610183444,
+            6.385470143422398
+          ]
+        },
+        "stage1": {
+          "fit": [
+            18.501476882664246,
+            10.015375677286249,
+            10.252602182653716,
+            8.317292585002791
+          ],
+          "transfer": [
+            13.04318972563826,
+            6.500057914392769
+          ]
+        }
+      },
+      "incorrect_row_occurrences": {
+        "fit": 0,
+        "transfer": 0
+      },
+      "learned_minus_oracle_fit_bits": -6.413144132456637,
+      "literal_rows_correct": 20,
+      "row_count": 23,
+      "rows": [
+        {
+          "correct": true,
+          "fit_occurrences": 94,
+          "letter": "a",
+          "transfer_occurrences": 21
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 22,
+          "letter": "b",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 26,
+          "letter": "c",
+          "transfer_occurrences": 16
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 18,
+          "letter": "d",
+          "transfer_occurrences": 13
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 104,
+          "letter": "e",
+          "transfer_occurrences": 51
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 5,
+          "letter": "f",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 12,
+          "letter": "g",
+          "transfer_occurrences": 5
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 8,
+          "letter": "h",
+          "transfer_occurrences": 1
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 119,
+          "letter": "i",
+          "transfer_occurrences": 44
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "k",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 32,
+          "letter": "l",
+          "transfer_occurrences": 9
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 48,
+          "letter": "m",
+          "transfer_occurrences": 24
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 34,
+          "letter": "n",
+          "transfer_occurrences": 35
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 43,
+          "letter": "o",
+          "transfer_occurrences": 38
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 29,
+          "letter": "p",
+          "transfer_occurrences": 15
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 18,
+          "letter": "q",
+          "transfer_occurrences": 6
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 72,
+          "letter": "r",
+          "transfer_occurrences": 34
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 65,
+          "letter": "s",
+          "transfer_occurrences": 33
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 63,
+          "letter": "t",
+          "transfer_occurrences": 42
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 79,
+          "letter": "u",
+          "transfer_occurrences": 48
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 5,
+          "letter": "x",
+          "transfer_occurrences": 5
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "y",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "z",
+          "transfer_occurrences": 0
+        }
+      ],
+      "transfer_edits": {
+        "frequency": 545,
+        "learned": 18,
+        "oracle": 18,
+        "stage1": 26
+      },
+      "transfer_learned_minus_stage1_edits": -8
+    },
+    "B-key3": {
+      "conditional_map_surprisal_bits": {
+        "frequency": {
+          "fit": [
+            179.2020401824133,
+            188.10422082425796,
+            172.86296345563628,
+            174.4346724375727
+          ],
+          "transfer": [
+            170.1455443655651,
+            169.91270133416162
+          ]
+        },
+        "learned": {
+          "fit": [
+            11.9400548960622,
+            9.4167512617717,
+            10.538769872178793,
+            8.98723103456261
+          ],
+          "transfer": [
+            13.76437817983124,
+            6.99172576245765
+          ]
+        },
+        "oracle": {
+          "fit": [
+            11.727916019983427,
+            9.16719584370091,
+            10.400761992837351,
+            8.902244255233954
+          ],
+          "transfer": [
+            13.50479394387173,
+            6.786478266172042
+          ]
+        },
+        "stage1": {
+          "fit": [
+            13.541935294498415,
+            10.379712157713284,
+            10.848047719495218,
+            11.162725687041315
+          ],
+          "transfer": [
+            13.20494704068889,
+            7.341008928435262
+          ]
+        }
+      },
+      "incorrect_row_occurrences": {
+        "fit": 0,
+        "transfer": 0
+      },
+      "learned_minus_oracle_fit_bits": -9.68468895281967,
+      "literal_rows_correct": 20,
+      "row_count": 23,
+      "rows": [
+        {
+          "correct": true,
+          "fit_occurrences": 92,
+          "letter": "a",
+          "transfer_occurrences": 25
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 19,
+          "letter": "b",
+          "transfer_occurrences": 5
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 34,
+          "letter": "c",
+          "transfer_occurrences": 27
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 22,
+          "letter": "d",
+          "transfer_occurrences": 16
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 101,
+          "letter": "e",
+          "transfer_occurrences": 47
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 12,
+          "letter": "f",
+          "transfer_occurrences": 3
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 8,
+          "letter": "g",
+          "transfer_occurrences": 6
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 12,
+          "letter": "h",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 113,
+          "letter": "i",
+          "transfer_occurrences": 59
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "k",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 28,
+          "letter": "l",
+          "transfer_occurrences": 18
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 63,
+          "letter": "m",
+          "transfer_occurrences": 15
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 50,
+          "letter": "n",
+          "transfer_occurrences": 28
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 47,
+          "letter": "o",
+          "transfer_occurrences": 26
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 21,
+          "letter": "p",
+          "transfer_occurrences": 22
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 21,
+          "letter": "q",
+          "transfer_occurrences": 7
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 45,
+          "letter": "r",
+          "transfer_occurrences": 32
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 55,
+          "letter": "s",
+          "transfer_occurrences": 31
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 59,
+          "letter": "t",
+          "transfer_occurrences": 32
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 89,
+          "letter": "u",
+          "transfer_occurrences": 47
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 5,
+          "letter": "x",
+          "transfer_occurrences": 2
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "y",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "z",
+          "transfer_occurrences": 0
+        }
+      ],
+      "transfer_edits": {
+        "frequency": 564,
+        "learned": 18,
+        "oracle": 18,
+        "stage1": 21
+      },
+      "transfer_learned_minus_stage1_edits": -3
+    },
+    "B-key4": {
+      "conditional_map_surprisal_bits": {
+        "frequency": {
+          "fit": [
+            191.92552643752765,
+            194.06031643241315,
+            198.51278143208594,
+            206.38894804662976
+          ],
+          "transfer": [
+            205.0114533684727,
+            190.80123145317688
+          ]
+        },
+        "learned": {
+          "fit": [
+            8.82478347814129,
+            12.5501434406405,
+            4.071903771890111,
+            6.222386110634281
+          ],
+          "transfer": [
+            7.118948670259514,
+            9.469774521220835
+          ]
+        },
+        "oracle": {
+          "fit": [
+            4.098081320201704,
+            4.313927711216585,
+            2.1402493614386753,
+            2.706414954553338
+          ],
+          "transfer": [
+            5.622821996261848,
+            6.0826066262996985
+          ]
+        },
+        "stage1": {
+          "fit": [
+            22.58466131456788,
+            17.991466792511012,
+            21.313874272086643,
+            24.371099711835583
+          ],
+          "transfer": [
+            26.295313867425392,
+            29.682099359781287
+          ]
+        }
+      },
+      "incorrect_row_occurrences": {
+        "fit": 18,
+        "transfer": 6
+      },
+      "learned_minus_oracle_fit_bits": 90.46113646165713,
+      "literal_rows_correct": 18,
+      "row_count": 23,
+      "rows": [
+        {
+          "correct": true,
+          "fit_occurrences": 73,
+          "letter": "a",
+          "transfer_occurrences": 46
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 12,
+          "letter": "b",
+          "transfer_occurrences": 11
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 31,
+          "letter": "c",
+          "transfer_occurrences": 19
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 17,
+          "letter": "d",
+          "transfer_occurrences": 13
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 104,
+          "letter": "e",
+          "transfer_occurrences": 43
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 12,
+          "letter": "f",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 11,
+          "letter": "g",
+          "transfer_occurrences": 3
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 6,
+          "letter": "h",
+          "transfer_occurrences": 2
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 113,
+          "letter": "i",
+          "transfer_occurrences": 43
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "k",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 34,
+          "letter": "l",
+          "transfer_occurrences": 13
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 47,
+          "letter": "m",
+          "transfer_occurrences": 27
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 53,
+          "letter": "n",
+          "transfer_occurrences": 30
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 40,
+          "letter": "o",
+          "transfer_occurrences": 26
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 26,
+          "letter": "p",
+          "transfer_occurrences": 16
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 14,
+          "letter": "q",
+          "transfer_occurrences": 9
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 53,
+          "letter": "r",
+          "transfer_occurrences": 33
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 87,
+          "letter": "s",
+          "transfer_occurrences": 27
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 67,
+          "letter": "t",
+          "transfer_occurrences": 31
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 88,
+          "letter": "u",
+          "transfer_occurrences": 45
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 8,
+          "letter": "x",
+          "transfer_occurrences": 7
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "y",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "z",
+          "transfer_occurrences": 0
+        }
+      ],
+      "transfer_edits": {
+        "frequency": 593,
+        "learned": 21,
+        "oracle": 10,
+        "stage1": 309
+      },
+      "transfer_learned_minus_stage1_edits": -288
+    },
+    "B-key5": {
+      "conditional_map_surprisal_bits": {
+        "frequency": {
+          "fit": [
+            188.1074392888896,
+            188.6896625827506,
+            187.13086050217788,
+            192.98133510006448
+          ],
+          "transfer": [
+            201.95539774173162,
+            201.2766570450146
+          ]
+        },
+        "learned": {
+          "fit": [
+            3.6227772875990234,
+            1.080006480445192,
+            2.183973375864899,
+            4.42396698867542
+          ],
+          "transfer": [
+            1.3484220045118651,
+            2.7747369795937895
+          ]
+        },
+        "oracle": {
+          "fit": [
+            3.4140663023056725,
+            0.9826699793113751,
+            2.139377807470991,
+            4.295700744237145
+          ],
+          "transfer": [
+            1.7238685826093103,
+            2.6238635288716297
+          ]
+        },
+        "stage1": {
+          "fit": [
+            7.675917201319182,
+            5.716130826442507,
+            4.459704314664183,
+            5.648129207109483
+          ],
+          "transfer": [
+            3.6135857486647223,
+            3.8676020714820343
+          ]
+        }
+      },
+      "incorrect_row_occurrences": {
+        "fit": 0,
+        "transfer": 0
+      },
+      "learned_minus_oracle_fit_bits": -6.4789092992596125,
+      "literal_rows_correct": 20,
+      "row_count": 23,
+      "rows": [
+        {
+          "correct": true,
+          "fit_occurrences": 73,
+          "letter": "a",
+          "transfer_occurrences": 40
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 17,
+          "letter": "b",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 25,
+          "letter": "c",
+          "transfer_occurrences": 22
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 21,
+          "letter": "d",
+          "transfer_occurrences": 19
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 108,
+          "letter": "e",
+          "transfer_occurrences": 58
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 10,
+          "letter": "f",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 12,
+          "letter": "g",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 8,
+          "letter": "h",
+          "transfer_occurrences": 1
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 124,
+          "letter": "i",
+          "transfer_occurrences": 47
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "k",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 33,
+          "letter": "l",
+          "transfer_occurrences": 11
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 57,
+          "letter": "m",
+          "transfer_occurrences": 28
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 54,
+          "letter": "n",
+          "transfer_occurrences": 32
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 46,
+          "letter": "o",
+          "transfer_occurrences": 17
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 21,
+          "letter": "p",
+          "transfer_occurrences": 7
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 18,
+          "letter": "q",
+          "transfer_occurrences": 8
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 44,
+          "letter": "r",
+          "transfer_occurrences": 27
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 73,
+          "letter": "s",
+          "transfer_occurrences": 31
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 61,
+          "letter": "t",
+          "transfer_occurrences": 37
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 88,
+          "letter": "u",
+          "transfer_occurrences": 47
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 3,
+          "letter": "x",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "y",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "z",
+          "transfer_occurrences": 0
+        }
+      ],
+      "transfer_edits": {
+        "frequency": 607,
+        "learned": 8,
+        "oracle": 8,
+        "stage1": 247
+      },
+      "transfer_learned_minus_stage1_edits": -239
+    },
+    "B-key6": {
+      "conditional_map_surprisal_bits": {
+        "frequency": {
+          "fit": [
+            177.32592724689223,
+            163.29736722072448,
+            187.01876904862144,
+            174.18802063534272
+          ],
+          "transfer": [
+            164.21907283373037,
+            163.7552988853031
+          ]
+        },
+        "learned": {
+          "fit": [
+            5.47327614293543,
+            7.424685346275052,
+            4.209650694240492,
+            6.882782802101782
+          ],
+          "transfer": [
+            null,
+            8.346079469672116
+          ]
+        },
+        "oracle": {
+          "fit": [
+            5.150499208272632,
+            7.089168106456346,
+            4.160476013975422,
+            6.613343093728037
+          ],
+          "transfer": [
+            5.225495031968802,
+            8.127757682299869
+          ]
+        },
+        "stage1": {
+          "fit": [
+            28.81453020748556,
+            36.12233489338659,
+            26.601858248704495,
+            32.88395090572378
+          ],
+          "transfer": [
+            null,
+            35.89526737879214
+          ]
+        }
+      },
+      "incorrect_row_occurrences": {
+        "fit": 0,
+        "transfer": 1
+      },
+      "learned_minus_oracle_fit_bits": -6.976908563120105,
+      "literal_rows_correct": 20,
+      "row_count": 23,
+      "rows": [
+        {
+          "correct": true,
+          "fit_occurrences": 97,
+          "letter": "a",
+          "transfer_occurrences": 40
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 13,
+          "letter": "b",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 33,
+          "letter": "c",
+          "transfer_occurrences": 20
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 23,
+          "letter": "d",
+          "transfer_occurrences": 11
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 108,
+          "letter": "e",
+          "transfer_occurrences": 46
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 14,
+          "letter": "f",
+          "transfer_occurrences": 5
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 11,
+          "letter": "g",
+          "transfer_occurrences": 5
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 4,
+          "letter": "h",
+          "transfer_occurrences": 7
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 91,
+          "letter": "i",
+          "transfer_occurrences": 52
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "k",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 37,
+          "letter": "l",
+          "transfer_occurrences": 16
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 41,
+          "letter": "m",
+          "transfer_occurrences": 15
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 43,
+          "letter": "n",
+          "transfer_occurrences": 28
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 43,
+          "letter": "o",
+          "transfer_occurrences": 28
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 30,
+          "letter": "p",
+          "transfer_occurrences": 13
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 12,
+          "letter": "q",
+          "transfer_occurrences": 2
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 69,
+          "letter": "r",
+          "transfer_occurrences": 37
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 71,
+          "letter": "s",
+          "transfer_occurrences": 40
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 66,
+          "letter": "t",
+          "transfer_occurrences": 42
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 88,
+          "letter": "u",
+          "transfer_occurrences": 32
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 2,
+          "letter": "x",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "y",
+          "transfer_occurrences": 1
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "z",
+          "transfer_occurrences": 0
+        }
+      ],
+      "transfer_edits": {
+        "frequency": 565,
+        "learned": 232,
+        "oracle": 8,
+        "stage1": 320
+      },
+      "transfer_learned_minus_stage1_edits": -88
+    },
+    "B-key7": {
+      "conditional_map_surprisal_bits": {
+        "frequency": {
+          "fit": [
+            158.05866985208095,
+            166.82532267785894,
+            145.3206001342283,
+            161.24426894703862
+          ],
+          "transfer": [
+            151.05324182681477,
+            158.4141133600541
+          ]
+        },
+        "learned": {
+          "fit": [
+            6.042129047518793,
+            7.457283081862161,
+            5.2107135694604665,
+            3.821252499885038
+          ],
+          "transfer": [
+            9.24873350577411,
+            9.56710638393503
+          ]
+        },
+        "oracle": {
+          "fit": [
+            5.2410579207319135,
+            5.550325055352516,
+            4.6836327925576775,
+            3.501609285068563
+          ],
+          "transfer": [
+            7.912425886189277,
+            7.712384413710091
+          ]
+        },
+        "stage1": {
+          "fit": [
+            7.766382153657413,
+            9.034751248309632,
+            8.854465553565069,
+            3.0155118815083877
+          ],
+          "transfer": [
+            null,
+            10.968981305846565
+          ]
+        }
+      },
+      "incorrect_row_occurrences": {
+        "fit": 2,
+        "transfer": 4
+      },
+      "learned_minus_oracle_fit_bits": -11.496113841394617,
+      "literal_rows_correct": 19,
+      "row_count": 23,
+      "rows": [
+        {
+          "correct": true,
+          "fit_occurrences": 100,
+          "letter": "a",
+          "transfer_occurrences": 51
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 13,
+          "letter": "b",
+          "transfer_occurrences": 5
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 29,
+          "letter": "c",
+          "transfer_occurrences": 20
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 20,
+          "letter": "d",
+          "transfer_occurrences": 11
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 119,
+          "letter": "e",
+          "transfer_occurrences": 46
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 6,
+          "letter": "f",
+          "transfer_occurrences": 3
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 8,
+          "letter": "g",
+          "transfer_occurrences": 10
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 7,
+          "letter": "h",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 103,
+          "letter": "i",
+          "transfer_occurrences": 49
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 1,
+          "letter": "k",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 26,
+          "letter": "l",
+          "transfer_occurrences": 13
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 56,
+          "letter": "m",
+          "transfer_occurrences": 39
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 46,
+          "letter": "n",
+          "transfer_occurrences": 34
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 29,
+          "letter": "o",
+          "transfer_occurrences": 22
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 32,
+          "letter": "p",
+          "transfer_occurrences": 9
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 21,
+          "letter": "q",
+          "transfer_occurrences": 8
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 69,
+          "letter": "r",
+          "transfer_occurrences": 25
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 52,
+          "letter": "s",
+          "transfer_occurrences": 23
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 78,
+          "letter": "t",
+          "transfer_occurrences": 35
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 80,
+          "letter": "u",
+          "transfer_occurrences": 41
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 1,
+          "letter": "x",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "y",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "z",
+          "transfer_occurrences": 0
+        }
+      ],
+      "transfer_edits": {
+        "frequency": 560,
+        "learned": 29,
+        "oracle": 19,
+        "stage1": 236
+      },
+      "transfer_learned_minus_stage1_edits": -207
+    },
+    "B-key8": {
+      "conditional_map_surprisal_bits": {
+        "frequency": {
+          "fit": [
+            181.13608715583874,
+            178.05247558191397,
+            181.79002180525617,
+            162.6622973286587
+          ],
+          "transfer": [
+            180.11652307934636,
+            164.67180881918975
+          ]
+        },
+        "learned": {
+          "fit": [
+            18.27315910718928,
+            15.534002097840474,
+            16.50728081964494,
+            18.40429905734991
+          ],
+          "transfer": [
+            21.11315449937295,
+            11.739629773016109
+          ]
+        },
+        "oracle": {
+          "fit": [
+            13.970892793156182,
+            13.427550993952792,
+            14.260178140320097,
+            13.355448255627234
+          ],
+          "transfer": [
+            19.595148826511473,
+            9.340534871540791
+          ]
+        },
+        "stage1": {
+          "fit": [
+            50.89302654163768,
+            46.03587511546182,
+            45.55460317429991,
+            46.05482887199684
+          ],
+          "transfer": [
+            52.975778280796334,
+            59.81080622919244
+          ]
+        }
+      },
+      "incorrect_row_occurrences": {
+        "fit": 8,
+        "transfer": 5
+      },
+      "learned_minus_oracle_fit_bits": 26.392566437796177,
+      "literal_rows_correct": 18,
+      "row_count": 23,
+      "rows": [
+        {
+          "correct": true,
+          "fit_occurrences": 73,
+          "letter": "a",
+          "transfer_occurrences": 35
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 17,
+          "letter": "b",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 40,
+          "letter": "c",
+          "transfer_occurrences": 14
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 25,
+          "letter": "d",
+          "transfer_occurrences": 8
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 108,
+          "letter": "e",
+          "transfer_occurrences": 39
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 11,
+          "letter": "f",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 6,
+          "letter": "g",
+          "transfer_occurrences": 13
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 4,
+          "letter": "h",
+          "transfer_occurrences": 4
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 108,
+          "letter": "i",
+          "transfer_occurrences": 53
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "k",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 35,
+          "letter": "l",
+          "transfer_occurrences": 10
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 47,
+          "letter": "m",
+          "transfer_occurrences": 30
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 65,
+          "letter": "n",
+          "transfer_occurrences": 36
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 55,
+          "letter": "o",
+          "transfer_occurrences": 28
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 20,
+          "letter": "p",
+          "transfer_occurrences": 11
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 16,
+          "letter": "q",
+          "transfer_occurrences": 9
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 43,
+          "letter": "r",
+          "transfer_occurrences": 33
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 86,
+          "letter": "s",
+          "transfer_occurrences": 27
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 57,
+          "letter": "t",
+          "transfer_occurrences": 35
+        },
+        {
+          "correct": true,
+          "fit_occurrences": 76,
+          "letter": "u",
+          "transfer_occurrences": 54
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 4,
+          "letter": "x",
+          "transfer_occurrences": 1
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "y",
+          "transfer_occurrences": 0
+        },
+        {
+          "correct": false,
+          "fit_occurrences": 0,
+          "letter": "z",
+          "transfer_occurrences": 0
+        }
+      ],
+      "transfer_edits": {
+        "frequency": 558,
+        "learned": 45,
+        "oracle": 37,
+        "stage1": 240
+      },
+      "transfer_learned_minus_stage1_edits": -195
+    }
+  },
+  "resources": {
+    "campaign_wall_seconds": 3585.7974654999853,
+    "evaluation_cpu_seconds": 17.969725,
+    "failed_job_resources_included": false,
+    "largest_successful_worker_rss_bytes": 1045594112,
+    "successful_fit_cpu_seconds": 6821.404105
+  },
+  "status": "post_evaluation_descriptive_supplement"
+}

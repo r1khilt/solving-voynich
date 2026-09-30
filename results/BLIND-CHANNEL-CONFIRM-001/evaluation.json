@@ -1,0 +1,2029 @@
+{
+  "audit": {
+    "floor_records_replayed": 96,
+    "maximum_score_delta": 1.3642420526593924e-12,
+    "record_predictions_replayed": 336,
+    "scope": "Root orchestration with previously independently authored numerical references"
+  },
+  "cases": {
+    "B-key1": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1561,
+          "edits": 1129,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2733.4038286339064,
+          "model_bits": 139,
+          "record_edits": [
+            275,
+            283,
+            274,
+            297
+          ],
+          "supported_records": 4,
+          "total_bits": 4082.468148317043
+        },
+        "transfer": {
+          "decoded_characters": 783,
+          "edits": 556,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1388.8914388224384,
+          "model_bits": 139,
+          "record_edits": [
+            287,
+            269
+          ],
+          "supported_records": 2,
+          "total_bits": 2142.7467911222693
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": 931.5646676077158,
+        "flag": true,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": 0.6855563848039838
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 881,
+          "dictionary_floor": {
+            "edits": 2,
+            "record_edits": [
+              0,
+              0,
+              0,
+              2
+            ]
+          },
+          "edits": 52,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1935.3995641867136,
+          "model_bits": 181,
+          "record_edits": [
+            16,
+            10,
+            18,
+            8
+          ],
+          "supported_records": 4,
+          "total_bits": 2973.191353390833
+        },
+        "transfer": {
+          "decoded_characters": 444,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 24,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -993.1800641583606,
+          "model_bits": 181,
+          "record_edits": [
+            6,
+            18
+          ],
+          "supported_records": 2,
+          "total_bits": 1613.8559532710494
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 881,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 52,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1935.6200391136786,
+          "model_bits": 190,
+          "record_edits": [
+            16,
+            10,
+            18,
+            8
+          ],
+          "supported_records": 4,
+          "total_bits": 2982.5094314746057
+        },
+        "transfer": {
+          "decoded_characters": 444,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 24,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -993.5139170625732,
+          "model_bits": 190,
+          "record_edits": [
+            6,
+            18
+          ],
+          "supported_records": 2,
+          "total_bits": 1623.3376012003434
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 881,
+          "edits": 52,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1935.4011019666523,
+          "model_bits": 181,
+          "record_edits": [
+            16,
+            10,
+            18,
+            8
+          ],
+          "supported_records": 4,
+          "total_bits": 2973.193571938324
+        },
+        "transfer": {
+          "decoded_characters": 444,
+          "edits": 24,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -993.1886677321899,
+          "model_bits": 181,
+          "record_edits": [
+            6,
+            18
+          ],
+          "supported_records": 2,
+          "total_bits": 1613.8683656043468
+        }
+      }
+    },
+    "B-key1-shuffle": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1561,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2797.0743796478614,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4174.325336515543
+        },
+        "transfer": {
+          "decoded_characters": 783,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1417.6117278316651,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2184.1814096487783
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": -105.56831810699578,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": -0.043031082861509785
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 1525,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2679.238667600742,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4010.3243391055444
+        },
+        "transfer": {
+          "decoded_characters": 771,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1388.6094314282163,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2148.339940453131
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 1528,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2688.656803025556,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4023.9118363773446
+        },
+        "transfer": {
+          "decoded_characters": 769,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1392.1371394470798,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2153.4293473176494
+        }
+      }
+    },
+    "B-key2": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1555,
+          "edits": 1144,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2762.7876778706254,
+          "model_bits": 139,
+          "record_edits": [
+            277,
+            295,
+            288,
+            284
+          ],
+          "supported_records": 4,
+          "total_bits": 4124.860081893086
+        },
+        "transfer": {
+          "decoded_characters": 754,
+          "edits": 545,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1445.7608250735134,
+          "model_bits": 139,
+          "record_edits": [
+            269,
+            276
+          ],
+          "supported_records": 2,
+          "total_bits": 2224.791972645094
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": 873.8560725604125,
+        "flag": true,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": 0.7091203869197507
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 895,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 29,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1890.229364176476,
+          "model_bits": 184,
+          "record_edits": [
+            15,
+            6,
+            4,
+            4
+          ],
+          "supported_records": 4,
+          "total_bits": 2911.0245298401005
+        },
+        "transfer": {
+          "decoded_characters": 446,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 18,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -964.3325337178749,
+          "model_bits": 184,
+          "record_edits": [
+            14,
+            4
+          ],
+          "supported_records": 2,
+          "total_bits": 1575.2377641626672
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 895,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 29,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1890.5157338670533,
+          "model_bits": 190,
+          "record_edits": [
+            15,
+            6,
+            4,
+            4
+          ],
+          "supported_records": 4,
+          "total_bits": 2917.437673972557
+        },
+        "transfer": {
+          "decoded_characters": 446,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 18,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -964.6570746286684,
+          "model_bits": 190,
+          "record_edits": [
+            14,
+            4
+          ],
+          "supported_records": 2,
+          "total_bits": 1581.7059777252346
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 897,
+          "edits": 44,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1896.8598976461712,
+          "model_bits": 184,
+          "record_edits": [
+            16,
+            13,
+            9,
+            6
+          ],
+          "supported_records": 4,
+          "total_bits": 2920.590367595278
+        },
+        "transfer": {
+          "decoded_characters": 449,
+          "edits": 26,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -975.5911596737915,
+          "model_bits": 184,
+          "record_edits": [
+            16,
+            10
+          ],
+          "supported_records": 2,
+          "total_bits": 1591.480527996492
+        }
+      }
+    },
+    "B-key2-shuffle": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1555,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2777.9889344040644,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4146.79085930916
+        },
+        "transfer": {
+          "decoded_characters": 754,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1372.7877052561885,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2119.514014566443
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": -107.1571645726649,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": -0.06566655631801548
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 1509,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2597.2486636290914,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 3892.037766973178
+        },
+        "transfer": {
+          "decoded_characters": 728,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1369.2617381887715,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2120.427119363943
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 1515,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2600.446017424464,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 3896.6505734377292
+        },
+        "transfer": {
+          "decoded_characters": 734,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1358.906448459376,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2105.4875942243752
+        }
+      }
+    },
+    "B-key3": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1558,
+          "edits": 1144,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2791.6500230948755,
+          "model_bits": 139,
+          "record_edits": [
+            287,
+            292,
+            276,
+            289
+          ],
+          "supported_records": 4,
+          "total_bits": 4166.4996442165375
+        },
+        "transfer": {
+          "decoded_characters": 765,
+          "edits": 564,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1387.1168042467193,
+          "model_bits": 139,
+          "record_edits": [
+            275,
+            289
+          ],
+          "supported_records": 2,
+          "total_bits": 2140.186534620489
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": 940.935828211585,
+        "flag": true,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": 0.6954090381329303
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 897,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 39,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1931.7084300970932,
+          "model_bits": 181,
+          "record_edits": [
+            11,
+            8,
+            10,
+            10
+          ],
+          "supported_records": 4,
+          "total_bits": 2967.8661725444813
+        },
+        "transfer": {
+          "decoded_characters": 443,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 18,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -978.2842388528744,
+          "model_bits": 181,
+          "record_edits": [
+            13,
+            5
+          ],
+          "supported_records": 2,
+          "total_bits": 1592.3658199728761
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 897,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 39,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1932.1830203143006,
+          "model_bits": 190,
+          "record_edits": [
+            11,
+            8,
+            10,
+            10
+          ],
+          "supported_records": 4,
+          "total_bits": 2977.550861497301
+        },
+        "transfer": {
+          "decoded_characters": 443,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 18,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -978.6064356575149,
+          "model_bits": 190,
+          "record_edits": [
+            13,
+            5
+          ],
+          "supported_records": 2,
+          "total_bits": 1601.8306517051212
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 893,
+          "edits": 71,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1955.523548132095,
+          "model_bits": 184,
+          "record_edits": [
+            24,
+            12,
+            15,
+            20
+          ],
+          "supported_records": 4,
+          "total_bits": 3005.2241252317635
+        },
+        "transfer": {
+          "decoded_characters": 443,
+          "edits": 21,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -986.6134806424977,
+          "model_bits": 184,
+          "record_edits": [
+            15,
+            6
+          ],
+          "supported_records": 2,
+          "total_bits": 1607.3823757971309
+        }
+      }
+    },
+    "B-key3-shuffle": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1558,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2779.1296375104043,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4148.436546023802
+        },
+        "transfer": {
+          "decoded_characters": 765,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1398.5450281261283,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2156.6739765374814
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": -109.38353502552764,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": -0.07935783378427556
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 1480,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2684.687633912573,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4018.185535781594
+        },
+        "transfer": {
+          "decoded_characters": 734,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1389.110255591279,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2149.0624769895385
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 1483,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2695.4771639392998,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4033.7515372446755
+        },
+        "transfer": {
+          "decoded_characters": 731,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1381.2418663249873,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2137.7107908152757
+        }
+      }
+    },
+    "B-key4": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1597,
+          "edits": 1175,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -3001.1823556267736,
+          "model_bits": 139,
+          "record_edits": [
+            289,
+            293,
+            295,
+            298
+          ],
+          "supported_records": 4,
+          "total_bits": 4468.790901266204
+        },
+        "transfer": {
+          "decoded_characters": 802,
+          "edits": 593,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1514.289941497884,
+          "model_bits": 139,
+          "record_edits": [
+            291,
+            302
+          ],
+          "supported_records": 2,
+          "total_bits": 2323.658589067036
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": 961.158957151204,
+        "flag": true,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": 0.662667656516781
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 909,
+          "dictionary_floor": {
+            "edits": 36,
+            "record_edits": [
+              14,
+              14,
+              6,
+              2
+            ]
+          },
+          "edits": 57,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2001.9588822181026,
+          "model_bits": 181,
+          "record_edits": [
+            18,
+            24,
+            11,
+            4
+          ],
+          "supported_records": 4,
+          "total_bits": 3069.2161514396694
+        },
+        "transfer": {
+          "decoded_characters": 455,
+          "dictionary_floor": {
+            "edits": 12,
+            "record_edits": [
+              2,
+              10
+            ]
+          },
+          "edits": 21,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1040.9614951267436,
+          "model_bits": 181,
+          "record_edits": [
+            6,
+            15
+          ],
+          "supported_records": 2,
+          "total_bits": 1682.789986775714
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 893,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 11,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1933.017675904417,
+          "model_bits": 190,
+          "record_edits": [
+            2,
+            2,
+            5,
+            2
+          ],
+          "supported_records": 4,
+          "total_bits": 2978.7550149780122
+        },
+        "transfer": {
+          "decoded_characters": 449,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 10,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1024.1603041744825,
+          "model_bits": 190,
+          "record_edits": [
+            4,
+            6
+          ],
+          "supported_records": 2,
+          "total_bits": 1667.5509919078581
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 935,
+          "edits": 588,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2339.3626279867044,
+          "model_bits": 178,
+          "record_edits": [
+            142,
+            158,
+            139,
+            149
+          ],
+          "supported_records": 4,
+          "total_bits": 3552.9868622373915
+        },
+        "transfer": {
+          "decoded_characters": 472,
+          "edits": 309,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1285.4085562074067,
+          "model_bits": 178,
+          "record_edits": [
+            154,
+            155
+          ],
+          "supported_records": 2,
+          "total_bits": 2032.4525495566681
+        }
+      }
+    },
+    "B-key4-shuffle": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1597,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2941.8259319253884,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4383.157683147311
+        },
+        "transfer": {
+          "decoded_characters": 802,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1485.7499728212733,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2282.484117790163
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": -117.3597457612932,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": -0.056438042189292326
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 1582,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2776.5638203649073,
+          "model_bits": 142,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4147.734854352167
+        },
+        "transfer": {
+          "decoded_characters": 795,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1440.7152573680723,
+          "model_bits": 142,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2220.512757137985
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 1580,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2804.960359375702,
+          "model_bits": 142,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4188.70240036145
+        },
+        "transfer": {
+          "decoded_characters": 798,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1437.7391846328642,
+          "model_bits": 142,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2216.219191761575
+        }
+      }
+    },
+    "B-key5": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1635,
+          "edits": 1205,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2981.1151907914673,
+          "model_bits": 139,
+          "record_edits": [
+            301,
+            295,
+            299,
+            310
+          ],
+          "supported_records": 4,
+          "total_bits": 4439.840102073606
+        },
+        "transfer": {
+          "decoded_characters": 835,
+          "edits": 607,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1539.5848740933561,
+          "model_bits": 139,
+          "record_edits": [
+            301,
+            306
+          ],
+          "supported_records": 2,
+          "total_bits": 2360.151462882144
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": 1214.0780063072007,
+        "flag": true,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": 0.8297393969744837
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 898,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 9,
+          "exact_records": 1,
+          "gold_characters": 896,
+          "log_likelihood": -1971.677181959755,
+          "model_bits": 184,
+          "record_edits": [
+            2,
+            0,
+            2,
+            5
+          ],
+          "supported_records": 4,
+          "total_bits": 3028.528892647265
+        },
+        "transfer": {
+          "decoded_characters": 444,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 8,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1010.3309160657752,
+          "model_bits": 184,
+          "record_edits": [
+            4,
+            4
+          ],
+          "supported_records": 2,
+          "total_bits": 1641.5994022648974
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 898,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 9,
+          "exact_records": 1,
+          "gold_characters": 896,
+          "log_likelihood": -1972.0091365902806,
+          "model_bits": 190,
+          "record_edits": [
+            2,
+            0,
+            2,
+            5
+          ],
+          "supported_records": 4,
+          "total_bits": 3035.0078019465245
+        },
+        "transfer": {
+          "decoded_characters": 444,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 8,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1010.1752538357055,
+          "model_bits": 190,
+          "record_edits": [
+            4,
+            4
+          ],
+          "supported_records": 2,
+          "total_bits": 1647.374829137522
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 904,
+          "edits": 488,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2334.0892468879947,
+          "model_bits": 184,
+          "record_edits": [
+            114,
+            121,
+            125,
+            128
+          ],
+          "supported_records": 4,
+          "total_bits": 3551.3789814775655
+        },
+        "transfer": {
+          "decoded_characters": 449,
+          "edits": 247,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1195.609979631994,
+          "model_bits": 184,
+          "record_edits": [
+            121,
+            126
+          ],
+          "supported_records": 2,
+          "total_bits": 1908.9005884524324
+        }
+      }
+    },
+    "B-key5-shuffle": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1635,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -3008.426840706372,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4479.2424839643345
+        },
+        "transfer": {
+          "decoded_characters": 835,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1540.5261909041951,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2361.5094959770468
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": -136.33680225552962,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": -0.057741988948566164
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 1577,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2934.7461391432475,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4378.943701209995
+        },
+        "transfer": {
+          "decoded_characters": 819,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1523.985525143191,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2343.6463595106443
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 1566,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2944.135485397087,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4392.489664487599
+        },
+        "transfer": {
+          "decoded_characters": 818,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1537.2797483894885,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2362.825869460549
+        }
+      }
+    },
+    "B-key6": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1573,
+          "edits": 1152,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2939.0234801385104,
+          "model_bits": 139,
+          "record_edits": [
+            281,
+            293,
+            289,
+            289
+          ],
+          "supported_records": 4,
+          "total_bits": 4379.114599852052
+        },
+        "transfer": {
+          "decoded_characters": 775,
+          "edits": 565,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1457.0224178925323,
+          "model_bits": 139,
+          "record_edits": [
+            287,
+            278
+          ],
+          "supported_records": 2,
+          "total_bits": 2241.0390167576033
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": 977.6547583370711,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": null
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 895,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 18,
+          "exact_records": 1,
+          "gold_characters": 896,
+          "log_likelihood": -1960.285128539472,
+          "model_bits": 184,
+          "record_edits": [
+            6,
+            4,
+            0,
+            8
+          ],
+          "supported_records": 4,
+          "total_bits": 3012.0936336722807
+        },
+        "transfer": {
+          "decoded_characters": 222,
+          "dictionary_floor": {
+            "edits": null,
+            "record_edits": [
+              null,
+              0
+            ]
+          },
+          "edits": 232,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": null,
+          "model_bits": 184,
+          "record_edits": [
+            224,
+            8
+          ],
+          "supported_records": 1,
+          "total_bits": null
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 895,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 18,
+          "exact_records": 1,
+          "gold_characters": 896,
+          "log_likelihood": -1960.9622699556637,
+          "model_bits": 190,
+          "record_edits": [
+            6,
+            4,
+            0,
+            8
+          ],
+          "supported_records": 4,
+          "total_bits": 3019.070542235401
+        },
+        "transfer": {
+          "decoded_characters": 446,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 8,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "log_likelihood": -1019.2755233915873,
+          "model_bits": 190,
+          "record_edits": [
+            0,
+            8
+          ],
+          "supported_records": 2,
+          "total_bits": 1660.5037428965456
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 952,
+          "edits": 362,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2269.4974814272655,
+          "model_bits": 178,
+          "record_edits": [
+            96,
+            101,
+            78,
+            87
+          ],
+          "supported_records": 4,
+          "total_bits": 3452.1927617651086
+        },
+        "transfer": {
+          "decoded_characters": 237,
+          "edits": 320,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": null,
+          "model_bits": 178,
+          "record_edits": [
+            224,
+            96
+          ],
+          "supported_records": 1,
+          "total_bits": null
+        }
+      }
+    },
+    "B-key6-shuffle": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1573,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2853.6329686284407,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4255.922132357502
+        },
+        "transfer": {
+          "decoded_characters": 775,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1417.4295030934454,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2183.9185149226214
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": -134.444262164664,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": -0.03431642043477525
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 1556,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2760.245610687244,
+          "model_bits": 142,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4124.192654174016
+        },
+        "transfer": {
+          "decoded_characters": 770,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1383.235956072103,
+          "model_bits": 142,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2137.587654204527
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 1557,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2763.3725785454903,
+          "model_bits": 142,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4128.703915196127
+        },
+        "transfer": {
+          "decoded_characters": 770,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1388.7121800793439,
+          "model_bits": 142,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2145.4881754225707
+        }
+      }
+    },
+    "B-key7": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1565,
+          "edits": 1104,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2724.274430090999,
+          "model_bits": 139,
+          "record_edits": [
+            277,
+            281,
+            266,
+            280
+          ],
+          "supported_records": 4,
+          "total_bits": 4069.2972103128914
+        },
+        "transfer": {
+          "decoded_characters": 764,
+          "edits": 560,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1330.3076993782947,
+          "model_bits": 139,
+          "record_edits": [
+            276,
+            284
+          ],
+          "supported_records": 2,
+          "total_bits": 2058.228320749472
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": 830.4702010169885,
+        "flag": true,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": 0.49956003356552503
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 893,
+          "dictionary_floor": {
+            "edits": 3,
+            "record_edits": [
+              1,
+              0,
+              0,
+              2
+            ]
+          },
+          "edits": 26,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1935.9490730866391,
+          "model_bits": 178,
+          "record_edits": [
+            15,
+            5,
+            4,
+            2
+          ],
+          "supported_records": 4,
+          "total_bits": 2970.9841271556797
+        },
+        "transfer": {
+          "decoded_characters": 443,
+          "dictionary_floor": {
+            "edits": 8,
+            "record_edits": [
+              6,
+              2
+            ]
+          },
+          "edits": 29,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1010.7714581152005,
+          "model_bits": 178,
+          "record_edits": [
+            20,
+            9
+          ],
+          "supported_records": 2,
+          "total_bits": 1636.2349700949064
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 892,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 20,
+          "exact_records": 1,
+          "gold_characters": 896,
+          "log_likelihood": -1935.5998058164787,
+          "model_bits": 190,
+          "record_edits": [
+            13,
+            3,
+            4,
+            0
+          ],
+          "supported_records": 4,
+          "total_bits": 2982.4802409970744
+        },
+        "transfer": {
+          "decoded_characters": 441,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 19,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -989.4530809986836,
+          "model_bits": 190,
+          "record_edits": [
+            13,
+            6
+          ],
+          "supported_records": 2,
+          "total_bits": 1617.4790531491067
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 892,
+          "edits": 29,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1941.9079213963785,
+          "model_bits": 178,
+          "record_edits": [
+            12,
+            6,
+            5,
+            6
+          ],
+          "supported_records": 4,
+          "total_bits": 2979.5809280615504
+        },
+        "transfer": {
+          "decoded_characters": 219,
+          "edits": 236,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": null,
+          "model_bits": 178,
+          "record_edits": [
+            224,
+            12
+          ],
+          "supported_records": 1,
+          "total_bits": null
+        }
+      }
+    },
+    "B-key7-shuffle": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1565,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2811.8439192776805,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4195.633278095696
+        },
+        "transfer": {
+          "decoded_characters": 764,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1356.4159168844374,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2095.894516672034
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": -121.1099171643782,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": -0.06667808765414412
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 1485,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2618.4080060394313,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 3922.5642453370465
+        },
+        "transfer": {
+          "decoded_characters": 724,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1310.6310350534168,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2035.8408947067337
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 1493,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2632.681553072291,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 3943.156620857249
+        },
+        "transfer": {
+          "decoded_characters": 729,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1312.496203551254,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2038.5317640489857
+        }
+      }
+    },
+    "B-key8": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1513,
+          "edits": 1111,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2691.4285737579944,
+          "model_bits": 139,
+          "record_edits": [
+            284,
+            285,
+            275,
+            267
+          ],
+          "supported_records": 4,
+          "total_bits": 4021.9106562675142
+        },
+        "transfer": {
+          "decoded_characters": 754,
+          "edits": 558,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1364.4200585364147,
+          "model_bits": 139,
+          "record_edits": [
+            290,
+            268
+          ],
+          "supported_records": 2,
+          "total_bits": 2107.4420521399147
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": 826.0400921558876,
+        "flag": true,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": 0.5355587004763382
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 898,
+          "dictionary_floor": {
+            "edits": 12,
+            "record_edits": [
+              4,
+              1,
+              1,
+              6
+            ]
+          },
+          "edits": 68,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1947.0092193504777,
+          "model_bits": 175,
+          "record_edits": [
+            13,
+            17,
+            14,
+            24
+          ],
+          "supported_records": 4,
+          "total_bits": 2983.940545322026
+        },
+        "transfer": {
+          "decoded_characters": 449,
+          "dictionary_floor": {
+            "edits": 9,
+            "record_edits": [
+              5,
+              4
+            ]
+          },
+          "edits": 45,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1017.9649248716069,
+          "model_bits": 175,
+          "record_edits": [
+            23,
+            22
+          ],
+          "supported_records": 2,
+          "total_bits": 1643.6129489111734
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 892,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 45,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1918.318078627979,
+          "model_bits": 190,
+          "record_edits": [
+            6,
+            10,
+            15,
+            14
+          ],
+          "supported_records": 4,
+          "total_bits": 2957.54797888423
+        },
+        "transfer": {
+          "decoded_characters": 445,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 37,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -995.8642507241855,
+          "model_bits": 190,
+          "record_edits": [
+            19,
+            18
+          ],
+          "supported_records": 2,
+          "total_bits": 1626.7284159183857
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 968,
+          "edits": 433,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -2188.7316950919485,
+          "model_bits": 172,
+          "record_edits": [
+            113,
+            106,
+            100,
+            114
+          ],
+          "supported_records": 4,
+          "total_bits": 3329.6723623456487
+        },
+        "transfer": {
+          "decoded_characters": 503,
+          "edits": 240,
+          "exact_records": 0,
+          "gold_characters": 448,
+          "log_likelihood": -1154.3485093738022,
+          "model_bits": 172,
+          "record_edits": [
+            118,
+            122
+          ],
+          "supported_records": 2,
+          "total_bits": 1837.3728699311516
+        }
+      }
+    },
+    "B-key8-shuffle": {
+      "frequency": {
+        "fit": {
+          "decoded_characters": 1513,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2721.170160148359,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4064.818695461064
+        },
+        "transfer": {
+          "decoded_characters": 754,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1362.3684447146666,
+          "model_bits": 139,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2104.482199053459
+        }
+      },
+      "iid_diagnostic": {
+        "fit_margin_bits": -132.69590104924373,
+        "flag": false,
+        "semantic_confidence": false,
+        "transfer_gain_bits_per_glyph": -0.07642100506973121
+      },
+      "learned": {
+        "fit": {
+          "decoded_characters": 1441,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2632.3487853587517,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 3942.6765385271574
+        },
+        "transfer": {
+          "decoded_characters": 712,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1337.8056984958162,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2075.0456468929096
+        }
+      },
+      "stage1": {
+        "fit": {
+          "decoded_characters": 1432,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2643.822101241421,
+          "model_bits": 148,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 3962.2290344536373
+        },
+        "transfer": {
+          "decoded_characters": 710,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1334.2740038279658,
+          "model_bits": 148,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2072.950488509668
+        }
+      }
+    }
+  },
+  "decision": {
+    "iid_screen_pass": false,
+    "macro_oracle_cer": 0.03962053571428571,
+    "macro_transfer_cer": 0.11021205357142858,
+    "recovery_gates": {
+      "all_jobs_complete": true,
+      "each_beats_frequency": true,
+      "each_oracle_excess_at_most_002": false,
+      "each_transfer_cer_at_most_005": false,
+      "macro_transfer_cer_at_most_002": false
+    },
+    "recovery_pass": false,
+    "relative_frequency_reduction": 0.9131486367634125,
+    "semantic_rejection_qualified": false
+  },
+  "experiment": "BLIND-CHANNEL-CONFIRM-001",
+  "key_freeze": "3ee1a7f5936e47e471e236c48269f77ee755aaac",
+  "predictions": {
+    "bytes": 53097,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-001/predictions.json.gz",
+    "sha256": "0602b5e8ba5d4d9da6b7e32e42cae351d3aa6a2b487ada1cfc2b1507ea242bc5"
+  },
+  "resources": {
+    "cpu_seconds": 17.969725,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 127107072,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 18.643899207992945
+  }
+}

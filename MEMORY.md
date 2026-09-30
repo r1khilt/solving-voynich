@@ -1,10 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-30 PDT (fresh fits complete awaiting common freeze/evaluation; Borg exception review complete; no Voynich decipherment).
+Last updated: 2026-09-30 PDT (fresh qualification failed; rare-row diagnostic registered; Borg exception review complete; no Voynich decipherment).
 
 ## Current state
 
-- **Fresh confirmation ALL16FITS COMPLETE, evaluation unopened:** Original session98916 exited0;16/16cases no processfailure,3,585.80wall/6,821.40childCPU seconds, maxworkerRSS1.046GB. All30frozen sources and32trace archives/266.31MB checked; selected scores match independent references≤1.82e-12. Publish/verify allattempts/processes/keys/campaign together before the single evaluation. No recovery scores/answers opened yet. Fullsuite1,848tests+23subtests pass,8skips;5oldunrelatedlintfindings remain. NB-232.
+- **Fresh confirmation FAIL:** All16fits frozen/remoteverified3ee1a7f before singleevaluation. Transfer395/3,584edits(11.0212%), truekey142(3.9621%), stage1 1,423; learned0/16exactrecords. Fourkeys>5%, threeoracleexcesses>2points; allbeatweakfrequencybaseline. Iidscreen7/8positives,0/8nulls→FAIL. Key6loses singletonF forunseen y, makingone224letterrecordunsupported; fullpenaltyretained. Key4/8missbetterknownkeys withinbudget; key7wrongkeybeatsgoldobjective. Independent336prediction/96floorreplay≤1.37e-12; fit6,821.40CPU+eval17.97CPU,0paid. See `docs/experiments/BLIND-CHANNEL-CONFIRM-001-results.md`, NB-232–233. Do not advance asqualifiedreader. DIAG-A4fixedrare-row/coverageinterventions registered,publishbeforeexecution; no retuningorqualificationrelabeling.
 
 - **Borg exceptions review004 complete, no aliases:** Fixed pre-image plan7a90cd6 covered35types/45targets on15pages;7.33MB acquired.30eight-glyph line checks support local page identity;38targets localized,2shape/segmentation uncertain,5individual correspondences unresolved. Observed case/overbar distinctions, cursive groups and layout braces undermine raw-character-as-glyph assumptions; no global mapping or solverrecords. LedgerSHAf265d608;31crop replays and64focused checks pass. `docs/research/borg-exception-review-004-results.md`, NB-230–231. Next explicit uncertainty/token policy, not case folding or rare-type deletion.
 
