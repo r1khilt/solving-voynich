@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-30 PDT (four recurrent fits and independent saved-model audits complete; fresh supplied-key neural reader passes both seeds; unknown-key recovery next; no Voynich decipherment).
+Last updated: 2026-09-30 PDT (four recurrent fits and independent saved-model audits complete; fresh supplied-key neural reader passes both seeds; unknown-key source diagnostic prepared; no Voynich decipherment).
 
 ## Current state
+
+- **KEY-SOURCE-DIAG-001 ready, not run:** Fixed576readings ofall8positive/8nulloriginalCONFIRM001cases withunchangedlearnedkeys andpositivegoldkeys, foursources(small/largecompact,bothlargeneural). Exposeddiagnostic,no keyfit/repair/freshqualification. Exactstatisticalmarginal+code compared separatelyfromneuraljoint-scorebounds. Sevennewtests andfull2,037+23subtestsPASS,10skips;95bindings. One900wall/CPU-second localrun afterfreeze,0paid. `docs/experiments/KEY-SOURCE-DIAG-001.md`, NB-257.
 
 - **NEURAL-READER-001 supplied-key qualification PASS:** Sourceee2774c/panel6e57550/predictions1eb6591 eachpushed/remoteverified beforedependentstage. On7,168freshNepos/Apuleiusletters over16keys, small/largestatistical161/43edits; primaryneural31103/31109beam12823/31(.3209%/.4325%),28/22exactof32. Bothall3gatesPASS,46.5116%/27.9070%reductionvslargebaseline, no key>5%. Diagnosticbeam32A20/B31 retainedwithoutreplacingprimary. All384encodings/individualindependenteditchecksPASS. Every4/10wrongpositiveprimarypathbeatsgoldscore;0gold-provenbettercandidates, but0boundcertificates, so noexactsearchclaim. Totalprepare/predict/evaluate202.296440wall/103.367961hostCPU seconds,0paid. Correctkeys/language/unitfamily/boundaries supplied; no unknownkey orVoynichreading. Prioritizefreshunknown-keyevaluation withimprovedsource; residualwrongpreferences cananchorcontrolledlatentinterventions. Neitherfollowupstarted; donotretuneexposedpanel. `docs/experiments/NEURAL-READER-001-results.md`, NB-254–256.
 
