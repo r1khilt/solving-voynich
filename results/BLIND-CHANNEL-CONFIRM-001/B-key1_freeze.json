@@ -1,0 +1,360 @@
+{
+  "baseline": {
+    "counts": [
+      40,
+      37,
+      74,
+      26,
+      20,
+      59
+    ],
+    "denominator": 256,
+    "family": "iid_glyph_geometric",
+    "glyph_alphabet": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "model_bits": 47,
+    "model_code": "10000000010010100100110101010101111111011110100",
+    "stop_count": 10,
+    "stop_denominator": 4096
+  },
+  "case_id": "B-key1",
+  "data_freeze": "19188c2e2ba8eefe9b9bf348b2b123b6183ab002",
+  "experiment": "BLIND-CHANNEL-CONFIRM-001",
+  "fit_sha256": "c3192162157160bd6e189b890c3a4edfbbc4ff30ed4ea570daf131d0b03c5a35",
+  "frequency_units": [
+    "B",
+    "B",
+    "D",
+    "F",
+    "C",
+    "E",
+    "D",
+    "C",
+    "F",
+    "B",
+    "E",
+    "B",
+    "F",
+    "A",
+    "C",
+    "A",
+    "C",
+    "E",
+    "D",
+    "A",
+    "F",
+    "A",
+    "D"
+  ],
+  "independent_final_score_deltas": [
+    4.547473508864641e-13,
+    0.0
+  ],
+  "pipeline_freeze": "0d3f88568d4820c752c99a6fa8e13aac6ce1dfe9",
+  "resources": {
+    "cpu_seconds": 232.06881099999998,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 933003264,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 232.5292584169947
+  },
+  "score": {
+    "data_bits": 2792.191353390833,
+    "log_likelihood": -1935.3995641867136,
+    "model_bits": 181,
+    "total_bits": 2973.191353390833
+  },
+  "source_selection_sha256": "1a0136627f04e3b68b7e2b3d801e5d8cdebc617fc1e5f3f0fa7b7e344ab74c60",
+  "stage1_accounting": {
+    "accepted_move_counts": {
+      "replace": 282,
+      "swap": 133
+    },
+    "best_is_certified_local_optimum": true,
+    "completed_sweeps": 431,
+    "configured_wall_seconds": 300.0,
+    "evaluated_neighbors": 512589,
+    "initialization_methods": {
+      "random_singleton_coverage_plus_uniform_pool": 15,
+      "source_start_and_glyph_frequency_singletons": 1
+    },
+    "kernel_fallbacks": 0,
+    "local_optima": 16,
+    "minimum_recorded_score": {
+      "data_bits": 3027.26622167378,
+      "log_likelihood": -2098.3410463575387,
+      "model_bits": 181,
+      "total_bits": 3208.26622167378
+    },
+    "move_counts": {
+      "replace": 406433,
+      "swap": 106156
+    },
+    "requested_restarts": 16,
+    "restart_details": [
+      {
+        "accepted_moves": 23,
+        "completed_sweeps": 24,
+        "method": "source_start_and_glyph_frequency_singletons",
+        "neighbors": 28344,
+        "restart": 0,
+        "seed": 15343183418923323527,
+        "supported": true,
+        "sweeps": 24
+      },
+      {
+        "accepted_moves": 24,
+        "completed_sweeps": 25,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 29757,
+        "restart": 1,
+        "seed": 5272337848522133568,
+        "supported": true,
+        "sweeps": 25
+      },
+      {
+        "accepted_moves": 27,
+        "completed_sweeps": 28,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 33347,
+        "restart": 2,
+        "seed": 8758259348587790014,
+        "supported": true,
+        "sweeps": 28
+      },
+      {
+        "accepted_moves": 24,
+        "completed_sweeps": 25,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 29768,
+        "restart": 3,
+        "seed": 13643653043987650247,
+        "supported": true,
+        "sweeps": 25
+      },
+      {
+        "accepted_moves": 33,
+        "completed_sweeps": 34,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 40322,
+        "restart": 4,
+        "seed": 8572546784233889536,
+        "supported": true,
+        "sweeps": 34
+      },
+      {
+        "accepted_moves": 24,
+        "completed_sweeps": 25,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 29726,
+        "restart": 5,
+        "seed": 6545227076538191584,
+        "supported": true,
+        "sweeps": 25
+      },
+      {
+        "accepted_moves": 32,
+        "completed_sweeps": 33,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 39262,
+        "restart": 6,
+        "seed": 1245674156446239806,
+        "supported": true,
+        "sweeps": 33
+      },
+      {
+        "accepted_moves": 17,
+        "completed_sweeps": 18,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 21375,
+        "restart": 7,
+        "seed": 7743184623299285131,
+        "supported": true,
+        "sweeps": 18
+      },
+      {
+        "accepted_moves": 19,
+        "completed_sweeps": 20,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 23717,
+        "restart": 8,
+        "seed": 3395615811355289377,
+        "supported": true,
+        "sweeps": 20
+      },
+      {
+        "accepted_moves": 36,
+        "completed_sweeps": 37,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 44160,
+        "restart": 9,
+        "seed": 332681373199023900,
+        "supported": true,
+        "sweeps": 37
+      },
+      {
+        "accepted_moves": 29,
+        "completed_sweeps": 30,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 35646,
+        "restart": 10,
+        "seed": 13344301692157737383,
+        "supported": true,
+        "sweeps": 30
+      },
+      {
+        "accepted_moves": 30,
+        "completed_sweeps": 31,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 36919,
+        "restart": 11,
+        "seed": 5597891032689418330,
+        "supported": true,
+        "sweeps": 31
+      },
+      {
+        "accepted_moves": 24,
+        "completed_sweeps": 25,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 29712,
+        "restart": 12,
+        "seed": 273404388953758245,
+        "supported": true,
+        "sweeps": 25
+      },
+      {
+        "accepted_moves": 20,
+        "completed_sweeps": 21,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 24970,
+        "restart": 13,
+        "seed": 14859613684191343512,
+        "supported": true,
+        "sweeps": 21
+      },
+      {
+        "accepted_moves": 28,
+        "completed_sweeps": 29,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 34569,
+        "restart": 14,
+        "seed": 4878501672845711735,
+        "supported": true,
+        "sweeps": 29
+      },
+      {
+        "accepted_moves": 25,
+        "completed_sweeps": 26,
+        "method": "random_singleton_coverage_plus_uniform_pool",
+        "neighbors": 30995,
+        "restart": 15,
+        "seed": 4002748829283806004,
+        "supported": true,
+        "sweeps": 26
+      }
+    ],
+    "returned_minimum_verified": true,
+    "score": {
+      "data_bits": 3027.266221673781,
+      "log_likelihood": -2098.3410463575397,
+      "model_bits": 181,
+      "total_bits": 3208.266221673781
+    },
+    "scored_initializations": 16,
+    "selected_length_counts": {
+      "1": 9,
+      "2": 14
+    },
+    "selected_unique_units": 20,
+    "status": "verified",
+    "stop_reason": "budget_exhausted",
+    "supported_initializations": 16,
+    "unit_pool_size": 42,
+    "wall_seconds": 185.9352402499935
+  },
+  "stage1_score": {
+    "data_bits": 3027.266221673781,
+    "log_likelihood": -2098.3410463575397,
+    "model_bits": 181,
+    "total_bits": 3208.266221673781
+  },
+  "stage1_trace": {
+    "bytes": 16460167,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-001/B-key1-stage1.json.gz",
+    "sha256": "5f9f36ed43565dec172ad3a10324533fc9796aa088b24aadfd8dbb955fe6a8de"
+  },
+  "stage1_units": [
+    "CB",
+    "BE",
+    "C",
+    "FA",
+    "DF",
+    "E",
+    "DD",
+    "EF",
+    "CC",
+    "F",
+    "CE",
+    "BF",
+    "FF",
+    "B",
+    "AB",
+    "D",
+    "F",
+    "AE",
+    "A",
+    "AC",
+    "ED",
+    "B",
+    "B"
+  ],
+  "stage2_accounting": {
+    "all_neighbor_likelihoods_independently_replayed": false,
+    "complete_sweeps": 2,
+    "final_local_certificate": true,
+    "neighbors_accounted": 2384
+  },
+  "stage2_stop": "local_optimum",
+  "stage2_trace": {
+    "bytes": 73433,
+    "path": "outputs/BLIND-CHANNEL-CONFIRM-001/B-key1-stage2.json.gz",
+    "sha256": "33b366c3fa444e7b12d6d210ad1aae289b18063e90c536f19dc2c4a6c33c3628"
+  },
+  "units": [
+    "CB",
+    "BE",
+    "C",
+    "FA",
+    "DF",
+    "E",
+    "DD",
+    "EF",
+    "CC",
+    "A",
+    "CE",
+    "BF",
+    "FF",
+    "B",
+    "AB",
+    "D",
+    "F",
+    "AE",
+    "A",
+    "AC",
+    "ED",
+    "B",
+    "B"
+  ]
+}
