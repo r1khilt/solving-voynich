@@ -1,0 +1,59 @@
+{
+  "contexts": 21553,
+  "counts": {
+    "bytes": 172709,
+    "path": "outputs/LATIN-SOURCE-MODEL-001/statistical-small/counts.json.gz",
+    "sha256": "28bdb17c6ccee37bae47daf18e19fc138496a6ba40f83c4548112b907ee8dce4"
+  },
+  "dataset": "small",
+  "experiment": "LATIN-SOURCE-MODEL-001",
+  "freeze": "37cb7c5ee48f1e1a54389c6e49eb453636b8c30c",
+  "inputs": {
+    "bytes": 7182,
+    "path": "results/LATIN-SOURCE-MODEL-001/statistical-small-inputs.json",
+    "sha256": "720e85a7095492198b1dbbe650cd551e7d2c298394753ec997bde2425fd4fd83"
+  },
+  "minimum_context_total": 4,
+  "order": 12,
+  "resources": {
+    "cpu_seconds": 1.1850990000000001,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 249151488,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 1.1861064170079771
+  },
+  "scores": [
+    {
+      "selection_bits": 1116630.1551508598,
+      "selection_bpc": 3.1080009662511827,
+      "tau": 16.0
+    },
+    {
+      "selection_bits": 1091270.192615073,
+      "selection_bpc": 3.037414668987277,
+      "tau": 64.0
+    },
+    {
+      "selection_bits": 1122898.048236226,
+      "selection_bpc": 3.125446866020068,
+      "tau": 256.0
+    },
+    {
+      "selection_bits": 1181028.1675618056,
+      "selection_bpc": 3.2872448133518675,
+      "tau": 1024.0
+    }
+  ],
+  "selected": {
+    "selection_bits": 1091270.192615073,
+    "selection_bpc": 3.037414668987277,
+    "tau": 64.0
+  },
+  "status": "completed_source_only"
+}
