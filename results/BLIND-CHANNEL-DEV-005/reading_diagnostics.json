@@ -1,0 +1,44 @@
+{
+  "cases": {
+    "B-key1": {
+      "learned_distinct_units": 20,
+      "literal_generating_rows_matched": 20,
+      "objective_gain_vs_generating_fit": 6.66184124077563,
+      "oracle_identical_records": {
+        "fit": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "transfer": [
+          true,
+          true
+        ]
+      },
+      "source_rows": 23
+    },
+    "B-key2": {
+      "learned_distinct_units": 21,
+      "literal_generating_rows_matched": 20,
+      "objective_gain_vs_generating_fit": 20.084709666139133,
+      "oracle_identical_records": {
+        "fit": [
+          false,
+          false,
+          true,
+          true
+        ],
+        "transfer": [
+          true,
+          true
+        ]
+      },
+      "source_rows": 23
+    }
+  },
+  "evaluation_sha256": "879b17b4e3db4d69cbd5086bcf7f61b7122b60174a2d5066210056a9e3b8d768",
+  "experiment": "BLIND-CHANNEL-DEV-005",
+  "predictions_sha256": "237e50d90790c49bc329a0b311875c09a31f659df58a4536130de0e231f4275c",
+  "stage": "Post-evaluation descriptive comparison; no selection or refit"
+}

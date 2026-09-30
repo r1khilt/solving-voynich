@@ -1,0 +1,279 @@
+{
+  "audit": {
+    "alternative_tied_maps": 0,
+    "floor_records": 24,
+    "maximum_score_delta": 1.4779288903810084e-12,
+    "record_predictions": 36,
+    "scope": "Root orchestration using frozen independently authored inference, edit and coding references"
+  },
+  "cases": {
+    "B-key1": {
+      "learned": {
+        "fit": {
+          "decoded_characters": 894,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 13,
+          "exact_records": 2,
+          "gold_characters": 896,
+          "log_likelihood": -1951.367993331005,
+          "model_bits": 184,
+          "record_edits": [
+            0,
+            6,
+            0,
+            7
+          ],
+          "supported_records": 4,
+          "total_bits": 2999.2289269280886
+        },
+        "transfer": {
+          "decoded_characters": 448,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 0,
+          "exact_records": 2,
+          "gold_characters": 448,
+          "log_likelihood": -1019.5663826949258,
+          "model_bits": 184,
+          "record_edits": [
+            0,
+            0
+          ],
+          "supported_records": 2,
+          "total_bits": 1654.9233641710684
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 894,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 13,
+          "exact_records": 2,
+          "gold_characters": 896,
+          "log_likelihood": -1951.8267467210267,
+          "model_bits": 190,
+          "record_edits": [
+            0,
+            6,
+            0,
+            7
+          ],
+          "supported_records": 4,
+          "total_bits": 3005.8907681688643
+        },
+        "transfer": {
+          "decoded_characters": 448,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 0,
+          "exact_records": 2,
+          "gold_characters": 448,
+          "log_likelihood": -1019.8782249178287,
+          "model_bits": 190,
+          "record_edits": [
+            0,
+            0
+          ],
+          "supported_records": 2,
+          "total_bits": 1661.3732573995903
+        }
+      }
+    },
+    "B-key1-shuffle": {
+      "learned": {
+        "fit": {
+          "decoded_characters": 1629,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2866.8919522240826,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4281.050802238163
+        },
+        "transfer": {
+          "decoded_characters": 821,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1444.2896395094963,
+          "model_bits": 145,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2228.6695005276592
+        }
+      }
+    },
+    "B-key2": {
+      "learned": {
+        "fit": {
+          "decoded_characters": 880,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 43,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1980.4710723003864,
+          "model_bits": 184,
+          "record_edits": [
+            8,
+            9,
+            12,
+            14
+          ],
+          "supported_records": 4,
+          "total_bits": 3041.2157946318152
+        },
+        "transfer": {
+          "decoded_characters": 446,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 8,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "log_likelihood": -940.5499679292643,
+          "model_bits": 184,
+          "record_edits": [
+            8,
+            0
+          ],
+          "supported_records": 2,
+          "total_bits": 1540.9267744398232
+        }
+      },
+      "oracle": {
+        "fit": {
+          "decoded_characters": 885,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "edits": 34,
+          "exact_records": 0,
+          "gold_characters": 896,
+          "log_likelihood": -1990.233849094476,
+          "model_bits": 190,
+          "record_edits": [
+            2,
+            6,
+            12,
+            14
+          ],
+          "supported_records": 4,
+          "total_bits": 3061.3005042979544
+        },
+        "transfer": {
+          "decoded_characters": 446,
+          "dictionary_floor": {
+            "edits": 0,
+            "record_edits": [
+              0,
+              0
+            ]
+          },
+          "edits": 8,
+          "exact_records": 1,
+          "gold_characters": 448,
+          "log_likelihood": -940.8311195181891,
+          "model_bits": 190,
+          "record_edits": [
+            8,
+            0
+          ],
+          "supported_records": 2,
+          "total_bits": 1547.332390442903
+        }
+      }
+    },
+    "B-key2-shuffle": {
+      "learned": {
+        "fit": {
+          "decoded_characters": 1501,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -2733.4656722225814,
+          "model_bits": 148,
+          "record_edits": null,
+          "supported_records": 4,
+          "total_bits": 4091.557369755735
+        },
+        "transfer": {
+          "decoded_characters": 755,
+          "edits": null,
+          "exact_records": null,
+          "gold_characters": null,
+          "log_likelihood": -1370.9073643169627,
+          "model_bits": 148,
+          "record_edits": null,
+          "supported_records": 2,
+          "total_bits": 2125.8012560182415
+        }
+      }
+    }
+  },
+  "experiment": "BLIND-CHANNEL-DEV-005",
+  "key_freeze": "b073ca212c545e44d73b593739cb0e1520f876fa",
+  "predictions": {
+    "bytes": 5365,
+    "path": "outputs/BLIND-CHANNEL-DEV-005/predictions.json.gz",
+    "sha256": "237e50d90790c49bc329a0b311875c09a31f659df58a4536130de0e231f4275c"
+  },
+  "resources": {
+    "cpu_seconds": 2.855683,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 122224640,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 3.242689334001625
+  }
+}
