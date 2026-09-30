@@ -77,6 +77,13 @@ def summarize():
     lines += ['', 'Bound flags use floating scores and are not interval-arithmetic proofs. MAP optimizes '
               'exact-string probability rather than edit distance. Complete per-key errors, shuffled '
               'diagnostics and numerical margins remain in the tracked evaluation and summary.', '',
+              'In this panel, neither gold paths nor the narrower search demonstrate a higher-scoring '
+              'alternative to the primary positive readings; that is not proof of exact MAP search. '
+              'Every erroneous primary positive reading scores above its true path. Wider search '
+              'therefore cannot make the truth become the MAP answer on those records with this '
+              'unchanged source. Neural A beam32 makes20edits versus23atbeam128, even though its '
+              'score is not better: this illustrates the difference between path probability and '
+              'edit accuracy. The primary result stays23.', '',
               '## Validation and limits', '',
               'Every returned path re-encodes exactly. Both statistical arms have separate backward '
               'marginal/MAP and path-score checks; neural paths have full-forward score checks. All384 '
@@ -90,7 +97,8 @@ def summarize():
         lines.append(f"- {stage}: {r['wall_seconds']:.3f}s wall, {r['cpu_seconds']:.3f}s host CPU; "
                      f"peak RSS {r['peak_rss_bytes']} bytes.")
     lines += ['', 'Zero paid experiment API/cloud use. GPU time is reflected in elapsed time; '
-              'local energy was not measured. Bulk readings and weights remain ignored with hashes.', '']
+              'local energy was not measured. Bulk readings and weights remain ignored with hashes.', '',
+              '![Primary reader errors and all per-key outcomes](../../results/NEURAL-READER-001/reader-comparison.png)', '']
     target = ROOT / 'docs/experiments/NEURAL-READER-001-results.md'
     with target.open('x') as handle:
         handle.write('\n'.join(lines))
