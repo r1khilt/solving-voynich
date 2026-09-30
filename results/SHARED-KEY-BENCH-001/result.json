@@ -1,0 +1,147 @@
+{
+  "fit_scores_not_used_to_weight_the_uniform_mixture": true,
+  "freeze": "a493c459f07f64dae33296e7404499b36c2ca1f2",
+  "paid_cost": 0,
+  "resources": {
+    "cpu_seconds": 30.681282,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 914227200,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 30.71818241701112
+  },
+  "results": {
+    "glyph_shuffle": {
+      "bank_size": 1197,
+      "fit_sample": {
+        "cpu_seconds": 0.316866000000001,
+        "edges": 214733,
+        "nodes": 141715,
+        "records": 128,
+        "wall_seconds": 0.31711966698640026
+      },
+      "fit_sample_status": "complete",
+      "linear_full_bank_fit_seconds": 11.862257543210035,
+      "mixture_cpu_seconds": 15.712359,
+      "mixture_status": "RuntimeError: Shared-key exact state cap exceeded; no approximation",
+      "mixture_wall_seconds": 15.726469666988123,
+      "resources": {
+        "cpu_seconds": 30.654218,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 914227200,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 30.69109291699715
+      },
+      "sample_indices": [
+        0,
+        38,
+        77,
+        115,
+        154,
+        192,
+        231,
+        270,
+        308,
+        347,
+        385,
+        424,
+        462,
+        501,
+        540,
+        578,
+        617,
+        655,
+        694,
+        733,
+        771,
+        810,
+        848,
+        887,
+        925,
+        964,
+        1003,
+        1041,
+        1080,
+        1118,
+        1157,
+        1196
+      ],
+      "source_generated_not_empirical": true
+    },
+    "source_generated": {
+      "bank_size": 1197,
+      "fit_sample": {
+        "cpu_seconds": 0.8681220000000001,
+        "edges": 510853,
+        "nodes": 302101,
+        "records": 128,
+        "wall_seconds": 0.8713389170006849
+      },
+      "fit_sample_status": "complete",
+      "linear_full_bank_fit_seconds": 32.59352136405687,
+      "mixture_cpu_seconds": 13.4515,
+      "mixture_status": "RuntimeError: Shared-key exact state cap exceeded; no approximation",
+      "mixture_wall_seconds": 13.464707207982428,
+      "resources": {
+        "cpu_seconds": 14.560179,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 904331264,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 14.576796125009423
+      },
+      "sample_indices": [
+        0,
+        38,
+        77,
+        115,
+        154,
+        192,
+        231,
+        270,
+        308,
+        347,
+        385,
+        424,
+        462,
+        501,
+        540,
+        578,
+        617,
+        655,
+        694,
+        733,
+        771,
+        810,
+        848,
+        887,
+        925,
+        964,
+        1003,
+        1041,
+        1080,
+        1118,
+        1157,
+        1196
+      ],
+      "source_generated_not_empirical": true
+    }
+  },
+  "status": "resource_probe_only"
+}
