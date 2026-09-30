@@ -1,0 +1,55 @@
+{
+  "paid_cost_usd": 0,
+  "peak_rss_bytes": 522960896,
+  "rows": [
+    {
+      "batch": 16,
+      "cpu_mps_maximum_logit_difference": 5.21540641784668e-08,
+      "embedding": 96,
+      "layers": 2,
+      "length": 512,
+      "mean_step_seconds": 0.07921719787555048,
+      "mps_current_allocated_bytes": 53966080,
+      "mps_driver_allocated_bytes": 1395523584,
+      "parameters": 3364631,
+      "timed_step_seconds": [
+        0.07869220897555351,
+        0.07946450001327321,
+        0.07875675000832416,
+        0.07918470798176713,
+        0.07955912500619888,
+        0.07926354100345634,
+        0.07932075002463534,
+        0.07949599999119528
+      ],
+      "width": 512
+    },
+    {
+      "batch": 16,
+      "cpu_mps_maximum_logit_difference": 4.0978193283081055e-08,
+      "embedding": 96,
+      "layers": 2,
+      "length": 512,
+      "mean_step_seconds": 0.12128671899699839,
+      "mps_current_allocated_bytes": 119399680,
+      "mps_driver_allocated_bytes": 1773010944,
+      "parameters": 7405079,
+      "timed_step_seconds": [
+        0.12211995801771991,
+        0.12197083400678821,
+        0.12256216700188816,
+        0.12158295899280347,
+        0.12114012500387616,
+        0.12053099999320693,
+        0.12025395897217095,
+        0.12013274998753332
+      ],
+      "width": 768
+    }
+  ],
+  "seed": 90317,
+  "selection_rule": "prefer768 if mean_step<=0.5s and driver_allocated<=8GiB, else512 under same limits, otherwise redesign budget",
+  "source_sha256": "7118c75ad427f953e11942737eb4749438b86fe1c258f4be9d5d22fde082b330",
+  "status": "random_token_hardware_probe_not_language_training",
+  "torch": "2.14.0"
+}

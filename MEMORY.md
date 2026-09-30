@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-30 PDT (calibrated reader fails; exact-length intervention also does not repair it; no Voynich decipherment).
+Last updated: 2026-09-30 PDT (broader Latin corpus acquired; parser and source-model hardware ready; no Voynich decipherment).
 
 ## Current state
+
+- **LATIN-SOURCE-001 preparation ready:** PinnedPerseus cc843833,106LatinXMLs/20.44MBverified;12training author groups, Plinyselection, Nepos/Apuleiusreserved. EarlierCicero/Sallust/Tacitusfolders excluded. Source/parser plan quarantines editorial/foreignunits, preservesboundaries and removes64letter overlaps before training. Preliminarytrain+selection7.18Mcleanletters beforededup. Full1,930+23subtests pass,8skips. Newtwo-layer768LSTMhardwareprobe7.405Mparams,0.1213s/update onMPS,1.77GBdriverallocation;randomtokens only, no Latintraining. Publish/verify source and run one bounded preparation, then audit and freeze corpus before a matcheddata/model experiment. `docs/research/latin-source001-data-plan.md`, NB-246. Raw/derivedcorpora ignored;zero paiduse.
 
 - **SUFFIX002-DIAG-A complete:** Frozen48c8efc before one run. All128original readings reproduced and160exact forward/backward moments agree. Calibrated12 mean posterior entropy15.2378bits; model-implied2.2028exact records vsobserved2/32 is descriptive, not calibration proof. Supplying true224letter length increases229→243edits while exactrecords2→5;5keys improve/3tie/8worsen. Mean entropy remains14.1521bits. Length assistance is not a sufficient repair; no qualification changes. Full1,913+23subtests pass,8skips;18.29diagnosticCPU seconds,0paiduse. All34source/input and30originalconfirmation bindings unchanged. `docs/experiments/SUFFIX-READER-002-DIAG-A-results.md`, NB-244–245. Next broader source data versus richer representation controls, with inference error measured; no new training/acquisition started. Stop nearby mass/length tuning.
 
