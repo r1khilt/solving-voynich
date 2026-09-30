@@ -1,0 +1,92 @@
+{
+  "arm": "fixed8",
+  "completed_models": [
+    {
+      "characters": 921555,
+      "initial_weights_sha256": "0a2ca283dec6d7ea5a430b82066569c5449624c4ad776daccfc434b478ca8d06",
+      "maximum_float64_delta": 2.462918473611353e-07,
+      "parameters": 7405079,
+      "records": 4096,
+      "reference_indices": [
+        0,
+        273,
+        546,
+        819,
+        1092,
+        1365,
+        1638,
+        1911,
+        2184,
+        2457,
+        2730,
+        3003,
+        3276,
+        3549,
+        3822,
+        4095
+      ],
+      "scores": {
+        "bytes": 37098,
+        "path": "outputs/SEQUENCE-MEMORY-001/fixed8-71101-scores.json.gz",
+        "sha256": "e28cbfb50b42f847edb728a7d89afada57e4ba2d7d5be4fc7c63a599c84444ac"
+      },
+      "scoring_wall_seconds": 11.19375337503152,
+      "seed": 71101
+    },
+    {
+      "characters": 921555,
+      "initial_weights_sha256": "c525edf39512f69219ab8ed19393eebc2849cb4f9fc35168fdc7c8d45ce13bdd",
+      "maximum_float64_delta": 2.564461283327546e-07,
+      "parameters": 7405079,
+      "records": 4096,
+      "reference_indices": [
+        0,
+        273,
+        546,
+        819,
+        1092,
+        1365,
+        1638,
+        1911,
+        2184,
+        2457,
+        2730,
+        3003,
+        3276,
+        3549,
+        3822,
+        4095
+      ],
+      "scores": {
+        "bytes": 37117,
+        "path": "outputs/SEQUENCE-MEMORY-001/fixed8-71109-scores.json.gz",
+        "sha256": "cd860775269e754caabaabfebf2b4a456c706788d09c18765c2250e1afa8e7af"
+      },
+      "scoring_wall_seconds": 11.500588959024753,
+      "seed": 71109
+    }
+  ],
+  "data_sha256": "9a0a1f8deffe39ca74838fcf250ec77e23f73be48862fdedfe951269cdc95a8b",
+  "freeze": "852e355b9725045628ff1a1fafaa5dd3fe1895ce",
+  "resources": {
+    "cpu_seconds": 5.244929,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 528318464,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 24.00134691700805
+  },
+  "sampled_driver_peak": 1259061248,
+  "sampled_tensor_peak": 29620480,
+  "status": "PASS",
+  "trace": {
+    "bytes": 424779,
+    "path": "outputs/SEQUENCE-MEMORY-001/fixed8-trace.jsonl",
+    "sha256": "2df9fe27ee569cdbdfe870d9d2801b548b6fa3a884adb9169028136b9a6aaf3b"
+  }
+}

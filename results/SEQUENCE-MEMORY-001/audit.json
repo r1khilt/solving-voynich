@@ -1,0 +1,106 @@
+{
+  "all_complete_cross_arm_maximum_score_deltas": {
+    "fixed8__variable64": 3.410605131648481e-13,
+    "fixed8__variable8": 3.410605131648481e-13,
+    "variable64__variable8": 0.0
+  },
+  "arms": {
+    "fixed8": {
+      "characters": 1843110,
+      "characters_per_second": 81214.5147398317,
+      "complete": true,
+      "host_peak_bytes": 528318464,
+      "maximum_float64_delta": 2.564461283327546e-07,
+      "projected_37032100_letter_seconds_excluding_preparation_and_audits": 455.97883726364967,
+      "resources": {
+        "cpu_seconds": 5.244929,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 528318464,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 24.00134691700805
+      },
+      "result": {
+        "bytes": 2379,
+        "path": "results/SEQUENCE-MEMORY-001/fixed8.json",
+        "sha256": "da32625634e37241fc6a0a6401f384e61bf8b509e2af976dc047a9c5eaefdded"
+      },
+      "sampled_driver_peak_bytes": 1259061248,
+      "sampled_tensor_peak_bytes": 29620480,
+      "scoring_wall_seconds": 22.694342334056273
+    },
+    "variable64": {
+      "characters": 1843110,
+      "characters_per_second": 235151.77117145067,
+      "complete": true,
+      "host_peak_bytes": 534265856,
+      "maximum_float64_delta": 2.564461283327546e-07,
+      "projected_37032100_letter_seconds_excluding_preparation_and_audits": 157.48169709935826,
+      "resources": {
+        "cpu_seconds": 2.145148,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 534265856,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 9.071713750017807
+      },
+      "result": {
+        "bytes": 2393,
+        "path": "results/SEQUENCE-MEMORY-001/variable64.json",
+        "sha256": "bb1369d6c155d5843472f8ff06c4113b9f2ce51349186f6a311d1c17ccf226a0"
+      },
+      "sampled_driver_peak_bytes": 2003582976,
+      "sampled_tensor_peak_bytes": 29620480,
+      "scoring_wall_seconds": 7.837959249969572
+    },
+    "variable8": {
+      "characters": 1843110,
+      "characters_per_second": 83063.16023575931,
+      "complete": true,
+      "host_peak_bytes": 544636928,
+      "maximum_float64_delta": 2.564461283327546e-07,
+      "projected_37032100_letter_seconds_excluding_preparation_and_audits": 445.8306172663222,
+      "resources": {
+        "cpu_seconds": 5.332053,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 544636928,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 23.480067541997414
+      },
+      "result": {
+        "bytes": 2390,
+        "path": "results/SEQUENCE-MEMORY-001/variable8.json",
+        "sha256": "df864df1b59b327518b5a6e3c587933fdc61dc063220f8913b27effbadc82f98"
+      },
+      "sampled_driver_peak_bytes": 1312014336,
+      "sampled_tensor_peak_bytes": 29620480,
+      "scoring_wall_seconds": 22.18925929098623
+    }
+  },
+  "campaign": {
+    "bytes": 1176,
+    "path": "results/SEQUENCE-MEMORY-001/campaign.json",
+    "sha256": "87ea586e3fbd014d5fd7af24a8cadbd6b2f4def1342855565df715012ad61616"
+  },
+  "freeze": "852e355b9725045628ff1a1fafaa5dd3fe1895ce",
+  "initial_weights_match_across_completed_arms": true,
+  "paid_spend_usd": 0,
+  "real_candidate_failure_not_reproduced_or_causally_explained": true,
+  "status": "PASS"
+}
