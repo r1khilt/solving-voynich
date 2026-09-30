@@ -1,8 +1,12 @@
 # Project memory
 
-Last updated: 2026-09-29 PDT (dictionary refinement reaches the true-key transfer baseline on exposed controls; no Voynich decipherment).
+Last updated: 2026-09-30 PDT (fresh-key pipeline prepared; Borg transcription constraint explicit; no Voynich decipherment).
 
 ## Current state
+
+- **Fresh qualification prepared, not yet run:** `BLIND-CHANNEL-CONFIRM-001` freezes8new Bkeys+8paired shuffles, Sallustfit/Tacitustransfer, unchanged source1search300s→source3refinement300s. Strict per-key5%/macro2%/oracle-gap2point gates and separate unchanged iid screen. Final editions remain unopened pending full source/protocol freeze; corpus policy requires explicit Latin/apparatus spans, all-body64letter overlap screen and body-contained fixed windows.98newfocused tests pass, including15 independent integration checks after fixing five pre-data no-repeat/failure guards. FiveCPUhour/two-worker/8GiB planning cap; no paiduse. Read registration, `docs/research/blind-channel-fresh-qualification-review.md`, `final-corpus-provenance-plan.md`, NB-219. Do not restart or tune exposedDEV cases.
+
+- **Borg parser qualified for format only:** complete166,508-byte offset partition;59unresolved codepoint types after conservative cleartext/annotation/marker quarantines;0solverrecords. A key-free glyph/ASCII legend or image correspondence remains missing. Current23-row deterministic≤2glyph family cannot emit59distinct glyphs; singleton initializer/pool caps are additional implementation constraints. Do not collapse/discard types to force compatibility. `docs/research/borg-next-executable-control.md`, `results/BORG-CONTROL-PREP-001/structure.json`, NB-220.
 
 - **DEV005 refinement complete; stop exposed-case tuning:** Under the frozen source, ciphertext-only warm-start refinement reduces B2transfer22→8/448 while B1stays0/448. Both learned transfer strings equal their generating-key oracle;3/4transfer records exact. B2dictionary-only floor20fit/12transfer→0/0, but fit43errors still exceeds oracle34 and both keys match only20/23literalrows. All4keys remotelyfrozenb073ca2 before evaluation;36record/24floor independent-reference replay agrees≤1.48e-12. Positive local optima; both shuffles retain best candidates at unchanged300s cap. 13,271neighbors,520.613campaignwall/815.173fit+evaluationCPU seconds,no paiduse. Newoptimizer root-authored; no newindependentagentreview afterusage limits. Next freeze a from-scratch pipeline for freshkeys/newauthors, not more tuning of these cases. Finalauthors/statefulC/Borg/Voynich decoding remain untested. Read `docs/experiments/BLIND-CHANNEL-DEV-005-results.md`, NB-216–218.
 
