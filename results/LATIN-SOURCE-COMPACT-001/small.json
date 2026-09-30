@@ -1,0 +1,95 @@
+{
+  "array_bytes": 1728752,
+  "contexts_by_depth": [
+    1,
+    22,
+    328,
+    2527,
+    6802,
+    5819,
+    3034,
+    1481,
+    734,
+    364,
+    214,
+    134,
+    93
+  ],
+  "counts": {
+    "bytes": 304162,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/small.npz",
+    "sha256": "26438ec1134859d323f65d93250656778976916b93d7714e93a6d7b03db89cd5"
+  },
+  "dataset": "small",
+  "experiment": "LATIN-SOURCE-COMPACT-001",
+  "freeze": "7233373a3713674d3796cedac84c47e6ebe948d2",
+  "inputs": {
+    "bytes": 7182,
+    "path": "results/LATIN-SOURCE-COMPACT-001/small-inputs.json",
+    "sha256": "720e85a7095492198b1dbbe650cd551e7d2c298394753ec997bde2425fd4fd83"
+  },
+  "minimum": 4,
+  "nonzero_successors_by_depth": [
+    23,
+    372,
+    3356,
+    16674,
+    29436,
+    19647,
+    9127,
+    4132,
+    1930,
+    877,
+    481,
+    273,
+    166
+  ],
+  "older_large_baseline_status": "fixed_cap_failure_retained",
+  "order": 12,
+  "resources": {
+    "cpu_seconds": 0.21379100000000006,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 299679744,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.21630437500425614
+  },
+  "scores": [
+    {
+      "characters": 359276,
+      "selection_bits": 1116630.1551508598,
+      "selection_bpc": 3.1080009662511827,
+      "tau": 16.0
+    },
+    {
+      "characters": 359276,
+      "selection_bits": 1091270.192615073,
+      "selection_bpc": 3.037414668987277,
+      "tau": 64.0
+    },
+    {
+      "characters": 359276,
+      "selection_bits": 1122898.048236226,
+      "selection_bpc": 3.125446866020068,
+      "tau": 256.0
+    },
+    {
+      "characters": 359276,
+      "selection_bits": 1181028.1675618056,
+      "selection_bpc": 3.2872448133518675,
+      "tau": 1024.0
+    }
+  ],
+  "selected": {
+    "characters": 359276,
+    "selection_bits": 1091270.192615073,
+    "selection_bpc": 3.037414668987277,
+    "tau": 64.0
+  },
+  "status": "completed_source_only"
+}

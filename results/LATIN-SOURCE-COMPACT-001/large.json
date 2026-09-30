@@ -1,0 +1,95 @@
+{
+  "array_bytes": 115093408,
+  "contexts_by_depth": [
+    1,
+    23,
+    425,
+    4489,
+    36293,
+    158628,
+    327225,
+    355868,
+    264507,
+    157412,
+    82010,
+    40641,
+    20202
+  ],
+  "counts": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  },
+  "dataset": "large",
+  "experiment": "LATIN-SOURCE-COMPACT-001",
+  "freeze": "7233373a3713674d3796cedac84c47e6ebe948d2",
+  "inputs": {
+    "bytes": 420692,
+    "path": "results/LATIN-SOURCE-COMPACT-001/large-inputs.json",
+    "sha256": "cf94e0c6fb9fc58acc289b86a8ca9132a510d766fcdd89abc7f0f8d3ba5d9c6c"
+  },
+  "minimum": 4,
+  "nonzero_successors_by_depth": [
+    23,
+    467,
+    5332,
+    46302,
+    269674,
+    863086,
+    1401234,
+    1325293,
+    905429,
+    507229,
+    249802,
+    116993,
+    54750
+  ],
+  "older_large_baseline_status": "fixed_cap_failure_retained",
+  "order": 12,
+  "resources": {
+    "cpu_seconds": 5.009964,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1522024448,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 5.01825341701624
+  },
+  "scores": [
+    {
+      "characters": 359276,
+      "selection_bits": 911987.7853871168,
+      "selection_bpc": 2.5384044171809883,
+      "tau": 16.0
+    },
+    {
+      "characters": 359276,
+      "selection_bits": 877385.3743808891,
+      "selection_bpc": 2.442092915699599,
+      "tau": 64.0
+    },
+    {
+      "characters": 359276,
+      "selection_bits": 895943.7139334048,
+      "selection_bpc": 2.4937477424971464,
+      "tau": 256.0
+    },
+    {
+      "characters": 359276,
+      "selection_bits": 945368.3900532336,
+      "selection_bpc": 2.6313151728844497,
+      "tau": 1024.0
+    }
+  ],
+  "selected": {
+    "characters": 359276,
+    "selection_bits": 877385.3743808891,
+    "selection_bpc": 2.442092915699599,
+    "tau": 64.0
+  },
+  "status": "completed_source_only"
+}
