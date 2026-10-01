@@ -1,0 +1,36 @@
+{
+  "build": {
+    "abi": 1,
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/src/voynich/native_source_state.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-STATE-SYSTEMS-001/build/source_state.dylib"
+    ],
+    "compile_logs_lost_on_preparation_manifest_error": true,
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "compiler_version_observed_after_compile": true,
+    "cpp_sha256": "51bc370ea6ac4ca903a2a03270ea8dc9bedb83d1419ec6a7870d6ecbb146a8eb",
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-STATE-SYSTEMS-001/build/source_state.dylib",
+    "library_sha256": "21a5e0e5025870fdb77aa1ff4ba84f24eac16256c0fde7a23e9a3a29024a7e2b",
+    "stderr": null,
+    "stdout": null
+  },
+  "library": {
+    "bytes": 75136,
+    "path": "outputs/SOURCE-STATE-SYSTEMS-001/build/source_state.dylib",
+    "sha256": "21a5e0e5025870fdb77aa1ff4ba84f24eac16256c0fde7a23e9a3a29024a7e2b"
+  },
+  "no_empirical_search_or_training": true,
+  "paid_spend_usd": 0,
+  "preparation_repair": {
+    "bytes": 517,
+    "path": "results/SOURCE-STATE-SYSTEMS-001/preparation-repair.json",
+    "sha256": "c7fb730456a7a246eaa99129fc27b3d8f2bffe13e9f00c57856fcd48938e6b1e"
+  }
+}
