@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-09-30 PDT (CONFIRM-002 FAIL; DIAG-A proves missed better keys in two catastrophic cases; prioritize global dictionary search; no Voynich decipherment).
+Last updated: 2026-09-30 PDT (unknown-key recovery still FAIL; conditional whole-key inverse implemented; local resource qualification precedes training; no Voynich decipherment).
 
 ## Current state
+
+- **Conditional whole-key proposal implemented; resource run not yet launched:** actual small5,423,146/large94,981,674parameters, shared independent record encoder/causal23-row decoder over42duplicate-allowing variable-length units, proper full-row joint loss, first-occurrence glyph canonicalization plus complete unseen-symbol orbits. Exact tiny normalization/leakage/gradient/rename/padding/sampling checks and actual CPU-transport optimizer/archive/replay integration pass. Large model about220×early430k, not recovery evidence. KEY-PROPOSAL-SYSTEMS-001 registered four sequential MPS arms/batches1and4,15random-only updates each,8sampled+1greedy whole key, completeCPUdouble checks;300wall/240CPU per arm,315outer,16GiBdriver/8GiBhost,one450wall/400CPU auditor,zero paid/corpus/panel access. Matched initialization, no retry/extensions. Publish/remote verify before launch; then actual cost selects finite language training. NB-302 and method/protocol docs. No new language training or causal mechanism.
 
 - **GLOBAL-SEARCH-SYSTEMS-001 engineering PASS:** Source b7de43f remotely frozen before one artificial run:2,034distinct keys/2,048proposals/8,136record marginals,10.059search/11.055whole wall seconds,843.7MBhost,0paid. Exact16reference scores≤4.548e-13; all4,306progress rows/11bindings audited. Partial relaxation caps at0/11/20of23assigned rows in both backends; complete23equals exact score. Prioritize strong-source replica search, not huge A* queues. Full2,324tests+23subtestsPASS/13skips;56focused exhaustive transition/path/completion tests. No stationary finite output/global optimum/interval-certificate or recovery claim; no empirical case opened. Deadline/admission guards fixed before source freeze, reviewers interrupted by service limits, no completed review claim. NB-289–290, GLOBAL-SEARCH-SYSTEMS-001-results.md. All32global development fitting is complete below; fixed reading comparison precedes fresh qualification, original CONFIRM-002 FAIL remains.
 
