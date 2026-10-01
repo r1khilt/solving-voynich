@@ -1,0 +1,78 @@
+{
+  "arm": "iid",
+  "case": 1,
+  "cell_cpu_seconds": 14.083436000000006,
+  "cell_wall_seconds": 14.106040375016164,
+  "config": {
+    "glyphs": 6,
+    "guidance": "iid",
+    "guide_cache_entries": 4096,
+    "guide_max_tables": 20000000,
+    "guide_prewidth": 16384,
+    "lookahead_depth": 0,
+    "lookahead_layers": 16,
+    "max_active": 500000,
+    "max_expanded": 4000000,
+    "max_generated": 120000000,
+    "max_seconds": 600.0,
+    "max_terminals": 512,
+    "merge": true,
+    "rho": 0.0044444444444444444,
+    "schedule": "balanced",
+    "width": 4096
+  },
+  "diagnostic": {
+    "edit_errors": 99,
+    "exact_records": 0,
+    "gold_used_mapping_in_returned_terminals": false,
+    "gold_used_rows": 18,
+    "matched_gold_used_rows": 3,
+    "no_claim_about_unreturned_terminals": true,
+    "record_edits": [
+      47,
+      52
+    ],
+    "returned_partial_keys_compatible_with_gold": 0,
+    "true_source_letters": 128
+  },
+  "fitted": {
+    "bytes": 20058,
+    "path": "outputs/SOURCE-BELLMAN-001/case1-iid.json.gz",
+    "sha256": "834938af6ee064373c25c80c7344f6cc5177fa576cefe3d876ddaa3ce920db4e"
+  },
+  "name": "case1-iid",
+  "prediction": {
+    "bytes": 1995,
+    "path": "outputs/SOURCE-BELLMAN-001/case1-iid-prediction.json",
+    "sha256": "9baa9dca30f355068269107a377b34f332f0cf33cabaf7ebb29b729a415234ea"
+  },
+  "summary": {
+    "complete_search": false,
+    "evidence_log_upper": -11.841108683431232,
+    "expanded": 901673,
+    "found_log_mass": -418.10878236800033,
+    "full_key_posterior_claimed": false,
+    "generated": 12070084,
+    "guidance": "iid",
+    "guide_prewidth": 16384,
+    "guide_tables_built": 2519496,
+    "interval_arithmetic_certificate": false,
+    "lookahead_actions": 0,
+    "lookahead_calls": 0,
+    "lookahead_depth": 0,
+    "lookahead_layers": 16,
+    "maximum_active_states": 249397,
+    "maximum_unpruned_layer": 167841,
+    "merge": true,
+    "merged_arrivals": 904887,
+    "pruned_states": 10252521,
+    "returned_terminal_log_mass": -418.10968844122823,
+    "schedule": "balanced",
+    "scope": "Compiled Markov history sums; finite beam loses mass. No full-key posterior, reading MAP, interval certificate or historical recovery claim.",
+    "stop_reason": "frontier_exhausted",
+    "tail_is_heuristic_with_floor": true,
+    "terminal_output_truncated": true,
+    "terminal_states": 11004,
+    "unresolved_log_mass_upper": -11.841108683431232
+  }
+}
