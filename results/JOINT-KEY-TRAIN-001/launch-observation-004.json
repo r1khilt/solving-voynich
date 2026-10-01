@@ -1,0 +1,66 @@
+{
+  "campaign_session": 45401,
+  "claims": "Closed artifact bytes, stored score arithmetic and existing short-reference deltas only. No new inference, tensor replay, full source/optimizer ledger audit or selected-final/recovery qualification.",
+  "freeze": "9053abf667fb296ef41e7eb5d9b7eedd1da94533",
+  "last_flushed_optimizer": {
+    "data_sha256": "352ae80d91cee6a7f5bd2eea752e06316f8897892ea4a351140995d4326f23fe",
+    "episodes_seen": 43912,
+    "loss_nats_per_row": 3.5031561851501465,
+    "lr": 0.0001462540553005348,
+    "preclip_norm": 2.2175378799438477,
+    "source_characters": 12637205,
+    "stage": "optimizer",
+    "step": 10978,
+    "step_wall_seconds": 0.7079992910148576
+  },
+  "last_resource_sample": {
+    "cpu_seconds": 382.963341,
+    "driver_bytes": 8424882176,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1940275200,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "stage": "resource",
+    "step": 10900,
+    "tensor_bytes": 1547313664,
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 7787.575944749988
+  },
+  "observed_unix": 1790845072.410073,
+  "paid_spend_usd": 0,
+  "snapshot": {
+    "bytes": 598,
+    "path": "results/JOINT-KEY-TRAIN-001/large-72203-step10000.json",
+    "sha256": "686a8981bf8ce8cb886e93c3856c2e8b6d1e2f4e7403b021752f976855c0cabf"
+  },
+  "status": "partial_archival_observation_not_training_completion_audit",
+  "stored_short_reference_deltas": {
+    "cpu_two_four_delta": 1.5543122344752192e-15,
+    "mps_cpu_max_delta": 6.353457291607967e-06,
+    "mps_two_four_delta": 1.9073486328125e-06
+  },
+  "stored_validation_summary": {
+    "correct_rows": 64,
+    "episodes": 64,
+    "mean_nats_per_row": 3.54767527399837,
+    "rows": 1472,
+    "used_correct_rows": 54,
+    "used_mask_is_diagnostic_only": true,
+    "used_rows": 1248,
+    "whole_keys_exact": 0
+  },
+  "validation": {
+    "bytes": 12522,
+    "path": "outputs/JOINT-KEY-TRAIN-001/large-72203-step10000-validation.json.gz",
+    "sha256": "5780016b018afb9f0e38b695d0f48a782bd83655e94d77f238d32b44b9d5f63e"
+  },
+  "weights": {
+    "bytes": 379981527,
+    "path": "outputs/JOINT-KEY-TRAIN-001/large-72203-step10000.pt",
+    "sha256": "66fa282627cad0ad9e4d997371a35ca86116918213575c363c5e07d5987a55f4"
+  }
+}
