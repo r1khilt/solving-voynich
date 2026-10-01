@@ -1,0 +1,77 @@
+{
+  "detailed_balance_key_pairs": 70560,
+  "empirical_panel_calls": 0,
+  "minimum_joint_positive_support_transition": "1/5120",
+  "one_particle_two_stage_evidence_expectations": 392,
+  "paid_spend_usd": 0,
+  "scope": "Exact two-row/six-unit finite models: all49conditionalkeys, two2recordobservations, fiveprefix/EOSstages, contextual/zero-transition sources, row and joint mixture kernels. No particle performance, Latin corpus, historical evidence or large-state mixing guarantee.",
+  "status": "PASS_exact_finite_dictionary_smc_laws",
+  "target_kernel_matrices": 1960,
+  "weighted_transport_coordinates": 5760,
+  "wrong_operation_order_witnesses": [
+    {
+      "cipher": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "correct_weight_before_move": "3/8",
+      "incorrect_move_before_weight": "77/192",
+      "kernel": "row",
+      "source": "contextual"
+    },
+    {
+      "cipher": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "correct_weight_before_move": "3/8",
+      "incorrect_move_before_weight": "619/1536",
+      "kernel": "joint",
+      "source": "contextual"
+    },
+    {
+      "cipher": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "correct_weight_before_move": "3/8",
+      "incorrect_move_before_weight": "77/192",
+      "kernel": "row",
+      "source": "contextual"
+    },
+    {
+      "cipher": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "correct_weight_before_move": "3/8",
+      "incorrect_move_before_weight": "619/1536",
+      "kernel": "joint",
+      "source": "contextual"
+    }
+  ]
+}
