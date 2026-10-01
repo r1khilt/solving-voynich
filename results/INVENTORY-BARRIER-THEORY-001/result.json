@@ -1,0 +1,211 @@
+{
+  "cipher": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "empirical_panel_calls": 0,
+  "inputs": [
+    {
+      "bytes": 4222,
+      "path": "scripts/check_prefix_bridge001.py",
+      "sha256": "a65f2af9b0eb91af7c3be4c205ccc3659be441b02bb5eedfc99722c38c3b0b5a"
+    },
+    {
+      "bytes": 3237,
+      "path": "scripts/check_inventory_barrier001.py",
+      "sha256": "09dd840afab0b535dd1107cac1ba91a922f342a568d32535fe35e2d3ef6927b0"
+    }
+  ],
+  "kernels": {
+    "row": {
+      "components": [
+        [
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            4,
+            3
+          ]
+        ]
+      ],
+      "exact_balance_pairs": 16,
+      "matrix": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ]
+    },
+    "row_plus_swap": {
+      "components": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      ],
+      "exact_balance_pairs": 16,
+      "matrix": [
+        [
+          "23/24",
+          "1/24",
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "23/24",
+          "1/24"
+        ],
+        [
+          "0",
+          "0",
+          "1/2",
+          "1/2"
+        ]
+      ]
+    },
+    "whole_pair": {
+      "components": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ]
+      ],
+      "exact_balance_pairs": 16,
+      "matrix": [
+        [
+          "407/432",
+          "1/432",
+          "1/36",
+          "1/36"
+        ],
+        [
+          "1/36",
+          "11/12",
+          "1/36",
+          "1/36"
+        ],
+        [
+          "1/1280",
+          "1/15360",
+          "137803/138240",
+          "1/432"
+        ],
+        [
+          "3/320",
+          "1/1280",
+          "1/36",
+          "11083/11520"
+        ]
+      ]
+    }
+  },
+  "keys_enumerated": 36,
+  "paid_spend_usd": 0,
+  "scope": "Own finite rational mathematics, not a proposed sampler run or large-case disconnection claim",
+  "status": "PASS_exact_inventory_barrier_witness",
+  "strictly_positive_source": true,
+  "supported_keys": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      3
+    ]
+  ],
+  "supported_likelihoods": [
+    "243/409600",
+    "81/1638400",
+    "27/1280",
+    "9/5120"
+  ]
+}

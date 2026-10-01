@@ -1,0 +1,53 @@
+{
+  "audit": {
+    "bytes": 841,
+    "path": "results/CONTEXTUAL-GIBBS-001/audit.json",
+    "sha256": "cc352d32743d42f743dd19d9b787b95f9e5c58773a61f371c86375d0d73e46c9"
+  },
+  "caps": [
+    {
+      "arm": "uniform42",
+      "call_index": 12,
+      "case": 3,
+      "corrected_cause": "cumulative_per_call_edge_work_budget",
+      "counter_including_first_rejected_edge": 2000000001,
+      "no_per_record_lattice_size_claim": true,
+      "original_status": "graph_cap",
+      "registered_cumulative_edge_budget": 2000000000,
+      "remaining_predefined_calls_executed_after_this_cap": 3,
+      "seed": 81401
+    },
+    {
+      "arm": "uniform42",
+      "call_index": 14,
+      "case": 3,
+      "corrected_cause": "cumulative_per_call_edge_work_budget",
+      "counter_including_first_rejected_edge": 2000000001,
+      "no_per_record_lattice_size_claim": true,
+      "original_status": "graph_cap",
+      "registered_cumulative_edge_budget": 2000000000,
+      "remaining_predefined_calls_executed_after_this_cap": 1,
+      "seed": 81402
+    }
+  ],
+  "empirical_model_calls": 0,
+  "kind": "post_outcome_cap_classification_correction",
+  "no_retries_or_extensions": true,
+  "original_frozen_files_and_receipts_preserved": true,
+  "original_recovery_and_calibration_gates_remain_failed": true,
+  "paid_spend_usd": 0,
+  "protocol_adherence": "DEVIATION_cumulative_call_budget_error_was_allowed_to_continue_as_graph_cap",
+  "replay_and_positive_final_likelihood_checks_remain_valid": true,
+  "result": {
+    "bytes": 37929,
+    "path": "results/CONTEXTUAL-GIBBS-001/result.json",
+    "sha256": "b571f764768192d37ac3bac898956f37da86a3e6f03cd3783ad94c6fcbd3947e"
+  },
+  "source_of_deviation": "Original wrapper lowers native per-record edge cap to remaining cumulative budget; runner classified native message only",
+  "strict_future_adapter": {
+    "bytes": 1044,
+    "path": "src/voynich/strict_censored_bridge.py",
+    "sha256": "c61f77a8c384df7e1961d7b1e06ded3aa058d6a46ae8fd9058706c3fc2aa1554"
+  },
+  "total_edges_including_rejected_operations": 6285399766
+}

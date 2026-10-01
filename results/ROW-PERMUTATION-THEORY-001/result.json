@@ -1,0 +1,34 @@
+{
+  "actual_23_row_42_code_count_vectors": 146721427591999680,
+  "actual_whole_dictionary_count": 21613926941579800829422581272845221888,
+  "empirical_panel_calls": 0,
+  "exact_balance_checks": 6696,
+  "inputs": [
+    {
+      "bytes": 4222,
+      "path": "scripts/check_prefix_bridge001.py",
+      "sha256": "a65f2af9b0eb91af7c3be4c205ccc3659be441b02bb5eedfc99722c38c3b0b5a"
+    },
+    {
+      "bytes": 4429,
+      "path": "scripts/check_row_permutation_theory001.py",
+      "sha256": "38e975e4b987d70ce4d2e48b248cf01a470fe6eee6914f67d612b8f09a2d8449"
+    }
+  ],
+  "paid_spend_usd": 0,
+  "scope": "Finite arithmetic only; no corpus/native/model/sampler calls, no mixing or recovery result",
+  "status": "PASS_finite_row_permutation_support_and_balance",
+  "strict_positivity_counterexample": {
+    "original": "3/16",
+    "swapped": "0"
+  },
+  "support_and_boolean_inventory_checks": 6696,
+  "three_row_dictionaries": 216,
+  "three_row_histograms": 56,
+  "two_record_barrier": {
+    "forward_swap_acceptance": "1/12",
+    "original_likelihood": "27/1280",
+    "reverse_swap_acceptance": "1",
+    "swapped_likelihood": "9/5120"
+  }
+}
