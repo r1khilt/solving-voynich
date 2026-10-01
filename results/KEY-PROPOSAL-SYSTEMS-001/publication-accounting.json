@@ -1,0 +1,240 @@
+{
+  "accounting_code": {
+    "bytes": 4666,
+    "path": "scripts/account_key_proposal_systems001.py",
+    "sha256": "5909a62f9b08958d17e374dcaac6c94108bfbcedb53dcd8d863073a42f7b7f7e"
+  },
+  "arms": {
+    "large-b1": {
+      "batch": 1,
+      "driver_gib": 3.8813934326171875,
+      "episodes_per_second": 3.474520305731954,
+      "full_logq_max_delta": 6.107499598076438e-09,
+      "host_gib": 2.16302490234375,
+      "initial_weights_sha256": "feed1e1dfac8d4e6a420dd3a589604901411cd5dc66b5acb1c4d461085e90bb4",
+      "parameters": 94981674,
+      "proposal_seconds": 1.9194292909814976,
+      "step_seconds": 0.2878095138342663
+    },
+    "large-b4": {
+      "batch": 4,
+      "driver_gib": 6.928375244140625,
+      "episodes_per_second": 5.639289016450797,
+      "full_logq_max_delta": 3.883230274226435e-06,
+      "host_gib": 2.16937255859375,
+      "initial_weights_sha256": "feed1e1dfac8d4e6a420dd3a589604901411cd5dc66b5acb1c4d461085e90bb4",
+      "parameters": 94981674,
+      "proposal_seconds": 1.0646026670001447,
+      "step_seconds": 0.7093092743307352
+    },
+    "small-b1": {
+      "batch": 1,
+      "driver_gib": 1.186553955078125,
+      "episodes_per_second": 25.4348925185025,
+      "full_logq_max_delta": 2.156164484290457e-06,
+      "host_gib": 0.784210205078125,
+      "initial_weights_sha256": "665c1d3f7b219f7ba5eb399ee8cb152d89c821c483c7fe4498780cc5629ba019",
+      "parameters": 5423146,
+      "proposal_seconds": 2.778208541974891,
+      "step_seconds": 0.0393160694220569
+    },
+    "small-b4": {
+      "batch": 4,
+      "driver_gib": 2.2472076416015625,
+      "episodes_per_second": 45.65860752340243,
+      "full_logq_max_delta": 2.2341000516235e-06,
+      "host_gib": 0.78106689453125,
+      "initial_weights_sha256": "665c1d3f7b219f7ba5eb399ee8cb152d89c821c483c7fe4498780cc5629ba019",
+      "parameters": 5423146,
+      "proposal_seconds": 0.3501106660114601,
+      "step_seconds": 0.08760670149543633
+    }
+  },
+  "bindings": [
+    {
+      "bytes": 379981207,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b1-final.pt",
+      "sha256": "6cbf16e86df7f2c2a9a7ee34724c511935a029d31197508e9692844e68aee85d"
+    },
+    {
+      "bytes": 379981207,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b1-initial.pt",
+      "sha256": "394431fa97623c86f3da2b2c573faea31153c99d6af1b296d22b688f226cb876"
+    },
+    {
+      "bytes": 10555,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b1-inputs.json.gz",
+      "sha256": "16c0c377c7391ba54fc492c204d2b049e7ecefc79dfb39112bb8086fe9e99a30"
+    },
+    {
+      "bytes": 24667,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b1-trace.jsonl",
+      "sha256": "e047103e68a80d37da1b67bf5bf7693fcf5195e24c76ec5024cec1200c643c57"
+    },
+    {
+      "bytes": 166,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b1.log",
+      "sha256": "f9be9f3bfe11651a600077c85bb388852078cc70bdaaf487712002c713f9349c"
+    },
+    {
+      "bytes": 379981207,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b4-final.pt",
+      "sha256": "2e3b6255ff0a8040e012527dc721ab39181c2ec461aad85a37a754fbf0f1394e"
+    },
+    {
+      "bytes": 379981207,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b4-initial.pt",
+      "sha256": "394431fa97623c86f3da2b2c573faea31153c99d6af1b296d22b688f226cb876"
+    },
+    {
+      "bytes": 10555,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b4-inputs.json.gz",
+      "sha256": "16c0c377c7391ba54fc492c204d2b049e7ecefc79dfb39112bb8086fe9e99a30"
+    },
+    {
+      "bytes": 24480,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b4-trace.jsonl",
+      "sha256": "e23a03dab311353dfe2a4dc7857108b84742d9f86128dba7e967e5d162f06023"
+    },
+    {
+      "bytes": 166,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/large-b4.log",
+      "sha256": "b59f7bdb0c0bc6e099d7806a80a4f08b7abc9034ed2c591f59414ac9068e0ffb"
+    },
+    {
+      "bytes": 21721667,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b1-final.pt",
+      "sha256": "0d0706292600d8a534eae7205f7cf4244bd4cb52104b08103f093bbe82f5bebd"
+    },
+    {
+      "bytes": 21721667,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b1-initial.pt",
+      "sha256": "ac5c9f9ebb763a53e9172969fa4fff8eafcb5d08bed156f211cb6c9e77f9d141"
+    },
+    {
+      "bytes": 10555,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b1-inputs.json.gz",
+      "sha256": "16c0c377c7391ba54fc492c204d2b049e7ecefc79dfb39112bb8086fe9e99a30"
+    },
+    {
+      "bytes": 24606,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b1-trace.jsonl",
+      "sha256": "0e5f0fc5327552e5d5e4be41b7016f87292051c245b85cd380c1e8728724f758"
+    },
+    {
+      "bytes": 164,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b1.log",
+      "sha256": "3e32765cad6dba199730f5f46f57348cbec075046f9055b683aa613c1dcf8984"
+    },
+    {
+      "bytes": 21721667,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b4-final.pt",
+      "sha256": "3daf46f267ea2c22725bfdbd2a1a5044b0419856d76aabef7b145873618ea8f7"
+    },
+    {
+      "bytes": 21721667,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b4-initial.pt",
+      "sha256": "ac5c9f9ebb763a53e9172969fa4fff8eafcb5d08bed156f211cb6c9e77f9d141"
+    },
+    {
+      "bytes": 10555,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b4-inputs.json.gz",
+      "sha256": "16c0c377c7391ba54fc492c204d2b049e7ecefc79dfb39112bb8086fe9e99a30"
+    },
+    {
+      "bytes": 24451,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b4-trace.jsonl",
+      "sha256": "5e033f84f58d08248ef4c7d1c5a520e96591292188e0d9af016de01490a70f94"
+    },
+    {
+      "bytes": 164,
+      "path": "outputs/KEY-PROPOSAL-SYSTEMS-001/small-b4.log",
+      "sha256": "fb79aabce663746856bd3aa8489d860085026b217c29e7483d47675708415b26"
+    },
+    {
+      "bytes": 94,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/audit-started.json",
+      "sha256": "a9e06ba722d4f28c75dd06dc0bf0af76b35ecf4dc0e24e6378b2a024a6764e1b"
+    },
+    {
+      "bytes": 6973,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/audit.json",
+      "sha256": "3f3faa93b9af93c98e19ccbe7c0a11066318bf3bd008b7e5816f1079691c8258"
+    },
+    {
+      "bytes": 173,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/campaign-started.json",
+      "sha256": "945d49dfc9054cd2467c3628adaa3817608b413609c24436528dc9a68b9faad2"
+    },
+    {
+      "bytes": 1550,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/campaign.json",
+      "sha256": "a868c2e276cdf4a73a82f0dbd98405d6fd5a3467dd6b0b4ff73323b2b392a257"
+    },
+    {
+      "bytes": 253,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/large-b1-started.json",
+      "sha256": "c00313cac1992b29c844b88f2080afbb6f860cdc9eeff15f2a38369945eb2413"
+    },
+    {
+      "bytes": 68292,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/large-b1.json",
+      "sha256": "1e56314405362804c95dca8067284f4ee8c619a22010650d4c837d96a5b51009"
+    },
+    {
+      "bytes": 253,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/large-b4-started.json",
+      "sha256": "2904f53b1e6ad9fa2dd99c6773ec2f2ef32778ec247c84c1a25ec983e0fd4b7a"
+    },
+    {
+      "bytes": 68021,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/large-b4.json",
+      "sha256": "6e5578f7fb182074e73eca6d21df45a75c6c34965d78f1420282346fc20d6f6e"
+    },
+    {
+      "bytes": 253,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/small-b1-started.json",
+      "sha256": "81c9577750589c98a1e665235162d0d7751fb886f1e72f3ad25515cb290febd1"
+    },
+    {
+      "bytes": 68046,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/small-b1.json",
+      "sha256": "7d3bccd12a649601c3191a543fb0be3389c2716f4aedf816fab35f3c744f0763"
+    },
+    {
+      "bytes": 253,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/small-b4-started.json",
+      "sha256": "63e5cb1e8cc6b432c0bec476da7cd7f3a5ab8c2c7163bda198d8fede8f91128c"
+    },
+    {
+      "bytes": 68053,
+      "path": "results/KEY-PROPOSAL-SYSTEMS-001/small-b4.json",
+      "sha256": "089bdb849da38c746aa0945361b4dcaa51e00f16296df8ba64a7b1bab2460b47"
+    },
+    {
+      "bytes": 9970,
+      "path": "scripts/audit_key_proposal_systems001.py",
+      "sha256": "acc9a58046ef2d737dfa59d72a9ce4cf4ab3d9e0b87a2859a0e337bff8182a8a"
+    }
+  ],
+  "checkpoint_bytes": 1606811496,
+  "freeze": "83135786764a6222c462f8c42007d3da131ce68e",
+  "independent_agent_review": false,
+  "language_training_updates": 0,
+  "new_model_inference": false,
+  "random_optimizer_updates": 60,
+  "resources": {
+    "cpu_seconds": 1.12571,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 605913088,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 1.2401727910037152
+  },
+  "status": "PASS"
+}
