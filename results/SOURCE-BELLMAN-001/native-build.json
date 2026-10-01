@@ -1,0 +1,38 @@
+{
+  "build": {
+    "abi": 1,
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-BELLMAN-001/build/source_bellman.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-BELLMAN-001/build/source_bellman.dylib"
+    ],
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "cpp_sha256": "51bc370ea6ac4ca903a2a03270ea8dc9bedb83d1419ec6a7870d6ecbb146a8eb",
+    "cpp_sha256_is_frozen_base_dependency": true,
+    "generated_cpp_path": "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-BELLMAN-001/build/source_bellman.cpp",
+    "generated_cpp_sha256": "9c4c45438d6ff4bc677c652c58f0902cd8a69005e532eb74c89cbdd91e59a9d8",
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-BELLMAN-001/build/source_bellman.dylib",
+    "library_sha256": "74b6c759e9c42edbfe822b1ceb66ea5f8072ecf7db0d92f2f92bcf510e5f4b74",
+    "module_sha256": "e2c67ea250cf38094e3adda8b93d3be0fffd77bf6e8a9c9eeca7dde890d548a1",
+    "stderr": "",
+    "stdout": ""
+  },
+  "generated_cpp": {
+    "bytes": 14085,
+    "path": "outputs/SOURCE-BELLMAN-001/build/source_bellman.cpp",
+    "sha256": "9c4c45438d6ff4bc677c652c58f0902cd8a69005e532eb74c89cbdd91e59a9d8"
+  },
+  "library": {
+    "bytes": 92200,
+    "path": "outputs/SOURCE-BELLMAN-001/build/source_bellman.dylib",
+    "sha256": "74b6c759e9c42edbfe822b1ceb66ea5f8072ecf7db0d92f2f92bcf510e5f4b74"
+  },
+  "no_empirical_search_or_training": true,
+  "paid_spend_usd": 0
+}
