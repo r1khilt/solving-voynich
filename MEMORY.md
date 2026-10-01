@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-10-01 PDT (all four original neural fits and audit complete; source pruning observer registered for execution; Voynich unsolved).
+Last updated: 2026-10-01 PDT (all four original neural fits and audit complete; pruning001 failed admission without experimental calls; corrected002 registered for execution; Voynich unsolved).
 
 ## Current state
+
+- **Pruning001 admission FAIL; separately registered002 pending.** 8aab817 exactremote beforeONEinvocation66051/terminal1, ROOT pathsubscript bug in buildverification BEFOREstartmarker/empiricalcalls. Preserve001code/build/protocol/all124bindings andfailure/results, no retry/auditunder001. New002copiesfiniteworkloadwithpathjoinfix+actualadmission/tamperregression,130frozenpaths/ONErun+ONEaudit1800wall/1600CPU/2GiB/128MiB/0paid,newtrain,GPU; allnormaloutputs exactold16fits. New6testsPASS3.11s/scopedlintclean; FINALfull2662+23subtestsPASS/13skip153.79s NB332. Fresh002binary91920bytesSHAa92765a3380da116332c90af2da870ed285aa9953ab6c49946f64867ee1898c8; samefrozengeneratedbody/observer. PublishandverifyremoteBEFORE002run. No diagnosis result yet; VoynichUNSOLVED.
 
 - **SOURCE-PRUNE-DIAG-001 prepared/registered, execution pending.** Separate hash-pinned observational copy of original unchanged C++ tracks literal truth survival vs aliases, prebeam/finalbeam first loss, raw-prefix ghost rankings and ALL terminal used-key ranks before output cutoff. No gold reinsertion/original guide cache changes/new recovery or neural circuit claim. Same16EXPOSED original cases/arms and finitework budgets; percall600 only observer overhead, ALLordinaryJSONvalues must exactlyequal frozen old fits.124paths/ONErun+ONEaudit each1800wall/1600CPU/2GiBhost/128MiBbulk/BLAS1/0GPU,newtraining,paid; no retries/extensions. New16tests + full2656tests/23subtests PASS/13skip150.91s/scopedlintclean/same5oldfindings; original98source/22trainingfreezeunchanged. Newnativebuild91920bytesSHAff72f9c9a6fbffd430bc8bb594458c0fc4cb5c63b50daf933d8c5d4c78c18eac. NB331/protocol/methodreview; commit/push/exactremote before empiricalrun. Goaltoolpriorblockedstatusunchanged, humancontinuationauthorizes finitework; noautomaticwakeclaim.
 
