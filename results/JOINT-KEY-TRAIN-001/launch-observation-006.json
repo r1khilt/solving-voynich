@@ -1,0 +1,91 @@
+{
+  "assigned_key_rows": 1840000,
+  "campaign_session": 45401,
+  "claims": "Closed byte/hash bindings and stored arithmetic only; no new neural inference or tensor/optimizer/ledger replay. Third child exited0; final large arm live. One all-four-fit completion audit pending; no retry/resume.",
+  "closed_fit": {
+    "bytes": 452059,
+    "path": "results/JOINT-KEY-TRAIN-001/small-72209.json",
+    "sha256": "37ed34de01b3072703f19e3f61285e600729a3656e7e142d2148fc3a68968ccd"
+  },
+  "episodes_seen": 80000,
+  "freeze": "9053abf667fb296ef41e7eb5d9b7eedd1da94533",
+  "inputs": {
+    "bytes": 446791,
+    "path": "results/JOINT-KEY-TRAIN-001/inputs.json",
+    "sha256": "fd6bb379cb61cac474dc109d35e227b84cdddeb1297e9aa7a0fd4aa5b6af7aef"
+  },
+  "ledger": {
+    "bytes": 9717763,
+    "path": "outputs/JOINT-KEY-TRAIN-001/small-72209-episodes.jsonl.gz",
+    "sha256": "c2257c0960db6abb78d5ea5a33de5c6ba185c47839cefa4129ac02728aa2f4ad"
+  },
+  "next_arm_started": {
+    "bytes": 184,
+    "path": "results/JOINT-KEY-TRAIN-001/large-72209-started.json",
+    "sha256": "6d52af01cf1d91d13c54585be3dda0fb936a3a9826154e98d83b0b8b65942fe4"
+  },
+  "next_last_flushed_trace": {
+    "data_sha256": "4e4ef4d85ceee926781517c4a899504d2709d4ab917b2a4a68f8593caeffd1ab",
+    "episodes_seen": 3512,
+    "loss_nats_per_row": 3.60158109664917,
+    "lr": 0.00029921960646883737,
+    "preclip_norm": 2.887718677520752,
+    "source_characters": 1013221,
+    "stage": "optimizer",
+    "step": 878,
+    "step_wall_seconds": 0.7150453749927692
+  },
+  "observed_unix": 1790853897.894756,
+  "paid_spend_usd": 0,
+  "resources": {
+    "cpu_seconds": 374.65958,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 781156352,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 1775.1914900830016
+  },
+  "selected_snapshot": {
+    "bytes": 598,
+    "path": "results/JOINT-KEY-TRAIN-001/small-72209-step20000.json",
+    "sha256": "79325f5065b2635b414edfc5b892a33e0436acbd827a0324fd13d9e13b307809"
+  },
+  "source_characters": 23069848,
+  "status": "closed_second_small_fit_observation_not_completion_audit",
+  "stored_short_reference_deltas": {
+    "cpu_two_four_delta": 3.552713678800501e-15,
+    "mps_cpu_max_delta": 3.2806613905478343e-06,
+    "mps_two_four_delta": 9.5367431640625e-07
+  },
+  "stored_validation_summary": {
+    "correct_rows": 51,
+    "episodes": 64,
+    "mean_nats_per_row": 3.402742868692463,
+    "rows": 1472,
+    "used_correct_rows": 50,
+    "used_mask_is_diagnostic_only": true,
+    "used_rows": 1248,
+    "whole_keys_exact": 0
+  },
+  "trace": {
+    "bytes": 6561932,
+    "path": "outputs/JOINT-KEY-TRAIN-001/small-72209-trace.jsonl",
+    "sha256": "202c1de38dc231dfe1cd0720c88dfed1e4350c6219ab58ed364ecabb7c91de09"
+  },
+  "updates": 20000,
+  "validation": {
+    "bytes": 12638,
+    "path": "outputs/JOINT-KEY-TRAIN-001/small-72209-step20000-validation.json.gz",
+    "sha256": "3109a5b7fd0832b0c2988b71cc95f08594901955afe1af7612b7d84996ccf710"
+  },
+  "weights": {
+    "bytes": 21721923,
+    "path": "outputs/JOINT-KEY-TRAIN-001/small-72209-step20000.pt",
+    "sha256": "0c0d4a5fe04ce93455431d9b23d53f124b902d3d0f3db543ab060b93a861fed1"
+  }
+}

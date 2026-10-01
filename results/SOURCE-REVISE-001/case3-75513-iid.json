@@ -1,0 +1,165 @@
+{
+  "case": 3,
+  "cell_cpu_seconds": 17.143236,
+  "cell_wall_seconds": 17.163460584008135,
+  "config": {
+    "block_sizes": [
+      2,
+      3,
+      6
+    ],
+    "iterations": 2048,
+    "max_scored_keys": 8192,
+    "max_seconds": 120.0,
+    "proposal_weights": [
+      2,
+      1,
+      1
+    ],
+    "seed": 76116,
+    "swap_interval": 4,
+    "temperatures": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0
+    ]
+  },
+  "diagnostic": {
+    "full_key_search_is_not_reading_marginal_search": true,
+    "gold_full_key_log_mass": -865.3956085171891,
+    "gold_key_reader": {
+      "edit_errors": 1,
+      "exact_records": 1,
+      "gold_used_rows": 20,
+      "matched_gold_used_rows": 20,
+      "true_source_letters": 448
+    },
+    "gold_minus_selected_key_nats": 450.87541648512104,
+    "gold_used_mapping_in_scored_bank": false,
+    "literal_gold_full_key_in_scored_bank": false,
+    "revised": {
+      "edit_errors": 403,
+      "exact_records": 0,
+      "gold_used_rows": 20,
+      "matched_gold_used_rows": 1,
+      "true_source_letters": 448
+    },
+    "score_gain_nats": 207.62260347047004,
+    "warm": {
+      "edit_errors": 375,
+      "exact_records": 0,
+      "gold_used_rows": 20,
+      "matched_gold_used_rows": 2,
+      "true_source_letters": 448
+    }
+  },
+  "fitted": {
+    "bytes": 914889,
+    "path": "outputs/SOURCE-REVISE-001/case3-75513-iid.json.gz",
+    "sha256": "7db38e8c1faf16a9940c2407178532c2b7a7dcb46a7f4902cd8615c0a89d88af"
+  },
+  "guidance": "iid",
+  "name": "case3-75513-iid",
+  "parent": {
+    "bytes": 3551,
+    "path": "results/SOURCE-GUIDE-001/case3-75513-iid.json",
+    "sha256": "f6124734dcc58937672cde963ffd8cd7281f91887020d91d335336631466e1e4"
+  },
+  "prediction": {
+    "bytes": 3015,
+    "path": "outputs/SOURCE-REVISE-001/case3-75513-iid-prediction.json",
+    "sha256": "26ba1d3423cebb10ddca9f58d22195d68b4ab32b7ec88114c6fe4303924d3a04"
+  },
+  "search_summary": {
+    "best_index": 8170,
+    "best_score": -1316.2710250023101,
+    "best_units": [
+      "A",
+      "BF",
+      "BB",
+      "FE",
+      "FE",
+      "BB",
+      "AB",
+      "D",
+      "ED",
+      "BC",
+      "BE",
+      "AD",
+      "C",
+      "CD",
+      "CE",
+      "F",
+      "D",
+      "B",
+      "E",
+      "E",
+      "BD",
+      "C",
+      "C"
+    ],
+    "cache_hits": 95,
+    "completed_iterations": 1035,
+    "exchange_counts": {
+      "accepted": 166,
+      "proposed": 903
+    },
+    "final_replica_indices": [
+      8170,
+      8132,
+      8180,
+      8181,
+      8182,
+      8136,
+      8176,
+      8169
+    ],
+    "global_optimality_claimed": false,
+    "initial_replica_indices": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "proposal_counts": {
+      "block": {
+        "accepted": 164,
+        "proposed": 2108
+      },
+      "replace": {
+        "accepted": 1360,
+        "proposed": 4104
+      },
+      "swap": {
+        "accepted": 643,
+        "proposed": 2074
+      }
+    },
+    "proposals": 8286,
+    "scored_keys": 8192,
+    "self_proposals": 63,
+    "stationary_distribution_claimed": false,
+    "stop_reason": "score_limit",
+    "temperatures": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0,
+      128.0
+    ],
+    "wall_seconds": 16.54596150002908
+  },
+  "seed": 75513
+}

@@ -1,0 +1,172 @@
+{
+  "bulk_output_bytes": 14373932,
+  "exploratory_signal": "NOT_SUPPORTED",
+  "exploratory_signal_clauses": {
+    "all16_complete": true,
+    "better_edits_in_at_least12_cells": true,
+    "edits_reduced_at_least_25_percent": false
+  },
+  "freeze": "891dd4e971dffd7a5739c59626996ecfa19e09ed",
+  "native_build": {
+    "abi": 1,
+    "command": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/src/voynich/native/suffix_marginal.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib"
+    ],
+    "compiler": "/usr/bin/clang++",
+    "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib"
+    ],
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib",
+    "library_sha256": "d8d0fbdeb183b292594248f95c1a56eeea843d3c3ba26a0eb05548fb7bcaf30f",
+    "machine": "arm64",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "source_sha256": "03dabaeb7814d283b41c94adb8063a6306e28beaf4ab97d17cb684532cd29d61"
+  },
+  "paid_spend_usd": 0,
+  "parent": {
+    "bytes": 5678,
+    "path": "results/SOURCE-GUIDE-001/result.json",
+    "sha256": "81e8afd531d7c3b4b8404f2199688db43e97de6d20e5081f9292b934ca826a36"
+  },
+  "resources": {
+    "cpu_seconds": 270.170657,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 905691136,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 270.512722916028
+  },
+  "scope": "Exposed synthetic staged key-search diagnosis; no fresh recovery qualification or posterior coverage claim.",
+  "source": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  },
+  "source_arrays": {
+    "probabilities": "236ded939aea77a107a3717341ed8c64fdf9e418baa88cb3a9e656d7f11127e0",
+    "transitions": "db61f9ce61b56077f59169721d7ba51669999a2d3814da2437eef6094bae0400"
+  },
+  "totals": {
+    "gold_key_reader": {
+      "edit_errors": 64,
+      "exact_records": 16,
+      "gold_used_rows": 312,
+      "matched_gold_used_rows": 312,
+      "true_source_letters": 4608
+    },
+    "revised": {
+      "edit_errors": 4295,
+      "exact_records": 0,
+      "gold_used_rows": 312,
+      "matched_gold_used_rows": 39,
+      "true_source_letters": 4608
+    },
+    "warm": {
+      "edit_errors": 4527,
+      "exact_records": 0,
+      "gold_used_rows": 312,
+      "matched_gold_used_rows": 35,
+      "true_source_letters": 4608
+    }
+  },
+  "workloads": [
+    {
+      "bytes": 3326,
+      "path": "results/SOURCE-REVISE-001/case0-75511-none.json",
+      "sha256": "1711aa0affb27ff91ab8aa085b5cfde62a660c9aa5eb53c404278bc99aefa284"
+    },
+    {
+      "bytes": 3327,
+      "path": "results/SOURCE-REVISE-001/case0-75511-iid.json",
+      "sha256": "b675dd868d0223c450636898f943143ec97046c6ec543ecf3fd65692c92fa40c"
+    },
+    {
+      "bytes": 3324,
+      "path": "results/SOURCE-REVISE-001/case0-75513-none.json",
+      "sha256": "32a14444bad79694f8f94d3b8b73baf57d009910f337719cc8d9bb4c55fb1385"
+    },
+    {
+      "bytes": 3325,
+      "path": "results/SOURCE-REVISE-001/case0-75513-iid.json",
+      "sha256": "ac34b30930dc036f2de2e5d4f577307c515238b264f29c821b4f9eed4a34863e"
+    },
+    {
+      "bytes": 3326,
+      "path": "results/SOURCE-REVISE-001/case1-75511-none.json",
+      "sha256": "84ee4f56a9ffed7fc463e0a0aae76282544103d67f41c34aceb4a3e83441756b"
+    },
+    {
+      "bytes": 3328,
+      "path": "results/SOURCE-REVISE-001/case1-75511-iid.json",
+      "sha256": "b5849442a1c8bffbf945ea32fcca3fd531d9b2f08182621804d32124af20ed14"
+    },
+    {
+      "bytes": 3321,
+      "path": "results/SOURCE-REVISE-001/case1-75513-none.json",
+      "sha256": "4f5e13c396b54959f838dc7b23b28a6440e6f3ef61b4f28ba883312dc1576674"
+    },
+    {
+      "bytes": 3326,
+      "path": "results/SOURCE-REVISE-001/case1-75513-iid.json",
+      "sha256": "7d4cce20ec88307320df19a9f2bfa7cc0e0a6fb7f0c0b7dc1c7f593f7a5acf61"
+    },
+    {
+      "bytes": 3328,
+      "path": "results/SOURCE-REVISE-001/case2-75511-none.json",
+      "sha256": "a453f1a793769bb1603c668948b3aec85912ab28e2a964017fbd1e2449a9b4dd"
+    },
+    {
+      "bytes": 3321,
+      "path": "results/SOURCE-REVISE-001/case2-75511-iid.json",
+      "sha256": "64cfcb2d6a0a2b31fc74095df9a781e7cb82c4b7910b88ac21ac2ebe0f895a65"
+    },
+    {
+      "bytes": 3328,
+      "path": "results/SOURCE-REVISE-001/case2-75513-none.json",
+      "sha256": "0bc7dcaa4517911459e161d6e75e34bd74823c041e3dbc0988aa7a1f9e13e32c"
+    },
+    {
+      "bytes": 3330,
+      "path": "results/SOURCE-REVISE-001/case2-75513-iid.json",
+      "sha256": "621fc4e3185e25ac7e16125c8779ea4388212ce2352c912d5c83510c26baa701"
+    },
+    {
+      "bytes": 3326,
+      "path": "results/SOURCE-REVISE-001/case3-75511-none.json",
+      "sha256": "d92f8c5376bce68d7d424c8317057100b5e9972529b6a857e2e4bb0be4c8a28b"
+    },
+    {
+      "bytes": 3327,
+      "path": "results/SOURCE-REVISE-001/case3-75511-iid.json",
+      "sha256": "34308dad32db713f33fb4b31d6cd488d8ddc0c99cd50c2e2f7719fe5bb6f07b2"
+    },
+    {
+      "bytes": 3328,
+      "path": "results/SOURCE-REVISE-001/case3-75513-none.json",
+      "sha256": "54b16ecab11b68f66311679e6acafdff41d98bab0169d3af8f109f645c7bdba9"
+    },
+    {
+      "bytes": 3317,
+      "path": "results/SOURCE-REVISE-001/case3-75513-iid.json",
+      "sha256": "b68ed264db89a439163d0e767a60ebb08fa1e8390fe153a8e81bd4f8f6eb6b2c"
+    }
+  ]
+}
