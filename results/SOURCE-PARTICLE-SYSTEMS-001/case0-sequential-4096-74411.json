@@ -1,0 +1,125 @@
+{
+  "arrays": {
+    "closed": {
+      "dtype": "bool",
+      "sha256": "6ba042a6672c64272ce75901468fd210026cd674fe9f1e11b46c9302e47e2136",
+      "shape": [
+        4096,
+        2
+      ]
+    },
+    "contexts": {
+      "dtype": "uint32",
+      "sha256": "32963cdaa31577961d29ae747b7b3fc7c07b01d551936088e1ec48b0de5fb790",
+      "shape": [
+        4096,
+        2
+      ]
+    },
+    "keys": {
+      "dtype": "int32",
+      "sha256": "a2e63ba8f53fed0da54844c6fc0e53c7a9fff5f393aaeb1a3b8ba42ae5a9d7a6",
+      "shape": [
+        4096,
+        23
+      ]
+    },
+    "labels": {
+      "dtype": "int16",
+      "sha256": "8005e4ff0f97e9e2d1c1da2f2176b7107a9cd2d0ba9fd4ada487fcae0b3f9cee",
+      "shape": [
+        130,
+        4096
+      ]
+    },
+    "offsets": {
+      "dtype": "int32",
+      "sha256": "244a87f0d738077e76fc94ed7b27d18a2f4284dfc5206410158a3f15069bc6c1",
+      "shape": [
+        4096,
+        2
+      ]
+    },
+    "parents": {
+      "dtype": "int32",
+      "sha256": "7e026f44a744d327899ef40ba93e75fc5797f06bada839be6e817b57b0ce2009",
+      "shape": [
+        130,
+        4096
+      ]
+    },
+    "records": {
+      "dtype": "int16",
+      "sha256": "0088cc66db30cc5c15e65147ea9e0e5ce294b294d35b174aa5dd88f07fea6cb9",
+      "shape": [
+        130,
+        4096
+      ]
+    },
+    "scores": {
+      "dtype": "float64",
+      "sha256": "214fb680afba2ab9b68a960c636bc4224461f902952b3990a75d2aa8b81f6127",
+      "shape": [
+        4096
+      ]
+    }
+  },
+  "case": 0,
+  "diagnostic": {
+    "edit_errors": 118,
+    "exact_records": 0,
+    "gold_used_rows": 1,
+    "matched_gold_used_rows": 0,
+    "no_completed_decision": false,
+    "synthetic_diagnostic_only": true,
+    "true_source_letters": 128
+  },
+  "diversity": {
+    "distinct_readings": 64,
+    "distinct_used_keys": 28,
+    "initial_ancestors": 1,
+    "terminal_ancestors": 64,
+    "visited_literal_bank_log_mass": -234.24911119019467
+  },
+  "name": "case0-sequential-4096-74411",
+  "particles": 4096,
+  "population": {
+    "bytes": 1423212,
+    "path": "outputs/SOURCE-PARTICLE-SYSTEMS-001/case0-sequential-4096-74411.npz",
+    "sha256": "507ffe82aff328a88845889a5c9788361a16ec2186e144aa3638fcd54fbb227b"
+  },
+  "prediction": {
+    "bytes": 7665,
+    "path": "outputs/SOURCE-PARTICLE-SYSTEMS-001/case0-sequential-4096-74411.json.gz",
+    "sha256": "c31d58cdbe469ef8ea90bb119a99997a416659ee8ebabbd5b365b32242ab5ad3"
+  },
+  "resources": {
+    "cpu_seconds": 1.3930500000000001,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 842612736,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 1.4086170000373386
+  },
+  "schedule": "sequential",
+  "seed": 74411,
+  "summary": {
+    "ancestry_allocated_bytes": 4259840,
+    "exhaustive_support": false,
+    "horizon": 130,
+    "interval_arithmetic_certificate": false,
+    "log_evidence_estimate": -63.778112654598814,
+    "particles": 4096,
+    "posterior_is_finite_approximation": true,
+    "schedule": "sequential",
+    "seed": 74411,
+    "status": "complete_particles",
+    "transitions": 130,
+    "work_array_envelope_bytes": 13107712
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "arrays": {
+    "closed": {
+      "dtype": "bool",
+      "sha256": "6ba042a6672c64272ce75901468fd210026cd674fe9f1e11b46c9302e47e2136",
+      "shape": [
+        4096,
+        2
+      ]
+    },
+    "contexts": {
+      "dtype": "uint32",
+      "sha256": "b04bc2b1a9ee6390185d81b8466df8cafb0c254dfcf664680b0b777d1829f34b",
+      "shape": [
+        4096,
+        2
+      ]
+    },
+    "keys": {
+      "dtype": "int32",
+      "sha256": "34192b2ce98b8f4220d7206c7ab1c00181f30f872300479978117873810dd377",
+      "shape": [
+        4096,
+        23
+      ]
+    },
+    "labels": {
+      "dtype": "int16",
+      "sha256": "0165cf05b5a64acf9deda52c3ed8c58419fae04a18046aae009360eeda3db8df",
+      "shape": [
+        130,
+        4096
+      ]
+    },
+    "offsets": {
+      "dtype": "int32",
+      "sha256": "244a87f0d738077e76fc94ed7b27d18a2f4284dfc5206410158a3f15069bc6c1",
+      "shape": [
+        4096,
+        2
+      ]
+    },
+    "parents": {
+      "dtype": "int32",
+      "sha256": "9b94e73da37b2332947e2e03be46fe4ab7b7bed5e5b8615aabe3fecdb24b2895",
+      "shape": [
+        130,
+        4096
+      ]
+    },
+    "records": {
+      "dtype": "int16",
+      "sha256": "0448094ea00b8033fe45ec5cc430b2f87e53c9260f879ac248da831e943d1dac",
+      "shape": [
+        130,
+        4096
+      ]
+    },
+    "scores": {
+      "dtype": "float64",
+      "sha256": "ba80e10a53b14dbee7d7e13f9cac3a00774a32b2bba340b917ad7322c50238d5",
+      "shape": [
+        4096
+      ]
+    }
+  },
+  "case": 0,
+  "diagnostic": {
+    "edit_errors": 108,
+    "exact_records": 0,
+    "gold_used_rows": 1,
+    "matched_gold_used_rows": 1,
+    "no_completed_decision": false,
+    "synthetic_diagnostic_only": true,
+    "true_source_letters": 128
+  },
+  "diversity": {
+    "distinct_readings": 86,
+    "distinct_used_keys": 6,
+    "initial_ancestors": 1,
+    "terminal_ancestors": 106,
+    "visited_literal_bank_log_mass": -252.09045107999148
+  },
+  "name": "case0-balanced-4096-74413",
+  "particles": 4096,
+  "population": {
+    "bytes": 1482059,
+    "path": "outputs/SOURCE-PARTICLE-SYSTEMS-001/case0-balanced-4096-74413.npz",
+    "sha256": "c70ea9b2cb17e6fda122f73d523170a2d56deccc212f69b7479deba7a39a0225"
+  },
+  "prediction": {
+    "bytes": 6712,
+    "path": "outputs/SOURCE-PARTICLE-SYSTEMS-001/case0-balanced-4096-74413.json.gz",
+    "sha256": "5fd9e89bcbcc6442e7e41d9ef1f3677d5e3d0c6855154c45b5bb0651cc61b904"
+  },
+  "resources": {
+    "cpu_seconds": 3.175698,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 846184448,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 3.2011848750407808
+  },
+  "schedule": "balanced",
+  "seed": 74413,
+  "summary": {
+    "ancestry_allocated_bytes": 4259840,
+    "exhaustive_support": false,
+    "horizon": 130,
+    "interval_arithmetic_certificate": false,
+    "log_evidence_estimate": -68.00856902249295,
+    "particles": 4096,
+    "posterior_is_finite_approximation": true,
+    "schedule": "balanced",
+    "seed": 74413,
+    "status": "complete_particles",
+    "transitions": 130,
+    "work_array_envelope_bytes": 13107712
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "arrays": {
+    "closed": {
+      "dtype": "bool",
+      "sha256": "5a648d8015900d89664e00e125df179636301a2d8fa191c1aa2bd9358ea53a69",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "contexts": {
+      "dtype": "uint32",
+      "sha256": "718b6f3c9b013a2a384d10e48e6a8c719465ddd0f80d10ecf966d70fd1d4d1f8",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "keys": {
+      "dtype": "int32",
+      "sha256": "bc0a60f53612655b694d44774a11e679c6c9efcbb0008a8e3aa45edfb282fa7c",
+      "shape": [
+        512,
+        23
+      ]
+    },
+    "labels": {
+      "dtype": "int16",
+      "sha256": "12d5d1c63dec3025178e09e380bb2ac589f9ea3280428dcc561b67d27747657c",
+      "shape": [
+        898,
+        512
+      ]
+    },
+    "offsets": {
+      "dtype": "int32",
+      "sha256": "cff65fb9e75b5d04f9418e9fd97e112dab856ba25bcb3456ae0b849876025ede",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "parents": {
+      "dtype": "int32",
+      "sha256": "a5cf6d290e1127da7f4f9ddc40d1d60e07eb02ab5722bc968f96528888de5a6a",
+      "shape": [
+        898,
+        512
+      ]
+    },
+    "records": {
+      "dtype": "int16",
+      "sha256": "4e60eb7173ff6b6af7c59443c330d9266b2cccd8bc581a4de39522f45e96fd00",
+      "shape": [
+        898,
+        512
+      ]
+    },
+    "scores": {
+      "dtype": "float64",
+      "sha256": "fa7dbbe4412b898ddeb9de4d1fe2b461b490084b109e559422d1218b7cd87b45",
+      "shape": [
+        512
+      ]
+    }
+  },
+  "case": 1,
+  "diagnostic": {
+    "edit_errors": 389,
+    "exact_records": 0,
+    "gold_used_rows": 1,
+    "matched_gold_used_rows": 1,
+    "no_completed_decision": false,
+    "synthetic_diagnostic_only": true,
+    "true_source_letters": 448
+  },
+  "diversity": {
+    "distinct_readings": 2,
+    "distinct_used_keys": 1,
+    "initial_ancestors": 1,
+    "terminal_ancestors": 2,
+    "visited_literal_bank_log_mass": -794.9497285765107
+  },
+  "name": "case1-balanced-512-74411",
+  "particles": 512,
+  "population": {
+    "bytes": 913686,
+    "path": "outputs/SOURCE-PARTICLE-SYSTEMS-001/case1-balanced-512-74411.npz",
+    "sha256": "4da415909f8cd971840260e79072f7d97be4f07d3187d518abee1ac5532e2f4b"
+  },
+  "prediction": {
+    "bytes": 15054,
+    "path": "outputs/SOURCE-PARTICLE-SYSTEMS-001/case1-balanced-512-74411.json.gz",
+    "sha256": "274cbecca2335e52d4430e5f541d1213343c8104bd0c8e49e1b3907e2622b1d7"
+  },
+  "resources": {
+    "cpu_seconds": 10.135439,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 880476160,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 10.172889459005091
+  },
+  "schedule": "balanced",
+  "seed": 74411,
+  "summary": {
+    "ancestry_allocated_bytes": 3678208,
+    "exhaustive_support": false,
+    "horizon": 898,
+    "interval_arithmetic_certificate": false,
+    "log_evidence_estimate": -99.65792399652607,
+    "particles": 512,
+    "posterior_is_finite_approximation": true,
+    "schedule": "balanced",
+    "seed": 74411,
+    "status": "complete_particles",
+    "transitions": 898,
+    "work_array_envelope_bytes": 1641984
+  }
+}
