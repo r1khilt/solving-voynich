@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-10-01 PDT (full contextual bridge correctness/cost PASS; contextual inference comparison next; goal active; Voynich unsolved).
+Last updated: 2026-10-01 PDT (contextual Gibbs comparison prepared, validation before registration; goal active; Voynich unsolved).
 
 ## Current state
+
+- **CONTEXTUAL-GIBBS-001 preparation.** Exact42-code/contextual rowGibbs implemented;124Fractionconditionalmatrices/8349balancepairs+weightedtransport, actualprobability/cap/offset tests andtwo-state disconnected-supportwitness. Full16calltiny32particle/42codepanel+oneaudit/forcedcaps PASS,8focusedtests. Nextfixed4EXPOSEDrootqueries/allunknownkeys×2seeds×32particles×uniform42vsGibbs atmatched43tables/particle/stage/stride16;770560maximumtables. Mappinggateall16complete+≥.10matchfractiongain+≥1of8completeusedkey; calibrationseparate. ONErun/audit1800wall1600CPU2GiB128MiBbulk/8Bedges/0paidGPUtrainingholdout;195freeze paths, old186unchanged. Full2732+23subtestsPASS/13skip169.92s/scopedlintPASS/old5findings; noactualpanelcalls/reader/newtrainingqueued. NB344/registration/method. GoalACTIVE/VoynichUNSOLVED.
 
 - **CENSORED-CONTEXT-001 complete: contextual engineering PASS, no recovery claim.** Registration15dea60 exactremote beforeONE65369run/ONE71562fullaudit terminal0;186paths unchanged. ALL960native/60Python/192legacyclosed positive, maxdelta6.594e−12/1e−7, all192closedgraphs agree. Originalorder12/1447724state/399571824bytesourceactuallyused/pinned. Run3.514s/audit3.430s/1.241GBpeak/0paidGPUtrainingholdout. Nativewholeprefixmedian2.174ms/closed2.129ms;3.608Mtotaledges. Readonlyclosed-score diagnostic552of1422rankinginversionsvsIID; correctionmaxweight>.99in4of12FIRST16correlatedbanks, notposteriorcoverage/accuracy. ExplicitEOS effects recorded. Full2724+23subtestsPASS/13skip/scopedlintPASS/old5findings. NB342–343/resultsdoc; nextcontextual target search with exactrowGibbs and matched-table MH control proposed, NOTqueued. GoalACTIVE/VoynichUNSOLVED.
 
