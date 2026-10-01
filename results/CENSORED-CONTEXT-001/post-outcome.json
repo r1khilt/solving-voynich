@@ -1,0 +1,505 @@
+{
+  "audit": {
+    "bytes": 866,
+    "path": "results/CENSORED-CONTEXT-001/audit.json",
+    "sha256": "60cf0ae72cae8a448e1e20fd704653addd607f9c5c62ed6aa75c7299c0cacb2a"
+  },
+  "kind": "post_outcome_read_only_closed_scores_no_new_model_calls",
+  "maximum_owned_work_envelope": 78143588,
+  "native_construction_seconds": {
+    "count": 12,
+    "maximum": 0.043699583038687706,
+    "median": 0.0366451044974383,
+    "minimum": 0.03538691595895216,
+    "p95": 0.041780404219753105,
+    "sum": 0.45186212606495246
+  },
+  "native_edges_per_attempt": {
+    "count": 960,
+    "maximum": 31430.0,
+    "median": 898.5,
+    "minimum": 5.0,
+    "p95": 16889.649999999972,
+    "sum": 3608495.0
+  },
+  "native_nodes_per_attempt": {
+    "count": 960,
+    "maximum": 11780.0,
+    "median": 485.0,
+    "minimum": 7.0,
+    "p95": 8041.699999999997,
+    "sum": 1776028.0
+  },
+  "native_total_edges": 3608495,
+  "native_wall_seconds_by_stage": {
+    "0": {
+      "count": 192,
+      "maximum": 0.00017670798115432262,
+      "median": 2.1646032109856606e-05,
+      "minimum": 1.9625003915280104e-05,
+      "p95": 0.00010635397629812358,
+      "sum": 0.006212416512425989
+    },
+    "1": {
+      "count": 192,
+      "maximum": 0.00021254195598885417,
+      "median": 7.577051292173564e-05,
+      "minimum": 6.412499351426959e-05,
+      "p95": 0.00011583139421418308,
+      "sum": 0.01597312488593161
+    },
+    "2": {
+      "count": 192,
+      "maximum": 0.0005159159773029387,
+      "median": 0.0002620415179990232,
+      "minimum": 0.00022070802515372634,
+      "p95": 0.00039160627929959443,
+      "sum": 0.05402099393540993
+    },
+    "3": {
+      "count": 192,
+      "maximum": 0.00526479200925678,
+      "median": 0.0021737914939876646,
+      "minimum": 0.0007617090013809502,
+      "p95": 0.003862024858244694,
+      "sum": 0.4246680032229051
+    },
+    "4": {
+      "count": 192,
+      "maximum": 0.010624832997564226,
+      "median": 0.0021292085002642125,
+      "minimum": 0.0007808329537510872,
+      "p95": 0.0042589272314216935,
+      "sum": 0.45140012650517747
+    }
+  },
+  "python_construction_seconds": {
+    "count": 12,
+    "maximum": 0.051730875042267144,
+    "median": 0.03866556251887232,
+    "minimum": 0.03631783399032429,
+    "p95": 0.050942885610857046,
+    "sum": 0.4902787919854745
+  },
+  "queries": [
+    {
+      "comparable_pairs": 120,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -164.77621124789823,
+        "median": -179.79226074121408,
+        "minimum": -214.13394393480553,
+        "p95": -165.21776084132634,
+        "sum": -2965.1052377935443
+      },
+      "distinct_full_keys": 16,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 1.4378792821709705,
+        "log_range": 7.572226435882499,
+        "maximum_normalized_weight": 0.8314668095316291
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.854964596042917,
+        "log_range": 49.3577326869073,
+        "maximum_normalized_weight": 0.6419742198254693
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -14.61518436997983,
+        "median": -19.16354162206028,
+        "minimum": -22.187410805862328,
+        "p95": -16.667455182164275,
+        "sum": -304.625206677135
+      },
+      "particles": 16,
+      "query_id": "case0-root",
+      "ranking_inversions": 77
+    },
+    {
+      "comparable_pairs": 120,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -121.0739759236634,
+        "median": -126.30718399311613,
+        "minimum": -134.27504328289962,
+        "p95": -123.02351124960065,
+        "sum": -2044.6114940511625
+      },
+      "distinct_full_keys": 16,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 13.665745205268362,
+        "log_range": 2.766801613026473,
+        "maximum_normalized_weight": 0.12263005622780455
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.3055569900024944,
+        "log_range": 13.20106735923622,
+        "maximum_normalized_weight": 0.8722912208702497
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -16.678665660656065,
+        "median": -17.21973192996927,
+        "minimum": -19.44546727368254,
+        "p95": -16.92631460603897,
+        "sum": -279.7681590371592
+      },
+      "particles": 16,
+      "query_id": "case0-prefix",
+      "ranking_inversions": 24
+    },
+    {
+      "comparable_pairs": 111,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -183.60984823973695,
+        "median": -195.38349784477532,
+        "minimum": -196.65533437197308,
+        "p95": -184.82536137573794,
+        "sum": -3111.192901362771
+      },
+      "distinct_full_keys": 11,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 15.996484323003335,
+        "log_range": 0.07863881503692483,
+        "maximum_normalized_weight": 0.0640774869039451
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.380833149980689,
+        "log_range": 13.045486132236135,
+        "maximum_normalized_weight": 0.8348309933397218
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -12.60821968079506,
+        "median": -12.630518888423296,
+        "minimum": -12.686858495831984,
+        "p95": -12.62489241530514,
+        "sum": -202.1321419673119
+      },
+      "particles": 16,
+      "query_id": "case0-altered_binding",
+      "ranking_inversions": 31
+    },
+    {
+      "comparable_pairs": 118,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -67.40620572408642,
+        "median": -85.66355108902661,
+        "minimum": -109.23845998058681,
+        "p95": -69.79754555885384,
+        "sum": -1379.0930614546824
+      },
+      "distinct_full_keys": 14,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 13.611191954711648,
+        "log_range": 1.408758050785309,
+        "maximum_normalized_weight": 0.1216905429219377
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.1753551671652034,
+        "log_range": 41.83225425650039,
+        "maximum_normalized_weight": 0.9208279549464996
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -11.137895348414759,
+        "median": -11.938684828191356,
+        "minimum": -12.546653399200068,
+        "p95": -11.139686769351897,
+        "sum": -190.09453375064004
+      },
+      "particles": 16,
+      "query_id": "case1-root",
+      "ranking_inversions": 67
+    },
+    {
+      "comparable_pairs": 120,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -106.5098959619138,
+        "median": -172.8777641985639,
+        "minimum": -195.81002850766606,
+        "p95": -112.84600304449309,
+        "sum": -2623.1400894045305
+      },
+      "distinct_full_keys": 16,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 4.8822942277660335,
+        "log_range": 10.21700808038537,
+        "maximum_normalized_weight": 0.2925244922624867
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.0004287869487378,
+        "log_range": 89.30013254575226,
+        "maximum_normalized_weight": 0.9997856524909383
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -11.069348909376174,
+        "median": -18.98355568122878,
+        "minimum": -21.286356989761543,
+        "p95": -11.1036892144312,
+        "sum": -261.3143142133887
+      },
+      "particles": 16,
+      "query_id": "case1-prefix",
+      "ranking_inversions": 58
+    },
+    {
+      "comparable_pairs": 120,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -187.56087277683525,
+        "median": -211.84050271180004,
+        "minimum": -236.6261801037531,
+        "p95": -195.73730875534284,
+        "sum": -3433.0066924906305
+      },
+      "distinct_full_keys": 16,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 5.50675434764043,
+        "log_range": 3.958509413437696,
+        "maximum_normalized_weight": 0.27188737559963216
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.0000368765636902,
+        "log_range": 49.06530732691783,
+        "maximum_normalized_weight": 0.9999815620583955
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -10.852169298803915,
+        "median": -13.835077645144452,
+        "minimum": -14.81067871224161,
+        "p95": -11.105418209947942,
+        "sum": -210.98799573878773
+      },
+      "particles": 16,
+      "query_id": "case1-altered_binding",
+      "ranking_inversions": 42
+    },
+    {
+      "comparable_pairs": 120,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -358.4436619565663,
+        "median": -424.7819558702264,
+        "minimum": -545.8833787975404,
+        "p95": -359.39299882173566,
+        "sum": -7147.382949195812
+      },
+      "distinct_full_keys": 16,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 15.998588748987245,
+        "log_range": 0.03987878909833853,
+        "maximum_normalized_weight": 0.06267761136851857
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 2.585439630867047,
+        "log_range": 187.43971684097414,
+        "maximum_normalized_weight": 0.5693764087488259
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -10.832208247678636,
+        "median": -10.832515064775635,
+        "minimum": -10.872087036776975,
+        "p95": -10.83240523805597,
+        "sum": -173.3614580819824
+      },
+      "particles": 16,
+      "query_id": "case2-root",
+      "ranking_inversions": 29
+    },
+    {
+      "comparable_pairs": 114,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -445.6749448513124,
+        "median": -501.53140241581923,
+        "minimum": -603.6438298976823,
+        "p95": -449.93297634278167,
+        "sum": -8047.092922232407
+      },
+      "distinct_full_keys": 13,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 14.408388260429012,
+        "log_range": 1.0178529788177002,
+        "maximum_normalized_weight": 0.0897234358374028
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.0143161494175108,
+        "log_range": 157.9688850463699,
+        "maximum_normalized_weight": 0.9929085109901762
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -10.832230162631959,
+        "median": -11.335634142505796,
+        "minimum": -11.850083141449659,
+        "p95": -10.832230171447009,
+        "sum": -180.06811787495485
+      },
+      "particles": 16,
+      "query_id": "case2-prefix",
+      "ranking_inversions": 59
+    },
+    {
+      "comparable_pairs": 119,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -503.6881173243012,
+        "median": -598.6790372047407,
+        "minimum": -635.8573266818128,
+        "p95": -540.9432064889938,
+        "sum": -9520.945858831656
+      },
+      "distinct_full_keys": 15,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 15.998150271202684,
+        "log_range": 0.04660790127718428,
+        "maximum_normalized_weight": 0.06281989087396478
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.0,
+        "log_range": 132.1692093575116,
+        "maximum_normalized_weight": 1.0
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -10.834454509381203,
+        "median": -10.836974202118427,
+        "minimum": -10.881062410658387,
+        "p95": -10.834553350746887,
+        "sum": -173.43390318361253
+      },
+      "particles": 16,
+      "query_id": "case2-altered_binding",
+      "ranking_inversions": 41
+    },
+    {
+      "comparable_pairs": 120,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -306.42237559081036,
+        "median": -350.22875789814725,
+        "minimum": -432.72207102289303,
+        "p95": -309.44875536034084,
+        "sum": -5664.7541632656485
+      },
+      "distinct_full_keys": 16,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 15.999788716200937,
+        "log_range": 0.010936219323411933,
+        "maximum_normalized_weight": 0.06275571498064528
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.0354154615323827,
+        "log_range": 126.29969543208267,
+        "maximum_normalized_weight": 0.9825955456900453
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -10.923735048850176,
+        "median": -10.927768574157312,
+        "minimum": -10.934671268173588,
+        "p95": -10.924084553296211,
+        "sum": -174.84519613262592
+      },
+      "particles": 16,
+      "query_id": "case3-root",
+      "ranking_inversions": 39
+    },
+    {
+      "comparable_pairs": 120,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -278.39404745588513,
+        "median": -301.1072445903528,
+        "minimum": -341.89108914124995,
+        "p95": -278.4135273991679,
+        "sum": -4836.835766055234
+      },
+      "distinct_full_keys": 16,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 15.970870039510956,
+        "log_range": 0.21283107292060777,
+        "maximum_normalized_weight": 0.0654146603344301
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 2.083913937217024,
+        "log_range": 63.49704168536482,
+        "maximum_normalized_weight": 0.49593243723564306
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -11.033080733443285,
+        "median": -11.078566933691945,
+        "minimum": -11.245911806363893,
+        "p95": -11.044450763894304,
+        "sum": -177.27447700601238
+      },
+      "particles": 16,
+      "query_id": "case3-prefix",
+      "ranking_inversions": 27
+    },
+    {
+      "comparable_pairs": 120,
+      "constant_exact_endpoint_log_increment": -10.83220080440884,
+      "contextual_minus_iid_log_values": {
+        "count": 16,
+        "maximum": -547.5351678682905,
+        "median": -635.1488715671197,
+        "minimum": -681.1651036052654,
+        "p95": -547.8998634120952,
+        "sum": -10110.04841992768
+      },
+      "distinct_full_keys": 16,
+      "fixed_bank_closure_weights": {
+        "inverse_squared_weight_sum": 15.363977970200922,
+        "log_range": 0.511602412029788,
+        "maximum_normalized_weight": 0.0961441487622687
+      },
+      "fixed_bank_correction_weights": {
+        "inverse_squared_weight_sum": 1.8924008235497856,
+        "log_range": 133.62993573697486,
+        "maximum_normalized_weight": 0.6192251599655345
+      },
+      "full_prefix_to_closed_log_increment": {
+        "count": 16,
+        "maximum": -11.616927254120583,
+        "median": -12.128003470293606,
+        "minimum": -12.12852966615037,
+        "p95": -11.61692752583258,
+        "sum": -193.02065345010897
+      },
+      "particles": 16,
+      "query_id": "case3-altered_binding",
+      "ranking_inversions": 58
+    }
+  ],
+  "restrictions": [
+    "First16 correlated IID-bank particles; no additional selection or scoring",
+    "Fixed-bank normalized-weight statistics are not effective independent posterior sample counts",
+    "No evidence estimate, whole-space posterior coverage, or recovered reading is computed",
+    "Timings are bank-specific; changing keys or sampler can change graph size/cost"
+  ],
+  "result": {
+    "bytes": 5145,
+    "path": "results/CENSORED-CONTEXT-001/result.json",
+    "sha256": "b449ab44c6a6ed5e6f2b6438bcdeb3feebd230e81c9c826627080b108b595432"
+  }
+}

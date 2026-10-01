@@ -1,0 +1,144 @@
+{
+  "experiment": "CENSORED-CONTEXT-001",
+  "freeze": "15dea609b69e03456cbb791fb1c79a386bb3fb77",
+  "native_build": {
+    "abi": 1,
+    "command": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/src/voynich/native/suffix_marginal.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib"
+    ],
+    "compiler": "/usr/bin/clang++",
+    "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib"
+    ],
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib",
+    "library_sha256": "d8d0fbdeb183b292594248f95c1a56eeea843d3c3ba26a0eb05548fb7bcaf30f",
+    "machine": "arm64",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "source_sha256": "03dabaeb7814d283b41c94adb8063a6306e28beaf4ab97d17cb684532cd29d61"
+  },
+  "numpy_version": "2.5.3",
+  "paid_spend_usd": 0,
+  "parent_audit": {
+    "bytes": 777,
+    "path": "results/DICTIONARY-SMC-001/audit.json",
+    "sha256": "1496e89b0a8f6219a791ad2f35414151d1cd1b62b96b1d14709e15aa4a94168d"
+  },
+  "parent_result": {
+    "bytes": 127170,
+    "path": "results/DICTIONARY-SMC-001/result.json",
+    "sha256": "e1441bbda5ddfadb23bc5b36714d85cba6e131493d8fade96433bb1f606d716d"
+  },
+  "resources": {
+    "cpu_seconds": 3.480161,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1240498176,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 3.513783374975901
+  },
+  "source": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  },
+  "source_arrays": {
+    "probabilities": "236ded939aea77a107a3717341ed8c64fdf9e418baa88cb3a9e656d7f11127e0",
+    "transitions": "db61f9ce61b56077f59169721d7ba51669999a2d3814da2437eef6094bae0400"
+  },
+  "summary": {
+    "closure_attempts": 192,
+    "closure_complete": 192,
+    "closure_summed_wall_seconds": 0.17909883701940998,
+    "contextual_engineering_gate": "PASS",
+    "maximum_comparison_log_delta": 6.59383658785373e-12,
+    "native_all_positive": true,
+    "native_attempts": 960,
+    "native_complete": 960,
+    "native_summed_wall_seconds": 0.9522746650618501,
+    "new_smc_recovery_or_historical_qualification": false,
+    "python_attempts": 60,
+    "python_complete": 60,
+    "python_summed_wall_seconds": 0.5863526240573265,
+    "source_context_preserved": true
+  },
+  "workloads": [
+    {
+      "bytes": 46258,
+      "path": "results/CENSORED-CONTEXT-001/case0-root.json",
+      "sha256": "0fdcc7de8b0fa76deb95a23e52c1d3de220a0a8c80327427ff8b9cf8738d6552"
+    },
+    {
+      "bytes": 46267,
+      "path": "results/CENSORED-CONTEXT-001/case0-prefix.json",
+      "sha256": "946116def7b4e1a25dbea24142474f6e27bb8eb07f2efaf8acbf8ab07650f37f"
+    },
+    {
+      "bytes": 46273,
+      "path": "results/CENSORED-CONTEXT-001/case0-altered_binding.json",
+      "sha256": "8ebe44be15deaca2d68a06038065efba717f253a41c38b7ad9d27213a257995a"
+    },
+    {
+      "bytes": 45990,
+      "path": "results/CENSORED-CONTEXT-001/case1-root.json",
+      "sha256": "e67563626a30a52b5f483d84d96019758b01be761340d90bd654ca4bd3b38954"
+    },
+    {
+      "bytes": 46000,
+      "path": "results/CENSORED-CONTEXT-001/case1-prefix.json",
+      "sha256": "44cec89fb90ef3e5328733f619f21f86bde355a22eb93909a289f96be4c80695"
+    },
+    {
+      "bytes": 46011,
+      "path": "results/CENSORED-CONTEXT-001/case1-altered_binding.json",
+      "sha256": "b11ce387465675083954fc0143ca200bb344ef5b99720909cdba05c0d447142b"
+    },
+    {
+      "bytes": 54471,
+      "path": "results/CENSORED-CONTEXT-001/case2-root.json",
+      "sha256": "6a076611977532a906af942a7d5edcda14558fd5af9ef58c50a73860e711e253"
+    },
+    {
+      "bytes": 54449,
+      "path": "results/CENSORED-CONTEXT-001/case2-prefix.json",
+      "sha256": "2b9f3c6a9b5d4a51f59e611d12210fe116e2861666798827555c512bbd8bc1f1"
+    },
+    {
+      "bytes": 54490,
+      "path": "results/CENSORED-CONTEXT-001/case2-altered_binding.json",
+      "sha256": "5e39b2951940b26e3b571cf9d43dcc8bd0393f25c00ad582b37d0feca1e22654"
+    },
+    {
+      "bytes": 53263,
+      "path": "results/CENSORED-CONTEXT-001/case3-root.json",
+      "sha256": "757f44d7f8cfec5ddc3a722b8b03f67d41a1edd3cde1af3730a4e7346b18b8a9"
+    },
+    {
+      "bytes": 53362,
+      "path": "results/CENSORED-CONTEXT-001/case3-prefix.json",
+      "sha256": "c4dd0c7277f398923cfb5b1619deec0c8ec4e86daf46eec50c78e1c0833f96d3"
+    },
+    {
+      "bytes": 53376,
+      "path": "results/CENSORED-CONTEXT-001/case3-altered_binding.json",
+      "sha256": "623092c4dc2ee7e4cf23c0d8703f5baf3ac76cfa3bed9e9674fbf0d65903631d"
+    }
+  ]
+}
