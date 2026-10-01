@@ -1,0 +1,74 @@
+{
+  "episodes": {
+    "bytes": 8417,
+    "path": "outputs/JOINT-KEY-TRAIN-001/validation-episodes.json.gz",
+    "sha256": "677467683dc5f6de1a95b8cabe42d156dd33629162686163132cb9fbb9bc7bcf"
+  },
+  "freeze": "e240b2def5727d6bcb835add099143b9168890f6",
+  "gpu_inference": false,
+  "records": {
+    "bytes": 59445,
+    "path": "outputs/KEY-OBSERVABILITY-001/cases.jsonl",
+    "sha256": "c9cff734ec0cbbfe0ce712449bb7af76be1eb14834698748b4d6b6cdc2fa291f"
+  },
+  "resources": {
+    "cpu_seconds": 0.10694900000000007,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 212221952,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.11604074999922886
+  },
+  "source": {
+    "bytes": 146935,
+    "path": "outputs/JOINT-KEY-TRAIN-001/validation-source.json.gz",
+    "sha256": "7dfedf3fc49e8dd8345e7fd76f40422bb3a9ad45d0fc410c4e9e28c37572ea09"
+  },
+  "status": "PASS_complete_fixed_grid",
+  "summary": {
+    "bayes_expected_full_key_matches_sum": "8981533/2744515872",
+    "bayes_expected_used_matches_sum": "1248",
+    "capped_cases": 0,
+    "cases": 64,
+    "complete_cases": 64,
+    "determined_used_rows": 1248,
+    "known_plaintext_only": true,
+    "scope": "Exposed development, source-supplied observability calibration. Oracle probabilities use iid validation prior, not learned q or a ciphertext-only qualification.",
+    "total_search_nodes": 8328,
+    "unique_used_dictionary_cases": 64,
+    "unused_row_histogram": {
+      "0": 0,
+      "1": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "2": 5,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "3": 32,
+      "4": 19,
+      "5": 6,
+      "6": 2,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "used_rows_in_complete_cases": 1248
+  },
+  "training_final_audit_pending": true,
+  "training_updates": 0
+}
