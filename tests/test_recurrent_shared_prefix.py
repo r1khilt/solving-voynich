@@ -154,6 +154,27 @@ def test_neural_greedy_trap_is_detected_by_discarded_bound_and_wide_search_reach
     assert wide["plaintexts"] == expected[0][1] and wide["floating_map_bound_separated"]
 
 
+@pytest.mark.parametrize("beam", [1, 256])
+def test_numpy_provider_real_pruned_bound_and_strict_json_publication(beam, tmp_path):
+    import json
+    import gzip
+    from scripts.run_blind_channel_dev004 import save_new
+    # Same NumPy-backed normalization/score boundary that failed on hardware.
+    value = decode_shared_prefix(Provider(), (("x", "xx"), ("xx", "x")), ("xxx", "xx"), .2,
+                                 beam_width=beam)
+    assert type(value["floating_map_bound_separated"]) is bool
+    assert type(value["joint_log_probability"]) is float
+    encoded = json.dumps(value, allow_nan=False)
+    assert json.loads(encoded)["plaintexts"] == list(value["plaintexts"])
+    # Exercise the actual exclusive compressed result writer too.
+    from unittest.mock import patch
+    import scripts.run_blind_channel_dev004 as writer
+    with patch.object(writer, "ROOT", tmp_path):
+        artifact = save_new(tmp_path/"reading.json.gz", {"reading": value}, compressed=True)
+    decoded = json.loads(gzip.decompress((tmp_path/artifact["path"]).read_bytes()))
+    assert decoded["reading"]["floating_map_bound_separated"] == value["floating_map_bound_separated"]
+
+
 @pytest.mark.parametrize("cap", ["max_expanded", "max_source_prefixes", "max_channel_cells"])
 def test_resource_exhaustion_is_failure_and_does_not_return_a_false_empty_support_or_certificate(cap):
     with pytest.raises(RuntimeError, match="cap"):
@@ -202,6 +223,7 @@ def test_invalid_key_prior_channel_and_limits_rejected(bad):
 
 @pytest.mark.parametrize("seed", [71021, 71029])
 def test_real_tiny_lstm_cached_steps_equal_independent_whole_sequence_scores(seed):
+    import json
     import torch
     from torch.nn import functional as F
     from voynich.recurrent_latin_source import RecurrentSource
@@ -215,6 +237,9 @@ def test_real_tiny_lstm_cached_steps_equal_independent_whole_sequence_scores(see
     actual = decode_shared_prefix(
         RecurrentProvider(model), keys, records, rho, log_weights=weights, beam_width=256
     )
+    assert type(actual["floating_map_bound_separated"]) is bool
+    assert type(actual["joint_log_probability"]) is float
+    json.dumps(actual, allow_nan=False)
     rows = []
     with torch.inference_mode():
         for candidate in itertools.product(*(texts(len(r)) for r in records)):

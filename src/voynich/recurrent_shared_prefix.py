@@ -181,7 +181,9 @@ def decode_shared_prefix(provider, keys, records, rho, *, log_weights=None, beam
                     or np.any(~np.isfinite(probabilities)) or np.any(probabilities > 0)
                     or not np.allclose(np.exp(probabilities).sum(axis=1), 1., atol=1e-10, rtol=0)):
                 raise ValueError('Provider needs normalized finite nonpositive full-history letter log probabilities')
-            cache.update({text: (tuple(p), state) for text, p, state in zip(texts, probabilities, following, strict=True)})
+            # Public scores/flags must remain native Python scalars, including
+            # for NumPy-backed neural providers and strict JSON publication.
+            cache.update({text: (tuple(map(float, p)), state) for text, p, state in zip(texts, probabilities, following, strict=True)})
         frontier = []
         for row in retained:
             probabilities = cache[row.text][0]
