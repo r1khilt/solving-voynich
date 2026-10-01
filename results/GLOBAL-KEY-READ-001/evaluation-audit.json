@@ -1,0 +1,195 @@
+{
+  "all_32_cases_and_all_arm_totals_and_integer_gates_replayed": true,
+  "code": {
+    "bytes": 7432,
+    "path": "scripts/account_global_key_read001_evaluation.py",
+    "sha256": "22cbd079af16eab0659ad79c7da53c4490356fde02b13fe9458a347fd648557c"
+  },
+  "comparison": {
+    "cases": [
+      {
+        "case": "case-01",
+        "edits_reduced": 333,
+        "new_edits": 19,
+        "new_exact_records": 0,
+        "old_edits": 352,
+        "old_exact_records": 0
+      },
+      {
+        "case": "case-04",
+        "edits_reduced": 0,
+        "new_edits": 2,
+        "new_exact_records": 1,
+        "old_edits": 2,
+        "old_exact_records": 1
+      },
+      {
+        "case": "case-08",
+        "edits_reduced": 0,
+        "new_edits": 6,
+        "new_exact_records": 0,
+        "old_edits": 6,
+        "old_exact_records": 0
+      },
+      {
+        "case": "case-09",
+        "edits_reduced": 0,
+        "new_edits": 2,
+        "new_exact_records": 1,
+        "old_edits": 2,
+        "old_exact_records": 1
+      },
+      {
+        "case": "case-10",
+        "edits_reduced": 0,
+        "new_edits": 5,
+        "new_exact_records": 1,
+        "old_edits": 5,
+        "old_exact_records": 1
+      },
+      {
+        "case": "case-14",
+        "edits_reduced": 0,
+        "new_edits": 8,
+        "new_exact_records": 0,
+        "old_edits": 8,
+        "old_exact_records": 0
+      },
+      {
+        "case": "case-15",
+        "edits_reduced": 0,
+        "new_edits": 10,
+        "new_exact_records": 0,
+        "old_edits": 10,
+        "old_exact_records": 0
+      },
+      {
+        "case": "case-18",
+        "edits_reduced": 0,
+        "new_edits": 0,
+        "new_exact_records": 2,
+        "old_edits": 0,
+        "old_exact_records": 2
+      },
+      {
+        "case": "case-20",
+        "edits_reduced": 0,
+        "new_edits": 2,
+        "new_exact_records": 1,
+        "old_edits": 2,
+        "old_exact_records": 1
+      },
+      {
+        "case": "case-22",
+        "edits_reduced": 0,
+        "new_edits": 2,
+        "new_exact_records": 1,
+        "old_edits": 2,
+        "old_exact_records": 1
+      },
+      {
+        "case": "case-25",
+        "edits_reduced": 0,
+        "new_edits": 19,
+        "new_exact_records": 0,
+        "old_edits": 19,
+        "old_exact_records": 0
+      },
+      {
+        "case": "case-26",
+        "edits_reduced": 0,
+        "new_edits": 2,
+        "new_exact_records": 1,
+        "old_edits": 2,
+        "old_exact_records": 1
+      },
+      {
+        "case": "case-27",
+        "edits_reduced": 0,
+        "new_edits": 4,
+        "new_exact_records": 0,
+        "old_edits": 4,
+        "old_exact_records": 0
+      },
+      {
+        "case": "case-28",
+        "edits_reduced": -1,
+        "new_edits": 3,
+        "new_exact_records": 0,
+        "old_edits": 2,
+        "old_exact_records": 1
+      },
+      {
+        "case": "case-31",
+        "edits_reduced": 0,
+        "new_edits": 2,
+        "new_exact_records": 1,
+        "old_edits": 2,
+        "old_exact_records": 1
+      },
+      {
+        "case": "case-32",
+        "edits_reduced": -168,
+        "new_edits": 539,
+        "new_exact_records": 0,
+        "old_edits": 371,
+        "old_exact_records": 0
+      }
+    ],
+    "cases_improved": 1,
+    "cases_regressed": 2,
+    "cases_tied": 13,
+    "edits_reduced": 164,
+    "gold_characters": 7168,
+    "new_primary_edits": 625,
+    "old_primary_edits": 789,
+    "original_iid_screen_gate": "FAIL",
+    "original_recovery_gate": "FAIL"
+  },
+  "equal_reading_strings_not_checked": true,
+  "evaluation": {
+    "bytes": 77185,
+    "path": "results/GLOBAL-KEY-READ-001/evaluation.json",
+    "sha256": "2c66e1e4a885ef3c6eadff0b36cbb514573893b219d0e41780653805a90088cd"
+  },
+  "independent_agent_review": false,
+  "new_fitting_decoding_or_model_scores_computed": false,
+  "outside_bank_edits": 558,
+  "remaining_cases": 14,
+  "remaining_edits": 67,
+  "remaining_gold_characters": 6272,
+  "remaining_per_key_edit_count_minus_oracle": {
+    "case-04": 0,
+    "case-08": 0,
+    "case-09": 0,
+    "case-10": 0,
+    "case-14": 0,
+    "case-15": 0,
+    "case-18": 0,
+    "case-20": 0,
+    "case-22": 0,
+    "case-25": 0,
+    "case-26": 0,
+    "case-27": 0,
+    "case-28": 1,
+    "case-31": 0
+  },
+  "resources": {
+    "cpu_seconds": 0.00022700000000019926,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 381763584,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.00022741698194295168
+  },
+  "status": "PASS",
+  "true_tuple_outside_bank_cases": [
+    "case-01",
+    "case-32"
+  ]
+}
