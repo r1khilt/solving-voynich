@@ -1,0 +1,39 @@
+{
+  "arm": "prior_row",
+  "case": 0,
+  "maximum_native_nodes": 20680,
+  "maximum_owned_work_envelope": 77185152,
+  "native_calls": 20000,
+  "native_nodes": 41836661,
+  "nominal_complete_table_budget": 10080,
+  "output": {
+    "bytes": 8475,
+    "path": "outputs/COORDINATED-DICTIONARY-001/case0-82611-prior_row.json.gz",
+    "sha256": "644fd48b1377d2ff261b7b1c0bd0e994142872d9d7a3c58ce91322a408fcc00d"
+  },
+  "prediction_status": "read",
+  "recovery": {
+    "bank_contains_complete_used_key": false,
+    "edit_errors_with_failed_readings_counted_full_length": 155,
+    "exact_records": 0,
+    "selected_complete_used_key": false,
+    "selected_matches": 0,
+    "true_letters": 128,
+    "used_rows": 17
+  },
+  "seed": 82611,
+  "summary": {
+    "accepted_proposals": 2939,
+    "changed_proposals": 2728,
+    "edges": 116470955,
+    "final_distinct_full_keys": 31,
+    "log_evidence_estimate": -523.7065530191497,
+    "maximum_incremental_weight": 0.9974456584063299,
+    "minimum_incremental_ess": 1.0051261604834214,
+    "proposals": 8064,
+    "stages_completed": 63,
+    "status": "complete_particles",
+    "tables": 10080
+  },
+  "wall_seconds": 8.22081683302531
+}

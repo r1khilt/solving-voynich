@@ -1,0 +1,39 @@
+{
+  "arm": "covered_coordinated",
+  "case": 1,
+  "maximum_native_nodes": 2729,
+  "maximum_owned_work_envelope": 77191296,
+  "native_calls": 20000,
+  "native_nodes": 11484981,
+  "nominal_complete_table_budget": 10080,
+  "output": {
+    "bytes": 9060,
+    "path": "outputs/COORDINATED-DICTIONARY-001/case1-82611-covered_coordinated.json.gz",
+    "sha256": "98ac809c9cb401c9d70ac3e161614f62f072b4ed57a623129a20e5583c78ba56"
+  },
+  "prediction_status": "read",
+  "recovery": {
+    "bank_contains_complete_used_key": false,
+    "edit_errors_with_failed_readings_counted_full_length": 139,
+    "exact_records": 0,
+    "selected_complete_used_key": false,
+    "selected_matches": 0,
+    "true_letters": 128,
+    "used_rows": 19
+  },
+  "seed": 82611,
+  "summary": {
+    "accepted_proposals": 2803,
+    "changed_proposals": 1779,
+    "edges": 21952473,
+    "final_distinct_full_keys": 20,
+    "log_evidence_estimate": -539.0967151942784,
+    "maximum_incremental_weight": 1.0,
+    "minimum_incremental_ess": 1.0,
+    "proposals": 8064,
+    "stages_completed": 63,
+    "status": "complete_particles",
+    "tables": 10080
+  },
+  "wall_seconds": 5.186444666003808
+}

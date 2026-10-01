@@ -1,0 +1,273 @@
+{
+  "bulk_bytes": 282182,
+  "experiment": "COORDINATED-DICTIONARY-001",
+  "freeze": "6d19bea29c4baa0b28cf62fdc813d655d9596e06",
+  "gold": {
+    "bytes": 2282,
+    "path": "outputs/COORDINATED-DICTIONARY-001/gold.json.gz",
+    "sha256": "f304acc9b1089abc654a21da653bc2beaa1c2ce5c3dc780ff4b526d2fa38996a"
+  },
+  "native_build": {
+    "abi": 1,
+    "command": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/src/voynich/native/suffix_marginal.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib"
+    ],
+    "compiler": "/usr/bin/clang++",
+    "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib"
+    ],
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib",
+    "library_sha256": "d8d0fbdeb183b292594248f95c1a56eeea843d3c3ba26a0eb05548fb7bcaf30f",
+    "machine": "arm64",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "source_sha256": "03dabaeb7814d283b41c94adb8063a6306e28beaf4ab97d17cb684532cd29d61"
+  },
+  "numpy_version": "2.5.3",
+  "paid_spend_usd": 0,
+  "prediction_seal": {
+    "bytes": 5132,
+    "path": "results/COORDINATED-DICTIONARY-001/predictions-sealed.json",
+    "sha256": "f8a6465f540a53631488a78ee9c8ee5ecfc39e466a95f7f665754ad47d760d2f"
+  },
+  "queries": {
+    "bytes": 29125,
+    "path": "results/COORDINATED-DICTIONARY-001/queries.json",
+    "sha256": "1b50b7a5fb116648bd3b6851b6ee27f4c9c631694836eb52e8ba12b2e4bd06b3"
+  },
+  "resources": {
+    "cpu_seconds": 597.698177,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 866320384,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null
+    },
+    "wall_seconds": 598.5671736670192
+  },
+  "source": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  },
+  "source_arrays": {
+    "probabilities": "236ded939aea77a107a3717341ed8c64fdf9e418baa88cb3a9e656d7f11127e0",
+    "transitions": "db61f9ce61b56077f59169721d7ba51669999a2d3814da2437eef6094bae0400"
+  },
+  "summary": {
+    "all_fresh_development_synthetics": true,
+    "arms": {
+      "covered_coordinated": {
+        "all_complete": false,
+        "banks_containing_complete_used_key": 0,
+        "calls": 8,
+        "complete_positive": 5,
+        "edit_errors": 1937,
+        "exact_records": 0,
+        "extinct": 2,
+        "graph_cap": 0,
+        "seed_spreads": [
+          83.4564420567819,
+          56.884967805002134,
+          null,
+          null
+        ],
+        "selected_complete_used_keys": 0,
+        "selected_match_fraction_with_failures_counted_zero": 0.08552631578947369,
+        "stable_calibration": false,
+        "summed_call_wall_seconds": 150.01957833388587,
+        "tables": 112800,
+        "true_letters": 2304,
+        "work_cap": 1
+      },
+      "covered_row": {
+        "all_complete": false,
+        "banks_containing_complete_used_key": 0,
+        "calls": 8,
+        "complete_positive": 5,
+        "edit_errors": 2373,
+        "exact_records": 0,
+        "extinct": 0,
+        "graph_cap": 0,
+        "seed_spreads": [
+          60.21431357048709,
+          8.48486255257717,
+          null,
+          null
+        ],
+        "selected_complete_used_keys": 0,
+        "selected_match_fraction_with_failures_counted_zero": 0.02631578947368421,
+        "stable_calibration": false,
+        "summed_call_wall_seconds": 306.56689308409113,
+        "tables": 165024,
+        "true_letters": 2304,
+        "work_cap": 3
+      },
+      "prior_row": {
+        "all_complete": false,
+        "banks_containing_complete_used_key": 0,
+        "calls": 8,
+        "complete_positive": 3,
+        "edit_errors": 2233,
+        "exact_records": 0,
+        "extinct": 4,
+        "graph_cap": 0,
+        "seed_spreads": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "selected_complete_used_keys": 0,
+        "selected_match_fraction_with_failures_counted_zero": 0.039473684210526314,
+        "stable_calibration": false,
+        "summed_call_wall_seconds": 139.64689520705724,
+        "tables": 90976,
+        "true_letters": 2304,
+        "work_cap": 1
+      }
+    },
+    "equal_cpu_claimed": false,
+    "exploratory_coordinated_recovery_supported": false,
+    "historical_or_neural_qualification": false,
+    "mechanism_or_language_holdout": false,
+    "table_work_matched_only_when_complete": true
+  },
+  "workloads": [
+    {
+      "bytes": 1165,
+      "path": "results/COORDINATED-DICTIONARY-001/case0-82611-prior_row.json",
+      "sha256": "a356d3b881f93941194890514f1025d145d3956fb229a7d83a0b3cb0ad7fa1f9"
+    },
+    {
+      "bytes": 1169,
+      "path": "results/COORDINATED-DICTIONARY-001/case0-82611-covered_row.json",
+      "sha256": "6072b43665fc2733bf5b4ceaacdd838a804706ed23c7940ec31f5db6ffd1ff1a"
+    },
+    {
+      "bytes": 1156,
+      "path": "results/COORDINATED-DICTIONARY-001/case0-82611-covered_coordinated.json",
+      "sha256": "c30194c698b21bd7e7693455b51efb87a40ed090b1c6aafc697e9761770d9494"
+    },
+    {
+      "bytes": 1121,
+      "path": "results/COORDINATED-DICTIONARY-001/case0-82612-prior_row.json",
+      "sha256": "bd2ec166f0d0956fab3d34c43341f0e299b37b4ce69aa77c0ef2d0f86cbfc7ca"
+    },
+    {
+      "bytes": 1169,
+      "path": "results/COORDINATED-DICTIONARY-001/case0-82612-covered_row.json",
+      "sha256": "767ea2aaeecca5c720bdd415e346e0f9c7fc1351af7b1b1beb52311ea6f7edb2"
+    },
+    {
+      "bytes": 1154,
+      "path": "results/COORDINATED-DICTIONARY-001/case0-82612-covered_coordinated.json",
+      "sha256": "f9edbd436a962b0c6c85842a3eb9c0c398bcf76fe9f18e0c7cb6add2b76a51f7"
+    },
+    {
+      "bytes": 1116,
+      "path": "results/COORDINATED-DICTIONARY-001/case1-82611-prior_row.json",
+      "sha256": "43b11a60fd2218ce3bbc31d56467b865c4e926eb56bf8850e8e62a64c60d8cc4"
+    },
+    {
+      "bytes": 1139,
+      "path": "results/COORDINATED-DICTIONARY-001/case1-82611-covered_row.json",
+      "sha256": "e3b1a0f7ab2c80bc6f0543501c0d4ec43c4a8c664869b031e73d3cd704cc2aa6"
+    },
+    {
+      "bytes": 1154,
+      "path": "results/COORDINATED-DICTIONARY-001/case1-82611-covered_coordinated.json",
+      "sha256": "d99f326cead73bd5dff27337e094b22383ca6a75967d0530ef1913edd34de5f7"
+    },
+    {
+      "bytes": 1164,
+      "path": "results/COORDINATED-DICTIONARY-001/case1-82612-prior_row.json",
+      "sha256": "efbc53e6e153c63fb4d98294df976e5ba95e82f7e983c04709bb6460c2876e70"
+    },
+    {
+      "bytes": 1167,
+      "path": "results/COORDINATED-DICTIONARY-001/case1-82612-covered_row.json",
+      "sha256": "a378dc0a1f33ee17e0c23dd85c4f89ad0be6c3c9ea4beedc723f807b92e2125a"
+    },
+    {
+      "bytes": 1182,
+      "path": "results/COORDINATED-DICTIONARY-001/case1-82612-covered_coordinated.json",
+      "sha256": "6349154734b46445264b29c895610948f6c8366d0dfa15f79af608ec4bb2d589"
+    },
+    {
+      "bytes": 933,
+      "path": "results/COORDINATED-DICTIONARY-001/case2-82611-prior_row.json",
+      "sha256": "010d3d16f6b7de6da8c305f4c4fc7ab97e35dbc7a646c127f984f3f4adf32c0d"
+    },
+    {
+      "bytes": 936,
+      "path": "results/COORDINATED-DICTIONARY-001/case2-82611-covered_row.json",
+      "sha256": "b6d74a75c5b92f3f77e01ff65c735a16a2ccd08723613fa8be8e18c6d6b3808f"
+    },
+    {
+      "bytes": 1173,
+      "path": "results/COORDINATED-DICTIONARY-001/case2-82611-covered_coordinated.json",
+      "sha256": "347305755168cebc7ced947ea653ec53de4be34ba3dfd4f8bb64e29ae5ed2387"
+    },
+    {
+      "bytes": 1116,
+      "path": "results/COORDINATED-DICTIONARY-001/case2-82612-prior_row.json",
+      "sha256": "1e104408aa79375c7b1f465b9a6b0879e8b48f4263a06e161999c59ba15ee36b"
+    },
+    {
+      "bytes": 1174,
+      "path": "results/COORDINATED-DICTIONARY-001/case2-82612-covered_row.json",
+      "sha256": "03f00fb2fcbe112fdeef716e782988baca7b7b00bced1c40a3f2a71a62470e18"
+    },
+    {
+      "bytes": 954,
+      "path": "results/COORDINATED-DICTIONARY-001/case2-82612-covered_coordinated.json",
+      "sha256": "41cdf2a921c8157abe4b8fa26d9c0d770182a9db7cbecb6422a0d0abb4f5c174"
+    },
+    {
+      "bytes": 1141,
+      "path": "results/COORDINATED-DICTIONARY-001/case3-82611-prior_row.json",
+      "sha256": "d46bbf9a7c7792394a7eee965c43e479864562fad57bfb5a298dfe3f1e6013ad"
+    },
+    {
+      "bytes": 937,
+      "path": "results/COORDINATED-DICTIONARY-001/case3-82611-covered_row.json",
+      "sha256": "b9380904db0aeffe10863b707788157e878c7cd0966d9bc04b96e0731949380f"
+    },
+    {
+      "bytes": 1170,
+      "path": "results/COORDINATED-DICTIONARY-001/case3-82611-covered_coordinated.json",
+      "sha256": "89cde2107f6829a0eb274330d72069a0919316d821324d415ce67f697e3c0b16"
+    },
+    {
+      "bytes": 1150,
+      "path": "results/COORDINATED-DICTIONARY-001/case3-82612-prior_row.json",
+      "sha256": "47bbd21cfa3755635c8434f2739d73dfcd208df7635725880f5f44a1863f396a"
+    },
+    {
+      "bytes": 937,
+      "path": "results/COORDINATED-DICTIONARY-001/case3-82612-covered_row.json",
+      "sha256": "bd3ff5b77273eee7c119a8bc0430d602d7f318d2b9204458b4aed00109a21b52"
+    },
+    {
+      "bytes": 1191,
+      "path": "results/COORDINATED-DICTIONARY-001/case3-82612-covered_coordinated.json",
+      "sha256": "269f54baa0c574173a3206ce04b4da5b0bc23d03ba3753733ff1f3ddf3528b0d"
+    }
+  ]
+}
