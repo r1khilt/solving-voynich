@@ -1,0 +1,37 @@
+# After prior-key collapse: condition whole keys on observations progressively
+
+2026-10-01. Own post-outcome analysis and a proposed successor. [The calibration](../experiments/SHARED-KEY-GUIDE-001-results.md) failed. A faster implementation would not repair estimates supported by one lucky completion or none. The next question is whether whole-dictionary hypotheses can be conditioned on the observed text before asking them to explain its entire remainder.
+
+## Evidence and its boundary
+
+The prescribed-path arithmetic in the publication record gives probability42^(−d) for a prior key to match d specific free rows, and a union boundN/42^d for seeing that completion amongNbase samples. For the exposed correct-prefix states d=14/13/16/16. All96tested root/prefix bank configurations had zero prescribed-path-compatible base samples. This is exact dictionary-constraint bookkeeping, not a new likelihood evaluation or proof of total marginal error. Other readings contribute, and their likelihood concentration still needs its own analysis.
+
+Source-informed proposals must respect the fixed dictionary globally. Independently proposing replacements and discarding contradictions would recreate the approximation we are trying to remove. A proposal restricted to keys containing every single-glyph unit guarantees literal support when source rows have positive mass, but it excludes legitimate dictionaries using pairs; a corrected mixture with the prior could retain support. Guaranteeing support alone would not resolve source-likelihood concentration. That possible proposal is not implemented here.
+
+For the prescribed path component, the matched-work limitation is also explicit. With U possible codes, d required unknown rows and B fixed-dictionary evaluations, raw sampling has relative variance `(U^d-1)/B`. Integrating one required row exactly with B/U base draws gives `(U^d-U)/B`. Its relative variance ratio is `1-(U-1)/(U^d-1)`: close to1when d is large. If the integrated row is unused by that path, there is no conditional variance to remove and fewer base draws can be worse. This is an OWN elementary Bernoulli-component calculation, not a theorem about total likelihood variance; it explains why the fixed-base inequality alone supplied little practical promise at matched work.
+
+## Primary methodological reference
+
+Del Moral, Doucet and Jasra (2006), introduction, selected sections2.1–2.3,3.1 and3.3.2.3: construct a sequence of distributions on the same parameter space; appropriate incremental weights and invariant MCMC kernels can transport information between stages. Their MCMC special case uses a ratio of successive unnormalized target densities evaluated before moving, and has explicit support restrictions. This supports considering whole-key resample–move inference, not claiming that it mixes well on this cipher or that arbitrary repair steps preserve a target. Finite normalized posterior estimates and log evidence need not be unbiased. [Author-hosted paper](https://www.stats.ox.ac.uk/~doucet/delmoral_doucet_jasra_sequentialmontecarlosamplersJRSSB.pdf).
+
+This review is selected sections, not a complete theorem audit or implementation. Previous Voynich-specific and Bayesian type-sampling differences remain in [the method review](shared-dictionary-guide-2026-10-01.md).
+
+## A support-preserving bridge for variable-length units
+
+Fix a complete dictionary K, current source context and unfinished observed suffix y. Define G_c(K) as the probability that the source reaches at least c observed glyphs and its first c glyphs match y[:c]. Source stopping before c is failure, but termination after c is not yet required. G_0=1. A two-glyph unit may cross the current observation cut; only its visible part must match. Marginalize all source paths reaching the cut for the first time. Already closed records have factor1 because their EOS was paid in the original prefix.
+
+For two records, use a deterministic sequence of prefix cuts and multiply their conditional fixed-key prefix probabilities. The latent dictionary remains one whole K in every stage. At the final stage replace unclosed-prefix probabilities with the exact full observed-suffix likelihood, requiring emission boundaries and the correct EOS factors. Intermediate observations do not assert hidden source-letter boundaries.
+
+The supports are nested in the correct direction: any key with positive final likelihood must have positive likelihood at every preceding observation prefix. Full likelihood is at most the prefix probability, since its event is a subset. Prefix probability is nonincreasing as observations are added. These statements apply to exact conditional source calculations, not approximate beam estimates.
+
+The obvious shortcut of treating each truncated glyph string as a closed record is invalid. Take a dictionary in which both source rows emit00, rho1/4. The final observation00has probability3/16. Its first observed glyph0has valid unclosed-prefix probability3/4, but closed-record likelihood0because the cut lies inside an emission. A sequence of closed substring targets would discard every valid key in this example before reaching the full text.
+
+[Exact rational checker](../../scripts/check_prefix_bridge001.py) independently enumerates minimal-crossing source strings and compares a context-state forward calculation. All10368prefix-state checks passed:36two-row/six-unit dictionaries, three starting contexts, every binary observation length1..3, every prefix cut, and both positive/zero-transition source fixtures. All618positive final cases retain support throughout their bridges. [Receipt](../../results/SHARED-KEY-GUIDE-001/prefix-bridge-post-outcome.json). This is a finite mathematical check; no new empirical source model, guide evaluation, particle sampler or decoding run was executed.
+
+## Proposed sampler, not yet implemented
+
+Use target `gamma_t(K)=conditional_prior(K)*G_t(K)`, with both passage factors included and the final G equal to the desired fixed-key joint suffix likelihood. Weight current particles by G_t/G_(t−1), account for zero mass and extinction, then resample under a fixed registered rule and apply a kernel invariant to the new target. Whole-row Gibbs or corrected MH changes every use of that dictionary row automatically. Never refill extinction, suppress proposal ratios, or count an arbitrary search repair as a posterior mutation.
+
+Under the uniform conditional prior, a symmetric row proposal's MH ratio is the ratio of the bridge likelihoods, restricted to free rows. Gibbs enumeration over42units can be costly. One-row kernels can still be trapped by joint constraints—the earlier SOURCE-COUPLING failure remains relevant—so test joint moves and irreducibility on exact small state spaces before wider use. The bridge is a proposal mechanism, not evidence of efficient mixing, recovery or unique plaintext.
+
+Begin with exact small posterior/invariant-kernel/normalizer tests, including the mid-unit witness and incompatible keys. Measure full source-context computation rather than silently substituting the IID target; if IID is used as an intermediate, the final correction must target the intended law. Bound source tables, particles, mutation evaluations and wall/CPU before a new exposed recovery registration. New keys/nulls and independent historical constraints remain prerequisites for decipherment claims. No new training or paid queue is launched by this memo.
