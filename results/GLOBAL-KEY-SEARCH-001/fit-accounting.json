@@ -1,0 +1,1838 @@
+{
+  "all_32_terminal_processes_accounted": true,
+  "audit_code": {
+    "bytes": 8215,
+    "path": "scripts/account_global_key_search001.py",
+    "sha256": "a09b996aab0a0b4c7e8cf7c20320f09da2e7c1066ef77755bc03ec53d35d8cb1"
+  },
+  "audit_summed_cpu_seconds": 1905.42887,
+  "audit_summed_wall_seconds": 1937.0599022110691,
+  "campaign": {
+    "bytes": 3182,
+    "path": "results/GLOBAL-KEY-SEARCH-001/campaign.json",
+    "sha256": "66a1d95f79a4c34c204665c69bd83934ee9487a727232c5b9c6e08e2459debc2"
+  },
+  "cases": {
+    "case-01": {
+      "audit": {
+        "bytes": 1072,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-01-audit.json",
+        "sha256": "15d4b31acca46621fd779dff56d427b50bf0ac320be67289be55db4e91f55b8e"
+      },
+      "audit_resources": {
+        "cpu_seconds": 19.975242,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1727971328,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 20.2690681249951
+      },
+      "exchanges": {
+        "accepted": 1853,
+        "proposed": 15229
+      },
+      "fit": {
+        "bytes": 4761,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-01.json",
+        "sha256": "8d127dd82ad954b981cfe91014069a8a69f342fee218179ef0398acbbd7c5852"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1219.6090720000002,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1435877376,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1229.7618267500075
+      },
+      "gain_vs_best_warm_bits": 1351.8347337502942,
+      "gain_vs_old_bits": 1351.8347337502942,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 137591,
+      "new_native_record_marginals": 550364,
+      "proposals": 139233,
+      "reader_bank_size": 5894,
+      "reader_finite_keys": 5487,
+      "reference_records": 36,
+      "sampler_gain_vs_best_warm_bits": 1351.8347337502942,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4666
+    },
+    "case-02": {
+      "audit": {
+        "bytes": 1079,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-02-audit.json",
+        "sha256": "31646b86b0b564401d267ae93963c7ae91ae99322a5694f02b6b4c5ea0bafd03"
+      },
+      "audit_resources": {
+        "cpu_seconds": 145.26737599999998,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1563394048,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 146.2503501670435
+      },
+      "exchanges": {
+        "accepted": 473,
+        "proposed": 4452
+      },
+      "fit": {
+        "bytes": 4706,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-02.json",
+        "sha256": "1be2eaa1a97820a72a5156a0b096c066a429642cd981609c86842323771f007f"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1266.062519,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1007943680,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1277.014045625052
+      },
+      "gain_vs_best_warm_bits": 15.901703908826363,
+      "gain_vs_old_bits": 15.901703908826363,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.3767816308001134,
+      "new_keys_scored": 40945,
+      "new_native_record_marginals": 163780,
+      "proposals": 40709,
+      "reader_bank_size": 5818,
+      "reader_finite_keys": 5818,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 15.52492227802625,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4602
+    },
+    "case-03": {
+      "audit": {
+        "bytes": 1072,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-03-audit.json",
+        "sha256": "95a9c1b13e4800afff9fec2488047040804fe191bda29d7dc463f4f5d2facd89"
+      },
+      "audit_resources": {
+        "cpu_seconds": 137.389281,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1686487040,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 138.35709579096874
+      },
+      "exchanges": {
+        "accepted": 592,
+        "proposed": 4410
+      },
+      "fit": {
+        "bytes": 4713,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-03.json",
+        "sha256": "4b5df6c4427f8252cc8d4792513431df6e48a2e6cd7b850045e907a3e036280a"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1259.429975,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1005731840,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1270.1909587919945
+      },
+      "gain_vs_best_warm_bits": 30.83212666066587,
+      "gain_vs_old_bits": 30.83212666066587,
+      "maximum_reference_delta": 6.821210263296962e-13,
+      "neighborhood_gain_bits": 0.6829046722044503,
+      "new_keys_scored": 40476,
+      "new_native_record_marginals": 161904,
+      "proposals": 40335,
+      "reader_bank_size": 5833,
+      "reader_finite_keys": 5833,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 30.14922198846142,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4617
+    },
+    "case-04": {
+      "audit": {
+        "bytes": 1083,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-04-audit.json",
+        "sha256": "a0a384a10f27674a20b0e0eccaa58b7886f50062e1b03d8a3cdae510cc878940"
+      },
+      "audit_resources": {
+        "cpu_seconds": 27.606136999999997,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1906393088,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 27.961951292003505
+      },
+      "exchanges": {
+        "accepted": 2649,
+        "proposed": 11606
+      },
+      "fit": {
+        "bytes": 4766,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-04.json",
+        "sha256": "73a279c1061f5b4cdd5842a059ed9298c870d6ff42ca05be5df9f2b5ca1e92ed"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1212.602215,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1545060352,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1222.6616591249476
+      },
+      "gain_vs_best_warm_bits": 0.22587756895673872,
+      "gain_vs_old_bits": 0.22587756895673872,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 104494,
+      "new_native_record_marginals": 417976,
+      "proposals": 106119,
+      "reader_bank_size": 4721,
+      "reader_finite_keys": 2751,
+      "reference_records": 36,
+      "sampler_gain_vs_best_warm_bits": 0.22587756895673872,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 3499
+    },
+    "case-05": {
+      "audit": {
+        "bytes": 1072,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-05-audit.json",
+        "sha256": "8560b6d8a776e0bf833ce09e5f7317ef2924be24f9522f36451954b5241a060b"
+      },
+      "audit_resources": {
+        "cpu_seconds": 103.070564,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1708457984,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 104.22369387501385
+      },
+      "exchanges": {
+        "accepted": 571,
+        "proposed": 5457
+      },
+      "fit": {
+        "bytes": 4712,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-05.json",
+        "sha256": "17f80b5764d6df24c4e61f408b7f0484fb0f81d788c3a87b9d1afdc862b232ba"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1248.412241,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1039990784,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1258.8871936660144
+      },
+      "gain_vs_best_warm_bits": 24.750783688403498,
+      "gain_vs_old_bits": 24.750783688403498,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 3.8072637876949234,
+      "new_keys_scored": 49842,
+      "new_native_record_marginals": 199368,
+      "proposals": 49906,
+      "reader_bank_size": 5820,
+      "reader_finite_keys": 5820,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 20.943519900708576,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4599
+    },
+    "case-06": {
+      "audit": {
+        "bytes": 1072,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-06-audit.json",
+        "sha256": "e38136d52bdac176acb8512ea4b482567cc4cfde998e7611c3cd13e662db64e0"
+      },
+      "audit_resources": {
+        "cpu_seconds": 136.482518,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1740275712,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 137.4793316249852
+      },
+      "exchanges": {
+        "accepted": 517,
+        "proposed": 4529
+      },
+      "fit": {
+        "bytes": 4714,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-06.json",
+        "sha256": "a0b348afb02aa0417a02574c877689cdca35768b85dc4f01d85cb146096feab8"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1258.743915,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1007157248,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1269.3216928750044
+      },
+      "gain_vs_best_warm_bits": 29.642484000522582,
+      "gain_vs_old_bits": 29.642484000522582,
+      "maximum_reference_delta": 1.2505552149377763e-12,
+      "neighborhood_gain_bits": 0.25909450685664936,
+      "new_keys_scored": 41581,
+      "new_native_record_marginals": 166324,
+      "proposals": 41415,
+      "reader_bank_size": 5811,
+      "reader_finite_keys": 5811,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 29.38338949366593,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4586
+    },
+    "case-07": {
+      "audit": {
+        "bytes": 1073,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-07-audit.json",
+        "sha256": "ce67d432e2a43d5e0b1833563a3918c01e19e5e9d5ad030720e0d09e04711551"
+      },
+      "audit_resources": {
+        "cpu_seconds": 151.726758,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1637236736,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 152.81872941699112
+      },
+      "exchanges": {
+        "accepted": 521,
+        "proposed": 4407
+      },
+      "fit": {
+        "bytes": 4712,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-07.json",
+        "sha256": "6701246c569f93887b9c1988f65242a7321c978bcc46a81f8ca23e5abc86fba6"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1261.442127,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1131741184,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1272.1934630830074
+      },
+      "gain_vs_best_warm_bits": 59.08139499499824,
+      "gain_vs_old_bits": 59.08139499499824,
+      "maximum_reference_delta": 1.1368683772161603e-12,
+      "neighborhood_gain_bits": 3.118626353042529,
+      "new_keys_scored": 40583,
+      "new_native_record_marginals": 162332,
+      "proposals": 40306,
+      "reader_bank_size": 5780,
+      "reader_finite_keys": 5739,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 55.96276864195571,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4562
+    },
+    "case-08": {
+      "audit": {
+        "bytes": 1069,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-08-audit.json",
+        "sha256": "0115afa60b4df0475072c734fad41381f4e5d8c170dc780750f1486fe990a86a"
+      },
+      "audit_resources": {
+        "cpu_seconds": 30.033518,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1559019520,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 30.46427312499145
+      },
+      "exchanges": {
+        "accepted": 1341,
+        "proposed": 9408
+      },
+      "fit": {
+        "bytes": 4704,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-08.json",
+        "sha256": "cb405039fe4960f514c57b29f6233fb3f9c53d90c54d00dd86d73553e0b45dfe"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1212.0125209999999,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1216872448,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1222.112132749986
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 85916,
+      "new_native_record_marginals": 343664,
+      "proposals": 86041,
+      "reader_bank_size": 3519,
+      "reader_finite_keys": 2231,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 3490
+    },
+    "case-09": {
+      "audit": {
+        "bytes": 1068,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-09-audit.json",
+        "sha256": "7a08222a449743eddec2b551aebc7d88b99115971015fa92433beaf3936daea8"
+      },
+      "audit_resources": {
+        "cpu_seconds": 27.157091,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1704886272,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 30.6221517919912
+      },
+      "exchanges": {
+        "accepted": 1222,
+        "proposed": 9006
+      },
+      "fit": {
+        "bytes": 4708,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-09.json",
+        "sha256": "8fdf9dbbb1f8a6823897de17838718623795644be3265b4e9a35abaed301d2ba"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1213.0609789999999,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1702313984,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1220.6368817499606
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 79902,
+      "new_native_record_marginals": 319608,
+      "proposals": 82348,
+      "reader_bank_size": 4664,
+      "reader_finite_keys": 3863,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4651
+    },
+    "case-10": {
+      "audit": {
+        "bytes": 1080,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-10-audit.json",
+        "sha256": "c6164d016081bdd5cb2389a4cea66d712d641786f57245486549106c7fd25362"
+      },
+      "audit_resources": {
+        "cpu_seconds": 29.975682000000003,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1528872960,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 33.52326791698579
+      },
+      "exchanges": {
+        "accepted": 1884,
+        "proposed": 11620
+      },
+      "fit": {
+        "bytes": 4700,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-10.json",
+        "sha256": "7b46fc126487d7dcec69f2c3c95104a2bba827322d0233c43515a5cb83e14187"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1212.274702,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1526071296,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1219.8377849589451
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 7.958078640513122e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 99903,
+      "new_native_record_marginals": 399612,
+      "proposals": 106253,
+      "reader_bank_size": 4706,
+      "reader_finite_keys": 3022,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4687
+    },
+    "case-11": {
+      "audit": {
+        "bytes": 1073,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-11-audit.json",
+        "sha256": "42fdf6c0832bf6449b9b910b3a83369c7895b31dab38e374ee3ad47f37edf526"
+      },
+      "audit_resources": {
+        "cpu_seconds": 117.787696,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1342210048,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 124.03226900001755
+      },
+      "exchanges": {
+        "accepted": 605,
+        "proposed": 5782
+      },
+      "fit": {
+        "bytes": 4711,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-11.json",
+        "sha256": "c6635146082756a58c98b703509f02a651db22cb00caf27ada97b14b1cafd04a"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1267.545246,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1340325888,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1278.2325199589832
+      },
+      "gain_vs_best_warm_bits": 26.741510289248968,
+      "gain_vs_old_bits": 26.741510289248968,
+      "maximum_reference_delta": 1.0231815394945443e-12,
+      "neighborhood_gain_bits": 0.11082629101354478,
+      "new_keys_scored": 52613,
+      "new_native_record_marginals": 210452,
+      "proposals": 52875,
+      "reader_bank_size": 5809,
+      "reader_finite_keys": 5809,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 26.630683998235423,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4593
+    },
+    "case-12": {
+      "audit": {
+        "bytes": 1070,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-12-audit.json",
+        "sha256": "e6eab8ffa26da29aa70ab9a2206fab21ac635d5087813d776deb05f083c8cc48"
+      },
+      "audit_resources": {
+        "cpu_seconds": 87.969958,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1293844480,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 90.47946808300912
+      },
+      "exchanges": {
+        "accepted": 535,
+        "proposed": 5327
+      },
+      "fit": {
+        "bytes": 4714,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-12.json",
+        "sha256": "59742d70928c289e10134f6e4c254fa6bb29f7e15505142158fb671e98210f4c"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1258.750578,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1291698176,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1275.6399745409726
+      },
+      "gain_vs_best_warm_bits": 35.42750299427855,
+      "gain_vs_old_bits": 35.42750299427855,
+      "maximum_reference_delta": 1.0231815394945443e-12,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 48671,
+      "new_native_record_marginals": 194684,
+      "proposals": 48714,
+      "reader_bank_size": 5770,
+      "reader_finite_keys": 5770,
+      "reference_records": 36,
+      "sampler_gain_vs_best_warm_bits": 35.42750299427855,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4553
+    },
+    "case-13": {
+      "audit": {
+        "bytes": 1081,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-13-audit.json",
+        "sha256": "4b5721a26af2b7f4df5548c6b9df86d97645b59e00b56b12a07ef3dc8a6747ae"
+      },
+      "audit_resources": {
+        "cpu_seconds": 141.12632299999999,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1744650240,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 143.74268066696823
+      },
+      "exchanges": {
+        "accepted": 421,
+        "proposed": 4183
+      },
+      "fit": {
+        "bytes": 4714,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-13.json",
+        "sha256": "4a348845179af2fb7bc026ba45e8d481d268997b82b32980c38cd569db65f51c"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1263.47042,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1416806400,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1282.2066411660053
+      },
+      "gain_vs_best_warm_bits": 27.990639938402893,
+      "gain_vs_old_bits": 27.990639938402893,
+      "maximum_reference_delta": 1.0231815394945443e-12,
+      "neighborhood_gain_bits": 2.906478600945354,
+      "new_keys_scored": 38616,
+      "new_native_record_marginals": 154464,
+      "proposals": 38262,
+      "reader_bank_size": 5793,
+      "reader_finite_keys": 5588,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 25.084161337457537,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4562
+    },
+    "case-14": {
+      "audit": {
+        "bytes": 1078,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-14-audit.json",
+        "sha256": "983ba848e6f64abaf2cc234e5eb194fea122c6827041fc99cb26357b7b94e601"
+      },
+      "audit_resources": {
+        "cpu_seconds": 30.357290000000003,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1539407872,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 31.53901758301072
+      },
+      "exchanges": {
+        "accepted": 1404,
+        "proposed": 8978
+      },
+      "fit": {
+        "bytes": 4698,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-14.json",
+        "sha256": "7644a296f676683951ab20d691c3b414ef99669662c1dff04f5f3999d0cf7f60"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1209.213777,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1538228224,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1225.3913652499905
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 6.821210263296962e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 82059,
+      "new_native_record_marginals": 328236,
+      "proposals": 82108,
+      "reader_bank_size": 3514,
+      "reader_finite_keys": 2636,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 3485
+    },
+    "case-15": {
+      "audit": {
+        "bytes": 1072,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-15-audit.json",
+        "sha256": "6535c7b229c659a35f3736657142fa6bd30b7ae1258a80165871227b340a0a96"
+      },
+      "audit_resources": {
+        "cpu_seconds": 22.96157,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1577730048,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 23.73879545798991
+      },
+      "exchanges": {
+        "accepted": 1756,
+        "proposed": 12383
+      },
+      "fit": {
+        "bytes": 4708,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-15.json",
+        "sha256": "637972b23595d54eedd7aa4197eb4ccb87356a428a17bba7e34df77641bfff81"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1207.525821,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1572634624,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1224.201971624978
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 5.684341886080801e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 111677,
+      "new_native_record_marginals": 446708,
+      "proposals": 113221,
+      "reader_bank_size": 3518,
+      "reader_finite_keys": 2590,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 3493
+    },
+    "case-16": {
+      "audit": {
+        "bytes": 1072,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-16-audit.json",
+        "sha256": "af72c342317e936e23c775b194b6ab6b1444b87fd49fe4fd3f9f55bd8bde7dd4"
+      },
+      "audit_resources": {
+        "cpu_seconds": 104.984774,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1480556544,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 107.27216408302775
+      },
+      "exchanges": {
+        "accepted": 527,
+        "proposed": 5674
+      },
+      "fit": {
+        "bytes": 4718,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-16.json",
+        "sha256": "7fc7a93fc889278ab240fafd53d6860bad61f2526c19aecd28cb04ac414d5d8d"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1247.0368159999998,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1476706304,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1265.7769736250048
+      },
+      "gain_vs_best_warm_bits": 54.05912666207638,
+      "gain_vs_old_bits": 54.05912666207638,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.44197218167786023,
+      "new_keys_scored": 51756,
+      "new_native_record_marginals": 207024,
+      "proposals": 51899,
+      "reader_bank_size": 5768,
+      "reader_finite_keys": 5768,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 53.61715448039852,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4552
+    },
+    "case-17": {
+      "audit": {
+        "bytes": 1068,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-17-audit.json",
+        "sha256": "0ddd6fcd893f05714ebd4f313782987810534729274c5427a94ef52ac1721680"
+      },
+      "audit_resources": {
+        "cpu_seconds": 52.335977,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1681604608,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 52.6361068750266
+      },
+      "exchanges": {
+        "accepted": 483,
+        "proposed": 5387
+      },
+      "fit": {
+        "bytes": 4710,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-17.json",
+        "sha256": "ecbad385f9e9ac0c596ec715c27370693f59f733dfb2c69f5021d871da342f28"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1215.887463,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1379401728,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1235.512230583001
+      },
+      "gain_vs_best_warm_bits": 8.963260325079563,
+      "gain_vs_old_bits": 8.963260325079563,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 49121,
+      "new_native_record_marginals": 196484,
+      "proposals": 49273,
+      "reader_bank_size": 5819,
+      "reader_finite_keys": 5819,
+      "reference_records": 36,
+      "sampler_gain_vs_best_warm_bits": 8.963260325079563,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4598
+    },
+    "case-18": {
+      "audit": {
+        "bytes": 1073,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-18-audit.json",
+        "sha256": "86e1ef16c800e12430e7bba6a32c4464d1349a3880c035317af7b28fbb01d1ab"
+      },
+      "audit_resources": {
+        "cpu_seconds": 10.05072,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1751793664,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 10.320989041996654
+      },
+      "exchanges": {
+        "accepted": 3770,
+        "proposed": 16100
+      },
+      "fit": {
+        "bytes": 4711,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-18.json",
+        "sha256": "0cdcd0efd45b3d23f1753f3fbdb480441368de7426d5649ca1019302deb1a86a"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1197.027045,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1752793088,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1216.4466448330204
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 7.958078640513122e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 144165,
+      "new_native_record_marginals": 576660,
+      "proposals": 147206,
+      "reader_bank_size": 3512,
+      "reader_finite_keys": 3025,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 3494
+    },
+    "case-19": {
+      "audit": {
+        "bytes": 1071,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-19-audit.json",
+        "sha256": "e7863845385740efbb62081af4e275d10c25fedbb00f2791ea31b86305a60403"
+      },
+      "audit_resources": {
+        "cpu_seconds": 82.816006,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1842610176,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 83.22338933398714
+      },
+      "exchanges": {
+        "accepted": 542,
+        "proposed": 4372
+      },
+      "fit": {
+        "bytes": 4719,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-19.json",
+        "sha256": "36331e5e0f91ca7c0f140b534c803e9eaa6f618b263255ed012dbf3a488125e5"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1236.0016549999998,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1424736256,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1249.7008517089998
+      },
+      "gain_vs_best_warm_bits": 0.18204780164302758,
+      "gain_vs_old_bits": 0.18204780164302758,
+      "maximum_reference_delta": 1.1368683772161603e-12,
+      "neighborhood_gain_bits": 0.06702276109839561,
+      "new_keys_scored": 40145,
+      "new_native_record_marginals": 160580,
+      "proposals": 39998,
+      "reader_bank_size": 5811,
+      "reader_finite_keys": 5811,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 0.11502504054463197,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4610
+    },
+    "case-20": {
+      "audit": {
+        "bytes": 1083,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-20-audit.json",
+        "sha256": "94cb75afab44786f48355b2f20a29098849d903946587a3cd347ebd393da8e76"
+      },
+      "audit_resources": {
+        "cpu_seconds": 13.537863000000002,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1577353216,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 13.609233292052522
+      },
+      "exchanges": {
+        "accepted": 1851,
+        "proposed": 12768
+      },
+      "fit": {
+        "bytes": 4712,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-20.json",
+        "sha256": "f830a69fbcda3ab53f09b99c62038038829493661f084b4068603cdcb538efb3"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1200.191902,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1570045952,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1213.3643996249884
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 6.821210263296962e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 115232,
+      "new_native_record_marginals": 460928,
+      "proposals": 116736,
+      "reader_bank_size": 3518,
+      "reader_finite_keys": 2432,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 3496
+    },
+    "case-21": {
+      "audit": {
+        "bytes": 1070,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-21-audit.json",
+        "sha256": "81186b0ca82273058ecdcff7440665f69f940d06029445eb4473734eec5a3360"
+      },
+      "audit_resources": {
+        "cpu_seconds": 84.743368,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 2101248000,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 85.13994424999692
+      },
+      "exchanges": {
+        "accepted": 571,
+        "proposed": 4687
+      },
+      "fit": {
+        "bytes": 4713,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-21.json",
+        "sha256": "96e8582a32594fce683e0f2ccdea5d460b44c353b4d2c82124e87aa100d89783"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1241.423239,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1358168064,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1254.8729109580163
+      },
+      "gain_vs_best_warm_bits": 46.8558686727708,
+      "gain_vs_old_bits": 46.8558686727708,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 4.2725327948434915,
+      "new_keys_scored": 42970,
+      "new_native_record_marginals": 171880,
+      "proposals": 42850,
+      "reader_bank_size": 5810,
+      "reader_finite_keys": 5810,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 42.58333587792731,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4606
+    },
+    "case-22": {
+      "audit": {
+        "bytes": 1074,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-22-audit.json",
+        "sha256": "37330214af4eed946cbf1e93a63fda7752725cd81d16235a118c9c67dd43aa76"
+      },
+      "audit_resources": {
+        "cpu_seconds": 12.401698,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1700921344,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 12.464137416041922
+      },
+      "exchanges": {
+        "accepted": 2198,
+        "proposed": 13713
+      },
+      "fit": {
+        "bytes": 4712,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-22.json",
+        "sha256": "3d62e785505f8ae58342fa9e117d7d7608eb1dc5b53f1afab3853421e155e19f"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1202.487584,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1702789120,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1214.9336788749788
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 124787,
+      "new_native_record_marginals": 499148,
+      "proposals": 125379,
+      "reader_bank_size": 3574,
+      "reader_finite_keys": 2406,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 3528
+    },
+    "case-23": {
+      "audit": {
+        "bytes": 1070,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-23-audit.json",
+        "sha256": "56a2861b53a49e5eb362ac74dda61c443eb6a273f483ebca04339fffc732f4e6"
+      },
+      "audit_resources": {
+        "cpu_seconds": 82.111038,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1919811584,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 82.49583466700278
+      },
+      "exchanges": {
+        "accepted": 465,
+        "proposed": 4620
+      },
+      "fit": {
+        "bytes": 4713,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-23.json",
+        "sha256": "0a936b61d93ea4e32b85276ac3f408229edb900982ca16d0dabda9723fa1409f"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1228.252068,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1363771392,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1239.9495662080008
+      },
+      "gain_vs_best_warm_bits": 18.730502643592125,
+      "gain_vs_old_bits": 18.730502643592125,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.49801635775442044,
+      "new_keys_scored": 42146,
+      "new_native_record_marginals": 168584,
+      "proposals": 42254,
+      "reader_bank_size": 5801,
+      "reader_finite_keys": 5801,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 18.232486285837705,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4593
+    },
+    "case-24": {
+      "audit": {
+        "bytes": 1078,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-24-audit.json",
+        "sha256": "72b4c2b9a5d8793d003ebd49c0aa098f8acca584d182d44cddfe7b9f1613f02b"
+      },
+      "audit_resources": {
+        "cpu_seconds": 65.84211900000001,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1645772800,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 66.15194199996768
+      },
+      "exchanges": {
+        "accepted": 879,
+        "proposed": 6311
+      },
+      "fit": {
+        "bytes": 4710,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-24.json",
+        "sha256": "4f77581a276c845afdccdf0ce0a6363ec59796f43dffaa1c5fbdfd2f653c3138"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1227.409542,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1276215296,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1239.0498038329533
+      },
+      "gain_vs_best_warm_bits": 47.45791964460977,
+      "gain_vs_old_bits": 47.45791964460977,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 3.1606612243855774,
+      "new_keys_scored": 57433,
+      "new_native_record_marginals": 229732,
+      "proposals": 57707,
+      "reader_bank_size": 5801,
+      "reader_finite_keys": 5801,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 44.29725842022419,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4585
+    },
+    "case-25": {
+      "audit": {
+        "bytes": 1075,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-25-audit.json",
+        "sha256": "cc9d7eafb97b11a2484598bca46db7e5f5843dc4aa402c325cbd45bcf710c2d4"
+      },
+      "audit_resources": {
+        "cpu_seconds": 15.501294,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1546043392,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 15.584776417003013
+      },
+      "exchanges": {
+        "accepted": 3361,
+        "proposed": 16713
+      },
+      "fit": {
+        "bytes": 4709,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-25.json",
+        "sha256": "a1e6cc1ba1474f017a6db35785a88bff5e930a777447ed79623db7f59903bb2a"
+      },
+      "fit_resources": {
+        "cpu_seconds": 856.606813,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1544093696,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 860.5113004170125
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 1.2505552149377763e-12,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 150962,
+      "new_native_record_marginals": 603848,
+      "proposals": 152812,
+      "reader_bank_size": 4670,
+      "reader_finite_keys": 4055,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "score_limit",
+      "whole_old_bank_size": 4644
+    },
+    "case-26": {
+      "audit": {
+        "bytes": 1084,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-26-audit.json",
+        "sha256": "d1321dba96a7b27994348278868234f5a03742fcdd33b710ca0e5c955348a49c"
+      },
+      "audit_resources": {
+        "cpu_seconds": 14.004701999999998,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1845280768,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 14.048541291966103
+      },
+      "exchanges": {
+        "accepted": 2169,
+        "proposed": 16741
+      },
+      "fit": {
+        "bytes": 4714,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-26.json",
+        "sha256": "17f02a523cc18c80d152b438beb8b18879502dedd2f185bbbb96ff9fb771129e"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1147.6656619999999,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1845379072,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1153.112712208007
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 1.1368683772161603e-12,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 151038,
+      "new_native_record_marginals": 604152,
+      "proposals": 153075,
+      "reader_bank_size": 3560,
+      "reader_finite_keys": 3156,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "score_limit",
+      "whole_old_bank_size": 3529
+    },
+    "case-27": {
+      "audit": {
+        "bytes": 1074,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-27-audit.json",
+        "sha256": "d7fb66a3a509e177699d068b83b27b63e18f7d29fa8fd36b1c8bdf07bf5fc937"
+      },
+      "audit_resources": {
+        "cpu_seconds": 20.522502,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1679818752,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 20.648118417011574
+      },
+      "exchanges": {
+        "accepted": 4304,
+        "proposed": 16629
+      },
+      "fit": {
+        "bytes": 4718,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-27.json",
+        "sha256": "2897404522beb8ec99fea0ff9d4f86f6833cbe9e95f0a1c22073216f565817d5"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1169.2826300000002,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1680998400,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1174.5036738749477
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 9.094947017729282e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 151069,
+      "new_native_record_marginals": 604276,
+      "proposals": 152043,
+      "reader_bank_size": 3538,
+      "reader_finite_keys": 3051,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "score_limit",
+      "whole_old_bank_size": 3486
+    },
+    "case-28": {
+      "audit": {
+        "bytes": 1083,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-28-audit.json",
+        "sha256": "555df31ae0bbeac860cdeaf3535bde00f735953149701e6663fdbd2c17894c35"
+      },
+      "audit_resources": {
+        "cpu_seconds": 14.034697000000001,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1617887232,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 14.087551917007659
+      },
+      "exchanges": {
+        "accepted": 3132,
+        "proposed": 16667
+      },
+      "fit": {
+        "bytes": 4713,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-28.json",
+        "sha256": "b7b4fa4c1413878d428ce8dafbc302f9ea9e5b0ce450be33f47d8b2f7e420a2a"
+      },
+      "fit_resources": {
+        "cpu_seconds": 962.785852,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1617592320,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 967.6212228750228
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 7.958078640513122e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 151137,
+      "new_native_record_marginals": 604548,
+      "proposals": 152399,
+      "reader_bank_size": 4671,
+      "reader_finite_keys": 3380,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "score_limit",
+      "whole_old_bank_size": 4645
+    },
+    "case-29": {
+      "audit": {
+        "bytes": 1075,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-29-audit.json",
+        "sha256": "31c9347f5a0338d18003675f5d4c2a1436adad41debb9792b9f7534f16d76cd6"
+      },
+      "audit_resources": {
+        "cpu_seconds": 42.403674,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1514749952,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 42.479804458038416
+      },
+      "exchanges": {
+        "accepted": 1287,
+        "proposed": 11571
+      },
+      "fit": {
+        "bytes": 4729,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-29.json",
+        "sha256": "0aa3df03516f80e073b60cde868da8a6a1c0954e7e747ba5ae16ffe5e3ad3e22"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1224.777195,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1330380800,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1230.4588411250152
+      },
+      "gain_vs_best_warm_bits": 14.689459216325359,
+      "gain_vs_old_bits": 14.689459216325359,
+      "maximum_reference_delta": 7.958078640513122e-13,
+      "neighborhood_gain_bits": 1.7597822595981976,
+      "new_keys_scored": 104608,
+      "new_native_record_marginals": 418432,
+      "proposals": 105817,
+      "reader_bank_size": 5805,
+      "reader_finite_keys": 5805,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 12.92967695672716,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4582
+    },
+    "case-30": {
+      "audit": {
+        "bytes": 1072,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-30-audit.json",
+        "sha256": "e04827d39aa381e8a1f77ff0c1ad9ef1d2fed8ba2dbc3cafa9785f517be9196e"
+      },
+      "audit_resources": {
+        "cpu_seconds": 44.553212,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1508982784,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 44.637296749977395
+      },
+      "exchanges": {
+        "accepted": 964,
+        "proposed": 10070
+      },
+      "fit": {
+        "bytes": 4723,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-30.json",
+        "sha256": "c9e6441b2a9d5eceaa700bc460f9b459ea48005c40f81ef0ca2a53336182cde9"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1227.175025,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1369030656,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1232.5497684169677
+      },
+      "gain_vs_best_warm_bits": 31.430358022413987,
+      "gain_vs_old_bits": 31.430358022413987,
+      "maximum_reference_delta": 1.0231815394945443e-12,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 91169,
+      "new_native_record_marginals": 364676,
+      "proposals": 92083,
+      "reader_bank_size": 5781,
+      "reader_finite_keys": 5781,
+      "reference_records": 36,
+      "sampler_gain_vs_best_warm_bits": 31.430358022413987,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4560
+    },
+    "case-31": {
+      "audit": {
+        "bytes": 1073,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-31-audit.json",
+        "sha256": "31317dc78ceed048a9d220d4c66e237cceba1826d53916d73d87cff3df0f0b1a"
+      },
+      "audit_resources": {
+        "cpu_seconds": 11.429677,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1579302912,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 11.45773033396108
+      },
+      "exchanges": {
+        "accepted": 2677,
+        "proposed": 16783
+      },
+      "fit": {
+        "bytes": 4713,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-31.json",
+        "sha256": "53e634cdb5fca42316a453fb10025d927bd65d7776aaedad787779201f7b03c6"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1078.226535,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1576796160,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1083.2268747080234
+      },
+      "gain_vs_best_warm_bits": 0.0,
+      "gain_vs_old_bits": 0.0,
+      "maximum_reference_delta": 7.958078640513122e-13,
+      "neighborhood_gain_bits": 0.0,
+      "new_keys_scored": 150742,
+      "new_native_record_marginals": 602968,
+      "proposals": 153469,
+      "reader_bank_size": 4655,
+      "reader_finite_keys": 3602,
+      "reference_records": 32,
+      "sampler_gain_vs_best_warm_bits": 0.0,
+      "status": "complete_fit_audit",
+      "stop_reason": "score_limit",
+      "whole_old_bank_size": 4640
+    },
+    "case-32": {
+      "audit": {
+        "bytes": 1076,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-32-audit.json",
+        "sha256": "987541e5662d06ece66e268bf2d5fec7aec1d256c5d77fd0b8b97ffc11771f17"
+      },
+      "audit_resources": {
+        "cpu_seconds": 25.268545,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1499938816,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 25.300197750038933
+      },
+      "exchanges": {
+        "accepted": 1194,
+        "proposed": 11344
+      },
+      "fit": {
+        "bytes": 4737,
+        "path": "results/GLOBAL-KEY-SEARCH-001/case-32.json",
+        "sha256": "c2ef8d4e3f582e1381486c73ec0f335998ef2f8b2644f5bcd861bdcffc8065f0"
+      },
+      "fit_resources": {
+        "cpu_seconds": 1222.302665,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1462960128,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 1227.4335854170495
+      },
+      "gain_vs_best_warm_bits": 161.53246538943765,
+      "gain_vs_old_bits": 236.41474379385247,
+      "maximum_reference_delta": 1.0231815394945443e-12,
+      "neighborhood_gain_bits": 0.16302489135852752,
+      "new_keys_scored": 102970,
+      "new_native_record_marginals": 411880,
+      "proposals": 103739,
+      "reader_bank_size": 5972,
+      "reader_finite_keys": 5481,
+      "reference_records": 40,
+      "sampler_gain_vs_best_warm_bits": 161.36944049807914,
+      "status": "complete_fit_audit",
+      "stop_reason": "time_limit",
+      "whole_old_bank_size": 4749
+    }
+  },
+  "completed_cases": 32,
+  "failed_cases": 0,
+  "fit_summed_cpu_seconds": 38454.695799,
+  "fit_summed_wall_seconds": 38807.31515120686,
+  "freeze": "c4e3a3a58c863f8fea2e6af49bb23e768be38003",
+  "input_archive_bindings": 256,
+  "maximum_reference_delta": 1.2505552149377763e-12,
+  "new_case_key_scores": 2776319,
+  "new_native_record_marginals": 11105276,
+  "no_recovery_or_decipherment_claim": true,
+  "no_transfer_or_answer_access": true,
+  "reader_casewise_finite_keys": 145752,
+  "reader_casewise_keys": 161036,
+  "reference_records": 1156,
+  "resources": {
+    "cpu_seconds": 3.752601,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 430309376,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 12.446699333027937
+  },
+  "same_author_alternate_accounting_not_agent_review": true,
+  "status": "PASS"
+}
