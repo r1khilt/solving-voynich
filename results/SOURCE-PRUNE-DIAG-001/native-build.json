@@ -1,0 +1,39 @@
+{
+  "build": {
+    "abi": 1,
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-PRUNE-DIAG-001/build/source_prune.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-PRUNE-DIAG-001/build/source_prune.dylib"
+    ],
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "cpp_sha256": "51bc370ea6ac4ca903a2a03270ea8dc9bedb83d1419ec6a7870d6ecbb146a8eb",
+    "cpp_sha256_is_frozen_base_dependency": true,
+    "generated_cpp_path": "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-PRUNE-DIAG-001/build/source_prune.cpp",
+    "generated_cpp_sha256": "f0580501cb6537e9ce33f8e0d4a276ccab0689963d202a5ed57b84c060fd545a",
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-PRUNE-DIAG-001/build/source_prune.dylib",
+    "library_sha256": "ff72f9c9a6fbffd430bc8bb594458c0fc4cb5c63b50daf933d8c5d4c78c18eac",
+    "observational_instrumentation": true,
+    "observer_module_sha256": "782243bc4de464961aa2b2c9e1b255e21b522651764f90ab0e1cb2924ff143cf",
+    "stderr": "",
+    "stdout": ""
+  },
+  "generated_cpp": {
+    "bytes": 16675,
+    "path": "outputs/SOURCE-PRUNE-DIAG-001/build/source_prune.cpp",
+    "sha256": "f0580501cb6537e9ce33f8e0d4a276ccab0689963d202a5ed57b84c060fd545a"
+  },
+  "library": {
+    "bytes": 91920,
+    "path": "outputs/SOURCE-PRUNE-DIAG-001/build/source_prune.dylib",
+    "sha256": "ff72f9c9a6fbffd430bc8bb594458c0fc4cb5c63b50daf933d8c5d4c78c18eac"
+  },
+  "no_empirical_search_or_training": true,
+  "paid_spend_usd": 0
+}

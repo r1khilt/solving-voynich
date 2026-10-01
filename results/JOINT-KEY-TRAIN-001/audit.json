@@ -1,0 +1,146 @@
+{
+  "arms": {
+    "large-72203": {
+      "data_sha256": "3bb68cfd9f1f4491ac64bd5035a939c44267e85415115020387881a58f951565",
+      "distinct_canonical_dictionaries": 80000,
+      "distinct_literal_dictionaries": 80000,
+      "initial_weights_sha256": "fe83d58b79c23c549a16d6cbb95f30fbf319f71d923fbc63822a2906c7e8da40",
+      "replay": {
+        "0": {
+          "cpu_argmax_max_deficit": 0.0,
+          "episodes": 64,
+          "greedy_logq_max_delta": 4.994444175565604e-06,
+          "whole_logq_max_delta": 3.998005055905196e-06
+        },
+        "20000": {
+          "cpu_argmax_max_deficit": 0.0,
+          "episodes": 64,
+          "greedy_logq_max_delta": 8.870380781900167e-06,
+          "whole_logq_max_delta": 8.222282431802341e-06
+        }
+      },
+      "result": {
+        "bytes": 452066,
+        "path": "results/JOINT-KEY-TRAIN-001/large-72203.json",
+        "sha256": "dd08ea1f25a6eaac7c76ffeaed43b1a050caf8ccca680e5dae9210fb2f6ed40d"
+      },
+      "selected_nats_per_row": 3.5004457377155207,
+      "selected_step": 20000,
+      "status": "PASS",
+      "updates": 20000
+    },
+    "large-72209": {
+      "data_sha256": "1c395ecb0a51283d6c0ca589a4c09386049601044d9151c139f13dac838d0d39",
+      "distinct_canonical_dictionaries": 80000,
+      "distinct_literal_dictionaries": 80000,
+      "initial_weights_sha256": "0a3ecf377fc14aa04671799f1f184f0d0d5ba92d459e0f3723944d5874651d72",
+      "replay": {
+        "0": {
+          "cpu_argmax_max_deficit": 0.0,
+          "episodes": 64,
+          "greedy_logq_max_delta": 7.029849115269826e-06,
+          "whole_logq_max_delta": 4.3069083233149286e-06
+        },
+        "20000": {
+          "cpu_argmax_max_deficit": 0.0,
+          "episodes": 64,
+          "greedy_logq_max_delta": 5.9372711831429115e-06,
+          "whole_logq_max_delta": 8.302900369017152e-06
+        }
+      },
+      "result": {
+        "bytes": 452067,
+        "path": "results/JOINT-KEY-TRAIN-001/large-72209.json",
+        "sha256": "a0fa06ded351ed835e9105ef55d76179dfca3e304cb2d5b26f4d7daff6f75fa9"
+      },
+      "selected_nats_per_row": 3.4779610373050933,
+      "selected_step": 20000,
+      "status": "PASS",
+      "updates": 20000
+    },
+    "small-72203": {
+      "data_sha256": "3bb68cfd9f1f4491ac64bd5035a939c44267e85415115020387881a58f951565",
+      "distinct_canonical_dictionaries": 80000,
+      "distinct_literal_dictionaries": 80000,
+      "initial_weights_sha256": "34670da56c0f3ee506a985eb712806a28625f9856ecfe40e0ddb18bfb83a4509",
+      "replay": {
+        "0": {
+          "cpu_argmax_max_deficit": 0.0,
+          "episodes": 64,
+          "greedy_logq_max_delta": 3.5123875861131637e-06,
+          "whole_logq_max_delta": 2.5501244067527296e-06
+        },
+        "20000": {
+          "cpu_argmax_max_deficit": 0.0,
+          "episodes": 64,
+          "greedy_logq_max_delta": 5.853878391803846e-06,
+          "whole_logq_max_delta": 6.479227067757165e-06
+        }
+      },
+      "result": {
+        "bytes": 452059,
+        "path": "results/JOINT-KEY-TRAIN-001/small-72203.json",
+        "sha256": "8402d436abb489d3b9d2f8fc8da61f6ad929c5e72aa15629c9673b82b72e8745"
+      },
+      "selected_nats_per_row": 3.4077829292303283,
+      "selected_step": 20000,
+      "status": "PASS",
+      "updates": 20000
+    },
+    "small-72209": {
+      "data_sha256": "1c395ecb0a51283d6c0ca589a4c09386049601044d9151c139f13dac838d0d39",
+      "distinct_canonical_dictionaries": 80000,
+      "distinct_literal_dictionaries": 80000,
+      "initial_weights_sha256": "cad0d1d703a0e5cf232a3b7cf87415ad8e75859a7ffb1bd6730493bfd0f5e193",
+      "replay": {
+        "0": {
+          "cpu_argmax_max_deficit": 0.0,
+          "episodes": 64,
+          "greedy_logq_max_delta": 5.964591245799511e-06,
+          "whole_logq_max_delta": 2.0915608160976262e-06
+        },
+        "20000": {
+          "cpu_argmax_max_deficit": 0.0,
+          "episodes": 64,
+          "greedy_logq_max_delta": 4.569811991927963e-06,
+          "whole_logq_max_delta": 7.431226691778647e-06
+        }
+      },
+      "result": {
+        "bytes": 452059,
+        "path": "results/JOINT-KEY-TRAIN-001/small-72209.json",
+        "sha256": "37ed34de01b3072703f19e3f61285e600729a3656e7e142d2148fc3a68968ccd"
+      },
+      "selected_nats_per_row": 3.402742868692463,
+      "selected_step": 20000,
+      "status": "PASS",
+      "updates": 20000
+    }
+  },
+  "auditor": {
+    "bytes": 12661,
+    "path": "scripts/audit_joint_key_train001.py",
+    "sha256": "39f2ba530cf9cb2f0acec12804eb1e1028f9286932e32881eb2d265181e87246"
+  },
+  "campaign": {
+    "bytes": 1499,
+    "path": "results/JOINT-KEY-TRAIN-001/campaign.json",
+    "sha256": "776b009069e1b7635a37ee4ddc70d96022fa790a017a6c599ca90a6995188e7f"
+  },
+  "independent_agent_review": false,
+  "resources": {
+    "cpu_seconds": 380.224817,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 2387558400,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 290.34352520800894
+  },
+  "scope": "complete episode/optimizer/checkpoint inventory and initial/selected CPUdouble joint law and greedy replay",
+  "status": "PASS"
+}
