@@ -1,0 +1,129 @@
+{
+  "arrays": {
+    "closed": {
+      "dtype": "bool",
+      "sha256": "5a648d8015900d89664e00e125df179636301a2d8fa191c1aa2bd9358ea53a69",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "contexts": {
+      "dtype": "uint32",
+      "sha256": "47abc8fd9fa74b969fd6b5bab053bf942e32a63b4d74ae12a1b7910f7c312fc1",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "keys": {
+      "dtype": "int32",
+      "sha256": "653d578b4f4c0dd158905ad1a0798519a3bf4998b3ef96cb57b4cfe1e7c0bd33",
+      "shape": [
+        512,
+        23
+      ]
+    },
+    "labels": {
+      "dtype": "int16",
+      "sha256": "9314be9b71b7fd0d6cf649bde8345b0747d7422cc8fb53f37b7e2ff42d93f2b3",
+      "shape": [
+        246,
+        512
+      ]
+    },
+    "offsets": {
+      "dtype": "int32",
+      "sha256": "b06736648e0540c1c6cc178e1d0f3fe2bcefbc3946ddc0d975a570b993ceba07",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "parents": {
+      "dtype": "int32",
+      "sha256": "01e32d29a0c96a920556dfa1d9ec45fe7bb270cd87df9d02001e9040e5f09882",
+      "shape": [
+        246,
+        512
+      ]
+    },
+    "records": {
+      "dtype": "int16",
+      "sha256": "e0acb4953c8369407d92918e2211ab4bb75afb2abb13d952dd2b5c913b85f21c",
+      "shape": [
+        246,
+        512
+      ]
+    },
+    "scores": {
+      "dtype": "float64",
+      "sha256": "461057be4ed71f44818bcf4958fdf4d7a2cfb701e4d0f451cc3e5a25ff11255b",
+      "shape": [
+        512
+      ]
+    }
+  },
+  "case": 0,
+  "cell_cpu_seconds": 3.779587,
+  "cell_wall_seconds": 3.7860877080238424,
+  "diagnostic": {
+    "best_visited_leaf_log_mass": -562.5093096699518,
+    "complete_reading_mass_not_computed": true,
+    "edit_errors": 108,
+    "exact_records": 0,
+    "gold_global_optimality_proven": false,
+    "gold_leaf_minus_log_evidence_estimate": 223.47849776115783,
+    "gold_minus_best_visited_leaf_nats": 243.23478516272024,
+    "gold_reading_in_bank": false,
+    "gold_used_leaf_in_bank": false,
+    "gold_used_leaf_log_mass": -319.27452450723155,
+    "gold_used_rows": 19,
+    "matched_gold_used_rows": 2,
+    "no_completed_decision": false,
+    "synthetic_diagnostic_only": true,
+    "true_source_letters": 128
+  },
+  "diversity": {
+    "distinct_readings": 4,
+    "distinct_used_keys": 1,
+    "initial_ancestors": 1,
+    "terminal_ancestors": 13,
+    "visited_literal_bank_log_mass": -561.8528241965014
+  },
+  "guidance": "iid",
+  "name": "case0-75511-iid",
+  "particles": 512,
+  "population": {
+    "bytes": 235997,
+    "path": "outputs/SOURCE-GUIDE-001/case0-75511-iid.npz",
+    "sha256": "bf8124a83dbc047e7ffc4681fba19b086963e115c9a490de49d2f22154b61b5a"
+  },
+  "prediction": {
+    "bytes": 6069,
+    "path": "outputs/SOURCE-GUIDE-001/case0-75511-iid.json.gz",
+    "sha256": "46569ab6ec266f2cd3611092c9ff6adaf0f1e3b82778fc38fa40972c3e742c70"
+  },
+  "seed": 75511,
+  "summary": {
+    "ancestry_allocated_bytes": 1007616,
+    "categorical_method": "blocked_log_gumbel_max",
+    "exhaustive_support": false,
+    "guide": "iid_root_smoothed_fresh_units_each_occurrence",
+    "guide_cache_entries": 1024,
+    "guide_log_floor": -2000.0,
+    "guide_max_tables": 200000,
+    "guide_tables_built": 122253,
+    "horizon": 246,
+    "initial_log_guide": -449.84509253062276,
+    "interval_arithmetic_certificate": false,
+    "log_evidence_estimate": -542.7530222683894,
+    "particles": 512,
+    "posterior_is_finite_approximation": true,
+    "schedule": "balanced",
+    "seed": 75511,
+    "status": "complete_particles",
+    "transitions": 246,
+    "work_array_envelope_bytes": 23593952
+  }
+}

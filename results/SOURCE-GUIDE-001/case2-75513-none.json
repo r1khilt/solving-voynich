@@ -1,0 +1,129 @@
+{
+  "arrays": {
+    "closed": {
+      "dtype": "bool",
+      "sha256": "5a648d8015900d89664e00e125df179636301a2d8fa191c1aa2bd9358ea53a69",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "contexts": {
+      "dtype": "uint32",
+      "sha256": "a244d87af3698a9a3804caa59f8a95828a0387adecb27b56189a72e07ca7e7b4",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "keys": {
+      "dtype": "int32",
+      "sha256": "39b92bc1fda3e876d7f7d3079a49f85190174a1c7c8463b7224b9970237fd733",
+      "shape": [
+        512,
+        23
+      ]
+    },
+    "labels": {
+      "dtype": "int16",
+      "sha256": "437cdde2e4a0568952d27b254d888bcf58429d74aada39e2b1022bbccb3bba4d",
+      "shape": [
+        869,
+        512
+      ]
+    },
+    "offsets": {
+      "dtype": "int32",
+      "sha256": "a97c95dec978642c5e0d11bd6ed8f6711c2081ca87ea2e2950185c8addf5298c",
+      "shape": [
+        512,
+        2
+      ]
+    },
+    "parents": {
+      "dtype": "int32",
+      "sha256": "d17451ab11ef40ea8aa595ebc0cf43d3f5f915d4a469f2afa80d0c66e97c7d6c",
+      "shape": [
+        869,
+        512
+      ]
+    },
+    "records": {
+      "dtype": "int16",
+      "sha256": "da6536b030061627156c41cd994541c719ebf30f031f2881a597fcb88ad43b8f",
+      "shape": [
+        869,
+        512
+      ]
+    },
+    "scores": {
+      "dtype": "float64",
+      "sha256": "d8d03ad79eb5a3192d97aa860da3dee7b9c5546a538c1cfc556157c6bc3dd355",
+      "shape": [
+        512
+      ]
+    }
+  },
+  "case": 2,
+  "cell_cpu_seconds": 3.4661510000000035,
+  "cell_wall_seconds": 3.472649165953044,
+  "diagnostic": {
+    "best_visited_leaf_log_mass": -1895.3983636507346,
+    "complete_reading_mass_not_computed": true,
+    "edit_errors": 588,
+    "exact_records": 0,
+    "gold_global_optimality_proven": false,
+    "gold_leaf_minus_log_evidence_estimate": 700.7803781947213,
+    "gold_minus_best_visited_leaf_nats": 968.3951603640922,
+    "gold_reading_in_bank": false,
+    "gold_used_leaf_in_bank": false,
+    "gold_used_leaf_log_mass": -927.0032032866424,
+    "gold_used_rows": 21,
+    "matched_gold_used_rows": 3,
+    "no_completed_decision": false,
+    "synthetic_diagnostic_only": true,
+    "true_source_letters": 448
+  },
+  "diversity": {
+    "distinct_readings": 5,
+    "distinct_used_keys": 1,
+    "initial_ancestors": 1,
+    "terminal_ancestors": 5,
+    "visited_literal_bank_log_mass": -1894.3983158613437
+  },
+  "guidance": "none",
+  "name": "case2-75513-none",
+  "particles": 512,
+  "population": {
+    "bytes": 992003,
+    "path": "outputs/SOURCE-GUIDE-001/case2-75513-none.npz",
+    "sha256": "c5c8d1b2fc2cb226056f89b8893a4eca4ff79e5316394c1b2ccca81bab9d4394"
+  },
+  "prediction": {
+    "bytes": 25217,
+    "path": "outputs/SOURCE-GUIDE-001/case2-75513-none.json.gz",
+    "sha256": "0cc7a4e4fa1469838aa8a7fe697d0c761d61cb0686a00789ac58ce9018368d1c"
+  },
+  "seed": 75513,
+  "summary": {
+    "ancestry_allocated_bytes": 3559424,
+    "categorical_method": "blocked_log_gumbel_max",
+    "exhaustive_support": false,
+    "guide": "constant_one",
+    "guide_cache_entries": 1024,
+    "guide_log_floor": 0.0,
+    "guide_max_tables": 200000,
+    "guide_tables_built": 0,
+    "horizon": 869,
+    "initial_log_guide": 0.0,
+    "interval_arithmetic_certificate": false,
+    "log_evidence_estimate": -1627.7835814813636,
+    "particles": 512,
+    "posterior_is_finite_approximation": true,
+    "schedule": "balanced",
+    "seed": 75513,
+    "status": "complete_particles",
+    "transitions": 869,
+    "work_array_envelope_bytes": 23596440
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "assigned_key_rows": 1840000,
+  "campaign_session": 45401,
+  "claims": "Closed byte/hash bindings and stored arithmetic only; no new neural inference, tensor/optimizer/ledger replay or four-fit completion audit. First large child exited0; parent remains live; no retry/resume.",
+  "closed_fit": {
+    "bytes": 452066,
+    "path": "results/JOINT-KEY-TRAIN-001/large-72203.json",
+    "sha256": "dd08ea1f25a6eaac7c76ffeaed43b1a050caf8ccca680e5dae9210fb2f6ed40d"
+  },
+  "episodes_seen": 80000,
+  "freeze": "9053abf667fb296ef41e7eb5d9b7eedd1da94533",
+  "ledger": {
+    "bytes": 9716943,
+    "path": "outputs/JOINT-KEY-TRAIN-001/large-72203-episodes.jsonl.gz",
+    "sha256": "83f83179bae92aed4a54af4f479dc4f6363a7b781a90006dedc2825f268c6ba8"
+  },
+  "next_arm_started": {
+    "bytes": 185,
+    "path": "results/JOINT-KEY-TRAIN-001/small-72209-started.json",
+    "sha256": "68a93cb4bef3d6a3694ccaccb67605910d16bfd849f4b9c448f012e0121c9e3e"
+  },
+  "next_last_flushed_trace": {
+    "data_sha256": "911df4b401927b081799d322adca51185eba23f1a704b03a0fe3dfb6c953bed5",
+    "episodes_seen": 9912,
+    "loss_nats_per_row": 3.557208776473999,
+    "lr": 0.0002912773711590041,
+    "preclip_norm": 1.7311069965362549,
+    "source_characters": 2861417,
+    "stage": "optimizer",
+    "step": 2478,
+    "step_wall_seconds": 0.08719929202925414
+  },
+  "observed_unix": 1790851697.407594,
+  "paid_spend_usd": 0,
+  "resources": {
+    "cpu_seconds": 694.034553,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1960673280,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 14254.640414665977
+  },
+  "same_seed_small_and_large_stored_data_digest_equal": true,
+  "selected_snapshot": {
+    "bytes": 600,
+    "path": "results/JOINT-KEY-TRAIN-001/large-72203-step20000.json",
+    "sha256": "76537dcc305e655c151b2f5f45fdd3761ca476c23837657b5bc07643844d43ad"
+  },
+  "source_characters": 23037420,
+  "status": "closed_first_large_fit_observation_not_completion_audit",
+  "stored_short_reference_deltas": {
+    "cpu_two_four_delta": 2.6645352591003757e-15,
+    "mps_cpu_max_delta": 7.410868599677656e-06,
+    "mps_two_four_delta": 2.384185791015625e-06
+  },
+  "stored_validation_summary": {
+    "correct_rows": 62,
+    "episodes": 64,
+    "mean_nats_per_row": 3.5004457377155207,
+    "rows": 1472,
+    "used_correct_rows": 54,
+    "used_mask_is_diagnostic_only": true,
+    "used_rows": 1248,
+    "whole_keys_exact": 0
+  },
+  "trace": {
+    "bytes": 6538611,
+    "path": "outputs/JOINT-KEY-TRAIN-001/large-72203-trace.jsonl",
+    "sha256": "3a79aa32ddd0d30ae3846cdf04125dafaf0b312c3fb373835458c275d32fcac5"
+  },
+  "updates": 20000,
+  "validation": {
+    "bytes": 12585,
+    "path": "outputs/JOINT-KEY-TRAIN-001/large-72203-step20000-validation.json.gz",
+    "sha256": "d97e07e5c9a166b04fa670ebe35774e0c8a08a0ce4b085c29e4defbef485b502"
+  },
+  "weights": {
+    "bytes": 379981527,
+    "path": "outputs/JOINT-KEY-TRAIN-001/large-72203-step20000.pt",
+    "sha256": "1490d2793ee4dee50d4ec69fb60e0f5d6e0038d69c9e0d7b568e72e96e9d0e9b"
+  }
+}

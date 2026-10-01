@@ -1,0 +1,43 @@
+{
+  "full_replay_audit": {
+    "bytes": 730,
+    "path": "results/SOURCE-GUIDE-001/audit.json",
+    "sha256": "6abbb8ad0f50f42c3bdcd5ace72688efe0cc67261b85f0248151186332401c9c"
+  },
+  "independent_agent_review": false,
+  "main_training_freeze_unchanged": true,
+  "metrics": {
+    "cell_work_ratio": 2.7749109287439713,
+    "iid": {
+      "best_leaf_gap_max": 781.7451928867272,
+      "best_leaf_gap_min": 160.62984519193446,
+      "cell_wall_seconds": 48.03309341700515,
+      "edit_errors": 1856,
+      "exact_records": 0,
+      "gold_used_rows": 156,
+      "guide_tables": 734001,
+      "matched_gold_used_rows": 28,
+      "true_source_letters": 2304
+    },
+    "none": {
+      "best_leaf_gap_max": 1066.7729194764152,
+      "best_leaf_gap_min": 245.9431319202081,
+      "cell_wall_seconds": 17.309778457914945,
+      "edit_errors": 2813,
+      "exact_records": 0,
+      "gold_used_rows": 156,
+      "guide_tables": 0,
+      "matched_gold_used_rows": 7,
+      "true_source_letters": 2304
+    },
+    "relative_edit_reduction": 0.3402061855670103
+  },
+  "notes": "Static publication review; no independent large-inference proof or historical qualification.",
+  "population_rerun_or_new_model_inference": false,
+  "result": {
+    "bytes": 5678,
+    "path": "results/SOURCE-GUIDE-001/result.json",
+    "sha256": "81e8afd531d7c3b4b8404f2199688db43e97de6d20e5081f9292b934ca826a36"
+  },
+  "status": "PASS_closed_bindings_and_report_arithmetic"
+}
