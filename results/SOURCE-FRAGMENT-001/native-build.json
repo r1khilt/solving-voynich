@@ -1,0 +1,28 @@
+{
+  "build": {
+    "abi": 1,
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/src/voynich/native_fragment_match.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-FRAGMENT-001/build/fragment.dylib"
+    ],
+    "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "cpp_sha256": "1f48b035e5887829a2b7138c5d0b1776ec51cae230100e4c3c9c987abf5cd34a",
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/SOURCE-FRAGMENT-001/build/fragment.dylib",
+    "library_sha256": "2eacca862c82822ed6085f054c7507a8c90dfea08c39741df23a22d2f9a3b052",
+    "stderr": "",
+    "stdout": ""
+  },
+  "library": {
+    "bytes": 56080,
+    "path": "outputs/SOURCE-FRAGMENT-001/build/fragment.dylib",
+    "sha256": "2eacca862c82822ed6085f054c7507a8c90dfea08c39741df23a22d2f9a3b052"
+  },
+  "scope": "Compiler preparation only; no empirical corpus/template/cipher call."
+}
