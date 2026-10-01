@@ -1,0 +1,71 @@
+{
+  "arm": "wide_guided",
+  "case": 3,
+  "cell_cpu_seconds": 35.437472,
+  "cell_wall_seconds": 35.46934641699772,
+  "config": {
+    "glyphs": 6,
+    "guidance": "iid",
+    "guide_cache_entries": 4096,
+    "guide_max_tables": 20000000,
+    "guide_prewidth": 16384,
+    "max_active": 500000,
+    "max_expanded": 4000000,
+    "max_generated": 120000000,
+    "max_seconds": 180.0,
+    "max_terminals": 512,
+    "merge": true,
+    "rho": 0.0044444444444444444,
+    "schedule": "balanced",
+    "width": 4096
+  },
+  "diagnostic": {
+    "edit_errors": 376,
+    "exact_records": 0,
+    "gold_used_mapping_in_returned_terminals": false,
+    "gold_used_rows": 20,
+    "matched_gold_used_rows": 1,
+    "no_claim_about_unreturned_terminals": true,
+    "record_edits": [
+      190,
+      186
+    ],
+    "returned_partial_keys_compatible_with_gold": 0,
+    "true_source_letters": 448
+  },
+  "fitted": {
+    "bytes": 28075,
+    "path": "outputs/SOURCE-STATE-SYSTEMS-001/case3-wide_guided.json.gz",
+    "sha256": "78c63b7963ca95a5e9e27dde4e4cf4550fbcbb360b27fa37681317c06854427b"
+  },
+  "name": "case3-wide_guided",
+  "prediction": {
+    "bytes": 2321,
+    "path": "outputs/SOURCE-STATE-SYSTEMS-001/case3-wide_guided-prediction.json",
+    "sha256": "07133804a8e83a592efdb752004f9f3648d8d35a0a3c50095c79e5ddd1f01250"
+  },
+  "summary": {
+    "complete_search": false,
+    "evidence_log_upper": -9.981900203967452,
+    "expanded": 3038131,
+    "found_log_mass": -1402.6530398942232,
+    "full_key_posterior_claimed": false,
+    "generated": 18013378,
+    "guidance": "iid",
+    "guide_prewidth": 16384,
+    "guide_tables_built": 1894398,
+    "interval_arithmetic_certificate": false,
+    "maximum_active_states": 250794,
+    "maximum_unpruned_layer": 168375,
+    "merge": true,
+    "merged_arrivals": 3622525,
+    "pruned_states": 11352598,
+    "returned_terminal_log_mass": -1402.653039894223,
+    "schedule": "balanced",
+    "scope": "Compiled Markov history sums; finite beam loses mass. No full-key posterior, reading MAP, interval certificate or historical recovery claim.",
+    "stop_reason": "frontier_exhausted",
+    "terminal_output_truncated": false,
+    "terminal_states": 125,
+    "unresolved_log_mass_upper": -9.981900203967452
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "arm": "guided",
+  "case": 2,
+  "cell_cpu_seconds": 1.020786000000001,
+  "cell_wall_seconds": 1.0215831670211628,
+  "config": {
+    "glyphs": 6,
+    "guidance": "iid",
+    "guide_cache_entries": 1024,
+    "guide_max_tables": 1000000,
+    "guide_prewidth": 512,
+    "max_active": 100000,
+    "max_expanded": 500000,
+    "max_generated": 20000000,
+    "max_seconds": 120.0,
+    "max_terminals": 512,
+    "merge": true,
+    "rho": 0.0044444444444444444,
+    "schedule": "balanced",
+    "width": 128
+  },
+  "diagnostic": {
+    "edit_errors": 333,
+    "exact_records": 0,
+    "gold_used_mapping_in_returned_terminals": false,
+    "gold_used_rows": 21,
+    "matched_gold_used_rows": 3,
+    "no_claim_about_unreturned_terminals": true,
+    "record_edits": [
+      168,
+      165
+    ],
+    "returned_partial_keys_compatible_with_gold": 0,
+    "true_source_letters": 448
+  },
+  "fitted": {
+    "bytes": 21710,
+    "path": "outputs/SOURCE-STATE-SYSTEMS-001/case2-guided.json.gz",
+    "sha256": "9d312c8b3d0775f2796a46adeb0965c022fb361c37078f7eafcc8acc976b6593"
+  },
+  "name": "case2-guided",
+  "prediction": {
+    "bytes": 2328,
+    "path": "outputs/SOURCE-STATE-SYSTEMS-001/case2-guided-prediction.json",
+    "sha256": "679c81a820f108001e0b928785b6635c276dbfe368a0d8dce7e0d0903b726c41"
+  },
+  "summary": {
+    "complete_search": false,
+    "evidence_log_upper": -6.599131657614275,
+    "expanded": 100378,
+    "found_log_mass": -1555.1651522737516,
+    "full_key_posterior_claimed": false,
+    "generated": 710089,
+    "guidance": "iid",
+    "guide_prewidth": 512,
+    "guide_tables_built": 47035,
+    "interval_arithmetic_certificate": false,
+    "maximum_active_states": 8192,
+    "maximum_unpruned_layer": 5504,
+    "merge": true,
+    "merged_arrivals": 112018,
+    "pruned_states": 497691,
+    "returned_terminal_log_mass": -1555.1651522737516,
+    "schedule": "balanced",
+    "scope": "Compiled Markov history sums; finite beam loses mass. No full-key posterior, reading MAP, interval certificate or historical recovery claim.",
+    "stop_reason": "frontier_exhausted",
+    "terminal_output_truncated": false,
+    "terminal_states": 3,
+    "unresolved_log_mass_upper": -6.599131657614275
+  }
+}
