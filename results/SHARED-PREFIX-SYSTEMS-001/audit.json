@@ -1,0 +1,54 @@
+{
+  "arms": {
+    "fixed8-host": {
+      "completed_workloads": 0,
+      "result": {
+        "bytes": 1423,
+        "path": "results/SHARED-PREFIX-SYSTEMS-001/fixed8-host-failure.json",
+        "sha256": "fa400b35d2afa3609c0a54e0f91aa8322d975beb27e18127f23495a315a92dd5"
+      },
+      "sampled_driver_peak": 78397440,
+      "sampled_tensor_peak": 29818112,
+      "status": "retained_failure"
+    },
+    "variable": {
+      "completed_workloads": 0,
+      "result": {
+        "bytes": 1425,
+        "path": "results/SHARED-PREFIX-SYSTEMS-001/variable-failure.json",
+        "sha256": "6fbdbc2614926ccd2d280aaf263d48444ba1ce6a7f24c90caa46c40eaf9f3542"
+      },
+      "sampled_driver_peak": 87212032,
+      "sampled_tensor_peak": 42227968,
+      "status": "retained_failure"
+    }
+  },
+  "auditor": {
+    "bytes": 7983,
+    "path": "scripts/audit_shared_prefix_systems001.py",
+    "sha256": "5778ee03d0e8f331653133b1db13039a4b04e500e7355cc3dcaf62d6a125d880"
+  },
+  "campaign": {
+    "bytes": 923,
+    "path": "results/SHARED-PREFIX-SYSTEMS-001/campaign.json",
+    "sha256": "875869e50e4929ffd022d755f19e1b4281220891b75e2870b44013725d3e287d"
+  },
+  "comparisons": [],
+  "independent_agent_review": false,
+  "new_model_scores_computed": false,
+  "resources": {
+    "cpu_seconds": 0.041244999999999976,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 211058688,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.04173120798077434
+  },
+  "scope": "inventory, hashes, whole-key literal support, saved independent CPU score arithmetic, work and sampled resources",
+  "status": "PASS"
+}

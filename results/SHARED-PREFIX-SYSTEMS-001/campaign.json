@@ -1,0 +1,31 @@
+{
+  "all_children_cpu_seconds": 2.5702570000000002,
+  "freeze": "25515bdd159845d5acf780cbc0372300078853b0",
+  "only_artificial_inputs_and_untrained_models": true,
+  "paid_spend_usd": 0,
+  "processes": [
+    {
+      "arm": "variable",
+      "log": {
+        "bytes": 1670,
+        "path": "outputs/SHARED-PREFIX-SYSTEMS-001/variable.log",
+        "sha256": "bea5202469011782214972b4cf5cebf143d0532a8430bf52c0c10250f7663494"
+      },
+      "outer_timeout": false,
+      "outer_wall_seconds": 1.4928454580367543,
+      "returncode": 1
+    },
+    {
+      "arm": "fixed8-host",
+      "log": {
+        "bytes": 1670,
+        "path": "outputs/SHARED-PREFIX-SYSTEMS-001/fixed8-host.log",
+        "sha256": "bea5202469011782214972b4cf5cebf143d0532a8430bf52c0c10250f7663494"
+      },
+      "outer_timeout": false,
+      "outer_wall_seconds": 1.8112907499889843,
+      "returncode": 1
+    }
+  ],
+  "wall_seconds": 3.304837499978021
+}

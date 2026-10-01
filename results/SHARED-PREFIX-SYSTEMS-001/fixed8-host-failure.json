@@ -1,0 +1,49 @@
+{
+  "arm": "fixed8-host",
+  "completed": [],
+  "error": "Object of type bool is not JSON serializable",
+  "freeze": "25515bdd159845d5acf780cbc0372300078853b0",
+  "inputs": {
+    "bytes": 28686,
+    "path": "outputs/SHARED-PREFIX-SYSTEMS-001/fixed8-host-inputs.json.gz",
+    "sha256": "47a997930d697ff4e615cfb595847e0c25ef3e23cde8b910800f29ad0afd87cc"
+  },
+  "last_sample": {
+    "cpu_seconds": 0.534092,
+    "driver_bytes": 78397440,
+    "item": 0,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 496336896,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "seed": 71831,
+    "stage": "verified",
+    "tensor_bytes": 29620480,
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.9563349169911817
+  },
+  "resources": {
+    "cpu_seconds": 0.5343640000000001,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 496336896,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.9566066669649445
+  },
+  "status": "FAIL",
+  "trace": {
+    "bytes": 68866,
+    "path": "outputs/SHARED-PREFIX-SYSTEMS-001/fixed8-host-trace.jsonl",
+    "sha256": "1b1e03749044752de61cefe1bc46e875a666b1b7cfa63182e8bc575c7284c1e3"
+  },
+  "type": "TypeError"
+}
