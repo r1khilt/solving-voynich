@@ -1,0 +1,239 @@
+{
+  "case": 2,
+  "cpu_seconds": 5.552253999999991,
+  "guidance": "iid",
+  "maximum_unique_keys": 2097,
+  "mismatched_used_rows": 15,
+  "name": "case2-75513-iid",
+  "parent": {
+    "bytes": 3330,
+    "path": "results/SOURCE-REVISE-001/case2-75513-iid.json",
+    "sha256": "621fc4e3185e25ac7e16125c8779ea4388212ce2352c912d5c83510c26baa701"
+  },
+  "payload": {
+    "bytes": 178621,
+    "path": "outputs/SOURCE-COUPLING-001/case2-75513-iid.json.gz",
+    "sha256": "a29b962a5ff559929163652fb1ac889e60ae46f8b798ad7fb5c820a79428f6a3"
+  },
+  "seed": 75513,
+  "summaries": {
+    "context": {
+      "decoy": {
+        "all_single_alternatives": 943,
+        "best_joint_bank_index": 1507,
+        "best_joint_gain_nats": -42.33150590757032,
+        "best_single_bank_index": 942,
+        "best_single_gain_nats": 3.5695947087610875,
+        "by_size": {
+          "1": {
+            "best_bank_index": 303,
+            "best_gain_nats": -20.121223397267386,
+            "derivative_max": -20.121223397267386,
+            "derivative_median": -63.656247879901,
+            "derivative_min": -360.166276508005,
+            "faces": 15,
+            "finite_derivatives": 13,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 2
+          },
+          "2": {
+            "best_bank_index": 1507,
+            "best_gain_nats": -42.33150590757032,
+            "derivative_max": 88.57499455596098,
+            "derivative_median": 0.07907984916300848,
+            "derivative_min": -571.0999504034066,
+            "faces": 105,
+            "finite_derivatives": 75,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 27
+          },
+          "3": {
+            "best_bank_index": 1828,
+            "best_gain_nats": -61.277723240776595,
+            "derivative_max": 127.26107997154622,
+            "derivative_median": 0.08040966881480927,
+            "derivative_min": -128.87232231714052,
+            "faces": 455,
+            "finite_derivatives": 253,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 167
+          }
+        },
+        "endpoint_gain_nats": null,
+        "joint_only_improving_faces": 0,
+        "scope": "Anchored truth/decoy binary faces through size3; no global barrier or unassisted recovery claim.",
+        "single_local_optimum_within_point1_nats": false,
+        "unsupported_single_alternatives": 199
+      },
+      "gold": {
+        "all_single_alternatives": 943,
+        "best_joint_bank_index": 946,
+        "best_joint_gain_nats": -12.262900568825899,
+        "best_single_bank_index": 942,
+        "best_single_gain_nats": 3.5695947087610875,
+        "by_size": {
+          "1": {
+            "best_bank_index": 313,
+            "best_gain_nats": -9.160075706291082,
+            "derivative_max": -9.160075706291082,
+            "derivative_median": -42.43982121577483,
+            "derivative_min": -288.9547779263585,
+            "faces": 15,
+            "finite_derivatives": 13,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 2
+          },
+          "2": {
+            "best_bank_index": 946,
+            "best_gain_nats": -12.262900568825899,
+            "derivative_max": 319.28489353724854,
+            "derivative_median": 3.130439048368771,
+            "derivative_min": -584.3917972082127,
+            "faces": 105,
+            "finite_derivatives": 75,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 27
+          },
+          "3": {
+            "best_bank_index": 1096,
+            "best_gain_nats": -20.135946560537377,
+            "derivative_max": 535.3163308979574,
+            "derivative_median": -0.3854110827774093,
+            "derivative_min": -116.42618818982464,
+            "faces": 455,
+            "finite_derivatives": 253,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 165
+          }
+        },
+        "endpoint_gain_nats": 426.2115539799563,
+        "joint_only_improving_faces": 0,
+        "scope": "Anchored truth/decoy binary faces through size3; no global barrier or unassisted recovery claim.",
+        "single_local_optimum_within_point1_nats": false,
+        "unsupported_single_alternatives": 199
+      }
+    },
+    "iid": {
+      "decoy": {
+        "all_single_alternatives": 943,
+        "best_joint_bank_index": 1554,
+        "best_joint_gain_nats": -3.4324479575952864,
+        "best_single_bank_index": 792,
+        "best_single_gain_nats": 13.912784782016388,
+        "by_size": {
+          "1": {
+            "best_bank_index": 893,
+            "best_gain_nats": -0.357169770460132,
+            "derivative_max": -0.357169770460132,
+            "derivative_median": -14.205208197721731,
+            "derivative_min": -194.6810343523175,
+            "faces": 15,
+            "finite_derivatives": 13,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 2
+          },
+          "2": {
+            "best_bank_index": 1554,
+            "best_gain_nats": -3.4324479575952864,
+            "derivative_max": 77.150330094531,
+            "derivative_median": 0.0,
+            "derivative_min": -628.1884823961791,
+            "faces": 105,
+            "finite_derivatives": 75,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 27
+          },
+          "3": {
+            "best_bank_index": 1844,
+            "best_gain_nats": -9.615146108861609,
+            "derivative_max": 71.18071484707434,
+            "derivative_median": 0.0,
+            "derivative_min": -29.264656356646356,
+            "faces": 455,
+            "finite_derivatives": 253,
+            "improving_faces": 0,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 167
+          }
+        },
+        "endpoint_gain_nats": null,
+        "joint_only_improving_faces": 0,
+        "scope": "Anchored truth/decoy binary faces through size3; no global barrier or unassisted recovery claim.",
+        "single_local_optimum_within_point1_nats": false,
+        "unsupported_single_alternatives": 199
+      },
+      "gold": {
+        "all_single_alternatives": 943,
+        "best_joint_bank_index": 1209,
+        "best_joint_gain_nats": 11.45998140193069,
+        "best_single_bank_index": 792,
+        "best_single_gain_nats": 13.912784782016388,
+        "by_size": {
+          "1": {
+            "best_bank_index": 804,
+            "best_gain_nats": 5.307531921933787,
+            "derivative_max": 5.307531921933787,
+            "derivative_median": -6.953021214764249,
+            "derivative_min": -153.7293150317214,
+            "faces": 15,
+            "finite_derivatives": 13,
+            "improving_faces": 1,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 2
+          },
+          "2": {
+            "best_bank_index": 1047,
+            "best_gain_nats": 6.574286900744937,
+            "derivative_max": 198.49364306454754,
+            "derivative_median": 5.751970275014173e-05,
+            "derivative_min": -656.8529381186254,
+            "faces": 105,
+            "finite_derivatives": 75,
+            "improving_faces": 5,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 27
+          },
+          "3": {
+            "best_bank_index": 1209,
+            "best_gain_nats": 11.45998140193069,
+            "derivative_max": 637.8394955371741,
+            "derivative_median": 4.547473508864641e-13,
+            "derivative_min": -23.36294560833676,
+            "faces": 455,
+            "finite_derivatives": 253,
+            "improving_faces": 13,
+            "joint_only_improving_faces": 0,
+            "support_bridges_with_all_proper_nonempty_subfaces_unsupported": 0,
+            "unsupported": 165
+          }
+        },
+        "endpoint_gain_nats": 17.784386385513244,
+        "joint_only_improving_faces": 0,
+        "scope": "Anchored truth/decoy binary faces through size3; no global barrier or unassisted recovery claim.",
+        "single_local_optimum_within_point1_nats": false,
+        "unsupported_single_alternatives": 199
+      }
+    }
+  },
+  "unique_keys": 2067,
+  "wall_seconds": 5.558401624963153
+}

@@ -1,0 +1,53 @@
+{
+  "aggregate_faces": {
+    "context/decoy": {
+      "faces": 14274,
+      "joint_only": 0,
+      "support_bridges": 0,
+      "unsupported": 4133
+    },
+    "context/gold": {
+      "faces": 14274,
+      "joint_only": 3,
+      "support_bridges": 0,
+      "unsupported": 3949
+    },
+    "iid/decoy": {
+      "faces": 14274,
+      "joint_only": 1,
+      "support_bridges": 0,
+      "unsupported": 4133
+    },
+    "iid/gold": {
+      "faces": 14274,
+      "joint_only": 18,
+      "support_bridges": 0,
+      "unsupported": 3949
+    }
+  },
+  "completion_audit": {
+    "bytes": 954,
+    "path": "results/SOURCE-COUPLING-001/audit.json",
+    "sha256": "2548ddd05329ebf1a6ef2ca6e3d82cd1f421070824112061462ac3565224ec03"
+  },
+  "final_large_last_observed_step": 5400,
+  "final_large_step4000_closed_bytes_verified": {
+    "bytes": 596,
+    "path": "results/JOINT-KEY-TRAIN-001/large-72209-step4000.json",
+    "sha256": "9becfc92b33e717c17852243baaaeb3f12cca6df6a83f01ca47ba44000fd665c"
+  },
+  "no_new_native_or_source_or_neural_scoring": true,
+  "original_training_guide_revision_and_coupling_freezes_unchanged": true,
+  "paid_spend_usd": 0,
+  "post_outcome_arithmetic": {
+    "bytes": 8170,
+    "path": "results/SOURCE-COUPLING-001/post-outcome-arithmetic.json",
+    "sha256": "a34cd1be3073f4abbb5cd705967b0b15384e568eba186d9e4a567cf3ff0ed443"
+  },
+  "result": {
+    "bytes": 5707,
+    "path": "results/SOURCE-COUPLING-001/result.json",
+    "sha256": "7891a2246d2049aea6c0ca946881170085d1fb92153b62a39ea479c63591fa8b"
+  },
+  "status": "PASS_closed_bindings_formulas_freezes"
+}
