@@ -1,0 +1,44 @@
+{
+  "arm": "wide_guided",
+  "case": 0,
+  "config": {
+    "glyphs": 6,
+    "guidance": "iid",
+    "guide_cache_entries": 4096,
+    "guide_max_tables": 20000000,
+    "guide_prewidth": 16384,
+    "max_active": 500000,
+    "max_expanded": 4000000,
+    "max_generated": 120000000,
+    "max_seconds": 600.0,
+    "max_terminals": 512,
+    "merge": true,
+    "rho": 0.0044444444444444444,
+    "schedule": "balanced",
+    "width": 4096
+  },
+  "cpu_seconds": 19.892308,
+  "diagnostic": {
+    "bytes": 32615,
+    "path": "outputs/SOURCE-PRUNE-DIAG-002/case0-wide_guided.json.gz",
+    "sha256": "05f3cac27499de3a4163e5d9a26a3bab1bac12bccef0e45bbb8c054a32d3ff0f"
+  },
+  "name": "case0-wide_guided",
+  "ordinary_output_exact_match": true,
+  "original_cell": {
+    "bytes": 2231,
+    "path": "results/SOURCE-STATE-SYSTEMS-001/case0-wide_guided.json",
+    "sha256": "721c4376af9b45f3c5994cb1d182467fd1dac3b28d12827128ac1a62c7f1c80e"
+  },
+  "summary": {
+    "first_loss": null,
+    "first_loss_stage": null,
+    "literal_path_survived": true,
+    "post_loss_structural_alias_layers": 0,
+    "processed_gold_states": 129,
+    "terminal_exact_partial_key_rank": 1,
+    "terminal_used_mapping_best_rank": 1,
+    "terminal_used_mapping_returned": true
+  },
+  "wall_seconds": 19.916045083024073
+}

@@ -1,0 +1,28 @@
+# After pruning diagnosis: preserve globally coherent early hypotheses
+
+2026-10-01. New design hypotheses, unimplemented and not queued. Evidence: [all sixteen diagnostic outcomes](../experiments/SOURCE-PRUNE-DIAG-002-results.md). The original source law, exposed-data status and failed fresh qualifications remain unchanged.
+
+The three failed wide paths disappear after6/6/5source letters, with just5/5/4rows bound, far before their128/448/448total letters. This is a measurable failure of finite early search, not final readout truncation. A single4096frontier has not solved it; neither has a95Mwhole-key inverse. We should spend the next work block on the information available to rank early states, rather than reflexively on longer fits or a bigger returned bank.
+
+## Own mathematical target
+
+For a partial sufficient state s at an observed-glyph layer, let A(s) be the accumulated original source/key history mass and H(s) the exact sum of all legal future histories producing the remaining observed records, reusing all known AND subsequently shared key bindings. The ideal ordering score is log A(s)+log H(s). This is a layer ordering objective, not a claim that cross-layer normalization produces a full-key posterior. If a future state can be reached through different action counts, source histories are still counted once through their deterministic scheduler.
+
+Current ordering replaces H with an iid root-source surrogate. It redraws every unknown row emission on every future occurrence and discards the actual Markov contexts. It is a tractable heuristic, not the true conditional future likelihood. A finite beam can consequently discard a state whose correct future later supplies strong shared-key evidence. The diagnosis establishes actual early loss; it does not quantify exact surrogate error because H has not been computed on the realistic million-state source.
+
+There are two ways to improve it, with distinct limits:
+
+1. **Explicit constraint lookahead.** A bounded future search can retain actual source contexts, literal unit bindings and both records' repeated-row constraints for a fixed number of subsequent decisions. The resulting retained-future mass is a lower bound on compatible future mass only when its unexpanded tails are handled by an explicitly valid completion/bound construction; summing unfinished prefixes alone is not a likelihood lower bound. Partial rollout priorities may still be useful heuristics but must be labeled as such. A separate relaxed upper-bound calculation must prove which constraints it relaxes before calling it admissible. Original edge weights and complete-key evaluation remain unchanged.
+2. **A state-conditioned learned search critic.** Encode both suffixes, actual source contexts, the23binding slots and cross-record constraints; train to rank true synthetic prefixes among actual competing states. Inputs must exclude true suffixes/key/lengths and source-only diagnostic masks. Learned rankings are heuristic proposal priorities, not replacement source likelihoods. Gold reinsertion can create training examples under a separately declared protocol; it cannot appear in evaluation. Simple action/key-row independent logits are unlikely to capture the previously observed coupled support failures without testing that claim.
+
+Neither proposal is implemented or budgeted for training yet. A rollout comparison should come first if it can falsify the need for learned representations using the same constraints at lower cost. No promise of a9071/10957beam solution follows from today's conditional ranks: larger widths alter all earlier frontiers and can still lose truth later.
+
+## Falsifiable development sequence
+
+Start on tiny exact-enumerable variable-unit problems: enumerate H under repeated shared bindings and source contexts; compare iid, a context-aware relaxed guide and bounded lookahead. Measure true-future priority error, survival of complete correct readings and null behavior. Counterexamples must be retained. A relaxation that can underestimate H cannot be marketed as an admissible upper bound. Compare entire source/key laws rather than fluent outputs.
+
+Then register a finite same-work or same-CPU comparison on exposed development keys. Primary measurements are correct early-state survival and final recovery, not only better native likelihood. Keep final decision/scoring fixed; include shuffled and matched hard negatives. Use old gold-loss trajectories only for diagnosis/training and explicitly account for their exposure. A method chosen on these four cases requires new disjoint keys/authors and channel-family/null qualification before manuscript application.
+
+A learned critic, if justified, should have an explicit supervised target and finite resource forecast. Compare a small slot/constraint model with a larger context encoder at matched examples; do not assume capacity fixes missed constraints. Before mechanistic interpretation it must improve held-out trajectory survival/recovery. Then test binding-slot interventions, cross-record evidence deletion with matched glyph/length controls, wrong-unit substitutions, source-context interventions and seed/model stability. Distinguish predictable state variables, causally used information and globally identifiable linguistic structure. Token cosine similarity may help formulate features; it cannot supply these causal/recovery tests.
+
+This program remains aimed at decipherment. It does not establish that Voynich is Latin, belongs to this channel family, or has recoverable semantics under the current evidence. New historical readings require independently applicable constraints and unused manuscript material.
