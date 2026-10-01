@@ -1,0 +1,42 @@
+{
+  "arm": "fragment",
+  "case": 0,
+  "cell_cpu_seconds": 1.6641569999999999,
+  "cell_wall_seconds": 1.6654985410277732,
+  "diagnostic": {
+    "final": {
+      "edit_errors": 93,
+      "exact_records": 0,
+      "matched_used_rows": 5,
+      "true_source_letters": 128,
+      "used_rows": 19
+    },
+    "gold_used_key_in_scored_bank": false,
+    "score_gain_nats": 0.0,
+    "warm": {
+      "edit_errors": 93,
+      "exact_records": 0,
+      "matched_used_rows": 5,
+      "true_source_letters": 128,
+      "used_rows": 19
+    }
+  },
+  "events": 8778,
+  "fitted": {
+    "bytes": 130626,
+    "path": "outputs/SOURCE-FRAGMENT-001/case0-fragment.json.gz",
+    "sha256": "bd2e38611578cf68fca6606599d55dfae2aa783b565bb87c97f916c68db39f07"
+  },
+  "parent": {
+    "bytes": 3327,
+    "path": "results/SOURCE-REVISE-001/case0-75511-iid.json",
+    "sha256": "b675dd868d0223c450636898f943143ec97046c6ec543ecf3fd65692c92fa40c"
+  },
+  "scored_keys": 2884,
+  "stop_reason": "round_cap",
+  "windows": {
+    "bytes": 29232,
+    "path": "outputs/SOURCE-FRAGMENT-001/case0-windows.json.gz",
+    "sha256": "ef5905bfca9b1954bcd034d40a90d09c1e2f99013cb36079568ddd3a1006b407"
+  }
+}

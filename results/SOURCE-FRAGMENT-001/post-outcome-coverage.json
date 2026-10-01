@@ -1,0 +1,522 @@
+{
+  "all_source_letters": 1152,
+  "audit": {
+    "bytes": 830,
+    "path": "results/SOURCE-FRAGMENT-001/audit.json",
+    "sha256": "14c96e99e2bb89464b0962c1049845f852498db301b45a2eb2c44386e174da92"
+  },
+  "cases": [
+    {
+      "all_true12_source_windows": 106,
+      "arms": [
+        {
+          "arm": "fragment",
+          "best_index": 0,
+          "final_edits": 93,
+          "matched_used_rows": 5,
+          "score_gain": 0.0,
+          "supported": 876,
+          "unique_keys": 2884,
+          "unsupported": 2008,
+          "used_rows": 19,
+          "warm_edits": 93
+        },
+        {
+          "arm": "random_length_matched",
+          "best_index": 0,
+          "final_edits": 93,
+          "matched_used_rows": 5,
+          "score_gain": 0.0,
+          "supported": 976,
+          "unique_keys": 2927,
+          "unsupported": 1951,
+          "used_rows": 19,
+          "warm_edits": 93
+        }
+      ],
+      "case": 0,
+      "eligible_selected_true12_starts": 41,
+      "retained_matches": 2926,
+      "retained_partial_bindings_entirely_gold_correct": 0,
+      "true12_in_library": 0
+    },
+    {
+      "all_true12_source_windows": 106,
+      "arms": [
+        {
+          "arm": "fragment",
+          "best_index": 0,
+          "final_edits": 109,
+          "matched_used_rows": 2,
+          "score_gain": 0.0,
+          "supported": 831,
+          "unique_keys": 2901,
+          "unsupported": 2070,
+          "used_rows": 18,
+          "warm_edits": 109
+        },
+        {
+          "arm": "random_length_matched",
+          "best_index": 0,
+          "final_edits": 109,
+          "matched_used_rows": 2,
+          "score_gain": 0.0,
+          "supported": 808,
+          "unique_keys": 2937,
+          "unsupported": 2129,
+          "used_rows": 18,
+          "warm_edits": 109
+        }
+      ],
+      "case": 1,
+      "eligible_selected_true12_starts": 48,
+      "retained_matches": 2936,
+      "retained_partial_bindings_entirely_gold_correct": 0,
+      "true12_in_library": 1
+    },
+    {
+      "all_true12_source_windows": 426,
+      "arms": [
+        {
+          "arm": "fragment",
+          "best_index": 0,
+          "final_edits": 302,
+          "matched_used_rows": 5,
+          "score_gain": 0.0,
+          "supported": 979,
+          "unique_keys": 2905,
+          "unsupported": 1926,
+          "used_rows": 21,
+          "warm_edits": 302
+        },
+        {
+          "arm": "random_length_matched",
+          "best_index": 0,
+          "final_edits": 302,
+          "matched_used_rows": 5,
+          "score_gain": 0.0,
+          "supported": 940,
+          "unique_keys": 2934,
+          "unsupported": 1994,
+          "used_rows": 21,
+          "warm_edits": 302
+        }
+      ],
+      "case": 2,
+      "eligible_selected_true12_starts": 50,
+      "retained_matches": 2933,
+      "retained_partial_bindings_entirely_gold_correct": 0,
+      "true12_in_library": 2
+    },
+    {
+      "all_true12_source_windows": 426,
+      "arms": [
+        {
+          "arm": "fragment",
+          "best_index": 0,
+          "final_edits": 351,
+          "matched_used_rows": 5,
+          "score_gain": 0.0,
+          "supported": 1338,
+          "unique_keys": 2910,
+          "unsupported": 1572,
+          "used_rows": 20,
+          "warm_edits": 351
+        },
+        {
+          "arm": "random_length_matched",
+          "best_index": 0,
+          "final_edits": 351,
+          "matched_used_rows": 5,
+          "score_gain": 0.0,
+          "supported": 1175,
+          "unique_keys": 2939,
+          "unsupported": 1764,
+          "used_rows": 20,
+          "warm_edits": 351
+        }
+      ],
+      "case": 3,
+      "eligible_selected_true12_starts": 53,
+      "retained_matches": 2938,
+      "retained_partial_bindings_entirely_gold_correct": 0,
+      "true12_in_library": 1
+    }
+  ],
+  "depth_profile": [
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 128,
+          "source_windows": 128
+        },
+        {
+          "case": 1,
+          "in_library": 128,
+          "source_windows": 128
+        },
+        {
+          "case": 2,
+          "in_library": 448,
+          "source_windows": 448
+        },
+        {
+          "case": 3,
+          "in_library": 448,
+          "source_windows": 448
+        }
+      ],
+      "depth": 1,
+      "in_library": 1152,
+      "library_size": 23,
+      "source_windows": 1152
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 126,
+          "source_windows": 126
+        },
+        {
+          "case": 1,
+          "in_library": 126,
+          "source_windows": 126
+        },
+        {
+          "case": 2,
+          "in_library": 446,
+          "source_windows": 446
+        },
+        {
+          "case": 3,
+          "in_library": 446,
+          "source_windows": 446
+        }
+      ],
+      "depth": 2,
+      "in_library": 1144,
+      "library_size": 425,
+      "source_windows": 1144
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 124,
+          "source_windows": 124
+        },
+        {
+          "case": 1,
+          "in_library": 124,
+          "source_windows": 124
+        },
+        {
+          "case": 2,
+          "in_library": 444,
+          "source_windows": 444
+        },
+        {
+          "case": 3,
+          "in_library": 444,
+          "source_windows": 444
+        }
+      ],
+      "depth": 3,
+      "in_library": 1136,
+      "library_size": 4489,
+      "source_windows": 1136
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 122,
+          "source_windows": 122
+        },
+        {
+          "case": 1,
+          "in_library": 122,
+          "source_windows": 122
+        },
+        {
+          "case": 2,
+          "in_library": 437,
+          "source_windows": 442
+        },
+        {
+          "case": 3,
+          "in_library": 441,
+          "source_windows": 442
+        }
+      ],
+      "depth": 4,
+      "in_library": 1122,
+      "library_size": 36293,
+      "source_windows": 1128
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 115,
+          "source_windows": 120
+        },
+        {
+          "case": 1,
+          "in_library": 116,
+          "source_windows": 120
+        },
+        {
+          "case": 2,
+          "in_library": 416,
+          "source_windows": 440
+        },
+        {
+          "case": 3,
+          "in_library": 419,
+          "source_windows": 440
+        }
+      ],
+      "depth": 5,
+      "in_library": 1066,
+      "library_size": 158628,
+      "source_windows": 1120
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 83,
+          "source_windows": 118
+        },
+        {
+          "case": 1,
+          "in_library": 97,
+          "source_windows": 118
+        },
+        {
+          "case": 2,
+          "in_library": 326,
+          "source_windows": 438
+        },
+        {
+          "case": 3,
+          "in_library": 353,
+          "source_windows": 438
+        }
+      ],
+      "depth": 6,
+      "in_library": 859,
+      "library_size": 327225,
+      "source_windows": 1112
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 45,
+          "source_windows": 116
+        },
+        {
+          "case": 1,
+          "in_library": 64,
+          "source_windows": 116
+        },
+        {
+          "case": 2,
+          "in_library": 168,
+          "source_windows": 436
+        },
+        {
+          "case": 3,
+          "in_library": 220,
+          "source_windows": 436
+        }
+      ],
+      "depth": 7,
+      "in_library": 497,
+      "library_size": 355868,
+      "source_windows": 1104
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 17,
+          "source_windows": 114
+        },
+        {
+          "case": 1,
+          "in_library": 40,
+          "source_windows": 114
+        },
+        {
+          "case": 2,
+          "in_library": 81,
+          "source_windows": 434
+        },
+        {
+          "case": 3,
+          "in_library": 106,
+          "source_windows": 434
+        }
+      ],
+      "depth": 8,
+      "in_library": 244,
+      "library_size": 264507,
+      "source_windows": 1096
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 7,
+          "source_windows": 112
+        },
+        {
+          "case": 1,
+          "in_library": 15,
+          "source_windows": 112
+        },
+        {
+          "case": 2,
+          "in_library": 35,
+          "source_windows": 432
+        },
+        {
+          "case": 3,
+          "in_library": 51,
+          "source_windows": 432
+        }
+      ],
+      "depth": 9,
+      "in_library": 108,
+      "library_size": 157412,
+      "source_windows": 1088
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 2,
+          "source_windows": 110
+        },
+        {
+          "case": 1,
+          "in_library": 4,
+          "source_windows": 110
+        },
+        {
+          "case": 2,
+          "in_library": 14,
+          "source_windows": 430
+        },
+        {
+          "case": 3,
+          "in_library": 20,
+          "source_windows": 430
+        }
+      ],
+      "depth": 10,
+      "in_library": 40,
+      "library_size": 82010,
+      "source_windows": 1080
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 0,
+          "source_windows": 108
+        },
+        {
+          "case": 1,
+          "in_library": 2,
+          "source_windows": 108
+        },
+        {
+          "case": 2,
+          "in_library": 7,
+          "source_windows": 428
+        },
+        {
+          "case": 3,
+          "in_library": 7,
+          "source_windows": 428
+        }
+      ],
+      "depth": 11,
+      "in_library": 16,
+      "library_size": 40641,
+      "source_windows": 1072
+    },
+    {
+      "cases": [
+        {
+          "case": 0,
+          "in_library": 0,
+          "source_windows": 106
+        },
+        {
+          "case": 1,
+          "in_library": 1,
+          "source_windows": 106
+        },
+        {
+          "case": 2,
+          "in_library": 2,
+          "source_windows": 426
+        },
+        {
+          "case": 3,
+          "in_library": 1,
+          "source_windows": 426
+        }
+      ],
+      "depth": 12,
+      "in_library": 4,
+      "library_size": 20202,
+      "source_windows": 1064
+    }
+  ],
+  "fixtures": {
+    "bytes": 45672,
+    "path": "outputs/SOURCE-GUIDE-001/fixtures.json",
+    "sha256": "6372436be35865f6dde6f2fe2bd94b8918936970266ea5ca56523bba8fc0fd9e"
+  },
+  "history_max_retained_suffix_depth_counts": [
+    8,
+    8,
+    8,
+    14,
+    56,
+    207,
+    359,
+    251,
+    134,
+    68,
+    23,
+    12,
+    4
+  ],
+  "mean_source_mixture_weight_at_depth_or_above": {
+    "1": 0.993053857081835,
+    "12": 0.00038574042057014195,
+    "2": 0.9853573834306483,
+    "4": 0.8747958025717559,
+    "8": 0.05863653015478475
+  },
+  "result": {
+    "bytes": 6746,
+    "path": "results/SOURCE-FRAGMENT-001/result.json",
+    "sha256": "4c7a5d60a0035031bdfffea700f873034c1795c7122e5ba76a28fea3024e573a"
+  },
+  "scope": "Exploratory AFTER outcomes, four exposed cases. No new scores/search/neural calls or success-criterion revision. Mixture weights are coefficients, not target probability contributions.",
+  "source": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  }
+}

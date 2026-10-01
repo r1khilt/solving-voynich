@@ -1,0 +1,42 @@
+{
+  "arm": "fragment",
+  "case": 1,
+  "cell_cpu_seconds": 1.3792860000000005,
+  "cell_wall_seconds": 1.3805251250159927,
+  "diagnostic": {
+    "final": {
+      "edit_errors": 109,
+      "exact_records": 0,
+      "matched_used_rows": 2,
+      "true_source_letters": 128,
+      "used_rows": 18
+    },
+    "gold_used_key_in_scored_bank": false,
+    "score_gain_nats": 0.0,
+    "warm": {
+      "edit_errors": 109,
+      "exact_records": 0,
+      "matched_used_rows": 2,
+      "true_source_letters": 128,
+      "used_rows": 18
+    }
+  },
+  "events": 8808,
+  "fitted": {
+    "bytes": 127724,
+    "path": "outputs/SOURCE-FRAGMENT-001/case1-fragment.json.gz",
+    "sha256": "e27cd1633ad93a61f7d9414dabf01432645cb4ef4ab8ce12a33c3516d30922bc"
+  },
+  "parent": {
+    "bytes": 3328,
+    "path": "results/SOURCE-REVISE-001/case1-75511-iid.json",
+    "sha256": "b5849442a1c8bffbf945ea32fcca3fd531d9b2f08182621804d32124af20ed14"
+  },
+  "scored_keys": 2901,
+  "stop_reason": "round_cap",
+  "windows": {
+    "bytes": 30539,
+    "path": "outputs/SOURCE-FRAGMENT-001/case1-windows.json.gz",
+    "sha256": "a590606bde29f01fc81c41872d6b11bcfd4460f79a15c6240a7223ae9d246943"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "campaign_session": 45401,
+  "claims": "Closed file hashes and stored64-episode arithmetic/greedy counts only; no new tensor/neural/optimizer/ledger replay. Halfway checkpoint is not final selection or full training audit. Original finalfit live; no retry/resume.",
+  "freeze": "9053abf667fb296ef41e7eb5d9b7eedd1da94533",
+  "last_flushed_trace_observed_only": {
+    "cpu_seconds": 375.01815500000004,
+    "driver_bytes": 8424882176,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 2040250368,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "stage": "resource",
+    "step": 10700,
+    "tensor_bytes": 1547837952,
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 7644.306255833013
+  },
+  "observed_unix": 1790860904.613827,
+  "paid_spend_usd": 0,
+  "snapshot": {
+    "bytes": 598,
+    "path": "results/JOINT-KEY-TRAIN-001/large-72209-step10000.json",
+    "sha256": "6c4b91a2c8a653959c02cf4cb736fcf9179964470ba5a532e29fe9add21f8097"
+  },
+  "status": "closed_final_large_step10000_observation_not_completion_audit",
+  "stored_short_reference_deltas": {
+    "cpu_two_four_delta": 2.6645352591003757e-15,
+    "mps_cpu_max_delta": 3.906004534037777e-06,
+    "mps_two_four_delta": 1.430511474609375e-06
+  },
+  "stored_validation_summary": {
+    "correct_rows": 63,
+    "episodes": 64,
+    "mean_nats_per_row": 3.55017744034505,
+    "rows": 1472,
+    "used_correct_rows": 56,
+    "used_mask_is_diagnostic_only": true,
+    "used_rows": 1248,
+    "whole_keys_exact": 0
+  },
+  "validation": {
+    "bytes": 12423,
+    "path": "outputs/JOINT-KEY-TRAIN-001/large-72209-step10000-validation.json.gz",
+    "sha256": "02f12da745bdb22f25455acb098c99cde2a91237da0e903a23a03595c1b9643f"
+  },
+  "validation_episodes": {
+    "bytes": 8417,
+    "path": "outputs/JOINT-KEY-TRAIN-001/validation-episodes.json.gz",
+    "sha256": "677467683dc5f6de1a95b8cabe42d156dd33629162686163132cb9fbb9bc7bcf"
+  },
+  "weights": {
+    "bytes": 379981527,
+    "path": "outputs/JOINT-KEY-TRAIN-001/large-72209-step10000.pt",
+    "sha256": "92a8a833544593fd423398c0bcb8885ef48eec9a0d32a98082a25e2e59347d41"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "arm": "random_length_matched",
+  "case": 3,
+  "cell_cpu_seconds": 5.041314,
+  "cell_wall_seconds": 5.0507079170201905,
+  "diagnostic": {
+    "final": {
+      "edit_errors": 351,
+      "exact_records": 0,
+      "matched_used_rows": 5,
+      "true_source_letters": 448,
+      "used_rows": 20
+    },
+    "gold_used_key_in_scored_bank": false,
+    "score_gain_nats": 0.0,
+    "warm": {
+      "edit_errors": 351,
+      "exact_records": 0,
+      "matched_used_rows": 5,
+      "true_source_letters": 448,
+      "used_rows": 20
+    }
+  },
+  "events": 8814,
+  "fitted": {
+    "bytes": 162222,
+    "path": "outputs/SOURCE-FRAGMENT-001/case3-random_length_matched.json.gz",
+    "sha256": "5e9afeea29749cc773e51127cebb54598b00ccdab2332c946e3a9abe3f0609f3"
+  },
+  "parent": {
+    "bytes": 3327,
+    "path": "results/SOURCE-REVISE-001/case3-75511-iid.json",
+    "sha256": "34308dad32db713f33fb4b31d6cd488d8ddc0c99cd50c2e2f7719fe5bb6f07b2"
+  },
+  "scored_keys": 2939,
+  "stop_reason": "round_cap",
+  "windows": {
+    "bytes": 30127,
+    "path": "outputs/SOURCE-FRAGMENT-001/case3-windows.json.gz",
+    "sha256": "b5ccd5a1355a2ba53101779aec6c8ec9167ebefbaac77a9963cc9390f08221b6"
+  }
+}
