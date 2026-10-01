@@ -1,0 +1,69 @@
+{
+  "bank": {
+    "bytes": 436822,
+    "path": "outputs/GLOBAL-KEY-SEARCH-001/case-25-reader-bank.json.gz",
+    "sha256": "50681f1789613e4fdaace7ab0052d42bc6a6270477418d0b19fe4a6629adc14f"
+  },
+  "case": "case-25",
+  "checks": {
+    "forward_records": 256,
+    "keys": 4055,
+    "maximum_delta": 1.5916157281026244e-12,
+    "tuples": 32440
+  },
+  "evidence": {
+    "bytes": 192552,
+    "path": "outputs/GLOBAL-KEY-READ-001/case-25-evidence.json.gz",
+    "sha256": "405fe407946583142e8ebd7c47055c368f723144186fea8a299699b0c85d5fa0"
+  },
+  "freeze": "760c44142517174596714b348a835789b9b578f0",
+  "frequency_order3": {
+    "bytes": 558,
+    "path": "outputs/GLOBAL-KEY-READ-001/case-25-frequency.json.gz",
+    "sha256": "a0441bf0b621d6d2d7d63a35f7d4318202052002291fd19b0bee53dfc68a1096"
+  },
+  "parent": {
+    "bytes": 8437,
+    "path": "results/BLIND-CHANNEL-CONFIRM-002/case-25-parent.json",
+    "sha256": "57a27a403413fe630d25439b61d6421ddc26fc246b5bca96e9a96a19681847a5"
+  },
+  "points": {
+    "bytes": 524,
+    "path": "outputs/GLOBAL-KEY-READ-001/case-25-points.json.gz",
+    "sha256": "dca4eab645d53e05e685abc69776fdce228e6e2a1ef38caa207f498c7d4892b8"
+  },
+  "readings": {
+    "bytes": 672613,
+    "path": "outputs/GLOBAL-KEY-READ-001/case-25-readings.json.gz",
+    "sha256": "49e9cfac584a816a758693e230c0d0e8aff9ed2a8c205e1eaff1f645f79aeac6"
+  },
+  "resources": {
+    "cpu_seconds": 205.396131,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 973570048,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 206.17006895900704
+  },
+  "status": "complete",
+  "summary": {
+    "all_positive_weights_retained": true,
+    "fit_selected_log_likelihood": -817.4748852684079,
+    "gain_bits_vs_iid": 641.1885629451144,
+    "iid_log_likelihood": -1261.906713628563,
+    "log_likelihood": -817.468669015874,
+    "original_log_likelihood": -817.4140177469908,
+    "records": 2,
+    "supported_keys": 4055
+  },
+  "transfer": {
+    "bytes": 1349,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-002/case-25/transfer.json",
+    "sha256": "f5a287d7b7cbca7d74ef306f693c24c9fcae0d0be91fa42916e0ae5484a1e716"
+  }
+}

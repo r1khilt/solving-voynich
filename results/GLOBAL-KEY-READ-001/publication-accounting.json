@@ -1,0 +1,916 @@
+{
+  "all_child_cpu_seconds": 4702.835120999999,
+  "answer_files_semantically_opened": false,
+  "audit": {
+    "bytes": 31455,
+    "path": "results/GLOBAL-KEY-READ-001/audit.json",
+    "sha256": "247b66dc86ead24899960c90521350ead147b700694d10f07ebf2c91e24b779b"
+  },
+  "backward_records": 256,
+  "campaign": {
+    "bytes": 2192,
+    "path": "results/GLOBAL-KEY-READ-001/campaign.json",
+    "sha256": "70ece08ab9cd08a114ed9f4d57964f1c91eb9bde1f35ca491178005c7ab037a0"
+  },
+  "cases": [
+    {
+      "case": "case-01",
+      "numeric_audit": {
+        "active_keys": 5487,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 43896,
+        "literal_candidate_key_checks": 356655,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 26972
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 380.84976700000004,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 981532672,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 381.4683062080294
+      },
+      "result": {
+        "bytes": 2282,
+        "path": "results/GLOBAL-KEY-READ-001/case-01.json",
+        "sha256": "66ae28ae4a9a394bd3b2ffd8a0acae27f874b52db15b2da96a9775cc44b8a492"
+      }
+    },
+    {
+      "case": "case-02",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 68.803162,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 930414592,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 68.9122203339939
+      },
+      "result": {
+        "bytes": 1617,
+        "path": "results/GLOBAL-KEY-READ-001/case-02.json",
+        "sha256": "e5ae3c019e20a4e9a4d352bb1ac6e76e5e89719734734b46249ef43138aea942"
+      }
+    },
+    {
+      "case": "case-03",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 73.94948099999999,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 931119104,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 74.07076045899885
+      },
+      "result": {
+        "bytes": 1626,
+        "path": "results/GLOBAL-KEY-READ-001/case-03.json",
+        "sha256": "2a5fb096027d615778661435c64b66f441b8bf3a951b3aa224279c40167cbea2"
+      }
+    },
+    {
+      "case": "case-04",
+      "numeric_audit": {
+        "active_keys": 2751,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 22008,
+        "literal_candidate_key_checks": 178815,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 10550
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 78.600692,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 974077952,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 78.73006429203087
+      },
+      "result": {
+        "bytes": 2272,
+        "path": "results/GLOBAL-KEY-READ-001/case-04.json",
+        "sha256": "5634bdbe0e6befebe8e54c20572977e68a3fa8679bcfa26c57d2d4fc1fd218a1"
+      }
+    },
+    {
+      "case": "case-05",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 61.147107,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 930299904,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 61.268770541995764
+      },
+      "result": {
+        "bytes": 1620,
+        "path": "results/GLOBAL-KEY-READ-001/case-05.json",
+        "sha256": "91e84630463ea22d22e62f16e80e1c8329ea969ce2d45e2bdd924e036aff13ae"
+      }
+    },
+    {
+      "case": "case-06",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 71.194028,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 930643968,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 71.31694441701984
+      },
+      "result": {
+        "bytes": 1619,
+        "path": "results/GLOBAL-KEY-READ-001/case-06.json",
+        "sha256": "da3de9b2d46a8959f3dfaceeaa7552012026f4ac55971a8c7245aed2addcfad6"
+      }
+    },
+    {
+      "case": "case-07",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 79.04266700000001,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 921059328,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 79.16777529095998
+      },
+      "result": {
+        "bytes": 1623,
+        "path": "results/GLOBAL-KEY-READ-001/case-07.json",
+        "sha256": "1061f7137a59b62d652fbb52bb90a77c0456bb949a76cd452ce81e0775d80b60"
+      }
+    },
+    {
+      "case": "case-08",
+      "numeric_audit": {
+        "active_keys": 2231,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 17848,
+        "literal_candidate_key_checks": 147246,
+        "sampled_candidate_tuples": 66,
+        "unique_candidates": 7633
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 83.555657,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 969342976,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 83.71935016702628
+      },
+      "result": {
+        "bytes": 2270,
+        "path": "results/GLOBAL-KEY-READ-001/case-08.json",
+        "sha256": "8a9e42c820a1ced1cc974ee1d28ef6774ebd39b5eb69a0dce902d39cafc9ea08"
+      }
+    },
+    {
+      "case": "case-09",
+      "numeric_audit": {
+        "active_keys": 3863,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 30904,
+        "literal_candidate_key_checks": 251095,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 9708
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 162.763485,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 972931072,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 163.04271345800953
+      },
+      "result": {
+        "bytes": 2274,
+        "path": "results/GLOBAL-KEY-READ-001/case-09.json",
+        "sha256": "e0ba1f6b7d101d2b0a6bf6bb228eeaefb9217e731c67fe9a2433d5afeb5ea46f"
+      }
+    },
+    {
+      "case": "case-10",
+      "numeric_audit": {
+        "active_keys": 3022,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 24176,
+        "literal_candidate_key_checks": 196430,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 12039
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 87.708544,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 975011840,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 87.86584341700654
+      },
+      "result": {
+        "bytes": 2272,
+        "path": "results/GLOBAL-KEY-READ-001/case-10.json",
+        "sha256": "7fa5c0be13b17d5a3ec8c7e91b6b6521f7e2e2e198bc8d4ee3225f8bbe412f7a"
+      }
+    },
+    {
+      "case": "case-11",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 51.162282,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 930168832,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 51.24021866696421
+      },
+      "result": {
+        "bytes": 1618,
+        "path": "results/GLOBAL-KEY-READ-001/case-11.json",
+        "sha256": "1ffd6e2f60ba3b3fd640adbfd14b8a0f9252094f7b12313bddce7e8d2ffc20a5"
+      }
+    },
+    {
+      "case": "case-12",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 58.118833,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 924221440,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 58.213398916996084
+      },
+      "result": {
+        "bytes": 1618,
+        "path": "results/GLOBAL-KEY-READ-001/case-12.json",
+        "sha256": "8ca20b124fd5fe157a7b4de1c55157146b217a0d503ee03b78052ff58907b679"
+      }
+    },
+    {
+      "case": "case-13",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 83.941777,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 924680192,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 84.11272924998775
+      },
+      "result": {
+        "bytes": 1618,
+        "path": "results/GLOBAL-KEY-READ-001/case-13.json",
+        "sha256": "7cb8d3688870ba26ad84d6566a1defd82603e67d196171e25bf3b6d124c381fc"
+      }
+    },
+    {
+      "case": "case-14",
+      "numeric_audit": {
+        "active_keys": 2636,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 21016,
+        "literal_candidate_key_checks": 171340,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 7338
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 174.193367,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 970391552,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 174.4800327080302
+      },
+      "result": {
+        "bytes": 2271,
+        "path": "results/GLOBAL-KEY-READ-001/case-14.json",
+        "sha256": "14ec9f03753aa142bcbc28b1e338ed7ac414c2d63ed8fae6fcaf26d7e06eb259"
+      }
+    },
+    {
+      "case": "case-15",
+      "numeric_audit": {
+        "active_keys": 2590,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 20720,
+        "literal_candidate_key_checks": 168350,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 6735
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 96.910376,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 969572352,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 97.0554580410244
+      },
+      "result": {
+        "bytes": 2271,
+        "path": "results/GLOBAL-KEY-READ-001/case-15.json",
+        "sha256": "9e28bee79151c342223de7ffb2e0ce73b18d3297e79ed6e027a0162892f3ca54"
+      }
+    },
+    {
+      "case": "case-16",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 49.646873,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 925171712,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 49.708661667013075
+      },
+      "result": {
+        "bytes": 1620,
+        "path": "results/GLOBAL-KEY-READ-001/case-16.json",
+        "sha256": "67ca5b0740361e8241484de2d2d91869b09341c228a64b16c6368c26d7fad353"
+      }
+    },
+    {
+      "case": "case-17",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 61.275259,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 930643968,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 61.3728782919934
+      },
+      "result": {
+        "bytes": 1618,
+        "path": "results/GLOBAL-KEY-READ-001/case-17.json",
+        "sha256": "73fff1cf340f5de4cd523e1220f005f8d89057ffa97f2c37897f6e45ea5ca4f4"
+      }
+    },
+    {
+      "case": "case-18",
+      "numeric_audit": {
+        "active_keys": 3025,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 24176,
+        "literal_candidate_key_checks": 196625,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 8518
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 118.28110199999999,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 971210752,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 118.5213445420377
+      },
+      "result": {
+        "bytes": 2280,
+        "path": "results/GLOBAL-KEY-READ-001/case-18.json",
+        "sha256": "c80e940bcd7232d2462cd4c7af81b4c900cb6783f79ce617418323cdab480b46"
+      }
+    },
+    {
+      "case": "case-19",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 89.210575,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 919781376,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 89.42308279202553
+      },
+      "result": {
+        "bytes": 1617,
+        "path": "results/GLOBAL-KEY-READ-001/case-19.json",
+        "sha256": "7945e890e7b56299d6d42f0c1a38f884e40c18d7f469c4a3ac5daa1487b4cfb4"
+      }
+    },
+    {
+      "case": "case-20",
+      "numeric_audit": {
+        "active_keys": 2432,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 19432,
+        "literal_candidate_key_checks": 158080,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 6241
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 73.856985,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 970752000,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 74.06312904099468
+      },
+      "result": {
+        "bytes": 2272,
+        "path": "results/GLOBAL-KEY-READ-001/case-20.json",
+        "sha256": "69c3cc03f88551768fe7a7744ff5daa0d13878eef4a26d32beba96c1561157d3"
+      }
+    },
+    {
+      "case": "case-21",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 81.934876,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 930414592,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 82.17082233302062
+      },
+      "result": {
+        "bytes": 1618,
+        "path": "results/GLOBAL-KEY-READ-001/case-21.json",
+        "sha256": "766dd849890ceb46bc68c72b9ad170821c46e2d910d26e645e3a39c05d73def6"
+      }
+    },
+    {
+      "case": "case-22",
+      "numeric_audit": {
+        "active_keys": 2406,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 19248,
+        "literal_candidate_key_checks": 156390,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 8607
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 85.507723,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 969342976,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 85.6867478750064
+      },
+      "result": {
+        "bytes": 2270,
+        "path": "results/GLOBAL-KEY-READ-001/case-22.json",
+        "sha256": "8ed0c82c779032acf9294abafe847c4621511b9dea39728801b508def2e71d21"
+      }
+    },
+    {
+      "case": "case-23",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 90.255622,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 925712384,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 90.45998591702664
+      },
+      "result": {
+        "bytes": 1617,
+        "path": "results/GLOBAL-KEY-READ-001/case-23.json",
+        "sha256": "3b4bc15f851a9c7be28ca2e5d38fd470f7612c75f9a0e02af0e661e99d74f620"
+      }
+    },
+    {
+      "case": "case-24",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 72.783479,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 925188096,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 72.96249920799164
+      },
+      "result": {
+        "bytes": 1619,
+        "path": "results/GLOBAL-KEY-READ-001/case-24.json",
+        "sha256": "9b4ee7b9b27a34e451bd55949468d9f2c2aabf00b2abed086b6b70d5b045ec8f"
+      }
+    },
+    {
+      "case": "case-25",
+      "numeric_audit": {
+        "active_keys": 4055,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 32440,
+        "literal_candidate_key_checks": 263575,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 13341
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 205.396131,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 973570048,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 206.17006895900704
+      },
+      "result": {
+        "bytes": 2272,
+        "path": "results/GLOBAL-KEY-READ-001/case-25.json",
+        "sha256": "0fc50dd7b74e3e4ec04950597fda5bb6354988de5f07eab27508f6f594059295"
+      }
+    },
+    {
+      "case": "case-26",
+      "numeric_audit": {
+        "active_keys": 3156,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 25200,
+        "literal_candidate_key_checks": 205140,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 12993
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 154.93559499999998,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 971407360,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 155.54868766700383
+      },
+      "result": {
+        "bytes": 2282,
+        "path": "results/GLOBAL-KEY-READ-001/case-26.json",
+        "sha256": "51cd4f72693f63635fc1bc9a156f44c28e8c692c635876fab1e9f32d6f8a01d0"
+      }
+    },
+    {
+      "case": "case-27",
+      "numeric_audit": {
+        "active_keys": 3051,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 24400,
+        "literal_candidate_key_checks": 198315,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 11709
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 160.419445,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 970768384,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 161.0484048749786
+      },
+      "result": {
+        "bytes": 2272,
+        "path": "results/GLOBAL-KEY-READ-001/case-27.json",
+        "sha256": "50ee4962a34928a35b3d8bbed1c80e49dc0845ffa06f8aa6fbcb6336a2f8adcf"
+      }
+    },
+    {
+      "case": "case-28",
+      "numeric_audit": {
+        "active_keys": 3380,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 27032,
+        "literal_candidate_key_checks": 223080,
+        "sampled_candidate_tuples": 66,
+        "unique_candidates": 12743
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 105.882185,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 976863232,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 106.34221129195066
+      },
+      "result": {
+        "bytes": 2273,
+        "path": "results/GLOBAL-KEY-READ-001/case-28.json",
+        "sha256": "93a9cf5154dc91a26993ecaa2fa2657087ce43fdb9cb0fc9915163353ce8e151"
+      }
+    },
+    {
+      "case": "case-29",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 60.77404799999999,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 924680192,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 61.177738666010555
+      },
+      "result": {
+        "bytes": 1627,
+        "path": "results/GLOBAL-KEY-READ-001/case-29.json",
+        "sha256": "34347e57413acb58b77c96e40f4dac02ec6b3408793219a586819a9b8323f3b8"
+      }
+    },
+    {
+      "case": "case-30",
+      "numeric_audit": null,
+      "positive": false,
+      "resources": {
+        "cpu_seconds": 58.118778,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 924893184,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 58.388385833008215
+      },
+      "result": {
+        "bytes": 1618,
+        "path": "results/GLOBAL-KEY-READ-001/case-30.json",
+        "sha256": "38b26a0c82b53c3c488bd730cbaed12d60bf4f8b28197ff5e6de0ddd826e3dfa"
+      }
+    },
+    {
+      "case": "case-31",
+      "numeric_audit": {
+        "active_keys": 3602,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": true,
+        "listed_tuples": 28808,
+        "literal_candidate_key_checks": 234130,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 12571
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 126.46258800000001,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 977862656,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 126.8696666250471
+      },
+      "result": {
+        "bytes": 2281,
+        "path": "results/GLOBAL-KEY-READ-001/case-31.json",
+        "sha256": "db94a6bacf2846fb88813daea50cb0a5e379554e18cda23284a8bd8be9313949"
+      }
+    },
+    {
+      "case": "case-32",
+      "numeric_audit": {
+        "active_keys": 5481,
+        "all_candidate_supports_independently_replayed": false,
+        "floating_bound_separated": false,
+        "listed_tuples": 43848,
+        "literal_candidate_key_checks": 356265,
+        "sampled_candidate_tuples": 65,
+        "unique_candidates": 34057
+      },
+      "positive": true,
+      "resources": {
+        "cpu_seconds": 822.647071,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 983416832,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 824.2335589160211
+      },
+      "result": {
+        "bytes": 2277,
+        "path": "results/GLOBAL-KEY-READ-001/case-32.json",
+        "sha256": "9b5ef1d25d02ac2d76e3a62f63da7663553235d51202423c3a01ddd704d675b5"
+      }
+    }
+  ],
+  "code": {
+    "bytes": 4645,
+    "path": "scripts/account_global_key_read001.py",
+    "sha256": "cbe3b89d71affd64af472f3585e7d45b11b8fec9317090235625e0708833976e"
+  },
+  "freeze": "760c44142517174596714b348a835789b9b578f0",
+  "frequency_record_replays": 32,
+  "independent_agent_review": false,
+  "literal_candidate_key_checks": 3461531,
+  "maximum_backward_delta": 1.4779288903810084e-12,
+  "maximum_prediction_rss_bytes": 983416832,
+  "new_model_scores_computed": false,
+  "outcome_counts": {
+    "complete": 16,
+    "complete_evidence_only_by_design": 16
+  },
+  "point_record_replays": 64,
+  "resources": {
+    "cpu_seconds": 0.020692000000000377,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 382369792,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.020706332987174392
+  },
+  "result_archive_bindings": 176,
+  "sampled_candidate_tuples": 1042,
+  "status": "PASS",
+  "summed_prediction_cpu_seconds": 4029.32956,
+  "summed_prediction_wall_seconds": 4038.8124606682104
+}

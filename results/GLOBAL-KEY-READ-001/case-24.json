@@ -1,0 +1,49 @@
+{
+  "bank": {
+    "bytes": 641027,
+    "path": "outputs/GLOBAL-KEY-SEARCH-001/case-24-reader-bank.json.gz",
+    "sha256": "1b12f0ec116d0d00703d01ef939cefd47b3547be74df3aaa1ce48730a7e5c97e"
+  },
+  "case": "case-24",
+  "evidence": {
+    "bytes": 292982,
+    "path": "outputs/GLOBAL-KEY-READ-001/case-24-evidence.json.gz",
+    "sha256": "46410b74809c24855b952032824cf4e5d68baae444de0f8edef87f956b5fb6de"
+  },
+  "freeze": "760c44142517174596714b348a835789b9b578f0",
+  "parent": {
+    "bytes": 8434,
+    "path": "results/BLIND-CHANNEL-CONFIRM-002/case-24-parent.json",
+    "sha256": "883f4ce0d87d3b5a511d0be37bad2a93c293cf634089c7b93f7eac9c458db80d"
+  },
+  "readings": null,
+  "resources": {
+    "cpu_seconds": 72.783479,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 925188096,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 72.96249920799164
+  },
+  "status": "complete_evidence_only_by_design",
+  "summary": {
+    "all_positive_weights_retained": true,
+    "fit_selected_log_likelihood": -1482.0479946704882,
+    "gain_bits_vs_iid": -166.34023963638393,
+    "iid_log_likelihood": -1366.1684208842075,
+    "log_likelihood": -1481.4666890018327,
+    "original_log_likelihood": -1483.8205236562978,
+    "records": 2,
+    "supported_keys": 5801
+  },
+  "transfer": {
+    "bytes": 1412,
+    "path": "data/processed/BLIND-CHANNEL-CONFIRM-002/case-24/transfer.json",
+    "sha256": "761940f64a1b20d892319ef9447e4daac0fd2a8414386052fe24c59664c6880f"
+  }
+}

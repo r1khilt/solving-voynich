@@ -1,0 +1,103 @@
+{
+  "arms": {
+    "fixed8-host": {
+      "completed_workloads": 6,
+      "result": {
+        "bytes": 8806,
+        "path": "results/SHARED-PREFIX-SYSTEMS-002/fixed8-host.json",
+        "sha256": "1acdb5ee29c1eef62f6cfbcea57d78ed9b2b2b6eb3fb6fb64b984f1e8679848c"
+      },
+      "sampled_driver_peak": 78397440,
+      "sampled_tensor_peak": 29818112,
+      "status": "PASS"
+    },
+    "variable": {
+      "completed_workloads": 6,
+      "result": {
+        "bytes": 8790,
+        "path": "results/SHARED-PREFIX-SYSTEMS-002/variable.json",
+        "sha256": "7d8b33536ad0433fc1de09817c5213fda7890dfd3bab16a41d26871dbe0003d2"
+      },
+      "sampled_driver_peak": 506757120,
+      "sampled_tensor_peak": 447756544,
+      "status": "PASS"
+    }
+  },
+  "auditor": {
+    "bytes": 7983,
+    "path": "scripts/audit_shared_prefix_systems001.py",
+    "sha256": "5778ee03d0e8f331653133b1db13039a4b04e500e7355cc3dcaf62d6a125d880"
+  },
+  "campaign": {
+    "bytes": 919,
+    "path": "results/SHARED-PREFIX-SYSTEMS-002/campaign.json",
+    "sha256": "28bbbefef69d8e99be43b1a45bc63ac2b7db79d67640cbc8dd5d344663c3149b"
+  },
+  "comparisons": [
+    {
+      "fixed_seconds": 0.7532817089813761,
+      "item": 0,
+      "same_text_tuple": true,
+      "score_difference": -8.994015843200032e-08,
+      "seed": 71831,
+      "variable_seconds": 0.27920058398740366
+    },
+    {
+      "fixed_seconds": 15.05245079199085,
+      "item": 1,
+      "same_text_tuple": true,
+      "score_difference": -7.111111699487083e-09,
+      "seed": 71831,
+      "variable_seconds": 2.828833459003363
+    },
+    {
+      "fixed_seconds": 22.859031250001863,
+      "item": 2,
+      "same_text_tuple": true,
+      "score_difference": -9.705718184704892e-08,
+      "seed": 71831,
+      "variable_seconds": 5.134605291008484
+    },
+    {
+      "fixed_seconds": 0.6467272500158288,
+      "item": 0,
+      "same_text_tuple": true,
+      "score_difference": -5.3103633490536595e-08,
+      "seed": 71839,
+      "variable_seconds": 0.17063050001161173
+    },
+    {
+      "fixed_seconds": 14.516328416997567,
+      "item": 1,
+      "same_text_tuple": true,
+      "score_difference": 4.3018303585995454e-08,
+      "seed": 71839,
+      "variable_seconds": 2.740400207985658
+    },
+    {
+      "fixed_seconds": 22.283949000004213,
+      "item": 2,
+      "same_text_tuple": true,
+      "score_difference": -1.1661791177175473e-07,
+      "seed": 71839,
+      "variable_seconds": 4.97527145803906
+    }
+  ],
+  "independent_agent_review": false,
+  "new_model_scores_computed": false,
+  "resources": {
+    "cpu_seconds": 0.30886,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 270942208,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.31741533399326727
+  },
+  "scope": "inventory, hashes, whole-key literal support, saved independent CPU score arithmetic, work and sampled resources",
+  "status": "PASS"
+}
