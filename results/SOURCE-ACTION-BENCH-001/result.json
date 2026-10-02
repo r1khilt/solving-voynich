@@ -1,0 +1,217 @@
+{
+  "allocator_fraction": 0.15432095313251037,
+  "arms": [
+    {
+      "actions_per_episode": 448,
+      "arm": "small",
+      "batch": 4,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "final_reference": {
+        "cipher_glyphs": 24,
+        "full_long_shape_reference_claimed": false,
+        "legal_logit_max_delta": 1.1841974041360004e-06,
+        "letters": 12,
+        "whole_path_nll_delta": 5.361258672564873e-07
+      },
+      "glyphs_per_record": 448,
+      "initial_reference": {
+        "cipher_glyphs": 24,
+        "full_long_shape_reference_claimed": false,
+        "legal_logit_max_delta": 7.572129976374242e-07,
+        "letters": 12,
+        "whole_path_nll_delta": 1.443612248408499e-06
+      },
+      "mean_timed_step_seconds": 0.08597463551268447,
+      "optimizer_steps": [
+        {
+          "preclip_norm": 74.63021087646484,
+          "step": 1,
+          "wall_seconds": 0.3445313750416972,
+          "whole_path_nll": 102.75493621826172
+        },
+        {
+          "preclip_norm": 71.5931625366211,
+          "step": 2,
+          "wall_seconds": 0.08719516603741795,
+          "whole_path_nll": 98.125
+        },
+        {
+          "preclip_norm": 68.65361022949219,
+          "step": 3,
+          "wall_seconds": 0.08565012499457225,
+          "whole_path_nll": 93.79531860351562
+        },
+        {
+          "preclip_norm": 65.77506256103516,
+          "step": 4,
+          "wall_seconds": 0.08513258403399959,
+          "whole_path_nll": 89.78907775878906
+        },
+        {
+          "preclip_norm": 62.94844055175781,
+          "step": 5,
+          "wall_seconds": 0.0859206669847481,
+          "whole_path_nll": 86.11621856689453
+        }
+      ],
+      "packing_seconds": 0.228840458963532,
+      "parameters": 5775918,
+      "records": 2
+    },
+    {
+      "actions_per_episode": 448,
+      "arm": "large",
+      "batch": 4,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "final_reference": {
+        "cipher_glyphs": 24,
+        "full_long_shape_reference_claimed": false,
+        "legal_logit_max_delta": 3.592679571173818e-06,
+        "letters": 12,
+        "whole_path_nll_delta": 3.596906033465075e-06
+      },
+      "glyphs_per_record": 448,
+      "initial_reference": {
+        "cipher_glyphs": 24,
+        "full_long_shape_reference_claimed": false,
+        "legal_logit_max_delta": 1.869370041873708e-06,
+        "letters": 12,
+        "whole_path_nll_delta": 9.845637265470941e-07
+      },
+      "mean_timed_step_seconds": 0.5812793644872727,
+      "optimizer_steps": [
+        {
+          "preclip_norm": 148.17039489746094,
+          "step": 1,
+          "wall_seconds": 0.8296121659805067,
+          "whole_path_nll": 99.80924224853516
+        },
+        {
+          "preclip_norm": 87.30760955810547,
+          "step": 2,
+          "wall_seconds": 0.6266966249677353,
+          "whole_path_nll": 69.1777572631836
+        },
+        {
+          "preclip_norm": 67.87224578857422,
+          "step": 3,
+          "wall_seconds": 0.5682827080017887,
+          "whole_path_nll": 56.4236946105957
+        },
+        {
+          "preclip_norm": 61.67818832397461,
+          "step": 4,
+          "wall_seconds": 0.5647221250110306,
+          "whole_path_nll": 45.88215255737305
+        },
+        {
+          "preclip_norm": 57.12940216064453,
+          "step": 5,
+          "wall_seconds": 0.5654159999685362,
+          "whole_path_nll": 34.03948974609375
+        }
+      ],
+      "packing_seconds": 0.2324043340049684,
+      "parameters": 96039982,
+      "records": 2
+    }
+  ],
+  "cpu_threads": 2,
+  "device": "mps",
+  "freeze": "29a8ecae5c777170c0857f8a574e6f527e0b7980",
+  "frozen_paths": 9,
+  "inputs": [
+    {
+      "bytes": 16196,
+      "path": "src/voynich/source_action_proposal.py",
+      "sha256": "dae8fd0791336ef05cef9a12311436dc10fbfca8f758b7d21976c749eb1a7b07"
+    },
+    {
+      "bytes": 11949,
+      "path": "src/voynich/joint_key_proposal.py",
+      "sha256": "e5263516ebd20c841aaef29e226759e68d4af8df2b5babaf43cde2aae50f1cb0"
+    },
+    {
+      "bytes": 8674,
+      "path": "scripts/benchmark_source_action001.py",
+      "sha256": "89e1d74b166531cd1783138a63eef8f72918e87f611aded48b3a476f63a6f15b"
+    },
+    {
+      "bytes": 6897,
+      "path": "tests/test_source_action_proposal.py",
+      "sha256": "60e1b03571a95b2d6db91df0676ddba336f4994edbd916c77f1fc1e71de79d67"
+    },
+    {
+      "bytes": 1670,
+      "path": "tests/test_source_action_benchmark.py",
+      "sha256": "669b0ae37ce1f7d54f32cc10375c0bae948ce76e13ea3776f0d6578a602997e1"
+    },
+    {
+      "bytes": 3780,
+      "path": "docs/experiments/SOURCE-ACTION-BENCH-001.md",
+      "sha256": "f3a3930ae91e1bd266b39306e1372632319e03687b10117c438205b0f7984686"
+    },
+    {
+      "bytes": 10192,
+      "path": "docs/research/source-action-inverse-2026-10-02.md",
+      "sha256": "1b8a7af9de1dc87b9d66f8af8c0977b6cc6fc6dab6f73e764c6288f0588863fb"
+    },
+    {
+      "bytes": 1041,
+      "path": "pyproject.toml",
+      "sha256": "0b6f5012ce991b55f4c3356cf381bc098549d8173f60142ce17f76df0f5a76e2"
+    },
+    {
+      "bytes": 199529,
+      "path": "uv.lock",
+      "sha256": "c1171646f4df9ea3347ca960f2584ba5b0b02920cf9a418436e99c934346a983"
+    }
+  ],
+  "latin_cipher_panel_or_holdout_files_opened": false,
+  "mps_recommended_working_set_bytes": 55662788608,
+  "paid_spend_usd": 0,
+  "projected_four20k_shape_training_seconds": 45139.9517187383,
+  "projection_includes_inference_audit_data_or_preparation": false,
+  "resources": {
+    "cpu_seconds": 2.939506,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1644249088,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 6.3789193340344355
+  },
+  "sampled_host_peak": 1644249088,
+  "sampled_mps_driver_peak": 6249480192,
+  "seed": 91811,
+  "status": "PASS_bounded_random_only_source_action_shapes",
+  "substantive_language_training_launched": false,
+  "torch_version": "2.14.0",
+  "training_qualification": false
+}
