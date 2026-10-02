@@ -1,0 +1,4416 @@
+{
+  "cases": [
+    {
+      "arrays": {
+        "bytes": 18168,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-0.json.gz",
+        "sha256": "307fb3b6288587ffddb8d55d9efc6040ef84d2dc0ca57a81f479de6c0efbd217"
+      },
+      "case": 0,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 1.8885973369495694,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 10,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -10.767310568461529,
+              "forced_actions": 0,
+              "nll_sum": 38.0833006287032,
+              "within_category_nll_sum": 36.194703291753626
+            },
+            "reuse": {
+              "actions": 222,
+              "category_nll_sum": 40.56840332388444,
+              "correct_actions": 179,
+              "correct_lengths": 205,
+              "correct_rows": 179,
+              "fixed_margin_queries": 222,
+              "fixed_margin_sum": 750.3877546810093,
+              "forced_actions": 0,
+              "nll_sum": 121.33890663265356,
+              "within_category_nll_sum": 80.77050330876912
+            }
+          },
+          "whole_path_nll": 159.42220726135676
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 10.666438976806038,
+              "correct_actions": 1,
+              "correct_lengths": 6,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -22.87165431888005,
+              "forced_actions": 0,
+              "nll_sum": 46.86114226855966,
+              "within_category_nll_sum": 36.194703291753626
+            },
+            "reuse": {
+              "actions": 222,
+              "category_nll_sum": 3.2182307101804737,
+              "correct_actions": 183,
+              "correct_lengths": 210,
+              "correct_rows": 183,
+              "fixed_margin_queries": 222,
+              "fixed_margin_sum": 979.8683331861122,
+              "forced_actions": 0,
+              "nll_sum": 83.98872960314274,
+              "within_category_nll_sum": 80.77049889296227
+            }
+          },
+          "whole_path_nll": 130.8498718717024
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 24530,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-1.json.gz",
+        "sha256": "396a94464a38a779b6c8d17e2345860b64827c3feb4b85886015374577e4fcc9"
+      },
+      "case": 1,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.4348901599247127,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 11,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -16.353626711427907,
+              "forced_actions": 0,
+              "nll_sum": 45.311850021986444,
+              "within_category_nll_sum": 44.876959862061724
+            },
+            "reuse": {
+              "actions": 308,
+              "category_nll_sum": 32.86928651185363,
+              "correct_actions": 284,
+              "correct_lengths": 292,
+              "correct_rows": 284,
+              "fixed_margin_queries": 308,
+              "fixed_margin_sum": 2281.1254853517034,
+              "forced_actions": 0,
+              "nll_sum": 62.97399399631615,
+              "within_category_nll_sum": 30.104707484462523
+            }
+          },
+          "whole_path_nll": 108.28584401830258
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 4.224836476188435,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -22.166899692854017,
+              "forced_actions": 0,
+              "nll_sum": 49.10179633825017,
+              "within_category_nll_sum": 44.876959862061724
+            },
+            "reuse": {
+              "actions": 308,
+              "category_nll_sum": 4.180923939272743,
+              "correct_actions": 290,
+              "correct_lengths": 298,
+              "correct_rows": 290,
+              "fixed_margin_queries": 308,
+              "fixed_margin_sum": 2888.7819832121845,
+              "forced_actions": 0,
+              "nll_sum": 34.28563142373527,
+              "within_category_nll_sum": 30.104707484462523
+            }
+          },
+          "whole_path_nll": 83.38742776198544
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 16183,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-2.json.gz",
+        "sha256": "6ce64cf7a652aa272dfbd03a017e254d677154417ba14d9a9db869b74c91d900"
+      },
+      "case": 2,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 3.7792917428123305,
+              "correct_actions": 4,
+              "correct_lengths": 5,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -13.755663593002927,
+              "forced_actions": 0,
+              "nll_sum": 42.14616219653104,
+              "within_category_nll_sum": 38.36687045371871
+            },
+            "reuse": {
+              "actions": 200,
+              "category_nll_sum": 55.14390518929358,
+              "correct_actions": 176,
+              "correct_lengths": 180,
+              "correct_rows": 176,
+              "fixed_margin_queries": 200,
+              "fixed_margin_sum": 859.2791880805712,
+              "forced_actions": 0,
+              "nll_sum": 81.77335696734568,
+              "within_category_nll_sum": 26.629451778052108
+            }
+          },
+          "whole_path_nll": 123.91951916387671
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 13.844183662340958,
+              "correct_actions": 3,
+              "correct_lengths": 6,
+              "correct_rows": 6,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -27.226995841250552,
+              "forced_actions": 0,
+              "nll_sum": 52.21105411605967,
+              "within_category_nll_sum": 38.36687045371871
+            },
+            "reuse": {
+              "actions": 200,
+              "category_nll_sum": 5.5058088882170395,
+              "correct_actions": 186,
+              "correct_lengths": 189,
+              "correct_rows": 186,
+              "fixed_margin_queries": 200,
+              "fixed_margin_sum": 1171.7455612707251,
+              "forced_actions": 0,
+              "nll_sum": 32.13539245439997,
+              "within_category_nll_sum": 26.62958356618293
+            }
+          },
+          "whole_path_nll": 84.34644657045965
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 15790,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-3.json.gz",
+        "sha256": "061f6815a36b87fb92407c9b4621efbea0c7e40a57cf8ff1ae38c5e0ddd4641e"
+      },
+      "case": 3,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 6.438703130673145,
+              "correct_actions": 2,
+              "correct_lengths": 6,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -19.182444288622854,
+              "forced_actions": 0,
+              "nll_sum": 47.9810062246491,
+              "within_category_nll_sum": 41.54230309397596
+            },
+            "reuse": {
+              "actions": 201,
+              "category_nll_sum": 69.0813656231853,
+              "correct_actions": 180,
+              "correct_lengths": 188,
+              "correct_rows": 180,
+              "fixed_margin_queries": 201,
+              "fixed_margin_sum": 992.2377099070396,
+              "forced_actions": 0,
+              "nll_sum": 92.98712517551667,
+              "within_category_nll_sum": 23.905759552331343
+            }
+          },
+          "whole_path_nll": 140.96813140016576
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 17.82057725627337,
+              "correct_actions": 2,
+              "correct_lengths": 6,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -36.22226659917394,
+              "forced_actions": 0,
+              "nll_sum": 59.36288035024933,
+              "within_category_nll_sum": 41.54230309397596
+            },
+            "reuse": {
+              "actions": 201,
+              "category_nll_sum": 7.2584794396826116,
+              "correct_actions": 189,
+              "correct_lengths": 195,
+              "correct_rows": 189,
+              "fixed_margin_queries": 201,
+              "fixed_margin_sum": 1392.885677841939,
+              "forced_actions": 0,
+              "nll_sum": 31.164936517249117,
+              "within_category_nll_sum": 23.9064570775665
+            }
+          },
+          "whole_path_nll": 90.52781686749844
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 15572,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-4.json.gz",
+        "sha256": "7f75faca99757743dc23915615dbf06fa19310f5680b4ccac8a6f1d294b8bf6c"
+      },
+      "case": 4,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 2.8275842621347884,
+              "correct_actions": 4,
+              "correct_lengths": 5,
+              "correct_rows": 11,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -10.491702738443637,
+              "forced_actions": 0,
+              "nll_sum": 39.90321605758642,
+              "within_category_nll_sum": 37.07563179545163
+            },
+            "reuse": {
+              "actions": 198,
+              "category_nll_sum": 36.4752833476077,
+              "correct_actions": 180,
+              "correct_lengths": 185,
+              "correct_rows": 180,
+              "fixed_margin_queries": 198,
+              "fixed_margin_sum": 1015.8261048713068,
+              "forced_actions": 0,
+              "nll_sum": 65.00537649076547,
+              "within_category_nll_sum": 28.530093143157767
+            }
+          },
+          "whole_path_nll": 104.90859254835189
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 12.484433623780344,
+              "correct_actions": 3,
+              "correct_lengths": 5,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -25.10395484481577,
+              "forced_actions": 0,
+              "nll_sum": 49.560065419231975,
+              "within_category_nll_sum": 37.07563179545163
+            },
+            "reuse": {
+              "actions": 198,
+              "category_nll_sum": 3.694263794528395,
+              "correct_actions": 188,
+              "correct_lengths": 194,
+              "correct_rows": 188,
+              "fixed_margin_queries": 198,
+              "fixed_margin_sum": 1394.7895837427168,
+              "forced_actions": 0,
+              "nll_sum": 32.22435693768617,
+              "within_category_nll_sum": 28.530093143157767
+            }
+          },
+          "whole_path_nll": 81.78442235691813
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 35226,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-5.json.gz",
+        "sha256": "3ad34397128b49d5fb34d6ef7a70fd79882715f0f0851d9020b0f039c2b2c20f"
+      },
+      "case": 5,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 2.2158907881061625,
+              "correct_actions": 1,
+              "correct_lengths": 4,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -13.117036030698635,
+              "forced_actions": 0,
+              "nll_sum": 44.80799048405439,
+              "within_category_nll_sum": 42.59209969594822
+            },
+            "reuse": {
+              "actions": 411,
+              "category_nll_sum": 57.2009778961952,
+              "correct_actions": 364,
+              "correct_lengths": 390,
+              "correct_rows": 364,
+              "fixed_margin_queries": 411,
+              "fixed_margin_sum": 2244.8890341194356,
+              "forced_actions": 0,
+              "nll_sum": 150.4589523531023,
+              "within_category_nll_sum": 93.2579744569071
+            }
+          },
+          "whole_path_nll": 195.2669428371567
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 12.044771044166273,
+              "correct_actions": 1,
+              "correct_lengths": 6,
+              "correct_rows": 5,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -29.088036683421542,
+              "forced_actions": 0,
+              "nll_sum": 54.6368707401145,
+              "within_category_nll_sum": 42.59209969594822
+            },
+            "reuse": {
+              "actions": 411,
+              "category_nll_sum": 5.0248583711686745,
+              "correct_actions": 367,
+              "correct_lengths": 392,
+              "correct_rows": 367,
+              "fixed_margin_queries": 411,
+              "fixed_margin_sum": 2713.515848709702,
+              "forced_actions": 0,
+              "nll_sum": 99.43703226989797,
+              "within_category_nll_sum": 94.41217389872929
+            }
+          },
+          "whole_path_nll": 154.0739030100125
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 28627,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-6.json.gz",
+        "sha256": "a4fba0e2cdb807fbc83bc15df1a28813fed28fc6bbe0cd96ff7c85ce8ff33bf7"
+      },
+      "case": 6,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.12895482688711435,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -8.842245219502084,
+              "forced_actions": 0,
+              "nll_sum": 40.03259346599965,
+              "within_category_nll_sum": 39.903638639112536
+            },
+            "reuse": {
+              "actions": 351,
+              "category_nll_sum": 78.94734320510545,
+              "correct_actions": 319,
+              "correct_lengths": 338,
+              "correct_rows": 319,
+              "fixed_margin_queries": 351,
+              "fixed_margin_sum": 1644.9403878878456,
+              "forced_actions": 0,
+              "nll_sum": 159.38699797697956,
+              "within_category_nll_sum": 80.43965477187412
+            }
+          },
+          "whole_path_nll": 199.4195914429792
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 1.9289524598724035,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 8,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -12.705987019214929,
+              "forced_actions": 0,
+              "nll_sum": 41.83259109898495,
+              "within_category_nll_sum": 39.90363863911254
+            },
+            "reuse": {
+              "actions": 351,
+              "category_nll_sum": 16.451195249947222,
+              "correct_actions": 324,
+              "correct_lengths": 343,
+              "correct_rows": 324,
+              "fixed_margin_queries": 351,
+              "fixed_margin_sum": 2228.8550973932824,
+              "forced_actions": 0,
+              "nll_sum": 96.89085002182136,
+              "within_category_nll_sum": 80.43965477187412
+            }
+          },
+          "whole_path_nll": 138.7234411208063
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 24033,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-7.json.gz",
+        "sha256": "2f09d501e26ad1f32ea5d0e07a357d690abb3a82d12e2a169516dc0421eb41a9"
+      },
+      "case": 7,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.9612780985105154,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -11.56518926697921,
+              "forced_actions": 0,
+              "nll_sum": 41.483157001749014,
+              "within_category_nll_sum": 40.5218789032385
+            },
+            "reuse": {
+              "actions": 301,
+              "category_nll_sum": 61.50456466396973,
+              "correct_actions": 273,
+              "correct_lengths": 284,
+              "correct_rows": 273,
+              "fixed_margin_queries": 301,
+              "fixed_margin_sum": 1714.1648638242423,
+              "forced_actions": 0,
+              "nll_sum": 99.45641413229524,
+              "within_category_nll_sum": 37.9518494683255
+            }
+          },
+          "whole_path_nll": 140.93957113404426
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 5.257422873092181,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -18.76834662603872,
+              "forced_actions": 0,
+              "nll_sum": 45.77930177633068,
+              "within_category_nll_sum": 40.5218789032385
+            },
+            "reuse": {
+              "actions": 301,
+              "category_nll_sum": 6.833936632261281,
+              "correct_actions": 281,
+              "correct_lengths": 292,
+              "correct_rows": 281,
+              "fixed_margin_queries": 301,
+              "fixed_margin_sum": 2304.9068621350143,
+              "forced_actions": 0,
+              "nll_sum": 44.785786100586776,
+              "within_category_nll_sum": 37.9518494683255
+            }
+          },
+          "whole_path_nll": 90.56508787691746
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 18945,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-8.json.gz",
+        "sha256": "d42fa59bf074d0a7578105638be293cd668870e0d73ab4c7600bdfde7626c759"
+      },
+      "case": 8,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 3.798340204410757,
+              "correct_actions": 3,
+              "correct_lengths": 4,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -10.709850537674798,
+              "forced_actions": 0,
+              "nll_sum": 42.529437326222535,
+              "within_category_nll_sum": 38.73109712181177
+            },
+            "reuse": {
+              "actions": 232,
+              "category_nll_sum": 58.68121351020901,
+              "correct_actions": 203,
+              "correct_lengths": 217,
+              "correct_rows": 203,
+              "fixed_margin_queries": 232,
+              "fixed_margin_sum": 1012.7814554328247,
+              "forced_actions": 0,
+              "nll_sum": 100.39988139669606,
+              "within_category_nll_sum": 41.718667886487054
+            }
+          },
+          "whole_path_nll": 142.9293187229186
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 12.953965473064631,
+              "correct_actions": 2,
+              "correct_lengths": 5,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -24.32593533179664,
+              "forced_actions": 0,
+              "nll_sum": 51.6850625948764,
+              "within_category_nll_sum": 38.73109712181177
+            },
+            "reuse": {
+              "actions": 232,
+              "category_nll_sum": 12.281696997925431,
+              "correct_actions": 207,
+              "correct_lengths": 219,
+              "correct_rows": 207,
+              "fixed_margin_queries": 232,
+              "fixed_margin_sum": 1254.5945005208034,
+              "forced_actions": 0,
+              "nll_sum": 56.50075790670003,
+              "within_category_nll_sum": 44.219060908774594
+            }
+          },
+          "whole_path_nll": 108.18582050157642
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 19342,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-9.json.gz",
+        "sha256": "fe77078c6274bf7d8ba23cb1e58f6e41682f9a5dc9d1b0fcddae2ff1b7523497"
+      },
+      "case": 9,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 1.4706877139641858,
+              "correct_actions": 0,
+              "correct_lengths": 6,
+              "correct_rows": 8,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -13.551140334479925,
+              "forced_actions": 0,
+              "nll_sum": 41.881124456656906,
+              "within_category_nll_sum": 40.41043674269272
+            },
+            "reuse": {
+              "actions": 236,
+              "category_nll_sum": 34.430432851816605,
+              "correct_actions": 206,
+              "correct_lengths": 218,
+              "correct_rows": 206,
+              "fixed_margin_queries": 236,
+              "fixed_margin_sum": 1119.0435712808658,
+              "forced_actions": 0,
+              "nll_sum": 99.62488142964148,
+              "within_category_nll_sum": 65.19444857782487
+            }
+          },
+          "whole_path_nll": 141.50600588629837
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 11.334077865043565,
+              "correct_actions": 0,
+              "correct_lengths": 6,
+              "correct_rows": 6,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -29.158225943540558,
+              "forced_actions": 0,
+              "nll_sum": 51.744514607736285,
+              "within_category_nll_sum": 40.41043674269272
+            },
+            "reuse": {
+              "actions": 236,
+              "category_nll_sum": 4.222168674966001,
+              "correct_actions": 211,
+              "correct_lengths": 222,
+              "correct_rows": 211,
+              "fixed_margin_queries": 236,
+              "fixed_margin_sum": 1354.3103012631489,
+              "forced_actions": 0,
+              "nll_sum": 73.94305572557857,
+              "within_category_nll_sum": 69.72088705061256
+            }
+          },
+          "whole_path_nll": 125.68757033331487
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 25914,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-10.json.gz",
+        "sha256": "eca9cb93fb42c39d8793d99fe77fe205fb08387f67d1850d2641866cdc90a0e1"
+      },
+      "case": 10,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 6.601743862732682,
+              "correct_actions": 1,
+              "correct_lengths": 4,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -12.970491206592941,
+              "forced_actions": 0,
+              "nll_sum": 44.82552944176636,
+              "within_category_nll_sum": 38.22378557903369
+            },
+            "reuse": {
+              "actions": 332,
+              "category_nll_sum": 63.75612934645585,
+              "correct_actions": 310,
+              "correct_lengths": 317,
+              "correct_rows": 310,
+              "fixed_margin_queries": 332,
+              "fixed_margin_sum": 1889.38369707993,
+              "forced_actions": 0,
+              "nll_sum": 97.6698696393474,
+              "within_category_nll_sum": 33.913740292891546
+            }
+          },
+          "whole_path_nll": 142.49539908111376
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 14.989241896787014,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -24.78479366220889,
+              "forced_actions": 0,
+              "nll_sum": 53.213027475820695,
+              "within_category_nll_sum": 38.22378557903368
+            },
+            "reuse": {
+              "actions": 332,
+              "category_nll_sum": 5.529126456418314,
+              "correct_actions": 317,
+              "correct_lengths": 325,
+              "correct_rows": 317,
+              "fixed_margin_queries": 332,
+              "fixed_margin_sum": 2584.338810780349,
+              "forced_actions": 0,
+              "nll_sum": 42.86076181284397,
+              "within_category_nll_sum": 37.33163535642566
+            }
+          },
+          "whole_path_nll": 96.07378928866467
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 17007,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-11.json.gz",
+        "sha256": "d72733edc15f2b81ed20cfeadd32166cc9cc75e9d8ec0fa8e19bc9eec0deb777"
+      },
+      "case": 11,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 2.013682326005821,
+              "correct_actions": 1,
+              "correct_lengths": 4,
+              "correct_rows": 8,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -14.741593180104623,
+              "forced_actions": 0,
+              "nll_sum": 45.013872241614735,
+              "within_category_nll_sum": 43.000189915608914
+            },
+            "reuse": {
+              "actions": 208,
+              "category_nll_sum": 53.71127529058106,
+              "correct_actions": 175,
+              "correct_lengths": 198,
+              "correct_rows": 175,
+              "fixed_margin_queries": 208,
+              "fixed_margin_sum": 954.9849289320116,
+              "forced_actions": 0,
+              "nll_sum": 95.28070440346643,
+              "within_category_nll_sum": 41.56942911288538
+            }
+          },
+          "whole_path_nll": 140.29457664508118
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 9.50476306611612,
+              "correct_actions": 1,
+              "correct_lengths": 7,
+              "correct_rows": 8,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -26.06679446078942,
+              "forced_actions": 0,
+              "nll_sum": 52.50495298172504,
+              "within_category_nll_sum": 43.000189915608914
+            },
+            "reuse": {
+              "actions": 208,
+              "category_nll_sum": 5.134499505979535,
+              "correct_actions": 183,
+              "correct_lengths": 208,
+              "correct_rows": 183,
+              "fixed_margin_queries": 208,
+              "fixed_margin_sum": 1294.4641082481262,
+              "forced_actions": 0,
+              "nll_sum": 46.70392861886492,
+              "within_category_nll_sum": 41.56942911288538
+            }
+          },
+          "whole_path_nll": 99.20888160058996
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 23032,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-12.json.gz",
+        "sha256": "829f5b87bc070ce37adda3fe62ea8140c5ec047eba2c25ed61f414959910a918"
+      },
+      "case": 12,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 3.6417161343330493,
+              "correct_actions": 3,
+              "correct_lengths": 5,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -20.77370390624761,
+              "forced_actions": 0,
+              "nll_sum": 48.15964808914199,
+              "within_category_nll_sum": 44.517931954808944
+            },
+            "reuse": {
+              "actions": 286,
+              "category_nll_sum": 36.77721913412563,
+              "correct_actions": 250,
+              "correct_lengths": 255,
+              "correct_rows": 250,
+              "fixed_margin_queries": 286,
+              "fixed_margin_sum": 1488.6399847301434,
+              "forced_actions": 0,
+              "nll_sum": 116.38577359514947,
+              "within_category_nll_sum": 79.60855446102383
+            }
+          },
+          "whole_path_nll": 164.54542168429145
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 14.45566487778801,
+              "correct_actions": 3,
+              "correct_lengths": 5,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -34.993965838418205,
+              "forced_actions": 0,
+              "nll_sum": 58.973596832596954,
+              "within_category_nll_sum": 44.517931954808944
+            },
+            "reuse": {
+              "actions": 286,
+              "category_nll_sum": 3.3566533524174176,
+              "correct_actions": 255,
+              "correct_lengths": 260,
+              "correct_rows": 255,
+              "fixed_margin_queries": 286,
+              "fixed_margin_sum": 1759.7789112182902,
+              "forced_actions": 0,
+              "nll_sum": 82.62716171390701,
+              "within_category_nll_sum": 79.2705083614896
+            }
+          },
+          "whole_path_nll": 141.60075854650398
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 22632,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-13.json.gz",
+        "sha256": "64ffe57b4b8bda18d28456bdca85bd9bbc0aa703d5eb6f85c51932bc893b0010"
+      },
+      "case": 13,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.8655703652472878,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -9.75664319507618,
+              "forced_actions": 0,
+              "nll_sum": 39.315366911919796,
+              "within_category_nll_sum": 38.449796546672516
+            },
+            "reuse": {
+              "actions": 288,
+              "category_nll_sum": 42.77065946759692,
+              "correct_actions": 250,
+              "correct_lengths": 269,
+              "correct_rows": 250,
+              "fixed_margin_queries": 288,
+              "fixed_margin_sum": 1447.425381070612,
+              "forced_actions": 0,
+              "nll_sum": 97.74140666935656,
+              "within_category_nll_sum": 54.97074720175965
+            }
+          },
+          "whole_path_nll": 137.05677358127636
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 5.661236328668508,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -18.64947501750677,
+              "forced_actions": 0,
+              "nll_sum": 44.11103287534102,
+              "within_category_nll_sum": 38.449796546672516
+            },
+            "reuse": {
+              "actions": 288,
+              "category_nll_sum": 5.18033547182511,
+              "correct_actions": 257,
+              "correct_lengths": 276,
+              "correct_rows": 257,
+              "fixed_margin_queries": 288,
+              "fixed_margin_sum": 1808.3278340588895,
+              "forced_actions": 0,
+              "nll_sum": 60.154039060507614,
+              "within_category_nll_sum": 54.9737035886825
+            }
+          },
+          "whole_path_nll": 104.26507193584862
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 16201,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-14.json.gz",
+        "sha256": "41d6a0eeac9455349d03b32405cba5e76d83e4c08889af2bb5f3cf03f8353018"
+      },
+      "case": 14,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 0.5764829612437299,
+              "correct_actions": 3,
+              "correct_lengths": 3,
+              "correct_rows": 9,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -5.048430308576418,
+              "forced_actions": 0,
+              "nll_sum": 34.42511197713996,
+              "within_category_nll_sum": 33.84862901589623
+            },
+            "reuse": {
+              "actions": 203,
+              "category_nll_sum": 53.16250532061537,
+              "correct_actions": 169,
+              "correct_lengths": 181,
+              "correct_rows": 169,
+              "fixed_margin_queries": 203,
+              "fixed_margin_sum": 757.7822796228874,
+              "forced_actions": 0,
+              "nll_sum": 92.65144254502275,
+              "within_category_nll_sum": 39.48893722440737
+            }
+          },
+          "whole_path_nll": 127.0765545221627
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 5.525367054844218,
+              "correct_actions": 2,
+              "correct_lengths": 4,
+              "correct_rows": 6,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -14.213445939298708,
+              "forced_actions": 0,
+              "nll_sum": 39.373996070740446,
+              "within_category_nll_sum": 33.84862901589623
+            },
+            "reuse": {
+              "actions": 203,
+              "category_nll_sum": 7.26251055721434,
+              "correct_actions": 179,
+              "correct_lengths": 191,
+              "correct_rows": 179,
+              "fixed_margin_queries": 203,
+              "fixed_margin_sum": 1046.064318256353,
+              "forced_actions": 0,
+              "nll_sum": 46.751447781621714,
+              "within_category_nll_sum": 39.48893722440737
+            }
+          },
+          "whole_path_nll": 86.12544385236215
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 17457,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-15.json.gz",
+        "sha256": "68637e561e0573c3491a4a01faef1eb88518bdd871bc11d1a4d531c09cce3abe"
+      },
+      "case": 15,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.9846682583238733,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 8,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -8.906432072856948,
+              "forced_actions": 0,
+              "nll_sum": 38.96895237282286,
+              "within_category_nll_sum": 37.98428411449899
+            },
+            "reuse": {
+              "actions": 221,
+              "category_nll_sum": 34.80967362650465,
+              "correct_actions": 194,
+              "correct_lengths": 207,
+              "correct_rows": 194,
+              "fixed_margin_queries": 221,
+              "fixed_margin_sum": 1175.6138303899088,
+              "forced_actions": 0,
+              "nll_sum": 83.74697813077651,
+              "within_category_nll_sum": 48.937304504271864
+            }
+          },
+          "whole_path_nll": 122.71593050359937
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 6.146192846691558,
+              "correct_actions": 0,
+              "correct_lengths": 4,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -17.07734064982887,
+              "forced_actions": 0,
+              "nll_sum": 44.130476961190546,
+              "within_category_nll_sum": 37.98428411449899
+            },
+            "reuse": {
+              "actions": 221,
+              "category_nll_sum": 2.927135938608385,
+              "correct_actions": 201,
+              "correct_lengths": 215,
+              "correct_rows": 201,
+              "fixed_margin_queries": 221,
+              "fixed_margin_sum": 1536.3775315466892,
+              "forced_actions": 0,
+              "nll_sum": 51.86695586773848,
+              "within_category_nll_sum": 48.939819929130095
+            }
+          },
+          "whole_path_nll": 95.99743282892902
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 30165,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-16.json.gz",
+        "sha256": "6cf79f087ff81f75d26626126aafe21ceec7e48a729dea6686a31c5515a34f49"
+      },
+      "case": 16,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.8509214771260482,
+              "correct_actions": 3,
+              "correct_lengths": 6,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -11.794562887188388,
+              "forced_actions": 0,
+              "nll_sum": 42.42183732084318,
+              "within_category_nll_sum": 41.57091584371713
+            },
+            "reuse": {
+              "actions": 363,
+              "category_nll_sum": 34.424046790434275,
+              "correct_actions": 331,
+              "correct_lengths": 346,
+              "correct_rows": 331,
+              "fixed_margin_queries": 363,
+              "fixed_margin_sum": 2718.824842177298,
+              "forced_actions": 0,
+              "nll_sum": 101.14440130619424,
+              "within_category_nll_sum": 66.72035451575996
+            }
+          },
+          "whole_path_nll": 143.56623862703745
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 8.13362774987591,
+              "correct_actions": 1,
+              "correct_lengths": 7,
+              "correct_rows": 6,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -24.1352240260792,
+              "forced_actions": 0,
+              "nll_sum": 49.704543593593044,
+              "within_category_nll_sum": 41.57091584371714
+            },
+            "reuse": {
+              "actions": 363,
+              "category_nll_sum": 3.8778498343489014,
+              "correct_actions": 339,
+              "correct_lengths": 354,
+              "correct_rows": 339,
+              "fixed_margin_queries": 363,
+              "fixed_margin_sum": 3147.0344243384775,
+              "forced_actions": 0,
+              "nll_sum": 70.59820435010887,
+              "within_category_nll_sum": 66.72035451575996
+            }
+          },
+          "whole_path_nll": 120.30274794370192
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 30072,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-17.json.gz",
+        "sha256": "b244ceca41e8ab59334764f38797dfe52ae62c68ff1517e21fa412b0d93266d7"
+      },
+      "case": 17,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 3.552625604638108,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -22.099742884336575,
+              "forced_actions": 0,
+              "nll_sum": 49.10279294804113,
+              "within_category_nll_sum": 45.55016734340302
+            },
+            "reuse": {
+              "actions": 385,
+              "category_nll_sum": 61.168021372681885,
+              "correct_actions": 347,
+              "correct_lengths": 358,
+              "correct_rows": 347,
+              "fixed_margin_queries": 385,
+              "fixed_margin_sum": 2501.7779964289393,
+              "forced_actions": 0,
+              "nll_sum": 112.93344922002085,
+              "within_category_nll_sum": 51.76542784733896
+            }
+          },
+          "whole_path_nll": 162.03624216806196
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 14.298957742214299,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 6,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -36.631465011970185,
+              "forced_actions": 0,
+              "nll_sum": 59.84912508561732,
+              "within_category_nll_sum": 45.55016734340302
+            },
+            "reuse": {
+              "actions": 385,
+              "category_nll_sum": 6.561643145944069,
+              "correct_actions": 359,
+              "correct_lengths": 369,
+              "correct_rows": 359,
+              "fixed_margin_queries": 385,
+              "fixed_margin_sum": 3317.3235389604683,
+              "forced_actions": 0,
+              "nll_sum": 58.32707099328304,
+              "within_category_nll_sum": 51.765427847338955
+            }
+          },
+          "whole_path_nll": 118.17619607890035
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 24867,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-18.json.gz",
+        "sha256": "fa54668b53dff73eff8c7fdc54950ac18f8ced82818d5f2e41bf3fa6f51681ca"
+      },
+      "case": 18,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 22,
+              "category_nll_sum": 6.990294258426761,
+              "correct_actions": 2,
+              "correct_lengths": 5,
+              "correct_rows": 10,
+              "fixed_margin_queries": 22,
+              "fixed_margin_sum": -43.00137863470674,
+              "forced_actions": 0,
+              "nll_sum": 75.85349712526485,
+              "within_category_nll_sum": 68.8632028668381
+            },
+            "reuse": {
+              "actions": 297,
+              "category_nll_sum": 44.74733483768032,
+              "correct_actions": 270,
+              "correct_lengths": 281,
+              "correct_rows": 270,
+              "fixed_margin_queries": 297,
+              "fixed_margin_sum": 2202.8837937179396,
+              "forced_actions": 0,
+              "nll_sum": 97.61856992526828,
+              "within_category_nll_sum": 52.87123508758797
+            }
+          },
+          "whole_path_nll": 173.47206705053313
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 22,
+              "category_nll_sum": 19.682062469554747,
+              "correct_actions": 2,
+              "correct_lengths": 7,
+              "correct_rows": 8,
+              "fixed_margin_queries": 22,
+              "fixed_margin_sum": -59.79126333446672,
+              "forced_actions": 0,
+              "nll_sum": 88.54526533639283,
+              "within_category_nll_sum": 68.8632028668381
+            },
+            "reuse": {
+              "actions": 297,
+              "category_nll_sum": 5.1102982950723135,
+              "correct_actions": 277,
+              "correct_lengths": 286,
+              "correct_rows": 277,
+              "fixed_margin_queries": 297,
+              "fixed_margin_sum": 2617.104181598811,
+              "forced_actions": 0,
+              "nll_sum": 57.981533399687436,
+              "within_category_nll_sum": 52.87123510461514
+            }
+          },
+          "whole_path_nll": 146.52679873608028
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 32090,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-19.json.gz",
+        "sha256": "b3f9ddc3b82d5b34457aaf4837c3559fc640a5db1c7f1b4b4b12c4beb0249d49"
+      },
+      "case": 19,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 2.8679818350322632,
+              "correct_actions": 3,
+              "correct_lengths": 4,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -7.981430023463289,
+              "forced_actions": 0,
+              "nll_sum": 38.64948431263139,
+              "within_category_nll_sum": 35.78150247759912
+            },
+            "reuse": {
+              "actions": 373,
+              "category_nll_sum": 23.405640678913535,
+              "correct_actions": 308,
+              "correct_lengths": 314,
+              "correct_rows": 308,
+              "fixed_margin_queries": 373,
+              "fixed_margin_sum": 1415.2485876589033,
+              "forced_actions": 0,
+              "nll_sum": 158.95212249507426,
+              "within_category_nll_sum": 135.54648181616074
+            }
+          },
+          "whole_path_nll": 197.60160680770568
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 15.887907131046084,
+              "correct_actions": 3,
+              "correct_lengths": 4,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -29.5915414696068,
+              "forced_actions": 0,
+              "nll_sum": 51.6694096086452,
+              "within_category_nll_sum": 35.781502477599126
+            },
+            "reuse": {
+              "actions": 373,
+              "category_nll_sum": 1.7247812807574094,
+              "correct_actions": 309,
+              "correct_lengths": 315,
+              "correct_rows": 309,
+              "fixed_margin_queries": 373,
+              "fixed_margin_sum": 1694.8256973484956,
+              "forced_actions": 0,
+              "nll_sum": 141.14970948502298,
+              "within_category_nll_sum": 139.42492820426557
+            }
+          },
+          "whole_path_nll": 192.81911909366818
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 20018,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-20.json.gz",
+        "sha256": "e154321d1d7836e1223b081f7b76e8e88bd7e0602d37374217938ecbd8b2b9bb"
+      },
+      "case": 20,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.4539299241547321,
+              "correct_actions": 3,
+              "correct_lengths": 5,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -15.515268415069697,
+              "forced_actions": 0,
+              "nll_sum": 44.54122155127901,
+              "within_category_nll_sum": 44.08729162712427
+            },
+            "reuse": {
+              "actions": 258,
+              "category_nll_sum": 45.26584262678344,
+              "correct_actions": 225,
+              "correct_lengths": 233,
+              "correct_rows": 225,
+              "fixed_margin_queries": 258,
+              "fixed_margin_sum": 1441.027855715228,
+              "forced_actions": 0,
+              "nll_sum": 102.97344452187664,
+              "within_category_nll_sum": 57.70760189509322
+            }
+          },
+          "whole_path_nll": 147.51466607315567
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 4.27689689102144,
+              "correct_actions": 3,
+              "correct_lengths": 5,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -21.887659392182577,
+              "forced_actions": 0,
+              "nll_sum": 48.36418851814571,
+              "within_category_nll_sum": 44.08729162712427
+            },
+            "reuse": {
+              "actions": 258,
+              "category_nll_sum": 6.927933348152731,
+              "correct_actions": 229,
+              "correct_lengths": 235,
+              "correct_rows": 229,
+              "fixed_margin_queries": 258,
+              "fixed_margin_sum": 1853.9067882413806,
+              "forced_actions": 0,
+              "nll_sum": 65.87380824471802,
+              "within_category_nll_sum": 58.945874896565286
+            }
+          },
+          "whole_path_nll": 114.23799676286373
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 18131,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-21.json.gz",
+        "sha256": "df402d36b333b781e3980853b23e74bc6f1ad59cbd3963fa366f60b8ff1d406e"
+      },
+      "case": 21,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.5633850168138497,
+              "correct_actions": 0,
+              "correct_lengths": 1,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -9.694281073653341,
+              "forced_actions": 0,
+              "nll_sum": 41.25212304462852,
+              "within_category_nll_sum": 40.688738027814665
+            },
+            "reuse": {
+              "actions": 229,
+              "category_nll_sum": 62.988627869823716,
+              "correct_actions": 209,
+              "correct_lengths": 218,
+              "correct_rows": 209,
+              "fixed_margin_queries": 229,
+              "fixed_margin_sum": 1346.0569874708833,
+              "forced_actions": 0,
+              "nll_sum": 92.47116985001023,
+              "within_category_nll_sum": 29.48254198018651
+            }
+          },
+          "whole_path_nll": 133.72329289463875
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 4.300041620549372,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -16.529218437770652,
+              "forced_actions": 0,
+              "nll_sum": 44.988779648364044,
+              "within_category_nll_sum": 40.688738027814665
+            },
+            "reuse": {
+              "actions": 229,
+              "category_nll_sum": 8.595148418365723,
+              "correct_actions": 219,
+              "correct_lengths": 229,
+              "correct_rows": 219,
+              "fixed_margin_queries": 229,
+              "fixed_margin_sum": 1763.0160131347711,
+              "forced_actions": 0,
+              "nll_sum": 38.077690398552235,
+              "within_category_nll_sum": 29.48254198018651
+            }
+          },
+          "whole_path_nll": 83.06647004691627
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 25629,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-22.json.gz",
+        "sha256": "579ae9bbc98a2b37e0de82cfc5c5fe7ee2d8ad46074bb6be354d75471a3263be"
+      },
+      "case": 22,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 1.3150667712429076,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 5,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -15.632926102499258,
+              "forced_actions": 0,
+              "nll_sum": 47.537886933233025,
+              "within_category_nll_sum": 46.222820161990114
+            },
+            "reuse": {
+              "actions": 314,
+              "category_nll_sum": 52.697247042043685,
+              "correct_actions": 271,
+              "correct_lengths": 291,
+              "correct_rows": 271,
+              "fixed_margin_queries": 314,
+              "fixed_margin_sum": 2116.3502234918324,
+              "forced_actions": 0,
+              "nll_sum": 112.86344213202787,
+              "within_category_nll_sum": 60.1661950899842
+            }
+          },
+          "whole_path_nll": 160.40132906526088
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 8.21589845770026,
+              "correct_actions": 0,
+              "correct_lengths": 5,
+              "correct_rows": 3,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -26.01397046679069,
+              "forced_actions": 0,
+              "nll_sum": 54.43871861969038,
+              "within_category_nll_sum": 46.22282016199013
+            },
+            "reuse": {
+              "actions": 314,
+              "category_nll_sum": 7.168184412745568,
+              "correct_actions": 281,
+              "correct_lengths": 298,
+              "correct_rows": 281,
+              "fixed_margin_queries": 314,
+              "fixed_margin_sum": 2648.1762970855552,
+              "forced_actions": 0,
+              "nll_sum": 67.33437950272976,
+              "within_category_nll_sum": 60.166195089984186
+            }
+          },
+          "whole_path_nll": 121.77309812242014
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 14482,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-23.json.gz",
+        "sha256": "3d2abdf32d128a7e8c6fc8e6de82a5e6431ff624bcf96189a3e140e581bbd983"
+      },
+      "case": 23,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 2.0155556248414883,
+              "correct_actions": 0,
+              "correct_lengths": 4,
+              "correct_rows": 7,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -13.97040970578943,
+              "forced_actions": 0,
+              "nll_sum": 41.11744707382984,
+              "within_category_nll_sum": 39.101891448988354
+            },
+            "reuse": {
+              "actions": 175,
+              "category_nll_sum": 40.61917271628978,
+              "correct_actions": 153,
+              "correct_lengths": 160,
+              "correct_rows": 153,
+              "fixed_margin_queries": 175,
+              "fixed_margin_sum": 828.8599820134458,
+              "forced_actions": 0,
+              "nll_sum": 78.38961826596866,
+              "within_category_nll_sum": 37.7704455496789
+            }
+          },
+          "whole_path_nll": 119.50706533979852
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 11.614840234772377,
+              "correct_actions": 0,
+              "correct_lengths": 5,
+              "correct_rows": 6,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -27.89738944455207,
+              "forced_actions": 0,
+              "nll_sum": 50.71673168376073,
+              "within_category_nll_sum": 39.101891448988354
+            },
+            "reuse": {
+              "actions": 175,
+              "category_nll_sum": 5.485792389294909,
+              "correct_actions": 159,
+              "correct_lengths": 164,
+              "correct_rows": 159,
+              "fixed_margin_queries": 175,
+              "fixed_margin_sum": 1112.623918921367,
+              "forced_actions": 0,
+              "nll_sum": 43.25623793897381,
+              "within_category_nll_sum": 37.7704455496789
+            }
+          },
+          "whole_path_nll": 93.97296962273454
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 29314,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-24.json.gz",
+        "sha256": "80cb2081dd604c357e32feb0d1cdd1e181ddda210df8159976c6092522a4e941"
+      },
+      "case": 24,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.737895809678659,
+              "correct_actions": 2,
+              "correct_lengths": 3,
+              "correct_rows": 11,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -9.758747541076628,
+              "forced_actions": 0,
+              "nll_sum": 40.16321194854413,
+              "within_category_nll_sum": 39.42531613886547
+            },
+            "reuse": {
+              "actions": 362,
+              "category_nll_sum": 24.60126628058495,
+              "correct_actions": 322,
+              "correct_lengths": 339,
+              "correct_rows": 322,
+              "fixed_margin_queries": 362,
+              "fixed_margin_sum": 2521.916885180978,
+              "forced_actions": 0,
+              "nll_sum": 103.94876934384169,
+              "within_category_nll_sum": 79.34750306325674
+            }
+          },
+          "whole_path_nll": 144.1119812923858
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 5.520392086291084,
+              "correct_actions": 2,
+              "correct_lengths": 3,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -17.542207530994418,
+              "forced_actions": 0,
+              "nll_sum": 44.94570822515655,
+              "within_category_nll_sum": 39.425316138865476
+            },
+            "reuse": {
+              "actions": 362,
+              "category_nll_sum": 2.009419659992554,
+              "correct_actions": 325,
+              "correct_lengths": 341,
+              "correct_rows": 325,
+              "fixed_margin_queries": 362,
+              "fixed_margin_sum": 3040.6142419937605,
+              "forced_actions": 0,
+              "nll_sum": 81.35692272324928,
+              "within_category_nll_sum": 79.34750306325674
+            }
+          },
+          "whole_path_nll": 126.30263094840583
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 18100,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-25.json.gz",
+        "sha256": "4667c464abc8f86f535fd4979fb935275ad92998aa912c281df47ee5af199f73"
+      },
+      "case": 25,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 1.9138372044841379,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 6,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -21.07496282298464,
+              "forced_actions": 0,
+              "nll_sum": 49.104157609984085,
+              "within_category_nll_sum": 47.190320405499946
+            },
+            "reuse": {
+              "actions": 227,
+              "category_nll_sum": 35.025056550323455,
+              "correct_actions": 204,
+              "correct_lengths": 214,
+              "correct_rows": 204,
+              "fixed_margin_queries": 227,
+              "fixed_margin_sum": 1483.5513042667453,
+              "forced_actions": 0,
+              "nll_sum": 73.60849235614222,
+              "within_category_nll_sum": 38.583435805818766
+            }
+          },
+          "whole_path_nll": 122.71264996612629
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 8.901520621685075,
+              "correct_actions": 0,
+              "correct_lengths": 6,
+              "correct_rows": 6,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -31.912216634649358,
+              "forced_actions": 0,
+              "nll_sum": 56.091841027185026,
+              "within_category_nll_sum": 47.190320405499946
+            },
+            "reuse": {
+              "actions": 227,
+              "category_nll_sum": 3.6671489020252785,
+              "correct_actions": 211,
+              "correct_lengths": 221,
+              "correct_rows": 211,
+              "fixed_margin_queries": 227,
+              "fixed_margin_sum": 1879.1579525567054,
+              "forced_actions": 0,
+              "nll_sum": 42.35042304290171,
+              "within_category_nll_sum": 38.683274140876435
+            }
+          },
+          "whole_path_nll": 98.44226407008674
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 11351,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-26.json.gz",
+        "sha256": "f85c071a7e88bdd4e0a4262dc4f7ac27192ecd13b506f1a9645211fb002d0f3e"
+      },
+      "case": 26,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 0.7010455573812324,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 12,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -4.7681708519655865,
+              "forced_actions": 0,
+              "nll_sum": 31.77972170894523,
+              "within_category_nll_sum": 31.078676151563997
+            },
+            "reuse": {
+              "actions": 137,
+              "category_nll_sum": 43.54178038952271,
+              "correct_actions": 116,
+              "correct_lengths": 128,
+              "correct_rows": 116,
+              "fixed_margin_queries": 137,
+              "fixed_margin_sum": 564.7569976213839,
+              "forced_actions": 0,
+              "nll_sum": 69.4432495163961,
+              "within_category_nll_sum": 25.901469126873387
+            }
+          },
+          "whole_path_nll": 101.22297122534133
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 5.442028754915989,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 9,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -12.44896824908584,
+              "forced_actions": 0,
+              "nll_sum": 36.52070490647998,
+              "within_category_nll_sum": 31.078676151563997
+            },
+            "reuse": {
+              "actions": 137,
+              "category_nll_sum": 5.548782059611398,
+              "correct_actions": 122,
+              "correct_lengths": 135,
+              "correct_rows": 122,
+              "fixed_margin_queries": 137,
+              "fixed_margin_sum": 809.3720636822949,
+              "forced_actions": 0,
+              "nll_sum": 31.450251186484785,
+              "within_category_nll_sum": 25.901469126873387
+            }
+          },
+          "whole_path_nll": 67.97095609296477
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 20052,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-27.json.gz",
+        "sha256": "270377adaccec2e1690b01441b201b497f7fa2ce5023877667563b594439bb5f"
+      },
+      "case": 27,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 2.3784387026527596,
+              "correct_actions": 0,
+              "correct_lengths": 4,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -13.559276509389923,
+              "forced_actions": 0,
+              "nll_sum": 43.85683510810222,
+              "within_category_nll_sum": 41.47839640544946
+            },
+            "reuse": {
+              "actions": 261,
+              "category_nll_sum": 75.99431016122745,
+              "correct_actions": 226,
+              "correct_lengths": 231,
+              "correct_rows": 226,
+              "fixed_margin_queries": 261,
+              "fixed_margin_sum": 990.6820073098365,
+              "forced_actions": 0,
+              "nll_sum": 128.04266242182425,
+              "within_category_nll_sum": 52.048352260596815
+            }
+          },
+          "whole_path_nll": 171.89949752992646
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 10.379296953748142,
+              "correct_actions": 0,
+              "correct_lengths": 4,
+              "correct_rows": 4,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -25.825535139595896,
+              "forced_actions": 0,
+              "nll_sum": 51.8576933591976,
+              "within_category_nll_sum": 41.47839640544946
+            },
+            "reuse": {
+              "actions": 261,
+              "category_nll_sum": 7.655166692664945,
+              "correct_actions": 236,
+              "correct_lengths": 236,
+              "correct_rows": 236,
+              "fixed_margin_queries": 261,
+              "fixed_margin_sum": 1478.4761305704571,
+              "forced_actions": 0,
+              "nll_sum": 63.86416908935887,
+              "within_category_nll_sum": 56.20900239669392
+            }
+          },
+          "whole_path_nll": 115.72186244855646
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 20842,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-28.json.gz",
+        "sha256": "e9e62a44a6755a3c8438716822f3e4a8a96794b97f72b9648620ae88c4712ecd"
+      },
+      "case": 28,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 1.8121754771471354,
+              "correct_actions": 3,
+              "correct_lengths": 7,
+              "correct_rows": 8,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -13.775682988311207,
+              "forced_actions": 0,
+              "nll_sum": 44.82162610668331,
+              "within_category_nll_sum": 43.009450629536175
+            },
+            "reuse": {
+              "actions": 255,
+              "category_nll_sum": 46.28214886239702,
+              "correct_actions": 225,
+              "correct_lengths": 232,
+              "correct_rows": 225,
+              "fixed_margin_queries": 255,
+              "fixed_margin_sum": 991.7772942167145,
+              "forced_actions": 0,
+              "nll_sum": 108.00823567760489,
+              "within_category_nll_sum": 61.726086815207864
+            }
+          },
+          "whole_path_nll": 152.8298617842882
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 8.246361825974596,
+              "correct_actions": 2,
+              "correct_lengths": 7,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -23.30517113142591,
+              "forced_actions": 0,
+              "nll_sum": 51.25581245551078,
+              "within_category_nll_sum": 43.00945062953618
+            },
+            "reuse": {
+              "actions": 255,
+              "category_nll_sum": 4.233498981047216,
+              "correct_actions": 230,
+              "correct_lengths": 237,
+              "correct_rows": 230,
+              "fixed_margin_queries": 255,
+              "fixed_margin_sum": 1207.0493341213162,
+              "forced_actions": 0,
+              "nll_sum": 66.59169364420127,
+              "within_category_nll_sum": 62.35819466315406
+            }
+          },
+          "whole_path_nll": 117.84750609971204
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 18758,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-29.json.gz",
+        "sha256": "c4a0ad2750194bf747eddb3f8bec464c3c5b9151fff9db7f5a4ebe36d095bc19"
+      },
+      "case": 29,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 0.5053916124604184,
+              "correct_actions": 1,
+              "correct_lengths": 1,
+              "correct_rows": 8,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -11.248251606772824,
+              "forced_actions": 0,
+              "nll_sum": 38.98398828358573,
+              "within_category_nll_sum": 38.47859667112532
+            },
+            "reuse": {
+              "actions": 238,
+              "category_nll_sum": 52.10472703676403,
+              "correct_actions": 215,
+              "correct_lengths": 227,
+              "correct_rows": 215,
+              "fixed_margin_queries": 238,
+              "fixed_margin_sum": 1172.4400776056125,
+              "forced_actions": 0,
+              "nll_sum": 87.21415980370269,
+              "within_category_nll_sum": 35.10943276693866
+            }
+          },
+          "whole_path_nll": 126.19814808728842
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 3.327996655354397,
+              "correct_actions": 1,
+              "correct_lengths": 1,
+              "correct_rows": 8,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -15.28816731236381,
+              "forced_actions": 0,
+              "nll_sum": 41.806593326479714,
+              "within_category_nll_sum": 38.47859667112531
+            },
+            "reuse": {
+              "actions": 238,
+              "category_nll_sum": 7.724223646520135,
+              "correct_actions": 220,
+              "correct_lengths": 233,
+              "correct_rows": 220,
+              "fixed_margin_queries": 238,
+              "fixed_margin_sum": 1594.742745882784,
+              "forced_actions": 0,
+              "nll_sum": 42.83365641345879,
+              "within_category_nll_sum": 35.10943276693866
+            }
+          },
+          "whole_path_nll": 84.6402497399385
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 12344,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-30.json.gz",
+        "sha256": "e7a885e86da16a6c0917d91b025d773abcbff4e8a1bb6063ec1b4db95b942103"
+      },
+      "case": 30,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 1.1275551848896053,
+              "correct_actions": 4,
+              "correct_lengths": 4,
+              "correct_rows": 10,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -10.542419443043517,
+              "forced_actions": 0,
+              "nll_sum": 38.698961654668565,
+              "within_category_nll_sum": 37.57140646977896
+            },
+            "reuse": {
+              "actions": 146,
+              "category_nll_sum": 26.55544578756358,
+              "correct_actions": 140,
+              "correct_lengths": 142,
+              "correct_rows": 140,
+              "fixed_margin_queries": 146,
+              "fixed_margin_sum": 860.1895293490435,
+              "forced_actions": 0,
+              "nll_sum": 37.44902217425422,
+              "within_category_nll_sum": 10.893576386690635
+            }
+          },
+          "whole_path_nll": 76.14798382892278
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 5.662924638349867,
+              "correct_actions": 4,
+              "correct_lengths": 4,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -17.92422768164467,
+              "forced_actions": 0,
+              "nll_sum": 43.23433110812883,
+              "within_category_nll_sum": 37.571406469778964
+            },
+            "reuse": {
+              "actions": 146,
+              "category_nll_sum": 2.630370506443035,
+              "correct_actions": 143,
+              "correct_lengths": 143,
+              "correct_rows": 143,
+              "fixed_margin_queries": 146,
+              "fixed_margin_sum": 1087.913109741916,
+              "forced_actions": 0,
+              "nll_sum": 15.315827472283939,
+              "within_category_nll_sum": 12.685456965840906
+            }
+          },
+          "whole_path_nll": 58.55015858041277
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 26933,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-31.json.gz",
+        "sha256": "2a0d167d1f9059ae647f38427a1211234c3d8777b322a8f6e92db6ea1f933424"
+      },
+      "case": 31,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.9110970646995044,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 8,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -7.3046317487792685,
+              "forced_actions": 0,
+              "nll_sum": 36.45430167516799,
+              "within_category_nll_sum": 35.543204610468486
+            },
+            "reuse": {
+              "actions": 344,
+              "category_nll_sum": 42.238429787669176,
+              "correct_actions": 316,
+              "correct_lengths": 330,
+              "correct_rows": 316,
+              "fixed_margin_queries": 344,
+              "fixed_margin_sum": 2441.932790532782,
+              "forced_actions": 0,
+              "nll_sum": 81.89008805461734,
+              "within_category_nll_sum": 39.65165826694815
+            }
+          },
+          "whole_path_nll": 118.3443897297853
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 6.464503013903199,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -17.06523215539296,
+              "forced_actions": 0,
+              "nll_sum": 42.007707624371676,
+              "within_category_nll_sum": 35.54320461046848
+            },
+            "reuse": {
+              "actions": 344,
+              "category_nll_sum": 4.393597610448614,
+              "correct_actions": 323,
+              "correct_lengths": 335,
+              "correct_rows": 323,
+              "fixed_margin_queries": 344,
+              "fixed_margin_sum": 3124.566030488439,
+              "forced_actions": 0,
+              "nll_sum": 44.045255877396755,
+              "within_category_nll_sum": 39.65165826694815
+            }
+          },
+          "whole_path_nll": 86.05296350176843
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 18844,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-32.json.gz",
+        "sha256": "7353bc0c6fe96da546b52fd5d32f6b445257cd47581c917ae6b08c87738ec87e"
+      },
+      "case": 32,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.702953403330584,
+              "correct_actions": 2,
+              "correct_lengths": 3,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -8.84566912476787,
+              "forced_actions": 0,
+              "nll_sum": 39.20758233794305,
+              "within_category_nll_sum": 38.50462893461247
+            },
+            "reuse": {
+              "actions": 245,
+              "category_nll_sum": 32.97308045755928,
+              "correct_actions": 223,
+              "correct_lengths": 233,
+              "correct_rows": 223,
+              "fixed_margin_queries": 245,
+              "fixed_margin_sum": 1787.6304908166255,
+              "forced_actions": 0,
+              "nll_sum": 80.69479616251562,
+              "within_category_nll_sum": 47.72171570495633
+            }
+          },
+          "whole_path_nll": 119.90237850045865
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 5.8376246975992965,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -18.45501146382084,
+              "forced_actions": 0,
+              "nll_sum": 44.342253632211765,
+              "within_category_nll_sum": 38.50462893461247
+            },
+            "reuse": {
+              "actions": 245,
+              "category_nll_sum": 3.104065670257483,
+              "correct_actions": 225,
+              "correct_lengths": 235,
+              "correct_rows": 225,
+              "fixed_margin_queries": 245,
+              "fixed_margin_sum": 2230.5672219397593,
+              "forced_actions": 0,
+              "nll_sum": 50.82578137521381,
+              "within_category_nll_sum": 47.72171570495633
+            }
+          },
+          "whole_path_nll": 95.16803500742557
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 26107,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-33.json.gz",
+        "sha256": "1a56430c21b3867e8fe36299a3899f285f32f41e95e7f6e6b4466e4c3d4e89c2"
+      },
+      "case": 33,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 5.788094255042938,
+              "correct_actions": 1,
+              "correct_lengths": 6,
+              "correct_rows": 8,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -14.86674452683548,
+              "forced_actions": 0,
+              "nll_sum": 41.17161991335351,
+              "within_category_nll_sum": 35.383525658310575
+            },
+            "reuse": {
+              "actions": 306,
+              "category_nll_sum": 56.864809498081804,
+              "correct_actions": 258,
+              "correct_lengths": 279,
+              "correct_rows": 258,
+              "fixed_margin_queries": 306,
+              "fixed_margin_sum": 1105.6047949147626,
+              "forced_actions": 0,
+              "nll_sum": 142.99862868512835,
+              "within_category_nll_sum": 86.13381918704656
+            }
+          },
+          "whole_path_nll": 184.17024859848186
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 16.383776352200634,
+              "correct_actions": 1,
+              "correct_lengths": 6,
+              "correct_rows": 7,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -31.24241347003084,
+              "forced_actions": 0,
+              "nll_sum": 51.7673020105112,
+              "within_category_nll_sum": 35.383525658310575
+            },
+            "reuse": {
+              "actions": 306,
+              "category_nll_sum": 5.295945199863819,
+              "correct_actions": 264,
+              "correct_lengths": 283,
+              "correct_rows": 264,
+              "fixed_margin_queries": 306,
+              "fixed_margin_sum": 1435.9012498565157,
+              "forced_actions": 0,
+              "nll_sum": 94.03383545464823,
+              "within_category_nll_sum": 88.73789025478439
+            }
+          },
+          "whole_path_nll": 145.8011374651594
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 25713,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-34.json.gz",
+        "sha256": "d34dea16c74def4f48b1577256f47601ca434e7b6f31ae4144b8a782fba126cb"
+      },
+      "case": 34,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.6351006788208007,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 11,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -6.142770817423636,
+              "forced_actions": 0,
+              "nll_sum": 34.51217703670538,
+              "within_category_nll_sum": 33.87707635788458
+            },
+            "reuse": {
+              "actions": 313,
+              "category_nll_sum": 75.8537380223557,
+              "correct_actions": 272,
+              "correct_lengths": 296,
+              "correct_rows": 272,
+              "fixed_margin_queries": 313,
+              "fixed_margin_sum": 1479.4369434405155,
+              "forced_actions": 0,
+              "nll_sum": 132.96825089086332,
+              "within_category_nll_sum": 57.1145128685076
+            }
+          },
+          "whole_path_nll": 167.4804279275687
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 5.707033309943358,
+              "correct_actions": 0,
+              "correct_lengths": 6,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -14.802099408082329,
+              "forced_actions": 0,
+              "nll_sum": 39.584109667827946,
+              "within_category_nll_sum": 33.87707635788459
+            },
+            "reuse": {
+              "actions": 313,
+              "category_nll_sum": 10.989938797838928,
+              "correct_actions": 287,
+              "correct_lengths": 308,
+              "correct_rows": 287,
+              "fixed_margin_queries": 313,
+              "fixed_margin_sum": 2029.9111316006506,
+              "forced_actions": 0,
+              "nll_sum": 68.10445166634653,
+              "within_category_nll_sum": 57.1145128685076
+            }
+          },
+          "whole_path_nll": 107.6885613341745
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 32557,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-35.json.gz",
+        "sha256": "e263d288a533746a2e3cb679c42d49a66377ead7683c4b7be7d902864a0c524c"
+      },
+      "case": 35,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 6.729865929314738,
+              "correct_actions": 3,
+              "correct_lengths": 6,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -16.570793989426942,
+              "forced_actions": 0,
+              "nll_sum": 43.0315533384173,
+              "within_category_nll_sum": 36.301687409102556
+            },
+            "reuse": {
+              "actions": 384,
+              "category_nll_sum": 47.07812281480017,
+              "correct_actions": 333,
+              "correct_lengths": 342,
+              "correct_rows": 333,
+              "fixed_margin_queries": 384,
+              "fixed_margin_sum": 2263.4000214834787,
+              "forced_actions": 0,
+              "nll_sum": 153.12808267428954,
+              "within_category_nll_sum": 106.04995985948939
+            }
+          },
+          "whole_path_nll": 196.15963601270684
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 23.106838177385654,
+              "correct_actions": 3,
+              "correct_lengths": 6,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -36.59963858151315,
+              "forced_actions": 0,
+              "nll_sum": 59.40852558648821,
+              "within_category_nll_sum": 36.301687409102556
+            },
+            "reuse": {
+              "actions": 384,
+              "category_nll_sum": 7.869010818680675,
+              "correct_actions": 336,
+              "correct_lengths": 344,
+              "correct_rows": 336,
+              "fixed_margin_queries": 384,
+              "fixed_margin_sum": 2652.30295965101,
+              "forced_actions": 0,
+              "nll_sum": 113.93316928648001,
+              "within_category_nll_sum": 106.06415846779933
+            }
+          },
+          "whole_path_nll": 173.34169487296822
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 27402,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-36.json.gz",
+        "sha256": "ae4aa08d0942bd63dd36a331b4786d8ea21d3ea4fb22153603580df5317eb4fc"
+      },
+      "case": 36,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.7113619596111314,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -5.905705990729597,
+              "forced_actions": 0,
+              "nll_sum": 37.553012289105126,
+              "within_category_nll_sum": 36.841650329493994
+            },
+            "reuse": {
+              "actions": 326,
+              "category_nll_sum": 40.48390537377871,
+              "correct_actions": 295,
+              "correct_lengths": 311,
+              "correct_rows": 295,
+              "fixed_margin_queries": 326,
+              "fixed_margin_sum": 2377.788662067005,
+              "forced_actions": 0,
+              "nll_sum": 89.60827739176364,
+              "within_category_nll_sum": 49.124372017984925
+            }
+          },
+          "whole_path_nll": 127.16128968086876
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 4.7788059267726695,
+              "correct_actions": 0,
+              "correct_lengths": 4,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -11.879666203631029,
+              "forced_actions": 0,
+              "nll_sum": 41.620456256266664,
+              "within_category_nll_sum": 36.841650329493994
+            },
+            "reuse": {
+              "actions": 326,
+              "category_nll_sum": 4.232153098275496,
+              "correct_actions": 300,
+              "correct_lengths": 316,
+              "correct_rows": 300,
+              "fixed_margin_queries": 326,
+              "fixed_margin_sum": 2834.7619717137595,
+              "forced_actions": 0,
+              "nll_sum": 53.35652511626042,
+              "within_category_nll_sum": 49.124372017984925
+            }
+          },
+          "whole_path_nll": 94.97698137252709
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 19965,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-37.json.gz",
+        "sha256": "c213f0ec5042c90cdbb5cd4e66fecb4c5221f6c45bf0fe4eac5f69dfd6563ac2"
+      },
+      "case": 37,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.5678474627019502,
+              "correct_actions": 3,
+              "correct_lengths": 4,
+              "correct_rows": 15,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -2.803118357612525,
+              "forced_actions": 0,
+              "nll_sum": 29.423033080925496,
+              "within_category_nll_sum": 28.855185618223544
+            },
+            "reuse": {
+              "actions": 259,
+              "category_nll_sum": 64.46258833342681,
+              "correct_actions": 227,
+              "correct_lengths": 242,
+              "correct_rows": 227,
+              "fixed_margin_queries": 259,
+              "fixed_margin_sum": 1196.0827837500153,
+              "forced_actions": 0,
+              "nll_sum": 113.34444261723856,
+              "within_category_nll_sum": 48.881854283811734
+            }
+          },
+          "whole_path_nll": 142.76747569816405
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 4.873258340474416,
+              "correct_actions": 3,
+              "correct_lengths": 4,
+              "correct_rows": 13,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -9.454092275532604,
+              "forced_actions": 0,
+              "nll_sum": 33.728443958697966,
+              "within_category_nll_sum": 28.855185618223544
+            },
+            "reuse": {
+              "actions": 259,
+              "category_nll_sum": 7.579447846375993,
+              "correct_actions": 236,
+              "correct_lengths": 249,
+              "correct_rows": 236,
+              "fixed_margin_queries": 259,
+              "fixed_margin_sum": 1612.567619263315,
+              "forced_actions": 0,
+              "nll_sum": 59.9829625582628,
+              "within_category_nll_sum": 52.4035147118868
+            }
+          },
+          "whole_path_nll": 93.71140651696075
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 19916,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-38.json.gz",
+        "sha256": "7345b51b4c03c7aaf7b6a193d97898627faab4365e1066dc840e9a85f8ac249c"
+      },
+      "case": 38,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 1.9214639072429807,
+              "correct_actions": 2,
+              "correct_lengths": 3,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -12.457016513513274,
+              "forced_actions": 0,
+              "nll_sum": 41.15272284090251,
+              "within_category_nll_sum": 39.23125893365953
+            },
+            "reuse": {
+              "actions": 262,
+              "category_nll_sum": 19.358413368125543,
+              "correct_actions": 240,
+              "correct_lengths": 246,
+              "correct_rows": 240,
+              "fixed_margin_queries": 262,
+              "fixed_margin_sum": 1857.290265347677,
+              "forced_actions": 0,
+              "nll_sum": 72.99235450682366,
+              "within_category_nll_sum": 53.63394113869812
+            }
+          },
+          "whole_path_nll": 114.14507734772617
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 10.27839942124635,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -23.947126065806824,
+              "forced_actions": 0,
+              "nll_sum": 49.50965835490588,
+              "within_category_nll_sum": 39.23125893365953
+            },
+            "reuse": {
+              "actions": 262,
+              "category_nll_sum": 1.7133727400875562,
+              "correct_actions": 241,
+              "correct_lengths": 246,
+              "correct_rows": 241,
+              "fixed_margin_queries": 262,
+              "fixed_margin_sum": 2271.5337480624653,
+              "forced_actions": 0,
+              "nll_sum": 55.34731387878567,
+              "within_category_nll_sum": 53.63394113869812
+            }
+          },
+          "whole_path_nll": 104.85697223369155
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 15677,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-39.json.gz",
+        "sha256": "55b8cf1e46f96e086d9574a2084048e055cc49ed4a793d0ebdfa74d3ec493c54"
+      },
+      "case": 39,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.8266582926729529,
+              "correct_actions": 0,
+              "correct_lengths": 1,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -10.587319302382129,
+              "forced_actions": 0,
+              "nll_sum": 39.949076390167136,
+              "within_category_nll_sum": 39.122418097494176
+            },
+            "reuse": {
+              "actions": 203,
+              "category_nll_sum": 39.9357663571917,
+              "correct_actions": 182,
+              "correct_lengths": 188,
+              "correct_rows": 182,
+              "fixed_margin_queries": 203,
+              "fixed_margin_sum": 1195.7052504913995,
+              "forced_actions": 0,
+              "nll_sum": 60.24459131510737,
+              "within_category_nll_sum": 20.308824957915665
+            }
+          },
+          "whole_path_nll": 100.19366770527449
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 4.164214961963502,
+              "correct_actions": 0,
+              "correct_lengths": 1,
+              "correct_rows": 9,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -14.70056980923397,
+              "forced_actions": 0,
+              "nll_sum": 43.286633059457685,
+              "within_category_nll_sum": 39.122418097494176
+            },
+            "reuse": {
+              "actions": 203,
+              "category_nll_sum": 4.706228324264632,
+              "correct_actions": 191,
+              "correct_lengths": 195,
+              "correct_rows": 191,
+              "fixed_margin_queries": 203,
+              "fixed_margin_sum": 1602.8263293778923,
+              "forced_actions": 0,
+              "nll_sum": 25.015053282180297,
+              "within_category_nll_sum": 20.30882495791566
+            }
+          },
+          "whole_path_nll": 68.30168634163797
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 26647,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-40.json.gz",
+        "sha256": "6b0d46ec9933b2e7551ca5738d7106bcc41d6f8601b5e23115a0595fb3dc498c"
+      },
+      "case": 40,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 21,
+              "category_nll_sum": 3.9489096117479243,
+              "correct_actions": 1,
+              "correct_lengths": 6,
+              "correct_rows": 9,
+              "fixed_margin_queries": 21,
+              "fixed_margin_sum": -16.749281879523718,
+              "forced_actions": 0,
+              "nll_sum": 48.435829999428975,
+              "within_category_nll_sum": 44.48692038768105
+            },
+            "reuse": {
+              "actions": 313,
+              "category_nll_sum": 76.70935121333977,
+              "correct_actions": 259,
+              "correct_lengths": 274,
+              "correct_rows": 259,
+              "fixed_margin_queries": 313,
+              "fixed_margin_sum": 1464.9305110307093,
+              "forced_actions": 0,
+              "nll_sum": 167.2776220703911,
+              "within_category_nll_sum": 90.56827085705135
+            }
+          },
+          "whole_path_nll": 215.7134520698201
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 21,
+              "category_nll_sum": 20.411480428263545,
+              "correct_actions": 1,
+              "correct_lengths": 7,
+              "correct_rows": 6,
+              "fixed_margin_queries": 21,
+              "fixed_margin_sum": -39.428841590207504,
+              "forced_actions": 0,
+              "nll_sum": 64.8984008159446,
+              "within_category_nll_sum": 44.48692038768104
+            },
+            "reuse": {
+              "actions": 313,
+              "category_nll_sum": 9.49572218679513,
+              "correct_actions": 272,
+              "correct_lengths": 282,
+              "correct_rows": 272,
+              "fixed_margin_queries": 313,
+              "fixed_margin_sum": 1849.4078622826974,
+              "forced_actions": 0,
+              "nll_sum": 105.29787728025943,
+              "within_category_nll_sum": 95.8021550934643
+            }
+          },
+          "whole_path_nll": 170.19627809620403
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 21563,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-41.json.gz",
+        "sha256": "8af7978f28cdfe946a9d290eaa73681b6a28e4ca2d0ecf2aa807b358ddd7b284"
+      },
+      "case": 41,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.2273194169853363,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 11,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -6.914780241145189,
+              "forced_actions": 0,
+              "nll_sum": 32.75937702211846,
+              "within_category_nll_sum": 32.53205760513312
+            },
+            "reuse": {
+              "actions": 287,
+              "category_nll_sum": 91.0334147183278,
+              "correct_actions": 265,
+              "correct_lengths": 269,
+              "correct_rows": 265,
+              "fixed_margin_queries": 287,
+              "fixed_margin_sum": 1501.1380807662788,
+              "forced_actions": 0,
+              "nll_sum": 112.25994945104824,
+              "within_category_nll_sum": 21.226534732720435
+            }
+          },
+          "whole_path_nll": 145.0193264731667
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 1.944547285309373,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 10,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -9.258945409787582,
+              "forced_actions": 0,
+              "nll_sum": 34.47660489044249,
+              "within_category_nll_sum": 32.53205760513312
+            },
+            "reuse": {
+              "actions": 287,
+              "category_nll_sum": 10.572352299174362,
+              "correct_actions": 281,
+              "correct_lengths": 283,
+              "correct_rows": 281,
+              "fixed_margin_queries": 287,
+              "fixed_margin_sum": 2123.473789976327,
+              "forced_actions": 0,
+              "nll_sum": 35.133560931946256,
+              "within_category_nll_sum": 24.5612086327719
+            }
+          },
+          "whole_path_nll": 69.61016582238875
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 26843,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-42.json.gz",
+        "sha256": "da82c0a942279ba61c3740681b27e3a52839706280021cf454d50e1038f15783"
+      },
+      "case": 42,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 5.618172646006235,
+              "correct_actions": 1,
+              "correct_lengths": 6,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -18.73349690022823,
+              "forced_actions": 0,
+              "nll_sum": 47.70850592145858,
+              "within_category_nll_sum": 42.09033327545235
+            },
+            "reuse": {
+              "actions": 314,
+              "category_nll_sum": 56.92603272530112,
+              "correct_actions": 278,
+              "correct_lengths": 297,
+              "correct_rows": 278,
+              "fixed_margin_queries": 314,
+              "fixed_margin_sum": 1502.6544345994505,
+              "forced_actions": 0,
+              "nll_sum": 120.47087509012127,
+              "within_category_nll_sum": 63.54484236482017
+            }
+          },
+          "whole_path_nll": 168.17938101157984
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 22.34080064373351,
+              "correct_actions": 1,
+              "correct_lengths": 8,
+              "correct_rows": 6,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -40.93325781607373,
+              "forced_actions": 0,
+              "nll_sum": 64.43113391918585,
+              "within_category_nll_sum": 42.09033327545235
+            },
+            "reuse": {
+              "actions": 314,
+              "category_nll_sum": 5.798811075679718,
+              "correct_actions": 287,
+              "correct_lengths": 305,
+              "correct_rows": 287,
+              "fixed_margin_queries": 314,
+              "fixed_margin_sum": 1941.2052353997453,
+              "forced_actions": 0,
+              "nll_sum": 69.34365344049988,
+              "within_category_nll_sum": 63.54484236482017
+            }
+          },
+          "whole_path_nll": 133.77478735968575
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 22563,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-43.json.gz",
+        "sha256": "b8f3d2b6f3735473c14725778144105fd31299560ce88a07de98c85f9c083201"
+      },
+      "case": 43,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 3.3128269447330316,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 6,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -17.44864539881486,
+              "forced_actions": 0,
+              "nll_sum": 48.45677071091238,
+              "within_category_nll_sum": 45.14394376617935
+            },
+            "reuse": {
+              "actions": 291,
+              "category_nll_sum": 59.26883375749178,
+              "correct_actions": 261,
+              "correct_lengths": 275,
+              "correct_rows": 261,
+              "fixed_margin_queries": 291,
+              "fixed_margin_sum": 1839.8823509248934,
+              "forced_actions": 0,
+              "nll_sum": 104.88031918332928,
+              "within_category_nll_sum": 45.6114854258375
+            }
+          },
+          "whole_path_nll": 153.33708989424167
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 11.730301721213166,
+              "correct_actions": 0,
+              "correct_lengths": 2,
+              "correct_rows": 6,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -27.992671486539408,
+              "forced_actions": 0,
+              "nll_sum": 56.874245487392514,
+              "within_category_nll_sum": 45.14394376617935
+            },
+            "reuse": {
+              "actions": 291,
+              "category_nll_sum": 5.761284798317994,
+              "correct_actions": 271,
+              "correct_lengths": 284,
+              "correct_rows": 271,
+              "fixed_margin_queries": 291,
+              "fixed_margin_sum": 2309.587205345771,
+              "forced_actions": 0,
+              "nll_sum": 51.3727702241555,
+              "within_category_nll_sum": 45.6114854258375
+            }
+          },
+          "whole_path_nll": 108.247015711548
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 29986,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-44.json.gz",
+        "sha256": "441058b3382dd0fd0bbd28d7c2409ecbcdf80f20b997d9d394a9e1d80f7d01a3"
+      },
+      "case": 44,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 6.629005632479349,
+              "correct_actions": 2,
+              "correct_lengths": 5,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -17.233518109239125,
+              "forced_actions": 0,
+              "nll_sum": 47.51319669434052,
+              "within_category_nll_sum": 40.88419106186117
+            },
+            "reuse": {
+              "actions": 381,
+              "category_nll_sum": 73.36368116008504,
+              "correct_actions": 347,
+              "correct_lengths": 361,
+              "correct_rows": 347,
+              "fixed_margin_queries": 381,
+              "fixed_margin_sum": 2336.119781060403,
+              "forced_actions": 0,
+              "nll_sum": 121.10648801397392,
+              "within_category_nll_sum": 47.74280685388888
+            }
+          },
+          "whole_path_nll": 168.61968470831448
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 24.129001723757003,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 6,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -42.35494812018187,
+              "forced_actions": 0,
+              "nll_sum": 65.01319278561817,
+              "within_category_nll_sum": 40.88419106186117
+            },
+            "reuse": {
+              "actions": 381,
+              "category_nll_sum": 7.615589665732108,
+              "correct_actions": 356,
+              "correct_lengths": 368,
+              "correct_rows": 356,
+              "fixed_margin_queries": 381,
+              "fixed_margin_sum": 3120.2479402295467,
+              "forced_actions": 0,
+              "nll_sum": 61.840807099600276,
+              "within_category_nll_sum": 54.22521743386817
+            }
+          },
+          "whole_path_nll": 126.85399988521846
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 21244,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-45.json.gz",
+        "sha256": "28574c59a3dcc0cb5a445953dca7782a13eb69487fbe7fd7daadc0c904edb95c"
+      },
+      "case": 45,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.5989926805057905,
+              "correct_actions": 0,
+              "correct_lengths": 2,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -11.812803389618784,
+              "forced_actions": 0,
+              "nll_sum": 40.871996132331674,
+              "within_category_nll_sum": 40.273003451825886
+            },
+            "reuse": {
+              "actions": 283,
+              "category_nll_sum": 34.21594644095662,
+              "correct_actions": 252,
+              "correct_lengths": 276,
+              "correct_rows": 252,
+              "fixed_margin_queries": 283,
+              "fixed_margin_sum": 1880.0505181468136,
+              "forced_actions": 0,
+              "nll_sum": 88.13074243581143,
+              "within_category_nll_sum": 53.91479599485481
+            }
+          },
+          "whole_path_nll": 129.00273856814312
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 3.463558114673525,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -16.780249311370564,
+              "forced_actions": 0,
+              "nll_sum": 43.736561566499404,
+              "within_category_nll_sum": 40.273003451825886
+            },
+            "reuse": {
+              "actions": 283,
+              "category_nll_sum": 4.018447914706821,
+              "correct_actions": 257,
+              "correct_lengths": 283,
+              "correct_rows": 257,
+              "fixed_margin_queries": 283,
+              "fixed_margin_sum": 2349.525815428753,
+              "forced_actions": 0,
+              "nll_sum": 57.93324390956164,
+              "within_category_nll_sum": 53.91479599485481
+            }
+          },
+          "whole_path_nll": 101.66980547606104
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 26557,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-46.json.gz",
+        "sha256": "054aebef41fd970aba9e7e7d3e811c60c9af8bb1a367cfb8d0e72d49c6436d58"
+      },
+      "case": 46,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 2.4222571487563593,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -12.830280013034631,
+              "forced_actions": 0,
+              "nll_sum": 44.55989152298671,
+              "within_category_nll_sum": 42.137634374230345
+            },
+            "reuse": {
+              "actions": 306,
+              "category_nll_sum": 42.0514824569255,
+              "correct_actions": 264,
+              "correct_lengths": 287,
+              "correct_rows": 264,
+              "fixed_margin_queries": 306,
+              "fixed_margin_sum": 1312.3112855024804,
+              "forced_actions": 0,
+              "nll_sum": 120.20265798056985,
+              "within_category_nll_sum": 78.15117552364435
+            }
+          },
+          "whole_path_nll": 164.76254950355656
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 13.55014908362328,
+              "correct_actions": 1,
+              "correct_lengths": 6,
+              "correct_rows": 5,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -29.012715563195002,
+              "forced_actions": 0,
+              "nll_sum": 55.68778345785363,
+              "within_category_nll_sum": 42.13763437423035
+            },
+            "reuse": {
+              "actions": 306,
+              "category_nll_sum": 5.034806118411147,
+              "correct_actions": 272,
+              "correct_lengths": 292,
+              "correct_rows": 272,
+              "fixed_margin_queries": 306,
+              "fixed_margin_sum": 1610.376656895498,
+              "forced_actions": 0,
+              "nll_sum": 83.1859816420555,
+              "within_category_nll_sum": 78.15117552364435
+            }
+          },
+          "whole_path_nll": 138.87376509990912
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 30624,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-47.json.gz",
+        "sha256": "3202ad9f2871cf054cab2453eaddef05da37dce5f7d498349aca78d59d2b1d6e"
+      },
+      "case": 47,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 2.8363003509043674,
+              "correct_actions": 2,
+              "correct_lengths": 4,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -10.561682839871382,
+              "forced_actions": 0,
+              "nll_sum": 39.83550681185943,
+              "within_category_nll_sum": 36.99920646095505
+            },
+            "reuse": {
+              "actions": 378,
+              "category_nll_sum": 25.34969412325463,
+              "correct_actions": 332,
+              "correct_lengths": 355,
+              "correct_rows": 332,
+              "fixed_margin_queries": 378,
+              "fixed_margin_sum": 2806.2663804222016,
+              "forced_actions": 0,
+              "nll_sum": 98.55668536066307,
+              "within_category_nll_sum": 73.20699123740843
+            }
+          },
+          "whole_path_nll": 138.39219217252247
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 16.243017331250172,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 4,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -28.4312800376747,
+              "forced_actions": 0,
+              "nll_sum": 53.24222379220524,
+              "within_category_nll_sum": 36.99920646095506
+            },
+            "reuse": {
+              "actions": 378,
+              "category_nll_sum": 2.3474512992202383,
+              "correct_actions": 336,
+              "correct_lengths": 358,
+              "correct_rows": 336,
+              "fixed_margin_queries": 378,
+              "fixed_margin_sum": 3362.2311588556754,
+              "forced_actions": 0,
+              "nll_sum": 75.55444253662867,
+              "within_category_nll_sum": 73.20699123740843
+            }
+          },
+          "whole_path_nll": 128.7966663288339
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 16868,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-48.json.gz",
+        "sha256": "c20f01c1ab1936bed5b72a107700be41049227406b2207a418906c3a59b3c65c"
+      },
+      "case": 48,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 0.7874747995777047,
+              "correct_actions": 0,
+              "correct_lengths": 2,
+              "correct_rows": 10,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -5.28984641626321,
+              "forced_actions": 0,
+              "nll_sum": 33.488331019427335,
+              "within_category_nll_sum": 32.70085621984963
+            },
+            "reuse": {
+              "actions": 211,
+              "category_nll_sum": 66.52583302095822,
+              "correct_actions": 178,
+              "correct_lengths": 183,
+              "correct_rows": 178,
+              "fixed_margin_queries": 211,
+              "fixed_margin_sum": 722.6532296432819,
+              "forced_actions": 0,
+              "nll_sum": 122.32194647999054,
+              "within_category_nll_sum": 55.79611345903231
+            }
+          },
+          "whole_path_nll": 155.81027749941785
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 6.901835102727751,
+              "correct_actions": 0,
+              "correct_lengths": 2,
+              "correct_rows": 7,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -16.300975898741335,
+              "forced_actions": 0,
+              "nll_sum": 39.602691322577385,
+              "within_category_nll_sum": 32.70085621984963
+            },
+            "reuse": {
+              "actions": 211,
+              "category_nll_sum": 11.17393392094531,
+              "correct_actions": 187,
+              "correct_lengths": 190,
+              "correct_rows": 187,
+              "fixed_margin_queries": 211,
+              "fixed_margin_sum": 1039.2155375140358,
+              "forced_actions": 0,
+              "nll_sum": 66.97004737997761,
+              "within_category_nll_sum": 55.796113459032306
+            }
+          },
+          "whole_path_nll": 106.572738702555
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 30707,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-49.json.gz",
+        "sha256": "2daa64cf6a8f7d124e8af16cade88971e4f93904e0bc6667a9660ad07a85dbeb"
+      },
+      "case": 49,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 2.2155946551578443,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -8.350268501169985,
+              "forced_actions": 0,
+              "nll_sum": 37.86381381336936,
+              "within_category_nll_sum": 35.648219158211525
+            },
+            "reuse": {
+              "actions": 362,
+              "category_nll_sum": 21.775257280883253,
+              "correct_actions": 329,
+              "correct_lengths": 360,
+              "correct_rows": 329,
+              "fixed_margin_queries": 362,
+              "fixed_margin_sum": 2380.2045394604415,
+              "forced_actions": 0,
+              "nll_sum": 105.05947460598594,
+              "within_category_nll_sum": 83.2842173251027
+            }
+          },
+          "whole_path_nll": 142.92328841935534
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 9.422971598508134,
+              "correct_actions": 0,
+              "correct_lengths": 4,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -20.04588474300692,
+              "forced_actions": 0,
+              "nll_sum": 45.07119075671966,
+              "within_category_nll_sum": 35.648219158211525
+            },
+            "reuse": {
+              "actions": 362,
+              "category_nll_sum": 1.9053459290135657,
+              "correct_actions": 330,
+              "correct_lengths": 362,
+              "correct_rows": 330,
+              "fixed_margin_queries": 362,
+              "fixed_margin_sum": 2760.453537280111,
+              "forced_actions": 0,
+              "nll_sum": 85.18956325411628,
+              "within_category_nll_sum": 83.2842173251027
+            }
+          },
+          "whole_path_nll": 130.2607540108359
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 29431,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-50.json.gz",
+        "sha256": "a322fa08e7b0a959100468c2ec546207e70f83661079c52a800db3c33495cd56"
+      },
+      "case": 50,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.3566496830172794,
+              "correct_actions": 4,
+              "correct_lengths": 5,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -8.33240222280806,
+              "forced_actions": 0,
+              "nll_sum": 36.466475079142455,
+              "within_category_nll_sum": 36.10982539612518
+            },
+            "reuse": {
+              "actions": 360,
+              "category_nll_sum": 54.04141141111845,
+              "correct_actions": 322,
+              "correct_lengths": 334,
+              "correct_rows": 322,
+              "fixed_margin_queries": 360,
+              "fixed_margin_sum": 2425.684144477772,
+              "forced_actions": 0,
+              "nll_sum": 113.58987446403816,
+              "within_category_nll_sum": 59.548463052919715
+            }
+          },
+          "whole_path_nll": 150.05634954318066
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 3.573104430132314,
+              "correct_actions": 3,
+              "correct_lengths": 6,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -13.463180161390794,
+              "forced_actions": 0,
+              "nll_sum": 39.68292982625749,
+              "within_category_nll_sum": 36.109825396125174
+            },
+            "reuse": {
+              "actions": 360,
+              "category_nll_sum": 5.481537780020933,
+              "correct_actions": 331,
+              "correct_lengths": 344,
+              "correct_rows": 331,
+              "fixed_margin_queries": 360,
+              "fixed_margin_sum": 3038.227293998254,
+              "forced_actions": 0,
+              "nll_sum": 65.03000083294066,
+              "within_category_nll_sum": 59.548463052919715
+            }
+          },
+          "whole_path_nll": 104.71293065919814
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 26126,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-51.json.gz",
+        "sha256": "a7da07b5ce2af97d3c67586c696ecd862291d39c43bb10471ae94cce7806f9ee"
+      },
+      "case": 51,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 1.0326564032482857,
+              "correct_actions": 0,
+              "correct_lengths": 1,
+              "correct_rows": 8,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -13.342288230997703,
+              "forced_actions": 0,
+              "nll_sum": 43.110997038497686,
+              "within_category_nll_sum": 42.07834063524939
+            },
+            "reuse": {
+              "actions": 334,
+              "category_nll_sum": 42.924436888003896,
+              "correct_actions": 309,
+              "correct_lengths": 325,
+              "correct_rows": 309,
+              "fixed_margin_queries": 334,
+              "fixed_margin_sum": 2114.667708074663,
+              "forced_actions": 0,
+              "nll_sum": 79.06156283689094,
+              "within_category_nll_sum": 36.137125948887046
+            }
+          },
+          "whole_path_nll": 122.17255987538861
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 6.021825617544611,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 6,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -20.834964852879082,
+              "forced_actions": 0,
+              "nll_sum": 48.10016625279401,
+              "within_category_nll_sum": 42.0783406352494
+            },
+            "reuse": {
+              "actions": 334,
+              "category_nll_sum": 7.0203226135130254,
+              "correct_actions": 315,
+              "correct_lengths": 332,
+              "correct_rows": 315,
+              "fixed_margin_queries": 334,
+              "fixed_margin_sum": 2801.027882919186,
+              "forced_actions": 0,
+              "nll_sum": 43.15744856240008,
+              "within_category_nll_sum": 36.13712594888705
+            }
+          },
+          "whole_path_nll": 91.25761481519407
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 19950,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-52.json.gz",
+        "sha256": "55065a943e740075c7f6f6bda481727c9a3172cf9f78a1d08ea4c85d750acb66"
+      },
+      "case": 52,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 1.6854702693125523,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -8.109830500905415,
+              "forced_actions": 0,
+              "nll_sum": 40.190857329540606,
+              "within_category_nll_sum": 38.50538706022805
+            },
+            "reuse": {
+              "actions": 255,
+              "category_nll_sum": 30.491823370742893,
+              "correct_actions": 230,
+              "correct_lengths": 242,
+              "correct_rows": 230,
+              "fixed_margin_queries": 255,
+              "fixed_margin_sum": 1694.618847760712,
+              "forced_actions": 0,
+              "nll_sum": 81.56670392620977,
+              "within_category_nll_sum": 51.07488055546687
+            }
+          },
+          "whole_path_nll": 121.75756125575039
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 9.867259914962315,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 5,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -20.706002254027723,
+              "forced_actions": 0,
+              "nll_sum": 48.372646975190364,
+              "within_category_nll_sum": 38.50538706022805
+            },
+            "reuse": {
+              "actions": 255,
+              "category_nll_sum": 2.6339342953787304,
+              "correct_actions": 234,
+              "correct_lengths": 246,
+              "correct_rows": 234,
+              "fixed_margin_queries": 255,
+              "fixed_margin_sum": 2089.5523780134954,
+              "forced_actions": 0,
+              "nll_sum": 57.922506639670104,
+              "within_category_nll_sum": 55.28857234429137
+            }
+          },
+          "whole_path_nll": 106.29515361486048
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 24943,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-53.json.gz",
+        "sha256": "18f9363605cc69e230dc21fb57dadc9a6eff6ab117862457f5f65959cd01fe73"
+      },
+      "case": 53,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.1554953722707919,
+              "correct_actions": 2,
+              "correct_lengths": 4,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -11.498772975241033,
+              "forced_actions": 0,
+              "nll_sum": 41.692216493037364,
+              "within_category_nll_sum": 41.53672112076657
+            },
+            "reuse": {
+              "actions": 300,
+              "category_nll_sum": 58.273175599750545,
+              "correct_actions": 269,
+              "correct_lengths": 278,
+              "correct_rows": 269,
+              "fixed_margin_queries": 300,
+              "fixed_margin_sum": 1757.4052544486233,
+              "forced_actions": 0,
+              "nll_sum": 104.79695925246195,
+              "within_category_nll_sum": 46.523783652711394
+            }
+          },
+          "whole_path_nll": 146.4891757454993
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 1.6560012269409385,
+              "correct_actions": 2,
+              "correct_lengths": 5,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -13.99302589531479,
+              "forced_actions": 0,
+              "nll_sum": 43.19272234770751,
+              "within_category_nll_sum": 41.53672112076657
+            },
+            "reuse": {
+              "actions": 300,
+              "category_nll_sum": 8.443675710755945,
+              "correct_actions": 279,
+              "correct_lengths": 287,
+              "correct_rows": 279,
+              "fixed_margin_queries": 300,
+              "fixed_margin_sum": 2265.915668993582,
+              "forced_actions": 0,
+              "nll_sum": 57.203834315428914,
+              "within_category_nll_sum": 48.760158604672974
+            }
+          },
+          "whole_path_nll": 100.39655666313642
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 14774,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-54.json.gz",
+        "sha256": "20916325e3566f5a1dc0f489a72969712fc39136ad1ba3107cf04b8b9f0ea153"
+      },
+      "case": 54,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.8405134770234551,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -12.655939958097733,
+              "forced_actions": 0,
+              "nll_sum": 44.30169951265796,
+              "within_category_nll_sum": 43.46118603563451
+            },
+            "reuse": {
+              "actions": 190,
+              "category_nll_sum": 44.00296822528509,
+              "correct_actions": 182,
+              "correct_lengths": 182,
+              "correct_rows": 182,
+              "fixed_margin_queries": 190,
+              "fixed_margin_sum": 1203.0892114435762,
+              "forced_actions": 0,
+              "nll_sum": 53.46563531591073,
+              "within_category_nll_sum": 9.46266709062565
+            }
+          },
+          "whole_path_nll": 97.76733482856869
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 4.423582869690336,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -18.165970651355444,
+              "forced_actions": 0,
+              "nll_sum": 47.88476890532484,
+              "within_category_nll_sum": 43.46118603563451
+            },
+            "reuse": {
+              "actions": 190,
+              "category_nll_sum": 4.352960080401372,
+              "correct_actions": 183,
+              "correct_lengths": 183,
+              "correct_rows": 183,
+              "fixed_margin_queries": 190,
+              "fixed_margin_sum": 1618.8943294925755,
+              "forced_actions": 0,
+              "nll_sum": 14.848289890051156,
+              "within_category_nll_sum": 10.495329809649782
+            }
+          },
+          "whole_path_nll": 62.733058795375996
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 12450,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-55.json.gz",
+        "sha256": "ad51303bd47023d19b63d0429e043549b9b198a2a3df73b699bd458219bd7ead"
+      },
+      "case": 55,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 1.2339727847423954,
+              "correct_actions": 1,
+              "correct_lengths": 3,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -7.715896147581975,
+              "forced_actions": 0,
+              "nll_sum": 38.74593814415446,
+              "within_category_nll_sum": 37.511965359412066
+            },
+            "reuse": {
+              "actions": 154,
+              "category_nll_sum": 29.268831030958047,
+              "correct_actions": 138,
+              "correct_lengths": 144,
+              "correct_rows": 138,
+              "fixed_margin_queries": 154,
+              "fixed_margin_sum": 852.8171422985635,
+              "forced_actions": 0,
+              "nll_sum": 57.732485526079145,
+              "within_category_nll_sum": 28.46365449512111
+            }
+          },
+          "whole_path_nll": 96.47842367023362
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 6.999162476908383,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -16.45579708192148,
+              "forced_actions": 0,
+              "nll_sum": 44.51112783632045,
+              "within_category_nll_sum": 37.511965359412066
+            },
+            "reuse": {
+              "actions": 154,
+              "category_nll_sum": 4.1669074363899075,
+              "correct_actions": 142,
+              "correct_lengths": 148,
+              "correct_rows": 142,
+              "fixed_margin_queries": 154,
+              "fixed_margin_sum": 1111.94906987106,
+              "forced_actions": 0,
+              "nll_sum": 37.87451477064566,
+              "within_category_nll_sum": 33.70760733425575
+            }
+          },
+          "whole_path_nll": 82.38564260696609
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 23033,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-56.json.gz",
+        "sha256": "94b86a17d4eef6e4e6133f3cfbbedecdbe62dc01939868aee582af7057c33845"
+      },
+      "case": 56,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 2.9542069709503402,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 4,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -17.2453941217415,
+              "forced_actions": 0,
+              "nll_sum": 47.83578918511307,
+              "within_category_nll_sum": 44.881582214162734
+            },
+            "reuse": {
+              "actions": 291,
+              "category_nll_sum": 45.292193972026155,
+              "correct_actions": 256,
+              "correct_lengths": 273,
+              "correct_rows": 256,
+              "fixed_margin_queries": 291,
+              "fixed_margin_sum": 1474.7543668930352,
+              "forced_actions": 0,
+              "nll_sum": 112.58227904086613,
+              "within_category_nll_sum": 67.29008506883997
+            }
+          },
+          "whole_path_nll": 160.4180682259792
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 13.771916737964148,
+              "correct_actions": 0,
+              "correct_lengths": 4,
+              "correct_rows": 3,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -33.73734918539739,
+              "forced_actions": 0,
+              "nll_sum": 58.653498952126895,
+              "within_category_nll_sum": 44.88158221416274
+            },
+            "reuse": {
+              "actions": 291,
+              "category_nll_sum": 4.4258569859472745,
+              "correct_actions": 261,
+              "correct_lengths": 278,
+              "correct_rows": 261,
+              "fixed_margin_queries": 291,
+              "fixed_margin_sum": 1858.8039850162743,
+              "forced_actions": 0,
+              "nll_sum": 71.71594205478726,
+              "within_category_nll_sum": 67.29008506883999
+            }
+          },
+          "whole_path_nll": 130.36944100691414
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 18210,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-57.json.gz",
+        "sha256": "d24f5df58fa341a762ad5b6b9e86059b163763875455718a8133afbfa0fc484b"
+      },
+      "case": 57,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.6546028795262859,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 7,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -9.549984768401867,
+              "forced_actions": 0,
+              "nll_sum": 41.840582372761965,
+              "within_category_nll_sum": 41.18597949323568
+            },
+            "reuse": {
+              "actions": 237,
+              "category_nll_sum": 40.42351821869411,
+              "correct_actions": 207,
+              "correct_lengths": 220,
+              "correct_rows": 207,
+              "fixed_margin_queries": 237,
+              "fixed_margin_sum": 1289.5552525853689,
+              "forced_actions": 0,
+              "nll_sum": 82.01699220196764,
+              "within_category_nll_sum": 41.59347398327352
+            }
+          },
+          "whole_path_nll": 123.8575745747296
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 6.996750402619897,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 4,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -18.323588153082838,
+              "forced_actions": 0,
+              "nll_sum": 48.18272989585558,
+              "within_category_nll_sum": 41.18597949323568
+            },
+            "reuse": {
+              "actions": 237,
+              "category_nll_sum": 3.133936040238742,
+              "correct_actions": 213,
+              "correct_lengths": 225,
+              "correct_rows": 213,
+              "fixed_margin_queries": 237,
+              "fixed_margin_sum": 1765.8527592531243,
+              "forced_actions": 0,
+              "nll_sum": 44.72741002351226,
+              "within_category_nll_sum": 41.59347398327351
+            }
+          },
+          "whole_path_nll": 92.91013991936784
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 15682,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-58.json.gz",
+        "sha256": "c6071718fc1adbda033cd8e6ad62b27378491f92f9455716bcd63fdf5cd50e71"
+      },
+      "case": 58,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 4.6611309659647056,
+              "correct_actions": 2,
+              "correct_lengths": 4,
+              "correct_rows": 9,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -13.197053124765873,
+              "forced_actions": 0,
+              "nll_sum": 42.79638462861213,
+              "within_category_nll_sum": 38.13525366264743
+            },
+            "reuse": {
+              "actions": 193,
+              "category_nll_sum": 43.10763750445551,
+              "correct_actions": 166,
+              "correct_lengths": 179,
+              "correct_rows": 166,
+              "fixed_margin_queries": 193,
+              "fixed_margin_sum": 1022.3612993073899,
+              "forced_actions": 0,
+              "nll_sum": 95.330968705319,
+              "within_category_nll_sum": 52.2233312008635
+            }
+          },
+          "whole_path_nll": 138.12735333393113
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 14.337101287082838,
+              "correct_actions": 2,
+              "correct_lengths": 4,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -28.200177492188,
+              "forced_actions": 0,
+              "nll_sum": 52.47235494973027,
+              "within_category_nll_sum": 38.13525366264743
+            },
+            "reuse": {
+              "actions": 193,
+              "category_nll_sum": 4.567678368392941,
+              "correct_actions": 172,
+              "correct_lengths": 184,
+              "correct_rows": 172,
+              "fixed_margin_queries": 193,
+              "fixed_margin_sum": 1311.9327886583849,
+              "forced_actions": 0,
+              "nll_sum": 56.79100956925643,
+              "within_category_nll_sum": 52.223331200863484
+            }
+          },
+          "whole_path_nll": 109.26336451898669
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 15310,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-59.json.gz",
+        "sha256": "2e66fd910fd5bd745b2309f3d576658e3b910c534a77ea7b9386eab14682c2c5"
+      },
+      "case": 59,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.9380135660102269,
+              "correct_actions": 1,
+              "correct_lengths": 4,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -16.949351905121645,
+              "forced_actions": 0,
+              "nll_sum": 48.29878999090849,
+              "within_category_nll_sum": 47.36077642489826
+            },
+            "reuse": {
+              "actions": 191,
+              "category_nll_sum": 54.4230469984767,
+              "correct_actions": 159,
+              "correct_lengths": 165,
+              "correct_rows": 159,
+              "fixed_margin_queries": 191,
+              "fixed_margin_sum": 1072.3259393049125,
+              "forced_actions": 0,
+              "nll_sum": 101.0393185310202,
+              "within_category_nll_sum": 46.616271532543514
+            }
+          },
+          "whole_path_nll": 149.3381085219287
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 5.812091452274522,
+              "correct_actions": 1,
+              "correct_lengths": 5,
+              "correct_rows": 7,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -30.039102844490767,
+              "forced_actions": 0,
+              "nll_sum": 57.90025569588512,
+              "within_category_nll_sum": 52.0881642436106
+            },
+            "reuse": {
+              "actions": 191,
+              "category_nll_sum": 6.335244098062457,
+              "correct_actions": 169,
+              "correct_lengths": 174,
+              "correct_rows": 169,
+              "fixed_margin_queries": 191,
+              "fixed_margin_sum": 1393.5807178828031,
+              "forced_actions": 0,
+              "nll_sum": 52.95151563060597,
+              "within_category_nll_sum": 46.61627153254352
+            }
+          },
+          "whole_path_nll": 110.8517713264911
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 15291,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-60.json.gz",
+        "sha256": "c158bee69ef451ead9cb96bee4186c7a633896d0d9b607d37ba451ef07adc2d6"
+      },
+      "case": 60,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 0.33386184087252035,
+              "correct_actions": 2,
+              "correct_lengths": 4,
+              "correct_rows": 12,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -11.426180865755237,
+              "forced_actions": 0,
+              "nll_sum": 38.61498765732444,
+              "within_category_nll_sum": 38.28112581645192
+            },
+            "reuse": {
+              "actions": 194,
+              "category_nll_sum": 44.30961117363526,
+              "correct_actions": 177,
+              "correct_lengths": 182,
+              "correct_rows": 177,
+              "fixed_margin_queries": 194,
+              "fixed_margin_sum": 928.2807950969441,
+              "forced_actions": 0,
+              "nll_sum": 68.34966083290523,
+              "within_category_nll_sum": 24.04004965926996
+            }
+          },
+          "whole_path_nll": 106.96464849022968
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 19,
+              "category_nll_sum": 3.3464125321333555,
+              "correct_actions": 2,
+              "correct_lengths": 5,
+              "correct_rows": 11,
+              "fixed_margin_queries": 19,
+              "fixed_margin_sum": -15.984381548636245,
+              "forced_actions": 0,
+              "nll_sum": 41.627538348585276,
+              "within_category_nll_sum": 38.28112581645192
+            },
+            "reuse": {
+              "actions": 194,
+              "category_nll_sum": 5.323413024266411,
+              "correct_actions": 180,
+              "correct_lengths": 184,
+              "correct_rows": 180,
+              "fixed_margin_queries": 194,
+              "fixed_margin_sum": 1284.4836454951353,
+              "forced_actions": 0,
+              "nll_sum": 29.36346268353638,
+              "within_category_nll_sum": 24.040049659269965
+            }
+          },
+          "whole_path_nll": 70.99100103212166
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 21116,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-61.json.gz",
+        "sha256": "100e6fcc6ba3853ffce4c9de67a26d3ace7396286d0dd6900006fc03834889e4"
+      },
+      "case": 61,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 0.6945671823382424,
+              "correct_actions": 0,
+              "correct_lengths": 3,
+              "correct_rows": 10,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -9.989073506178272,
+              "forced_actions": 0,
+              "nll_sum": 37.76021936532187,
+              "within_category_nll_sum": 37.06565218298363
+            },
+            "reuse": {
+              "actions": 275,
+              "category_nll_sum": 82.43995289078111,
+              "correct_actions": 242,
+              "correct_lengths": 256,
+              "correct_rows": 242,
+              "fixed_margin_queries": 275,
+              "fixed_margin_sum": 1307.0770227936803,
+              "forced_actions": 0,
+              "nll_sum": 122.64791385179888,
+              "within_category_nll_sum": 40.20796096101776
+            }
+          },
+          "whole_path_nll": 160.40813321712076
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 18,
+              "category_nll_sum": 5.710959032032664,
+              "correct_actions": 0,
+              "correct_lengths": 4,
+              "correct_rows": 9,
+              "fixed_margin_queries": 18,
+              "fixed_margin_sum": -20.13231343410362,
+              "forced_actions": 0,
+              "nll_sum": 42.77661121501629,
+              "within_category_nll_sum": 37.06565218298363
+            },
+            "reuse": {
+              "actions": 275,
+              "category_nll_sum": 8.699550384974767,
+              "correct_actions": 256,
+              "correct_lengths": 271,
+              "correct_rows": 256,
+              "fixed_margin_queries": 275,
+              "fixed_margin_sum": 1859.081518631066,
+              "forced_actions": 0,
+              "nll_sum": 48.90751134599253,
+              "within_category_nll_sum": 40.20796096101776
+            }
+          },
+          "whole_path_nll": 91.68412256100882
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 24779,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-62.json.gz",
+        "sha256": "48878c22bec570ea34d1e56802bc13b82b0d9eadfb0633104b9d44b2ba4d6091"
+      },
+      "case": 62,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.7078742199945782,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -7.624986610179053,
+              "forced_actions": 0,
+              "nll_sum": 38.75789025376247,
+              "within_category_nll_sum": 38.05001603376789
+            },
+            "reuse": {
+              "actions": 326,
+              "category_nll_sum": 42.89264790105484,
+              "correct_actions": 310,
+              "correct_lengths": 313,
+              "correct_rows": 310,
+              "fixed_margin_queries": 326,
+              "fixed_margin_sum": 2820.6442869939187,
+              "forced_actions": 0,
+              "nll_sum": 59.85363929568389,
+              "within_category_nll_sum": 16.960991394629055
+            }
+          },
+          "whole_path_nll": 98.61152954944637
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 4.448680276823353,
+              "correct_actions": 0,
+              "correct_lengths": 2,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -12.2931414014925,
+              "forced_actions": 0,
+              "nll_sum": 42.49869631059124,
+              "within_category_nll_sum": 38.05001603376789
+            },
+            "reuse": {
+              "actions": 326,
+              "category_nll_sum": 4.482448656538514,
+              "correct_actions": 317,
+              "correct_lengths": 320,
+              "correct_rows": 317,
+              "fixed_margin_queries": 326,
+              "fixed_margin_sum": 3566.759711704685,
+              "forced_actions": 0,
+              "nll_sum": 24.259266283870012,
+              "within_category_nll_sum": 19.776817627331504
+            }
+          },
+          "whole_path_nll": 66.75796259446126
+        }
+      }
+    },
+    {
+      "arrays": {
+        "bytes": 19049,
+        "path": "outputs/SOURCE-ACTION-CIPHER-001/source-teacher-63.json.gz",
+        "sha256": "4e3993b2589da328b6ee45780a19659926109b0e26c78041fddf66fe9a2d489a"
+      },
+      "case": 63,
+      "scores": {
+        "row_only": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 0.5578461050879406,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 10,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -4.4950022962859375,
+              "forced_actions": 0,
+              "nll_sum": 35.62704596448379,
+              "within_category_nll_sum": 35.06919985939585
+            },
+            "reuse": {
+              "actions": 240,
+              "category_nll_sum": 45.57254196688707,
+              "correct_actions": 216,
+              "correct_lengths": 227,
+              "correct_rows": 216,
+              "fixed_margin_queries": 240,
+              "fixed_margin_sum": 1777.244726564151,
+              "forced_actions": 0,
+              "nll_sum": 80.01587448201654,
+              "within_category_nll_sum": 34.44333251512946
+            }
+          },
+          "whole_path_nll": 115.64292044650034
+        },
+        "source_increment": {
+          "groups": {
+            "first_binding": {
+              "actions": 20,
+              "category_nll_sum": 5.684119887857179,
+              "correct_actions": 1,
+              "correct_lengths": 2,
+              "correct_rows": 8,
+              "fixed_margin_queries": 20,
+              "fixed_margin_sum": -12.523050998136142,
+              "forced_actions": 0,
+              "nll_sum": 40.75331974725302,
+              "within_category_nll_sum": 35.06919985939585
+            },
+            "reuse": {
+              "actions": 240,
+              "category_nll_sum": 4.577745695229733,
+              "correct_actions": 224,
+              "correct_lengths": 233,
+              "correct_rows": 224,
+              "fixed_margin_queries": 240,
+              "fixed_margin_sum": 2207.7778092488725,
+              "forced_actions": 0,
+              "nll_sum": 41.99416269656952,
+              "within_category_nll_sum": 37.41641700133978
+            }
+          },
+          "whole_path_nll": 82.74748244382255
+        }
+      }
+    }
+  ],
+  "summary": {
+    "row_only": {
+      "groups": {
+        "first_binding": {
+          "actions": 1246,
+          "category_nll_sum": 130.61234079388095,
+          "correct_actions": 87,
+          "correct_lengths": 233,
+          "correct_rows": 563,
+          "fixed_margin_queries": 1246,
+          "fixed_margin_sum": -788.4915459434404,
+          "forced_actions": 0,
+          "nll_sum": 2682.7412831950483,
+          "within_category_nll_sum": 2552.1289424011675
+        },
+        "reuse": {
+          "actions": 17526,
+          "category_nll_sum": 3103.2430853744163,
+          "correct_actions": 15568,
+          "correct_lengths": 16362,
+          "correct_rows": 15568,
+          "fixed_margin_queries": 17526,
+          "fixed_margin_sum": 99696.45913393165,
+          "forced_actions": 0,
+          "nll_sum": 6382.129011778038,
+          "within_category_nll_sum": 3278.8859264036223
+        }
+      },
+      "mean_whole_path_nll": 141.63859835895448
+    },
+    "source_increment": {
+      "groups": {
+        "first_binding": {
+          "actions": 1246,
+          "category_nll_sum": 597.1139649940926,
+          "correct_actions": 73,
+          "correct_lengths": 288,
+          "correct_rows": 468,
+          "fixed_margin_queries": 1246,
+          "fixed_margin_sum": -1493.6860090964562,
+          "forced_actions": 0,
+          "nll_sum": 3153.9702952139723,
+          "within_category_nll_sum": 2556.8563302198795
+        },
+        "reuse": {
+          "actions": 17526,
+          "category_nll_sum": 364.2347820377995,
+          "correct_actions": 16005,
+          "correct_lengths": 16752,
+          "correct_rows": 16005,
+          "fixed_margin_queries": 17526,
+          "fixed_margin_sum": 127399.44426190335,
+          "forced_actions": 0,
+          "nll_sum": 3705.895573194939,
+          "within_category_nll_sum": 3341.6607911571396
+        }
+      },
+      "mean_whole_path_nll": 107.18540419388924
+    }
+  }
+}

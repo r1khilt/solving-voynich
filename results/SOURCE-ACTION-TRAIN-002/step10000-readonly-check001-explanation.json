@@ -1,0 +1,38 @@
+{
+  "actual_check_invoked_once_after_PYTHONPATH_preflight_fix": true,
+  "campaign_completion_audit_pending": true,
+  "compact": {
+    "bytes": 15147,
+    "path": "results/SOURCE-ACTION-TRAIN-002/binding-92403-step10000.json",
+    "sha256": "bb27cff3254a6715570b4be36d7f5018f2d91dce4a4bcf039c124efb7cf42669"
+  },
+  "controls_metadata_equal_after_json_container_normalization": true,
+  "failure": {
+    "bytes": 414,
+    "path": "results/SOURCE-ACTION-TRAIN-002/step10000-readonly-check001-failure.json",
+    "sha256": "f6e6ea381a7340060ce7ec392ba9ce7709d32f776af6c83510ed06b6918b5ed6"
+  },
+  "full_check_retry_or_probability_replay": false,
+  "independent_expert_review": false,
+  "initial_direct_script_invocation_import_failed_before_start_receipt": true,
+  "neural_source_optimizer_calls": 0,
+  "paid_spend_usd": 0,
+  "reason": "Saved JSON contains lists; reconstructed control records contain tuples. Raw equality failed.",
+  "scope_completed_before_failure": [
+    "73 training dependency freeze",
+    "64 positive literal recovery metrics and independent integer DP",
+    "weight and validation file hashes",
+    "step10000 metadata"
+  ],
+  "scope_not_completed": [
+    "33 control literal metric replay",
+    "mean target path NLL arithmetic",
+    "finite weight and state tensor digest checks"
+  ],
+  "started": {
+    "bytes": 309,
+    "path": "results/SOURCE-ACTION-TRAIN-002/step10000-readonly-check001-started.json",
+    "sha256": "2418530dc514c4f6e8b8d6d29157c435d0cbf497fd2c4ad0c6c9f3bbcafa2b75"
+  },
+  "status": "FAIL_partial_checkpoint_check_preserved"
+}

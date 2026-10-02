@@ -1,0 +1,126 @@
+{
+  "all_source_teacher_cases_checked": 64,
+  "freeze": "4fce9f32ac646ff93a016f3d03d21c61d805ba20",
+  "independent_expert_review": false,
+  "inputs_checked": 114,
+  "minimal_circuit_or_historical_claim": false,
+  "neural_model_calls": 0,
+  "neural_paths_checked": 485,
+  "neural_teacher_forwards_recorded": 960,
+  "optimizer_or_sampling_calls": 0,
+  "paid_spend_usd": 0,
+  "paired_teacher_changes": {
+    "0": {
+      "cross_bias": {
+        "cases": 64,
+        "max_nll_change": 27.422154792238985,
+        "mean_absolute_nll_change": 7.715998286125473,
+        "mean_nll_change": -0.31922852711234384,
+        "min_nll_change": -24.648001796031167
+      },
+      "cross_bias_erase": {
+        "cases": 64,
+        "max_nll_change": 31.456639525874948,
+        "mean_absolute_nll_change": 11.092620331515029,
+        "mean_nll_change": 7.08002809188876,
+        "min_nll_change": -16.607806591335475
+      },
+      "sham": {
+        "cases": 64,
+        "max_nll_change": 0.0,
+        "mean_absolute_nll_change": 0.0,
+        "mean_nll_change": 0.0,
+        "min_nll_change": 0.0
+      },
+      "shuffle": {
+        "cases": 64,
+        "max_nll_change": 0.5995887327396758,
+        "mean_absolute_nll_change": 0.18694724632605997,
+        "mean_nll_change": 0.0030640548171074755,
+        "min_nll_change": -0.6212770014603848
+      }
+    },
+    "1000": {
+      "cross_bias": {
+        "cases": 64,
+        "max_nll_change": 37.426721953183716,
+        "mean_absolute_nll_change": 16.901296149133035,
+        "mean_nll_change": 16.901296149133035,
+        "min_nll_change": 0.9649789341441419
+      },
+      "cross_bias_erase": {
+        "cases": 64,
+        "max_nll_change": 44.31088840373056,
+        "mean_absolute_nll_change": 21.596626751088536,
+        "mean_nll_change": 21.596626751088536,
+        "min_nll_change": 3.310972336197324
+      },
+      "sham": {
+        "cases": 64,
+        "max_nll_change": 0.0,
+        "mean_absolute_nll_change": 0.0,
+        "mean_nll_change": 0.0,
+        "min_nll_change": 0.0
+      },
+      "shuffle": {
+        "cases": 64,
+        "max_nll_change": 0.0014422936597497937,
+        "mean_absolute_nll_change": 0.000389106029721642,
+        "mean_nll_change": -9.332793366123582e-05,
+        "min_nll_change": -0.001371811079792451
+      }
+    },
+    "4000": {
+      "cross_bias": {
+        "cases": 64,
+        "max_nll_change": 11.67684927304228,
+        "mean_absolute_nll_change": 3.7192838475848693,
+        "mean_nll_change": 3.2634599029457623,
+        "min_nll_change": -3.795064726926398
+      },
+      "cross_bias_erase": {
+        "cases": 64,
+        "max_nll_change": 20.93610950055276,
+        "mean_absolute_nll_change": 4.202021849970237,
+        "mean_nll_change": 2.757603716221684,
+        "min_nll_change": -6.24599951268803
+      },
+      "sham": {
+        "cases": 64,
+        "max_nll_change": 0.0,
+        "mean_absolute_nll_change": 0.0,
+        "mean_nll_change": 0.0,
+        "min_nll_change": 0.0
+      },
+      "shuffle": {
+        "cases": 64,
+        "max_nll_change": 0.0019094907576686637,
+        "mean_absolute_nll_change": 0.0005222968556772845,
+        "mean_nll_change": -0.0001383501410405774,
+        "min_nll_change": -0.0024889395143361526
+      }
+    }
+  },
+  "resources": {
+    "cpu_seconds": 66.450196,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1285029888,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 68.56964929198148
+  },
+  "result": {
+    "bytes": 2133377,
+    "path": "results/SOURCE-ACTION-CIPHER-001/result.json",
+    "sha256": "cf27aff4855df98b932c49da8f6f5ecd6c1a08603dee9244599e3039450c3a1a"
+  },
+  "saved_neural_teacher_arithmetic_only_not_logit_replay": true,
+  "source_lookup_reconstruction": true,
+  "source_paths_checked": 194,
+  "status": "PASS_saved_records_source_policy_and_metric_closure"
+}
