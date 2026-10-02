@@ -24,7 +24,9 @@ keeping literal encoding valid. Accepted candidates reconstruct reference policy
 for later regrowth; those counts do not enter label acceptance and are not chain-state
 densities. Neither a production mixture controller nor original-source label moves have
 run. The test does not establish lower cost, mixing, known-answer recovery, a circuit or
-decipherment. The unchanged full recovery audit and original96M GPU campaign remain live.
+decipherment. The full recovery audit was live at this qualification checkpoint; it subsequently passed
+all388 cells without changing the failed competence gates. The original96M GPU campaign
+continues unchanged.
 
 [Registration](READING-LABEL-TRANSPORT-THEORY-001.md),
 [derivation and preparation corrections](../research/reading-label-transport-2026-10-02.md),

@@ -6,8 +6,8 @@ mapping matches over their root-only control and common initial reading. **Neith
 recovers any complete record or used dictionary. Both inverse-competence gates fail.**
 This is a synthetic exposed development result; Voynich remains unsolved.
 
-The registered full replay audit is running under the same freeze. All results below are
-producer-reported until that one audit closes. No extension, retry, best-state selection,
+The registered full replay audit completed under the same freeze and passed all388 cells
+and347648 attempts. It confirmed every reported endpoint and gate. No extension, retry, best-state selection,
 Gold-conditioned proposal, criterion change or empirical label transport has occurred.
 
 | State | Edit operations | Correct used bindings /1246 | Exact records /128 | Complete used dictionaries /64 |
@@ -45,7 +45,14 @@ confidence or convergence. Repeated exposed cases do not supply a new holdout.
 [Registration](READING-REGROWTH-RECOVERY-001.md),
 [producer result](../../results/READING-REGROWTH-RECOVERY-001/result.json),
 [sealed endpoints](../../results/READING-REGROWTH-RECOVERY-001/sealed-cells.json),
-[audit launch](../../results/READING-REGROWTH-RECOVERY-001/audit-started.json).
+[audit launch](../../results/READING-REGROWTH-RECOVERY-001/audit-started.json),
+[full replay](../../results/READING-REGROWTH-RECOVERY-001/audit.json).
+
+The audit measured1821.399748wall/1816.840508CPU seconds and1141456896bytes
+peakRSS/$0. All140 frozen inputs were unchanged; maximum independent source-target
+log discrepancy5.4569682106375694e-12, within1e-9. It made no chain extension or new
+proposals. Same researcher and proposal backend remain limitations, with independent
+literal/source/metric calculations; this is not external expert replication.
 
 Next proposed diagnosis: coordinated label transport can revise early row assignments
 without rebuilding the whole text, while preserving segmentation and inventory. It therefore

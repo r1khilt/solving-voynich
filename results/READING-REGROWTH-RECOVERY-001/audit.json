@@ -1,0 +1,45 @@
+{
+  "attempts": 347648,
+  "cells": 388,
+  "freeze": "51d07611ba039df6b397f9c93d563fe6313ca78c",
+  "gates": {
+    "all_recovery_gates_pass": false,
+    "not_historical_or_posterior_convergence_gate": true,
+    "per_seed": {
+      "92821": {
+        "regrowth_better_edits_than_root_and_initial": true,
+        "regrowth_better_used_matches_than_root_and_initial": true,
+        "regrowth_competence": false
+      },
+      "93821": {
+        "regrowth_better_edits_than_root_and_initial": true,
+        "regrowth_better_used_matches_than_root_and_initial": true,
+        "regrowth_competence": false
+      }
+    }
+  },
+  "inputs_checked": 140,
+  "maximum_independent_joint_log_delta": 5.4569682106375694e-12,
+  "no_chain_extension": true,
+  "paid_spend_usd": 0,
+  "resources": {
+    "cpu_seconds": 1816.840508,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1141456896,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 1821.3997481249971
+  },
+  "result": {
+    "bytes": 589793,
+    "path": "results/READING-REGROWTH-RECOVERY-001/result.json",
+    "sha256": "e7eb9e78f7d8903a474c66404d1d0d64e47ad48d1967d8a0c70a2654b5088559"
+  },
+  "same_researcher_same_proposal_backend_not_expert_replication": true,
+  "status": "PASS_full_registered_recovery_replay"
+}
