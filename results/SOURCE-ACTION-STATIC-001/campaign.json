@@ -1,0 +1,32 @@
+{
+  "freeze": "996dc94392e526f637548085ddffc088e2281fa8",
+  "no_automatic_language_training": true,
+  "paid_spend_usd": 0,
+  "passing": [
+    "fixed-retain",
+    "fixed-clear"
+  ],
+  "processes": [
+    {
+      "arm": "fixed-retain",
+      "log": {
+        "bytes": 735,
+        "path": "outputs/SOURCE-ACTION-STATIC-001/fixed-retain.log",
+        "sha256": "cd3b7db3a7e359ee16c067f0f0e31ff7d543c0853f28f4c50d16d7c6d1ed0a77"
+      },
+      "outer_timeout": false,
+      "returncode": 0
+    },
+    {
+      "arm": "fixed-clear",
+      "log": {
+        "bytes": 727,
+        "path": "outputs/SOURCE-ACTION-STATIC-001/fixed-clear.log",
+        "sha256": "16a829e42946c570b4849a537ccc444ff80df24bee96e4c1119dff8e4686bcf3"
+      },
+      "outer_timeout": false,
+      "returncode": 0
+    }
+  ],
+  "prospective_preference": "fixed-retain"
+}

@@ -1,0 +1,18 @@
+# SOURCE-ACTION-TRAIN-002 — fresh fixed-geometry paired 96M training
+
+Prospective registration. Question: after a separately measured memory correction, can explicit access to past shared dictionary bindings improve actual unknown-key source recovery across two seeds? Exploratory; no adequately trained model exists from failed SOURCE-ACTION-TRAIN-001. [New complete design](../research/source-action-static-training-design-2026-10-02.md), original linked scientific design and memory review are binding.
+
+Require original source/cache qualification and SOURCE-ACTION-STATIC-001's two terminal 256-update results plus hash/counter/resource closed check, selecting predeclared fixed-retain policy. Keep original failed runs, source/model/cache definitions, original audits and all prior registered dependencies unchanged. Freeze the exact `BASE_PATHS` of `scripts/run_source_action_train002.py` at a remotely published preparation revision; after one preparation and one input audit, freeze BASE_PATHS plus inputs/prepare/input-audit at another exact remotely published training revision.
+
+Four fresh sequential 96,039,982-parameter fits, seeds92403/92409 × binding query on/off, same paired initial weights and episode stream. Exactly20,000updates ×batch4 per fit, 320,000total episodes. Sixty-four new development keys92421 exclude prior two raw/canonical allocations; training excludes all three. Source is the audited6497939-letter twelve-author pool; eligible Pliny351029letters remain EXPOSED development. Thirty-three fixed shuffle/IID/ambiguous controls at each of five checkpoints, seed92451. Complete-path loss, free literal recovery, full penalties for dead ends, no unused-row score, no target-length decoding, no repaired path or whole-key marginal claim. Thresholds/selection/architecture/optimizer exactly in the linked design.
+
+Training geometry4×2×448observed glyphs/448queries after CPU padding. Every update checks memory after packing/forward/backward/update/cleanup; gradients/loss/pack released, retain training cache. Clear unused cache after completed checkpoint evaluation/reference only. Eachfit8wallhours/24000absoluteCPU/4GiBhost/8GiBsampleddriver/3GiBprivatebulk; campaign33wallhours, no retries/resume/extensions. Oneprepare/inputaudit600wall500absoluteCPU each; completionaudit10800wall9000absoluteCPU. Require15GiBfree disk, CPU2/OMP1/OpenBLAS1/MPS required/fallbackdisabled, local zeroUSD/noAPI/download/reservedauthor/manuscript. Sampled memory is not continuous peak certification.
+
+Expected four-fit update cost about16.41hours from the actualfixed-geometry stress, plus about89minutes naive worst cached reading evaluation and source/reference/checkpoint/thermal costs; estimates not promises. Audit PASS and genuine recovery benefit reported separately; no historical or circuit qualification.
+
+    OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m scripts.run_source_action_train002 prepare --freeze VERIFIED_PREPARATION_REVISION
+    OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m scripts.run_source_action_train002 audit-inputs --freeze VERIFIED_PREPARATION_REVISION
+    OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTORCH_ENABLE_MPS_FALLBACK=0 caffeinate -i .venv/bin/python -u -m scripts.run_source_action_train002 campaign --freeze VERIFIED_TRAINING_REVISION
+    OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m scripts.audit_source_action_train002
+
+All starts exclusive; each scientific stage once only. Preserve failures rather than restarting001 or002. Publish compact receipts/provenance/notebook; keep large weights, source text, predictions and ledgers ignored and hash-bound. Voynich remains unsolved.

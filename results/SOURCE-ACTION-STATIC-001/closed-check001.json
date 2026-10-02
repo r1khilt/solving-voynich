@@ -1,0 +1,50 @@
+{
+  "actual_new_model_or_optimizer_calls": 0,
+  "campaign": {
+    "bytes": 833,
+    "path": "results/SOURCE-ACTION-STATIC-001/campaign.json",
+    "sha256": "e1317d132a421bd72975ac5700e409761a3e7d1df59f3e5790a796b8fde0ce1f"
+  },
+  "frozen_paths": 61,
+  "full_optimizer_or_cpu_numeric_replay_claimed": false,
+  "paid_spend_usd": 0,
+  "resources": {
+    "cpu_seconds": 0.14366600000000002,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 211435520,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.7485246249707416
+  },
+  "rows": [
+    {
+      "all256_phase_and_objective_rows_rechecked": true,
+      "arm": "fixed-retain",
+      "numeric_claims_hash_bound_not_reexecuted": true,
+      "result": {
+        "bytes": 12191,
+        "path": "results/SOURCE-ACTION-STATIC-001/fixed-retain.json",
+        "sha256": "cf25e3a466b14493d1f412b69ec983401d4914798f43d57777cc5e539dece07a"
+      },
+      "trace_rows": 1282
+    },
+    {
+      "all256_phase_and_objective_rows_rechecked": true,
+      "arm": "fixed-clear",
+      "numeric_claims_hash_bound_not_reexecuted": true,
+      "result": {
+        "bytes": 12190,
+        "path": "results/SOURCE-ACTION-STATIC-001/fixed-clear.json",
+        "sha256": "715155793cfc86b445d8aac898dba5b6349e0e0402f9d15b3475833ef5ed1e71"
+      },
+      "trace_rows": 1282
+    }
+  ],
+  "selected_policy": "fixed-retain",
+  "status": "PASS_fixed_geometry_counter_resource_and_freeze_recheck"
+}
