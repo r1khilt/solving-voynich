@@ -1,0 +1,60 @@
+{
+  "all_36_keys_enumerated_per_case": true,
+  "cases": 450,
+  "distinct_joint_text_instances": 2642,
+  "experiment": "POSTERIOR-KEY-READING-THEORY-001",
+  "inputs": [
+    {
+      "bytes": 3858,
+      "path": "src/voynich/posterior_key_reading.py",
+      "sha256": "3e776e82aba4a3adb12efed81b57c1c86c283b8f7ecf9ce1339c7293b86d329c"
+    },
+    {
+      "bytes": 6201,
+      "path": "tests/test_posterior_key_reading.py",
+      "sha256": "bce4f581171b341e710b829c182dce27e0060e48fd2796765b6af4d3cf1484cf"
+    },
+    {
+      "bytes": 8523,
+      "path": "src/voynich/shared_key_mixture.py",
+      "sha256": "75b55db7130f539a1a5c6b90608f88ee8dfebf00a42bbbb8fe878a15dbd0df2b"
+    },
+    {
+      "bytes": 7061,
+      "path": "scripts/check_posterior_key_reading001.py",
+      "sha256": "e4c774381b0ec0dfb6709d969683ea52f30590e359536d3bb6efe434cf1d8bda"
+    },
+    {
+      "bytes": 8438,
+      "path": "docs/research/posterior-key-reading-2026-10-01.md",
+      "sha256": "893a9033930e2b8ce11a35b8c1edf9fcb0af7e7361023ee38c61d8626e9c60c0"
+    }
+  ],
+  "maximum_empirical_to_exact_key_tv": "28757/39031",
+  "maximum_empirical_to_exact_text_tv": "4904467219693/6664746211200",
+  "maximum_float_evidence_delta": 5.329070518200751e-15,
+  "maximum_float_probability_delta": 1.942890293094024e-15,
+  "maximum_naive_key_tv": "25969/35259",
+  "naive_reconditioning_changes_key_law_cases": 384,
+  "no_original_source_or_empirical_data_access": true,
+  "no_posterior_calibration_or_recovery_claim": true,
+  "paid_spend_usd": 0,
+  "rational_reweighting_and_probability_conservation": true,
+  "rational_tv_contraction": true,
+  "resources": {
+    "cpu_seconds": 0.09865299999999999,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 205717504,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.10504866600967944
+  },
+  "status": "PASS_rational_laws_and_float_reading_interface",
+  "supported_key_instances": 2516,
+  "two_context_modes": true
+}
