@@ -5,6 +5,30 @@ This supplements label revision by changing segmentation and repeated-letter str
 The current all-pairs diagnostic, existing training and completed recovery remain unchanged.
 Further primary-method/Voynich review and finite controls are required before attempting it.
 
+## Initial primary review while the fixed diagnostic runs
+
+[Neklyudov et al. (2020), section2 and section3.1–3.2 Tricks2–3](https://proceedings.mlr.press/v119/neklyudov20a/neklyudov20a.pdf)
+describes involutions with auxiliary map selection and inverse transformations. State-dependent
+selection requires its reverse factor. Our proposed fixed uniform triplet and state-determined
+branch avoid a separate learned selector, but the actual finite map still needs qualification.
+This review read selected main-text derivations, not the separately referenced supplementB.5.
+No learned-flow or continuous reversible-jump performance is transferred. A changing number
+of discrete letters does not introduce a continuous Jacobian into our counting-measure target;
+the full target's prior and length factors still matter. That last statement is our application.
+
+[Wingate, Stuhlmüller and Goodman, author Revision3 (February8,2014), section2–2.1 and Algorithm2](https://web.stanford.edu/~ngoodman/papers/lightweight-mcmc-aistats2011.pdf)
+explicitly accounts for trace-size selection and fresh/stale choices in its generic stochastic
+trace proposal. Our deterministic global rewrite is a different proposal, so its generic
+correction cannot simply be copied, or dismissed because both operations change length.
+The proposed uniform triplet/involution construction must supply its own reverse-law proof.
+The version differs from the original2011 proceedings copy. No probabilistic-language speed
+or decipherment result is asserted for our operator.
+
+The [existing source-key/Voynich review](source-key-revision-2026-10-01.md) covers substitution
+modification and why persistent dictionary dependencies invalidate arbitrary local splices.
+These papers motivate exact structural revision; they do not establish our synthetic channel
+or a historical Latin interpretation. Further independent finite boundary cases remain needed.
+
 ## Why this could address a different obstruction
 
 Labels preserve source lengths, unit boundaries and the partition of positions into equal
