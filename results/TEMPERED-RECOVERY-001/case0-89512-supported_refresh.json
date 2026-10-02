@@ -1,0 +1,56 @@
+{
+  "arm": "supported_refresh",
+  "case": 0,
+  "compiler": {
+    "dictionary_count": "152932040631098298848528777363760000",
+    "prior_support_probability": "301028361660482605128276914375/42544420315215972280137041117184",
+    "stats": {
+      "apply_entries": 0,
+      "apply_steps": 431709,
+      "collected_nodes": 103571,
+      "collection_work": 555100,
+      "collections": 17,
+      "created_nodes": 111914,
+      "maximum_apply_entries": 30251,
+      "maximum_live_nodes": 17768,
+      "maximum_owned_envelope": 26987264,
+      "nodes": 8345,
+      "polynomial_cells": 81136,
+      "polynomial_entries": 3339,
+      "polynomial_work": 227314
+    },
+    "status": "compiled"
+  },
+  "output": {
+    "bytes": 24091,
+    "path": "outputs/TEMPERED-RECOVERY-001/case0-89512-supported_refresh.json.gz",
+    "sha256": "4f43afc0fabc01c409b37d06d40035ef5e7678c79be3b2539c903f31a5926333"
+  },
+  "prediction_status": "read",
+  "recovery": {
+    "bank_contains_complete_used_key": false,
+    "edit_errors_with_failed_readings_counted_full_length": 119,
+    "exact_records": 0,
+    "kind": "positive",
+    "selected_complete_used_key": false,
+    "selected_matches": 0,
+    "true_letters": 128,
+    "used_rows": 18
+  },
+  "seed": 89512,
+  "summary": {
+    "accepted_changes": 11010,
+    "completed_stages": 64,
+    "edges": 162717971,
+    "final_distinct_keys": 92,
+    "final_maximum_log_likelihood": -351.0975426698469,
+    "final_minimum_log_likelihood": -375.8595226127653,
+    "log_evidence_estimate": -424.11064750432183,
+    "maximum_incremental_weight": 0.01814362092161533,
+    "minimum_incremental_ess": 114.56155849486049,
+    "status": "complete_tempered_particles",
+    "support_rejected_without_scoring": 5410,
+    "supported_refresh_draws": 970,
+    "tables": 27486
+  }
+}

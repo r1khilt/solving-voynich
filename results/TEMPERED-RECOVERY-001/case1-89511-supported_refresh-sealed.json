@@ -1,0 +1,46 @@
+{
+  "arm": "supported_refresh",
+  "case": 1,
+  "compiler": {
+    "dictionary_count": "92059072298618801277545317443646800",
+    "prior_support_probability": "483219284342292355744233000775/113451787507242592747032109645824",
+    "stats": {
+      "apply_entries": 0,
+      "apply_steps": 1392803,
+      "collected_nodes": 325554,
+      "collection_work": 4376345,
+      "collections": 46,
+      "created_nodes": 359680,
+      "maximum_apply_entries": 48092,
+      "maximum_live_nodes": 37265,
+      "maximum_owned_envelope": 46228480,
+      "nodes": 34128,
+      "polynomial_cells": 238839,
+      "polynomial_entries": 13082,
+      "polynomial_work": 561804
+    },
+    "status": "compiled"
+  },
+  "output": {
+    "bytes": 24344,
+    "path": "outputs/TEMPERED-RECOVERY-001/case1-89511-supported_refresh.json.gz",
+    "sha256": "108d178b0dc048d85de1dc5012ce2574a7b287edd6b35fbc4548821ae313a5fd"
+  },
+  "prediction_status": "read",
+  "seed": 89511,
+  "summary": {
+    "accepted_changes": 11352,
+    "completed_stages": 64,
+    "edges": 468012045,
+    "final_distinct_keys": 96,
+    "final_maximum_log_likelihood": -422.9297670467571,
+    "final_minimum_log_likelihood": -455.7986741526832,
+    "log_evidence_estimate": -501.40676693618605,
+    "maximum_incremental_weight": 0.02050271788123662,
+    "minimum_incremental_ess": 110.15851055103279,
+    "status": "complete_tempered_particles",
+    "support_rejected_without_scoring": 3871,
+    "supported_refresh_draws": 1067,
+    "tables": 29025
+  }
+}

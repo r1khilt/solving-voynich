@@ -1,0 +1,26 @@
+{
+  "absolute_cpu_limit_seconds": 10000,
+  "actual_exec_session": 73336,
+  "audit_started": {
+    "bytes": 94,
+    "path": "results/TEMPERED-RECOVERY-001/audit-started.json",
+    "sha256": "984c456780ad86ffaeff8a3f031f9df4778240e591223a2f0744a0c5bc1a5312"
+  },
+  "audit_status": "ACTIVE_not_yet_passed",
+  "caffeinate_pid": 89906,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 caffeinate -i .venv/bin/python -m scripts.audit_tempered_recovery001",
+  "observed_live_cpu_percent": 99.3,
+  "observed_live_elapsed": "01:35",
+  "observed_live_rss_kib": 1224176,
+  "observed_unix": 1790918661.320402,
+  "one_audit_no_retry": true,
+  "paid_spend_usd": 0,
+  "peak_rss_limit_bytes": 2147483648,
+  "python_pid": 89905,
+  "result": {
+    "bytes": 21899,
+    "path": "results/TEMPERED-RECOVERY-001/result.json",
+    "sha256": "e59e3a2ef4bf3f73780f496030b1eeb842903e87cee894b50be329b17b2ecd2f"
+  },
+  "wall_limit_seconds": 10800
+}

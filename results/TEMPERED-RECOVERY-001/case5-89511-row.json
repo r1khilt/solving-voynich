@@ -1,0 +1,46 @@
+{
+  "arm": "row",
+  "case": 5,
+  "compiler": {
+    "error": "Inventory collection-work cap exhausted",
+    "no_partial_graph_count_or_sampler": true,
+    "stats": {
+      "apply_entries": 9940,
+      "apply_steps": 4426392,
+      "collected_nodes": 862633,
+      "collection_work": 20005640,
+      "collections": 160,
+      "created_nodes": 894781,
+      "maximum_apply_entries": 43658,
+      "maximum_live_nodes": 52786,
+      "maximum_owned_envelope": 63333632,
+      "nodes": 32150,
+      "polynomial_cells": 0,
+      "polynomial_entries": 0,
+      "polynomial_work": 0
+    },
+    "status": "compiler_cap"
+  },
+  "output": {
+    "bytes": 310,
+    "path": "outputs/TEMPERED-RECOVERY-001/case5-89511-row.json.gz",
+    "sha256": "7dbfb5a3145abb98b1cd7360d9508f5351ce84c7623ddfbb23f7c0f69293a466"
+  },
+  "prediction_status": "no_complete_key",
+  "recovery": {
+    "accuracy_not_defined": true,
+    "kind": "shuffle"
+  },
+  "seed": 89511,
+  "summary": {
+    "accepted_changes": 0,
+    "completed_stages": 0,
+    "edges": 0,
+    "maximum_incremental_weight": null,
+    "minimum_incremental_ess": null,
+    "status": "compiler_cap",
+    "support_rejected_without_scoring": 0,
+    "supported_refresh_draws": 0,
+    "tables": 0
+  }
+}
