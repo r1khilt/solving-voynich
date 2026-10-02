@@ -1,0 +1,137 @@
+{
+  "arm": "binding-92403",
+  "expert_independent_audit": false,
+  "freeze": "3ab56fb85b18231597b9fbc64c40c1fbff504408",
+  "full_completion_audit_pending": true,
+  "model_or_optimizer_calls": 0,
+  "numeric_model_probability_replay_performed": false,
+  "observations": [
+    {
+      "compact": {
+        "bytes": 15198,
+        "path": "results/SOURCE-ACTION-TRAIN-002/binding-92403-step0.json",
+        "sha256": "4fa98145dbf0429cc0a6b164d31e70afafd4b1098e7fb42283d47283b872d569"
+      },
+      "controls": {
+        "conditional_path_probability_is_not_cipher_evidence": true,
+        "groups": {
+          "iid_glyphs": {
+            "cases": 16,
+            "complete_paths": 4,
+            "dead_ends": 12
+          },
+          "unrecoverable_ambiguity": {
+            "cases": 1,
+            "complete_paths": 1,
+            "dead_ends": 0
+          },
+          "within_record_shuffle": {
+            "cases": 16,
+            "complete_paths": 4,
+            "dead_ends": 12
+          }
+        },
+        "language_or_semantic_classification_claimed": false
+      },
+      "mean_whole_path_nll": 776.4146806842225,
+      "recovery": {
+        "complete_readings": 16,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 19984,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 48,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 14,
+        "used_rows": 1246
+      },
+      "short_same_weight_cpu_double_delta": 1.372460849302648e-06,
+      "step": 0,
+      "validation": {
+        "bytes": 38749,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step0-validation.json.gz",
+        "sha256": "efd928266ee9402d7fa83548b3b1a001f8db723b6877eabfb9d49ece893b0650"
+      },
+      "weights": {
+        "bytes": 384214743,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step0.pt",
+        "sha256": "97ae781a1360f5c1836e5d33576efc9ced73dbf0ea287edb70d7ab711509c8ef"
+      }
+    },
+    {
+      "compact": {
+        "bytes": 15146,
+        "path": "results/SOURCE-ACTION-TRAIN-002/binding-92403-step1000.json",
+        "sha256": "b7a6d1f70eeb259d6b4f07a3b1346c574c77e97142a2253af7e6d82af8c9bd01"
+      },
+      "controls": {
+        "conditional_path_probability_is_not_cipher_evidence": true,
+        "groups": {
+          "iid_glyphs": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          },
+          "unrecoverable_ambiguity": {
+            "cases": 1,
+            "complete_paths": 1,
+            "dead_ends": 0
+          },
+          "within_record_shuffle": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          }
+        },
+        "language_or_semantic_classification_claimed": false
+      },
+      "mean_whole_path_nll": 171.24960103501584,
+      "recovery": {
+        "complete_readings": 4,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 18557,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 60,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 3,
+        "used_rows": 1246
+      },
+      "short_same_weight_cpu_double_delta": 9.112861002691375e-06,
+      "step": 1000,
+      "validation": {
+        "bytes": 28052,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step1000-validation.json.gz",
+        "sha256": "1bc212629090c6df8f73d5ccaac65ee532b24481378af317dd402dee9431c7f1"
+      },
+      "weights": {
+        "bytes": 384214743,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step1000.pt",
+        "sha256": "355b652e7be190094d45116f8dacb8080685dc9687631766b584a16f41c35d0a"
+      }
+    }
+  ],
+  "paid_spend_usd": 0,
+  "recovery_qualified": false,
+  "resources": {
+    "cpu_seconds": 8.173672,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1056636928,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 8.220740667020436
+  },
+  "status": "PASS_readonly_initial_and_1000_literal_metric_weight_hash_checks",
+  "training_complete": false
+}

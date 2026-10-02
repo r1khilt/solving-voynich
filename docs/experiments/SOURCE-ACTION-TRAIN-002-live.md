@@ -13,3 +13,9 @@ Next verify this input-publication revision at exactorigin and launch ONE bounde
 Revision `3ab56fb85b18231597b9fbc64c40c1fbff504408` was verified at origin before the single four-fit campaign (session89328, parent6457, first fit6533). The first arm, binding92403, has completed **486 updates** on 1944 generated episodes/555584 source letters. Sampled driver maximum 5.952GB and peak host RSS 1.593GB remain within registered bounds so far. All73frozen inputs unchanged. [Read-only launch receipt](../../results/SOURCE-ACTION-TRAIN-002/launch-checkpoint001.json) binds this partial observation, not a full replay or future guarantee.
 
 The only saved development evaluation is still stepzero: no exact record or complete used-key recovery. The first trained evaluation is fixed at1000 updates. Training continues under the original20k-per-arm limits; all four arms and the completion audit are pending. Prior failed campaign remains closed, and Voynich remains unsolved.
+
+## First trained checkpoint: guided improvement, free reading still fails
+
+At1000 updates, the first binding arm's fixed64development whole-path NLL fell776.415→171.250. Greedy complete readings fell16→4/64; exact records and complete used-key recoveries remain zero. The full-failure-penalty edit count is18557/18772trueletters, versus19984initially; complete wrong outputs can exceed true length. This is not a capacity/recovery PASS. Other arms and later checkpoints are pending.
+
+[Read-only intermediate check](../../results/SOURCE-ACTION-TRAIN-002/step1000-readonly-check001.json) verifies both saved checkpoint hashes/finite weights, all0/1000 literal outputs/independent edit metrics/controls and score arithmetic in8.221wall8.174CPU seconds/1.057GBhost/$0. It performs no new model or optimizer calls and does not replace the planned full probability replay. Updated short SAME-weight CPUdouble comparison reported9.113e-6≤.002. Training continues without an adaptive gate or data change.
