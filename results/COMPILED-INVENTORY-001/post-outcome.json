@@ -1,0 +1,59 @@
+{
+  "actual_corpus_compiler_or_source_calls": 0,
+  "all_bulk_hash_bound_and_git_ignored": true,
+  "archives": 8,
+  "audit": {
+    "bytes": 921,
+    "path": "results/COMPILED-INVENTORY-001/audit.json",
+    "sha256": "e27cba2244408813b3eef63e4d2039abfaff5d38d910889d6c8dd2d5000c9f11"
+  },
+  "bulk_bytes": 817730,
+  "final_graph_diagnostics": [
+    {
+      "case": 0,
+      "dictionary_count": "169020680869695576246778059178849200",
+      "final_record_and_variable_union_nodes": 6648,
+      "final_root_reachable_nodes": 3267,
+      "fraction_unused_by_final_root": 0.9678166128142486,
+      "order": "natural",
+      "prior_support_probability": "18631027432726584683286823101725/2382487537652094447687674302562304",
+      "prior_support_probability_float": 0.007819989459876537,
+      "retained_nodes": 101512
+    },
+    {
+      "case": 0,
+      "dictionary_count": "169020680869695576246778059178849200",
+      "final_record_and_variable_union_nodes": 5953,
+      "final_root_reachable_nodes": 2673,
+      "fraction_unused_by_final_root": 0.9659351582810828,
+      "order": "frequency",
+      "prior_support_probability": "18631027432726584683286823101725/2382487537652094447687674302562304",
+      "prior_support_probability_float": 0.007819989459876537,
+      "retained_nodes": 78468
+    }
+  ],
+  "frozen_paths": 220,
+  "interpretation": "Many retained nodes are unused by the completed final root. This does not bound the largest graph or live roots during compilation, nor prove a collector will pass capped cases.",
+  "paid_spend_usd": 0,
+  "result": {
+    "bytes": 32962,
+    "path": "results/COMPILED-INVENTORY-001/result.json",
+    "sha256": "a3d74b6f63be2dea869189018a8da869ba0342710cc2d68098f97cb85c170690"
+  },
+  "status": "PASS_closed_compiler_publication",
+  "summary": {
+    "all_queries_exposed_development": true,
+    "calls": 8,
+    "compiled_calls": 2,
+    "compiler_caps": 6,
+    "engineering_gate": "FAIL",
+    "recovery_or_historical_claim": false,
+    "variable_order_count_invariance": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "whole_record_supported_sampled_keys": 64
+  }
+}
