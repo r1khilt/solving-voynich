@@ -62,6 +62,7 @@ def test_campaign_requires_source_matched_benchmark_and_mps(
     monkeypatch.setattr(campaign, "BENCHMARK_ADMITTED", False)
     with pytest.raises(RuntimeError, match="benchmark admission closed"):
         campaign.benchmark(config, tmp_path / "results", tmp_path / "outputs")
+    monkeypatch.setattr(campaign.torch.backends.mps, "is_available", lambda: False)
     with pytest.raises(RuntimeError, match="MPS required"):
         campaign.run(config, tmp_path / "results", tmp_path / "outputs")
     assert not (tmp_path / "results").exists()
