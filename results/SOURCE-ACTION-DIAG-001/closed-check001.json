@@ -1,0 +1,107 @@
+{
+  "checker": {
+    "path": "outputs/SOURCE-ACTION-DIAG-001/readonly-close-source.py",
+    "sha256": "d9eac854f132bc6c6ff005c1fed3a55abbe4583fe2aab482f202dbecfab99577"
+  },
+  "checkpoints": [
+    {
+      "cases": 64,
+      "literal_first_error_recomputed": true,
+      "saved_arrays_recomputed": true,
+      "step": 0
+    },
+    {
+      "cases": 64,
+      "literal_first_error_recomputed": true,
+      "saved_arrays_recomputed": true,
+      "step": 1000
+    }
+  ],
+  "derived": [
+    {
+      "first_error_shared_prefix_counts": {
+        "0": 64
+      },
+      "paired_whole_path_nll_change": {
+        "erase": {
+          "cases": 64,
+          "maximum": 20.63033208176512,
+          "mean": 6.978184023933667,
+          "mean_absolute": 7.605582977942539,
+          "minimum": -7.541647148045968,
+          "worsened_cases": 57
+        },
+        "rotate": {
+          "cases": 64,
+          "maximum": 19.872688575931306,
+          "mean": -0.5954969724648445,
+          "mean_absolute": 5.587462692856854,
+          "minimum": -21.485838568515305,
+          "worsened_cases": 26
+        }
+      },
+      "step": 0
+    },
+    {
+      "first_error_shared_prefix_counts": {
+        "0": 59,
+        "1": 5
+      },
+      "paired_whole_path_nll_change": {
+        "erase": {
+          "cases": 64,
+          "maximum": 9.23030642222244,
+          "mean": 1.268302731490278,
+          "mean_absolute": 2.2756027873385247,
+          "minimum": -6.765569136952678,
+          "worsened_cases": 46
+        },
+        "rotate": {
+          "cases": 64,
+          "maximum": 1.2411719091512623,
+          "mean": -0.01959020259327282,
+          "mean_absolute": 0.30273639862998314,
+          "minimum": -0.7686705087523364,
+          "worsened_cases": 31
+        }
+      },
+      "step": 1000
+    }
+  ],
+  "forward_phases_verified": 512,
+  "fraction_guided_loss_gain_from_reuse": 0.9866151373907461,
+  "freeze": "517251cda522725d2243aa378804d630113a655a",
+  "frozen_inputs_verified": 81,
+  "guided_loss_gain_by_group": {
+    "first_binding": 518.4032942309409,
+    "reuse": 38212.161924461405
+  },
+  "independent_expert_audit": false,
+  "new_model_or_optimizer_calls": 0,
+  "new_numeric_model_probability_replay": false,
+  "paid_spend_usd": 0,
+  "resources": {
+    "cpu_seconds": 3.872135,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 649773056,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 3.8752944170264527
+  },
+  "result": {
+    "bytes": 459491,
+    "path": "results/SOURCE-ACTION-DIAG-001/result.json",
+    "sha256": "cf75e4b8d3129d49025d9c1355bdc56f80aee23fdb975c9e92e0e66b6141cedc"
+  },
+  "started": {
+    "bytes": 114,
+    "path": "results/SOURCE-ACTION-DIAG-001/started.json",
+    "sha256": "b205a82a3723e2736d6b9817051464bbeadaf61f9ea1f3852bb471f016cd6ab4"
+  },
+  "status": "PASS_readonly_all_cases_arrays_freeze_hash_and_phase_checks"
+}

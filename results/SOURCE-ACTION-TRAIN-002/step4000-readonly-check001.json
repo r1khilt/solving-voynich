@@ -1,0 +1,74 @@
+{
+  "checker_sha256": "d9eac854f132bc6c6ff005c1fed3a55abbe4583fe2aab482f202dbecfab99577",
+  "compact": {
+    "bytes": 15146,
+    "path": "results/SOURCE-ACTION-TRAIN-002/binding-92403-step4000.json",
+    "sha256": "02256058a250ab2924d5ad93066f006ff21541d92f181e3669bdde17b4154fb8"
+  },
+  "controls": {
+    "conditional_path_probability_is_not_cipher_evidence": true,
+    "groups": {
+      "iid_glyphs": {
+        "cases": 16,
+        "complete_paths": 0,
+        "dead_ends": 16
+      },
+      "unrecoverable_ambiguity": {
+        "cases": 1,
+        "complete_paths": 1,
+        "dead_ends": 0
+      },
+      "within_record_shuffle": {
+        "cases": 16,
+        "complete_paths": 0,
+        "dead_ends": 16
+      }
+    },
+    "language_or_semantic_classification_claimed": false
+  },
+  "expert_independent_audit": false,
+  "full_completion_audit_pending": true,
+  "mean_whole_path_nll": 162.79580211128444,
+  "new_model_or_optimizer_calls": 0,
+  "numeric_model_probability_replay": false,
+  "paid_spend_usd": 0,
+  "recovery": {
+    "complete_readings": 4,
+    "complete_used_keys": 0,
+    "edits_with_failed_readings_full_length": 18537,
+    "episodes": 64,
+    "exact_records": 0,
+    "failed_readings": 60,
+    "failure_penalty_is_full_length": true,
+    "record_attempts": 128,
+    "true_letters": 18772,
+    "unused_rows_not_scored": true,
+    "used_matches_with_failed_readings_zero": 5,
+    "used_rows": 1246
+  },
+  "resource_clock_includes_diagnostic_closure": true,
+  "resources": {
+    "cpu_seconds": 7.404832,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1068433408,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 7.384990416991059
+  },
+  "status": "PASS_readonly_4000_literal_metric_weight_hash_checks",
+  "validation": {
+    "bytes": 28122,
+    "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step4000-validation.json.gz",
+    "sha256": "05ad1595a71822018a6e2f978c977084cdcfad929cc36192f36190e05a65fc24"
+  },
+  "weights": {
+    "bytes": 384214743,
+    "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step4000.pt",
+    "sha256": "adb767070cb3ff6cf97af1150c6dd12e8fcfee5be7c79a98b4e58d4326631cfb"
+  }
+}
