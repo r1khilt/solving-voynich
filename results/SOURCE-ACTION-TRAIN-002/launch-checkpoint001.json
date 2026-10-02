@@ -1,0 +1,85 @@
+{
+  "status": "RUNNING_partial_observation_not_completion_audit",
+  "observed_unix": 1790935186.026857,
+  "freeze": "3ab56fb85b18231597b9fbc64c40c1fbff504408",
+  "frozen_paths_verified": 73,
+  "session_id": 89328,
+  "campaign_pid": 6457,
+  "first_fit_pid": 6533,
+  "arms": [
+    "binding-92403",
+    "no-binding-92403",
+    "binding-92409",
+    "no-binding-92409"
+  ],
+  "running_arm": "binding-92403",
+  "completed_updates": 486,
+  "episodes_seen": 1944,
+  "source_letters": 555584,
+  "latest_optimizer": {
+    "stage": "optimizer",
+    "step": 486,
+    "whole_path_nll": 225.38607788085938,
+    "lr": 0.0002998610269217465,
+    "preclip_norm": 344.823486328125,
+    "step_wall_seconds": 0.7710774580482394,
+    "episodes_seen": 1944,
+    "source_letters": 555584,
+    "data_sha256": "d5b42e7aa16175677194fe1c859802efbab2aa9d7de0d600f3de3039a8fa0aef"
+  },
+  "observed_resources": {
+    "max_driver_bytes": 5951651840,
+    "peak_rss_bytes": 1593016320,
+    "last": {
+      "stage": "forward",
+      "driver_bytes": 5951651840,
+      "owned_bulk_bytes": 385553722,
+      "wall_seconds": 405.66680608398747,
+      "cpu_seconds": 140.309696,
+      "peak_rss_bytes": 1593016320,
+      "python": "3.12.13",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "paid_spend_usd": 0,
+      "thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": null
+      },
+      "step": 487
+    }
+  },
+  "trace_prefix": {
+    "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-trace.jsonl",
+    "bytes": 1082754,
+    "sha256": "f265647dc96c41d3f0e6584980ce6805a3306962335ca41eabd46a341696e990",
+    "rows": 2973,
+    "mutable_live_file": true
+  },
+  "receipts": [
+    {
+      "path": "/Users/rikhil/coding/solving-voynich/results/SOURCE-ACTION-TRAIN-002/campaign-started.json",
+      "bytes": 220,
+      "sha256": "4b53c8ca211588a2675f3e829169882456b2c728e91873d152027c2889ce7469"
+    },
+    {
+      "path": "/Users/rikhil/coding/solving-voynich/results/SOURCE-ACTION-TRAIN-002/binding-92403-started.json",
+      "bytes": 115,
+      "sha256": "0c04abfd254fb39651a7292576c68fe7a676b224196778aeb635ddc7b9f96808"
+    },
+    {
+      "path": "/Users/rikhil/coding/solving-voynich/results/SOURCE-ACTION-TRAIN-002/binding-92403-step0.json",
+      "bytes": 15198,
+      "sha256": "4fa98145dbf0429cc0a6b164d31e70afafd4b1098e7fb42283d47283b872d569"
+    }
+  ],
+  "step_zero": {
+    "mean_whole_path_nll": 776.4146806842225,
+    "exact_records": 0,
+    "complete_used_keys": 0
+  },
+  "paid_spend_usd": 0,
+  "training_complete": false,
+  "recovery_qualified": false,
+  "historical_reading_claim": false,
+  "same_author_readonly_observation": true
+}
