@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-10-01 PDT (whole-record support compiler engineering FAIL, full audit PASS; safe collection successor proposed; goal active; Voynich unsolved).
+Last updated: 2026-10-01 PDT (rolling compiler implemented/finitely qualified; separate engineering002 prepared, not run; goal active; Voynich unsolved).
 
 ## Current state
+
+- **COMPILED-INVENTORY-002 prepared, NOT run.** Newrolling two-suffix/protected-root collector preserves42variables/earlierrecords/terminals; staleApplycachecleared/atomicIDremap/sealedbeforeprofile. Old150klive-node/300kcache/3MApply/512MiB unchanged;20Madditionalcollectionwork/600wall500absoluteCPU2GiB128MiB bounds. Finiteinterval1+16each4608Boolean/288profiles/7526ranks/3528factorizations/5184SMCpairs+384identicalseeded6glyphdraws PASS;15newfocusedtests3.18s includingfull8cellnative/Python transport/caps/runtimebindingrestoration. Complete2792+23subtestsPASS/13skip182.12s/scopedlintPASS/fulltree5oldfindings. Separate002namespace reusesfrozen001mechanics, sameexposedcases/seeds/32conditioned64prior/firstkeysourcechecks;old220unchanged/new232freeze paths. Commit/push/exactorigin thenONErun/ONEaudit next. No recovery/restrictedSMC/model-fit/neural/historicalclaim. NB353/method/registration.
 
 - **COORDINATED-DICTIONARY-001 complete: recovery/calibration FAIL, full replay PASS.** Registration6d19bea exactremote beforeONE33362run terminal0/all24fresh development-keycalls/sourceoriginal/207unchanged. N32stride4/4MH:prior3complete4extinct1workcap;covered-row5complete0extinct3workcap;coordinated5complete2extinct1workcap.0exactkeys/banktruth/messages;used6/4/13of152,edit2233/2373/1937of2304letters perarm/ALLcalibrationFAIL. Explicitallowed1Btypedcallworkcaps/global16B+16contractfollowed/no retry. Run598.567s/.866GB/7.926Bfit edges/282182ignoredbytes/$0. ONEaudit10317terminal0/ALL24replay+416independentPythonkeys max6.366e-12≤1e-7/623.758s/1.257GB/PASSsameauthor. Readonlyinventorynone416permitsfulltruth/selecteddeficits3..12/nooracleinput. NB348–350/registration/method/resultsdoc/publicationhashandindependenteditchecksPASS; no actual job remains; full2756+23subtestsPASS/13skip/scopedlintPASS/5oldfindings. GoalACTIVE/VoynichUNSOLVED.
 

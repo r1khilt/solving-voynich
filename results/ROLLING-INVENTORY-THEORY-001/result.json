@@ -1,0 +1,59 @@
+{
+  "actual_corpus_or_source_model_calls": 0,
+  "inputs": [
+    {
+      "bytes": 5691,
+      "path": "src/voynich/rolling_inventory_bdd.py",
+      "sha256": "4be2eec08aa3e2f2f254de3db40554887b611e148fb34ba80763e8f8a617b9a6"
+    },
+    {
+      "bytes": 3930,
+      "path": "tests/test_rolling_inventory_bdd.py",
+      "sha256": "8788bfc5bc0569e31725813a015789004917a5e3438537114696e7bb9591d54a"
+    },
+    {
+      "bytes": 1169,
+      "path": "scripts/check_rolling_inventory001.py",
+      "sha256": "0e454609b09556e472bf521117494230b959cca32b8e5fd653127559d61ad68b"
+    },
+    {
+      "bytes": 12209,
+      "path": "src/voynich/inventory_bdd.py",
+      "sha256": "34a31e174e5b5fec7fba2b28b6762db29c9b236621ebcbd3f044598f5fdd9648"
+    },
+    {
+      "bytes": 9794,
+      "path": "tests/test_inventory_bdd.py",
+      "sha256": "c72a8137cca4677b08dab0b69adbce8d1cba403c23141ef35106c57c3561362e"
+    },
+    {
+      "bytes": 1834,
+      "path": "results/INVENTORY-BDD-THEORY-001/result.json",
+      "sha256": "96414f182964516b7d85ff3a0631f27e46b662adb8275cdacc5f0353d44d93a4"
+    }
+  ],
+  "intervals": {
+    "1": {
+      "boolean_mask_checks": 4608,
+      "dictionary_factorization_checks": 3528,
+      "exact_closed_evidence": "4277/6553600",
+      "full_support_smc_exact_pairs": 5184,
+      "incorrect_unrestricted_intermediate_evidence": "891859/2516582400",
+      "known_binding_profiles": 288,
+      "subset_rank_checks": 7526
+    },
+    "16": {
+      "boolean_mask_checks": 4608,
+      "dictionary_factorization_checks": 3528,
+      "exact_closed_evidence": "4277/6553600",
+      "full_support_smc_exact_pairs": 5184,
+      "incorrect_unrestricted_intermediate_evidence": "891859/2516582400",
+      "known_binding_profiles": 288,
+      "subset_rank_checks": 7526
+    }
+  },
+  "paid_spend_usd": 0,
+  "scope": "Own finite mathematical qualification, not recovery",
+  "six_glyph_identical_seeded_draws": 384,
+  "status": "PASS_exact_rolling_inventory_laws"
+}
