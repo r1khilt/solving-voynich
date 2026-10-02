@@ -24,7 +24,8 @@ OUT, BULK = prior.training.ROOT/'results'/EXP, prior.training.ROOT/'outputs'/EXP
 ARMS, STEPS, SEED = ('independence', 'regrowth'), 8, 92721
 WALL, CPU, HOST, PRIVATE = 1800, 1800, 2*1024**3, 128*1024**2
 PATHS = sorted(set([*prior.PATHS, *theory.PATHS, 'src/voynich/regrowth_trace.py',
-    'tests/test_regrowth_trace.py', 'scripts/run_reading_regrowth_admit001.py',
+    'tests/test_regrowth_trace.py', 'tests/test_reading_regrowth_admission.py',
+    'scripts/run_reading_regrowth_admit001.py',
     'scripts/audit_reading_regrowth_admit001.py', 'docs/experiments/READING-REGROWTH-ADMIT-001.md',
     'results/READING-REGROWTH-THEORY-001/result.json', 'results/READING-REGROWTH-THEORY-001/audit.json',
     'results/SOURCE-ACTION-CIPHER-001/result.json', 'results/SOURCE-ACTION-CIPHER-001/audit.json']))
