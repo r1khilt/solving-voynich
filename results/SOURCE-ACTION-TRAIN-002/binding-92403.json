@@ -1,0 +1,3841 @@
+{
+  "arm": "binding-92403",
+  "binding_input": true,
+  "cache_policy": "fixed-retain",
+  "checkpoint_unused_cache_cleanup": true,
+  "checkpoints": [
+    {
+      "controls": {
+        "conditional_path_probability_is_not_cipher_evidence": true,
+        "groups": {
+          "iid_glyphs": {
+            "cases": 16,
+            "complete_paths": 4,
+            "dead_ends": 12
+          },
+          "unrecoverable_ambiguity": {
+            "cases": 1,
+            "complete_paths": 1,
+            "dead_ends": 0
+          },
+          "within_record_shuffle": {
+            "cases": 16,
+            "complete_paths": 4,
+            "dead_ends": 12
+          }
+        },
+        "language_or_semantic_classification_claimed": false
+      },
+      "mean_whole_path_nll": 776.4146806842225,
+      "recovery": {
+        "cases": [
+          {
+            "complete_used_key": false,
+            "edits": 241,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 241,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 486,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 328,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 256,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 219,
+            "used_matches": 3,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 268,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 220,
+            "used_matches": 1,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 249,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 217,
+            "used_matches": 2,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 431,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 431,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 370,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 370,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 284,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 252,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 255,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 255,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 468,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 352,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 227,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 227,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 308,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 308,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 221,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 221,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 240,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 240,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 383,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 383,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 319,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 319,
+            "used_matches": 0,
+            "used_rows": 22
+          },
+          {
+            "complete_used_key": false,
+            "edits": 393,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 393,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 278,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 278,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 249,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 249,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 245,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 193,
+            "used_matches": 1,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 382,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 382,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 246,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 246,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 155,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 155,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 361,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 280,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 274,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 274,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 256,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 256,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 165,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 165,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 363,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 363,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 265,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 265,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 324,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 324,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 332,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 332,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 378,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 279,
+            "used_matches": 2,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 282,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 282,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 222,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 222,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 386,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 21
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 442,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 334,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 311,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 311,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 401,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 401,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 303,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 303,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 326,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 326,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 462,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 398,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 229,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 229,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 382,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 382,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 380,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 380,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 353,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 353,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 275,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 275,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 209,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 209,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 234,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 174,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 310,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 310,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 351,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 256,
+            "used_matches": 1,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 276,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 213,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 211,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 211,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 408,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 293,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 260,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 260,
+            "used_matches": 0,
+            "used_rows": 20
+          }
+        ],
+        "complete_readings": 16,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 19984,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 48,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 14,
+        "used_rows": 1246
+      },
+      "step": 0,
+      "validation": {
+        "bytes": 38749,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step0-validation.json.gz",
+        "sha256": "efd928266ee9402d7fa83548b3b1a001f8db723b6877eabfb9d49ece893b0650"
+      },
+      "weights": {
+        "bytes": 384214743,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step0.pt",
+        "sha256": "97ae781a1360f5c1836e5d33576efc9ced73dbf0ea287edb70d7ab711509c8ef"
+      },
+      "weights_sha256": "7ad974a384067a026e8301d485fb94cadb76cd307037844650b4ddd9288f6c7e"
+    },
+    {
+      "controls": {
+        "conditional_path_probability_is_not_cipher_evidence": true,
+        "groups": {
+          "iid_glyphs": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          },
+          "unrecoverable_ambiguity": {
+            "cases": 1,
+            "complete_paths": 1,
+            "dead_ends": 0
+          },
+          "within_record_shuffle": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          }
+        },
+        "language_or_semantic_classification_claimed": false
+      },
+      "mean_whole_path_nll": 171.24960103501584,
+      "recovery": {
+        "cases": [
+          {
+            "complete_used_key": false,
+            "edits": 241,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 241,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 328,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 328,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 219,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 219,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 220,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 220,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 217,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 217,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 431,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 431,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 370,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 370,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 252,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 252,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 255,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 255,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 352,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 352,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 227,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 227,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 308,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 308,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 221,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 221,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 240,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 240,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 383,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 383,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 319,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 319,
+            "used_matches": 0,
+            "used_rows": 22
+          },
+          {
+            "complete_used_key": false,
+            "edits": 393,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 393,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 278,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 278,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 206,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 249,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 193,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 193,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 382,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 382,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 246,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 246,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 155,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 155,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 280,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 280,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 274,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 274,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 256,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 256,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 165,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 165,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 363,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 363,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 265,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 265,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 324,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 324,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 332,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 332,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 279,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 279,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 282,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 282,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 222,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 222,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 21
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 311,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 311,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 401,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 401,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 303,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 303,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 326,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 326,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 398,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 398,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 229,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 229,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 314,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 382,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 380,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 380,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 295,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 353,
+            "used_matches": 1,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 275,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 275,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 209,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 209,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 174,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 174,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 310,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 310,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 210,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 256,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 211,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 211,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 293,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 293,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 260,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 260,
+            "used_matches": 0,
+            "used_rows": 20
+          }
+        ],
+        "complete_readings": 4,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 18557,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 60,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 3,
+        "used_rows": 1246
+      },
+      "step": 1000,
+      "validation": {
+        "bytes": 28052,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step1000-validation.json.gz",
+        "sha256": "1bc212629090c6df8f73d5ccaac65ee532b24481378af317dd402dee9431c7f1"
+      },
+      "weights": {
+        "bytes": 384214743,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step1000.pt",
+        "sha256": "355b652e7be190094d45116f8dacb8080685dc9687631766b584a16f41c35d0a"
+      },
+      "weights_sha256": "0ba07b1d29403beed6d988eea05f7d2228b1bb27e9b97aff8e71bb487e5249af"
+    },
+    {
+      "controls": {
+        "conditional_path_probability_is_not_cipher_evidence": true,
+        "groups": {
+          "iid_glyphs": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          },
+          "unrecoverable_ambiguity": {
+            "cases": 1,
+            "complete_paths": 1,
+            "dead_ends": 0
+          },
+          "within_record_shuffle": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          }
+        },
+        "language_or_semantic_classification_claimed": false
+      },
+      "mean_whole_path_nll": 162.79580211128444,
+      "recovery": {
+        "cases": [
+          {
+            "complete_used_key": false,
+            "edits": 241,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 241,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 328,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 328,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 219,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 219,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 220,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 220,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 217,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 217,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 431,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 431,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 370,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 370,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 252,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 252,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 255,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 255,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 352,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 352,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 227,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 227,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 308,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 308,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 221,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 221,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 240,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 240,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 383,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 383,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 319,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 319,
+            "used_matches": 0,
+            "used_rows": 22
+          },
+          {
+            "complete_used_key": false,
+            "edits": 393,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 393,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 278,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 278,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 178,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 249,
+            "used_matches": 4,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 193,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 193,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 382,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 382,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 246,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 246,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 155,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 155,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 280,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 280,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 274,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 274,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 256,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 256,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 165,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 165,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 363,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 363,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 265,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 265,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 324,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 324,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 332,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 332,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 279,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 279,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 282,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 282,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 222,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 222,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 21
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 311,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 311,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 401,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 401,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 303,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 303,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 326,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 326,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 398,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 398,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 229,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 229,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 318,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 382,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 380,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 380,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 303,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 353,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 275,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 275,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 209,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 209,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 174,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 174,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 310,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 310,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 206,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 256,
+            "used_matches": 1,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 211,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 211,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 293,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 293,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 260,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 260,
+            "used_matches": 0,
+            "used_rows": 20
+          }
+        ],
+        "complete_readings": 4,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 18537,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 60,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 5,
+        "used_rows": 1246
+      },
+      "step": 4000,
+      "validation": {
+        "bytes": 28122,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step4000-validation.json.gz",
+        "sha256": "05ad1595a71822018a6e2f978c977084cdcfad929cc36192f36190e05a65fc24"
+      },
+      "weights": {
+        "bytes": 384214743,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step4000.pt",
+        "sha256": "adb767070cb3ff6cf97af1150c6dd12e8fcfee5be7c79a98b4e58d4326631cfb"
+      },
+      "weights_sha256": "9b3cccba1a0bc6570e45ba34f2347a71aa887b51993bea76525d73d6afd4d682"
+    },
+    {
+      "controls": {
+        "conditional_path_probability_is_not_cipher_evidence": true,
+        "groups": {
+          "iid_glyphs": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          },
+          "unrecoverable_ambiguity": {
+            "cases": 1,
+            "complete_paths": 1,
+            "dead_ends": 0
+          },
+          "within_record_shuffle": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          }
+        },
+        "language_or_semantic_classification_claimed": false
+      },
+      "mean_whole_path_nll": 158.154122133232,
+      "recovery": {
+        "cases": [
+          {
+            "complete_used_key": false,
+            "edits": 241,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 241,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 328,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 328,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 219,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 219,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 220,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 220,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 217,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 217,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 431,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 431,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 370,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 370,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 252,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 252,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 255,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 255,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 352,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 352,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 227,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 227,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 308,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 308,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 221,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 221,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 240,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 240,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 383,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 383,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 319,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 319,
+            "used_matches": 0,
+            "used_rows": 22
+          },
+          {
+            "complete_used_key": false,
+            "edits": 393,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 393,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 278,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 278,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 201,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 249,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 193,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 193,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 382,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 382,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 246,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 246,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 155,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 155,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 280,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 280,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 274,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 274,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 256,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 256,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 165,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 165,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 363,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 363,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 265,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 265,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 324,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 324,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 332,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 332,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 279,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 279,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 282,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 282,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 222,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 222,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 21
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 311,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 311,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 401,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 401,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 303,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 303,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 326,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 326,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 398,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 398,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 229,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 229,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 319,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 382,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 380,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 380,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 280,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 353,
+            "used_matches": 3,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 275,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 275,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 209,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 209,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 174,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 174,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 310,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 310,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 207,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 256,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 211,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 211,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 293,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 293,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 260,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 260,
+            "used_matches": 0,
+            "used_rows": 20
+          }
+        ],
+        "complete_readings": 4,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 18539,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 60,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 5,
+        "used_rows": 1246
+      },
+      "step": 10000,
+      "validation": {
+        "bytes": 28069,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step10000-validation.json.gz",
+        "sha256": "2112921504843e7f2eaab9fe0909c28ca7be4daaca13a58ed02a763e2606ef2c"
+      },
+      "weights": {
+        "bytes": 384214743,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step10000.pt",
+        "sha256": "c31517501f16461ae711f306f91cccbfc80362194843d1c90b1234006912b571"
+      },
+      "weights_sha256": "b6004bbb63688afe408303b82265850cbccaffd4957aa9574221efe6e9c9dab6"
+    },
+    {
+      "controls": {
+        "conditional_path_probability_is_not_cipher_evidence": true,
+        "groups": {
+          "iid_glyphs": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          },
+          "unrecoverable_ambiguity": {
+            "cases": 1,
+            "complete_paths": 1,
+            "dead_ends": 0
+          },
+          "within_record_shuffle": {
+            "cases": 16,
+            "complete_paths": 0,
+            "dead_ends": 16
+          }
+        },
+        "language_or_semantic_classification_claimed": false
+      },
+      "mean_whole_path_nll": 147.63497180056228,
+      "recovery": {
+        "cases": [
+          {
+            "complete_used_key": false,
+            "edits": 241,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 241,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 328,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 328,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 219,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 219,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 220,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 220,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 217,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 217,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 431,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 431,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 370,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 370,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 252,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 252,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 255,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 255,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 352,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 352,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 227,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 227,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 308,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 308,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 221,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 221,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 240,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 240,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 383,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 383,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 319,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 319,
+            "used_matches": 0,
+            "used_rows": 22
+          },
+          {
+            "complete_used_key": false,
+            "edits": 393,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 393,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 278,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 278,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 197,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 249,
+            "used_matches": 1,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 193,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 193,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 382,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 382,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 246,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 246,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 155,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 155,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 280,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 280,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 274,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 274,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 256,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 256,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 165,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 165,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 363,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 363,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 265,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 265,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 324,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 324,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 332,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 332,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 404,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 404,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 279,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 279,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 282,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 282,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 222,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 222,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 21
+          },
+          {
+            "complete_used_key": false,
+            "edits": 306,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 306,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 334,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 334,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 311,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 311,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 401,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 401,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 303,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 303,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 326,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 326,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 398,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 398,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 229,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 229,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 300,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 382,
+            "used_matches": 2,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 380,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 380,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 288,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 353,
+            "used_matches": 1,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 275,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 275,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 320,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 320,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 209,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 209,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 174,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 174,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 310,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 310,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 207,
+            "exact_records": 0,
+            "status": "complete_path",
+            "true_letters": 256,
+            "used_matches": 2,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 211,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 211,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 213,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 213,
+            "used_matches": 0,
+            "used_rows": 19
+          },
+          {
+            "complete_used_key": false,
+            "edits": 293,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 293,
+            "used_matches": 0,
+            "used_rows": 18
+          },
+          {
+            "complete_used_key": false,
+            "edits": 346,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 346,
+            "used_matches": 0,
+            "used_rows": 20
+          },
+          {
+            "complete_used_key": false,
+            "edits": 260,
+            "exact_records": 0,
+            "status": "dead_end",
+            "true_letters": 260,
+            "used_matches": 0,
+            "used_rows": 20
+          }
+        ],
+        "complete_readings": 4,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 18524,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 60,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 6,
+        "used_rows": 1246
+      },
+      "step": 20000,
+      "validation": {
+        "bytes": 28169,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step20000-validation.json.gz",
+        "sha256": "14c2e3573d01cfa33ec0de8664de07d867eafa4d5c6e1105aeb29c400f31e64f"
+      },
+      "weights": {
+        "bytes": 384214743,
+        "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step20000.pt",
+        "sha256": "3d02c8222f1a7e8fc475c6f5dd29bed5de407d1aaf3d847e2cee8ca8b0bda5c0"
+      },
+      "weights_sha256": "2ccfb63ef75aaa91b9a0d5ec35c6d24126c43ba9b7d9acae7e35c7b0efd2c64a"
+    }
+  ],
+  "config": {
+    "binding_input": true,
+    "decoder_layers": 4,
+    "encoder_layers": 8,
+    "ff_multiplier": 4,
+    "glyphs": 6,
+    "heads": 12,
+    "max_glyphs": 448,
+    "max_records": 2,
+    "rows": 23,
+    "width": 768
+  },
+  "data_sha256": "d43c9ad3b3b7264fa2bee2f83eb9d439d2bcbb84a9398255b7ff979ddc689bc7",
+  "environment": {
+    "device": "mps",
+    "mps_cpu_fallback": "0",
+    "numpy": "2.5.3",
+    "omp_threads": "1",
+    "openblas_threads": "1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "torch": "2.14.0",
+    "torch_threads": 2
+  },
+  "episodes_seen": 80000,
+  "fixed_query_horizon": 448,
+  "freeze": "3ab56fb85b18231597b9fbc64c40c1fbff504408",
+  "initial_weights_sha256": "7ad974a384067a026e8301d485fb94cadb76cd307037844650b4ddd9288f6c7e",
+  "inputs": {
+    "bytes": 461460,
+    "path": "results/SOURCE-ACTION-TRAIN-002/inputs.json",
+    "sha256": "23cc1b1eef71a5ba684c2311db7f3fac107601203ef23ded799014a2dc9bf16a"
+  },
+  "ledger": {
+    "bytes": 9716666,
+    "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-episodes.jsonl.gz",
+    "sha256": "a9d56b5e5f84ba2779f3e55e56580059243673c61a5ee59e38ec6776a6c481e0"
+  },
+  "paid_spend_usd": 0,
+  "parameters": 96039982,
+  "rejected_keys": 0,
+  "reserved_authors_or_cipher_panels_opened": false,
+  "resources": {
+    "cpu_seconds": 4755.135517,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1820884992,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 14804.89096774999
+  },
+  "seed": 92403,
+  "selected": {
+    "controls": {
+      "conditional_path_probability_is_not_cipher_evidence": true,
+      "groups": {
+        "iid_glyphs": {
+          "cases": 16,
+          "complete_paths": 0,
+          "dead_ends": 16
+        },
+        "unrecoverable_ambiguity": {
+          "cases": 1,
+          "complete_paths": 1,
+          "dead_ends": 0
+        },
+        "within_record_shuffle": {
+          "cases": 16,
+          "complete_paths": 0,
+          "dead_ends": 16
+        }
+      },
+      "language_or_semantic_classification_claimed": false
+    },
+    "mean_whole_path_nll": 147.63497180056228,
+    "recovery": {
+      "cases": [
+        {
+          "complete_used_key": false,
+          "edits": 241,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 241,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 328,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 328,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 219,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 219,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 220,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 220,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 217,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 217,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 431,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 431,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 370,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 370,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 320,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 320,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 252,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 252,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 255,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 255,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 352,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 352,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 227,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 227,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 306,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 306,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 308,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 308,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 221,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 221,
+          "used_matches": 0,
+          "used_rows": 18
+        },
+        {
+          "complete_used_key": false,
+          "edits": 240,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 240,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 383,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 383,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 404,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 404,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 319,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 319,
+          "used_matches": 0,
+          "used_rows": 22
+        },
+        {
+          "complete_used_key": false,
+          "edits": 393,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 393,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 278,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 278,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 197,
+          "exact_records": 0,
+          "status": "complete_path",
+          "true_letters": 249,
+          "used_matches": 1,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 334,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 334,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 193,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 193,
+          "used_matches": 0,
+          "used_rows": 18
+        },
+        {
+          "complete_used_key": false,
+          "edits": 382,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 382,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 246,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 246,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 155,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 155,
+          "used_matches": 0,
+          "used_rows": 18
+        },
+        {
+          "complete_used_key": false,
+          "edits": 280,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 280,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 274,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 274,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 256,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 256,
+          "used_matches": 0,
+          "used_rows": 18
+        },
+        {
+          "complete_used_key": false,
+          "edits": 165,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 165,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 363,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 363,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 265,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 265,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 324,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 324,
+          "used_matches": 0,
+          "used_rows": 18
+        },
+        {
+          "complete_used_key": false,
+          "edits": 332,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 332,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 404,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 404,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 346,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 346,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 279,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 279,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 282,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 282,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 222,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 222,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 334,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 334,
+          "used_matches": 0,
+          "used_rows": 21
+        },
+        {
+          "complete_used_key": false,
+          "edits": 306,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 306,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 334,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 334,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 311,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 311,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 401,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 401,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 303,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 303,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 326,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 326,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 398,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 398,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 229,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 229,
+          "used_matches": 0,
+          "used_rows": 18
+        },
+        {
+          "complete_used_key": false,
+          "edits": 300,
+          "exact_records": 0,
+          "status": "complete_path",
+          "true_letters": 382,
+          "used_matches": 2,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 380,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 380,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 288,
+          "exact_records": 0,
+          "status": "complete_path",
+          "true_letters": 353,
+          "used_matches": 1,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 275,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 275,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 320,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 320,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 209,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 209,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 174,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 174,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 310,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 310,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 207,
+          "exact_records": 0,
+          "status": "complete_path",
+          "true_letters": 256,
+          "used_matches": 2,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 213,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 213,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 211,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 211,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 213,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 213,
+          "used_matches": 0,
+          "used_rows": 19
+        },
+        {
+          "complete_used_key": false,
+          "edits": 293,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 293,
+          "used_matches": 0,
+          "used_rows": 18
+        },
+        {
+          "complete_used_key": false,
+          "edits": 346,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 346,
+          "used_matches": 0,
+          "used_rows": 20
+        },
+        {
+          "complete_used_key": false,
+          "edits": 260,
+          "exact_records": 0,
+          "status": "dead_end",
+          "true_letters": 260,
+          "used_matches": 0,
+          "used_rows": 20
+        }
+      ],
+      "complete_readings": 4,
+      "complete_used_keys": 0,
+      "edits_with_failed_readings_full_length": 18524,
+      "episodes": 64,
+      "exact_records": 0,
+      "failed_readings": 60,
+      "failure_penalty_is_full_length": true,
+      "record_attempts": 128,
+      "true_letters": 18772,
+      "unused_rows_not_scored": true,
+      "used_matches_with_failed_readings_zero": 6,
+      "used_rows": 1246
+    },
+    "step": 20000,
+    "validation": {
+      "bytes": 28169,
+      "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step20000-validation.json.gz",
+      "sha256": "14c2e3573d01cfa33ec0de8664de07d867eafa4d5c6e1105aeb29c400f31e64f"
+    },
+    "weights": {
+      "bytes": 384214743,
+      "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-step20000.pt",
+      "sha256": "3d02c8222f1a7e8fc475c6f5dd29bed5de407d1aaf3d847e2cee8ca8b0bda5c0"
+    },
+    "weights_sha256": "2ccfb63ef75aaa91b9a0d5ec35c6d24126c43ba9b7d9acae7e35c7b0efd2c64a"
+  },
+  "source_letters": 23013187,
+  "status": "PASS",
+  "supervised_action_targets": 23013187,
+  "trace": {
+    "bytes": 44302813,
+    "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92403-trace.jsonl",
+    "sha256": "ebcc897f8ccfe0efe9a4dfde7645e0c933f06ee3380aeda15c32b436af09bb8b"
+  },
+  "updates": 20000
+}

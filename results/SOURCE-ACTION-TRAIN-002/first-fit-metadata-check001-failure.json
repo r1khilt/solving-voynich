@@ -1,0 +1,77 @@
+{
+  "assertion": "role inputs assumed to be list of all73 frozen artifact descriptors",
+  "assertion_line": 19,
+  "check_execution": "inline tool-call code retained in chat; no prebound code artifact",
+  "checkpoint": {
+    "bytes": 15149,
+    "path": "results/SOURCE-ACTION-TRAIN-002/binding-92403-step20000.json",
+    "sha256": "a3975cbb0c6c8b3b45cf11cb3b623f7724e0371ab7aa94af802201d63e78f72e"
+  },
+  "completed_before_failure": [
+    "73 source bytes checked against original freeze",
+    "producer status/update/parameter/episode/source-letter/resource checks",
+    "all five compact checkpoints equal recorded role checkpoints",
+    "all five weight and validation archive file hashes",
+    "selected checkpoint minimizes mean NLL",
+    "completed episode ledger and trace file hashes"
+  ],
+  "earlier_step10000_failure_unchanged": true,
+  "fit": {
+    "bytes": 106966,
+    "path": "results/SOURCE-ACTION-TRAIN-002/binding-92403.json",
+    "sha256": "8018297e3a58c2e906a06791020c625b5e5c7a1d3a04b5e04423cc6e52c66b09"
+  },
+  "four_fit_campaign_still_live_full_registered_audit_pending": true,
+  "metadata_explanation_wrapper_failure": {
+    "cause": "initial explanation also assumed list iteration; actual role inputs is one artifact dict",
+    "error": "TypeError: string indices must be integers, not str",
+    "no_scientific_or_complete_check_retry": true
+  },
+  "metadata_only_shape_observation": {
+    "actual_input_descriptor": {
+      "bytes": 461460,
+      "path": "results/SOURCE-ACTION-TRAIN-002/inputs.json",
+      "sha256": "23cc1b1eef71a5ba684c2311db7f3fac107601203ef23ded799014a2dc9bf16a"
+    },
+    "actual_type": "dict",
+    "not_completed_audit_or_probability_replay": true
+  },
+  "no_model_source_optimizer_or_sampling_calls": true,
+  "no_retry": true,
+  "not_completed": [
+    "role input-manifest equality",
+    "final publication metadata receipt"
+  ],
+  "paid_spend_usd": 0,
+  "producer_reported_fit_resources": {
+    "cpu_seconds": 4755.135517,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1820884992,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 14804.89096774999
+  },
+  "producer_reported_recovery": {
+    "complete_readings": 4,
+    "complete_used_keys": 0,
+    "edits_with_failed_readings_full_length": 18524,
+    "episodes": 64,
+    "exact_records": 0,
+    "failed_readings": 60,
+    "failure_penalty_is_full_length": true,
+    "record_attempts": 128,
+    "true_letters": 18772,
+    "unused_rows_not_scored": true,
+    "used_matches_with_failed_readings_zero": 6,
+    "used_rows": 1246
+  },
+  "producer_reported_selected_mean_path_nll": 147.63497180056228,
+  "producer_reported_selected_step": 20000,
+  "resource_report_available": false,
+  "status": "FAIL_partial_readonly_metadata_check_role_input_schema_assumption"
+}
