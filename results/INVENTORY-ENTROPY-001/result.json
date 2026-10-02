@@ -1,0 +1,413 @@
+{
+  "actual_corpus_compiler_sampler_or_source_calls": 0,
+  "inputs": [
+    {
+      "bytes": 32972,
+      "path": "results/COMPILED-INVENTORY-003/result.json",
+      "sha256": "8326b848b25789aa94f1f2512ba1f1c51829208aa275a36b838ea2a93bb7864d"
+    },
+    {
+      "bytes": 930,
+      "path": "results/COMPILED-INVENTORY-003/audit.json",
+      "sha256": "ddccce188f41bb89e7a352567039f9cfaa882cd3b2514eb51170cd31510d1cad"
+    },
+    {
+      "bytes": 3422,
+      "path": "scripts/summarize_inventory_entropy001.py",
+      "sha256": "2bc88334250a6b107eda511db0e124be6d074ddd1e5851b15934f2bc9d42e173"
+    },
+    {
+      "bytes": 941,
+      "path": "results/COMPILED-INVENTORY-003/case0-frequency.json",
+      "sha256": "25a24aeb09f3bb45a3b1b758f1a17953daa27f28361ef6002d2a6120cd4b3e4d"
+    },
+    {
+      "bytes": 27982,
+      "path": "outputs/COMPILED-INVENTORY-003/case0-frequency.json.gz",
+      "sha256": "ae7752dbc73561ea312f8ff149373bb72620d39f292d9767c2b2a7736e9cc792"
+    },
+    {
+      "bytes": 929,
+      "path": "results/COMPILED-INVENTORY-003/case1-frequency.json",
+      "sha256": "7dc4f82fae46f47cf3211fdc8999e36dd9936bc4326e3b99ed8cf06d2c9327bc"
+    },
+    {
+      "bytes": 84611,
+      "path": "outputs/COMPILED-INVENTORY-003/case1-frequency.json.gz",
+      "sha256": "f1539072cc3d5949610ba256b3dd3a107dd3a7f2dc4132ddd653e0546d84cf4b"
+    },
+    {
+      "bytes": 951,
+      "path": "results/COMPILED-INVENTORY-003/case2-frequency.json",
+      "sha256": "bec83e9f08cdd029075818b3ef3b69921fdbc6f6201678a88d7663c9eaed0616"
+    },
+    {
+      "bytes": 68738,
+      "path": "outputs/COMPILED-INVENTORY-003/case2-frequency.json.gz",
+      "sha256": "14a7d9749f44308975c84366effcffef87c4a20aa437d0c2a35ec4a23cd56a44"
+    },
+    {
+      "bytes": 948,
+      "path": "results/COMPILED-INVENTORY-003/case3-frequency.json",
+      "sha256": "f3413729aa85662e3e59496c48861d9457319ba6f99a3f88a1c50eb143dcc03a"
+    },
+    {
+      "bytes": 58033,
+      "path": "outputs/COMPILED-INVENTORY-003/case3-frequency.json.gz",
+      "sha256": "8d1eb2a3d285f57945a0434a0434fa8ce0719ead96ae8679e150276d4ad8d579"
+    }
+  ],
+  "paid_spend_usd": 0,
+  "rows": [
+    {
+      "cardinality_entropy_bits": 2.60813762621234,
+      "cardinality_probabilities": [
+        {
+          "k": 6,
+          "probability": 4.2554455114433895e-18
+        },
+        {
+          "k": 7,
+          "probability": 4.966040790700892e-15
+        },
+        {
+          "k": 8,
+          "probability": 1.629089012606385e-12
+        },
+        {
+          "k": 9,
+          "probability": 2.21365474895528e-10
+        },
+        {
+          "k": 10,
+          "probability": 1.497826851819799e-08
+        },
+        {
+          "k": 11,
+          "probability": 5.632966514757968e-07
+        },
+        {
+          "k": 12,
+          "probability": 1.2655822260459586e-05
+        },
+        {
+          "k": 13,
+          "probability": 0.00017849423488814942
+        },
+        {
+          "k": 14,
+          "probability": 0.0016353575896062018
+        },
+        {
+          "k": 15,
+          "probability": 0.009959183312240003
+        },
+        {
+          "k": 16,
+          "probability": 0.04087158371528161
+        },
+        {
+          "k": 17,
+          "probability": 0.11363573039070139
+        },
+        {
+          "k": 18,
+          "probability": 0.21330557783291298
+        },
+        {
+          "k": 19,
+          "probability": 0.26654169171126485
+        },
+        {
+          "k": 20,
+          "probability": 0.21533212829620332
+        },
+        {
+          "k": 21,
+          "probability": 0.10644841493984823
+        },
+        {
+          "k": 22,
+          "probability": 0.028845123842833678
+        },
+        {
+          "k": 23,
+          "probability": 0.0032334798140396174
+        }
+      ],
+      "case": 0,
+      "conditional_label_assignment_entropy_bits": 82.56671288106796,
+      "conditional_subset_entropy_bits": 31.849832594975627,
+      "conditional_supported_key_entropy_bits": 117.02468310225593,
+      "dictionary_count": "169020680869695576246778059178849200",
+      "exact_count_law_verified": true,
+      "float_chain_rule_tolerance": 1e-10,
+      "mean_distinct_codes_given_support": 18.915328738428993,
+      "prior_key_entropy_bits": 124.02330072391149,
+      "support_information_bits": 6.998617621655555
+    },
+    {
+      "cardinality_entropy_bits": 2.6168024826651024,
+      "cardinality_probabilities": [
+        {
+          "k": 6,
+          "probability": 6.5748739005847234e-18
+        },
+        {
+          "k": 7,
+          "probability": 7.268948309962461e-15
+        },
+        {
+          "k": 8,
+          "probability": 2.2656798893547906e-12
+        },
+        {
+          "k": 9,
+          "probability": 2.933882163176038e-10
+        },
+        {
+          "k": 10,
+          "probability": 1.8974654086664634e-08
+        },
+        {
+          "k": 11,
+          "probability": 6.841659771447584e-07
+        },
+        {
+          "k": 12,
+          "probability": 1.4784932199883821e-05
+        },
+        {
+          "k": 13,
+          "probability": 0.00020125179738627005
+        },
+        {
+          "k": 14,
+          "probability": 0.0017861164589714346
+        },
+        {
+          "k": 15,
+          "probability": 0.010578478029774283
+        },
+        {
+          "k": 16,
+          "probability": 0.04240051110691012
+        },
+        {
+          "k": 17,
+          "probability": 0.11565864619047983
+        },
+        {
+          "k": 18,
+          "probability": 0.21401184079079064
+        },
+        {
+          "k": 19,
+          "probability": 0.2649121273775524
+        },
+        {
+          "k": 20,
+          "probability": 0.21306807761781116
+        },
+        {
+          "k": 21,
+          "probability": 0.10539292938646325
+        },
+        {
+          "k": 22,
+          "probability": 0.028720623411390905
+        },
+        {
+          "k": 23,
+          "probability": 0.003253909463977431
+        }
+      ],
+      "case": 1,
+      "conditional_label_assignment_entropy_bits": 82.5758352590093,
+      "conditional_subset_entropy_bits": 31.204392313902623,
+      "conditional_supported_key_entropy_bits": 116.39703005557702,
+      "dictionary_count": "109394995040754441349176414501886800",
+      "exact_count_law_verified": true,
+      "float_chain_rule_tolerance": 1e-10,
+      "mean_distinct_codes_given_support": 18.89793963120607,
+      "prior_key_entropy_bits": 124.02330072391149,
+      "support_information_bits": 7.62627066833447
+    },
+    {
+      "cardinality_entropy_bits": 2.618088964187269,
+      "cardinality_probabilities": [
+        {
+          "k": 6,
+          "probability": 6.418881544334069e-18
+        },
+        {
+          "k": 7,
+          "probability": 7.293613357053276e-15
+        },
+        {
+          "k": 8,
+          "probability": 2.3276045805184164e-12
+        },
+        {
+          "k": 9,
+          "probability": 3.0729405688548324e-10
+        },
+        {
+          "k": 10,
+          "probability": 2.017075169292799e-08
+        },
+        {
+          "k": 11,
+          "probability": 7.3469301975968e-07
+        },
+        {
+          "k": 12,
+          "probability": 1.5962106088705868e-05
+        },
+        {
+          "k": 13,
+          "probability": 0.00021741291176855182
+        },
+        {
+          "k": 14,
+          "probability": 0.0019219668070319385
+        },
+        {
+          "k": 15,
+          "probability": 0.011289772393371342
+        },
+        {
+          "k": 16,
+          "probability": 0.044706158136038066
+        },
+        {
+          "k": 17,
+          "probability": 0.12007225612143017
+        },
+        {
+          "k": 18,
+          "probability": 0.21816170349838296
+        },
+        {
+          "k": 19,
+          "probability": 0.2646303740911649
+        },
+        {
+          "k": 20,
+          "probability": 0.20831196050535872
+        },
+        {
+          "k": 21,
+          "probability": 0.10080389663404482
+        },
+        {
+          "k": 22,
+          "probability": 0.026883666181787943
+        },
+        {
+          "k": 23,
+          "probability": 0.0029841154401314424
+        }
+      ],
+      "case": 2,
+      "conditional_label_assignment_entropy_bits": 82.61349896838679,
+      "conditional_subset_entropy_bits": 31.20008341086856,
+      "conditional_supported_key_entropy_bits": 116.43167134344263,
+      "dictionary_count": "112053524088310858704431456376624000",
+      "exact_count_law_verified": true,
+      "float_chain_rule_tolerance": 1e-10,
+      "mean_distinct_codes_given_support": 18.853891325928547,
+      "prior_key_entropy_bits": 124.02330072391149,
+      "support_information_bits": 7.591629380468859
+    },
+    {
+      "cardinality_entropy_bits": 2.6169780153108557,
+      "cardinality_probabilities": [
+        {
+          "k": 6,
+          "probability": 6.085770833041027e-18
+        },
+        {
+          "k": 7,
+          "probability": 6.9151080494722316e-15
+        },
+        {
+          "k": 8,
+          "probability": 2.2068125060627296e-12
+        },
+        {
+          "k": 9,
+          "probability": 2.9142255006173026e-10
+        },
+        {
+          "k": 10,
+          "probability": 1.9143422194964452e-08
+        },
+        {
+          "k": 11,
+          "probability": 6.983023094262298e-07
+        },
+        {
+          "k": 12,
+          "probability": 1.5207812821222039e-05
+        },
+        {
+          "k": 13,
+          "probability": 0.00020786167808120107
+        },
+        {
+          "k": 14,
+          "probability": 0.0018461906142199546
+        },
+        {
+          "k": 15,
+          "probability": 0.010909767488674693
+        },
+        {
+          "k": 16,
+          "probability": 0.043516196684796754
+        },
+        {
+          "k": 17,
+          "probability": 0.11786629220606126
+        },
+        {
+          "k": 18,
+          "probability": 0.21617915404731725
+        },
+        {
+          "k": 19,
+          "probability": 0.2648884826564202
+        },
+        {
+          "k": 20,
+          "probability": 0.2107007309417251
+        },
+        {
+          "k": 21,
+          "probability": 0.10301832243784663
+        },
+        {
+          "k": 22,
+          "probability": 0.02774424991297825
+        },
+        {
+          "k": 23,
+          "probability": 0.0031068257796896008
+        }
+      ],
+      "case": 3,
+      "conditional_label_assignment_entropy_bits": 82.59531196687044,
+      "conditional_subset_entropy_bits": 31.2962632901649,
+      "conditional_supported_key_entropy_bits": 116.50855327234619,
+      "dictionary_count": "118186885027453810673881387613232000",
+      "exact_count_law_verified": true,
+      "float_chain_rule_tolerance": 1e-10,
+      "mean_distinct_codes_given_support": 18.87570769072939,
+      "prior_key_entropy_bits": 124.02330072391149,
+      "support_information_bits": 7.514747451565299
+    }
+  ],
+  "scope": "Exposed conditional prior, not posterior entropy or used-key/plaintext uncertainty; no Gold",
+  "status": "PASS_closed_support_entropy_decomposition"
+}

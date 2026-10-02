@@ -1,8 +1,12 @@
 # Project memory
 
-Last updated: 2026-10-01 PDT (003 seven of eight/FAIL audited; new full-support tempered core finitely qualified; goal active; Voynich unsolved).
+Last updated: 2026-10-01 PDT (original-source tempering001 prepared, NOTRUN; support entropy quantified; goal active; Voynich unsolved).
 
 ## Current state
+
+- **TEMPERED-INVENTORY-001 prepared, NOTRUN.** Originalorder12/cipher-onlyfourEXPOSEDpaircases/frequencycompile, rowvs supported_refresh/N32/same83211+case/16cubetemperatures/4moves/max2080tables/call. ONErunONEaudit/no retries;1200wall1000absoluteCPU2GiB/500Medgescall/global4B+16/$0. Explicittypedcompiler/nativegraph/percallworkfailuresretainonlytrace+counters/continuepredefinedcalls, unexpectedglobal/ref/integerabort. Primaryall8complete+fixedFIRSTfourPython≤1e-7;noGold/recoverymetric.252paths/old240unchanged/proof/admission/linksPASS/sevenfocusedtinyfullpaneltestsPASS/scopedlintPASS/full2820+23subtests/13skip195.56s. NB358/design. Commit/push/exactorigin beforecall.
+
+- **Support entropy diagnostic PASS (own prior mathematics).** Originalkeyentropy124.0233bits; fourexposedsupportedconditionalpriors116.397..117.025bits, supportremovesonly6.999..7.626bits. ~82.6bitsconditionalrowassignmentterm, occupancy~18.9. Notposterior/usedkeyentropy/recoverylowerbound;0newcompiler/sampler/sourcecalls. NB359/INVENTORY-ENTROPY-001/entropyresearchdoc.
 
 - **COMPILED-INVENTORY-003 complete: engineeringFAIL/auditPASS, seven of eight cells.** Frozene3ed6ca exactremote beforeONE96778run/ONE64752audit;both0/all240unchanged. Rescuedcase2freq/case3natural;all4freqcomplete (exposed engineeringchoice).224literal-supported/7firstsourcechecks≤2.001e-11/fiveoldcompleteoutputs+statsEXACT002. Case2natural9.033MApply then20Mcollectioncap, attempted20,039,527chargebeforework;no partialgraph/count. Maxlive35,284/owned47.708MB. Run23.846s/audit23.599s/~1.264GB/474090ignoredbulk/$0. ReadonlypostreceiptPASS after capclassificationfix/no empiricalredo. NB356/resultsdoc. OriginalFAILunchanged, no retry/extension.
 

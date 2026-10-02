@@ -1,0 +1,36 @@
+# TEMPERED-INVENTORY-001 — Original-source search cost and transport
+
+Exploratory engineering, **not fresh recovery**. ONE run and ONE full audit after committed/pushed registration and exact origin verification; no retry/resume/seed replacement/budget extension/adaptive temperature path. [Implemented method and primary SMC/Voynich/decipherment review](../research/full-support-tempering-2026-10-01.md), [finite receipt](../../results/FULL-SUPPORT-TEMPERING-THEORY-001/result.json), [completed exposed compiler outcome](COMPILED-INVENTORY-003-results.md). Do not overwrite any prior FAIL.
+
+## Question, fixed inputs and controls
+
+Can supported full-record initialization followed by fixed-temperature key search run with the original large contextual source? Measure actual source-table/edge cost, limits, initial likelihood concentration, ancestry collapse and meaningful accepted changes. This qualifies engineering only; target identifiability and recovered plaintext remain unmeasured.
+
+Use exactly the same four exposed **cipher-only** development pairs: lengths122/121,121/124,428/425,386/388. All23 source-letter rows unknown;42uniform duplicate-allowing one/two glyph units; originalρ=1/225/order12/1,447,724states/399,571,824immutable source bytes/native qualification/hash identity chain unchanged. Counts SHA2569769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6, native SHA256d8d0fbdeb183b292594248f95c1a56eeea843d3c3ba26a0eb05548fb7bcaf30f. No source reading, true plaintext length, Gold, old bank, reserved holdout or new corpus enters. Closed metadata is permitted. New seed83211+case, equal across arms; no earlier samples are loaded.
+
+Compile once per case with frequency ordering, selected from exposed003 outcomes and now fixed prospectively. Same003 compiler caps:12MApply/150klivenodes/300kretainedcache/20Mcollection/3Mcoefficients/50Mpolywork/512MiB; same collection thresholds16/25000/50000. Record compilation separately from source search. Use one shared immutable partial-key profile, same order of operations in replay; profile's memoized coefficient queries may add cache/counter entries during draws.
+
+Fixed case→`row`, `supported_refresh` order, eight calls. N32, sixteen temperature increments β_j=(j/16)^3, j0..16, four mutations per increment; always resample before mutation. Initial q=π|Bfull with exactπ(Bfull) normalizer. Source scores are complete-record likelihoods throughout. Row control changes one random free code. Supported-refresh arm retains all original coordinated tickets but its1/32refresh draws a whole q key. Kernels have the same maximum number of proposal slots and source-table allowance, not necessarily equal actual tables, CPU or edges: unsupported proposals reject before scoring. Completed call maximum32×(1+16×4)=2080tables; all eight16,640. Fixed trace ESS/maximum weight/parents/distinct keys/change counts/refreshes and final source scores are engineering diagnostics, not calibrated posterior or recovery metrics. Equal-label/impossible/zero-source/incorrect-support/prior/order controls remain finitely qualified; this panel does not use those toy data as historical evidence.
+
+Primary gate ALL8complete sixteen stages/N32finite supported final particles, complete same-author replay, all32FIRST-four final-particle independent Python checks positive/agreed≤1e−7. Every allowed failure makes the gateFAIL. No comparison of Gold accuracy, fluent text, language identification, seed stability or null discrimination is performed. A later fresh recovery panel needs multiple seeds, sealed predictions, independent held-out synthetic keys and null controls.
+
+## Bounded resource and failure contract
+
+CPU1/BLAS1/OpenMP1/0USD/GPU/newtraining/download/final-holdout. Each original-source call≤2080tables/500,000,000cumulative native edges; per-record300knodes/2Medges/native128MiBowned, originalsource pinned separately. Total fitting≤4,000,000,016edges includes at most eight offending +1 charges. Source constructor/hash included, admission excluded from reporting; OS CPU cap counts all process CPU. Each process1200wall/1000absoluteCPU/2GiBpeakRSS/128MiBignoredbulk. Same bounds for audit; Python copied-source checks≤4tables/400Mrowops per completed call/300kstates/table/768MiB including source copies, four fixed FIRSTfinalparticles regardless of repeats/likelihood.
+
+Allowed compiler cap fails both predefined arms for that case without calling the sampler; allowed native per-record lattice cap or explicit `CensoredWorkBudgetExceeded` fails that whole call, retains only completed trace/counters and proceeds only to remaining predefined calls. This permission is explicit here, distinct from older global-stop contracts. No partial particles or likelihood substitution. Typed caps are NOT normal MH rejection. Unexpected/scorer/nonfinite/reference/initialization/integer/global time/CPU/RSS/bulk/globaledge/malformed errors abort the whole process/no retry. Reference failure aborts the audit; mechanical replay alone cannot be reported as PASS. Source immutable arrays rehashed at end.
+
+Planning estimate20–300seconds per run, audit potentially slower due up to32independent Python tables. This is uncertain extrapolation:003 first supported keys used840–6460native edges, but later high-likelihood keys can branch much more. The prior contextual coordinated panel used7.926Bedges/599s on a different prefix schedule;4Bhardworkcap suggests rough≤300sec at that historical throughput, not a wall guarantee. Authoritative1200wall/1000CPU bounds stop any mismatch. Compiler frequency replay should charge~9.228MApply based on closed003 cells; no compiler/schedule tuning after calls.
+
+Integer rejection at most25draws per q key and64attempts/draw. Initial256qkeys plus at most16,384proposal slots could all hypothetically be refresh:416,000idealintegerdraws, conservative coupled censoring bound416000×2^-64<2.3e−14. No claim that conditioning on a completed capped run is identical to the ideal draw law; no modulo/replacement fallback.
+
+## Commands, complete audit and publication
+
+Before any actual call: actual tiny8call/native/Python/full-audit/duplicate/failure/boundary unit tests, complete suite, scoped/fulltree lint classification, all frozen path/finite receipt/link/diff and query-only metadata admission checks. Freeze all inherited240dependencies, closed003metadata, tempered core/qualification/method and new runner/auditor/tests/design. Old240/source/core bytes stay unchanged.
+
+```
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m scripts.run_tempered_inventory001 --freeze <verified-registration-sha>
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m scripts.audit_tempered_inventory001
+```
+
+Audit replays all four compiler profiles and eight complete/capped calls, all RNG/keys/ancestry/trace/source scores/counters and summaries. Independent literal word-break checks every final key; independent contextual Python DP checks fixed FIRSTfour final particles for each completed call. Replay shares compiler/sampler/native backend and author, no independent expert review. Hash-bound bulk stays ignored; compact manifests/results/audit/notebook/project memory are committed/pushed/exactremote verified. Post-outcome diagnostics may read closed results but cannot trigger new source/sampler calls or relabel failures.
