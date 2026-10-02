@@ -1,0 +1,765 @@
+{
+  "actual_training_or_latin_or_holdout_access": false,
+  "bulk_bytes": 580536,
+  "cells": [
+    {
+      "archive": {
+        "bytes": 9530,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/small-1-8-double.json.gz",
+        "sha256": "c367d1fc20a0ef29b00714ed866eefd20d092dccbb48792a9320772e4864e79e"
+      },
+      "binding_input": true,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "family": "double",
+      "letters_per_first_record": 8,
+      "metrics": {
+        "cached_sequential_wall_seconds": 0.6235621249652468,
+        "cached_whole_path_logq": -58.506525862194195,
+        "full_teacher_forcing_wall_seconds": 0.20955374999903142,
+        "legal_logit_max_delta": 9.5367431640625e-07,
+        "record_glyph_lengths": [
+          16,
+          16
+        ],
+        "reference_whole_path_logq": -58.50652569826072,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 16,
+        "whole_path_logq_delta": 1.6393347834764427e-07
+      },
+      "sampled_two_seeds_checked": true,
+      "scale": "small",
+      "short_cpu_double_check": {
+        "legal_logit_max_delta": 3.4444810070866083e-07,
+        "whole_path_logq_delta": 8.643253579521115e-08
+      }
+    },
+    {
+      "archive": {
+        "bytes": 16994,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/small-1-32-mixed.json.gz",
+        "sha256": "45a63c30d55f004b829652980dd270c5cf5b0e381e19d49c6efce62c2061042e"
+      },
+      "binding_input": true,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "family": "mixed",
+      "letters_per_first_record": 32,
+      "metrics": {
+        "cached_sequential_wall_seconds": 0.15746970800682902,
+        "cached_whole_path_logq": -138.68558205565597,
+        "full_teacher_forcing_wall_seconds": 0.011059458018280566,
+        "legal_logit_max_delta": 7.748603820800781e-07,
+        "record_glyph_lengths": [
+          46,
+          25
+        ],
+        "reference_whole_path_logq": -138.68558379672234,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 49,
+        "whole_path_logq_delta": 1.7410663701866724e-06
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "small",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 26748,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/small-1-224-double.json.gz",
+        "sha256": "d3e9d45ba5f7a15bd5817b5ccf10157ce1de1400079458f7fca0ecadf0c635f5"
+      },
+      "binding_input": true,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "family": "double",
+      "letters_per_first_record": 224,
+      "metrics": {
+        "cached_sequential_wall_seconds": 1.7957378329592757,
+        "cached_whole_path_logq": -100.98280965236593,
+        "full_teacher_forcing_wall_seconds": 0.08034899999620393,
+        "legal_logit_max_delta": 1.0728836059570312e-06,
+        "record_glyph_lengths": [
+          448,
+          448
+        ],
+        "reference_whole_path_logq": -100.98281157495035,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 448,
+        "whole_path_logq_delta": 1.9225844170023265e-06
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "small",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 91533,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/small-1-448-single.json.gz",
+        "sha256": "d83c1c30a5937cd547ff45d6813aa3f7143e47c557b03eaa6de39937bdecded5"
+      },
+      "binding_input": true,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "family": "single",
+      "letters_per_first_record": 448,
+      "metrics": {
+        "cached_sequential_wall_seconds": 3.0179703750181943,
+        "cached_whole_path_logq": -1358.9235441708693,
+        "full_teacher_forcing_wall_seconds": 0.22794508299557492,
+        "legal_logit_max_delta": 1.1324882507324219e-06,
+        "record_glyph_lengths": [
+          448,
+          448
+        ],
+        "reference_whole_path_logq": -1358.9235468474876,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 896,
+        "whole_path_logq_delta": 2.67661835096078e-06
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "small",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 9462,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/small-0-8-double.json.gz",
+        "sha256": "7bf1eaf8929620601e4b5a47a1d09f9de65cefb7dd34912f6a1b9dfa3f60787c"
+      },
+      "binding_input": false,
+      "config": {
+        "binding_input": false,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "family": "double",
+      "letters_per_first_record": 8,
+      "metrics": {
+        "cached_sequential_wall_seconds": 0.07009066600585356,
+        "cached_whole_path_logq": -57.74769119355939,
+        "full_teacher_forcing_wall_seconds": 0.008062458015047014,
+        "legal_logit_max_delta": 1.0132789611816406e-06,
+        "record_glyph_lengths": [
+          16,
+          16
+        ],
+        "reference_whole_path_logq": -57.74769239171586,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 16,
+        "whole_path_logq_delta": 1.1981564682628232e-06
+      },
+      "sampled_two_seeds_checked": true,
+      "scale": "small",
+      "short_cpu_double_check": {
+        "legal_logit_max_delta": 3.0828652675118917e-07,
+        "whole_path_logq_delta": 5.296248275499238e-07
+      }
+    },
+    {
+      "archive": {
+        "bytes": 16837,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/small-0-32-mixed.json.gz",
+        "sha256": "79016031eab93c76118787cb641091681aac9d939198c3f0f26bc09efe8fdba6"
+      },
+      "binding_input": false,
+      "config": {
+        "binding_input": false,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "family": "mixed",
+      "letters_per_first_record": 32,
+      "metrics": {
+        "cached_sequential_wall_seconds": 0.14403125003445894,
+        "cached_whole_path_logq": -139.33017684388383,
+        "full_teacher_forcing_wall_seconds": 0.008580833033192903,
+        "legal_logit_max_delta": 8.344650268554688e-07,
+        "record_glyph_lengths": [
+          46,
+          25
+        ],
+        "reference_whole_path_logq": -139.33017853526232,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 49,
+        "whole_path_logq_delta": 1.6913784861571912e-06
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "small",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 26740,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/small-0-224-double.json.gz",
+        "sha256": "52374e1a60a6cdc2f893ebc21ec2e800e9f41883d476bcf292aca66421200af4"
+      },
+      "binding_input": false,
+      "config": {
+        "binding_input": false,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "family": "double",
+      "letters_per_first_record": 224,
+      "metrics": {
+        "cached_sequential_wall_seconds": 1.7788819160195999,
+        "cached_whole_path_logq": -100.33390108437167,
+        "full_teacher_forcing_wall_seconds": 0.07253875001333654,
+        "legal_logit_max_delta": 1.0728836059570312e-06,
+        "record_glyph_lengths": [
+          448,
+          448
+        ],
+        "reference_whole_path_logq": -100.3339013910903,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 448,
+        "whole_path_logq_delta": 3.067186185035098e-07
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "small",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 91658,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/small-0-448-single.json.gz",
+        "sha256": "dff980e5e6cd98b7757c0daddb89c39e9eb5aaea3551ae175b50fd36c8fa1777"
+      },
+      "binding_input": false,
+      "config": {
+        "binding_input": false,
+        "decoder_layers": 2,
+        "encoder_layers": 4,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 8,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 256
+      },
+      "family": "single",
+      "letters_per_first_record": 448,
+      "metrics": {
+        "cached_sequential_wall_seconds": 2.94288545899326,
+        "cached_whole_path_logq": -1359.2512614062039,
+        "full_teacher_forcing_wall_seconds": 0.20939924998674542,
+        "legal_logit_max_delta": 1.0728836059570312e-06,
+        "record_glyph_lengths": [
+          448,
+          448
+        ],
+        "reference_whole_path_logq": -1359.2512615802464,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 896,
+        "whole_path_logq_delta": 1.7404249774699565e-07
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "small",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 9750,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/large-1-8-double.json.gz",
+        "sha256": "7e5d763065190283096c998c6959ccc3478b013bdcfb2788c37c10dfdb3d8b3c"
+      },
+      "binding_input": true,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "family": "double",
+      "letters_per_first_record": 8,
+      "metrics": {
+        "cached_sequential_wall_seconds": 0.05861329101026058,
+        "cached_whole_path_logq": -63.550682704608626,
+        "full_teacher_forcing_wall_seconds": 0.017839625012129545,
+        "legal_logit_max_delta": 1.430511474609375e-06,
+        "record_glyph_lengths": [
+          16,
+          16
+        ],
+        "reference_whole_path_logq": -63.55068344208912,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 16,
+        "whole_path_logq_delta": 7.374804908977239e-07
+      },
+      "sampled_two_seeds_checked": true,
+      "scale": "large",
+      "short_cpu_double_check": {
+        "legal_logit_max_delta": 3.4155025918636284e-07,
+        "whole_path_logq_delta": 6.782111228176291e-08
+      }
+    },
+    {
+      "archive": {
+        "bytes": 17423,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/large-1-32-mixed.json.gz",
+        "sha256": "ff04eaf9b642076256a885ac4c0e1dffa3784de6f9c37dc3222efd912f9f6de9"
+      },
+      "binding_input": true,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "family": "mixed",
+      "letters_per_first_record": 32,
+      "metrics": {
+        "cached_sequential_wall_seconds": 0.13559991703368723,
+        "cached_whole_path_logq": -129.3714252067219,
+        "full_teacher_forcing_wall_seconds": 0.013737750006839633,
+        "legal_logit_max_delta": 1.6689300537109375e-06,
+        "record_glyph_lengths": [
+          46,
+          25
+        ],
+        "reference_whole_path_logq": -129.37142714934612,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 49,
+        "whole_path_logq_delta": 1.9426242090503365e-06
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "large",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 26816,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/large-1-224-double.json.gz",
+        "sha256": "d297aa89f4cf98c4b33f4aec1164c3356331fa50386466681b0f8231ab5f0e01"
+      },
+      "binding_input": true,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "family": "double",
+      "letters_per_first_record": 224,
+      "metrics": {
+        "cached_sequential_wall_seconds": 1.3132397080189548,
+        "cached_whole_path_logq": -105.84664270763558,
+        "full_teacher_forcing_wall_seconds": 0.10038099996745586,
+        "legal_logit_max_delta": 1.9073486328125e-06,
+        "record_glyph_lengths": [
+          448,
+          448
+        ],
+        "reference_whole_path_logq": -105.84664105448348,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 448,
+        "whole_path_logq_delta": 1.6531520969920166e-06
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "large",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 91611,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/large-1-448-single.json.gz",
+        "sha256": "1dc5a2a634a2d365120ef54b4e1cf7952633ff896fce344ea37923856f405683"
+      },
+      "binding_input": true,
+      "config": {
+        "binding_input": true,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "family": "single",
+      "letters_per_first_record": 448,
+      "metrics": {
+        "cached_sequential_wall_seconds": 2.758030041004531,
+        "cached_whole_path_logq": -1328.82315783003,
+        "full_teacher_forcing_wall_seconds": 0.23931054101558402,
+        "legal_logit_max_delta": 2.5033950805664062e-06,
+        "record_glyph_lengths": [
+          448,
+          448
+        ],
+        "reference_whole_path_logq": -1328.8231470098965,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 896,
+        "whole_path_logq_delta": 1.0820133411471033e-05
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "large",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 9689,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/large-0-8-double.json.gz",
+        "sha256": "77ebf445d7fe84fd3f36fc97771bd035bad1c3a64130f8feb2154884b79a00e6"
+      },
+      "binding_input": false,
+      "config": {
+        "binding_input": false,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "family": "double",
+      "letters_per_first_record": 8,
+      "metrics": {
+        "cached_sequential_wall_seconds": 0.05040541698690504,
+        "cached_whole_path_logq": -64.16344078794388,
+        "full_teacher_forcing_wall_seconds": 0.01016866700956598,
+        "legal_logit_max_delta": 1.9669532775878906e-06,
+        "record_glyph_lengths": [
+          16,
+          16
+        ],
+        "reference_whole_path_logq": -64.16343942356201,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 16,
+        "whole_path_logq_delta": 1.3643818732589352e-06
+      },
+      "sampled_two_seeds_checked": true,
+      "scale": "large",
+      "short_cpu_double_check": {
+        "legal_logit_max_delta": 2.9536508217020696e-07,
+        "whole_path_logq_delta": 6.851567633248123e-07
+      }
+    },
+    {
+      "archive": {
+        "bytes": 17384,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/large-0-32-mixed.json.gz",
+        "sha256": "ca9824629507f3fe66997d715732a8c646248d71e9c033750440eea3e0183fd3"
+      },
+      "binding_input": false,
+      "config": {
+        "binding_input": false,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "family": "mixed",
+      "letters_per_first_record": 32,
+      "metrics": {
+        "cached_sequential_wall_seconds": 0.13533583300886676,
+        "cached_whole_path_logq": -130.0116408603895,
+        "full_teacher_forcing_wall_seconds": 0.011706167017109692,
+        "legal_logit_max_delta": 1.5497207641601562e-06,
+        "record_glyph_lengths": [
+          46,
+          25
+        ],
+        "reference_whole_path_logq": -130.01164183563432,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 49,
+        "whole_path_logq_delta": 9.75244830669908e-07
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "large",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 26789,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/large-0-224-double.json.gz",
+        "sha256": "eed02108a79b30e49a7ff44c70f95b607afb2d6ceb3e4c6c7507b02040a1ad73"
+      },
+      "binding_input": false,
+      "config": {
+        "binding_input": false,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "family": "double",
+      "letters_per_first_record": 224,
+      "metrics": {
+        "cached_sequential_wall_seconds": 1.3130857499781996,
+        "cached_whole_path_logq": -106.31130125992333,
+        "full_teacher_forcing_wall_seconds": 0.09982524998486042,
+        "legal_logit_max_delta": 1.3709068298339844e-06,
+        "record_glyph_lengths": [
+          448,
+          448
+        ],
+        "reference_whole_path_logq": -106.3112963493835,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 448,
+        "whole_path_logq_delta": 4.910539828983929e-06
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "large",
+      "short_cpu_double_check": null
+    },
+    {
+      "archive": {
+        "bytes": 91572,
+        "path": "outputs/SOURCE-ACTION-CACHE-001/large-0-448-single.json.gz",
+        "sha256": "bb0631085fd9d24a68fc6f69976860216ee1fb644a444de523544eecbb0d32dc"
+      },
+      "binding_input": false,
+      "config": {
+        "binding_input": false,
+        "decoder_layers": 4,
+        "encoder_layers": 8,
+        "ff_multiplier": 4,
+        "glyphs": 6,
+        "heads": 12,
+        "max_glyphs": 448,
+        "max_records": 2,
+        "rows": 23,
+        "width": 768
+      },
+      "family": "single",
+      "letters_per_first_record": 448,
+      "metrics": {
+        "cached_sequential_wall_seconds": 2.7609858750365674,
+        "cached_whole_path_logq": -1327.984813320441,
+        "full_teacher_forcing_wall_seconds": 0.22742462501628324,
+        "legal_logit_max_delta": 2.0265579223632812e-06,
+        "record_glyph_lengths": [
+          448,
+          448
+        ],
+        "reference_whole_path_logq": -1327.9848118045861,
+        "sequential_uncached_speedup_claimed": false,
+        "source_letters": 896,
+        "whole_path_logq_delta": 1.5158548194449395e-06
+      },
+      "sampled_two_seeds_checked": false,
+      "scale": "large",
+      "short_cpu_double_check": null
+    }
+  ],
+  "forced_dead_end_preserved": true,
+  "freeze": "d55f2609f5642f75c0135721a380def7f40e9d89",
+  "full_optimizer_or_independent_agent_audit_claimed": false,
+  "inputs": [
+    {
+      "bytes": 3780,
+      "path": "docs/experiments/SOURCE-ACTION-BENCH-001.md",
+      "sha256": "f3a3930ae91e1bd266b39306e1372632319e03687b10117c438205b0f7984686"
+    },
+    {
+      "bytes": 3462,
+      "path": "docs/experiments/SOURCE-ACTION-CACHE-001.md",
+      "sha256": "bfe53c3908a5da87fc88c8a9a5e329fbfba281fe97fb4ef5f4877c527cfd8037"
+    },
+    {
+      "bytes": 3245,
+      "path": "docs/research/source-action-cached-inference-2026-10-02.md",
+      "sha256": "c53586cb28226346fccc3bc5ccd8028d03459d2524a4a15384fec2ea1c5a5865"
+    },
+    {
+      "bytes": 10192,
+      "path": "docs/research/source-action-inverse-2026-10-02.md",
+      "sha256": "1b8a7af9de1dc87b9d66f8af8c0977b6cc6fc6dab6f73e764c6288f0588863fb"
+    },
+    {
+      "bytes": 1041,
+      "path": "pyproject.toml",
+      "sha256": "0b6f5012ce991b55f4c3356cf381bc098549d8173f60142ce17f76df0f5a76e2"
+    },
+    {
+      "bytes": 439,
+      "path": "results/SOURCE-ACTION-BENCH-001/closed-check001.json",
+      "sha256": "1f373f7f74f692cb90b4ba0c5b56296f35352fc866be4d661eae832332d2df16"
+    },
+    {
+      "bytes": 6540,
+      "path": "results/SOURCE-ACTION-BENCH-001/result.json",
+      "sha256": "cb4a9b3d832ffd88b5f70ada67b5cbcd5e8e16a05c969a97248b90d66d9a9efb"
+    },
+    {
+      "bytes": 8674,
+      "path": "scripts/benchmark_source_action001.py",
+      "sha256": "89e1d74b166531cd1783138a63eef8f72918e87f611aded48b3a476f63a6f15b"
+    },
+    {
+      "bytes": 10054,
+      "path": "scripts/benchmark_source_action_cache001.py",
+      "sha256": "63fea244a5e5c2e7ce0a0fd8fff2efa13946aa547df584891dba2d0c3ce16beb"
+    },
+    {
+      "bytes": 6092,
+      "path": "scripts/run_blind_channel_dev001.py",
+      "sha256": "4e63d0d0da64817e4061cfd30346f61be4588d789e06ed6c73e622ecefadbc2f"
+    },
+    {
+      "bytes": 17975,
+      "path": "scripts/run_blind_channel_dev004.py",
+      "sha256": "facf61dd35117ef7231b4e403cc12a858f2cbcf2245c48aa342e46f9cc7f5273"
+    },
+    {
+      "bytes": 13400,
+      "path": "scripts/run_latin_source_model001.py",
+      "sha256": "209aeed575265fcbc81c4fb645c75d086c1b6cb7aeefa3eed6d6048f22ec5839"
+    },
+    {
+      "bytes": 11949,
+      "path": "src/voynich/joint_key_proposal.py",
+      "sha256": "e5263516ebd20c841aaef29e226759e68d4af8df2b5babaf43cde2aae50f1cb0"
+    },
+    {
+      "bytes": 8332,
+      "path": "src/voynich/source_action_cache.py",
+      "sha256": "890a64df4a63abe47cedafbff0a16eebf65b4f1c4dfd5b3f17c7895e9a2ce114"
+    },
+    {
+      "bytes": 16196,
+      "path": "src/voynich/source_action_proposal.py",
+      "sha256": "dae8fd0791336ef05cef9a12311436dc10fbfca8f758b7d21976c749eb1a7b07"
+    },
+    {
+      "bytes": 1670,
+      "path": "tests/test_source_action_benchmark.py",
+      "sha256": "669b0ae37ce1f7d54f32cc10375c0bae948ce76e13ea3776f0d6578a602997e1"
+    },
+    {
+      "bytes": 3025,
+      "path": "tests/test_source_action_cache.py",
+      "sha256": "6b099245916155d6bb02f29b4502d344168ba9ebcf85c37f79dbd69523fb6943"
+    },
+    {
+      "bytes": 874,
+      "path": "tests/test_source_action_cache_benchmark.py",
+      "sha256": "64623e30205b00dd665dba314616b10c5d9052e71d36cff945c86f2904866af0"
+    },
+    {
+      "bytes": 6897,
+      "path": "tests/test_source_action_proposal.py",
+      "sha256": "60e1b03571a95b2d6db91df0676ddba336f4994edbd916c77f1fc1e71de79d67"
+    },
+    {
+      "bytes": 199529,
+      "path": "uv.lock",
+      "sha256": "c1171646f4df9ea3347ca960f2584ba5b0b02920cf9a418436e99c934346a983"
+    }
+  ],
+  "paid_spend_usd": 0,
+  "resources": {
+    "cpu_seconds": 16.362863,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 2329722880,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 25.473217874998227
+  },
+  "sampled_driver_peak": 1924907008,
+  "sampled_host_peak": 2329722880,
+  "status": "PASS_full_size_cached_action_gpu_admission",
+  "torch": "2.14.0"
+}
