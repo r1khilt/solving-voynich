@@ -1,0 +1,169 @@
+{
+  "actual_corpus_or_model_calls": 0,
+  "balance_pairs": 31104,
+  "cases": [
+    {
+      "closed_evidence": "424569/104857600",
+      "kernel": "coordinated",
+      "omitting_initial_normalizer_evidence": "3821121/340787200",
+      "prior": "uniform",
+      "source": "contextual",
+      "support_probability": "13/36"
+    },
+    {
+      "closed_evidence": "424569/104857600",
+      "kernel": "supported_refresh",
+      "omitting_initial_normalizer_evidence": "3821121/340787200",
+      "prior": "uniform",
+      "source": "contextual",
+      "support_probability": "13/36"
+    },
+    {
+      "closed_evidence": "2997369/642252800",
+      "kernel": "coordinated",
+      "omitting_initial_normalizer_evidence": "8992107/681574400",
+      "prior": "weighted_abstract_only",
+      "source": "contextual",
+      "support_probability": "52/147"
+    },
+    {
+      "closed_evidence": "2997369/642252800",
+      "kernel": "supported_refresh",
+      "omitting_initial_normalizer_evidence": "8992107/681574400",
+      "prior": "weighted_abstract_only",
+      "source": "contextual",
+      "support_probability": "52/147"
+    },
+    {
+      "closed_evidence": "457/131072",
+      "kernel": "coordinated",
+      "omitting_initial_normalizer_evidence": "4113/425984",
+      "prior": "uniform",
+      "source": "equal_label_null",
+      "support_probability": "13/36"
+    },
+    {
+      "closed_evidence": "457/131072",
+      "kernel": "supported_refresh",
+      "omitting_initial_normalizer_evidence": "4113/425984",
+      "prior": "uniform",
+      "source": "equal_label_null",
+      "support_probability": "13/36"
+    },
+    {
+      "closed_evidence": "3209/802816",
+      "kernel": "coordinated",
+      "omitting_initial_normalizer_evidence": "9627/851968",
+      "prior": "weighted_abstract_only",
+      "source": "equal_label_null",
+      "support_probability": "52/147"
+    },
+    {
+      "closed_evidence": "3209/802816",
+      "kernel": "supported_refresh",
+      "omitting_initial_normalizer_evidence": "9627/851968",
+      "prior": "weighted_abstract_only",
+      "source": "equal_label_null",
+      "support_probability": "52/147"
+    }
+  ],
+  "equal_label_null_remains_ambiguous": true,
+  "inputs": [
+    {
+      "bytes": 8141,
+      "path": "src/voynich/tempered_inventory.py",
+      "sha256": "847c4e0f3e2f97c73e17860d4cbcb243401c16f874573f7247c020a313946db7"
+    },
+    {
+      "bytes": 13620,
+      "path": "tests/test_tempered_inventory.py",
+      "sha256": "3446a48fd6e9c0f9119227cb73ee06fbf18006af632eead7277ec53a2af54208"
+    },
+    {
+      "bytes": 1339,
+      "path": "scripts/check_full_support_tempering001.py",
+      "sha256": "d6df4d84d264dd443f81b5b2de9b6dae994451f06bf40adec3eb8fb6bf7fb03d"
+    },
+    {
+      "bytes": 10752,
+      "path": "src/voynich/coordinated_dictionary.py",
+      "sha256": "7acdf7f66eb8db84f0ba8d20fc2c86b321c88e10b92473d82ca483ff9e9097fc"
+    },
+    {
+      "bytes": 12209,
+      "path": "src/voynich/inventory_bdd.py",
+      "sha256": "34a31e174e5b5fec7fba2b28b6762db29c9b236621ebcbd3f044598f5fdd9648"
+    },
+    {
+      "bytes": 9638,
+      "path": "tests/test_coordinated_dictionary.py",
+      "sha256": "f5f004581d949425bda6f0f0a73a04c844b0eb75fe0f719916afd1bc273ec5ac"
+    },
+    {
+      "bytes": 9794,
+      "path": "tests/test_inventory_bdd.py",
+      "sha256": "c72a8137cca4677b08dab0b69adbce8d1cba403c23141ef35106c57c3561362e"
+    },
+    {
+      "bytes": 4222,
+      "path": "scripts/check_prefix_bridge001.py",
+      "sha256": "a65f2af9b0eb91af7c3be4c205ccc3659be441b02bb5eedfc99722c38c3b0b5a"
+    },
+    {
+      "bytes": 14063,
+      "path": "src/voynich/source_key_particles.py",
+      "sha256": "96e4acddd8153ade5a3e5b754ff8cd25a2e336e8ac7cfdc9c771ad2cc681d7c7"
+    },
+    {
+      "bytes": 14249,
+      "path": "src/voynich/dictionary_smc.py",
+      "sha256": "592f37c27ff6bb01806d96a5501247a83620873a76dc23fe0dda4c3fad29cfa5"
+    }
+  ],
+  "paid_spend_usd": 0,
+  "scope": "Own finite rational balance, N1 unnormalized law and N2 first-increment resampling; not a posterior/mixing/recovery certificate",
+  "status": "PASS_exact_full_support_tempering_laws",
+  "supported_dictionary_count": 13,
+  "temperature_schedule": [
+    "0",
+    "1/2",
+    "1"
+  ],
+  "two_particle_first_increment_ancestor_paths": 5408,
+  "unnormalized_transport_state_checks": 864,
+  "weighted_prior_cases_are_abstract_not_implemented_sampler": true,
+  "wrong_order_witnesses": [
+    {
+      "correct_half_temperature_total": "659/20480",
+      "mutate_before_weight_total": "2375006087/67947724800"
+    },
+    {
+      "correct_half_temperature_total": "659/20480",
+      "mutate_before_weight_total": "3877226621/110415052800"
+    },
+    {
+      "correct_half_temperature_total": "4499/125440",
+      "mutate_before_weight_total": "196503127/5138022400"
+    },
+    {
+      "correct_half_temperature_total": "4499/125440",
+      "mutate_before_weight_total": "8646081407/225430732800"
+    },
+    {
+      "correct_half_temperature_total": "17/512",
+      "mutate_before_weight_total": "968737/28311552"
+    },
+    {
+      "correct_half_temperature_total": "17/512",
+      "mutate_before_weight_total": "1577041/46006272"
+    },
+    {
+      "correct_half_temperature_total": "113/3136",
+      "mutate_before_weight_total": "6375521/173408256"
+    },
+    {
+      "correct_half_temperature_total": "113/3136",
+      "mutate_before_weight_total": "10368401/281788416"
+    }
+  ]
+}
