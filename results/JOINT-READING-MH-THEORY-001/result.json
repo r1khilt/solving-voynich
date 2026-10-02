@@ -1,0 +1,4143 @@
+{
+  "expert_independent_review": false,
+  "freeze": "6055bc1a5ef6bcec611092c23f9094ed784e886d",
+  "inputs": [
+    {
+      "bytes": 2786,
+      "path": "src/voynich/joint_reading_mh.py",
+      "sha256": "f0aa8a6aeaa0b086bf3ef329fb0d61b1d9b420184c79e6a2f09108b81bac607b"
+    },
+    {
+      "bytes": 16196,
+      "path": "src/voynich/source_action_proposal.py",
+      "sha256": "dae8fd0791336ef05cef9a12311436dc10fbfca8f758b7d21976c749eb1a7b07"
+    },
+    {
+      "bytes": 11949,
+      "path": "src/voynich/joint_key_proposal.py",
+      "sha256": "e5263516ebd20c841aaef29e226759e68d4af8df2b5babaf43cde2aae50f1cb0"
+    },
+    {
+      "bytes": 9860,
+      "path": "tests/test_joint_reading_mh.py",
+      "sha256": "111d3ead6646be030105de9e6c44f651233f8d1aa25fa28b1f9f5d554d39d55d"
+    },
+    {
+      "bytes": 3809,
+      "path": "scripts/check_joint_reading_mh001.py",
+      "sha256": "cb2555545ee65bfe593c29c4f874216780a879e61ed6efd7464a002990e4aae4"
+    },
+    {
+      "bytes": 17417,
+      "path": "scripts/run_joint_key_train001.py",
+      "sha256": "87591bd4819ca1d383bad85e63b2486534cedbd9c5bc2c2ed0a37c5d30f3f94c"
+    },
+    {
+      "bytes": 13400,
+      "path": "scripts/run_latin_source_model001.py",
+      "sha256": "209aeed575265fcbc81c4fb645c75d086c1b6cb7aeefa3eed6d6048f22ec5839"
+    },
+    {
+      "bytes": 17975,
+      "path": "scripts/run_blind_channel_dev004.py",
+      "sha256": "facf61dd35117ef7231b4e403cc12a858f2cbcf2245c48aa342e46f9cc7f5273"
+    },
+    {
+      "bytes": 13414,
+      "path": "docs/research/joint-reading-independence-2026-10-02.md",
+      "sha256": "231321e6ae4f153d1f30ffd6a298dfa4a35ce8bb5aad0cf650b13b0a26730d59"
+    },
+    {
+      "bytes": 3161,
+      "path": "docs/experiments/JOINT-READING-MH-THEORY-001.md",
+      "sha256": "aca487b6aee49ec2b189f28c08eac2603136e6565473ad27e69c6f7155d481f3"
+    }
+  ],
+  "maximum_float_acceptance_delta": 1.7763568394002505e-15,
+  "no_empirical_or_model_access": true,
+  "paid_spend_usd": 0,
+  "panels": [
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 2,
+      "failure_mass": "0",
+      "full_balance_pairs": 196,
+      "full_joint_states": 14,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 88,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "17/48",
+      "omitted_prior_balance_failures": 8,
+      "population_ess_fraction": "289/620",
+      "records": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 2,
+      "failure_mass": "0",
+      "full_balance_pairs": 196,
+      "full_joint_states": 14,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 92,
+      "max_acceptance_delta": 5.551115123125783e-16,
+      "minorization": "17/70",
+      "omitted_prior_balance_failures": 8,
+      "population_ess_fraction": "20808/62965",
+      "records": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 2,
+      "failure_mass": "0",
+      "full_balance_pairs": 196,
+      "full_joint_states": 14,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 88,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "17/48",
+      "omitted_prior_balance_failures": 8,
+      "population_ess_fraction": "289/620",
+      "records": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 2,
+      "failure_mass": "0",
+      "full_balance_pairs": 196,
+      "full_joint_states": 14,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 92,
+      "max_acceptance_delta": 5.551115123125783e-16,
+      "minorization": "17/70",
+      "omitted_prior_balance_failures": 8,
+      "population_ess_fraction": "20808/62965",
+      "records": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 4,
+      "contextual": false,
+      "distinct_used_inventories": 1,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 4,
+      "full_joint_states": 2,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 0.0,
+      "minorization": "1",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1",
+      "records": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 2,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 4,
+      "contextual": false,
+      "distinct_used_inventories": 1,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 4,
+      "full_joint_states": 2,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "4/5",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "24/25",
+      "records": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 2,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 4,
+      "contextual": true,
+      "distinct_used_inventories": 1,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 4,
+      "full_joint_states": 2,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 0.0,
+      "minorization": "1",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1",
+      "records": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 2,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 4,
+      "contextual": true,
+      "distinct_used_inventories": 1,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 4,
+      "full_joint_states": 2,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "4/5",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "24/25",
+      "records": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 2,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 288,
+      "max_acceptance_delta": 1.3322676295501878e-15,
+      "minorization": "5/32",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "225/827",
+      "records": [
+        [
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 324,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "1/13",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "10800/77647",
+      "records": [
+        [
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 288,
+      "max_acceptance_delta": 1.1102230246251565e-15,
+      "minorization": "85/288",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "7225/11868",
+      "records": [
+        [
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 324,
+      "max_acceptance_delta": 1.1102230246251565e-15,
+      "minorization": "17/117",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "115600/317527",
+      "records": [
+        [
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/3",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 6.106226635438361e-16,
+      "minorization": "4/9",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "48/91",
+      "records": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "41/143",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 5.551115123125783e-16,
+      "minorization": "32/65",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1728/3005",
+      "records": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/3",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.6653345369377348e-16,
+      "minorization": "13/24",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "169/294",
+      "records": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "41/143",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "3/10",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "2028/4055",
+      "records": [
+        [
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/91",
+      "records": [
+        [
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "16/25",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "20736/24815",
+      "records": [
+        [
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "3/4",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "9/10",
+      "records": [
+        [
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "18/25",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1296/1385",
+      "records": [
+        [
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/91",
+      "records": [
+        [
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.2212453270876722e-15,
+      "minorization": "16/25",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "20736/23795",
+      "records": [
+        [
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "7/12",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "49/74",
+      "records": [
+        [
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 6.661338147750939e-16,
+      "minorization": "14/25",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "7056/9545",
+      "records": [
+        [
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 4,
+      "contextual": false,
+      "distinct_used_inventories": 1,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 4,
+      "full_joint_states": 2,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 0.0,
+      "minorization": "1",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1",
+      "records": [
+        [
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 2,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 4,
+      "contextual": false,
+      "distinct_used_inventories": 1,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 4,
+      "full_joint_states": 2,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "4/5",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "24/25",
+      "records": [
+        [
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 2,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 4,
+      "contextual": true,
+      "distinct_used_inventories": 1,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 4,
+      "full_joint_states": 2,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 0.0,
+      "minorization": "1",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1",
+      "records": [
+        [
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 2,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 4,
+      "contextual": true,
+      "distinct_used_inventories": 1,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 4,
+      "full_joint_states": 2,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "4/5",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "24/25",
+      "records": [
+        [
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 2,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 2,
+      "failure_mass": "0",
+      "full_balance_pairs": 196,
+      "full_joint_states": 14,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 88,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "17/48",
+      "omitted_prior_balance_failures": 8,
+      "population_ess_fraction": "289/620",
+      "records": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 2,
+      "failure_mass": "0",
+      "full_balance_pairs": 196,
+      "full_joint_states": 14,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 92,
+      "max_acceptance_delta": 5.551115123125783e-16,
+      "minorization": "17/70",
+      "omitted_prior_balance_failures": 8,
+      "population_ess_fraction": "20808/62965",
+      "records": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 2,
+      "failure_mass": "0",
+      "full_balance_pairs": 196,
+      "full_joint_states": 14,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 88,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "17/48",
+      "omitted_prior_balance_failures": 8,
+      "population_ess_fraction": "289/620",
+      "records": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 2,
+      "failure_mass": "0",
+      "full_balance_pairs": 196,
+      "full_joint_states": 14,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 92,
+      "max_acceptance_delta": 5.551115123125783e-16,
+      "minorization": "17/70",
+      "omitted_prior_balance_failures": 8,
+      "population_ess_fraction": "20808/62965",
+      "records": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/91",
+      "records": [
+        [
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.2212453270876722e-15,
+      "minorization": "16/25",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "20736/23795",
+      "records": [
+        [
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "7/12",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "49/74",
+      "records": [
+        [
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 6.661338147750939e-16,
+      "minorization": "14/25",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "7056/9545",
+      "records": [
+        [
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/91",
+      "records": [
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "16/25",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "20736/24815",
+      "records": [
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "3/4",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "9/10",
+      "records": [
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "18/25",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1296/1385",
+      "records": [
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/3",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 6.106226635438361e-16,
+      "minorization": "4/9",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "48/91",
+      "records": [
+        [
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "41/143",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 5.551115123125783e-16,
+      "minorization": "32/65",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1728/3005",
+      "records": [
+        [
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/3",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.6653345369377348e-16,
+      "minorization": "13/24",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "169/294",
+      "records": [
+        [
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "41/143",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "3/10",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "2028/4055",
+      "records": [
+        [
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 288,
+      "max_acceptance_delta": 1.3322676295501878e-15,
+      "minorization": "5/32",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "225/827",
+      "records": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 324,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "1/13",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "10800/77647",
+      "records": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 288,
+      "max_acceptance_delta": 1.1102230246251565e-15,
+      "minorization": "85/288",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "7225/11868",
+      "records": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 324,
+      "max_acceptance_delta": 1.1102230246251565e-15,
+      "minorization": "17/117",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "115600/317527",
+      "records": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 288,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "15/128",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "675/3254",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 324,
+      "max_acceptance_delta": 1.5543122344752192e-15,
+      "minorization": "5/91",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "3600/36049",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 288,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "85/384",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "7225/14672",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 324,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "85/819",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "578000/2156947",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/91",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "8/13",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "2160/2561",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "7/12",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "49/74",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "7/13",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "5880/7813",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 576,
+      "contextual": false,
+      "distinct_used_inventories": 5,
+      "duplicate_witnesses": 16,
+      "failure_mass": "0",
+      "full_balance_pairs": 1936,
+      "full_joint_states": 44,
+      "key_density_witnesses": 28,
+      "key_marginal_balance_failures": 1448,
+      "max_acceptance_delta": 1.3322676295501878e-15,
+      "minorization": "1817/11664",
+      "omitted_prior_balance_failures": 160,
+      "population_ess_fraction": "3301489/14089380",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 24,
+      "unused_witnesses": 24,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 576,
+      "contextual": false,
+      "distinct_used_inventories": 5,
+      "duplicate_witnesses": 16,
+      "failure_mass": "0",
+      "full_balance_pairs": 1936,
+      "full_joint_states": 44,
+      "key_density_witnesses": 28,
+      "key_marginal_balance_failures": 1652,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "9085/133848",
+      "omitted_prior_balance_failures": 160,
+      "population_ess_fraction": "231104230/1380241603",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 24,
+      "unused_witnesses": 24,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 576,
+      "contextual": true,
+      "distinct_used_inventories": 5,
+      "duplicate_witnesses": 16,
+      "failure_mass": "0",
+      "full_balance_pairs": 1936,
+      "full_joint_states": 44,
+      "key_density_witnesses": 28,
+      "key_marginal_balance_failures": 1448,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "1441/10368",
+      "omitted_prior_balance_failures": 160,
+      "population_ess_fraction": "2076481/9797712",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 24,
+      "unused_witnesses": 24,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 576,
+      "contextual": true,
+      "distinct_used_inventories": 5,
+      "duplicate_witnesses": 16,
+      "failure_mass": "0",
+      "full_balance_pairs": 1936,
+      "full_joint_states": 44,
+      "key_density_witnesses": 28,
+      "key_marginal_balance_failures": 1652,
+      "max_acceptance_delta": 1.2212453270876722e-15,
+      "minorization": "7205/63648",
+      "omitted_prior_balance_failures": 160,
+      "population_ess_fraction": "2325658720/13083002803",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 24,
+      "unused_witnesses": 24,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 6.106226635438361e-16,
+      "minorization": "59/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3481/8184",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "29071/66924",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.1102230246251565e-15,
+      "minorization": "118/507",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "4873400/10335897",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "61/192",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3721/10008",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "29071/66924",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 7.771561172376096e-16,
+      "minorization": "122/507",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "2604700/5898191",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "59/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3481/7507",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "125/468",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "413/1053",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "43860600/78957203",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "5/16",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "225/596",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "125/468",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 7.771561172376096e-16,
+      "minorization": "35/104",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "5670000/11615071",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 64,
+      "contextual": false,
+      "distinct_used_inventories": 4,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 64,
+      "full_joint_states": 8,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "143/324",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "20449/32980",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 8,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 64,
+      "contextual": false,
+      "distinct_used_inventories": 4,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 64,
+      "full_joint_states": 8,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "77/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "4954950/6577421",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 8,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 64,
+      "contextual": true,
+      "distinct_used_inventories": 4,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 64,
+      "full_joint_states": 8,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "49/144",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "2401/5476",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 8,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 64,
+      "contextual": true,
+      "distinct_used_inventories": 4,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 64,
+      "full_joint_states": 8,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.2212453270876722e-15,
+      "minorization": "343/936",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "60505200/106892539",
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 8,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/101",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "17/91",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "36/91",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "960/1391",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "13/32",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "169/264",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "17/91",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "3/14",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "780/1667",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/91",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "8/13",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "4320/4927",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "3/4",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "9/10",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "9/13",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1080/1157",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/3",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "59/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3481/7575",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "493/1859",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "413/1053",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "29240400/51343357",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/3",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "61/192",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3721/9676",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "493/1859",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "427/1248",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "7814100/16163953",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 2,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 256,
+      "full_joint_states": 16,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 104,
+      "max_acceptance_delta": 1.1102230246251565e-16,
+      "minorization": "1393/11664",
+      "omitted_prior_balance_failures": 16,
+      "population_ess_fraction": "1940449/12204996",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 2,
+      "failure_mass": "54259/126412",
+      "full_balance_pairs": 256,
+      "full_joint_states": 16,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 108,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "6965/71604",
+      "omitted_prior_balance_failures": 16,
+      "population_ess_fraction": "1018735725/7558391893",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 2,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 256,
+      "full_joint_states": 16,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 104,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "47/384",
+      "omitted_prior_balance_failures": 16,
+      "population_ess_fraction": "6627/39748",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 2,
+      "failure_mass": "54259/126412",
+      "full_balance_pairs": 256,
+      "full_joint_states": 16,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 108,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "705/7072",
+      "omitted_prior_balance_failures": 16,
+      "population_ess_fraction": "4638900/32870617",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "89/324",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "7921/26500",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "619/1260",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "623/2106",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "49902300/127782031",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.6653345369377348e-16,
+      "minorization": "5/16",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "25/68",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "619/1260",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 7.771561172376096e-16,
+      "minorization": "35/104",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "630000/1386619",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "59/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3481/7507",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "102/455",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "413/1053",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "87721200/146859271",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "5/16",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "225/596",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "102/455",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.5543122344752192e-15,
+      "minorization": "35/104",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "5670000/11560471",
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/91",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "8/13",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "4320/4927",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "3/4",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "9/10",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "9/13",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "1080/1157",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/101",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "17/91",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "36/91",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "960/1391",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "13/32",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "169/264",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "17/91",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "3/14",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "780/1667",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "59/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3481/7507",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "102/455",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "413/1053",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "87721200/146859271",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "5/16",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "225/596",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "102/455",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.5543122344752192e-15,
+      "minorization": "35/104",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "5670000/11560471",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "89/324",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "7921/26500",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "619/1260",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "623/2106",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "49902300/127782031",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.6653345369377348e-16,
+      "minorization": "5/16",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "25/68",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "619/1260",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 7.771561172376096e-16,
+      "minorization": "35/104",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "630000/1386619",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 2,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 256,
+      "full_joint_states": 16,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 104,
+      "max_acceptance_delta": 1.1102230246251565e-16,
+      "minorization": "1393/11664",
+      "omitted_prior_balance_failures": 16,
+      "population_ess_fraction": "1940449/12204996",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 2,
+      "failure_mass": "54259/126412",
+      "full_balance_pairs": 256,
+      "full_joint_states": 16,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 108,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "6965/71604",
+      "omitted_prior_balance_failures": 16,
+      "population_ess_fraction": "1018735725/7558391893",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 2,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 256,
+      "full_joint_states": 16,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 104,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "47/384",
+      "omitted_prior_balance_failures": 16,
+      "population_ess_fraction": "6627/39748",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 2,
+      "failure_mass": "54259/126412",
+      "full_balance_pairs": 256,
+      "full_joint_states": 16,
+      "key_density_witnesses": 4,
+      "key_marginal_balance_failures": 108,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "705/7072",
+      "omitted_prior_balance_failures": 16,
+      "population_ess_fraction": "4638900/32870617",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/3",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "59/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3481/7575",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "493/1859",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "413/1053",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "29240400/51343357",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/3",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "61/192",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3721/9676",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "493/1859",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "427/1248",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "7814100/16163953",
+      "records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "2/3",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "72/91",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": false,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "8/13",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "2160/2561",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "7/12",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "49/74",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 16,
+      "contextual": true,
+      "distinct_used_inventories": 2,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 16,
+      "full_joint_states": 4,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "7/13",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "5880/7813",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0
+        ]
+      ],
+      "states": 4,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 288,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "15/128",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "675/3254",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 324,
+      "max_acceptance_delta": 1.5543122344752192e-15,
+      "minorization": "5/91",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "3600/36049",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 288,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "85/384",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "7225/14672",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 100,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 6,
+      "failure_mass": "0",
+      "full_balance_pairs": 400,
+      "full_joint_states": 20,
+      "key_density_witnesses": 12,
+      "key_marginal_balance_failures": 324,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "85/819",
+      "omitted_prior_balance_failures": 32,
+      "population_ess_fraction": "578000/2156947",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "states": 10,
+      "unused_witnesses": 12,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 64,
+      "contextual": false,
+      "distinct_used_inventories": 4,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 64,
+      "full_joint_states": 8,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "143/324",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "20449/32980",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 8,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 64,
+      "contextual": false,
+      "distinct_used_inventories": 4,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 64,
+      "full_joint_states": 8,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "77/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "4954950/6577421",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 8,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 64,
+      "contextual": true,
+      "distinct_used_inventories": 4,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 64,
+      "full_joint_states": 8,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "49/144",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "2401/5476",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 8,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 64,
+      "contextual": true,
+      "distinct_used_inventories": 4,
+      "duplicate_witnesses": 0,
+      "failure_mass": "0",
+      "full_balance_pairs": 64,
+      "full_joint_states": 8,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.2212453270876722e-15,
+      "minorization": "343/936",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "60505200/106892539",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "states": 8,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "59/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3481/7507",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "125/468",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "413/1053",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "43860600/78957203",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/4",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 8.326672684688674e-17,
+      "minorization": "5/16",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "225/596",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "125/468",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 7.771561172376096e-16,
+      "minorization": "35/104",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "5670000/11615071",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 6.106226635438361e-16,
+      "minorization": "59/162",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3481/8184",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": false,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "29071/66924",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 1.1102230246251565e-15,
+      "minorization": "118/507",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "4873400/10335897",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "1/2",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 4.440892098500626e-16,
+      "minorization": "61/192",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "3721/10008",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 36,
+      "contextual": true,
+      "distinct_used_inventories": 3,
+      "duplicate_witnesses": 0,
+      "failure_mass": "29071/66924",
+      "full_balance_pairs": 36,
+      "full_joint_states": 6,
+      "key_density_witnesses": 0,
+      "key_marginal_balance_failures": 0,
+      "max_acceptance_delta": 7.771561172376096e-16,
+      "minorization": "122/507",
+      "omitted_prior_balance_failures": 0,
+      "population_ess_fraction": "2604700/5898191",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "states": 6,
+      "unused_witnesses": 0,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 576,
+      "contextual": false,
+      "distinct_used_inventories": 5,
+      "duplicate_witnesses": 16,
+      "failure_mass": "0",
+      "full_balance_pairs": 1936,
+      "full_joint_states": 44,
+      "key_density_witnesses": 28,
+      "key_marginal_balance_failures": 1448,
+      "max_acceptance_delta": 1.3322676295501878e-15,
+      "minorization": "1817/11664",
+      "omitted_prior_balance_failures": 160,
+      "population_ess_fraction": "3301489/14089380",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 24,
+      "unused_witnesses": 24,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 576,
+      "contextual": false,
+      "distinct_used_inventories": 5,
+      "duplicate_witnesses": 16,
+      "failure_mass": "0",
+      "full_balance_pairs": 1936,
+      "full_joint_states": 44,
+      "key_density_witnesses": 28,
+      "key_marginal_balance_failures": 1652,
+      "max_acceptance_delta": 1.7763568394002505e-15,
+      "minorization": "9085/133848",
+      "omitted_prior_balance_failures": 160,
+      "population_ess_fraction": "231104230/1380241603",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 24,
+      "unused_witnesses": 24,
+      "weighted": true
+    },
+    {
+      "balance_pairs": 576,
+      "contextual": true,
+      "distinct_used_inventories": 5,
+      "duplicate_witnesses": 16,
+      "failure_mass": "0",
+      "full_balance_pairs": 1936,
+      "full_joint_states": 44,
+      "key_density_witnesses": 28,
+      "key_marginal_balance_failures": 1448,
+      "max_acceptance_delta": 8.881784197001252e-16,
+      "minorization": "1441/10368",
+      "omitted_prior_balance_failures": 160,
+      "population_ess_fraction": "2076481/9797712",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 24,
+      "unused_witnesses": 24,
+      "weighted": false
+    },
+    {
+      "balance_pairs": 576,
+      "contextual": true,
+      "distinct_used_inventories": 5,
+      "duplicate_witnesses": 16,
+      "failure_mass": "0",
+      "full_balance_pairs": 1936,
+      "full_joint_states": 44,
+      "key_density_witnesses": 28,
+      "key_marginal_balance_failures": 1652,
+      "max_acceptance_delta": 1.2212453270876722e-15,
+      "minorization": "7205/63648",
+      "omitted_prior_balance_failures": 160,
+      "population_ess_fraction": "2325658720/13083002803",
+      "records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "states": 24,
+      "unused_witnesses": 24,
+      "weighted": true
+    }
+  ],
+  "resources": {
+    "cpu_seconds": 0.387112,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 212484096,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.3872775420313701
+  },
+  "single_row_failure_panels": [
+    {
+      "complete_states": 1,
+      "failed_mass": "0",
+      "record": [
+        0
+      ]
+    },
+    {
+      "complete_states": 1,
+      "failed_mass": "0",
+      "record": [
+        1
+      ]
+    },
+    {
+      "complete_states": 2,
+      "failed_mass": "0",
+      "record": [
+        0,
+        0
+      ]
+    },
+    {
+      "complete_states": 1,
+      "failed_mass": "1/2",
+      "record": [
+        0,
+        1
+      ]
+    },
+    {
+      "complete_states": 1,
+      "failed_mass": "1/2",
+      "record": [
+        1,
+        0
+      ]
+    },
+    {
+      "complete_states": 2,
+      "failed_mass": "0",
+      "record": [
+        1,
+        1
+      ]
+    },
+    {
+      "complete_states": 1,
+      "failed_mass": "1/2",
+      "record": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "complete_states": 0,
+      "failed_mass": "1",
+      "record": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "complete_states": 0,
+      "failed_mass": "1",
+      "record": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "complete_states": 0,
+      "failed_mass": "1",
+      "record": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "complete_states": 0,
+      "failed_mass": "1",
+      "record": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "complete_states": 0,
+      "failed_mass": "1",
+      "record": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "complete_states": 0,
+      "failed_mass": "1",
+      "record": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "complete_states": 1,
+      "failed_mass": "1/2",
+      "record": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "status": "PASS_finite_joint_reading_target_proposal_balance_and_minorization",
+  "totals": {
+    "balance_pairs": 9216,
+    "duplicate_witnesses": 256,
+    "full_balance_pairs": 28096,
+    "full_joint_states": 1408,
+    "key_density_witnesses": 480,
+    "key_marginal_balance_failures": 18864,
+    "omitted_prior_balance_failures": 1984,
+    "states": 928,
+    "unused_witnesses": 576
+  },
+  "trained_support_or_recovery_claim": false
+}
