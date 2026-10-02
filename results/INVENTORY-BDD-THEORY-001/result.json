@@ -1,0 +1,52 @@
+{
+  "actual_corpus_or_model_calls": 0,
+  "boolean_mask_checks": 4608,
+  "dictionary_factorization_checks": 3528,
+  "exact_closed_evidence": "4277/6553600",
+  "full_support_smc_exact_pairs": 5184,
+  "generic_full_free_prefix_count": "9732841398180148689892306910289985536",
+  "generic_six_glyph_known_profile_checks": 6,
+  "incorrect_unrestricted_intermediate_evidence": "891859/2516582400",
+  "inputs": [
+    {
+      "bytes": 12209,
+      "path": "src/voynich/inventory_bdd.py",
+      "sha256": "34a31e174e5b5fec7fba2b28b6762db29c9b236621ebcbd3f044598f5fdd9648"
+    },
+    {
+      "bytes": 9794,
+      "path": "tests/test_inventory_bdd.py",
+      "sha256": "c72a8137cca4677b08dab0b69adbce8d1cba403c23141ef35106c57c3561362e"
+    },
+    {
+      "bytes": 1230,
+      "path": "scripts/check_inventory_bdd001.py",
+      "sha256": "d7c6cda26680ccff768d76c54effa9caa33bd024c3243f6769ebd1d39180ebfd"
+    },
+    {
+      "bytes": 5864,
+      "path": "scripts/check_observation_initialization001.py",
+      "sha256": "1c5145dabb0de017451812e75679cb000819ca2bc6bff862501fa68cdc50049d"
+    },
+    {
+      "bytes": 4222,
+      "path": "scripts/check_prefix_bridge001.py",
+      "sha256": "a65f2af9b0eb91af7c3be4c205ccc3659be441b02bb5eedfc99722c38c3b0b5a"
+    },
+    {
+      "bytes": 9638,
+      "path": "tests/test_coordinated_dictionary.py",
+      "sha256": "f5f004581d949425bda6f0f0a73a04c844b0eb75fe0f719916afd1bc273ec5ac"
+    },
+    {
+      "bytes": 10752,
+      "path": "src/voynich/coordinated_dictionary.py",
+      "sha256": "7acdf7f66eb8db84f0ba8d20fc2c86b321c88e10b92473d82ca483ff9e9097fc"
+    }
+  ],
+  "known_binding_profiles": 288,
+  "paid_spend_usd": 0,
+  "scope": "Own finite Boolean/occupancy/ranking/factorization mathematics; no empirical recovery claim",
+  "status": "PASS_exact_inventory_bdd_laws",
+  "subset_rank_checks": 7526
+}
