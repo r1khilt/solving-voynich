@@ -1,0 +1,72 @@
+{
+  "checked_seeded_path_draws": 2548,
+  "collapsed_swap_acceptance_dominates_auxiliary_in_all_cases": true,
+  "experiment": "AUXILIARY-KEY-SWAP-THEORY-001",
+  "inputs": [
+    {
+      "bytes": 8151,
+      "path": "src/voynich/suffix_posterior_paths.py",
+      "sha256": "ef6013fe4a637ad9fea30f92fe4015002d663818c51148b90b3804d2e284f822"
+    },
+    {
+      "bytes": 6045,
+      "path": "tests/test_suffix_posterior_paths.py",
+      "sha256": "76952479db0503ba115f5dfab9324d25bf363ec4c1dbee60bfe8102af35089be"
+    },
+    {
+      "bytes": 2296,
+      "path": "src/voynich/auxiliary_key_swap.py",
+      "sha256": "2f03a3d63c7c9201186e715bdb18e6c5b6e3052f716857e33514998d40e86b30"
+    },
+    {
+      "bytes": 2000,
+      "path": "tests/test_auxiliary_key_swap.py",
+      "sha256": "9b4958087e35e8e945360e7d7a36d6a26d24639efcb7c02ab327b9db4e6560d9"
+    },
+    {
+      "bytes": 8141,
+      "path": "src/voynich/tempered_inventory.py",
+      "sha256": "847c4e0f3e2f97c73e17860d4cbcb243401c16f874573f7247c020a313946db7"
+    },
+    {
+      "bytes": 8398,
+      "path": "scripts/check_auxiliary_key_swap001.py",
+      "sha256": "e8e96b7f440490cae4d04f8c0c68f4ccbeda1408097f5db6f59d75594466ef6c"
+    },
+    {
+      "bytes": 9512,
+      "path": "docs/research/auxiliary-key-swap-2026-10-01.md",
+      "sha256": "773e31263f2f22f990330adbab936073b072373f248ecb71022c0bda7c7773dd"
+    }
+  ],
+  "joint_record_cases": 450,
+  "lattice_cases": 1080,
+  "maximum_float_auxiliary_acceptance_delta": 4.440892098500626e-16,
+  "maximum_float_log_likelihood_delta": 8.881784197001252e-16,
+  "maximum_float_path_probability_delta": 2.220446049250313e-16,
+  "no_original_source_or_empirical_data_access": true,
+  "no_speed_mixing_or_recovery_claim": true,
+  "omitted_nonexchangeable_prior_ratio_witnesses": 2684,
+  "paid_spend_usd": 0,
+  "path_tempered_beta0_wrong_marginal_panels": 72,
+  "rational_gibbs_refreshed_key_balance_and_stationarity": true,
+  "rational_joint_balance_checks": 3656,
+  "resources": {
+    "cpu_seconds": 0.12641399999999997,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 214335488,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.13434112496906891
+  },
+  "same_inventory_only": true,
+  "status": "PASS_finite_posterior_paths_and_terminal_auxiliary_swap",
+  "strict_acceptance_dominance_key_cases": 136,
+  "wrong_point_only_beta0_witnesses": 332,
+  "wrong_point_only_beta_half_witnesses": 332
+}
