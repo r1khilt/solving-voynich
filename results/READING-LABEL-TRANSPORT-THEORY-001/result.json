@@ -1,0 +1,195 @@
+{
+  "fixed_mixture_controller_not_implemented": true,
+  "freeze": "6f2c4193a2b51f2d89aa06a7c3018548fe320f37",
+  "independent_expert_review": false,
+  "inputs": [
+    {
+      "bytes": 7141,
+      "path": "src/voynich/reading_label_transport.py",
+      "sha256": "2abf4864e884afeffed9ac72def179d72c14c6a5eb311f0542969ef82a425b97"
+    },
+    {
+      "bytes": 14645,
+      "path": "src/voynich/reading_regrowth.py",
+      "sha256": "6d09427b8a85332ec279b3e0a961f177d6024bd94a45b54631993c0364a29203"
+    },
+    {
+      "bytes": 16196,
+      "path": "src/voynich/source_action_proposal.py",
+      "sha256": "dae8fd0791336ef05cef9a12311436dc10fbfca8f758b7d21976c749eb1a7b07"
+    },
+    {
+      "bytes": 11949,
+      "path": "src/voynich/joint_key_proposal.py",
+      "sha256": "e5263516ebd20c841aaef29e226759e68d4af8df2b5babaf43cde2aae50f1cb0"
+    },
+    {
+      "bytes": 13280,
+      "path": "tests/test_reading_label_transport.py",
+      "sha256": "2dd519b363883b3a16a4774e308fcc8edf593b9635cb65b770f8eb9fa27d2e7d"
+    },
+    {
+      "bytes": 2811,
+      "path": "scripts/check_reading_label_transport001.py",
+      "sha256": "6a81d36e5ee424cd5ef20e1c7a87e5422866552cbff21e882ac34803ebfa7dc1"
+    },
+    {
+      "bytes": 2312,
+      "path": "scripts/audit_reading_label_transport001.py",
+      "sha256": "900431245b96506ee3713a442d0da7d1050f04c5d6854be3619082bcf19711cb"
+    },
+    {
+      "bytes": 17417,
+      "path": "scripts/run_joint_key_train001.py",
+      "sha256": "87591bd4819ca1d383bad85e63b2486534cedbd9c5bc2c2ed0a37c5d30f3f94c"
+    },
+    {
+      "bytes": 6092,
+      "path": "scripts/run_blind_channel_dev001.py",
+      "sha256": "4e63d0d0da64817e4061cfd30346f61be4588d789e06ed6c73e622ecefadbc2f"
+    },
+    {
+      "bytes": 13400,
+      "path": "scripts/run_latin_source_model001.py",
+      "sha256": "209aeed575265fcbc81c4fb645c75d086c1b6cb7aeefa3eed6d6048f22ec5839"
+    },
+    {
+      "bytes": 17975,
+      "path": "scripts/run_blind_channel_dev004.py",
+      "sha256": "facf61dd35117ef7231b4e403cc12a858f2cbcf2245c48aa342e46f9cc7f5273"
+    },
+    {
+      "bytes": 10053,
+      "path": "docs/research/reading-label-transport-2026-10-02.md",
+      "sha256": "7c53422bfa68723c4b0cf8c67a055f6fe8085f7219fee19a95b61a067c7680a2"
+    },
+    {
+      "bytes": 2400,
+      "path": "docs/experiments/READING-LABEL-TRANSPORT-THEORY-001.md",
+      "sha256": "287ef7e1fa470c97079962d043ad67abfac7a2b11df0a71f3b2716ca06c9c5c6"
+    }
+  ],
+  "no_empirical_source_or_recovery": true,
+  "paid_spend_usd": 0,
+  "panels": [
+    {
+      "balance_pairs_per_reversible_kernel": 100,
+      "bias": "1",
+      "composition_nonreversible_pairs": 90,
+      "contextual": false,
+      "duplicate_code_transports": 6,
+      "rows": 2,
+      "states": 10,
+      "unbound_transports": 2,
+      "unchanged_action_context_changes": 0,
+      "wrong_policy_flux_failures": 10
+    },
+    {
+      "balance_pairs_per_reversible_kernel": 100,
+      "bias": "6",
+      "composition_nonreversible_pairs": 90,
+      "contextual": false,
+      "duplicate_code_transports": 6,
+      "rows": 2,
+      "states": 10,
+      "unbound_transports": 2,
+      "unchanged_action_context_changes": 0,
+      "wrong_policy_flux_failures": 10
+    },
+    {
+      "balance_pairs_per_reversible_kernel": 100,
+      "bias": "1",
+      "composition_nonreversible_pairs": 90,
+      "contextual": true,
+      "duplicate_code_transports": 6,
+      "rows": 2,
+      "states": 10,
+      "unbound_transports": 2,
+      "unchanged_action_context_changes": 0,
+      "wrong_policy_flux_failures": 10
+    },
+    {
+      "balance_pairs_per_reversible_kernel": 100,
+      "bias": "6",
+      "composition_nonreversible_pairs": 90,
+      "contextual": true,
+      "duplicate_code_transports": 6,
+      "rows": 2,
+      "states": 10,
+      "unbound_transports": 2,
+      "unchanged_action_context_changes": 0,
+      "wrong_policy_flux_failures": 10
+    },
+    {
+      "balance_pairs_per_reversible_kernel": 1089,
+      "bias": "1",
+      "composition_nonreversible_pairs": 1056,
+      "contextual": false,
+      "duplicate_code_transports": 36,
+      "rows": 3,
+      "states": 33,
+      "unbound_transports": 54,
+      "unchanged_action_context_changes": 0,
+      "wrong_policy_flux_failures": 96
+    },
+    {
+      "balance_pairs_per_reversible_kernel": 1089,
+      "bias": "6",
+      "composition_nonreversible_pairs": 1056,
+      "contextual": false,
+      "duplicate_code_transports": 36,
+      "rows": 3,
+      "states": 33,
+      "unbound_transports": 54,
+      "unchanged_action_context_changes": 0,
+      "wrong_policy_flux_failures": 96
+    },
+    {
+      "balance_pairs_per_reversible_kernel": 1089,
+      "bias": "1",
+      "composition_nonreversible_pairs": 1056,
+      "contextual": true,
+      "duplicate_code_transports": 36,
+      "rows": 3,
+      "states": 33,
+      "unbound_transports": 54,
+      "unchanged_action_context_changes": 18,
+      "wrong_policy_flux_failures": 96
+    },
+    {
+      "balance_pairs_per_reversible_kernel": 1089,
+      "bias": "6",
+      "composition_nonreversible_pairs": 1056,
+      "contextual": true,
+      "duplicate_code_transports": 36,
+      "rows": 3,
+      "states": 33,
+      "unbound_transports": 54,
+      "unchanged_action_context_changes": 18,
+      "wrong_policy_flux_failures": 96
+    }
+  ],
+  "resources": {
+    "cpu_seconds": 0.216966,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 211681280,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 0.21706875000381842
+  },
+  "status": "PASS_exact_finite_label_and_fixed_mixture",
+  "totals": {
+    "balance_pairs_per_reversible_kernel": 4756,
+    "composition_nonreversible_pairs": 4584,
+    "duplicate_code_transports": 168,
+    "states": 172,
+    "unbound_transports": 224,
+    "unchanged_action_context_changes": 36,
+    "wrong_policy_flux_failures": 424
+  }
+}
