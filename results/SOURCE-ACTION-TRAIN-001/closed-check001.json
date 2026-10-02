@@ -1,0 +1,98 @@
+{
+  "actual_new_model_or_optimizer_calls": 0,
+  "campaign": {
+    "bytes": 1546,
+    "path": "results/SOURCE-ACTION-TRAIN-001/campaign.json",
+    "sha256": "cba78dd3d8261be645e773e5427ab0feb6668387df6aa6b0eb5eff64637f7fdc"
+  },
+  "completion_audit": {
+    "bytes": 6624,
+    "path": "results/SOURCE-ACTION-TRAIN-001/audit.json",
+    "sha256": "5df1e397cae9dab2f786f052463d8040965f24d575d8aff3eafd9cca7ed720d0"
+  },
+  "cpu_double_model_probability_replay_claimed": false,
+  "engineering_admission_or_recovery_passed": false,
+  "frozen_paths": 52,
+  "paid_spend_usd": 0,
+  "private_bulk_bytes": 1537287570,
+  "resources": {
+    "cpu_seconds": 19.888447,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1164132352,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 20.559702207974624
+  },
+  "rows": [
+    {
+      "arm": "binding-92203",
+      "completed_updates": 35,
+      "failure": {
+        "bytes": 18992,
+        "path": "results/SOURCE-ACTION-TRAIN-001/binding-92203-failure.json",
+        "sha256": "984bed3617ffe9c1de6ad895ca4ebf6f4bdd3d42c1caa8ede5cf2c50dfa8636f"
+      },
+      "generated_episodes": 144,
+      "independent_edit_metrics_replayed": true,
+      "initial_mean_whole_path_nll": 763.9448900966171,
+      "initial_weights_sha256": "ae1ddadb07eea7babda78edcfd4cf34d2135df27a4f50f30d4bbc768a30295a1",
+      "ledger_prefixes_replayed": 36,
+      "literal_positive_and_null_readings_replayed": 97,
+      "source_letters": 42879
+    },
+    {
+      "arm": "no-binding-92203",
+      "completed_updates": 32,
+      "failure": {
+        "bytes": 18999,
+        "path": "results/SOURCE-ACTION-TRAIN-001/no-binding-92203-failure.json",
+        "sha256": "db4cbe7cc03f901d034906076d2c314843ffab112b68986bc7a8ec567be3d99b"
+      },
+      "generated_episodes": 132,
+      "independent_edit_metrics_replayed": true,
+      "initial_mean_whole_path_nll": 760.5166841478268,
+      "initial_weights_sha256": "ae1ddadb07eea7babda78edcfd4cf34d2135df27a4f50f30d4bbc768a30295a1",
+      "ledger_prefixes_replayed": 33,
+      "literal_positive_and_null_readings_replayed": 97,
+      "source_letters": 39275
+    },
+    {
+      "arm": "binding-92209",
+      "completed_updates": 100,
+      "failure": {
+        "bytes": 18833,
+        "path": "results/SOURCE-ACTION-TRAIN-001/binding-92209-failure.json",
+        "sha256": "2866a38f6500ee6216928ca94759b6202d93902b4b68ac5658774b2f1c1d81d5"
+      },
+      "generated_episodes": 404,
+      "independent_edit_metrics_replayed": true,
+      "initial_mean_whole_path_nll": 768.4046255661649,
+      "initial_weights_sha256": "be6c68a6b59323f69bbb616afe9dabf9d96525734c1788d469b15af25c8c50f5",
+      "ledger_prefixes_replayed": 101,
+      "literal_positive_and_null_readings_replayed": 97,
+      "source_letters": 116126
+    },
+    {
+      "arm": "no-binding-92209",
+      "completed_updates": 37,
+      "failure": {
+        "bytes": 18864,
+        "path": "results/SOURCE-ACTION-TRAIN-001/no-binding-92209-failure.json",
+        "sha256": "1968bda4a5b0696adf45c181379baacfcef2a717fe6da7df961151cc7a85ab61"
+      },
+      "generated_episodes": 152,
+      "independent_edit_metrics_replayed": true,
+      "initial_mean_whole_path_nll": 769.3305645423185,
+      "initial_weights_sha256": "be6c68a6b59323f69bbb616afe9dabf9d96525734c1788d469b15af25c8c50f5",
+      "ledger_prefixes_replayed": 38,
+      "literal_positive_and_null_readings_replayed": 97,
+      "source_letters": 43710
+    }
+  ],
+  "status": "PASS_retained_memory_failures_inputs_ledgers_and_initial_literal_metrics"
+}
