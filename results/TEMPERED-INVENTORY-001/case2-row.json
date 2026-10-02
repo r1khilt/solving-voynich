@@ -1,0 +1,44 @@
+{
+  "case": 2,
+  "compiler": {
+    "dictionary_count": "112053524088310858704431456376624000",
+    "prior_support_probability": "1543947366737087449080018964625/297810942206511805960959287820288",
+    "stats": {
+      "apply_entries": 0,
+      "apply_steps": 5153535,
+      "collected_nodes": 1035919,
+      "collection_work": 8904339,
+      "collections": 105,
+      "created_nodes": 1051914,
+      "maximum_apply_entries": 54724,
+      "maximum_live_nodes": 31894,
+      "maximum_owned_envelope": 45051904,
+      "nodes": 15997,
+      "polynomial_cells": 117118,
+      "polynomial_entries": 5168,
+      "polynomial_work": 303360
+    },
+    "status": "compiled"
+  },
+  "kernel": "row",
+  "output": {
+    "bytes": 3865,
+    "path": "outputs/TEMPERED-INVENTORY-001/case2-row.json.gz",
+    "sha256": "d7faac565eb141d805bd3aeab59cef5f636e0728877360e463d0f179d7e8c4ef"
+  },
+  "summary": {
+    "accepted_changes": 732,
+    "completed_stages": 16,
+    "edges": 77117202,
+    "final_distinct_keys": 24,
+    "final_maximum_log_likelihood": -1550.8023082734076,
+    "final_minimum_log_likelihood": -1571.1139876427378,
+    "log_evidence_estimate": -1645.1248639874084,
+    "maximum_incremental_weight": 0.7026700417351862,
+    "minimum_incremental_ess": 1.848068212278307,
+    "status": "complete_tempered_particles",
+    "support_rejected_without_scoring": 259,
+    "supported_refresh_draws": 0,
+    "tables": 1821
+  }
+}

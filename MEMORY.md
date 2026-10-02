@@ -1,10 +1,10 @@
 # Project memory
 
-Last updated: 2026-10-01 PDT (original-source tempering001 prepared, NOTRUN; support entropy quantified; goal active; Voynich unsolved).
+Last updated: 2026-10-01 PDT (tempering001 original-source engineeringPASS/auditPASS; long-record collapse; fresh recovery next; goal active; Voynich unsolved).
 
 ## Current state
 
-- **TEMPERED-INVENTORY-001 prepared, NOTRUN.** Originalorder12/cipher-onlyfourEXPOSEDpaircases/frequencycompile, rowvs supported_refresh/N32/same83211+case/16cubetemperatures/4moves/max2080tables/call. ONErunONEaudit/no retries;1200wall1000absoluteCPU2GiB/500Medgescall/global4B+16/$0. Explicittypedcompiler/nativegraph/percallworkfailuresretainonlytrace+counters/continuepredefinedcalls, unexpectedglobal/ref/integerabort. Primaryall8complete+fixedFIRSTfourPython≤1e-7;noGold/recoverymetric.252paths/old240unchanged/proof/admission/linksPASS/sevenfocusedtinyfullpaneltestsPASS/scopedlintPASS/full2820+23subtests/13skip195.56s. NB358/design. Commit/push/exactorigin beforecall.
+- **TEMPERED-INVENTORY-001 complete: original-source engineeringPASS/fullauditPASS, accuracyUNMEASURED.** Freeze8a7ab11 exactremote beforeONE69770run/ONE61299audit/both0/all252unchanged/all8N32calls16tempscomplete/no caps.256literal-supported/32fixedFIRSTfourPythonchecks≤7.049e-12/sharedinitbanksagree. Longcase3rowESS1.088/maxweight.958, supportESS1.246/.895: severeancestrycollapse, final12..27distinctnotcoverage; only1seed/no stabilitytest/noGold. Run49.734s/audit54.343s/.855GB/1.255GB/422.774Medges/31899ignoredbulk/$0. ReadonlypostreceiptPASS. Full2820+23subtestsPASS/13skip195.56s/scopedlintPASS/old5findings. NB360/results. NextsubstantialFRESHmulti-seedpositive+shuffle/messagepanel withlargerN/denserfixedtemp/controlkernels/boundedcost/sealedpredictions; NOTimplemented/registered/queuedyet. No livejob.
 
 - **Support entropy diagnostic PASS (own prior mathematics).** Originalkeyentropy124.0233bits; fourexposedsupportedconditionalpriors116.397..117.025bits, supportremovesonly6.999..7.626bits. ~82.6bitsconditionalrowassignmentterm, occupancy~18.9. Notposterior/usedkeyentropy/recoverylowerbound;0newcompiler/sampler/sourcecalls. NB359/INVENTORY-ENTROPY-001/entropyresearchdoc.
 
