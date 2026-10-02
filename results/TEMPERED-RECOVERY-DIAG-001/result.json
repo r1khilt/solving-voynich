@@ -1,0 +1,1227 @@
+{
+  "analysis": {
+    "bytes": 5082,
+    "path": "outputs/TEMPERED-RECOVERY-DIAG-001/analysis.json.gz",
+    "sha256": "74c839d1c6829627c28b13a9cb3ceb282fec13ffba6b26028dfd5b411bad5ab2"
+  },
+  "banks": [
+    {
+      "arm": "supported_prior",
+      "best_permutation_used_match_ceiling": 8,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 544.0005569781972,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -307.4423894252872,
+        "distinct_full_keys": 1,
+        "distinct_key_log_likelihood_sum": -765.4765451829669,
+        "full_key_bank_log_posterior_mass_upper": -544.0005569781972,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -307.4423894252872,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 0,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 532.2376610776826,
+      "known_path_minus_best_key_log_likelihood": 525.3122088867804,
+      "mean_inventory_replacements_over_particles": 10.0,
+      "minimum_inventory_replacements_across_particles": 10,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 10,
+        "permutation_used_match_ceiling": 8,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "row",
+      "best_permutation_used_match_ceiling": 17,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 114.01058990102405,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -307.4423894252872,
+        "distinct_full_keys": 115,
+        "distinct_key_log_likelihood_sum": -335.4865781057938,
+        "full_key_bank_log_posterior_mass_upper": -114.01058990102405,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -307.4423894252872,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 0,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 102.25424009733564,
+      "known_path_minus_best_key_log_likelihood": 95.3287879064334,
+      "mean_inventory_replacements_over_particles": 2.84375,
+      "minimum_inventory_replacements_across_particles": 1,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 2,
+        "permutation_used_match_ceiling": 16,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "coordinated",
+      "best_permutation_used_match_ceiling": 13,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 136.5844480802673,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -307.4423894252872,
+        "distinct_full_keys": 98,
+        "distinct_key_log_likelihood_sum": -358.06043628503704,
+        "full_key_bank_log_posterior_mass_upper": -136.5844480802673,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -307.4423894252872,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 0,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 124.82303509058647,
+      "known_path_minus_best_key_log_likelihood": 117.89758289968424,
+      "mean_inventory_replacements_over_particles": 8.046875,
+      "minimum_inventory_replacements_across_particles": 5,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 8,
+        "permutation_used_match_ceiling": 10,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_refresh",
+      "best_permutation_used_match_ceiling": 15,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 131.90398312561246,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -307.4423894252872,
+        "distinct_full_keys": 84,
+        "distinct_key_log_likelihood_sum": -353.3799713303822,
+        "full_key_bank_log_posterior_mass_upper": -131.90398312561246,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -307.4423894252872,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 0,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 121.53722028711843,
+      "known_path_minus_best_key_log_likelihood": 114.6117680962162,
+      "mean_inventory_replacements_over_particles": 5.328125,
+      "minimum_inventory_replacements_across_particles": 3,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 6,
+        "permutation_used_match_ceiling": 12,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_prior",
+      "best_permutation_used_match_ceiling": 10,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 466.44892647258513,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -307.4423894252872,
+        "distinct_full_keys": 1,
+        "distinct_key_log_likelihood_sum": -687.9249146773549,
+        "full_key_bank_log_posterior_mass_upper": -466.44892647258513,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -307.4423894252872,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 0,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 454.68603057207054,
+      "known_path_minus_best_key_log_likelihood": 447.76057838116833,
+      "mean_inventory_replacements_over_particles": 8.0,
+      "minimum_inventory_replacements_across_particles": 8,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 8,
+        "permutation_used_match_ceiling": 10,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "row",
+      "best_permutation_used_match_ceiling": 15,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 138.7235397278606,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -307.4423894252872,
+        "distinct_full_keys": 99,
+        "distinct_key_log_likelihood_sum": -360.19952793263036,
+        "full_key_bank_log_posterior_mass_upper": -138.7235397278606,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -307.4423894252872,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 0,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 127.45343436922121,
+      "known_path_minus_best_key_log_likelihood": 120.52798217831898,
+      "mean_inventory_replacements_over_particles": 4.171875,
+      "minimum_inventory_replacements_across_particles": 3,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 3,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 4,
+        "permutation_used_match_ceiling": 14,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "coordinated",
+      "best_permutation_used_match_ceiling": 14,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 149.5066625663772,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -307.4423894252872,
+        "distinct_full_keys": 97,
+        "distinct_key_log_likelihood_sum": -370.98265077114695,
+        "full_key_bank_log_posterior_mass_upper": -149.5066625663772,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -307.4423894252872,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 0,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 139.70103449265946,
+      "known_path_minus_best_key_log_likelihood": 132.77558230175723,
+      "mean_inventory_replacements_over_particles": 6.0,
+      "minimum_inventory_replacements_across_particles": 4,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 2,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 6,
+        "permutation_used_match_ceiling": 12,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_refresh",
+      "best_permutation_used_match_ceiling": 13,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 129.26794787198827,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -307.4423894252872,
+        "distinct_full_keys": 92,
+        "distinct_key_log_likelihood_sum": -350.743936076758,
+        "full_key_bank_log_posterior_mass_upper": -129.26794787198827,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -307.4423894252872,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 0,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 117.85865856456257,
+      "known_path_minus_best_key_log_likelihood": 110.93320637366034,
+      "mean_inventory_replacements_over_particles": 6.53125,
+      "minimum_inventory_replacements_across_particles": 5,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 7,
+        "permutation_used_match_ceiling": 11,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_prior",
+      "best_permutation_used_match_ceiling": 8,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 503.38870972676176,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -298.0155380081107,
+        "distinct_full_keys": 1,
+        "distinct_key_log_likelihood_sum": -715.437846514355,
+        "full_key_bank_log_posterior_mass_upper": -503.38870972676176,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -298.0155380081107,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 2,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 486.41054026657997,
+      "known_path_minus_best_key_log_likelihood": 484.70036163534496,
+      "mean_inventory_replacements_over_particles": 10.0,
+      "minimum_inventory_replacements_across_particles": 10,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 10,
+        "permutation_used_match_ceiling": 8,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "row",
+      "best_permutation_used_match_ceiling": 16,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 157.24852336694437,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -298.0155380081107,
+        "distinct_full_keys": 104,
+        "distinct_key_log_likelihood_sum": -369.2976601545376,
+        "full_key_bank_log_posterior_mass_upper": -157.24852336694437,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -298.0155380081107,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 2,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 140.92392532619868,
+      "known_path_minus_best_key_log_likelihood": 139.21374669496365,
+      "mean_inventory_replacements_over_particles": 4.890625,
+      "minimum_inventory_replacements_across_particles": 2,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 2,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 6,
+        "permutation_used_match_ceiling": 12,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "coordinated",
+      "best_permutation_used_match_ceiling": 15,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 151.91614204097982,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -298.0155380081107,
+        "distinct_full_keys": 74,
+        "distinct_key_log_likelihood_sum": -363.96527882857305,
+        "full_key_bank_log_posterior_mass_upper": -151.91614204097982,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -298.0155380081107,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 2,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 135.68793456620182,
+      "known_path_minus_best_key_log_likelihood": 133.97775593496678,
+      "mean_inventory_replacements_over_particles": 4.9609375,
+      "minimum_inventory_replacements_across_particles": 3,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 5,
+        "permutation_used_match_ceiling": 13,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_refresh",
+      "best_permutation_used_match_ceiling": 15,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 154.2482333064346,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -298.0155380081107,
+        "distinct_full_keys": 94,
+        "distinct_key_log_likelihood_sum": -366.2973700940278,
+        "full_key_bank_log_posterior_mass_upper": -154.2482333064346,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -298.0155380081107,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 2,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 138.13429854105874,
+      "known_path_minus_best_key_log_likelihood": 136.4241199098237,
+      "mean_inventory_replacements_over_particles": 4.8828125,
+      "minimum_inventory_replacements_across_particles": 3,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 4,
+        "permutation_used_match_ceiling": 14,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_prior",
+      "best_permutation_used_match_ceiling": 7,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 433.89522659843857,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -298.0155380081107,
+        "distinct_full_keys": 1,
+        "distinct_key_log_likelihood_sum": -645.9443633860318,
+        "full_key_bank_log_posterior_mass_upper": -433.89522659843857,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -298.0155380081107,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 2,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 416.9170571382568,
+      "known_path_minus_best_key_log_likelihood": 415.20687850702177,
+      "mean_inventory_replacements_over_particles": 11.0,
+      "minimum_inventory_replacements_across_particles": 11,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 11,
+        "permutation_used_match_ceiling": 7,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "row",
+      "best_permutation_used_match_ceiling": 17,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 112.28267395954907,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -298.0155380081107,
+        "distinct_full_keys": 116,
+        "distinct_key_log_likelihood_sum": -324.3318107471423,
+        "full_key_bank_log_posterior_mass_upper": -112.28267395954907,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -298.0155380081107,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 2,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 95.83131677299383,
+      "known_path_minus_best_key_log_likelihood": 94.12113814175879,
+      "mean_inventory_replacements_over_particles": 3.5234375,
+      "minimum_inventory_replacements_across_particles": 1,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 3,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 3,
+        "permutation_used_match_ceiling": 15,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "coordinated",
+      "best_permutation_used_match_ceiling": 14,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 140.28932846953091,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -298.0155380081107,
+        "distinct_full_keys": 90,
+        "distinct_key_log_likelihood_sum": -352.33846525712414,
+        "full_key_bank_log_posterior_mass_upper": -140.28932846953091,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -298.0155380081107,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 2,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 123.32522457627601,
+      "known_path_minus_best_key_log_likelihood": 121.61504594504098,
+      "mean_inventory_replacements_over_particles": 6.2265625,
+      "minimum_inventory_replacements_across_particles": 4,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 6,
+        "permutation_used_match_ceiling": 12,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_refresh",
+      "best_permutation_used_match_ceiling": 14,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 139.62335663428053,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -298.0155380081107,
+        "distinct_full_keys": 79,
+        "distinct_key_log_likelihood_sum": -351.67249342187375,
+        "full_key_bank_log_posterior_mass_upper": -139.62335663428053,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -298.0155380081107,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 5
+      },
+      "case": 2,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 124.0223140913082,
+      "known_path_minus_best_key_log_likelihood": 122.31213546007316,
+      "mean_inventory_replacements_over_particles": 6.4296875,
+      "minimum_inventory_replacements_across_particles": 4,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 5,
+        "permutation_used_match_ceiling": 13,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_prior",
+      "best_permutation_used_match_ceiling": 8,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 2349.345476104453,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -771.9107806826354,
+        "distinct_full_keys": 1,
+        "distinct_key_log_likelihood_sum": -3035.289855566571,
+        "full_key_bank_log_posterior_mass_upper": -2349.345476104453,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -771.9107806826354,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 2
+      },
+      "case": 4,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 2346.623796397381,
+      "known_path_minus_best_key_log_likelihood": 2341.8701368678867,
+      "mean_inventory_replacements_over_particles": 13.0,
+      "minimum_inventory_replacements_across_particles": 13,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 13,
+        "permutation_used_match_ceiling": 8,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "row",
+      "best_permutation_used_match_ceiling": 9,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 874.9568229029219,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -771.9107806826354,
+        "distinct_full_keys": 86,
+        "distinct_key_log_likelihood_sum": -1560.9012023650398,
+        "full_key_bank_log_posterior_mass_upper": -874.9568229029219,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -771.9107806826354,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 2
+      },
+      "case": 4,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 874.0967636233602,
+      "known_path_minus_best_key_log_likelihood": 869.3431040938656,
+      "mean_inventory_replacements_over_particles": 14.390625,
+      "minimum_inventory_replacements_across_particles": 12,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 14,
+        "permutation_used_match_ceiling": 7,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "coordinated",
+      "best_permutation_used_match_ceiling": 10,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 801.7904213996819,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -771.9107806826354,
+        "distinct_full_keys": 77,
+        "distinct_key_log_likelihood_sum": -1487.7348008617998,
+        "full_key_bank_log_posterior_mass_upper": -801.7904213996819,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -771.9107806826354,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 2
+      },
+      "case": 4,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 799.5492348890557,
+      "known_path_minus_best_key_log_likelihood": 794.7955753595611,
+      "mean_inventory_replacements_over_particles": 13.3671875,
+      "minimum_inventory_replacements_across_particles": 11,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 14,
+        "permutation_used_match_ceiling": 7,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_refresh",
+      "best_permutation_used_match_ceiling": 11,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 790.8608973825665,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -771.9107806826354,
+        "distinct_full_keys": 72,
+        "distinct_key_log_likelihood_sum": -1476.8052768446844,
+        "full_key_bank_log_posterior_mass_upper": -790.8608973825665,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -771.9107806826354,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 2
+      },
+      "case": 4,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 788.5231707792575,
+      "known_path_minus_best_key_log_likelihood": 783.7695112497629,
+      "mean_inventory_replacements_over_particles": 12.453125,
+      "minimum_inventory_replacements_across_particles": 10,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 12,
+        "permutation_used_match_ceiling": 9,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_prior",
+      "best_permutation_used_match_ceiling": 8,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 2011.7992937742279,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -771.9107806826354,
+        "distinct_full_keys": 1,
+        "distinct_key_log_likelihood_sum": -2697.743673236346,
+        "full_key_bank_log_posterior_mass_upper": -2011.7992937742279,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -771.9107806826354,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 2
+      },
+      "case": 4,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 2009.0776140671558,
+      "known_path_minus_best_key_log_likelihood": 2004.3239545376612,
+      "mean_inventory_replacements_over_particles": 13.0,
+      "minimum_inventory_replacements_across_particles": 13,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 13,
+        "permutation_used_match_ceiling": 8,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "row",
+      "best_permutation_used_match_ceiling": 12,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 805.1594037238096,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -771.9107806826354,
+        "distinct_full_keys": 78,
+        "distinct_key_log_likelihood_sum": -1491.1037831859276,
+        "full_key_bank_log_posterior_mass_upper": -805.1594037238096,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -771.9107806826354,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 2
+      },
+      "case": 4,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 802.4614687136532,
+      "known_path_minus_best_key_log_likelihood": 797.7078091841586,
+      "mean_inventory_replacements_over_particles": 11.4453125,
+      "minimum_inventory_replacements_across_particles": 9,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 4,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 10,
+        "permutation_used_match_ceiling": 11,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "coordinated",
+      "best_permutation_used_match_ceiling": 13,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 745.0300741805229,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -771.9107806826354,
+        "distinct_full_keys": 63,
+        "distinct_key_log_likelihood_sum": -1430.9744536426408,
+        "full_key_bank_log_posterior_mass_upper": -745.0300741805229,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -771.9107806826354,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 2
+      },
+      "case": 4,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 743.7807546204785,
+      "known_path_minus_best_key_log_likelihood": 739.027095090984,
+      "mean_inventory_replacements_over_particles": 10.0546875,
+      "minimum_inventory_replacements_across_particles": 8,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 11,
+        "permutation_used_match_ceiling": 10,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_refresh",
+      "best_permutation_used_match_ceiling": 13,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 781.812972919053,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -771.9107806826354,
+        "distinct_full_keys": 72,
+        "distinct_key_log_likelihood_sum": -1467.757352381171,
+        "full_key_bank_log_posterior_mass_upper": -781.812972919053,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -771.9107806826354,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 2
+      },
+      "case": 4,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 780.5639758170953,
+      "known_path_minus_best_key_log_likelihood": 775.8103162876007,
+      "mean_inventory_replacements_over_particles": 9.84375,
+      "minimum_inventory_replacements_across_particles": 8,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 10,
+        "permutation_used_match_ceiling": 11,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_prior",
+      "best_permutation_used_match_ceiling": 8,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 1500.143413232964,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -847.6920546295779,
+        "distinct_full_keys": 1,
+        "distinct_key_log_likelihood_sum": -2261.8690666420243,
+        "full_key_bank_log_posterior_mass_upper": -1500.143413232964,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -847.692054629578,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 3
+      },
+      "case": 6,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 1496.5178248611273,
+      "known_path_minus_best_key_log_likelihood": 1488.9304043781137,
+      "mean_inventory_replacements_over_particles": 12.0,
+      "minimum_inventory_replacements_across_particles": 12,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 12,
+        "permutation_used_match_ceiling": 8,
+        "used_rows": 20
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "row",
+      "best_permutation_used_match_ceiling": 15,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 590.5726535544279,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -847.6920546295779,
+        "distinct_full_keys": 90,
+        "distinct_key_log_likelihood_sum": -1352.2983069634884,
+        "full_key_bank_log_posterior_mass_upper": -590.5726535544279,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -847.692054629578,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 3
+      },
+      "case": 6,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 587.3369976917593,
+      "known_path_minus_best_key_log_likelihood": 579.7495772087457,
+      "mean_inventory_replacements_over_particles": 7.78125,
+      "minimum_inventory_replacements_across_particles": 5,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 1,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 8,
+        "permutation_used_match_ceiling": 12,
+        "used_rows": 20
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "coordinated",
+      "best_permutation_used_match_ceiling": 10,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 632.5903673478249,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -847.6920546295779,
+        "distinct_full_keys": 67,
+        "distinct_key_log_likelihood_sum": -1394.3160207568853,
+        "full_key_bank_log_posterior_mass_upper": -632.5903673478249,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -847.692054629578,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 3
+      },
+      "case": 6,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 630.1261959344392,
+      "known_path_minus_best_key_log_likelihood": 622.5387754514256,
+      "mean_inventory_replacements_over_particles": 12.4296875,
+      "minimum_inventory_replacements_across_particles": 10,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 12,
+        "permutation_used_match_ceiling": 8,
+        "used_rows": 20
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_refresh",
+      "best_permutation_used_match_ceiling": 13,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 599.9029796955551,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -847.6920546295779,
+        "distinct_full_keys": 71,
+        "distinct_key_log_likelihood_sum": -1361.6286331046156,
+        "full_key_bank_log_posterior_mass_upper": -599.9029796955551,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -847.692054629578,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 3
+      },
+      "case": 6,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 598.9302759794296,
+      "known_path_minus_best_key_log_likelihood": 591.342855496416,
+      "mean_inventory_replacements_over_particles": 9.3046875,
+      "minimum_inventory_replacements_across_particles": 7,
+      "seed": 89511,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 9,
+        "permutation_used_match_ceiling": 11,
+        "used_rows": 20
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_prior",
+      "best_permutation_used_match_ceiling": 6,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 1860.6969603842442,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -847.6920546295779,
+        "distinct_full_keys": 1,
+        "distinct_key_log_likelihood_sum": -2622.4226137933047,
+        "full_key_bank_log_posterior_mass_upper": -1860.6969603842442,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -847.692054629578,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 3
+      },
+      "case": 6,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 1857.0713720124077,
+      "known_path_minus_best_key_log_likelihood": 1849.483951529394,
+      "mean_inventory_replacements_over_particles": 14.0,
+      "minimum_inventory_replacements_across_particles": 14,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 14,
+        "permutation_used_match_ceiling": 6,
+        "used_rows": 20
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "row",
+      "best_permutation_used_match_ceiling": 12,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 578.8986230787157,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -847.6920546295779,
+        "distinct_full_keys": 96,
+        "distinct_key_log_likelihood_sum": -1340.6242764877761,
+        "full_key_bank_log_posterior_mass_upper": -578.8986230787157,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -847.692054629578,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 3
+      },
+      "case": 6,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 575.4001692846964,
+      "known_path_minus_best_key_log_likelihood": 567.8127488016828,
+      "mean_inventory_replacements_over_particles": 10.4375,
+      "minimum_inventory_replacements_across_particles": 8,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 12,
+        "permutation_used_match_ceiling": 8,
+        "used_rows": 20
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "coordinated",
+      "best_permutation_used_match_ceiling": 13,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 572.8548747222578,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -847.6920546295779,
+        "distinct_full_keys": 88,
+        "distinct_key_log_likelihood_sum": -1334.5805281313183,
+        "full_key_bank_log_posterior_mass_upper": -572.8548747222578,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -847.692054629578,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 3
+      },
+      "case": 6,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 570.6189201530244,
+      "known_path_minus_best_key_log_likelihood": 563.0314996700108,
+      "mean_inventory_replacements_over_particles": 9.8359375,
+      "minimum_inventory_replacements_across_particles": 7,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 2,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 11,
+        "permutation_used_match_ceiling": 9,
+        "used_rows": 20
+      },
+      "status": "complete"
+    },
+    {
+      "arm": "supported_refresh",
+      "best_permutation_used_match_ceiling": 12,
+      "bounds": {
+        "bank_supported_law_forward_kl_lower_nats": 625.9621379624102,
+        "bank_supported_law_tv_lower_float": 1.0,
+        "combined_log_evidence_lower": -847.6920546295779,
+        "distinct_full_keys": 74,
+        "distinct_key_log_likelihood_sum": -1387.6877913714707,
+        "full_key_bank_log_posterior_mass_upper": -625.9621379624102,
+        "interval_arithmetic_certificate": false,
+        "known_reading_log_evidence_lower": -847.692054629578,
+        "particles": 128,
+        "reading_marginal_bound_claimed": false,
+        "unused_rows": 3
+      },
+      "case": 6,
+      "inventory_compatible_particles": 0,
+      "known_key_minus_best_key_log_likelihood": 623.6465403740485,
+      "known_path_minus_best_key_log_likelihood": 616.0591198910349,
+      "mean_inventory_replacements_over_particles": 10.1015625,
+      "minimum_inventory_replacements_across_particles": 8,
+      "seed": 89512,
+      "selected_inventory_ceiling": {
+        "current_used_matches": 0,
+        "inventory_permits_complete_used_mapping": false,
+        "minimum_inventory_replacements": 12,
+        "permutation_used_match_ceiling": 8,
+        "used_rows": 20
+      },
+      "status": "complete"
+    }
+  ],
+  "experiment": "TEMPERED-RECOVERY-DIAG-001",
+  "freeze": "aeb5b1b0dd5fc7292ba36b5a4dec961fb0f0796a",
+  "native_build": {
+    "abi": 1,
+    "command": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib",
+      "/Users/rikhil/coding/solving-voynich/src/voynich/native/suffix_marginal.cpp",
+      "-o",
+      "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib"
+    ],
+    "compiler": "/usr/bin/clang++",
+    "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-dynamiclib"
+    ],
+    "library_path": "/Users/rikhil/coding/solving-voynich/outputs/NATIVE-SUFFIX-001/build/suffix_marginal.dylib",
+    "library_sha256": "d8d0fbdeb183b292594248f95c1a56eeea843d3c3ba26a0eb05548fb7bcaf30f",
+    "machine": "arm64",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "source_sha256": "03dabaeb7814d283b41c94adb8063a6306e28beaf4ab97d17cb684532cd29d61"
+  },
+  "oracles": [
+    {
+      "case": 0,
+      "conditional_known_source_log_probability": -6.925452190902234,
+      "error": null,
+      "independent_source_log_delta": 3.410605131648481e-13,
+      "known_key_log_likelihood": -233.23888410528434,
+      "known_source_joint_log_probability": -240.16433629618658,
+      "native_record_edges": [
+        1451,
+        1340
+      ],
+      "native_record_nodes": [
+        839,
+        831
+      ],
+      "oracle_supplied_generating_dictionary": true,
+      "recovery": {
+        "bank_contains_complete_used_key": true,
+        "edit_errors_with_failed_readings_counted_full_length": 3,
+        "exact_records": 0,
+        "kind": "positive",
+        "selected_complete_used_key": true,
+        "selected_matches": 18,
+        "true_letters": 128,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "case": 2,
+      "conditional_known_source_log_probability": -1.7101786312350384,
+      "error": null,
+      "independent_source_log_delta": 3.694822225952521e-13,
+      "known_key_log_likelihood": -229.02730624777502,
+      "known_source_joint_log_probability": -230.73748487901005,
+      "native_record_edges": [
+        1945,
+        1865
+      ],
+      "native_record_nodes": [
+        1118,
+        1001
+      ],
+      "oracle_supplied_generating_dictionary": true,
+      "recovery": {
+        "bank_contains_complete_used_key": true,
+        "edit_errors_with_failed_readings_counted_full_length": 2,
+        "exact_records": 1,
+        "kind": "positive",
+        "selected_complete_used_key": true,
+        "selected_matches": 18,
+        "true_letters": 128,
+        "used_rows": 18
+      },
+      "status": "complete"
+    },
+    {
+      "case": 4,
+      "conditional_known_source_log_probability": -4.753659529494598,
+      "error": null,
+      "independent_source_log_delta": 2.2737367544323206e-13,
+      "known_key_log_likelihood": -688.66605916919,
+      "known_source_joint_log_probability": -693.4197186986846,
+      "native_record_edges": [
+        2859,
+        2731
+      ],
+      "native_record_nodes": [
+        1851,
+        1808
+      ],
+      "oracle_supplied_generating_dictionary": true,
+      "recovery": {
+        "bank_contains_complete_used_key": true,
+        "edit_errors_with_failed_readings_counted_full_length": 4,
+        "exact_records": 0,
+        "kind": "positive",
+        "selected_complete_used_key": true,
+        "selected_matches": 21,
+        "true_letters": 448,
+        "used_rows": 21
+      },
+      "status": "complete"
+    },
+    {
+      "case": 6,
+      "conditional_known_source_log_probability": -7.587420483013602,
+      "error": null,
+      "independent_source_log_delta": 1.1368683772161603e-12,
+      "known_key_log_likelihood": -765.351241780897,
+      "known_source_joint_log_probability": -772.9386622639106,
+      "native_record_edges": [
+        3917,
+        4152
+      ],
+      "native_record_nodes": [
+        2375,
+        2442
+      ],
+      "oracle_supplied_generating_dictionary": true,
+      "recovery": {
+        "bank_contains_complete_used_key": true,
+        "edit_errors_with_failed_readings_counted_full_length": 5,
+        "exact_records": 0,
+        "kind": "positive",
+        "selected_complete_used_key": true,
+        "selected_matches": 20,
+        "true_letters": 448,
+        "used_rows": 20
+      },
+      "status": "complete"
+    }
+  ],
+  "paid_spend_usd": 0,
+  "parent_full_audit_at_admission": "ACTIVE",
+  "parent_prediction_seal": {
+    "bytes": 12871,
+    "path": "results/TEMPERED-RECOVERY-001/predictions-sealed.json",
+    "sha256": "29b77d3a6f5828507a98b3a4ed6a9aaa87473eb5c32e6a205f798f9e6d25d84d"
+  },
+  "parent_result": {
+    "bytes": 21899,
+    "path": "results/TEMPERED-RECOVERY-001/result.json",
+    "sha256": "e59e3a2ef4bf3f73780f496030b1eeb842903e87cee894b50be329b17b2ecd2f"
+  },
+  "resources": {
+    "cpu_seconds": 1.0456289999999995,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1246871552,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 1.0612073749653064
+  },
+  "source": {
+    "bytes": 19566187,
+    "path": "outputs/LATIN-SOURCE-COMPACT-001/large.npz",
+    "sha256": "9769415ac460c56778a461af7646635abf5906fa726484ba84d98d4f401815f6"
+  },
+  "source_arrays": {
+    "probabilities": "236ded939aea77a107a3717341ed8c64fdf9e418baa88cb3a9e656d7f11127e0",
+    "transitions": "db61f9ce61b56077f59169721d7ba51669999a2d3814da2437eef6094bae0400"
+  },
+  "summary": {
+    "banks_known_key_exceeds_best_key": 32,
+    "banks_known_path_exceeds_best_key": 32,
+    "banks_without_compatible_inventory": 32,
+    "complete_parent_banks": 32,
+    "fitting_generation_or_mutation_calls": 0,
+    "historical_or_recovery_qualification": false,
+    "independent_known_key_source_checks": 4,
+    "maximum_known_key_source_log_delta": 1.1368683772161603e-12,
+    "oracle_calls": 4,
+    "oracle_complete_readings": 4,
+    "oracle_edit_errors": 14,
+    "oracle_exact_records": 1,
+    "oracle_true_letters": 1152,
+    "positive_parent_calls": 32
+  }
+}

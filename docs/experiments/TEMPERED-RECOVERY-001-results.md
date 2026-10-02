@@ -23,6 +23,8 @@ Across the same positive observation's two seeds, moving-arm log-evidence estima
 
 The practical conclusion is narrow and consequential: this larger fixed population, finer schedule and tested move mixtures remain ineffective at recovering these fresh messages. It does not prove that the source prefers a wrong global answer, that recovery is impossible, or that larger networks would necessarily fail. The next [known-answer diagnosis](../research/tempered-recovery-next-diagnosis-2026-10-01.md) must separate inventory deficits, assignment search, bank coverage and conditional reading before choosing another expensive architecture or sampler. No additional original-source diagnostic or coupled-path run has started.
 
+**Subsequent separate diagnosis:** [TEMPERED-RECOVERY-DIAG-001](TEMPERED-RECOVERY-DIAG-001-results.md) now completed one bounded oracle/coverage run and its replay. Known dictionaries score above every final bank; oracle reading has14edits/1152unique letters; all32banks lack compatible generating inventories. This supersedes the preceding unlaunched-diagnostic status only. Original recoveryFAIL, original freeze/criteria and still-pending full search audit remain unchanged; no coupled-path run or successful inverse solver is claimed.
+
 ## Costs and validation status
 
 Fitting stage4434.958671wall/4426.765350CPU seconds, peak892,092,416bytes RSS; source construction/hash/generation/search/readers/metrics included, admission excluded as declared. Absolute process CPU also includes admission and remained subject to the6500-second OS limit. Charged60,923,128,822 native fit edges,1,247,167bytes ignored/hash-bound bulk,0USD/CPU1/noGPU/training/download/heldout access. Fit7200wall/6500absoluteCPU/2GiB/128MiB limits unchanged.
