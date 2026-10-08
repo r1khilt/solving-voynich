@@ -1,0 +1,484 @@
+{
+  "freeze": "e4577c49165cfe97d956f663a792e15c4c056815",
+  "independent_expert_review": false,
+  "inputs": [
+    {
+      "bytes": 10970,
+      "path": "src/voynich/reading_pair_rewrite.py",
+      "sha256": "23b2435d847fbde9dc4cd9f0f1b7b22d9bbaab58a7d629c26074966f470b4c71"
+    },
+    {
+      "bytes": 14645,
+      "path": "src/voynich/reading_regrowth.py",
+      "sha256": "6d09427b8a85332ec279b3e0a961f177d6024bd94a45b54631993c0364a29203"
+    },
+    {
+      "bytes": 16196,
+      "path": "src/voynich/source_action_proposal.py",
+      "sha256": "dae8fd0791336ef05cef9a12311436dc10fbfca8f758b7d21976c749eb1a7b07"
+    },
+    {
+      "bytes": 11949,
+      "path": "src/voynich/joint_key_proposal.py",
+      "sha256": "e5263516ebd20c841aaef29e226759e68d4af8df2b5babaf43cde2aae50f1cb0"
+    },
+    {
+      "bytes": 13807,
+      "path": "scripts/check_reading_pair_rewrite001.py",
+      "sha256": "843989b5a58681f5c06a4fad2b0367a53f1ac364edc9e9650472708bab57446b"
+    },
+    {
+      "bytes": 2799,
+      "path": "scripts/audit_reading_pair_rewrite001.py",
+      "sha256": "2387d30a1e17fcbddb3d47df7600050116321f66b627a6ae00ff7f3c921b808d"
+    },
+    {
+      "bytes": 8897,
+      "path": "tests/test_reading_pair_rewrite.py",
+      "sha256": "a2c9db60e7bea77b148a6699ad05729379a2cbc26fe10bd4a5a3450ab86eb0a3"
+    },
+    {
+      "bytes": 17417,
+      "path": "scripts/run_joint_key_train001.py",
+      "sha256": "87591bd4819ca1d383bad85e63b2486534cedbd9c5bc2c2ed0a37c5d30f3f94c"
+    },
+    {
+      "bytes": 6092,
+      "path": "scripts/run_blind_channel_dev001.py",
+      "sha256": "4e63d0d0da64817e4061cfd30346f61be4588d789e06ed6c73e622ecefadbc2f"
+    },
+    {
+      "bytes": 13400,
+      "path": "scripts/run_latin_source_model001.py",
+      "sha256": "209aeed575265fcbc81c4fb645c75d086c1b6cb7aeefa3eed6d6048f22ec5839"
+    },
+    {
+      "bytes": 17975,
+      "path": "scripts/run_blind_channel_dev004.py",
+      "sha256": "facf61dd35117ef7231b4e403cc12a858f2cbcf2245c48aa342e46f9cc7f5273"
+    },
+    {
+      "bytes": 6798,
+      "path": "docs/research/global-pair-rewrite-proposal-2026-10-02.md",
+      "sha256": "82d35865473a5c5c78e9a26f60965c31533116d063b563e9fe8bfe1330ce3817"
+    },
+    {
+      "bytes": 6597,
+      "path": "docs/research/reading-pair-rewrite-2026-10-08.md",
+      "sha256": "5aeec9885833418d42922fad20ae16e636e49c3a05f2c29ba35bc3f208a9883c"
+    },
+    {
+      "bytes": 3471,
+      "path": "docs/experiments/READING-PAIR-REWRITE-THEORY-001.md",
+      "sha256": "8914a546094ab332631b55c2f265f67e5ad456e55ccd1d372dc8486792cdfc83"
+    }
+  ],
+  "no_original_source_or_recovery": true,
+  "paid_spend_usd": 0,
+  "panels": [
+    {
+      "contextual": false,
+      "corrected_valid_selection_edges": 12,
+      "cross_record_changes": 12,
+      "identity_edges": 222,
+      "merge_edges": 6,
+      "omitted_continuation_flux_failures": 12,
+      "omitted_prior_flux_failures": 12,
+      "preexisting_pair_noninvolution_witnesses": 12,
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "repeated_replacements": 12,
+      "rows": 3,
+      "split_edges": 6,
+      "states": 39,
+      "stationarity_equations_per_selector": 39,
+      "triplet_checks": 234,
+      "triplets_per_state": 6,
+      "uncorrected_valid_selection_flux_failures": 12,
+      "visited_count_changes": 12,
+      "wrong_policy_flux_failures": 12
+    },
+    {
+      "contextual": false,
+      "corrected_valid_selection_edges": 84,
+      "cross_record_changes": 12,
+      "identity_edges": 600,
+      "merge_edges": 42,
+      "omitted_continuation_flux_failures": 84,
+      "omitted_prior_flux_failures": 36,
+      "preexisting_pair_noninvolution_witnesses": 12,
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "repeated_replacements": 12,
+      "rows": 3,
+      "split_edges": 42,
+      "states": 114,
+      "stationarity_equations_per_selector": 114,
+      "triplet_checks": 684,
+      "triplets_per_state": 6,
+      "uncorrected_valid_selection_flux_failures": 84,
+      "visited_count_changes": 36,
+      "wrong_policy_flux_failures": 84
+    },
+    {
+      "contextual": false,
+      "corrected_valid_selection_edges": 24,
+      "cross_record_changes": 12,
+      "identity_edges": 642,
+      "merge_edges": 12,
+      "omitted_continuation_flux_failures": 24,
+      "omitted_prior_flux_failures": 24,
+      "preexisting_pair_noninvolution_witnesses": 36,
+      "records": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "repeated_replacements": 12,
+      "rows": 3,
+      "split_edges": 12,
+      "states": 111,
+      "stationarity_equations_per_selector": 111,
+      "triplet_checks": 666,
+      "triplets_per_state": 6,
+      "uncorrected_valid_selection_flux_failures": 12,
+      "visited_count_changes": 24,
+      "wrong_policy_flux_failures": 24
+    },
+    {
+      "contextual": true,
+      "corrected_valid_selection_edges": 12,
+      "cross_record_changes": 12,
+      "identity_edges": 222,
+      "merge_edges": 6,
+      "omitted_continuation_flux_failures": 12,
+      "omitted_prior_flux_failures": 12,
+      "preexisting_pair_noninvolution_witnesses": 12,
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "repeated_replacements": 12,
+      "rows": 3,
+      "split_edges": 6,
+      "states": 39,
+      "stationarity_equations_per_selector": 39,
+      "triplet_checks": 234,
+      "triplets_per_state": 6,
+      "uncorrected_valid_selection_flux_failures": 12,
+      "visited_count_changes": 12,
+      "wrong_policy_flux_failures": 12
+    },
+    {
+      "contextual": true,
+      "corrected_valid_selection_edges": 84,
+      "cross_record_changes": 12,
+      "identity_edges": 600,
+      "merge_edges": 42,
+      "omitted_continuation_flux_failures": 84,
+      "omitted_prior_flux_failures": 36,
+      "preexisting_pair_noninvolution_witnesses": 12,
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "repeated_replacements": 12,
+      "rows": 3,
+      "split_edges": 42,
+      "states": 114,
+      "stationarity_equations_per_selector": 114,
+      "triplet_checks": 684,
+      "triplets_per_state": 6,
+      "uncorrected_valid_selection_flux_failures": 84,
+      "visited_count_changes": 36,
+      "wrong_policy_flux_failures": 84
+    },
+    {
+      "contextual": true,
+      "corrected_valid_selection_edges": 24,
+      "cross_record_changes": 12,
+      "identity_edges": 642,
+      "merge_edges": 12,
+      "omitted_continuation_flux_failures": 24,
+      "omitted_prior_flux_failures": 24,
+      "preexisting_pair_noninvolution_witnesses": 36,
+      "records": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "repeated_replacements": 12,
+      "rows": 3,
+      "split_edges": 12,
+      "states": 111,
+      "stationarity_equations_per_selector": 111,
+      "triplet_checks": 666,
+      "triplets_per_state": 6,
+      "uncorrected_valid_selection_flux_failures": 12,
+      "visited_count_changes": 24,
+      "wrong_policy_flux_failures": 24
+    },
+    {
+      "contextual": false,
+      "corrected_valid_selection_edges": 336,
+      "cross_record_changes": 48,
+      "identity_edges": 3216,
+      "merge_edges": 168,
+      "omitted_continuation_flux_failures": 336,
+      "omitted_prior_flux_failures": 144,
+      "preexisting_pair_noninvolution_witnesses": 48,
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "repeated_replacements": 48,
+      "rows": 4,
+      "split_edges": 168,
+      "states": 148,
+      "stationarity_equations_per_selector": 148,
+      "triplet_checks": 3552,
+      "triplets_per_state": 24,
+      "uncorrected_valid_selection_flux_failures": 336,
+      "visited_count_changes": 144,
+      "wrong_policy_flux_failures": 336
+    },
+    {
+      "contextual": false,
+      "corrected_valid_selection_edges": 912,
+      "cross_record_changes": 48,
+      "identity_edges": 7344,
+      "merge_edges": 456,
+      "omitted_continuation_flux_failures": 912,
+      "omitted_prior_flux_failures": 336,
+      "preexisting_pair_noninvolution_witnesses": 48,
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "repeated_replacements": 48,
+      "rows": 4,
+      "split_edges": 456,
+      "states": 344,
+      "stationarity_equations_per_selector": 344,
+      "triplet_checks": 8256,
+      "triplets_per_state": 24,
+      "uncorrected_valid_selection_flux_failures": 912,
+      "visited_count_changes": 336,
+      "wrong_policy_flux_failures": 912
+    },
+    {
+      "contextual": false,
+      "corrected_valid_selection_edges": 1344,
+      "cross_record_changes": 336,
+      "identity_edges": 21216,
+      "merge_edges": 672,
+      "omitted_continuation_flux_failures": 1344,
+      "omitted_prior_flux_failures": 672,
+      "preexisting_pair_noninvolution_witnesses": 576,
+      "records": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "repeated_replacements": 480,
+      "rows": 4,
+      "split_edges": 672,
+      "states": 940,
+      "stationarity_equations_per_selector": 940,
+      "triplet_checks": 22560,
+      "triplets_per_state": 24,
+      "uncorrected_valid_selection_flux_failures": 768,
+      "visited_count_changes": 672,
+      "wrong_policy_flux_failures": 1344
+    },
+    {
+      "contextual": true,
+      "corrected_valid_selection_edges": 336,
+      "cross_record_changes": 48,
+      "identity_edges": 3216,
+      "merge_edges": 168,
+      "omitted_continuation_flux_failures": 336,
+      "omitted_prior_flux_failures": 144,
+      "preexisting_pair_noninvolution_witnesses": 48,
+      "records": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "repeated_replacements": 48,
+      "rows": 4,
+      "split_edges": 168,
+      "states": 148,
+      "stationarity_equations_per_selector": 148,
+      "triplet_checks": 3552,
+      "triplets_per_state": 24,
+      "uncorrected_valid_selection_flux_failures": 336,
+      "visited_count_changes": 144,
+      "wrong_policy_flux_failures": 336
+    },
+    {
+      "contextual": true,
+      "corrected_valid_selection_edges": 912,
+      "cross_record_changes": 48,
+      "identity_edges": 7344,
+      "merge_edges": 456,
+      "omitted_continuation_flux_failures": 912,
+      "omitted_prior_flux_failures": 336,
+      "preexisting_pair_noninvolution_witnesses": 48,
+      "records": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "repeated_replacements": 48,
+      "rows": 4,
+      "split_edges": 456,
+      "states": 344,
+      "stationarity_equations_per_selector": 344,
+      "triplet_checks": 8256,
+      "triplets_per_state": 24,
+      "uncorrected_valid_selection_flux_failures": 912,
+      "visited_count_changes": 336,
+      "wrong_policy_flux_failures": 912
+    },
+    {
+      "contextual": true,
+      "corrected_valid_selection_edges": 1344,
+      "cross_record_changes": 336,
+      "identity_edges": 21216,
+      "merge_edges": 672,
+      "omitted_continuation_flux_failures": 1344,
+      "omitted_prior_flux_failures": 672,
+      "preexisting_pair_noninvolution_witnesses": 576,
+      "records": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "repeated_replacements": 480,
+      "rows": 4,
+      "split_edges": 672,
+      "states": 940,
+      "stationarity_equations_per_selector": 940,
+      "triplet_checks": 22560,
+      "triplets_per_state": 24,
+      "uncorrected_valid_selection_flux_failures": 768,
+      "visited_count_changes": 672,
+      "wrong_policy_flux_failures": 1344
+    }
+  ],
+  "resources": {
+    "cpu_seconds": 2.916853,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 208420864,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 2.92931641699397
+  },
+  "software": {
+    "numpy": "2.5.3",
+    "torch": "2.14.0"
+  },
+  "status": "PASS_exact_global_pair_involution_and_flux",
+  "totals": {
+    "corrected_valid_selection_edges": 5424,
+    "cross_record_changes": 936,
+    "identity_edges": 66480,
+    "merge_edges": 2712,
+    "omitted_continuation_flux_failures": 5424,
+    "omitted_prior_flux_failures": 2448,
+    "preexisting_pair_noninvolution_witnesses": 1464,
+    "repeated_replacements": 1224,
+    "split_edges": 2712,
+    "states": 3392,
+    "stationarity_equations_per_selector": 3392,
+    "triplet_checks": 71904,
+    "uncorrected_valid_selection_flux_failures": 4248,
+    "visited_count_changes": 2448,
+    "wrong_policy_flux_failures": 5424
+  },
+  "valid_only_selector_implemented_and_checked": true
+}
