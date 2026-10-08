@@ -1,0 +1,136 @@
+{
+  "campaign_receipt_present": false,
+  "cause_of_interruption": "unknown",
+  "completed_fit_producer_summaries": [
+    {
+      "arm": "binding-92403",
+      "episodes_seen": 80000,
+      "initial_weights_sha256": "7ad974a384067a026e8301d485fb94cadb76cd307037844650b4ddd9288f6c7e",
+      "ledger_declared_sha256": "a9d56b5e5f84ba2779f3e55e56580059243673c61a5ee59e38ec6776a6c481e0",
+      "parameters": 96039982,
+      "producer_mean_whole_path_nll": 147.63497180056228,
+      "producer_recovery": {
+        "complete_readings": 4,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 18524,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 60,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 6,
+        "used_rows": 1246
+      },
+      "producer_resources": {
+        "cpu_seconds": 4755.135517,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1820884992,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": null,
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 14804.89096774999
+      },
+      "producer_result": {
+        "bytes": 106966,
+        "path": "results/SOURCE-ACTION-TRAIN-002/binding-92403.json",
+        "sha256": "8018297e3a58c2e906a06791020c625b5e5c7a1d3a04b5e04423cc6e52c66b09"
+      },
+      "selected_step": 20000,
+      "source_letters": 23013187,
+      "updates": 20000
+    },
+    {
+      "arm": "no-binding-92403",
+      "episodes_seen": 80000,
+      "initial_weights_sha256": "7ad974a384067a026e8301d485fb94cadb76cd307037844650b4ddd9288f6c7e",
+      "ledger_declared_sha256": "a9d56b5e5f84ba2779f3e55e56580059243673c61a5ee59e38ec6776a6c481e0",
+      "parameters": 96039982,
+      "producer_mean_whole_path_nll": 152.8330356648701,
+      "producer_recovery": {
+        "complete_readings": 4,
+        "complete_used_keys": 0,
+        "edits_with_failed_readings_full_length": 18522,
+        "episodes": 64,
+        "exact_records": 0,
+        "failed_readings": 60,
+        "failure_penalty_is_full_length": true,
+        "record_attempts": 128,
+        "true_letters": 18772,
+        "unused_rows_not_scored": true,
+        "used_matches_with_failed_readings_zero": 5,
+        "used_rows": 1246
+      },
+      "producer_resources": {
+        "cpu_seconds": 4946.881829,
+        "paid_spend_usd": 0,
+        "peak_rss_bytes": 1823653888,
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "python": "3.12.13",
+        "thread_environment": {
+          "MKL_NUM_THREADS": null,
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "wall_seconds": 16505.968789250008
+      },
+      "producer_result": {
+        "bytes": 107044,
+        "path": "results/SOURCE-ACTION-TRAIN-002/no-binding-92403.json",
+        "sha256": "e8cd68b57857031cebeb09e478d2f304d595a58de57ae3eed5b2e467a8018a8a"
+      },
+      "selected_step": 20000,
+      "source_letters": 23013187,
+      "updates": 20000
+    }
+  ],
+  "fourth_fit_started_present": false,
+  "no_neural_source_sampling_or_optimizer_calls": true,
+  "no_retry_resume_or_relaunch": true,
+  "not_registered_campaign_audit_or_metric_replay": true,
+  "observation_unix": 1791451252.277208,
+  "observed_date": "2026-10-08 PDT",
+  "original_freeze": "3ab56fb85b18231597b9fbc64c40c1fbff504408",
+  "paid_spend_usd": 0,
+  "paired_initial_hash_and_declared_ledger_hash_equal": true,
+  "process_observation": "ps inventory found no original campaign/training/caffeinate process; old terminal handle no longer available",
+  "registered_audit_present": false,
+  "status": "interrupted_campaign_observed_no_live_process",
+  "third_fit_last_trace": {
+    "cpu_seconds": 111.229612,
+    "driver_bytes": 5913903104,
+    "owned_bulk_bytes": 384458617,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1592475648,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "stage": "cleanup",
+    "step": 64,
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 245.9606342500192
+  },
+  "third_fit_started": {
+    "bytes": 114,
+    "path": "results/SOURCE-ACTION-TRAIN-002/binding-92409-started.json",
+    "sha256": "892952238f22b98bb748dde9bf9a5b6ad5ff091c3fb93e03fa957248a0748012"
+  },
+  "third_fit_step0": {
+    "bytes": 15297,
+    "path": "results/SOURCE-ACTION-TRAIN-002/binding-92409-step0.json",
+    "sha256": "b9ec1521e779a9dfc9d7e8afcae6cbab207d6e413ed93b9577d5714ffb4f7b78"
+  },
+  "third_fit_trace": {
+    "bytes": 158420,
+    "path": "outputs/SOURCE-ACTION-TRAIN-002/binding-92409-trace.jsonl",
+    "sha256": "f9d515ee981d090a87078436e9cf0f5276822eb30a48ab7e28887fcd1b99715f"
+  }
+}
