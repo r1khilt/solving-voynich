@@ -1,0 +1,52 @@
+{
+  "ancillary_path_failure_preserved": {
+    "bytes": 370,
+    "path": "results/READING-PAIR-REWRITE-ADMIT-001/publication-accounting-path-failure.json",
+    "sha256": "1669fb89d1585752623a68ef23fdd9af15a3325c2a821a60d139eb144557b00e"
+  },
+  "audit": {
+    "bytes": 912,
+    "path": "results/READING-PAIR-REWRITE-ADMIT-001/audit.json",
+    "sha256": "49142f1a573642fb1bd55b83d0e60a154cdb6c7720e5c05725f1de8034832170"
+  },
+  "float_logs_not_new_exact_ratio_replay": true,
+  "no_new_source_neural_optimizer_or_gold_calls": true,
+  "not_random_proposal_samples_or_kernel_acceptance_estimate": true,
+  "observation_unix": 1791452908.722503,
+  "result": {
+    "bytes": 123174,
+    "path": "results/READING-PAIR-REWRITE-ADMIT-001/result.json",
+    "sha256": "a6d65a8fdcc5647896c29568d92694639c3343e9a50333cb2e65a09b38448f74"
+  },
+  "rows": [
+    {
+      "group": "positive",
+      "higher_logged_target_points": 12,
+      "inspected_points": 512,
+      "minimum_absolute_logged_target_change": 0.01565140180537128,
+      "phase": "initial"
+    },
+    {
+      "group": "null",
+      "higher_logged_target_points": 6,
+      "inspected_points": 264,
+      "minimum_absolute_logged_target_change": 1.8399770996729785,
+      "phase": "initial"
+    },
+    {
+      "group": "positive",
+      "higher_logged_target_points": 2,
+      "inspected_points": 504,
+      "minimum_absolute_logged_target_change": 0.6286316941768746,
+      "phase": "92821-regrowth"
+    },
+    {
+      "group": "null",
+      "higher_logged_target_points": 1,
+      "inspected_points": 264,
+      "minimum_absolute_logged_target_change": 1.1429636110951833,
+      "phase": "92821-regrowth"
+    }
+  ],
+  "status": "post_outcome_saved_point_accounting"
+}
