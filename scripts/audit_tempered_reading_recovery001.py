@@ -298,4 +298,3 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--freeze', required=True)
     print(audit(parser.parse_args().freeze))
-
