@@ -1,8 +1,8 @@
 # An exact conditional teacher for a model that can revise its world
 
 Research proposal, not a trained architecture or registered experiment. The implemented
-[window mechanisms](window-repair-2026-10-10.md) are still awaiting scientific finite
-qualification and original-source cost admission. The [replica comparison](../experiments/TEMPERED-READING-RECOVERY-001-results.md)
+[window mechanisms](window-repair-2026-10-10.md) subsequently passed scientific finite
+qualification; original-source cost admission remains pending. The [replica comparison](../experiments/TEMPERED-READING-RECOVERY-001-results.md)
 failed recovery; its full audit subsequently passed. None is a Voynich reading.
 
 ## What the failed solver actually needs to learn
