@@ -76,6 +76,23 @@ leaf is excluded from pristine confirmation. Validation has no herbal-B pages,
 so it cannot establish herbal A/B transfer. Sparse hand strata must be reported.
 Two transcriptions are robustness checks, not two independent manuscripts.
 
+## Primary-method check
+
+[Reddy and Knight, 2011, §§5.2 and 6.2](https://aclanthology.org/W11-1511.pdf)
+already discuss end-to-start dependence and unusual line-edge distributions.
+That is why the new test predicts a distinction between line continuation and
+paragraph reset instead of presenting the boundary association as a discovery.
+Their interpretations do not establish a particular coding mechanism.
+
+[Kambhatla and colleagues, 2018, §§2–4](https://aclanthology.org/D18-1102.pdf)
+use whole-message neural scores to rank shared substitution hypotheses. Their
+character model is trained on a large known-English corpus, with additional
+Zodiac writing, and their channel family is supplied. This supports whole-key
+search as an architectural direction; it does not establish language discovery
+or transfer to Voynich. Our initial Borg pilot uses an explicit, finite-order
+Latin source and a narrower injective mapping. Its outcomes determine whether
+that instrument warrants a more expensive neural or homophonic extension.
+
 ## Where larger models and mechanistic interpretation belong
 
 World/action models, discrete denoising and recurrent global inference remain
