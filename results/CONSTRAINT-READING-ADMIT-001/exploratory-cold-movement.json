@@ -1,0 +1,22 @@
+{
+  "algorithm": "Source cells only. Count local[0].info.changed and swaps with slot0/info.changed. For each frame compare every retained[0] (widths,texts) and key against initial, boolean any per frame. Verified archive checksums through load_archive.",
+  "audit": {
+    "bytes": 1043,
+    "path": "results/CONSTRAINT-READING-ADMIT-001/audit.json",
+    "sha256": "190faf10c28ddc6caf40eb1ee9e87f5727949d914d1237f654887ef28b10a10d"
+  },
+  "no_gold_accuracy_equilibrium_or_gate_change": true,
+  "result": {
+    "bytes": 273036,
+    "path": "results/CONSTRAINT-READING-ADMIT-001/result.json",
+    "sha256": "93b63c837fddb75975ad9e4c3304d65388570903e58f800b2cb2add984f1c80f"
+  },
+  "source_counts": {
+    "cold_exchange_changes": 3,
+    "cold_local_changes": 1,
+    "frames": 194,
+    "frames_ever_different_cold_key": 0,
+    "frames_ever_different_cold_shape": 1
+  },
+  "status": "EXPLORATORY_post_admission_literal_movement_only"
+}
