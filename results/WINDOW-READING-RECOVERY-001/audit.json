@@ -1,0 +1,53 @@
+{
+  "freeze": "10249617d8eadf84e5ec55da6420a19267a03519",
+  "gates": {
+    "all_recovery_gates_pass": false,
+    "not_historical_or_null_semantic_classification": true,
+    "per_seed": {
+      "96421": {
+        "conditional_better_edits_than_uniform_and_initial": true,
+        "conditional_better_used_matches_than_uniform_and_initial": false,
+        "conditional_competent": false
+      },
+      "96429": {
+        "conditional_better_edits_than_uniform_and_initial": true,
+        "conditional_better_used_matches_than_uniform_and_initial": true,
+        "conditional_competent": false
+      }
+    },
+    "uniform_competence_by_seed": {
+      "96421": false,
+      "96429": false
+    }
+  },
+  "gold_oracle_diagnosis_helpers_shared": true,
+  "independent_expert_review": false,
+  "legacy_suffix_and_initialization_shared": true,
+  "new_kernel_replay_and_integer_metrics_separate": true,
+  "no_chain_extension": true,
+  "resources": {
+    "cpu_seconds": 2681.182861,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1012219904,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 2685.670060791992
+  },
+  "result": {
+    "bytes": 208592,
+    "path": "results/WINDOW-READING-RECOVERY-001/result.json",
+    "sha256": "88ac05e317a8710d0aa5bc48f0b993954d88954bb48134bda3e2513f9726b3cd"
+  },
+  "status": "PASS_full_fresh_window_families_rng_selection_and_metrics_replay",
+  "totals": {
+    "exchange_attempts": 0,
+    "independent_complete_targets": 1152480,
+    "local_attempts": 33792,
+    "root_decisions": 16883
+  }
+}
