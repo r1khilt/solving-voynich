@@ -1,8 +1,10 @@
 # Project memory
 
-Last updated: 2026-10-10 PDT (fresh local recovery FAIL/full audit PASS; relaxed-channel finite laws PASS; dispatcher source admission PASS; exact soft visited-key marginal derived; Voynich unsolved; goal active).
+Last updated: 2026-10-10 PDT (fresh local recovery FAIL/full audit PASS; relaxed-channel finite laws PASS; dispatcher source admission PASS; shape-only solver implemented; finite qualification prospective; Voynich unsolved; goal active).
 
 ## Current state
+
+- **New shape-only marginal solver preparation complete; finite qualification prospective.** constraint_shape.py retains widths/texts only, exact ALL-record per-rowunit sums/Tbar=Q product(G/U), hard unique literalkey, warm1channel1; 1Mprofile/4Mbitguards. Shape-only relabel/boundary q1/(NR), q1/(A R^ellnew) reverseoldell; collapsedswap channelproductdifferentfromexplicitkey. EqualhalfPCG kernels/no rebindunitdraw/16blockexactacceptance/fullRNG/zeroonerawblock. Five mathfixturesPASS.83s/fourRNGfixturesPASS.97s/nonzero-rootR23U42/artifullqualification+closurePASS.50s; noactualsourcecost/recovery/NN. NewTHEORY00116panels460shapes318hard24168keyassignments/257PATHS; checker600/550CPU512MiB/$0/closure60/50hash+arithmeticONLY. Notyetfrozen/run; needexactoriginbeforeONEchecker/closure thennewsource admission/freshcontrols. Old245bytesunchanged; NB414/registration/derivation. Differenttwo-kernelallocation preventsisolatedcollapseeffectclaim.
 
 - **WINDOW-READING-RECOVERY-001 COMPLETE/competence FAIL; full audit PASS.** Freeze10249617d8eadf84e5ec55da6420a19267a03519/229unchangedinputs/ONE83779+ONE20442bothterminal0.132cells33792attempts/alloutputssealedbeforeGold;16newpositivekeys+17nulls/twoseeds. Initial5915edits11matches313/4448letters;96421uniform5915/12conditional5892/11;96429uniform5914/11conditional5899/12. ALL0exact32/0usedkeys16/bothcompetenceFAIL, matchedbindingsbetteronly96429. Moremovement isnotrecovery. GoldhigherALL64gaps365.5704–1252.7229nats; no uniqueness/historicalclaim. Producer520.102wall517.255CPU1044545536RSS202279266ignoredbytes/$0; fullaudit2685.670wall2681.183CPU1012219904RSS/$0, all1152480independent targets/33792steps/16883rootdecisions/frozenbytes/RNG/metrics/gates PASS. Pairedattempts/ranks notCPU, uniformfulltableworkunnecessary. NB412/results memo closes actual negative; no retry/extension/oldNNresume.
 
