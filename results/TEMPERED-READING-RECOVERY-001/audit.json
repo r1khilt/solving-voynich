@@ -1,0 +1,53 @@
+{
+  "freeze": "59358040efcd40758d4a959b8bf6592a662e0f81",
+  "gates": {
+    "all_recovery_gates_pass": false,
+    "cold_competence_by_seed": {
+      "96221": false,
+      "96229": false
+    },
+    "not_historical_or_null_semantic_classification": true,
+    "per_seed": {
+      "96221": {
+        "replicas_better_edits_than_cold_and_initial": false,
+        "replicas_better_used_matches_than_cold_and_initial": false,
+        "replicas_competent": false
+      },
+      "96229": {
+        "replicas_better_edits_than_cold_and_initial": true,
+        "replicas_better_used_matches_than_cold_and_initial": true,
+        "replicas_competent": false
+      }
+    }
+  },
+  "gold_oracle_diagnosis_helpers_shared": true,
+  "independent_expert_review": false,
+  "legacy_suffix_and_initialization_shared": true,
+  "new_kernel_replay_and_integer_metrics_separate": true,
+  "no_chain_extension": true,
+  "resources": {
+    "cpu_seconds": 1964.81618,
+    "paid_spend_usd": 0,
+    "peak_rss_bytes": 1912684544,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "thread_environment": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "wall_seconds": 1968.8473441670067
+  },
+  "result": {
+    "bytes": 283492,
+    "path": "results/TEMPERED-READING-RECOVERY-001/result.json",
+    "sha256": "42c1751ebb7fff67a2e99ec6daeb1b6b437255ba147621a4558dfe9c2d848117"
+  },
+  "status": "PASS_full_fresh_recovery_rng_selection_and_metrics_replay",
+  "totals": {
+    "exchange_attempts": 25344,
+    "independent_complete_targets": 122283,
+    "local_attempts": 135168,
+    "root_decisions": 151524
+  }
+}
